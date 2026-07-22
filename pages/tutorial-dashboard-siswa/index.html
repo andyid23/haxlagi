@@ -1,0 +1,188 @@
+<h1>📖 Tutorial: Cara Fetch (Baca) Data dari Google Sheets via Apps Script</h1>
+
+<p>Panduan ini menjelaskan cara <strong>membaca/mengambil data</strong> dari Google Sheets menggunakan Apps Script API, bukan hanya menyimpan. Cocok untuk membuat dashboard siswa, leaderboard, atau halaman monitoring nilai.</p>
+
+<h2>🎯 Perbedaan POST vs GET</h2>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0;">
+  <div style="background: #f3f0fa; border: 2px solid #6750a4; border-radius: 12px; padding: 20px;">
+    <h3 style="color: #6750a4; margin-top: 0;">📤 POST (Simpan Data)</h3>
+    <p style="font-size: 13px; color: #49454f;"><code>doPost(e)</code> — Digunakan dashboard kuis untuk menyimpan hasil ke sheet.</p>
+    <pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 8px; font-size: 12px;">fetch(URL, {
+  method: 'POST',
+  body: JSON.stringify({
+    name: "Andi",
+    score: 80,
+    sheet: "Pertemuan 1"
+  })
+})</pre>
+  </div>
+  <div style="background: #e8f5e9; border: 2px solid #4caf50; border-radius: 12px; padding: 20px;">
+    <h3 style="color: #2e7d32; margin-top: 0;">📥 GET (Baca Data)</h3>
+    <p style="font-size: 13px; color: #49454f;"><code>doGet(e)</code> — Digunakan dashboard siswa untuk membaca data dari sheet.</p>
+    <pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 8px; font-size: 12px;">fetch(URL + '?action=summary&name=Andi')
+  .then(r => r.json())
+  .then(data => {
+    // data berisi nilai Andi
+    console.log(data);
+  })</pre>
+  </div>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📡 Endpoint API GET (Code.gs v3)</h2>
+
+<p>Apps Script <code>doGet(e)</code> menerima parameter <code>?action=</code> untuk menentukan data apa yang diminta:</p>
+
+<h3>1. Leaderboard — Semua Siswa</h3>
+<pre><code>GET https://script.google.com/macros/s/.../exec?action=leaderboard</code></pre>
+
+<p><strong>Response JSON:</strong></p>
+<pre><code>{
+  "status": "ok",
+  "leaderboard": [
+    {
+      "Nama": "Andi",
+      "Total Kuis": 3,
+      "Rata-rata Skor": 85,
+      "Skor Tertinggi": 100,
+      "Skor Terendah": 70,
+      "Total Aktivitas": 15,
+      "Reading": 8,
+      "Quiz Activity": 3,
+      "Discussion": 2,
+      "Download": 2,
+      "Jumlah Pertemuan": 3,
+      "Status Kuis Terakhir": "LULUS"
+    }
+  ]
+}</code></pre>
+
+<h3>2. Summary — Data Satu Siswa</h3>
+<pre><code>GET https://script.google.com/macros/s/.../exec?action=summary&name=Andi</code></pre>
+
+<p><strong>Response jika ditemukan:</strong></p>
+<pre><code>{
+  "status": "ok",
+  "data": {
+    "Nama": "Andi",
+    "Total Kuis": 3,
+    "Rata-rata Skor": 85,
+    ...
+  }
+}</code></pre>
+
+<p><strong>Response jika belum ada di Rangkuman:</strong></p>
+<pre><code>{
+  "status": "not_found",
+  "message": "Siswa \"Andi\" belum ada di rangkuman.",
+  "data": {
+    "kuis": [{"pertemuan":"Pertemuan 1","score":80,"status":"LULUS","timestamp":"..."}],
+    "aktivitas": [{"pertemuan":"Pertemuan 1","type":"reading","desc":"Membaca modul","timestamp":"..."}],
+    "totalKuis": 1,
+    "totalAktivitas": 3,
+    "rataSkor": 80,
+    "skorTertinggi": 80
+  }
+}</code></pre>
+
+<h3>3. Pertemuan — Semua Siswa di Satu Pertemuan</h3>
+<pre><code>GET https://script.google.com/macros/s/.../exec?action=pertemuan&sheet=Pertemuan 1</code></pre>
+
+<p><strong>Response:</strong> Array semua siswa yang sudah mengerjakan kuis di pertemuan tersebut.</p>
+
+<h3>4. Aktivitas — Log Aktivitas Siswa</h3>
+<pre><code>GET https://script.google.com/macros/s/.../exec?action=aktivitas&sheet=Pertemuan 1&name=Andi</code></pre>
+
+<p><strong>Response:</strong> Array log aktivitas (reading, quiz, discussion, download) untuk siswa di pertemuan tertentu.</p>
+
+<h3>5. List — Daftar Semua Pertemuan</h3>
+<pre><code>GET https://script.google.com/macros/s/.../exec?action=list</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>💻 Contoh Kode JavaScript</h2>
+
+<h3>Fetch data satu siswa + leaderboard</h3>
+<pre><code>const BASE_URL = 'https://script.google.com/macros/s/YOUR_ID/exec';
+
+async function loadStudentData(nama) {
+  try {
+    // Ambil leaderboard dan summary sekaligus
+    const [lbRes, sumRes] = await Promise.all([
+      fetch(BASE_URL + '?action=leaderboard'),
+      fetch(BASE_URL + '?action=summary&name=' + encodeURIComponent(nama))
+    ]);
+
+    const leaderboard = await lbRes.json();
+    const summary = await sumRes.json();
+
+    // Tampilkan di halaman
+    console.log('Leaderboard:', leaderboard);
+    console.log('Data Saya:', summary);
+
+  } catch (err) {
+    console.error('Gagal fetch data:', err);
+  }
+}
+
+// Panggil dengan nama siswa
+loadStudentData('Andi');
+</code></pre>
+
+<h3>Fetch data per pertemuan</h3>
+<pre><code>async function loadPertemuan(pertemuanName) {
+  const [quizRes, actRes] = await Promise.all([
+    fetch(BASE_URL + '?action=pertemuan&sheet=' + encodeURIComponent(pertemuanName)),
+    fetch(BASE_URL + '?action=aktivitas&sheet=' + encodeURIComponent(pertemuanName))
+  ]);
+
+  const quizData = await quizRes.json();
+  const actData = await actRes.json();
+
+  console.log('Hasil Kuis:', quizData.siswa);
+  console.log('Log Aktivitas:', actData.aktivitas);
+}
+
+loadPertemuan('Pertemuan 1');
+</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔧 Setup di HAXcms</h2>
+
+<h3>Cara 1: Halaman HTML + JavaScript (Seperti Dashboard Siswa)</h3>
+<p>Buat halaman baru di HAXcms, isi dengan HTML + JavaScript seperti contoh dashboard siswa. Simpan URL Apps Script di localStorage.</p>
+
+<h3>Cara 2: Embed via iframe</h3>
+<pre><code>&lt;iframe src="dashboard-siswa" width="100%" height="800" style="border: none;"&gt;&lt;/iframe&gt;</code></pre>
+
+<h3>Cara 3: Kirim URL sebagai parameter</h3>
+<pre><code>&lt;!-- Tambahkan di URL halaman --&gt;
+https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>⚠️ Syarat &amp; Ketentuan</h2>
+
+<table>
+  <thead><tr><th>Syarat</th><th>Keterangan</th></tr></thead>
+  <tbody>
+    <tr><td>Deploy sebagai Web App</td><td>Harus Web app (bukan API Executable), akses "Anyone"</td></tr>
+    <tr><td>CORS</td><td>Apps Script support CORS untuk GET request. Tidak perlu mode no-cors.</td></tr>
+    <tr><td>Rate Limit</td><td>Gratis: 20,000 request/hari. Cukup untuk kelas.</td></tr>
+    <tr><td>Data Real-time</td><td>Data dibaca langsung dari spreadsheet saat request.</td></tr>
+    <tr><td>Nama Case-Sensitive</td><td>Nama "Andi" dan "andi" dianggap berbeda. Pastikan konsisten.</td></tr>
+    <tr><td>Minimal Chrome/Firefox</td><td>Fetch API dan async/await didukung semua browser modern.</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔗 Halaman Terkait</h2>
+<ul>
+  <li><a href="dashboard-siswa">📊 Live Demo: Dashboard Siswa</a></li>
+  <li><a href="tutorial-sheet-per-pertemuan">📊 Tutorial: 1 Sheet = 1 Pertemuan</a></li>
+  <li><a href="full-dashboard">🎯 Demo Full Quiz Dashboard</a></li>
+</ul>

@@ -1,0 +1,63 @@
+<h1>🎯 Explode Quiz — Kuis Interaktif</h1>
+
+<p>Elemen <code>&lt;explode-quiz&gt;</code> adalah komponen kuis interaktif pilihan ganda yang dilengkapi efek konfeti, editor soal bawaan, dan integrasi Google Sheets untuk menyimpan hasil kuis secara real-time.</p>
+
+<h2>🧪 Demo Langsung</h2>
+<p>Coba kuis interaktif di bawah ini:</p>
+
+<explode-quiz editable="true"></explode-quiz>
+
+<h2>📋 Atribut yang Didukung</h2>
+
+<table>
+  <thead>
+    <tr><th>Atribut</th><th>Tipe</th><th>Deskripsi</th><th>Default</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>spreadsheet-id</code></td><td>String</td><td>ID Google Spreadsheet untuk menyimpan hasil</td><td>—</td></tr>
+    <tr><td><code>apps-script-url</code></td><td>String</td><td>URL Google Apps Script endpoint</td><td>—</td></tr>
+    <tr><td><code>editable</code></td><td>Boolean</td><td>Tampilkan tombol edit soal</td><td>false</td></tr>
+    <tr><td><code>questions</code></td><td>JSON Array</td><td>Daftar soal kustom (JSON string)</td><td>3 soal default</td></tr>
+  </tbody>
+</table>
+
+<h2>🖥️ Cara Penggunaan</h2>
+
+<h3>Tag Dasar</h3>
+<pre><code>&lt;explode-quiz&gt;&lt;/explode-quiz&gt;</code></pre>
+<p>Menggunakan 3 soal default tentang pengetahuan umum.</p>
+
+<h3>Dengan Google Sheets</h3>
+<pre><code>&lt;explode-quiz spreadsheet-id="YOUR_SHEET_ID" editable="true"&gt;&lt;/explode-quiz&gt;</code></pre>
+
+<h3>Dengan Google Apps Script URL</h3>
+<pre><code>&lt;explode-quiz apps-script-url="https://script.google.com/macros/s/.../exec"&gt;&lt;/explode-quiz&gt;</code></pre>
+
+<h2>🛠️ Fitur</h2>
+<ul>
+  <li><strong>3 Layar:</strong> Input Nama → Soal Kuis → Hasil</li>
+  <li><strong>Efek Konfeti:</strong> Animasi saat jawaban benar dan skor ≥ 80%</li>
+  <li><strong>Editor Soal:</strong> Tambah, edit, hapus soal (dengan mode editable)</li>
+  <li><strong>Sinkronisasi Google Sheets:</strong> Hasil otomatis tersimpan</li>
+  <li><strong>Aksesibilitas:</strong> aria-label lengkap, keyboard navigation</li>
+  <li><strong>Responsif:</strong> Layout adaptif untuk mobile</li>
+</ul>
+
+<h2>📊 Format Data di Google Sheets</h2>
+<table>
+  <thead>
+    <tr><th>Kolom A</th><th>Kolom B</th><th>Kolom C</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Timestamp</td><td>Nama Siswa</td><td>Skor (%)</td></tr>
+  </tbody>
+</table>
+
+<h2>🎨 Kustomisasi Soal</h2>
+<p>Klik tombol <strong>"Edit Soal Kuis"</strong> di layar hasil (jika <code>editable="true"</code>) untuk membuka panel editor. Anda dapat:</p>
+<ol>
+  <li>Menambah soal baru dengan 4 pilihan jawaban</li>
+  <li>Mengedit soal yang sudah ada</li>
+  <li>Menghapus soal (minimal 3 soal)</li>
+  <li>Menyimpan perubahan</li>
+</ol>

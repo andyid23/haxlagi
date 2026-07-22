@@ -1,0 +1,113 @@
+<h1>📖 Tutorial: Setup Google Apps Script</h1>
+
+<p>Panduan langkah demi langkah untuk menghubungkan kuis dengan Google Sheets tanpa server backend. Menggunakan <strong>Google Apps Script</strong> sebagai jembatan.</p>
+
+<h2>🎯 Alur Sistem</h2>
+<p>Siswa mengerjakan kuis di browser → Browser kirim data via POST → Apps Script terima &amp; proses → Tersimpan di Google Sheets.</p>
+
+<h2>✅ Kelebihan</h2>
+<ul>
+  <li>Tidak perlu server, Firebase, atau backend</li>
+  <li>Gratis — Google Apps Script gratis untuk 20,000 eksekusi/hari</li>
+  <li>Data langsung tersimpan di Google Drive Anda</li>
+</ul>
+
+<h2>⚠️ Keterbatasan</h2>
+<ul>
+  <li>Hanya bisa menyimpan data (POST), tidak membaca</li>
+  <li>Untuk leaderboard perlu Firebase atau backend server</li>
+</ul>
+
+<h2>📋 Persiapan</h2>
+<ul>
+  <li>Akun Google (Gmail)</li>
+  <li>Browser web modern</li>
+  <li>File <code>Code.gs</code> (tersedia di <code>custom/src/Code.gs</code>)</li>
+</ul>
+
+<h2>🚀 Langkah 1: Buat Google Spreadsheet</h2>
+<ol>
+  <li>Buka <a href="https://sheets.google.com" target="_blank">Google Sheets</a></li>
+  <li>Klik "Blank" untuk spreadsheet baru</li>
+  <li>Beri nama: "Hasil Kuis Interaktif"</li>
+  <li>Copy ID dari URL spreadsheet Anda</li>
+</ol>
+<pre><code>URL format: https://docs.google.com/spreadsheets/d/[ID_DISINI]/edit</code></pre>
+
+<h2>🚀 Langkah 2: Buka Apps Script</h2>
+<ol>
+  <li>Di Google Sheets, klik menu <strong>Extensions → Apps Script</strong></li>
+  <li>Akan terbuka tab editor baru</li>
+  <li>Hapus semua kode default yang ada</li>
+</ol>
+
+<h2>🚀 Langkah 3: Copy-Paste Code.gs</h2>
+<p>Copy seluruh kode dari file <code>Code.gs</code> dan paste ke editor Apps Script.</p>
+<p>Kode mencakup handler:</p>
+<ul>
+  <li><strong>doGet()</strong> — Health check</li>
+  <li><strong>doPost()</strong> — Terima data kuis + attendance</li>
+  <li><strong>saveQuiz()</strong> — Simpan hasil kuis ke sheet</li>
+  <li><strong>saveAttendance()</strong> — Simpan log aktivitas ke sheet</li>
+  <li><strong>updateSummary()</strong> — Agregasi per siswa</li>
+</ul>
+
+<h2>🚀 Langkah 4: Deploy</h2>
+<ol>
+  <li>Klik <strong>Deploy → New deployment</strong></li>
+  <li>Pilih type: <strong>Web app</strong></li>
+  <li>Execute as: <strong>Me</strong></li>
+  <li>Who has access: <strong>Anyone</strong></li>
+  <li>Klik Deploy, lalu Authorize access</li>
+  <li>Copy URL Web App yang dihasilkan</li>
+</ol>
+
+<h2>🚀 Langkah 5: Hubungkan ke Dashboard</h2>
+<ol>
+  <li>Paste URL di form Setup tab dashboard</li>
+  <li>Atau gunakan atribut: <code>&lt;full-quiz-dashboard apps-script-url="URL"&gt;</code></li>
+  <li>Selesai! Setiap kuis selesai, data otomatis ke Sheets</li>
+</ol>
+
+<h2>📊 Format Data di Google Sheets</h2>
+
+<h3>Sheet "Hasil Kuis"</h3>
+<table>
+  <thead><tr><th>Timestamp</th><th>Nama</th><th>Skor (%)</th><th>Total Soal</th><th>Status</th></tr></thead>
+  <tbody><tr><td>22/07/2026 10:30</td><td>Andi</td><td>80</td><td>5</td><td>LULUS</td></tr></tbody>
+</table>
+
+<h3>Sheet "Log Aktivitas"</h3>
+<table>
+  <thead><tr><th>Timestamp</th><th>Tanggal</th><th>Hari</th><th>Nama</th><th>Tipe</th><th>Deskripsi</th><th>Count</th></tr></thead>
+  <tbody><tr><td>22/07/2026 10:35</td><td>22/07/2026</td><td>Selasa</td><td>Andi</td><td>reading</td><td>Membaca modul</td><td>1</td></tr></tbody>
+</table>
+
+<h3>Sheet "Rangkuman" (Auto-generated)</h3>
+<table>
+  <thead><tr><th>Nama</th><th>Total Aktivitas</th><th>Reading</th><th>Quiz</th><th>Discussion</th><th>Download</th><th>Skor Kuis Tertinggi</th><th>Status</th></tr></thead>
+</table>
+
+<h2>🔧 Troubleshooting</h2>
+
+<h3>Error: "Gagal menyimpan ke Sheets"</h3>
+<ul>
+  <li>Pastikan URL diawali <code>https://script.google.com/macros/s/</code></li>
+  <li>Pastikan deployment type "Web app", bukan "API Executable"</li>
+  <li>Pastikan "Who has access" = "Anyone"</li>
+</ul>
+
+<h3>Error otorisasi saat deploy</h3>
+<ul>
+  <li>Klik "Advanced" di dialog peringatan</li>
+  <li>Klik "Go to [project name] (unsafe)"</li>
+  <li>Klik "Allow"</li>
+  <li>Aman karena script milik Anda sendiri</li>
+</ul>
+
+<h3>Data tidak muncul di Sheets</h3>
+<ul>
+  <li>Buka Apps Script editor → Executions di sidebar kiri</li>
+  <li>Cek error log</li>
+  <li>Pastikan kode di-copy lengkap</li>
+</ul>

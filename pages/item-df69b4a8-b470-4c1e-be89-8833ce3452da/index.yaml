@@ -1,0 +1,35 @@
+id: item-df69b4a8-b470-4c1e-be89-8833ce3452da
+indent: 0
+location: pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.yaml
+slug: new-page-1
+order: 2
+parent: null
+title: baru1
+description: |+
+
+  📚 Pertemuan 1: Pengenalan HAXcms
+  Materi pembelajaran hari ini...
+
+
+
+metadata:
+  created: 1784687716
+  updated: 1784700812
+  images: []
+  videos: []
+  published: true
+  hideInMenu: false
+  locked: false
+  readtime: 1
+  status: ''
+content: >
+
+  <p></p>
+
+  <h1 id="h1-1954384612">📚 Pertemuan 1: Pengenalan HAXcms</h1>
+
+  <p>Materi pembelajaran hari ini...</p>
+
+  <full-quiz-dashboard
+  apps-script-url="https://script.google.com/macros/s/AKfycbzAJL1vjme8cv5DDgrrEC91kJzaGDMcArxYmMX8U40tZ3PvQLKDh73TOr5QjplEc8ZoDQ/exec"
+  sheet-name="Pertemuan 1"></full-quiz-dashboard>

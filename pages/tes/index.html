@@ -1,0 +1,161 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+                body {
+                  background-color: white; /* Ensure the iframe has a white background */
+                }
+
+                
+              </style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html>
+<body>
+<h3>Test POST ke Apps Script</h3>
+
+<form method="POST" action="https://script.google.com/macros/s/AKfycbxLJimWghZbVMEtUqOTs07qxxg3PN4Ud0EgucENK6_NBVh8Yb_zC1gtTumegAIvDY4cIA/exec">
+  <h4>Test Kuis</h4>
+  <input name="name" value="TestUser" required><br>
+  <input name="score" value="75" required><br>
+  <input name="sheet" value="Pertemuan 3" required><br>
+  <input name="totalQuestions" value="5"><br>
+  <input name="timestamp" type="hidden"><br>
+  <button type="submit">Submit Kuis</button>
+</form>
+
+<form method="POST" action="https://script.google.com/macros/s/AKfycbxLJimWghZbVMEtUqOTs07qxxg3PN4Ud0EgucENK6_NBVh8Yb_zC1gtTumegAIvDY4cIA/exec">
+  <h4>Test Attendance</h4>
+  <input name="name" value="TestUser" required><br>
+  <input name="type" value="attendance" required><br>
+  <input name="activityType" value="reading" required><br>
+  <input name="description" value="Test membaca modul" required><br>
+  <input name="sheet" value="Pertemuan 3" required><br>
+  <button type="submit">Submit Attendance</button>
+</form>
+
+<script>
+  // Auto-fill timestamp
+  document.querySelectorAll('[name="timestamp"]').forEach(i => {
+    if (!i.value) i.value = new Date().toISOString();
+  });
+</script>
+</body>
+</html>
+
+
+              <script>
+                              function verifySheetStructure() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const checks = [];
+  
+  // 1. Cek sheet "Pertemuan 1 - Kuis"
+  const kuis1 = ss.getSheetByName("Pertemuan 1 - Kuis");
+  if (kuis1) {
+    const headers = kuis1.getRange(1, 1, 1, 5).getValues()[0];
+    const expected = ["Timestamp", "Nama", "Skor (%)", "Total Soal", "Status"];
+    checks.push({
+      sheet: "Pertemuan 1 - Kuis",
+      headersMatch: JSON.stringify(headers) === JSON.stringify(expected),
+      rows: kuis1.getLastRow() - 1,
+      expected: expected,
+      actual: headers
+    });
+  }
+  
+  // 2. Cek sheet "Pertemuan 1 - Aktivitas"
+  const act1 = ss.getSheetByName("Pertemuan 1 - Aktivitas");
+  if (act1) {
+    const headers = act1.getRange(1, 1, 1, 7).getValues()[0];
+    const expected = ["Timestamp", "Tanggal", "Hari", "Nama", "Tipe Aktivitas", "Deskripsi", "Count"];
+    checks.push({
+      sheet: "Pertemuan 1 - Aktivitas",
+      headersMatch: JSON.stringify(headers) === JSON.stringify(expected),
+      rows: act1.getLastRow() - 1,
+      expected: expected,
+      actual: headers
+    });
+  }
+  
+  // 3. Cek sheet "Rangkuman"
+  const rangkuman = ss.getSheetByName("Rangkuman");
+  if (rangkuman) {
+    const headers = rangkuman.getRange(1, 1, 1, 12).getValues()[0];
+    checks.push({
+      sheet: "Rangkuman",
+      headersMatch: headers[0] === "Nama" && headers[1] === "Total Kuis",
+      rows: rangkuman.getLastRow() - 1,
+      actual: headers
+    });
+  }
+  
+  Logger.log("=== VERIFIKASI STRUKTUR SHEET ===");
+  checks.forEach(c => {
+    Logger.log(`\n📋 ${c.sheet}`);
+    Logger.log(`  ✓ Headers match: ${c.headersMatch}`);
+    Logger.log(`  ✓ Data rows: ${c.rows}`);
+    if (!c.headersMatch) {
+      Logger.log(`  ❌ Expected: ${c.expected}`);
+      Logger.log(`  ❌ Actual:   ${c.actual}`);
+    }
+  });
+  
+  return checks;
+}
+
+function testEdgeCases() {
+  const results = [];
+  
+  // 1. Nama kosong
+  try {
+    const r1 = saveQuiz({ name: "", score: 80, sheet: "Test", timestamp: new Date().toISOString() });
+    results.push({ test: "Nama kosong", pass: false, note: "Seharusnya ditolak" });
+  } catch (e) {
+    results.push({ test: "Nama kosong", pass: true, note: e.message });
+  }
+  
+  // 2. Skor di luar range
+  const r2 = saveQuiz({ name: "Edge", score: 150, sheet: "Test", timestamp: new Date().toISOString(), totalQuestions: 5 });
+  results.push({ test: "Skor >100", pass: true, note: `Status: ${r2.status}` });
+  
+  // 3. Nama dengan spasi & karakter khusus
+  const r3 = saveQuiz({ name: "  Budi Santoso  ", score: 70, sheet: "Test", timestamp: new Date().toISOString(), totalQuestions: 5 });
+  results.push({ test: "Nama dengan spasi", pass: r3.name === "  Budi Santoso  ", note: "Trim otomatis?" });
+  
+  // 4. Sheet name kosong
+  try {
+    saveQuiz({ name: "Test", score: 80, sheet: "", timestamp: new Date().toISOString() });
+    results.push({ test: "Sheet kosong", pass: false });
+  } catch (e) {
+    results.push({ test: "Sheet kosong", pass: true, note: e.message });
+  }
+  
+  // 5. Duplicate entry (boleh atau tidak?)
+  saveQuiz({ name: "Dup", score: 80, sheet: "Test", timestamp: new Date().toISOString(), totalQuestions: 5 });
+  saveQuiz({ name: "Dup", score: 80, sheet: "Test", timestamp: new Date().toISOString(), totalQuestions: 5 });
+  results.push({ test: "Duplikasi data", pass: true, note: "Kedua entry tersimpan (cek manual)" });
+  
+  Logger.log("=== EDGE CASES ===");
+  results.forEach(r => {
+    Logger.log(`${r.pass ? "✅" : "❌"} ${r.test}: ${r.note}`);
+  });
+}
+
+// Cek apakah web component sudah ter-register
+customElements.get('full-quiz-dashboard');
+
+// Akses instance
+const el = document.querySelector('full-quiz-dashboard');
+console.log(el._url);       // URL Apps Script
+console.log(el._sheet);     // "Pertemuan 2"
+console.log(el._logs());    // Array log lokal
+
+
+              </script>
+                        </body>
+                        </html>
+                    

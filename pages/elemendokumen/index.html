@@ -1,0 +1,89 @@
+<h1>📚 Dokumentasi Elemen Interaktif HAXcms</h1>
+<p>Halaman ini mendokumentasikan semua elemen kustom yang tersedia untuk digunakan di situs HAXcms ini. Setiap elemen adalah <strong>Web Component</strong> yang dapat disisipkan langsung ke halaman dengan mudah.</p>
+
+<h2>📋 Daftar Elemen</h2>
+
+<grid-plate layout="1-1-1" responsive-size="xs" breakpoint-sm="600" breakpoint-md="900" breakpoint-lg="1200">
+  <div slot="col-1">
+    <h3>🎯 &lt;explode-quiz&gt;</h3>
+    <p>Kuis interaktif pilihan ganda dengan efek confetti, integrasi Google Sheets, dan editor soal bawaan. Cocok untuk pembelajaran dan penilaian.</p>
+    <p><strong>Tag:</strong> <code>&lt;explode-quiz&gt;&lt;/explode-quiz&gt;</code></p>
+    <p><a href="kuis-interaktif">→ Demo &amp; Dokumentasi Lengkap</a></p>
+  </div>
+  <div slot="col-2">
+    <h3>📊 &lt;quiz-dashboard-lite&gt;</h3>
+    <p>Dashboard kuis dengan tab navigasi (Ambil Kuis, Kehadiran, Panduan) tanpa Firebase. Ringan dan cocok untuk deployment sederhana.</p>
+    <p><strong>Tag:</strong> <code>&lt;quiz-dashboard-lite&gt;&lt;/quiz-dashboard-lite&gt;</code></p>
+    <p><a href="dashboard-kuis">→ Demo &amp; Dokumentasi Lengkap</a></p>
+  </div>
+  <div slot="col-3">
+    <h3>🔔 &lt;notif-element&gt;</h3>
+    <p>Elemen notifikasi sederhana dengan dukungan tipe: info, success, warning, dan error. Auto-hide dan closable.</p>
+    <p><strong>Tag:</strong> <code>&lt;notif-element type="success" message="Berhasil!"&gt;&lt;/notif-element&gt;</code></p>
+    <p><a href="notifikasi">→ Demo &amp; Dokumentasi Lengkap</a></p>
+  </div>
+  <div slot="col-1">
+    <h3>📅 &lt;activity-logger&gt;</h3>
+    <p>Pencatat aktivitas otomatis: scroll, klik, unduhan, dan penyelesaian kuis. Floating pill UI di pojok kanan bawah.</p>
+    <p><strong>Tag:</strong> <code>&lt;activity-logger&gt;&lt;/activity-logger&gt;</code></p>
+    <p><a href="kehadiran">→ Lihat di Halaman Kehadiran</a></p>
+  </div>
+  <div slot="col-2">
+    <h3>✅ &lt;attendance-tracker&gt;</h3>
+    <p>Pelacak kehadiran mingguan berbasis metrik: membaca modul, kuis, diskusi, dan akumulasi aktivitas.</p>
+    <p><strong>Tag:</strong> <code>&lt;attendance-tracker&gt;&lt;/attendance-tracker&gt;</code></p>
+    <p><a href="kehadiran">→ Lihat di Halaman Kehadiran</a></p>
+  </div>
+  <div slot="col-3">
+    <h3>🔥 &lt;engagement-score&gt;</h3>
+    <p>Heatmap 28 hari aktivitas belajar, streak harian, dan indeks konsistensi. Visualisasi grid interaktif.</p>
+    <p><strong>Tag:</strong> <code>&lt;engagement-score&gt;&lt;/engagement-score&gt;</code></p>
+    <p><a href="kehadiran">→ Lihat di Halaman Kehadiran</a></p>
+  </div>
+  <div slot="col-1">
+    <h3>📖 &lt;transparent-gradebook&gt;</h3>
+    <p>Buku nilai transparan: kehadiran, kuis, UTS, UAS, dengan mode Dosen untuk konfigurasi dan diagnostik kelas.</p>
+    <p><strong>Tag:</strong> <code>&lt;transparent-gradebook&gt;&lt;/transparent-gradebook&gt;</code></p>
+    <p><a href="kehadiran">→ Lihat di Halaman Kehadiran</a></p>
+  </div>
+  <div slot="col-2">
+    <h3>📝 &lt;todo-list&gt;</h3>
+    <p>Daftar tugas sederhana dengan fitur tambah, checklist, hapus, dan editor bawaan. Menggunakan DDD design system.</p>
+    <p><strong>Tag:</strong> <code>&lt;todo-list&gt;&lt;/todo-list&gt;</code></p>
+    <p><a href="todo-list">→ Demo &amp; Dokumentasi Lengkap</a></p>
+  </div>
+</grid-plate>
+
+<h2>🛠️ Cara Menambahkan Elemen ke Halaman</h2>
+
+<h3>Metode 1: Editor Visual HAXcms</h3>
+<ol>
+  <li>Klik tombol <strong>Tambah Elemen (+)</strong> di panel kiri editor.</li>
+  <li>Cari nama elemen di bilah pencarian (misal: "Explode Quiz").</li>
+  <li>Klik atau seret elemen ke halaman untuk menyisipkannya.</li>
+</ol>
+
+<h3>Metode 2: Mode Source (HTML)</h3>
+<ol>
+  <li>Klik mode <strong>Source</strong> di editor HAXcms.</li>
+  <li>Tempel tag elemen langsung, contoh: <code>&lt;explode-quiz&gt;&lt;/explode-quiz&gt;</code></li>
+  <li>Simpan perubahan.</li>
+</ol>
+
+<h2>📦 Atribut &amp; Konfigurasi Umum</h2>
+<p>Semua elemen mendukung atribut HTML standar untuk konfigurasi:</p>
+<ul>
+  <li><strong>spreadsheet-id</strong> — ID Google Spreadsheet untuk sinkronisasi data</li>
+  <li><strong>editable</strong> — Mengaktifkan mode edit (true/false)</li>
+  <li><strong>type</strong> — Tipe notifikasi: info, success, warning, error</li>
+  <li><strong>message</strong> — Pesan yang ditampilkan</li>
+  <li><strong>duration</strong> — Durasi tampil dalam milidetik</li>
+</ul>
+
+<h2>🔧 Integrasi Google Sheets</h2>
+<p>Elemen kuis (<code>explode-quiz</code>, <code>quiz-dashboard-lite</code>) mendukung integrasi Google Sheets untuk menyimpan hasil kuis secara real-time:</p>
+<ol>
+  <li>Masukkan ID atau URL Google Spreadsheet melalui atribut <code>spreadsheet-id</code>.</li>
+  <li>Atau gunakan UI dashboard untuk menghubungkan/membuat spreadsheet baru.</li>
+  <li>Hasil kuis otomatis tersimpan ke sheet dengan format: Timestamp, Nama, Skor.</li>
+</ol>

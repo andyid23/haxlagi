@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+<id>item-df69b4a8-b470-4c1e-be89-8833ce3452da</id>
+<indent>0</indent>
+<location>pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.xml</location>
+<slug>new-page-1</slug>
+<order>2</order>
+<parent></parent>
+<title>baru1</title>
+<description>
+📚 Pertemuan 1: Pengenalan HAXcms
+Materi pembelajaran hari ini...
+
+
+
+</description>
+<metadata>
+<created>1784687716</created>
+<updated>1784700812</updated>
+<images>
+</images>
+<videos>
+</videos>
+<published>true</published>
+<hideInMenu>false</hideInMenu>
+<locked>false</locked>
+<readtime>1</readtime>
+<status></status>
+</metadata>
+<content><![CDATA[
+<p></p>
+<h1 id="h1-1954384612">📚 Pertemuan 1: Pengenalan HAXcms</h1>
+<p>Materi pembelajaran hari ini...</p>
+<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbzAJL1vjme8cv5DDgrrEC91kJzaGDMcArxYmMX8U40tZ3PvQLKDh73TOr5QjplEc8ZoDQ/exec" sheet-name="Pertemuan 1"></full-quiz-dashboard>
+]]></content>
+</item>

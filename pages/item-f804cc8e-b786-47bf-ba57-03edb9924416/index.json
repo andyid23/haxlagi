@@ -1,0 +1,22 @@
+{
+  "id": "item-f804cc8e-b786-47bf-ba57-03edb9924416",
+  "indent": 0,
+  "location": "pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.json",
+  "slug": "new-page-2",
+  "order": 6,
+  "parent": null,
+  "title": "baru2",
+  "description": "\n📚 Pertemuan 2: Lit Element Dasar\nMateri pembelajaran hari ini...\n\n\n",
+  "metadata": {
+    "created": 1784688264,
+    "updated": 1784720151,
+    "images": [],
+    "videos": [],
+    "published": true,
+    "hideInMenu": false,
+    "locked": false,
+    "readtime": 1,
+    "status": ""
+  },
+  "content": "\n<p></p>\n<h1 id=\"h1--419233438\">📚 Pertemuan 2: Lit Element Dasar</h1>\n<p>Materi pembelajaran hari ini...</p>\n<full-quiz-dashboard apps-script-url=\"https://script.google.com/macros/s/AKfycbxLJimWghZbVMEtUqOTs07qxxg3PN4Ud0EgucENK6_NBVh8Yb_zC1gtTumegAIvDY4cIA/exec\" sheet-name=\"Pertemuan 2\"></full-quiz-dashboard>\n"
+}

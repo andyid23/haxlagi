@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+<id>item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec</id>
+<indent>0</indent>
+<location>pages/item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec/index.xml</location>
+<slug>new-page</slug>
+<order>7</order>
+<parent>item-doc-elements</parent>
+<title>dashboard quiz</title>
+<description>fulldashboard
+
+
+</description>
+<metadata>
+<created>1784673090</created>
+<updated>1784673172</updated>
+<images>
+</images>
+<videos>
+</videos>
+<published>true</published>
+<hideInMenu>false</hideInMenu>
+<locked>false</locked>
+<readtime>1</readtime>
+</metadata>
+<content><![CDATA[
+<p>fulldashboard</p>
+<p></p>
+<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbxmclLDeyniBWEPuTIwFxKXLYGPK7i7egTt2oJ7RBHRJNOEjSgfj47GmVg7LWf2R0QLpg/exec"></full-quiz-dashboard>
+]]></content>
+</item>

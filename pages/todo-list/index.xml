@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+<id>item-doc-todo</id>
+<indent>0</indent>
+<location>pages/todo-list/index.xml</location>
+<slug>todo-list</slug>
+<order>4</order>
+<parent>item-doc-elements</parent>
+<title>Todo List</title>
+<description>Demo dan dokumentasi daftar tugas</description>
+<metadata>
+<created>1784667020</created>
+<updated>1784714531</updated>
+<published>true</published>
+<locked>false</locked>
+<status></status>
+<hideInMenu>false</hideInMenu>
+<readtime>1</readtime>
+<videos>
+</videos>
+<images>
+</images>
+</metadata>
+<content><![CDATA[
+<h1 id="h1-1860569192">📝 Todo List &#8212; Daftar Tugas</h1>
+<p>Elemen <code>&lt;todo-list&gt;</code> adalah komponen daftar tugas sederhana yang
+  menggunakan DDD Design System dari HAX. Mendukung fitur CRUD lengkap dengan editor
+  bawaan.</p>
+<h2 id="h2-1591783538">🧪 Demo Langsung</h2>
+<p>Coba todo list interaktif di bawah ini:</p>
+<todo-list editable tasks="[{&quot;id&quot;:&quot;0911b962-0cbb-4712-aa32-a2c917b2fac0&quot;,&quot;text&quot;:&quot;lllkj&quot;,&quot;completed&quot;:false},{&quot;id&quot;:&quot;5d443879-dfd7-4c70-a491-2f6588aa4d12&quot;,&quot;text&quot;:&quot;jlkl&quot;,&quot;completed&quot;:false},{&quot;id&quot;:&quot;69e54711-5c3f-4aa2-bb38-db2cda19b397&quot;,&quot;text&quot;:&quot;kljlk&quot;,&quot;completed&quot;:false}]" _screen="list" _temp-tasks="[]" _editing-index="-1" _editor-origin="list"></todo-list>
+<h2 id="h2-1518686653">📋 Atribut yang Didukung</h2>
+<editable-table accent-color="grey" column-header><table>
+	<thead class="thead">
+		<tr class="thead-tr tr">
+			<th scope="col" class="th th-or-td">-</th>
+			<th scope="col" class="th th-or-td">-</th>
+		</tr>
+
+	</thead>
+
+	<tbody class="tbody">
+		<tr class="tbody-tr tr">
+			<td class="td th-or-td">-</td>
+			<td class="td th-or-td">-</td>
+		</tr>
+
+	</tbody>
+
+</table>
+</editable-table>
+<h2 id="h2-725032406">🖥️ Cara Penggunaan</h2>
+<h3 id="h3--2047907327">Tag Dasar</h3>
+<pre><code>&lt;todo-list&gt;&lt;/todo-list&gt;</code></pre>
+<h3 id="h3-777087102">Dengan Data Awal</h3>
+<pre><code>&lt;todo-list tasks='[{"id":"1","text":"Belajar HAXcms","completed":false},{"id":"2","text":"Buat komponen kustom","completed":true}]'&gt;&lt;/todo-list&gt;</code></pre>
+<h3 id="h3--1601356409">Menggunakan JavaScript</h3>
+<pre><code>const todoList = document.querySelector('todo-list');
+todoList.tasks = [
+  { id: '1', text: 'Belajar Lit Element', completed: false },
+  { id: '2', text: 'Buat Web Component', completed: true }
+];</code></pre>
+<h2 id="h2--19471014">🛠️ Fitur</h2>
+<ul>
+    <li><strong>Tambah Tugas:</strong> Input teks + tombol Add, atau tekan Enter</li>
+
+    <li><strong>Checklist:</strong> Tandai tugas selesai/belum</li>
+
+    <li><strong>Hapus Tugas:</strong> Tombol delete pada setiap item</li>
+
+    <li><strong>Validasi Input:</strong> Minimal 3 karakter, maksimal 50 karakter</li>
+
+    <li><strong>Editor Bawaan:</strong> Panel editor untuk mengelola daftar tugas (mode HAX
+      editor)</li>
+
+    <li><strong>Empty State:</strong> Tampilan saat belum ada tugas</li>
+
+    <li><strong>DDD Design System:</strong> Menggunakan token desain HAX (warna, spacing,
+      font)</li>
+
+    <li><strong>Aksesibilitas:</strong> aria-label lengkap, keyboard navigation</li>
+
+  </ul>
+<h2 id="h2-721169473">🎨 Tema Polaris</h2>
+<p>Komponen ini menggunakan tema <strong>Polaris</strong> dengan palet ungu:</p>
+<ul>
+    <li>Background: putih dengan shadow</li>
+    <li>Border kiri ungu pada setiap item tugas</li>
+    <li>Tombol Delete: outline merah, fill merah saat hover</li>
+    <li>Teks tugas selesai: dicoret dengan opacity 50%</li>
+  </ul>
+<h2 id="h2--1131647999">📦 Struktur Data Tugas</h2>
+<pre><code>{
+  "id": "string (UUID atau timestamp)",
+  "text": "string (teks tugas, 3-50 karakter)",
+  "completed": boolean
+}</code></pre>
+<h2 id="h2--291047800">🧩 Integrasi dengan HAX Editor</h2>
+<p>Saat digunakan di dalam HAXcms editor, komponen ini otomatis menampilkan tombol <strong>"Edit Task List"</strong> yang
+    membuka panel editor untuk mengelola daftar tugas secara visual.</p>
+]]></content>
+</item>

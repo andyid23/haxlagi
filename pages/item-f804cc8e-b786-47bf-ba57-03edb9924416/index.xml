@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+<id>item-f804cc8e-b786-47bf-ba57-03edb9924416</id>
+<indent>0</indent>
+<location>pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.xml</location>
+<slug>new-page-2</slug>
+<order>6</order>
+<parent></parent>
+<title>baru2</title>
+<description>
+📚 Pertemuan 2: Lit Element Dasar
+Materi pembelajaran hari ini...
+
+
+</description>
+<metadata>
+<created>1784688264</created>
+<updated>1784720151</updated>
+<images>
+</images>
+<videos>
+</videos>
+<published>true</published>
+<hideInMenu>false</hideInMenu>
+<locked>false</locked>
+<readtime>1</readtime>
+<status></status>
+</metadata>
+<content><![CDATA[
+<p></p>
+<h1 id="h1--419233438">📚 Pertemuan 2: Lit Element Dasar</h1>
+<p>Materi pembelajaran hari ini...</p>
+<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbxLJimWghZbVMEtUqOTs07qxxg3PN4Ud0EgucENK6_NBVh8Yb_zC1gtTumegAIvDY4cIA/exec" sheet-name="Pertemuan 2"></full-quiz-dashboard>
+]]></content>
+</item>

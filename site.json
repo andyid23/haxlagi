@@ -1,0 +1,369 @@
+{
+  "id": "e2d24dfc-d85c-4066-84e6-e2e9e9917967",
+  "title": "haxnow",
+  "author": "",
+  "description": "",
+  "license": "by-sa",
+  "metadata": {
+    "author": {},
+    "site": {
+      "settings": {
+        "lang": "en",
+        "canonical": true
+      },
+      "name": "haxnow",
+      "domain": null,
+      "created": 1784667020,
+      "updated": 1784720151
+    },
+    "theme": {
+      "element": "custom-haxquiz-theme",
+      "path": "./custom/build/custom.es6.js",
+      "name": "CustomHaxquizTheme"
+    },
+    "node": {
+      "fields": {}
+    }
+  },
+  "items": [
+    {
+      "id": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
+      "indent": 0,
+      "location": "pages/item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c/index.html",
+      "slug": "welcome",
+      "order": 0,
+      "parent": null,
+      "title": "Welcome to haxnow",
+      "description": "",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700254,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-doc-elements",
+      "indent": 0,
+      "location": "pages/elemendokumen/index.html",
+      "slug": "elemendokumen",
+      "order": 1,
+      "parent": null,
+      "title": "Dokumentasi Elemen",
+      "description": "Dokumentasi semua elemen interaktif yang tersedia di HAXcms",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700254,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-doc-kuis",
+      "indent": 1,
+      "location": "pages/kuis-interaktif/index.html",
+      "slug": "kuis-interaktif",
+      "order": 0,
+      "parent": "item-doc-elements",
+      "title": "Explode Quiz - Kuis Interaktif",
+      "description": "Demo dan dokumentasi elemen kuis interaktif",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700255,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-doc-dashboard",
+      "indent": 1,
+      "location": "pages/dashboard-kuis/index.html",
+      "slug": "dashboard-kuis",
+      "order": 1,
+      "parent": "item-doc-elements",
+      "title": "Dashboard Kuis Lite",
+      "description": "Demo dan dokumentasi dashboard kuis ringan",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700255,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-doc-kehadiran",
+      "indent": 1,
+      "location": "pages/kehadiran/index.html",
+      "slug": "kehadiran",
+      "order": 2,
+      "parent": "item-doc-elements",
+      "title": "Sistem Kehadiran",
+      "description": "Demo sistem kehadiran dan pelacakan aktivitas",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700255,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-doc-notifikasi",
+      "indent": 1,
+      "location": "pages/notifikasi/index.html",
+      "slug": "notifikasi",
+      "order": 3,
+      "parent": "item-doc-elements",
+      "title": "Notif Element",
+      "description": "Demo dan dokumentasi elemen notifikasi",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700256,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-doc-todo",
+      "indent": 0,
+      "location": "pages/todo-list/index.html",
+      "slug": "todo-list",
+      "order": 4,
+      "parent": "item-doc-elements",
+      "title": "Todo List",
+      "description": "Demo dan dokumentasi daftar tugas",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784714531,
+        "published": true,
+        "locked": false,
+        "status": "",
+        "hideInMenu": false,
+        "readtime": 1,
+        "videos": [],
+        "images": []
+      }
+    },
+    {
+      "id": "item-doc-full-dashboard",
+      "indent": 1,
+      "location": "pages/full-dashboard/index.html",
+      "slug": "full-dashboard",
+      "order": 5,
+      "parent": "item-doc-elements",
+      "title": "Full Quiz Dashboard",
+      "description": "Demo dashboard lengkap dengan Apps Script",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700256,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-doc-tutorial-attendance",
+      "indent": 1,
+      "location": "pages/tutorial-attendance/index.html",
+      "slug": "tutorial-attendance",
+      "order": 6,
+      "parent": "item-doc-elements",
+      "title": "Tutorial Attendance System",
+      "description": "Panduan lengkap sistem kehadiran dan pelacakan aktivitas",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700257,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-doc-tutorial-apps-script",
+      "indent": 1,
+      "location": "pages/tutorial-apps-script/index.html",
+      "slug": "tutorial-apps-script",
+      "order": 7,
+      "parent": "item-doc-elements",
+      "title": "Tutorial Google Apps Script",
+      "description": "Panduan setup Apps Script untuk integrasi Google Sheets",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700257,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec",
+      "indent": 1,
+      "location": "pages/item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec/index.html",
+      "slug": "new-page",
+      "order": 8,
+      "parent": "item-doc-elements",
+      "title": "dashboard quiz",
+      "description": "fulldashboard\n\n\n",
+      "metadata": {
+        "created": 1784673090,
+        "updated": 1784700257,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-materi-siswa",
+      "indent": 0,
+      "location": "pages/materi-siswa/index.html",
+      "slug": "materi-siswa",
+      "order": 3,
+      "parent": null,
+      "title": "📚 Modul 1: HAXcms & Web Component",
+      "description": "Contoh halaman materi siswa dengan aktivitas dan kuis",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700258,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-tutor-html",
+      "indent": 1,
+      "location": "pages/tutor-html/index.html",
+      "slug": "tutor-html",
+      "order": 0,
+      "parent": "item-materi-siswa",
+      "title": "📖 Belajar HTML Dasar",
+      "description": "Tutorial HTML lengkap dari nol untuk pemula",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700258,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-tutorial-kursus",
+      "indent": 1,
+      "location": "pages/tutorial-kursus/index.html",
+      "slug": "tutorial-kursus",
+      "order": 1,
+      "parent": "item-materi-siswa",
+      "title": "📅 Tutorial: Kursus Multi-Hari",
+      "description": "Panduan menambah kuis dan materi untuk setiap pertemuan",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700259,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-tutorial-sheet",
+      "indent": 1,
+      "location": "pages/tutorial-sheet-per-pertemuan/index.html",
+      "slug": "tutorial-sheet-per-pertemuan",
+      "order": 2,
+      "parent": "item-materi-siswa",
+      "title": "📊 Tutorial: 1 Sheet = 1 Pertemuan",
+      "description": "Setup Google Sheets auto-create sheet tab per pertemuan",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700259,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-dashboard-siswa",
+      "indent": 0,
+      "location": "pages/dashboard-siswa/index.html",
+      "slug": "dashboard-siswa",
+      "order": 4,
+      "parent": null,
+      "title": "📊 Dashboard Siswa - Lihat Nilai",
+      "description": "Halaman dashboard siswa yang membaca data dari Google Sheets",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700259,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-tutorial-dashboard-siswa",
+      "indent": 0,
+      "location": "pages/tutorial-dashboard-siswa/index.html",
+      "slug": "tutorial-dashboard-siswa",
+      "order": 5,
+      "parent": null,
+      "title": "📖 Tutorial: Fetch Data dari Sheet",
+      "description": "Panduan membaca data dari Google Sheets via Apps Script API",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1784700260,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-df69b4a8-b470-4c1e-be89-8833ce3452da",
+      "indent": 0,
+      "location": "pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.html",
+      "slug": "new-page-1",
+      "order": 2,
+      "parent": null,
+      "title": "baru1",
+      "description": "\n📚 Pertemuan 1: Pengenalan HAXcms\nMateri pembelajaran hari ini...\n\n\n\n",
+      "metadata": {
+        "created": 1784687716,
+        "updated": 1784700812,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-f804cc8e-b786-47bf-ba57-03edb9924416",
+      "indent": 0,
+      "location": "pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.html",
+      "slug": "new-page-2",
+      "order": 6,
+      "parent": null,
+      "title": "baru2",
+      "description": "\n📚 Pertemuan 2: Lit Element Dasar\nMateri pembelajaran hari ini...\n\n\n",
+      "metadata": {
+        "created": 1784688264,
+        "updated": 1784720151,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1,
+        "status": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>haxnow</title>
+    <link>https://localhost:3000/sites/haxnow/</link>
+    <description></description>
+    <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Jul 2026 10:02:11 GMT</lastBuildDate>
+    <generator>HAXcms NodeJS</generator>
+    <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Welcome to haxnow</title>
+      <link>https://localhost:3000/sites/haxnow/welcome</link>
+      <description>Welcome to your new HAX site! Click edit on the top bar to get started What can I do? We&apos;ve got a ton of blocks that are easy to use and get a lot done with little effort, so much in fact we made a little video exploring some of them! Here&apos;s a list of just a few things to get started, or if your a pro, delete this content and have fun! Edit this content by hitting &quot;Edit page&quot; above Hit enter in a paragraph of text to add another one Click &quot;Merlin&quot; to see a list of all the things you can do Tr...</description>
+      <guid>https://localhost:3000/sites/haxnow/welcome</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>Dokumentasi Elemen</title>
+      <link>https://localhost:3000/sites/haxnow/elemendokumen</link>
+      <description>📚 Dokumentasi Elemen Interaktif HAXcms Halaman ini mendokumentasikan semua elemen kustom yang tersedia untuk digunakan di situs HAXcms ini. Setiap elemen adalah Web Component yang dapat disisipkan langsung ke halaman dengan mudah. 📋 Daftar Elemen 🎯 &amp;lt;explode-quiz&amp;gt; Kuis interaktif pilihan ganda dengan efek confetti, integrasi Google Sheets, dan editor soal bawaan. Cocok untuk pembelajaran dan penilaian. Tag: &amp;lt;explode-quiz&amp;gt;&amp;lt;/explode-quiz&amp;gt; → Demo &amp;amp; Dokumentasi Lengkap 📊 ...</description>
+      <guid>https://localhost:3000/sites/haxnow/elemendokumen</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>Explode Quiz - Kuis Interaktif</title>
+      <link>https://localhost:3000/sites/haxnow/kuis-interaktif</link>
+      <description>🎯 Explode Quiz — Kuis Interaktif Elemen &amp;lt;explode-quiz&amp;gt; adalah komponen kuis interaktif pilihan ganda yang dilengkapi efek konfeti, editor soal bawaan, dan integrasi Google Sheets untuk menyimpan hasil kuis secara real-time. 🧪 Demo Langsung Coba kuis interaktif di bawah ini: 📋 Atribut yang Didukung Atribut Tipe Deskripsi Default spreadsheet-id String ID Google Spreadsheet untuk menyimpan hasil — apps-script-url String URL Google Apps Script endpoint — editable Boolean Tampilkan tombol...</description>
+      <guid>https://localhost:3000/sites/haxnow/kuis-interaktif</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>Dashboard Kuis Lite</title>
+      <link>https://localhost:3000/sites/haxnow/dashboard-kuis</link>
+      <description>📊 Quiz Dashboard Lite Elemen &amp;lt;quiz-dashboard-lite&amp;gt; adalah dashboard kuis ringan dengan tiga tab navigasi yang menggabungkan kuis interaktif, pelacakan kehadiran, dan panduan. Tanpa Firebase — cocok untuk deployment sederhana. 🧪 Demo Langsung Coba dashboard kuis di bawah ini: 📋 Atribut Dashboard ini tidak memerlukan atribut khusus. Semua konfigurasi (seperti Google Sheets) dilakukan melalui UI-nya langsung. 🖥️ Cara Penggunaan &amp;lt;quiz-dashboard-lite&amp;gt;&amp;lt;/quiz-dashboard-lite&amp;gt; 🗂...</description>
+      <guid>https://localhost:3000/sites/haxnow/dashboard-kuis</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>Sistem Kehadiran</title>
+      <link>https://localhost:3000/sites/haxnow/kehadiran</link>
+      <description>📅 Sistem Kehadiran &amp;amp; Pelacakan Aktivitas Halaman ini mendemonstrasikan tiga komponen pelacakan aktivitas pembelajaran yang saling terintegrasi. Sistem mencatat interaksi pengguna secara otomatis dan menghitung kehadiran berdasarkan metrik yang terukur. ⏰ Activity Logger — Pencatat Otomatis Komponen &amp;lt;activity-logger&amp;gt; berjalan di latar belakang dan secara otomatis mencatat: Scroll halaman — Membaca materi pembelajaran Klik tautan/unduhan — Mengunduh file materi Klik tombol menu — Nav...</description>
+      <guid>https://localhost:3000/sites/haxnow/kehadiran</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>Notif Element</title>
+      <link>https://localhost:3000/sites/haxnow/notifikasi</link>
+      <description>🔔 Notif Element — Komponen Notifikasi Elemen &amp;lt;notif-element&amp;gt; adalah komponen notifikasi sederhana berbasis vanilla Web Component. Cocok untuk menampilkan pesan notifikasi dengan berbagai tipe di situs HAXcms. 🧪 Demo Langsung 📋 Atribut yang Didukung Atribut Tipe Deskripsi Default type String Tipe notifikasi: info, success, warning, error info message String Pesan yang ditampilkan — duration Number Durasi tampil dalam milidetik (0 = tidak auto-hide) 5000 visible Boolean Status tampil n...</description>
+      <guid>https://localhost:3000/sites/haxnow/notifikasi</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>Todo List</title>
+      <link>https://localhost:3000/sites/haxnow/todo-list</link>
+      <description>📝 Todo List &amp;#8212; Daftar Tugas Elemen &amp;lt;todo-list&amp;gt; adalah komponen daftar tugas sederhana yang menggunakan DDD Design System dari HAX. Mendukung fitur CRUD lengkap dengan editor bawaan. 🧪 Demo Langsung Coba todo list interaktif di bawah ini: 📋 Atribut yang Didukung - - - - 🖥️ Cara Penggunaan Tag Dasar &amp;lt;todo-list&amp;gt;&amp;lt;/todo-list&amp;gt; Dengan Data Awal &amp;lt;todo-list tasks=&apos;[{&quot;id&quot;:&quot;1&quot;,&quot;text&quot;:&quot;Belajar HAXcms&quot;,&quot;completed&quot;:false},{&quot;id&quot;:&quot;2&quot;,&quot;text&quot;:&quot;Buat komponen kustom&quot;,&quot;completed&quot;:tru...</description>
+      <guid>https://localhost:3000/sites/haxnow/todo-list</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>Full Quiz Dashboard</title>
+      <link>https://localhost:3000/sites/haxnow/full-dashboard</link>
+      <description>🎯 Full Quiz Dashboard — Satu Elemen, Semua Fitur Elemen &amp;lt;full-quiz-dashboard&amp;gt; adalah Web Component vanilla JavaScript (0 dependencies) yang menggabungkan semua fitur dalam satu tag: Kuis + Attendance + Heatmap + Gradebook + Google Sheets. 🧪 Demo Langsung 📋 Atribut yang Didukung Atribut Deskripsi Contoh apps-script-url URL Google Apps Script Web App https://script.google.com/macros/s/.../exec spreadsheet-id ID Google Spreadsheet 1BxiMVs0XRA5nFM... questions JSON array soal kustom [{&quot;q...</description>
+      <guid>https://localhost:3000/sites/haxnow/full-dashboard</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>Tutorial Attendance System</title>
+      <link>https://localhost:3000/sites/haxnow/tutorial-attendance</link>
+      <description>📊 Tutorial: Sistem Attendance &amp;amp; Activity Logging Panduan lengkap cara kerja pelacakan aktivitas dan kehadiran otomatis. Kehadiran dihitung berdasarkan aktivitas pembelajaran , bukan tanda tangan manual. 🎯 Konsep Utama Kehadiran = Aktivitas Belajar yang Terdeteksi Otomatis oleh Sistem ⚙️ Cara Kerja Sistem 1. Event Listeners (Deteksi Otomatis) Event Trigger Tipe Aktivitas Throttle scroll User scroll &amp;gt; 300px reading 1x per 60 detik click Klik link/button reading/download Setiap klik val...</description>
+      <guid>https://localhost:3000/sites/haxnow/tutorial-attendance</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>Tutorial Google Apps Script</title>
+      <link>https://localhost:3000/sites/haxnow/tutorial-apps-script</link>
+      <description>📖 Tutorial: Setup Google Apps Script Panduan langkah demi langkah untuk menghubungkan kuis dengan Google Sheets tanpa server backend. Menggunakan Google Apps Script sebagai jembatan. 🎯 Alur Sistem Siswa mengerjakan kuis di browser → Browser kirim data via POST → Apps Script terima &amp;amp; proses → Tersimpan di Google Sheets. ✅ Kelebihan Tidak perlu server, Firebase, atau backend Gratis — Google Apps Script gratis untuk 20,000 eksekusi/hari Data langsung tersimpan di Google Drive Anda ⚠️ Keter...</description>
+      <guid>https://localhost:3000/sites/haxnow/tutorial-apps-script</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>📚 Modul 1: HAXcms &amp; Web Component</title>
+      <link>https://localhost:3000/sites/haxnow/materi-siswa</link>
+      <description>📚 Modul 1: Pengenalan HAXcms &amp;amp; Web Component Selamat datang di modul pembelajaran interaktif! Halaman ini adalah contoh bagaimana materi pembelajaran dipadukan dengan pelacakan aktivitas otomatis dan kuis evaluasi . Setiap aktivitas Anda — scroll membaca, klik link, download file, dan mengerjakan kuis — tercatat otomatis oleh sistem. ⏰ Activity Logger Aktif! Scroll, klik, dan kerjakan kuis di halaman ini akan dicatat otomatis untuk validasi kehadiran Anda. 📖 1.1 Apa itu HAXcms? HAXcms a...</description>
+      <guid>https://localhost:3000/sites/haxnow/materi-siswa</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>📖 Belajar HTML Dasar</title>
+      <link>https://localhost:3000/sites/haxnow/tutor-html</link>
+      <description>📖 Belajar Dasar HTML untuk Pemula 🇮🇩 Tutorial lengkap HTML dari nol — tanpa perlu install apa pun. Cukup browser dan teks editor (Notepad pun bisa!). HTML adalah bahasa markup untuk membuat struktur halaman web. Ibarat rumah: HTML adalah kerangka bangunannya. ⏰ Activity Logger Aktif! Scroll membaca tutorial ini akan dicatat otomatis. Di akhir ada kuis evaluasi! 🔤 Bab 1: Tag HTML Dasar HTML ditulis dengan tag — diapit tanda kurung siku &amp;lt; &amp;gt; . Setiap tag punya fungsi spesifik. Tag Pali...</description>
+      <guid>https://localhost:3000/sites/haxnow/tutor-html</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>📅 Tutorial: Kursus Multi-Hari</title>
+      <link>https://localhost:3000/sites/haxnow/tutorial-kursus</link>
+      <description>📅 Tutorial: Cara Menambah Kuis di Hari Lain untuk Kursus Panduan ini menjelaskan bagaimana menyusun kursus multi-hari/multi-sesi di HAXcms, di mana setiap halaman materi memiliki kuis harian dan pelacakan aktivitas sendiri. Cocok untuk dosen/guru yang ingin membuat course terstruktur per pertemuan. 🎯 Konsep Dasar 📄 1 Halaman = 1 Pertemuan/Hari 📚 Materi + Kuis Gabungan konten &amp;amp; evaluasi 📊 Tracker Aktivitas otomatis tercatat 📤 Google Sheets Semua hasil ke satu sheet 🚀 Metode 1: Halam...</description>
+      <guid>https://localhost:3000/sites/haxnow/tutorial-kursus</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>📊 Tutorial: 1 Sheet = 1 Pertemuan</title>
+      <link>https://localhost:3000/sites/haxnow/tutorial-sheet-per-pertemuan</link>
+      <description>📊 Tutorial: 1 Google Sheet = 1 Course — 1 Sheet Tab = 1 Pertemuan Cara setup agar satu Google Spreadsheet menampung seluruh data course, dan setiap sheet tab otomatis jadi satu pertemuan. Data dari semua halaman HAXcms masuk ke spreadsheet yang sama, terorganisir rapi per pertemuan. 🎯 Konsep 1 Spreadsheet 1 Sheet Tab 1 Atribut HTML = 1 Course/Mata Kuliah = 1 Pertemuan/Hari sheet-name=&quot;Pertemuan 1&quot; 🚀 Langkah 1: Buat 1 Google Spreadsheet untuk 1 Course Buka sheets.google.com Klik &quot;Blank&quot; — b...</description>
+      <guid>https://localhost:3000/sites/haxnow/tutorial-sheet-per-pertemuan</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>📊 Dashboard Siswa - Lihat Nilai</title>
+      <link>https://localhost:3000/sites/haxnow/dashboard-siswa</link>
+      <description>📊 Dashboard Siswa — Lihat Nilai &amp;amp; Aktivitas dari Google Sheets Halaman ini mengambil data langsung dari Google Sheets via Apps Script API. Masukkan URL Apps Script dan nama Anda, lalu klik Tampilkan untuk melihat semua data kuis, aktivitas, dan leaderboard Anda secara real-time. 🔌 Hubungkan ke Google Sheets Masukkan URL Apps Script Web App dan nama Anda untuk melihat data. URL Apps Script Nama Anda 🔍 Tampilkan Data Mengambil data dari Google Sheets... 🏆 Leaderboard 📝 Kuis Saya 📅 Akt...</description>
+      <guid>https://localhost:3000/sites/haxnow/dashboard-siswa</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>📖 Tutorial: Fetch Data dari Sheet</title>
+      <link>https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa</link>
+      <description>📖 Tutorial: Cara Fetch (Baca) Data dari Google Sheets via Apps Script Panduan ini menjelaskan cara membaca/mengambil data dari Google Sheets menggunakan Apps Script API, bukan hanya menyimpan. Cocok untuk membuat dashboard siswa, leaderboard, atau halaman monitoring nilai. 🎯 Perbedaan POST vs GET 📤 POST (Simpan Data) doPost(e) — Digunakan dashboard kuis untuk menyimpan hasil ke sheet. fetch(URL, { method: &apos;POST&apos;, body: JSON.stringify({ name: &quot;Andi&quot;, score: 80, sheet: &quot;Pertemuan 1&quot; }) }) 📥...</description>
+      <guid>https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>dashboard quiz</title>
+      <link>https://localhost:3000/sites/haxnow/new-page</link>
+      <description>fulldashboard</description>
+      <guid>https://localhost:3000/sites/haxnow/new-page</guid>
+      <pubDate>Tue, 21 Jul 2026 22:31:30 GMT</pubDate>
+    </item>
+    <item>
+      <title>baru1</title>
+      <link>https://localhost:3000/sites/haxnow/new-page-1</link>
+      <description>📚 Pertemuan 1: Pengenalan HAXcms Materi pembelajaran hari ini...</description>
+      <guid>https://localhost:3000/sites/haxnow/new-page-1</guid>
+      <pubDate>Wed, 22 Jul 2026 02:35:16 GMT</pubDate>
+    </item>
+    <item>
+      <title>baru2</title>
+      <link>https://localhost:3000/sites/haxnow/new-page-2</link>
+      <description>📚 Pertemuan 2: Lit Element Dasar Materi pembelajaran hari ini...</description>
+      <guid>https://localhost:3000/sites/haxnow/new-page-2</guid>
+      <pubDate>Wed, 22 Jul 2026 02:44:24 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

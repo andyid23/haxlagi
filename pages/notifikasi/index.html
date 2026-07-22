@@ -1,0 +1,84 @@
+<h1>🔔 Notif Element — Komponen Notifikasi</h1>
+
+<p>Elemen <code>&lt;notif-element&gt;</code> adalah komponen notifikasi sederhana berbasis vanilla Web Component. Cocok untuk menampilkan pesan notifikasi dengan berbagai tipe di situs HAXcms.</p>
+
+<h2>🧪 Demo Langsung</h2>
+
+<!-- Notifikasi statis untuk demo -->
+<notif-element type="info" message="Ini adalah notifikasi tipe info. Klik × untuk menutup." visible="true"></notif-element>
+<notif-element type="success" message="Operasi berhasil diselesaikan!" visible="true"></notif-element>
+<notif-element type="warning" message="Perhatian: Cache akan segera dibersihkan." visible="true"></notif-element>
+<notif-element type="error" message="Error: Gagal memuat data dari server." visible="true"></notif-element>
+
+<h2>📋 Atribut yang Didukung</h2>
+<table>
+  <thead>
+    <tr><th>Atribut</th><th>Tipe</th><th>Deskripsi</th><th>Default</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>type</code></td><td>String</td><td>Tipe notifikasi: info, success, warning, error</td><td>info</td></tr>
+    <tr><td><code>message</code></td><td>String</td><td>Pesan yang ditampilkan</td><td>—</td></tr>
+    <tr><td><code>duration</code></td><td>Number</td><td>Durasi tampil dalam milidetik (0 = tidak auto-hide)</td><td>5000</td></tr>
+    <tr><td><code>visible</code></td><td>Boolean</td><td>Status tampil notifikasi</td><td>false</td></tr>
+  </tbody>
+</table>
+
+<h2>🖥️ Cara Penggunaan</h2>
+
+<h3>HTML Deklaratif</h3>
+<pre><code>&lt;notif-element 
+  type="success" 
+  message="Data berhasil disimpan!" 
+  duration="3000"
+  visible="true"&gt;
+&lt;/notif-element&gt;</code></pre>
+
+<h3>JavaScript API</h3>
+<pre><code>// Membuat elemen notifikasi
+const notif = document.createElement('notif-element');
+notif.setAttribute('type', 'success');
+notif.setAttribute('message', 'Data berhasil disimpan!');
+notif.setAttribute('duration', '3000');
+document.body.appendChild(notif);
+
+// Method: show() dan hide()
+notif.show();   // Tampilkan notifikasi
+notif.hide();   // Sembunyikan notifikasi</code></pre>
+
+<h3>Event Listener</h3>
+<pre><code>const notif = document.querySelector('notif-element');
+
+notif.addEventListener('notif-show', (e) => {
+  console.log('Notifikasi ditampilkan:', e.detail);
+});
+
+notif.addEventListener('notif-hide', (e) => {
+  console.log('Notifikasi disembunyikan:', e.detail);
+});</code></pre>
+
+<h2>🎨 Tema Warna</h2>
+<table>
+  <thead>
+    <tr><th>Tipe</th><th>Warna Background</th><th>Warna Teks</th><th>Penggunaan</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>info</td><td style="background:#e3f2fd">#e3f2fd</td><td style="color:#1565c0">#1565c0</td><td>Informasi umum</td></tr>
+    <tr><td>success</td><td style="background:#e8f5e9">#e8f5e9</td><td style="color:#2e7d32">#2e7d32</td><td>Operasi berhasil</td></tr>
+    <tr><td>warning</td><td style="background:#fff8e1">#fff8e1</td><td style="color:#f57c00">#f57c00</td><td>Peringatan</td></tr>
+    <tr><td>error</td><td style="background:#ffebee">#ffebee</td><td style="color:#c62828">#c62828</td><td>Kesalahan/gagal</td></tr>
+  </tbody>
+</table>
+
+<h2>🛠️ Fitur</h2>
+<ul>
+  <li><strong>4 Tipe Notifikasi:</strong> info, success, warning, error</li>
+  <li><strong>Auto-hide:</strong> Notifikasi otomatis sembunyi setelah durasi tertentu</li>
+  <li><strong>Closable:</strong> Tombol × untuk menutup manual</li>
+  <li><strong>Animasi Transisi:</strong> Fade-in dan slide-up yang smooth</li>
+  <li><strong>Aksesibilitas:</strong> aria-label pada tombol close</li>
+  <li><strong>Shadow DOM:</strong> Style terisolasi, tidak bentrok dengan CSS halaman</li>
+  <li><strong>Custom Events:</strong> notif-show dan notif-hide</li>
+</ul>
+
+<h2>📱 Responsif</h2>
+<p>Notifikasi secara otomatis menyesuaikan lebar maksimum 100% dari container. Cocok untuk mobile dan desktop.</p>

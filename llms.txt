@@ -1,0 +1,37 @@
+# haxnow
+
+HAXcms is a file-based CMS: authored pages and metadata are stored as portable files, not locked into a database-only workflow.
+The canonical site structure is `site.json`, represented in JSON Outline Schema (`id`, `parent`, `order`, `slug`, `location`, and `metadata`).
+Use HAX CLI and ecosystem tooling to maintain human-authored content while keeping machine-readable outputs synchronized.
+Managed files (feeds, search indexes, manifests, and this `llms.txt`) are generated artifacts and should be rebuilt by tooling.
+
+## Core resources
+- [site.json](https://localhost:3000/sites/haxnow/site.json): Canonical site manifest and navigation tree in JSON Outline Schema format.
+- [llms.txt](https://localhost:3000/sites/haxnow/llms.txt): LLM-oriented guide to this site and its machine-readable resources.
+
+## Pages
+- [Welcome to haxnow](https://localhost:3000/sites/haxnow/pages/item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c/index.md)
+- [Dokumentasi Elemen](https://localhost:3000/sites/haxnow/pages/elemendokumen/index.md): Dokumentasi semua elemen interaktif yang tersedia di HAXcms
+- [Explode Quiz - Kuis Interaktif](https://localhost:3000/sites/haxnow/pages/kuis-interaktif/index.md): Demo dan dokumentasi elemen kuis interaktif
+- [Dashboard Kuis Lite](https://localhost:3000/sites/haxnow/pages/dashboard-kuis/index.md): Demo dan dokumentasi dashboard kuis ringan
+- [Sistem Kehadiran](https://localhost:3000/sites/haxnow/pages/kehadiran/index.md): Demo sistem kehadiran dan pelacakan aktivitas
+- [Notif Element](https://localhost:3000/sites/haxnow/pages/notifikasi/index.md): Demo dan dokumentasi elemen notifikasi
+- [Todo List](https://localhost:3000/sites/haxnow/pages/todo-list/index.md): Demo dan dokumentasi daftar tugas
+- [Full Quiz Dashboard](https://localhost:3000/sites/haxnow/pages/full-dashboard/index.md): Demo dashboard lengkap dengan Apps Script
+- [Tutorial Attendance System](https://localhost:3000/sites/haxnow/pages/tutorial-attendance/index.md): Panduan lengkap sistem kehadiran dan pelacakan aktivitas
+- [Tutorial Google Apps Script](https://localhost:3000/sites/haxnow/pages/tutorial-apps-script/index.md): Panduan setup Apps Script untuk integrasi Google Sheets
+- [dashboard quiz](https://localhost:3000/sites/haxnow/pages/item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec/index.md): fulldashboard
+- [📚 Modul 1: HAXcms & Web Component](https://localhost:3000/sites/haxnow/pages/materi-siswa/index.md): Contoh halaman materi siswa dengan aktivitas dan kuis
+- [📖 Belajar HTML Dasar](https://localhost:3000/sites/haxnow/pages/tutor-html/index.md): Tutorial HTML lengkap dari nol untuk pemula
+- [📅 Tutorial: Kursus Multi-Hari](https://localhost:3000/sites/haxnow/pages/tutorial-kursus/index.md): Panduan menambah kuis dan materi untuk setiap pertemuan
+- [📊 Tutorial: 1 Sheet = 1 Pertemuan](https://localhost:3000/sites/haxnow/pages/tutorial-sheet-per-pertemuan/index.md): Setup Google Sheets auto-create sheet tab per pertemuan
+- [📊 Dashboard Siswa - Lihat Nilai](https://localhost:3000/sites/haxnow/pages/dashboard-siswa/index.md): Halaman dashboard siswa yang membaca data dari Google Sheets
+- [📖 Tutorial: Fetch Data dari Sheet](https://localhost:3000/sites/haxnow/pages/tutorial-dashboard-siswa/index.md): Panduan membaca data dari Google Sheets via Apps Script API
+- [baru1](https://localhost:3000/sites/haxnow/pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.md): 📚 Pertemuan 1: Pengenalan HAXcms Materi pembelajaran hari ini...
+- [baru2](https://localhost:3000/sites/haxnow/pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.md): 📚 Pertemuan 2: Lit Element Dasar Materi pembelajaran hari ini...
+
+## Optional
+- [Search index](https://localhost:3000/sites/haxnow/lunrSearchIndex.json): Lunr corpus for quick full-text retrieval.
+- [RSS feed](https://localhost:3000/sites/haxnow/rss.xml): Site updates in RSS format.
+- [Atom feed](https://localhost:3000/sites/haxnow/atom.xml): Site updates in Atom format.
+- [Sitemap](https://localhost:3000/sites/haxnow/sitemap.xml): URL-level discovery map for the published site.

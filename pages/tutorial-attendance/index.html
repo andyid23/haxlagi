@@ -1,0 +1,131 @@
+<h1>📊 Tutorial: Sistem Attendance &amp; Activity Logging</h1>
+
+<p>Panduan lengkap cara kerja pelacakan aktivitas dan kehadiran otomatis. Kehadiran dihitung berdasarkan <strong>aktivitas pembelajaran</strong>, bukan tanda tangan manual.</p>
+
+<h2>🎯 Konsep Utama</h2>
+<p><strong>Kehadiran = Aktivitas Belajar yang Terdeteksi Otomatis oleh Sistem</strong></p>
+
+<h2>⚙️ Cara Kerja Sistem</h2>
+
+<h3>1. Event Listeners (Deteksi Otomatis)</h3>
+<table>
+  <thead>
+    <tr><th>Event</th><th>Trigger</th><th>Tipe Aktivitas</th><th>Throttle</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>scroll</td><td>User scroll &gt; 300px</td><td>reading</td><td>1x per 60 detik</td></tr>
+    <tr><td>click</td><td>Klik link/button</td><td>reading/download</td><td>Setiap klik valid</td></tr>
+    <tr><td>quiz-saved</td><td>Kuis selesai</td><td>quiz</td><td>Setiap kuis selesai</td></tr>
+  </tbody>
+</table>
+
+<h3>2. Penyimpanan Data</h3>
+<p>Semua aktivitas tersimpan di <strong>localStorage browser</strong> dengan key <code>a3_attendance_activity_logs</code>.</p>
+
+<h3>3. Perhitungan Kehadiran (7 Hari Terakhir)</h3>
+<table>
+  <thead>
+    <tr><th>Kriteria</th><th>Minimal</th><th>Cara Terpenuhi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>📖 Membaca Modul</td><td>2x</td><td>Scroll materi atau klik link</td></tr>
+    <tr><td>📝 Kuis Selesai</td><td>1x</td><td>Mengerjakan kuis apapun</td></tr>
+    <tr><td>💬 Forum &amp; Diskusi</td><td>1x</td><td>Klik tombol diskusi/forum</td></tr>
+    <tr><td>📈 Total Aktivitas</td><td>5x</td><td>Semua jenis aktivitas digabung</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Rumus:</strong> <code>Kehadiran = (Jumlah Kriteria Terpenuhi / 4) × 100%</code><br>≥ 75% = <strong>HADIR</strong></p>
+
+<h2>🧩 Komponen Web</h2>
+
+<h3>📊 &lt;activity-logger&gt;</h3>
+<ul>
+  <li>Deteksi scroll (throttle 60 detik)</li>
+  <li>Deteksi klik link download</li>
+  <li>Deteksi kuis selesai (event quiz-saved)</li>
+  <li>Toast notification</li>
+  <li>Floating pill dengan counter aktivitas</li>
+  <li>Simulator untuk testing</li>
+</ul>
+<p>Tag: <code>&lt;activity-logger&gt;&lt;/activity-logger&gt;</code></p>
+
+<h3>📅 &lt;attendance-tracker&gt;</h3>
+<ul>
+  <li>Gauge chart persentase kehadiran</li>
+  <li>Checklist 4 kriteria kehadiran</li>
+  <li>Progress bar per kriteria</li>
+  <li>Auto-update via event <code>a3-activity-logged</code></li>
+</ul>
+
+<h3>🔥 &lt;engagement-score&gt;</h3>
+<ul>
+  <li>Heatmap grid 28 hari (seperti GitHub)</li>
+  <li>5 level warna berdasarkan jumlah aktivitas</li>
+  <li>Klik cell untuk lihat detail per hari</li>
+  <li>Streak counter (hari berturut-turut aktif)</li>
+  <li>Consistency index (persentase hari aktif)</li>
+</ul>
+
+<h3>📖 &lt;transparent-gradebook&gt;</h3>
+<ul>
+  <li>Summary bento grid nilai</li>
+  <li>Tabel rinci setiap komponen</li>
+  <li>Mode Dosen (input UTS/UAS, ubah bobot)</li>
+  <li>Roster simulasi anggota kelas</li>
+  <li>Bobot default: Kehadiran 30%, Kuis 20%, UTS 25%, UAS 25%</li>
+</ul>
+
+<h2>🔧 Cara Memasukkan ke Halaman</h2>
+
+<h3>HAXcms Element Tray</h3>
+<ol>
+  <li>Klik <strong>Tambah Elemen (+)</strong> di panel kiri editor</li>
+  <li>Cari nama elemen: "Activity Logger", "Attendance Tracker", dll</li>
+  <li>Klik/seret ke halaman</li>
+</ol>
+
+<h3>Source Mode (HTML)</h3>
+<pre><code>&lt;activity-logger&gt;&lt;/activity-logger&gt;
+&lt;attendance-tracker&gt;&lt;/attendance-tracker&gt;
+&lt;engagement-score&gt;&lt;/engagement-score&gt;
+&lt;transparent-gradebook&gt;&lt;/transparent-gradebook&gt;</code></pre>
+
+<h2>💾 Storage Keys</h2>
+<table>
+  <thead><tr><th>Key</th><th>Isi</th></tr></thead>
+  <tbody>
+    <tr><td>a3_attendance_activity_logs</td><td>Array log aktivitas</td></tr>
+    <tr><td>a3_attendance_threshold_config</td><td>Object threshold (minimal per kriteria)</td></tr>
+    <tr><td>a3_attendance_grades_config</td><td>Object bobot nilai</td></tr>
+    <tr><td>apps_script_url</td><td>URL Google Apps Script</td></tr>
+  </tbody>
+</table>
+
+<h2>🔧 Customisasi</h2>
+
+<h3>Ubah Threshold Kehadiran</h3>
+<pre><code>// Console browser (F12)
+localStorage.setItem('a3_attendance_threshold_config', JSON.stringify({
+  minWeeklyActivities: 3,
+  minReading: 1,
+  minQuiz: 1,
+  minDiscussion: 1
+}));</code></pre>
+
+<h3>Reset Semua Data</h3>
+<pre><code>localStorage.removeItem('a3_attendance_activity_logs');
+localStorage.removeItem('a3_attendance_threshold_config');
+localStorage.removeItem('a3_attendance_grades_config');
+location.reload();</code></pre>
+
+<h2>❓ FAQ</h2>
+
+<h3>Apakah data attendance otomatis ke Google Sheets?</h3>
+<p>Tidak. Saat ini data hanya di localStorage. Gunakan <code>&lt;full-quiz-dashboard&gt;</code> dengan Apps Script untuk menyimpan ke Sheets juga.</p>
+
+<h3>Apakah data hilang jika ganti browser?</h3>
+<p>Ya. localStorage bersifat per-browser. Export data secara berkala.</p>
+
+<h3>Apakah scroll dihitung terus-menerus?</h3>
+<p>Tidak. Ada throttle 60 detik — hanya 1 log per menit.</p>

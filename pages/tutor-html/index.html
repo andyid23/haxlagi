@@ -1,0 +1,373 @@
+<h1>📖 Belajar Dasar HTML untuk Pemula 🇮🇩</h1>
+
+<p>Tutorial lengkap HTML dari nol — tanpa perlu install apa pun. Cukup browser dan teks editor (Notepad pun bisa!). HTML adalah <strong>bahasa markup</strong> untuk membuat struktur halaman web. Ibarat rumah: HTML adalah kerangka bangunannya.</p>
+
+<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px; margin: 20px 0;">
+  <strong>⏰ Activity Logger Aktif!</strong>
+  <p style="margin: 4px 0 0 0; font-size: 13px;">Scroll membaca tutorial ini akan dicatat otomatis. Di akhir ada kuis evaluasi!</p>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔤 Bab 1: Tag HTML Dasar</h2>
+
+<p>HTML ditulis dengan <strong>tag</strong> — diapit tanda kurung siku <code>&lt; &gt;</code>. Setiap tag punya fungsi spesifik.</p>
+
+<h3>Tag Paling Sering Dipakai</h3>
+
+<table>
+  <thead>
+    <tr><th>Tag</th><th>Fungsi</th><th>Contoh</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>&lt;h1&gt; - &lt;h6&gt;</code></td><td>Heading / judul (1 = terbesar)</td><td><code>&lt;h1&gt;Judul&lt;/h1&gt;</code></td></tr>
+    <tr><td><code>&lt;p&gt;</code></td><td>Paragraf teks</td><td><code>&lt;p&gt;Ini paragraf&lt;/p&gt;</code></td></tr>
+    <tr><td><code>&lt;a&gt;</code></td><td>Link / tautan</td><td><code>&lt;a href="url"&gt;Klik&lt;/a&gt;</code></td></tr>
+    <tr><td><code>&lt;img&gt;</code></td><td>Gambar</td><td><code>&lt;img src="foto.jpg"&gt;</code></td></tr>
+    <tr><td><code>&lt;ul&gt; / &lt;ol&gt;</code></td><td>Daftar (list)</td><td><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code></td></tr>
+    <tr><td><code>&lt;table&gt;</code></td><td>Tabel data</td><td><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Sel&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></td></tr>
+    <tr><td><code>&lt;div&gt;</code></td><td>Kontainer / pembagian area</td><td><code>&lt;div&gt;...&lt;/div&gt;</code></td></tr>
+    <tr><td><code>&lt;span&gt;</code></td><td>Teks dalam satu baris</td><td><code>&lt;span&gt;teks&lt;/span&gt;</code></td></tr>
+    <tr><td><code>&lt;br&gt;</code></td><td>Baris baru (line break)</td><td><code>Baris 1&lt;br&gt;Baris 2</code></td></tr>
+    <tr><td><code>&lt;hr&gt;</code></td><td>Garis horizontal pemisah</td><td><code>&lt;hr&gt;</code></td></tr>
+  </tbody>
+</table>
+
+<h3>Struktur Dasar Halaman HTML</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Judul Halaman&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Halo Dunia!&lt;/h1&gt;
+  &lt;p&gt;Ini halaman web pertama saya.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>💡 Ingat:</strong> Sebagian besar tag HTML punya <strong>tag pembuka</strong> <code>&lt;p&gt;</code> dan <strong>tag penutup</strong> <code>&lt;/p&gt;</code>. Beberapa tag seperti <code>&lt;br&gt;</code> dan <code>&lt;img&gt;</code> tidak butuh penutup (self-closing).
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🎨 Bab 2: Atribut HTML</h2>
+
+<p><strong>Atribut</strong> adalah informasi tambahan di dalam tag. Ditulis dengan format <code>nama="nilai"</code>.</p>
+
+<h3>Atribut Wajib Tahu</h3>
+
+<table>
+  <thead><tr><th>Atribut</th><th>Digunakan di</th><th>Fungsi</th></tr></thead>
+  <tbody>
+    <tr><td><code>href</code></td><td><code>&lt;a&gt;</code></td><td>URL tujuan link</td></tr>
+    <tr><td><code>src</code></td><td><code>&lt;img&gt;</code></td><td>Path file gambar</td></tr>
+    <tr><td><code>alt</code></td><td><code>&lt;img&gt;</code></td><td>Teks alternatif jika gambar gagal</td></tr>
+    <tr><td><code>class</code></td><td>semua</td><td>Nama kelas untuk CSS styling</td></tr>
+    <tr><td><code>id</code></td><td>semua</td><td>ID unik untuk elemen</td></tr>
+    <tr><td><code>style</code></td><td>semua</td><td>CSS inline langsung</td></tr>
+    <tr><td><code>target</code></td><td><code>&lt;a&gt;</code></td><td><code>_blank</code> = buka di tab baru</td></tr>
+  </tbody>
+</table>
+
+<h3>Contoh Penggunaan:</h3>
+<pre><code>&lt;!-- Link ke Google, buka di tab baru --&gt;
+&lt;a href="https://google.com" target="_blank"&gt;Ke Google&lt;/a&gt;
+
+&lt;!-- Gambar dengan teks alternatif --&gt;
+&lt;img src="foto.jpg" alt="Foto pemandangan"&gt;
+
+&lt;!-- Paragraf dengan class untuk CSS --&gt;
+&lt;p class="highlight"&gt;Teks yang diberi gaya khusus&lt;/p&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📋 Bab 3: Membuat Daftar (List)</h2>
+
+<p>Ada dua jenis daftar di HTML:</p>
+
+<grid-plate layout="1-1" responsive-size="xs" breakpoint-sm="600">
+  <div slot="col-1" style="background: #fcfbfe; border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px;">
+    <h3 style="margin-top: 0;">Unordered List (ul)</h3>
+    <p>Daftar tanpa nomor, pakai bullet:</p>
+    <pre><code>&lt;ul&gt;
+  &lt;li&gt;Apel&lt;/li&gt;
+  &lt;li&gt;Jeruk&lt;/li&gt;
+  &lt;li&gt;Mangga&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    <p>Hasil:</p>
+    <ul><li>Apel</li><li>Jeruk</li><li>Mangga</li></ul>
+  </div>
+  <div slot="col-2" style="background: #fcfbfe; border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px;">
+    <h3 style="margin-top: 0;">Ordered List (ol)</h3>
+    <p>Daftar bernomor:</p>
+    <pre><code>&lt;ol&gt;
+  &lt;li&gt;Langkah 1&lt;/li&gt;
+  &lt;li&gt;Langkah 2&lt;/li&gt;
+  &lt;li&gt;Langkah 3&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    <p>Hasil:</p>
+    <ol><li>Langkah 1</li><li>Langkah 2</li><li>Langkah 3</li></ol>
+  </div>
+</grid-plate>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📊 Bab 4: Membuat Tabel</h2>
+
+<p>Tabel digunakan untuk menampilkan data terstruktur:</p>
+
+<pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nama&lt;/th&gt;
+      &lt;th&gt;Nilai&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Andi&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Budi&lt;/td&gt;
+      &lt;td&gt;90&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>📝 Penjelasan:</strong><br>
+  <code>&lt;thead&gt;</code> = header tabel (judul kolom)<br>
+  <code>&lt;tbody&gt;</code> = body tabel (isi data)<br>
+  <code>&lt;tr&gt;</code> = table row (baris)<br>
+  <code>&lt;th&gt;</code> = table header cell (sel judul, tebal)<br>
+  <code>&lt;td&gt;</code> = table data cell (sel data biasa)
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🎯 Bab 5: Membuat Formulir (Form)</h2>
+
+<p>Form digunakan untuk mengumpulkan input dari pengguna:</p>
+
+<pre><code>&lt;form&gt;
+  &lt;label&gt;Nama:&lt;/label&gt;
+  &lt;input type="text" placeholder="Masukkan nama"&gt;
+
+  &lt;label&gt;Email:&lt;/label&gt;
+  &lt;input type="email" placeholder="email@contoh.com"&gt;
+
+  &lt;label&gt;Password:&lt;/label&gt;
+  &lt;input type="password"&gt;
+
+  &lt;label&gt;Jenis Kelamin:&lt;/label&gt;
+  &lt;input type="radio" name="jk"&gt; Laki-laki
+  &lt;input type="radio" name="jk"&gt; Perempuan
+
+  &lt;label&gt;Hobi:&lt;/label&gt;
+  &lt;input type="checkbox"&gt; Membaca
+  &lt;input type="checkbox"&gt; Olahraga
+
+  &lt;label&gt;Pesan:&lt;/label&gt;
+  &lt;textarea rows="4"&gt;&lt;/textarea&gt;
+
+  &lt;button type="submit"&gt;Kirim&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+<h3>Tipe Input Penting:</h3>
+<table>
+  <thead><tr><th>Tipe</th><th>Fungsi</th></tr></thead>
+  <tbody>
+    <tr><td><code>text</code></td><td>Teks satu baris</td></tr>
+    <tr><td><code>email</code></td><td>Input email (validasi otomatis)</td></tr>
+    <tr><td><code>password</code></td><td>Input tersembunyi (••••)</td></tr>
+    <tr><td><code>number</code></td><td>Input angka saja</td></tr>
+    <tr><td><code>radio</code></td><td>Pilih satu dari beberapa opsi</td></tr>
+    <tr><td><code>checkbox</code></td><td>Centang banyak opsi</td></tr>
+    <tr><td><code>date</code></td><td>Pemilih tanggal</td></tr>
+    <tr><td><code>file</code></td><td>Upload file</td></tr>
+    <tr><td><code>button</code></td><td>Tombol</td></tr>
+    <tr><td><code>submit</code></td><td>Tombol kirim form</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🖼️ Bab 6: Gambar, Link, dan Multimedia</h2>
+
+<h3>Gambar</h3>
+<pre><code>&lt;img src="url-gambar.jpg" alt="Deskripsi" width="300" height="200"&gt;</code></pre>
+
+<h3>Link</h3>
+<pre><code>&lt;!-- Link biasa --&gt;
+&lt;a href="https://contoh.com"&gt;Klik di sini&lt;/a&gt;
+
+&lt;!-- Link buka di tab baru --&gt;
+&lt;a href="https://contoh.com" target="_blank"&gt;Buka Tab Baru&lt;/a&gt;
+
+&lt;!-- Link download file --&gt;
+&lt;a href="file.pdf" download&gt;Download PDF&lt;/a&gt;
+
+&lt;!-- Link ke anchor di halaman yang sama --&gt;
+&lt;a href="#bab3"&gt;Lompat ke Bab 3&lt;/a&gt;</code></pre>
+
+<h3>Video (YouTube)</h3>
+<pre><code>&lt;video-player source="https://www.youtube.com/watch?v=xxxx"&gt;&lt;/video-player&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🏗️ Bab 7: Div dan Layout Dasar</h2>
+
+<p><code>&lt;div&gt;</code> adalah elemen kontainer paling penting di HTML. Digunakan untuk mengelompokkan elemen lain.</p>
+
+<pre><code>&lt;div style="background: #f0f0f0; padding: 20px; border-radius: 8px;"&gt;
+  &lt;h3&gt;Judul Section&lt;/h3&gt;
+  &lt;p&gt;Konten di dalam div ini...&lt;/p&gt;
+  &lt;button&gt;Tombol&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+<h3>Grid Sederhana dengan grid-plate (HAX Component)</h3>
+<pre><code>&lt;grid-plate layout="1-1"&gt;
+  &lt;div slot="col-1"&gt;Kolom Kiri&lt;/div&gt;
+  &lt;div slot="col-2"&gt;Kolom Kanan&lt;/div&gt;
+&lt;/grid-plate&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🎨 Bab 8: Dasar CSS (Inline Style)</h2>
+
+<p>CSS mengatur tampilan visual. Cara termudah: gunakan atribut <code>style</code> langsung di tag.</p>
+
+<h3>Properti CSS Penting:</h3>
+<table>
+  <thead><tr><th>Properti</th><th>Fungsi</th><th>Contoh Nilai</th></tr></thead>
+  <tbody>
+    <tr><td><code>color</code></td><td>Warna teks</td><td><code>red</code>, <code>#333</code>, <code>rgb(0,0,255)</code></td></tr>
+    <tr><td><code>background</code></td><td>Latar belakang</td><td><code>#f0f0f0</code>, <code>linear-gradient(...)</code></td></tr>
+    <tr><td><code>font-size</code></td><td>Ukuran teks</td><td><code>16px</code>, <code>1.2em</code>, <code>large</code></td></tr>
+    <tr><td><code>font-weight</code></td><td>Ketebalan teks</td><td><code>bold</code>, <code>normal</code>, <code>600</code></td></tr>
+    <tr><td><code>margin</code></td><td>Jarak luar</td><td><code>10px</code>, <code>0 auto</code></td></tr>
+    <tr><td><code>padding</code></td><td>Jarak dalam</td><td><code>16px</code>, <code>8px 16px</code></td></tr>
+    <tr><td><code>border</code></td><td>Garis tepi</td><td><code>1px solid #ccc</code></td></tr>
+    <tr><td><code>border-radius</code></td><td>Sudut melengkung</td><td><code>8px</code>, <code>50%</code></td></tr>
+    <tr><td><code>text-align</code></td><td>Rata teks</td><td><code>center</code>, <code>left</code>, <code>right</code></td></tr>
+    <tr><td><code>display</code></td><td>Mode tampilan</td><td><code>flex</code>, <code>grid</code>, <code>block</code></td></tr>
+    <tr><td><code>width / height</code></td><td>Lebar / tinggi</td><td><code>100%</code>, <code>300px</code>, <code>auto</code></td></tr>
+  </tbody>
+</table>
+
+<h3>Contoh Gabungan:</h3>
+<pre><code>&lt;div style="
+  background: linear-gradient(135deg, #6750a4, #9c7cf4);
+  color: white;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 18px;
+  margin: 16px 0;
+"&gt;
+  &lt;h2&gt;Kotak Gradien Ungu&lt;/h2&gt;
+  &lt;p&gt;Ini contoh styling dengan inline CSS&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; padding: 24px; border-radius: 12px; text-align: center; font-size: 18px; margin: 16px 0;">
+  <h2 style="margin-top: 0; color: white;">Kotak Gradien Ungu</h2>
+  <p style="color: rgba(255,255,255,0.9);">Ini contoh styling dengan inline CSS ✨</p>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📝 Bab 9: Komentar HTML</h2>
+
+<p>Komentar tidak ditampilkan di browser — untuk catatan developer:</p>
+
+<pre><code>&lt;!-- Ini komentar, tidak akan muncul di halaman --&gt;
+
+&lt;!-- 
+  Komentar multi-baris:
+  Digunakan untuk dokumentasi kode
+  atau menonaktifkan sementara
+--&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>✅ Cheat Sheet Lengkap</h2>
+
+<div style="background: #1e1e1e; color: #d4d4d4; padding: 20px; border-radius: 12px; font-family: monospace; font-size: 13px; overflow-x: auto;">
+<pre style="color: #d4d4d4; margin: 0;">
+<span style="color: #6a9955;">&lt;!-- ===== CHEAT SHEET HTML ===== --&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Heading --&gt;</span>
+<span style="color: #808080;">&lt;h1&gt;</span>Judul Besar<span style="color: #808080;">&lt;/h1&gt;</span>
+<span style="color: #808080;">&lt;h2&gt;</span>Sub Judul<span style="color: #808080;">&lt;/h2&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Teks --&gt;</span>
+<span style="color: #808080;">&lt;p&gt;</span>Paragraf<span style="color: #808080;">&lt;/p&gt;</span>
+<span style="color: #808080;">&lt;strong&gt;</span>Tebal<span style="color: #808080;">&lt;/strong&gt;</span>
+<span style="color: #808080;">&lt;em&gt;</span>Miring<span style="color: #808080;">&lt;/em&gt;</span>
+<span style="color: #808080;">&lt;u&gt;</span>Garis bawah<span style="color: #808080;">&lt;/u&gt;</span>
+<span style="color: #808080;">&lt;br&gt;</span> <span style="color: #6a9955;">&lt;!-- baris baru --&gt;</span>
+<span style="color: #808080;">&lt;hr&gt;</span> <span style="color: #6a9955;">&lt;!-- garis pemisah --&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Link &amp; Gambar --&gt;</span>
+<span style="color: #808080;">&lt;a</span> <span style="color: #9cdcfe;">href=</span><span style="color: #ce9178;">"url"</span> <span style="color: #9cdcfe;">target=</span><span style="color: #ce9178;">"_blank"</span><span style="color: #808080;">&gt;</span>Link<span style="color: #808080;">&lt;/a&gt;</span>
+<span style="color: #808080;">&lt;img</span> <span style="color: #9cdcfe;">src=</span><span style="color: #ce9178;">"foto.jpg"</span> <span style="color: #9cdcfe;">alt=</span><span style="color: #ce9178;">"Deskripsi"</span><span style="color: #808080;">&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- List --&gt;</span>
+<span style="color: #808080;">&lt;ul&gt;&lt;li&gt;</span>Bullet<span style="color: #808080;">&lt;/li&gt;&lt;/ul&gt;</span>
+<span style="color: #808080;">&lt;ol&gt;&lt;li&gt;</span>Nomor<span style="color: #808080;">&lt;/li&gt;&lt;/ol&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Tabel --&gt;</span>
+<span style="color: #808080;">&lt;table&gt;</span>
+  <span style="color: #808080;">&lt;tr&gt;</span> <span style="color: #6a9955;">&lt;!-- baris --&gt;</span>
+    <span style="color: #808080;">&lt;th&gt;</span>Header<span style="color: #808080;">&lt;/th&gt;</span>
+    <span style="color: #808080;">&lt;td&gt;</span>Data<span style="color: #808080;">&lt;/td&gt;</span>
+  <span style="color: #808080;">&lt;/tr&gt;</span>
+<span style="color: #808080;">&lt;/table&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Form --&gt;</span>
+<span style="color: #808080;">&lt;input</span> <span style="color: #9cdcfe;">type=</span><span style="color: #ce9178;">"text"</span> <span style="color: #9cdcfe;">placeholder=</span><span style="color: #ce9178;">"Nama"</span><span style="color: #808080;">&gt;</span>
+<span style="color: #808080;">&lt;textarea&gt;&lt;/textarea&gt;</span>
+<span style="color: #808080;">&lt;button&gt;</span>Kirim<span style="color: #808080;">&lt;/button&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Div (kontainer) --&gt;</span>
+<span style="color: #808080;">&lt;div</span> <span style="color: #9cdcfe;">style=</span><span style="color: #ce9178;">"padding:16px; background:#f0f0f0"</span><span style="color: #808080;">&gt;</span>
+  Konten di sini
+<span style="color: #808080;">&lt;/div&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Komentar --&gt;</span>
+<span style="color: #6a9955;">&lt;!-- tidak ditampilkan --&gt;</span>
+</pre>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🎯 Kuis Evaluasi: Dasar HTML</h2>
+
+<p>Kerjakan kuis di bawah untuk menguji pemahaman Anda tentang HTML!</p>
+
+<explode-quiz editable="false"></explode-quiz>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📊 Cek Aktivitas Belajar Anda</h2>
+
+<grid-plate layout="1-1" responsive-size="xs" breakpoint-sm="800">
+  <div slot="col-1">
+    <attendance-tracker></attendance-tracker>
+  </div>
+  <div slot="col-2">
+    <engagement-score></engagement-score>
+  </div>
+</grid-plate>
+
+<h2>🔗 Lanjutkan Belajar</h2>
+<ul>
+  <li><a href="tutorial-kursus">📅 Tutorial: Cara Menambah Kuis di Hari Lain</a></li>
+  <li><a href="materi-siswa">📚 Contoh Materi Modul 1: HAXcms &amp; Web Component</a></li>
+  <li><a href="https://www.w3schools.com/html/" target="_blank">🌐 W3Schools HTML Tutorial (English)</a></li>
+</ul>
+
+<!-- Activity Logger -->
+<activity-logger></activity-logger>

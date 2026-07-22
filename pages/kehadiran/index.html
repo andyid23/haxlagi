@@ -1,0 +1,91 @@
+<h1>📅 Sistem Kehadiran &amp; Pelacakan Aktivitas</h1>
+
+<p>Halaman ini mendemonstrasikan tiga komponen pelacakan aktivitas pembelajaran yang saling terintegrasi. Sistem mencatat interaksi pengguna secara otomatis dan menghitung kehadiran berdasarkan metrik yang terukur.</p>
+
+<h2>⏰ Activity Logger — Pencatat Otomatis</h2>
+<p>Komponen <code>&lt;activity-logger&gt;</code> berjalan di latar belakang dan secara otomatis mencatat:</p>
+<ul>
+  <li><strong>Scroll halaman</strong> — Membaca materi pembelajaran</li>
+  <li><strong>Klik tautan/unduhan</strong> — Mengunduh file materi</li>
+  <li><strong>Klik tombol menu</strong> — Navigasi konten</li>
+  <li><strong>Penyelesaian kuis</strong> — Skor dari <code>quiz-saved</code> event</li>
+</ul>
+
+<p><strong>Cara menggunakan:</strong></p>
+<pre><code>&lt;activity-logger&gt;&lt;/activity-logger&gt;</code></pre>
+<p><em>Komponen ini sudah aktif di halaman ini. Lihat floating pill di pojok kanan bawah →</em></p>
+
+<h2>📊 Attendance Tracker — Kehadiran Pekanan</h2>
+<p>Komponen <code>&lt;attendance-tracker&gt;</code> menampilkan status kehadiran mingguan berdasarkan empat kriteria:</p>
+
+<attendance-tracker></attendance-tracker>
+
+<h3>Kriteria Penilaian</h3>
+<table>
+  <thead>
+    <tr><th>Kriteria</th><th>Minimum Default</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>📖 Membaca Modul</td><td>2 kali/pekan</td></tr>
+    <tr><td>📝 Kuis Eksplorasi</td><td>1 kuis/pekan</td></tr>
+    <tr><td>💬 Partisipasi Forum</td><td>1 kali/pekan</td></tr>
+    <tr><td>📈 Akumulasi Aktivitas</td><td>5 interaksi/pekan</td></tr>
+  </tbody>
+</table>
+<p>Status <strong>HADIR</strong> diberikan jika ≥ 75% kriteria terpenuhi.</p>
+
+<h2>🔥 Engagement Score — Konsistensi Belajar</h2>
+<p>Komponen <code>&lt;engagement-score&gt;</code> menampilkan heatmap aktivitas 28 hari dengan metrik:</p>
+
+<engagement-score></engagement-score>
+
+<ul>
+  <li><strong>Total Sinyal Aktivitas</strong> — Jumlah total interaksi yang tercatat</li>
+  <li><strong>Indeks Konsistensi</strong> — Persentase hari aktif dalam 4 pekan</li>
+  <li><strong>Streak Belajar</strong> — Jumlah hari berturut-turut dengan aktivitas</li>
+  <li><strong>Heatmap Grid</strong> — Klik sel untuk melihat detail aktivitas harian</li>
+</ul>
+
+<h2>📖 Transparent Gradebook — Buku Nilai</h2>
+<p>Komponen <code>&lt;transparent-gradebook&gt;</code> menampilkan perhitungan nilai akhir secara transparan:</p>
+
+<transparent-gradebook></transparent-gradebook>
+
+<h3>Komponen Nilai</h3>
+<table>
+  <thead>
+    <tr><th>Komponen</th><th>Bobot Default</th><th>Sumber Data</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Kehadiran &amp; Partisipasi</td><td>30%</td><td>Log aktivitas 4 pekan</td></tr>
+    <tr><td>Kuis Eksplorasi</td><td>20%</td><td>Skor tertinggi dari kuis</td></tr>
+    <tr><td>UTS</td><td>25%</td><td>Input Dosen (simulasi)</td></tr>
+    <tr><td>UAS</td><td>25%</td><td>Input Dosen (simulasi)</td></tr>
+  </tbody>
+</table>
+
+<h3>Mode Dosen</h3>
+<p>Klik tombol <strong>"Masuk Mode Dosen (Console)"</strong> untuk:</p>
+<ul>
+  <li>Mengubah threshold kriteria kehadiran</li>
+  <li>Menyesuaikan bobot nilai</li>
+  <li>Melihat diagnostik realtime anggota kelas (simulasi)</li>
+  <li>Menginput nilai UTS/UAS</li>
+</ul>
+
+<h2>🛠️ Cara Integrasi ke Halaman</h2>
+<pre><code>&lt;!-- Untuk logging aktivitas saja --&gt;
+&lt;activity-logger&gt;&lt;/activity-logger&gt;
+
+&lt;!-- Untuk tracker kehadiran --&gt;
+&lt;attendance-tracker&gt;&lt;/attendance-tracker&gt;
+
+&lt;!-- Untuk heatmap konsistensi --&gt;
+&lt;engagement-score&gt;&lt;/engagement-score&gt;
+
+&lt;!-- Untuk buku nilai transparan --&gt;
+&lt;transparent-gradebook&gt;&lt;/transparent-gradebook&gt;</code></pre>
+
+<p><strong>Catatan:</strong> Komponen <code>&lt;activity-logger&gt;</code> sudah aktif di halaman ini dan mencatat semua interaksi Anda secara otomatis.</p>
+
+<activity-logger></activity-logger>

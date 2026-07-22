@@ -1,0 +1,208 @@
+<h1>📅 Tutorial: Cara Menambah Kuis di Hari Lain untuk Kursus</h1>
+
+<p>Panduan ini menjelaskan bagaimana menyusun kursus multi-hari/multi-sesi di HAXcms, di mana setiap halaman materi memiliki <strong>kuis harian</strong> dan <strong>pelacakan aktivitas</strong> sendiri. Cocok untuk dosen/guru yang ingin membuat course terstruktur per pertemuan.</p>
+
+<h2>🎯 Konsep Dasar</h2>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0;">
+  <div style="background: #f3f0fa; border-radius: 12px; padding: 20px; text-align: center;">
+    <span style="font-size: 36px;">📄</span>
+    <h3 style="color: #6750a4; margin: 8px 0;">1 Halaman</h3>
+    <p style="font-size: 13px; color: #666; margin: 0;">= 1 Pertemuan/Hari</p>
+  </div>
+  <div style="background: #e8f5e9; border-radius: 12px; padding: 20px; text-align: center;">
+    <span style="font-size: 36px;">📚</span>
+    <h3 style="color: #2e7d32; margin: 8px 0;">Materi + Kuis</h3>
+    <p style="font-size: 13px; color: #666; margin: 0;">Gabungan konten &amp; evaluasi</p>
+  </div>
+  <div style="background: #e3f2fd; border-radius: 12px; padding: 20px; text-align: center;">
+    <span style="font-size: 36px;">📊</span>
+    <h3 style="color: #1565c0; margin: 8px 0;">Tracker</h3>
+    <p style="font-size: 13px; color: #666; margin: 0;">Aktivitas otomatis tercatat</p>
+  </div>
+  <div style="background: #fce4ec; border-radius: 12px; padding: 20px; text-align: center;">
+    <span style="font-size: 36px;">📤</span>
+    <h3 style="color: #c62828; margin: 8px 0;">Google Sheets</h3>
+    <p style="font-size: 13px; color: #666; margin: 0;">Semua hasil ke satu sheet</p>
+  </div>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Metode 1: Halaman Manual per Pertemuan (Direkomendasikan)</h2>
+
+<p>Buat satu halaman baru untuk setiap pertemuan. Setiap halaman punya materi sendiri, kuis sendiri, dan activity logger sendiri.</p>
+
+<h3>Langkah 1: Buat Halaman Baru via HAXcms Editor</h3>
+
+<ol>
+  <li>Buka HAXcms editor</li>
+  <li>Klik <strong>Pages → Add Page</strong> di sidebar</li>
+  <li>Beri judul sesuai pertemuan, contoh: <strong>"Pertemuan 2: Lit Element Dasar"</strong></li>
+  <li>Tentukan slug URL: <code>pertemuan-2</code></li>
+</ol>
+
+<h3>Langkah 2: Isi Konten Materi</h3>
+
+<p>Tulis materi pembelajaran seperti biasa. Gunakan heading, paragraf, gambar, tabel, dll.</p>
+
+<h3>Langkah 3: Tambahkan Kuis di Akhir Halaman</h3>
+
+<p>Ada dua cara menambah kuis:</p>
+
+<h4>Cara A — Via Element Tray (Mudah)</h4>
+<ol>
+  <li>Klik <strong>Tambah Elemen (+)</strong> di panel kiri</li>
+  <li>Cari <strong>"Explode Quiz"</strong></li>
+  <li>Klik atau seret ke posisi yang diinginkan di halaman</li>
+</ol>
+
+<h4>Cara B — Via Source Mode (Kontrol Penuh)</h4>
+<ol>
+  <li>Klik tombol <strong>Source</strong> di editor</li>
+  <li>Paste tag berikut di posisi yang diinginkan:</li>
+</ol>
+
+<pre><code>&lt;explode-quiz editable="false"&gt;&lt;/explode-quiz&gt;</code></pre>
+
+<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>💡 Tips:</strong> <code>editable="false"</code> menyembunyikan tombol edit soal untuk siswa. Dosen tetap bisa edit soal saat membuka halaman di HAX Editor.
+</div>
+
+<h3>Langkah 4: Tambahkan Activity Logger</h3>
+
+<p>Di bagian paling bawah halaman (setelah semua konten), paste:</p>
+
+<pre><code>&lt;activity-logger&gt;&lt;/activity-logger&gt;</code></pre>
+
+<p>Ini akan mengaktifkan pelacakan scroll, klik link, download, dan kuis di halaman tersebut.</p>
+
+<h3>Langkah 5 (Opsional): Tambahkan Attendance Tracker</h3>
+
+<pre><code>&lt;attendance-tracker&gt;&lt;/attendance-tracker&gt;
+&lt;engagement-score&gt;&lt;/engagement-score&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Metode 2: Dashboard Full Quiz (Satu Tag untuk Semua)</h2>
+
+<p>Gunakan <code>&lt;full-quiz-dashboard&gt;</code> untuk halaman yang langsung menyediakan kuis, attendance, heatmap, dan gradebook dalam satu komponen.</p>
+
+<pre><code>&lt;full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/YOUR_ID/exec"&gt;&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<p>Dengan atribut <code>apps-script-url</code>, semua hasil otomatis tersimpan ke Google Sheets.</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📋 Template Halaman Pertemuan</h2>
+
+<p>Copy-paste template ini untuk setiap halaman pertemuan baru (via Source Mode):</p>
+
+<pre><code>&lt;h1&gt;📚 Pertemuan [N]: [Judul Materi]&lt;/h1&gt;
+
+&lt;div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px; margin: 16px 0;"&gt;
+  &lt;strong&gt;⏰ Activity Logger Aktif!&lt;/strong&gt;
+  &lt;p style="margin: 4px 0 0 0; font-size: 13px;"&gt;Aktivitas Anda di halaman ini dicatat otomatis.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;📖 Materi&lt;/h2&gt;
+&lt;!-- Isi materi di sini --&gt;
+&lt;p&gt;...konten pembelajaran...&lt;/p&gt;
+
+&lt;h2&gt;📥 Download&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="files/materi-[N].pdf" download&gt;📄 PDF Materi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;🎯 Kuis&lt;/h2&gt;
+&lt;explode-quiz editable="false"&gt;&lt;/explode-quiz&gt;
+
+&lt;h2&gt;📊 Kehadiran&lt;/h2&gt;
+&lt;attendance-tracker&gt;&lt;/attendance-tracker&gt;
+&lt;engagement-score&gt;&lt;/engagement-score&gt;
+
+&lt;activity-logger&gt;&lt;/activity-logger&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🗂️ Struktur Folder yang Disarankan</h2>
+
+<pre><code>pages/
+├── pertemuan-1/
+│   └── index.html    (Materi + Kuis Hari 1)
+├── pertemuan-2/
+│   └── index.html    (Materi + Kuis Hari 2)
+├── pertemuan-3/
+│   └── index.html    (Materi + Kuis Hari 3)
+├── pertemuan-4/
+│   └── index.html    (Materi + Kuis Hari 4)
+└── ujian-akhir/
+    └── index.html    (Ujian Akhir - semua materi)
+</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📊 Integrasi Google Sheets — Satu Sheet untuk Semua Hari</h2>
+
+<p>Semua halaman pertemuan bisa menggunakan <strong>satu Google Sheet yang sama</strong>. Setup:</p>
+
+<ol>
+  <li><strong>Buat satu Google Sheet</strong> untuk seluruh course</li>
+  <li><strong>Deploy Apps Script</strong> dari <code>Code.gs</code> satu kali</li>
+  <li><strong>Gunakan URL yang sama</strong> di semua halaman pertemuan</li>
+</ol>
+
+<p>Dengan <code>&lt;full-quiz-dashboard&gt;</code>:</p>
+<pre><code>&lt;full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/SAME_ID/exec"&gt;&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<p>Sheet akan otomatis punya data dari semua pertemuan. Kolom "Tipe Aktivitas" membedakan sumber data (reading, quiz, discussion, dll).</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📝 Mengedit Soal Kuis di HAXcms</h2>
+
+<p>Saat dosen membuka halaman di HAXcms editor:</p>
+
+<ol>
+  <li>Komponen kuis akan menampilkan tombol <strong>"Edit Soal Kuis"</strong></li>
+  <li>Klik untuk membuka panel editor soal</li>
+  <li>Tambah/edit/hapus soal sesuai kebutuhan</li>
+  <li>Klik <strong>Simpan &amp; Keluar</strong></li>
+</ol>
+
+<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>📝 Catatan:</strong> Soal kuis tersimpan di localStorage browser. Untuk deployment ke production, soal sebaiknya di-hardcode di atribut <code>questions</code> atau dikelola via Google Sheets.
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔧 Checklist Dosen: Persiapan Sebelum Kuliah</h2>
+
+<table>
+  <thead>
+    <tr><th>#</th><th>Tugas</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>Buat halaman pertemuan baru di HAXcms</td><td>⬜</td></tr>
+    <tr><td>2</td><td>Tulis materi pembelajaran</td><td>⬜</td></tr>
+    <tr><td>3</td><td>Tambah komponen <code>&lt;explode-quiz&gt;</code></td><td>⬜</td></tr>
+    <tr><td>4</td><td>Edit soal kuis (via HAX Editor)</td><td>⬜</td></tr>
+    <tr><td>5</td><td>Tambah <code>&lt;activity-logger&gt;</code> di akhir halaman</td><td>⬜</td></tr>
+    <tr><td>6</td><td>Tambah link download materi (PDF/ZIP)</td><td>⬜</td></tr>
+    <tr><td>7</td><td>Update site.json — tambahkan halaman ke navigasi</td><td>⬜</td></tr>
+    <tr><td>8</td><td>Test halaman sebagai siswa (buka di tab biasa, bukan editor)</td><td>⬜</td></tr>
+    <tr><td>9</td><td>Verifikasi data masuk ke Google Sheets</td><td>⬜</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔗 Halaman Terkait</h2>
+<ul>
+  <li><a href="materi-siswa">📚 Contoh Halaman Materi Siswa (Modul 1)</a></li>
+  <li><a href="tutorial-apps-script">📖 Tutorial Setup Google Apps Script</a></li>
+  <li><a href="full-dashboard">🎯 Demo Full Quiz Dashboard</a></li>
+  <li><a href="dashboard-siswa">📊 Dashboard Siswa — Lihat Nilai dari Sheet</a></li>
+  <li><a href="tutorial-dashboard-siswa">📖 Tutorial: Fetch Data dari Sheet</a></li>
+  <li><a href="tutor-html">📖 Belajar Dasar HTML</a></li>
+</ul>

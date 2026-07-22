@@ -1,0 +1,64 @@
+<h1>🎯 Full Quiz Dashboard — Satu Elemen, Semua Fitur</h1>
+
+<p>Elemen <code>&lt;full-quiz-dashboard&gt;</code> adalah <strong>Web Component vanilla JavaScript (0 dependencies)</strong> yang menggabungkan semua fitur dalam satu tag: Kuis + Attendance + Heatmap + Gradebook + Google Sheets.</p>
+
+<h2>🧪 Demo Langsung</h2>
+
+<full-quiz-dashboard></full-quiz-dashboard>
+
+<h2>📋 Atribut yang Didukung</h2>
+
+<table>
+  <thead>
+    <tr><th>Atribut</th><th>Deskripsi</th><th>Contoh</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>apps-script-url</code></td><td>URL Google Apps Script Web App</td><td><code>https://script.google.com/macros/s/.../exec</code></td></tr>
+    <tr><td><code>spreadsheet-id</code></td><td>ID Google Spreadsheet</td><td><code>1BxiMVs0XRA5nFM...</code></td></tr>
+    <tr><td><code>questions</code></td><td>JSON array soal kustom</td><td><code>[{"question":"...","choices":[...],"correctIndex":0}]</code></td></tr>
+  </tbody>
+</table>
+
+<h2>🖥️ Cara Penggunaan</h2>
+
+<h3>Tag Dasar</h3>
+<pre><code>&lt;full-quiz-dashboard&gt;&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<h3>Dengan Apps Script</h3>
+<pre><code>&lt;full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/YOUR_ID/exec"&gt;&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<h2>🗂️ Tab Navigasi</h2>
+<table>
+  <thead>
+    <tr><th>Tab</th><th>Fungsi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>📝 Kuis</td><td>Kuis interaktif 5 soal (bisa edit/tambah) + confetti</td></tr>
+    <tr><td>📊 Setup</td><td>Konek Google Sheets via Apps Script URL atau Spreadsheet ID</td></tr>
+    <tr><td>📅 Attendance</td><td>Gauge kehadiran + checklist 4 kriteria</td></tr>
+    <tr><td>🔥 Heatmap</td><td>Grid aktivitas 28 hari + streak + detail per hari</td></tr>
+    <tr><td>📖 Gradebook</td><td>Nilai transparan + mode Dosen + roster kelas</td></tr>
+  </tbody>
+</table>
+
+<h2>🛠️ Fitur Lengkap</h2>
+<ul>
+  <li><strong>0 Dependencies:</strong> Pure vanilla JS, tidak butuh Lit, Firebase, atau library apapun</li>
+  <li><strong>Google Sheets via Apps Script:</strong> Hasil kuis + log attendance otomatis tersimpan</li>
+  <li><strong>Activity Logger:</strong> Deteksi scroll, klik, unduhan otomatis</li>
+  <li><strong>Attendance Gauge:</strong> Kalkulasi kehadiran real-time</li>
+  <li><strong>Heatmap 28 Hari:</strong> Visualisasi konsistensi belajar</li>
+  <li><strong>Gradebook Transparan:</strong> Bobot nilai bisa dikustomisasi</li>
+  <li><strong>Mode Dosen:</strong> Ubah threshold, bobot, input UTS/UAS</li>
+  <li><strong>Simulator:</strong> Tombol simulasi aktivitas untuk testing</li>
+</ul>
+
+<h2>📦 Google Apps Script (Code.gs)</h2>
+<p>Script tersedia di direktori <code>custom/src/Code.gs</code>. Setup:</p>
+<ol>
+  <li>Buka Google Sheets → Extensions → Apps Script</li>
+  <li>Copy-paste isi <code>Code.gs</code></li>
+  <li>Deploy → New deployment → Web app</li>
+  <li>Execute as: Me, Who has access: Anyone</li>
+  <li>Copy URL dan gunakan di atribut <code>apps-script-url</code></li>
+</ol>

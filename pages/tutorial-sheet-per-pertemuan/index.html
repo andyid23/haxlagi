@@ -1,0 +1,276 @@
+<h1>📊 Tutorial: 1 Google Sheet = 1 Course — 1 Sheet Tab = 1 Pertemuan</h1>
+
+<p>Cara setup agar <strong>satu Google Spreadsheet</strong> menampung seluruh data course, dan setiap <strong>sheet tab</strong> otomatis jadi satu pertemuan. Data dari semua halaman HAXcms masuk ke spreadsheet yang sama, terorganisir rapi per pertemuan.</p>
+
+<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; border-radius: 16px; padding: 24px; margin: 24px 0;">
+  <h2 style="margin-top: 0; color: white;">🎯 Konsep</h2>
+  <table style="width: 100%; border-collapse: collapse; color: white;">
+    <thead>
+      <tr style="border-bottom: 1px solid rgba(255,255,255,0.3);">
+        <th style="text-align: left; padding: 8px;">1 Spreadsheet</th>
+        <th style="text-align: left; padding: 8px;">1 Sheet Tab</th>
+        <th style="text-align: left; padding: 8px;">1 Atribut HTML</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 8px;">= 1 Course/Mata Kuliah</td>
+        <td style="padding: 8px;">= 1 Pertemuan/Hari</td>
+        <td style="padding: 8px;"><code style="background: rgba(255,255,255,0.2); padding: 2px 6px; border-radius: 4px;">sheet-name="Pertemuan 1"</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Langkah 1: Buat 1 Google Spreadsheet untuk 1 Course</h2>
+<ol>
+  <li>Buka <a href="https://sheets.google.com" target="_blank">sheets.google.com</a></li>
+  <li>Klik <strong>"Blank"</strong> — buat spreadsheet baru</li>
+  <li>Beri nama: <strong>"Course: HAXcms &amp; Web Component"</strong> (atau nama course Anda)</li>
+  <li>Jangan buat sheet tab dulu — Apps Script akan auto-create!</li>
+</ol>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Langkah 2: Copy-Paste Code.gs ke Apps Script</h2>
+<ol>
+  <li>Di spreadsheet, klik <strong>Extensions → Apps Script</strong></li>
+  <li>Hapus kode default yang ada</li>
+  <li>Copy-paste seluruh kode dari <code>Code.gs</code> (tersedia di <code>custom/src/Code.gs</code>)</li>
+  <li>Klik <strong>Save</strong> (ikon disket) — beri nama project: "QuizHandler"</li>
+</ol>
+
+<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>📝 Apa yang dilakukan Code.gs v2?</strong><br>
+  • <code>doPost()</code> — Menerima data kuis (nama, skor, sheet) via POST JSON<br>
+  • <code>saveToSheet()</code> — Auto-create sheet tab jika belum ada, lalu append data<br>
+  • <code>updateSummary()</code> — Baca seluruh sheet tab dan buat agregasi di sheet "Rangkuman"<br>
+  • Setiap sheet tab punya header: Timestamp | Nama | Skor | Total Soal | Status
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Langkah 3: Deploy sebagai Web App</h2>
+<ol>
+  <li>Klik <strong>Deploy → New deployment</strong></li>
+  <li>Klik ikon gear ⚙️ — pilih <strong>Web app</strong></li>
+  <li>Isi konfigurasi:
+    <ul>
+      <li><strong>Description:</strong> "Quiz API"</li>
+      <li><strong>Execute as:</strong> Me</li>
+      <li><strong>Who has access:</strong> Anyone</li>
+    </ul>
+  </li>
+  <li>Klik <strong>Deploy</strong></li>
+  <li>Klik <strong>Authorize access</strong> — pilih akun Google Anda</li>
+  <li>Jika muncul peringatan "Google hasn't verified this app":
+    <ul>
+      <li>Klik <strong>Advanced</strong></li>
+      <li>Klik <strong>Go to QuizHandler (unsafe)</strong></li>
+      <li>Klik <strong>Allow</strong></li>
+    </ul>
+  </li>
+  <li><strong>COPY URL Web App!</strong> Format: <code>https://script.google.com/macros/s/AKfycbx.../exec</code></li>
+</ol>
+
+<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>⚠️ Penting:</strong> URL ini akan dipakai di SEMUA halaman pertemuan. Simpan baik-baik!
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Langkah 4: Setup di Halaman HAXcms</h2>
+
+<p>Di setiap halaman pertemuan, tambahkan dashboard dengan atribut <code>sheet-name</code> yang berbeda:</p>
+
+<h3>Halaman Pertemuan 1</h3>
+<pre><code>&lt;h1&gt;📚 Pertemuan 1: Pengenalan HAXcms&lt;/h1&gt;
+
+&lt;p&gt;Materi pembelajaran hari ini...&lt;/p&gt;
+
+&lt;full-quiz-dashboard 
+  apps-script-url="https://script.google.com/macros/s/YOUR_ID/exec"
+  sheet-name="Pertemuan 1"&gt;
+&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<h3>Halaman Pertemuan 2</h3>
+<pre><code>&lt;h1&gt;📚 Pertemuan 2: Lit Element Dasar&lt;/h1&gt;
+
+&lt;p&gt;Materi pembelajaran hari ini...&lt;/p&gt;
+
+&lt;full-quiz-dashboard 
+  apps-script-url="https://script.google.com/macros/s/SAME_ID/exec"
+  sheet-name="Pertemuan 2"&gt;
+&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<h3>Halaman Pertemuan 3</h3>
+<pre><code>&lt;full-quiz-dashboard 
+  apps-script-url="https://script.google.com/macros/s/SAME_ID/exec"
+  sheet-name="Pertemuan 3"&gt;
+&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>✅ Perhatikan:</strong> URL Apps Script SAMA untuk semua halaman. Hanya <code>sheet-name</code> yang berbeda!
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📊 Hasil Akhir di Google Sheets</h2>
+
+<p>Setelah beberapa siswa mengerjakan kuis dari berbagai pertemuan, spreadsheet Anda akan terlihat seperti ini:</p>
+
+<h3>Sheet Tab: "Pertemuan 1"</h3>
+<table>
+  <thead>
+    <tr><th>Timestamp</th><th>Nama</th><th>Skor (%)</th><th>Total Soal</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr style="background: #d1fae5;"><td>22/07/2026 10:30</td><td>Andi</td><td>80</td><td>5</td><td>LULUS</td></tr>
+    <tr style="background: #d1fae5;"><td>22/07/2026 10:45</td><td>Budi</td><td>100</td><td>5</td><td>LULUS</td></tr>
+    <tr style="background: #fee2e2;"><td>22/07/2026 11:00</td><td>Cici</td><td>60</td><td>5</td><td>TIDAK LULUS</td></tr>
+  </tbody>
+</table>
+
+<h3>Sheet Tab: "Pertemuan 2"</h3>
+<table>
+  <thead>
+    <tr><th>Timestamp</th><th>Nama</th><th>Skor (%)</th><th>Total Soal</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr style="background: #d1fae5;"><td>23/07/2026 10:30</td><td>Andi</td><td>90</td><td>5</td><td>LULUS</td></tr>
+    <tr style="background: #fee2e2;"><td>23/07/2026 10:45</td><td>Budi</td><td>40</td><td>5</td><td>TIDAK LULUS</td></tr>
+  </tbody>
+</table>
+
+<h3>Sheet Tab: "Rangkuman" (Auto-generated)</h3>
+<table>
+  <thead>
+    <tr><th>Nama</th><th>Total Kuis</th><th>Rata-rata Skor</th><th>Skor Tertinggi</th><th>Skor Terendah</th><th>Jumlah Pertemuan</th><th>Status Terakhir</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Andi</td><td>2</td><td>85</td><td>90</td><td>80</td><td>2</td><td>LULUS</td></tr>
+    <tr><td>Budi</td><td>2</td><td>70</td><td>100</td><td>40</td><td>2</td><td>TIDAK LULUS</td></tr>
+    <tr><td>Cici</td><td>1</td><td>60</td><td>60</td><td>60</td><td>1</td><td>TIDAK LULUS</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔄 Alur Data Lengkap</h2>
+
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 600px; margin: 20px auto; font-size: 14px;">
+
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="background: #f3f0fa; border: 2px solid #6750a4; border-radius: 10px; padding: 12px 16px; min-width: 180px; text-align: center; flex-shrink: 0;">
+      <strong>👤 Siswa</strong><br>
+      <span style="font-size: 12px; color: #666;">Kerjakan kuis di<br>halaman Pertemuan N</span>
+    </div>
+    <span style="font-size: 24px; color: #6750a4;">→</span>
+    <div style="background: #e8f5e9; border: 2px solid #4caf50; border-radius: 10px; padding: 12px 16px; min-width: 180px; text-align: center; flex-shrink: 0;">
+      <strong>🌐 Browser</strong><br>
+      <span style="font-size: 12px; color: #666;">Kirim POST JSON:<br><code>{"name":"Andi","score":80,"sheet":"Pertemuan 2"}</code></span>
+    </div>
+    <span style="font-size: 24px; color: #6750a4;">→</span>
+    <div style="background: #fff3e0; border: 2px solid #ff9800; border-radius: 10px; padding: 12px 16px; min-width: 180px; text-align: center; flex-shrink: 0;">
+      <strong>⚡ Apps Script</strong><br>
+      <span style="font-size: 12px; color: #666;">Terima JSON →<br>Auto-create sheet tab<br>"Pertemuan 2" → Simpan</span>
+    </div>
+    <span style="font-size: 24px; color: #6750a4;">→</span>
+    <div style="background: #e3f2fd; border: 2px solid #2196f3; border-radius: 10px; padding: 12px 16px; min-width: 180px; text-align: center; flex-shrink: 0;">
+      <strong>📊 Google Sheets</strong><br>
+      <span style="font-size: 12px; color: #666;">Data muncul di tab<br>"Pertemuan 2"<br>+ Update "Rangkuman"</span>
+    </div>
+  </div>
+
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📝 Parameter Data yang Dikirim</h2>
+
+<p>Saat kuis selesai, dashboard mengirim data berikut ke Apps Script:</p>
+
+<table>
+  <thead>
+    <tr><th>Parameter</th><th>Tipe</th><th>Keterangan</th><th>Contoh</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>name</code></td><td>String</td><td>Nama siswa (wajib)</td><td>"Andi Pratama"</td></tr>
+    <tr><td><code>score</code></td><td>Number</td><td>Skor 0-100 (wajib)</td><td>80</td></tr>
+    <tr><td><code>sheet</code></td><td>String</td><td>Nama sheet tab tujuan (wajib)</td><td>"Pertemuan 1"</td></tr>
+    <tr><td><code>timestamp</code></td><td>ISO String</td><td>Waktu pengerjaan</td><td>"2026-07-22T10:30:00Z"</td></tr>
+    <tr><td><code>totalQuestions</code></td><td>Number</td><td>Jumlah soal (default 5)</td><td>5</td></tr>
+  </tbody>
+</table>
+
+<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>📝 Parameter <code>sheet</code>:</strong> Diambil otomatis dari atribut HTML <code>sheet-name="Pertemuan 1"</code>. Anda tidak perlu mengirim manual — dashboard yang handle!
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📋 Checklist Setup Lengkap</h2>
+
+<table>
+  <thead>
+    <tr><th>#</th><th>Langkah</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>Buat 1 Google Spreadsheet untuk seluruh course</td><td>⬜</td></tr>
+    <tr><td>2</td><td>Buka Extensions → Apps Script</td><td>⬜</td></tr>
+    <tr><td>3</td><td>Copy-paste Code.gs ke editor</td><td>⬜</td></tr>
+    <tr><td>4</td><td>Save project + Deploy as Web App</td><td>⬜</td></tr>
+    <tr><td>5</td><td>Copy URL Web App</td><td>⬜</td></tr>
+    <tr><td>6</td><td>Di HAXcms: buat halaman Pertemuan 1</td><td>⬜</td></tr>
+    <tr><td>7</td><td>Tambah <code>&lt;full-quiz-dashboard apps-script-url="URL" sheet-name="Pertemuan 1"&gt;</code></td><td>⬜</td></tr>
+    <tr><td>8</td><td>Ulangi langkah 6-7 untuk Pertemuan 2, 3, dst</td><td>⬜</td></tr>
+    <tr><td>9</td><td>Test: kerjakan kuis → cek sheet tab muncul</td><td>⬜</td></tr>
+    <tr><td>10</td><td>Cek sheet "Rangkuman" untuk agregasi</td><td>⬜</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔧 Troubleshooting</h2>
+
+<h3>❌ Data tidak muncul di sheet</h3>
+<ul>
+  <li>Cek Console browser (F12) — lihat apakah ada error CORS</li>
+  <li>Apps Script harus di-deploy sebagai <strong>Web app</strong>, bukan API Executable</li>
+  <li>"Who has access" harus <strong>Anyone</strong></li>
+  <li>Setelah deploy ulang (edit kode), Anda dapat URL BARU — update di semua halaman!</li>
+</ul>
+
+<h3>❌ Sheet tab tidak auto-create</h3>
+<ul>
+  <li>Pastikan atribut <code>sheet-name</code> tertulis benar (case-sensitive)</li>
+  <li>Cek di Apps Script editor → Executions → lihat error log</li>
+  <li>Jalankan fungsi <code>test()</code> manual dari editor untuk debug</li>
+</ul>
+
+<h3>❌ Error: "Google hasn't verified this app"</h3>
+<ul>
+  <li>Ini normal untuk script pribadi</li>
+  <li>Klik Advanced → Go to QuizHandler (unsafe) → Allow</li>
+  <li>Hanya muncul saat pertama kali authorize</li>
+</ul>
+
+<h3>❌ Ingin update kode Apps Script?</h3>
+<ul>
+  <li>Edit kode di editor Apps Script</li>
+  <li>Klik Deploy → New deployment — ini akan generate <strong>URL BARU</strong></li>
+  <li>Update URL di semua halaman HAXcms</li>
+  <li>Alternatif: Deploy → Manage deployments → Edit (icon pensil) → Version: New → Deploy</li>
+</ul>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔗 Halaman Terkait</h2>
+<ul>
+  <li><a href="full-dashboard">🎯 Demo Full Quiz Dashboard</a></li>
+  <li><a href="tutorial-kursus">📅 Tutorial: Kursus Multi-Hari</a></li>
+  <li><a href="materi-siswa">📚 Contoh Halaman Materi Siswa</a></li>
+  <li><a href="tutor-html">📖 Belajar HTML Dasar</a></li>
+</ul>

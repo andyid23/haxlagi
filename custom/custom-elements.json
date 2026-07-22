@@ -1,0 +1,2755 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "rollup-test.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/attendance-system.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ActivityLogger",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "_handleScroll"
+            },
+            {
+              "kind": "method",
+              "name": "_handleClick",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_handleQuizSaved",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "logActivity",
+              "parameters": [
+                {
+                  "name": "type"
+                },
+                {
+                  "name": "description"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_showToast",
+              "parameters": [
+                {
+                  "name": "msg"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_clearLogs"
+            },
+            {
+              "kind": "method",
+              "name": "_simulateActivity",
+              "parameters": [
+                {
+                  "name": "type"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "_logs",
+              "privacy": "public",
+              "type": {
+                "text": "array"
+              },
+              "attribute": "_logs"
+            },
+            {
+              "kind": "field",
+              "name": "_expanded",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "_expanded"
+            },
+            {
+              "kind": "field",
+              "name": "_toastMsg",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_toastMsg"
+            },
+            {
+              "kind": "field",
+              "name": "_lastScrollTime",
+              "type": {
+                "text": "number"
+              },
+              "default": "0"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "_logs",
+              "type": {
+                "text": "array"
+              },
+              "fieldName": "_logs"
+            },
+            {
+              "name": "_expanded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "_expanded"
+            },
+            {
+              "name": "_toastMsg",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_toastMsg"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        },
+        {
+          "kind": "class",
+          "description": "",
+          "name": "AttendanceTracker",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "_getWeeklyStats"
+            },
+            {
+              "kind": "field",
+              "name": "_logs",
+              "privacy": "public",
+              "type": {
+                "text": "array"
+              },
+              "attribute": "_logs"
+            },
+            {
+              "kind": "field",
+              "name": "_thresholds",
+              "privacy": "public",
+              "type": {
+                "text": "object"
+              },
+              "attribute": "_thresholds"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "_logs",
+              "type": {
+                "text": "array"
+              },
+              "fieldName": "_logs"
+            },
+            {
+              "name": "_thresholds",
+              "type": {
+                "text": "object"
+              },
+              "fieldName": "_thresholds"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        },
+        {
+          "kind": "class",
+          "description": "",
+          "name": "EngagementScore",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "_getActivityMap"
+            },
+            {
+              "kind": "method",
+              "name": "_getStreak"
+            },
+            {
+              "kind": "method",
+              "name": "_selectCell",
+              "parameters": [
+                {
+                  "name": "cell"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "_logs",
+              "privacy": "public",
+              "type": {
+                "text": "array"
+              },
+              "attribute": "_logs"
+            },
+            {
+              "kind": "field",
+              "name": "_selectedCell",
+              "privacy": "public",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "attribute": "_selectedCell"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "_logs",
+              "type": {
+                "text": "array"
+              },
+              "fieldName": "_logs"
+            },
+            {
+              "name": "_selectedCell",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "fieldName": "_selectedCell"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        },
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TransparentGradebook",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "_loadActualQuizScore"
+            },
+            {
+              "kind": "method",
+              "name": "_getAttendanceScore"
+            },
+            {
+              "kind": "method",
+              "name": "_getFinalScore"
+            },
+            {
+              "kind": "method",
+              "name": "_getGradeLetter",
+              "parameters": [
+                {
+                  "name": "score"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_updateGradesConfig",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_updateThresholdConfig",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "_logs",
+              "privacy": "public",
+              "type": {
+                "text": "array"
+              },
+              "attribute": "_logs"
+            },
+            {
+              "kind": "field",
+              "name": "_thresholds",
+              "privacy": "public",
+              "type": {
+                "text": "object"
+              },
+              "attribute": "_thresholds"
+            },
+            {
+              "kind": "field",
+              "name": "_gradesConfig",
+              "privacy": "public",
+              "type": {
+                "text": "object"
+              },
+              "attribute": "_gradesConfig"
+            },
+            {
+              "kind": "field",
+              "name": "_isLecturerMode",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "_isLecturerMode"
+            },
+            {
+              "kind": "field",
+              "name": "_savedQuizScore",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "_savedQuizScore"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "_logs",
+              "type": {
+                "text": "array"
+              },
+              "fieldName": "_logs"
+            },
+            {
+              "name": "_thresholds",
+              "type": {
+                "text": "object"
+              },
+              "fieldName": "_thresholds"
+            },
+            {
+              "name": "_gradesConfig",
+              "type": {
+                "text": "object"
+              },
+              "fieldName": "_gradesConfig"
+            },
+            {
+              "name": "_isLecturerMode",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "_isLecturerMode"
+            },
+            {
+              "name": "_savedQuizScore",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "_savedQuizScore"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ActivityLogger",
+          "declaration": {
+            "name": "ActivityLogger",
+            "module": "src/attendance-system.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "ActivityLogger",
+            "module": "src/attendance-system.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "AttendanceTracker",
+          "declaration": {
+            "name": "AttendanceTracker",
+            "module": "src/attendance-system.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "AttendanceTracker",
+            "module": "src/attendance-system.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "EngagementScore",
+          "declaration": {
+            "name": "EngagementScore",
+            "module": "src/attendance-system.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "EngagementScore",
+            "module": "src/attendance-system.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "TransparentGradebook",
+          "declaration": {
+            "name": "TransparentGradebook",
+            "module": "src/attendance-system.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "TransparentGradebook",
+            "module": "src/attendance-system.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/custom-haxquiz-theme.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`CustomHaxquizTheme`\n`CustomHaxquizTheme based on modern flex design system`\n`This theme is an example of extending an existing theme component`",
+          "name": "CustomHaxquizTheme",
+          "members": [
+            {
+              "kind": "method",
+              "name": "renderHeaderSlot",
+              "description": "Overload methods for customization of slots from the base class"
+            },
+            {
+              "kind": "method",
+              "name": "renderSideBar"
+            },
+            {
+              "kind": "method",
+              "name": "renderFooterContactInformation"
+            },
+            {
+              "kind": "method",
+              "name": "renderFooterSecondarySlot"
+            },
+            {
+              "kind": "method",
+              "name": "renderFooterPrimarySlot"
+            },
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true,
+              "description": "Store the tag name to make it easier to obtain directly.",
+              "readonly": true
+            }
+          ],
+          "superclass": {
+            "name": "PolarisFlexTheme",
+            "package": "@haxtheweb/polaris-theme/lib/polaris-flex-theme.js"
+          },
+          "tagName": "custom-haxquiz-theme",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "CustomHaxquizTheme",
+            "module": "src/custom-haxquiz-theme.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "CustomHaxquizTheme",
+          "declaration": {
+            "name": "CustomHaxquizTheme",
+            "module": "src/custom-haxquiz-theme.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/explode-quiz-dashboard.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ExplodeQuizDashboard",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "_getStorageItem",
+              "parameters": [
+                {
+                  "name": "key"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_setStorageItem",
+              "parameters": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "val"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_removeStorageItem",
+              "parameters": [
+                {
+                  "name": "key"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_getSessionStorageItem",
+              "parameters": [
+                {
+                  "name": "key"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_setSessionStorageItem",
+              "parameters": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "val"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_removeSessionStorageItem",
+              "parameters": [
+                {
+                  "name": "key"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_initFirebase"
+            },
+            {
+              "kind": "method",
+              "name": "_handleSignIn"
+            },
+            {
+              "kind": "method",
+              "name": "_handleSignOut"
+            },
+            {
+              "kind": "method",
+              "name": "_handleSaveFirebaseConfig",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_handleResetFirebaseConfig"
+            },
+            {
+              "kind": "method",
+              "name": "_handleCreateSheet"
+            },
+            {
+              "kind": "method",
+              "name": "_handleConnectSheet",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_fetchLeaderboard"
+            },
+            {
+              "kind": "method",
+              "name": "_onQuizSaved",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_onQuestionsChanged",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_drawChart"
+            },
+            {
+              "kind": "method",
+              "name": "_onTabChange",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "spreadsheetId",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "spreadsheet-id"
+            },
+            {
+              "kind": "field",
+              "name": "accessToken",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "access-token"
+            },
+            {
+              "kind": "field",
+              "name": "_user",
+              "privacy": "public",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "attribute": "_user"
+            },
+            {
+              "kind": "field",
+              "name": "_accessToken",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_accessToken"
+            },
+            {
+              "kind": "field",
+              "name": "_loading",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "attribute": "_loading"
+            },
+            {
+              "kind": "field",
+              "name": "_activeTab",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "_activeTab"
+            },
+            {
+              "kind": "field",
+              "name": "_spreadsheetId",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "_spreadsheetId"
+            },
+            {
+              "kind": "field",
+              "name": "_spreadsheetUrl",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_spreadsheetUrl"
+            },
+            {
+              "kind": "field",
+              "name": "_leaderboard",
+              "privacy": "public",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "attribute": "_leaderboard"
+            },
+            {
+              "kind": "field",
+              "name": "_syncing",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "_syncing"
+            },
+            {
+              "kind": "field",
+              "name": "_errorMsg",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_errorMsg"
+            },
+            {
+              "kind": "field",
+              "name": "_successMsg",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_successMsg"
+            },
+            {
+              "kind": "field",
+              "name": "_showFirebaseConfigForm",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "_showFirebaseConfigForm"
+            },
+            {
+              "kind": "field",
+              "name": "_customFirebaseConfigInput",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "_customFirebaseConfigInput"
+            },
+            {
+              "kind": "field",
+              "name": "_customQuestions",
+              "privacy": "public",
+              "type": {
+                "text": "array"
+              },
+              "attribute": "_customQuestions"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "spreadsheet-id",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "spreadsheetId"
+            },
+            {
+              "name": "access-token",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "accessToken"
+            },
+            {
+              "name": "_user",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "fieldName": "_user"
+            },
+            {
+              "name": "_accessToken",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_accessToken"
+            },
+            {
+              "name": "_loading",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true",
+              "fieldName": "_loading"
+            },
+            {
+              "name": "_activeTab",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "_activeTab"
+            },
+            {
+              "name": "_spreadsheetId",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "_spreadsheetId"
+            },
+            {
+              "name": "_spreadsheetUrl",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_spreadsheetUrl"
+            },
+            {
+              "name": "_leaderboard",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "fieldName": "_leaderboard"
+            },
+            {
+              "name": "_syncing",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "_syncing"
+            },
+            {
+              "name": "_errorMsg",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_errorMsg"
+            },
+            {
+              "name": "_successMsg",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_successMsg"
+            },
+            {
+              "name": "_customQuestions",
+              "type": {
+                "text": "array"
+              },
+              "fieldName": "_customQuestions"
+            },
+            {
+              "name": "_showFirebaseConfigForm",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "_showFirebaseConfigForm"
+            },
+            {
+              "name": "_customFirebaseConfigInput",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "_customFirebaseConfigInput"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "ExplodeQuizDashboard",
+            "module": "src/explode-quiz-dashboard.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/explode-quiz.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "DEFAULT_QUESTIONS",
+          "type": {
+            "text": "array"
+          },
+          "default": "[ { question: \"Apa ibu kota Indonesia?\", choices: [\"Bandung\", \"Surabaya\", \"Jakarta\", \"Medan\"], correctIndex: 2, }, { question: \"Berapa hasil dari 7 × 8?\", choices: [\"54\", \"56\", \"58\", \"60\"], correctIndex: 1, }, { question: \"Planet terdekat dengan Matahari adalah?\", choices: [\"Venus\", \"Bumi\", \"Mars\", \"Merkurius\"], correctIndex: 3, }, ]"
+        },
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ExplodeQuiz",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "haxProperties",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_inHaxEditor",
+              "description": "Only true inside HAX editor (hax start / haxcms local dev)",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "_fireConfetti"
+            },
+            {
+              "kind": "method",
+              "name": "_fireMegaConfetti"
+            },
+            {
+              "kind": "method",
+              "name": "_startQuiz"
+            },
+            {
+              "kind": "method",
+              "name": "_renderNameScreen"
+            },
+            {
+              "kind": "method",
+              "name": "_renderQuestionScreen"
+            },
+            {
+              "kind": "method",
+              "name": "_selectAnswer",
+              "parameters": [
+                {
+                  "name": "choiceIndex"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_advanceQuiz"
+            },
+            {
+              "kind": "method",
+              "name": "_renderResultScreen"
+            },
+            {
+              "kind": "method",
+              "name": "_restartQuiz"
+            },
+            {
+              "kind": "method",
+              "name": "_submitToSheets",
+              "parameters": [
+                {
+                  "name": "name"
+                },
+                {
+                  "name": "score"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_openEditor"
+            },
+            {
+              "kind": "method",
+              "name": "_openEditorFromName"
+            },
+            {
+              "kind": "method",
+              "name": "_renderEditorScreen"
+            },
+            {
+              "kind": "method",
+              "name": "_addQuestion"
+            },
+            {
+              "kind": "method",
+              "name": "_deleteQuestion",
+              "parameters": [
+                {
+                  "name": "index"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_startEditQuestion",
+              "parameters": [
+                {
+                  "name": "index"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_saveEditQuestion"
+            },
+            {
+              "kind": "method",
+              "name": "_cancelEditQuestion"
+            },
+            {
+              "kind": "method",
+              "name": "_saveAll"
+            },
+            {
+              "kind": "method",
+              "name": "_cancelAll"
+            },
+            {
+              "kind": "field",
+              "name": "_confettiFn",
+              "default": "confetti"
+            },
+            {
+              "kind": "field",
+              "name": "questions",
+              "privacy": "public",
+              "type": {
+                "text": "array"
+              },
+              "default": "[ { question: \"Apa ibu kota Indonesia?\", choices: [\"Bandung\", \"Surabaya\", \"Jakarta\", \"Medan\"], correctIndex: 2, }, { question: \"Berapa hasil dari 7 × 8?\", choices: [\"54\", \"56\", \"58\", \"60\"], correctIndex: 1, }, { question: \"Planet terdekat dengan Matahari adalah?\", choices: [\"Venus\", \"Bumi\", \"Mars\", \"Merkurius\"], correctIndex: 3, }, ]",
+              "attribute": "questions",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "scriptFunctionName",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"submitQuizResult\"",
+              "attribute": "scriptFunctionName"
+            },
+            {
+              "kind": "field",
+              "name": "spreadsheetId",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "spreadsheet-id",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "accessToken",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "access-token"
+            },
+            {
+              "kind": "field",
+              "name": "appsScriptUrl",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "apps-script-url"
+            },
+            {
+              "kind": "field",
+              "name": "editable",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "editable",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "_screen",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"name\"",
+              "attribute": "_screen"
+            },
+            {
+              "kind": "field",
+              "name": "_studentName",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_studentName"
+            },
+            {
+              "kind": "field",
+              "name": "_currentIndex",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "_currentIndex"
+            },
+            {
+              "kind": "field",
+              "name": "_score",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "_score"
+            },
+            {
+              "kind": "field",
+              "name": "_answered",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "_answered"
+            },
+            {
+              "kind": "field",
+              "name": "_selectedIndex",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "attribute": "_selectedIndex"
+            },
+            {
+              "kind": "field",
+              "name": "_feedbackText",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_feedbackText"
+            },
+            {
+              "kind": "field",
+              "name": "_feedbackPositive",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "_feedbackPositive"
+            },
+            {
+              "kind": "field",
+              "name": "_validationError",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_validationError"
+            },
+            {
+              "kind": "field",
+              "name": "_nameInputValue",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_nameInputValue"
+            },
+            {
+              "kind": "field",
+              "name": "_editing",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "_editing"
+            },
+            {
+              "kind": "field",
+              "name": "_tempQuestions",
+              "privacy": "public",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "attribute": "_tempQuestions"
+            },
+            {
+              "kind": "field",
+              "name": "_editingIndex",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "attribute": "_editingIndex"
+            },
+            {
+              "kind": "field",
+              "name": "_tempQuestionText",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_tempQuestionText"
+            },
+            {
+              "kind": "field",
+              "name": "_tempChoice0",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_tempChoice0"
+            },
+            {
+              "kind": "field",
+              "name": "_tempChoice1",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_tempChoice1"
+            },
+            {
+              "kind": "field",
+              "name": "_tempChoice2",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_tempChoice2"
+            },
+            {
+              "kind": "field",
+              "name": "_tempChoice3",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_tempChoice3"
+            },
+            {
+              "kind": "field",
+              "name": "_tempCorrectIndex",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"0\"",
+              "attribute": "_tempCorrectIndex"
+            },
+            {
+              "kind": "field",
+              "name": "_editorOrigin",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"result\"",
+              "attribute": "_editorOrigin"
+            },
+            {
+              "kind": "field",
+              "name": "t",
+              "type": {
+                "text": "object"
+              },
+              "default": "{ quizTitle: \"Kuis Interaktif\", quizInstruction: \"Masukkan nama Anda untuk memulai kuis.\", namePlaceholder: \"Nama Anda...\", startButton: \"Mulai Kuis\", validationNameEmpty: \"Nama tidak boleh kosong.\", validationNameShort: \"Nama harus lebih dari 2 karakter.\", // Layar_Soal questionOf: \"Soal\", of: \"dari\", scoreLabel: \"Skor\", feedbackCorrect: \"Mantap, Benar!\", feedbackWrongPrefix: \"Yah, Salah. Jawaban benar: \", // Layar_Hasil resultHeading: \"Hasil Kuis\", resultName: \"Nama\", resultScore: \"Skor\", resultTotal: \"Total Soal\", resultPercentage: \"Persentase\", messageHigh: \"Luar Biasa! Kamu Hebat!\", messageMedium: \"Bagus! Terus Berlatih!\", messageLow: \"Jangan Menyerah! Coba Lagi!\", restartButton: \"Mulai Ulang\", // Editor editTitle: \"Edit Soal Kuis\", closeEditor: \"Tutup Editor\", questionPlaceholder: \"Tulis pertanyaan...\", choicePlaceholder: \"Pilihan {N}\", choiceCorrectLabel: \"Benar\", addQuestionBtn: \"Tambah Soal\", editQuestionBtn: \"Edit\", deleteQuestionBtn: \"Hapus\", saveEditBtn: \"Simpan Perubahan\", cancelEditBtn: \"Batal\", saveAllBtn: \"Simpan & Keluar\", cancelAllBtn: \"Batal\", minQuestionsError: \"Minimal 3 soal harus tersedia\", emptyQuestionError: \"Pertanyaan tidak boleh kosong\", emptyChoiceError: \"Semua pilihan jawaban harus diisi\", // Aksesibilitas aria-label ariaNameInput: \"Kolom nama siswa\", ariaStartButton: \"Tombol mulai kuis\", ariaAnswerButton: \"Pilihan jawaban\", ariaRestartButton: \"Mulai ulang kuis\", ariaScoreDisplay: \"Skor saat ini\", ariaProgressLabel: \"Kemajuan kuis\", ariaFeedback: \"Umpan balik jawaban\", // Editor aria-labels ariaEditTitle: \"Panel editor soal kuis\", ariaCloseEditor: \"Tutup panel editor\", ariaAddForm: \"Formulir tambah soal baru\", ariaQuestionInput: \"Teks pertanyaan\", ariaChoiceInput: \"Pilihan jawaban {N}\", ariaCorrectChoice: \"Pilihan jawaban benar\", ariaQuestionsList: \"Daftar soal yang tersedia\", ariaQuestionCard: \"Kartu soal\", ariaEditQuestion: \"Edit soal ini\", ariaDeleteQuestion: \"Hapus soal ini\", ariaSaveEdit: \"Simpan perubahan soal\", ariaCancelEdit: \"Batal mengedit soal\", ariaSaveAll: \"Simpan semua perubahan dan keluar\", ariaCancelAll: \"Batal semua perubahan dan keluar\", }"
+            },
+            {
+              "kind": "field",
+              "name": "editing",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "editing",
+              "reflects": true
+            }
+          ],
+          "events": [
+            {
+              "name": "quiz-saved",
+              "type": {
+                "text": "CustomEvent"
+              }
+            },
+            {
+              "name": "questions-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "questions",
+              "type": {
+                "text": "array"
+              },
+              "default": "DEFAULT_QUESTIONS",
+              "fieldName": "questions"
+            },
+            {
+              "name": "scriptFunctionName",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"submitQuizResult\"",
+              "fieldName": "scriptFunctionName"
+            },
+            {
+              "name": "spreadsheet-id",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "spreadsheetId"
+            },
+            {
+              "name": "access-token",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "accessToken"
+            },
+            {
+              "name": "apps-script-url",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "appsScriptUrl"
+            },
+            {
+              "name": "editable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "editable"
+            },
+            {
+              "name": "editing",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "editing"
+            },
+            {
+              "name": "_screen",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"name\"",
+              "fieldName": "_screen"
+            },
+            {
+              "name": "_studentName",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_studentName"
+            },
+            {
+              "name": "_currentIndex",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "_currentIndex"
+            },
+            {
+              "name": "_score",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "_score"
+            },
+            {
+              "name": "_answered",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "_answered"
+            },
+            {
+              "name": "_selectedIndex",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "fieldName": "_selectedIndex"
+            },
+            {
+              "name": "_feedbackText",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_feedbackText"
+            },
+            {
+              "name": "_feedbackPositive",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "_feedbackPositive"
+            },
+            {
+              "name": "_validationError",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_validationError"
+            },
+            {
+              "name": "_nameInputValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_nameInputValue"
+            },
+            {
+              "name": "_editing",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "_editing"
+            },
+            {
+              "name": "_tempQuestions",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "fieldName": "_tempQuestions"
+            },
+            {
+              "name": "_editingIndex",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "fieldName": "_editingIndex"
+            },
+            {
+              "name": "_tempQuestionText",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_tempQuestionText"
+            },
+            {
+              "name": "_tempChoice0",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_tempChoice0"
+            },
+            {
+              "name": "_tempChoice1",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_tempChoice1"
+            },
+            {
+              "name": "_tempChoice2",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_tempChoice2"
+            },
+            {
+              "name": "_tempChoice3",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_tempChoice3"
+            },
+            {
+              "name": "_tempCorrectIndex",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"0\"",
+              "fieldName": "_tempCorrectIndex"
+            },
+            {
+              "name": "_editorOrigin",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"result\"",
+              "fieldName": "_editorOrigin"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "I18NMixin",
+              "package": "@haxtheweb/i18n-manager/lib/I18NMixin.js"
+            },
+            {
+              "name": "DDDSuper",
+              "package": "@haxtheweb/d-d-d/d-d-d.js"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "ExplodeQuiz",
+            "module": "src/explode-quiz.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "ExplodeQuiz",
+          "declaration": {
+            "name": "ExplodeQuiz",
+            "module": "src/explode-quiz.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "DEFAULT_QUESTIONS",
+          "declaration": {
+            "name": "DEFAULT_QUESTIONS",
+            "module": "src/explode-quiz.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/full-quiz-dashboard.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "<full-quiz-dashboard> - Web Component Vanilla JS\nSatu elemen untuk SEMUA: Kuis + Attendance + Heatmap + Gradebook\n\nCara pakai:\n  <full-quiz-dashboard></full-quiz-dashboard>\n  <full-quiz-dashboard apps-script-url=\"https://script.google.com/macros/s/xxx/exec\"></full-quiz-dashboard>\n  <full-quiz-dashboard spreadsheet-id=\"your-sheet-id\"></full-quiz-dashboard>\n\nFitur:\n - Kuis interaktif (5 soal default, bisa edit/tambah)\n - Pelacakan aktivitas otomatis (scroll, klik)\n - Attendance tracker mingguan (gauge + checklist)\n - Heatmap aktivitas 28 hari (seperti GitHub)\n - Gradebook transparan (bobot bisa diatur)\n - Integrasi Google Sheets via Apps Script\n - Semua data ke localStorage + Google Sheets\n - 0 dependencies, pure vanilla JS",
+          "name": "FullQuizDashboard",
+          "members": [
+            {
+              "kind": "field",
+              "name": "LOGS_KEY",
+              "type": {
+                "text": "string"
+              },
+              "static": true,
+              "default": "'a3_attendance_activity_logs'"
+            },
+            {
+              "kind": "field",
+              "name": "THRESHOLD_KEY",
+              "type": {
+                "text": "string"
+              },
+              "static": true,
+              "default": "'a3_attendance_threshold_config'"
+            },
+            {
+              "kind": "field",
+              "name": "GRADES_KEY",
+              "type": {
+                "text": "string"
+              },
+              "static": true,
+              "default": "'a3_attendance_grades_config'"
+            },
+            {
+              "kind": "field",
+              "name": "SHEETS_KEY",
+              "type": {
+                "text": "string"
+              },
+              "static": true,
+              "default": "'quiz_sheet_id'"
+            },
+            {
+              "kind": "field",
+              "name": "SCRIPT_KEY",
+              "type": {
+                "text": "string"
+              },
+              "static": true,
+              "default": "'apps_script_url'"
+            },
+            {
+              "kind": "field",
+              "name": "SHEET_NAME_KEY",
+              "type": {
+                "text": "string"
+              },
+              "static": true,
+              "default": "'quiz_sheet_name'"
+            },
+            {
+              "kind": "field",
+              "name": "QUESTIONS_KEY",
+              "type": {
+                "text": "string"
+              },
+              "static": true,
+              "default": "'quiz_custom_questions'"
+            },
+            {
+              "kind": "field",
+              "name": "QUESTIONS",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[ { question: 'Apa ibu kota Indonesia?', choices: ['Bandung','Surabaya','Jakarta','Medan'], correctIndex: 2 }, { question: 'Berapa hasil dari 7 × 8?', choices: ['54','56','58','60'], correctIndex: 1 }, { question: 'Planet terdekat dengan Matahari?', choices: ['Venus','Bumi','Mars','Merkurius'], correctIndex: 3 }, { question: 'Siapa presiden pertama Indonesia?', choices: ['Soeharto','Soekarno','Habibie','Megawati'], correctIndex: 1 }, { question: 'Berapa jumlah provinsi di Indonesia?', choices: ['32','34','36','38'], correctIndex: 2 } ]"
+            },
+            {
+              "kind": "field",
+              "name": "THRESHOLDS",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ minWeeklyActivities:5, minReading:2, minQuiz:1, minDiscussion:1 }"
+            },
+            {
+              "kind": "field",
+              "name": "GRADES",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ uts:85, uas:88, attendanceWeight:30, quizWeight:20, utsWeight:25, uasWeight:25 }"
+            },
+            {
+              "kind": "method",
+              "name": "_init"
+            },
+            {
+              "kind": "method",
+              "name": "_load",
+              "parameters": [
+                {
+                  "name": "k"
+                },
+                {
+                  "name": "fb"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_save",
+              "parameters": [
+                {
+                  "name": "k"
+                },
+                {
+                  "name": "v"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_rem",
+              "parameters": [
+                {
+                  "name": "k"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_logs"
+            },
+            {
+              "kind": "method",
+              "name": "_show",
+              "parameters": [
+                {
+                  "name": "msg"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "_connected",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "_connect",
+              "parameters": [
+                {
+                  "name": "url"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_connectSheets",
+              "parameters": [
+                {
+                  "name": "v"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_disc"
+            },
+            {
+              "kind": "method",
+              "name": "_send",
+              "parameters": [
+                {
+                  "name": "data"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_onScroll"
+            },
+            {
+              "kind": "method",
+              "name": "_onClick",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_log",
+              "parameters": [
+                {
+                  "name": "type"
+                },
+                {
+                  "name": "desc"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_sim",
+              "parameters": [
+                {
+                  "name": "type"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_clearLogs"
+            },
+            {
+              "kind": "method",
+              "name": "_start",
+              "parameters": [
+                {
+                  "name": "name"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_select",
+              "parameters": [
+                {
+                  "name": "i"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_next"
+            },
+            {
+              "kind": "method",
+              "name": "_restart"
+            },
+            {
+              "kind": "method",
+              "name": "_weekly"
+            },
+            {
+              "kind": "method",
+              "name": "_streak"
+            },
+            {
+              "kind": "method",
+              "name": "_heatmap"
+            },
+            {
+              "kind": "method",
+              "name": "_grade"
+            },
+            {
+              "kind": "method",
+              "name": "_addQ"
+            },
+            {
+              "kind": "method",
+              "name": "_editQ",
+              "parameters": [
+                {
+                  "name": "i"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_saveQ"
+            },
+            {
+              "kind": "method",
+              "name": "_delQ",
+              "parameters": [
+                {
+                  "name": "i"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_updThreshold",
+              "parameters": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "val"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_updGrade",
+              "parameters": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "val"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_render"
+            },
+            {
+              "kind": "method",
+              "name": "_renderToast"
+            },
+            {
+              "kind": "method",
+              "name": "_renderHeader"
+            },
+            {
+              "kind": "method",
+              "name": "_renderTabs"
+            },
+            {
+              "kind": "method",
+              "name": "_renderContent"
+            },
+            {
+              "kind": "method",
+              "name": "_renderSetup"
+            },
+            {
+              "kind": "method",
+              "name": "_renderQuiz"
+            },
+            {
+              "kind": "method",
+              "name": "_renderQName"
+            },
+            {
+              "kind": "method",
+              "name": "_renderQQuestion"
+            },
+            {
+              "kind": "method",
+              "name": "_renderQResult"
+            },
+            {
+              "kind": "method",
+              "name": "_renderAtt"
+            },
+            {
+              "kind": "method",
+              "name": "_cri",
+              "parameters": [
+                {
+                  "name": "icon"
+                },
+                {
+                  "name": "name"
+                },
+                {
+                  "name": "cnt"
+                },
+                {
+                  "name": "min"
+                },
+                {
+                  "name": "met"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_renderGrade"
+            },
+            {
+              "kind": "method",
+              "name": "_renderEditor"
+            },
+            {
+              "kind": "method",
+              "name": "_renderSettings"
+            },
+            {
+              "kind": "method",
+              "name": "_bind"
+            },
+            {
+              "kind": "field",
+              "name": "CSS",
+              "static": true,
+              "default": "` :host { display:block; font-family:'Roboto','Segoe UI',sans-serif; color:#1c1b1f; max-width:960px; margin:0 auto; } * { box-sizing:border-box; margin:0; padding:0; } .hd { background:linear-gradient(135deg,#6750a4,#9c7cf4); color:white; border-radius:16px; padding:20px 24px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; } .hd h1 { font-size:22px; margin-bottom:4px; } .hd p { font-size:13px; opacity:0.9; } .hdr { display:flex; gap:8px; align-items:center; } .b { display:inline-block; padding:4px 10px; border-radius:99px; font-size:11px; font-weight:500; } .b.g { background:#d1fae5; color:#065f46; } .b.o { background:#fef3c7; color:#92400e; } .tb { display:flex; border-bottom:2px solid #e0e0e0; margin-bottom:20px; overflow-x:auto; } .tbb { padding:10px 18px; background:none; border:none; border-bottom:3px solid transparent; margin-bottom:-2px; cursor:pointer; font-size:13px; font-weight:500; color:#666; white-space:nowrap; transition:all .2s; } .tbb:hover { color:#6750a4; background:#f3f0fa; } .tbb.a { color:#6750a4; border-bottom-color:#6750a4; } .c { background:white; border-radius:14px; padding:22px; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,.06); border:1px solid #e8e3f5; } .c h2 { color:#6750a4; font-size:18px; margin-bottom:14px; display:flex; align-items:center; gap:8px; } .c h3 { color:#49454f; font-size:15px; margin-bottom:10px; } .b { display:inline-block; padding:10px 20px; border:none; border-radius:8px; font-size:14px; font-weight:500; cursor:pointer; transition:all .2s; } .b.p { background:#6750a4; color:white; } .b.p:hover { background:#7c6bb5; } .b.s { background:transparent; color:#6750a4; border:1px solid #6750a4; } .b.s:hover { background:#f3f0fa; } .b.fw { width:100%; text-align:center; } .bs { padding:5px 10px; border:1px solid #e0e0e0; border-radius:6px; background:white; font-size:12px; cursor:pointer; transition:all .2s; } .bs:hover { background:#f3f0fa; } .bs.dg { color:#ba1a1a; border-color:#ffcdd2; } .bs.dg:hover { background:#ffebee; } /* Setup */ .sc { max-width:600px; margin:20px auto; text-align:center; } .so { background:#fcfbfe; border-radius:10px; padding:18px; margin-bottom:16px; text-align:left; } .so h3 { font-size:14px; color:#6750a4; margin-bottom:6px; } .so p { font-size:12px; color:#666; margin-bottom:10px; } .ir { display:flex; gap:8px; } .ir input { flex:1; padding:10px 12px; border:1px solid #ccc; border-radius:8px; font-size:13px; font-family:inherit; } .ir input:focus { outline:none; border-color:#6750a4; box-shadow:0 0 0 2px rgba(103,80,164,.2); } .dv { height:1px; background:#e0e0e0; margin:16px 0; } .sb { text-align:center; border:2px dashed #c7b3fc; background:#fef7ff; } .sb h3 { color:#6750a4; } /* Quiz */ .qc { max-width:560px; margin:0 auto; } .qi { margin-bottom:16px; } .qi input { width:100%; padding:12px 16px; border:2px solid #e0e0e0; border-radius:10px; font-size:16px; font-family:inherit; } .qi input:focus { outline:none; border-color:#6750a4; } .qh { display:flex; justify-content:space-between; font-weight:600; color:#6750a4; margin-bottom:20px; } .qq { font-size:18px; font-weight:600; margin-bottom:20px; line-height:1.5; } .qa { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px; } .qab { padding:14px 16px; background:white; border:2px solid #e0e0e0; border-radius:10px; font-size:14px; cursor:pointer; transition:all .2s; text-align:left; font-family:inherit; } .qab:hover:not(:disabled) { border-color:#6750a4; background:#f3f0fa; } .qab:disabled { cursor:not-allowed; opacity:.7; } .qab.cc { border-color:#10b981; background:#d1fae5; color:#065f46; } .qab.cw { border-color:#ef4444; background:#fee2e2; color:#991b1b; } .qf { padding:14px; border-radius:10px; text-align:center; font-weight:600; } .qf.p { background:#d1fae5; color:#065f46; } .qf.n { background:#fee2e2; color:#991b1b; } /* Result */ .rc { text-align:center; } .ri { font-size:16px; margin-bottom:8px; color:#49454f; } .rp { font-size:48px; font-weight:700; color:#6750a4; margin:16px 0; } .rm { font-size:18px; color:#6750a4; margin-bottom:20px; } /* Attendance */ .g2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:20px; margin-bottom:20px; } .gw { position:relative; width:140px; height:140px; margin:0 auto; } .gv { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:26px; font-weight:700; } .cll { display:flex; flex-direction:column; gap:10px; } .cri { display:flex; align-items:center; justify-content:space-between; padding:10px 14px; background:#fcfbfe; border-radius:8px; } .crl { display:flex; align-items:center; gap:10px; } .cric { font-size:20px; } .crn { font-weight:500; font-size:13px; } .crp { font-size:11px; color:#666; } .smb { display:flex; align-items:center; gap:6px; margin-bottom:14px; flex-wrap:wrap; } .sl { font-size:12px; color:#666; font-weight:500; } .sm2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px; } .sm { background:#fbf9ff; border-radius:8px; padding:12px; text-align:center; } .sml { font-size:11px; color:#666; } .smv { font-size:20px; font-weight:700; color:#6750a4; margin-top:4px; } .hmh { display:flex; justify-content:center; gap:5px; margin-bottom:6px; font-size:10px; color:#666; font-weight:600; } .hmh span { width:28px; text-align:center; } .hmg { display:grid; grid-template-columns:repeat(7,1fr); gap:4px; max-width:280px; margin:0 auto; } .hc { aspect-ratio:1; border-radius:3px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:600; cursor:default; color:#9c99a6; background:#f3f0fa; transition:transform .15s; } .hc:hover { transform:scale(1.2); } .hc.l1 { background:#e3d9fc; color:#6750a4; } .hc.l2 { background:#c7b3fc; color:white; } .hc.l3 { background:#9d7bfc; color:white; } .hc.l4 { background:#6750a4; color:white; } .hml { display:flex; justify-content:center; align-items:center; gap:4px; margin-top:10px; font-size:10px; color:#666; } .lb { width:12px; height:12px; border-radius:2px; } .li { display:flex; gap:8px; align-items:flex-start; padding:6px 8px; border-radius:4px; font-size:11px; border-left:3px solid #ccc; margin-bottom:4px; background:#f8f9fa; } .li.reading { border-left-color:#4f46e5; } .li.quiz { border-left-color:#ec4899; } .li.download { border-left-color:#10b981; } .li.discussion { border-left-color:#f59e0b; } .lt { color:#888; min-width:120px; } .ld { flex:1; } /* Grades */ .gg { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:12px; margin-bottom:20px; } .gi { background:#fcfbfe; border:1px solid #f1eef8; border-radius:10px; padding:14px; text-align:center; } .gi.hl { background:#f3f0fa; border-color:#c7b3fc; } .gl { font-size:10px; color:#666; text-transform:uppercase; letter-spacing:.5px; font-weight:600; } .gv { font-size:22px; font-weight:700; color:#1c1b1f; margin-top:4px; } .gv.br { color:#6750a4; } .gt { width:100%; border-collapse:collapse; font-size:13px; } .gt th { background:#f3f0fa; color:#6750a4; font-weight:600; padding:10px; text-align:left; } .gt td { padding:10px; border-bottom:1px solid #f0f0f0; } .bld { font-weight:600; } /* Editor */ .ef { background:#fcfbfe; border-radius:10px; padding:16px; margin-bottom:16px; } .et { width:100%; min-height:70px; padding:10px; border:1px solid #ccc; border-radius:6px; font-size:13px; font-family:inherit; resize:vertical; margin-bottom:12px; } .et:focus { outline:none; border-color:#6750a4; } .ecr { display:flex; gap:10px; align-items:center; margin-bottom:8px; } .ecr input[type=\"text\"] { flex:1; padding:8px 10px; border:1px solid #ddd; border-radius:6px; font-size:13px; font-family:inherit; } .ecr input[type=\"text\"]:focus { outline:none; border-color:#6750a4; } .rl { font-size:12px; color:#666; display:flex; align-items:center; gap:4px; cursor:pointer; } .ea { display:flex; gap:8px; margin-top:10px; } .qcrd { display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:#f8f9fa; border-radius:6px; margin-bottom:6px; } .qi2 { display:flex; align-items:center; gap:10px; flex:1; } .qn { font-weight:600; color:#6750a4; min-width:30px; } .qa2 { display:flex; gap:4px; } /* Settings */ .sg { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; } .si { margin-bottom:8px; } .si label { display:block; font-size:12px; color:#666; font-weight:500; margin-bottom:4px; } .sin { width:100%; padding:8px 10px; border:1px solid #ccc; border-radius:6px; font-size:13px; font-family:inherit; } .sin:focus { outline:none; border-color:#6750a4; } /* Tips */ .ti { padding:12px 16px; border-radius:8px; font-size:13px; margin:12px 0; background:#e3f2fd; border-left:4px solid #2196f3; color:#1565c0; } .ti.w { background:#fff3e0; border-left-color:#ff9800; color:#e65100; } /* Toast */ .t { position:fixed; bottom:24px; right:24px; background:#323232; color:white; padding:12px 20px; border-radius:8px; font-size:14px; z-index:9999; box-shadow:0 4px 12px rgba(0,0,0,.2); animation:si .3s ease; } @keyframes si { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} } @media(max-width:600px){ .qa,.hmg{grid-template-columns:1fr} .ir{flex-direction:column} .g2{grid-template-columns:1fr} .gg{grid-template-columns:repeat(3,1fr)} .sg{grid-template-columns:1fr 1fr} } `"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "apps-script-url"
+            },
+            {
+              "name": "spreadsheet-id"
+            },
+            {
+              "name": "questions"
+            },
+            {
+              "name": "sheet-name"
+            }
+          ],
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "tagName": "full-quiz-dashboard",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "full-quiz-dashboard",
+          "declaration": {
+            "name": "FullQuizDashboard",
+            "module": "src/full-quiz-dashboard.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/notif-element.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "NotifElement",
+          "members": [
+            {
+              "kind": "field",
+              "name": "message"
+            },
+            {
+              "kind": "field",
+              "name": "type"
+            },
+            {
+              "kind": "field",
+              "name": "duration"
+            },
+            {
+              "kind": "field",
+              "name": "visible"
+            },
+            {
+              "kind": "method",
+              "name": "_setupEventListeners"
+            },
+            {
+              "kind": "method",
+              "name": "_renderContent"
+            },
+            {
+              "kind": "method",
+              "name": "_updateVisibility"
+            },
+            {
+              "kind": "method",
+              "name": "_clearTimeout"
+            },
+            {
+              "kind": "method",
+              "name": "show"
+            },
+            {
+              "kind": "method",
+              "name": "hide"
+            },
+            {
+              "kind": "field",
+              "name": "_shadow"
+            },
+            {
+              "kind": "field",
+              "name": "_message",
+              "type": {
+                "text": "string"
+              },
+              "default": "''"
+            },
+            {
+              "kind": "field",
+              "name": "_type",
+              "type": {
+                "text": "string"
+              },
+              "default": "'info'"
+            },
+            {
+              "kind": "field",
+              "name": "_duration",
+              "type": {
+                "text": "number"
+              },
+              "default": "5000"
+            },
+            {
+              "kind": "field",
+              "name": "_visible",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "_timeoutId",
+              "type": {
+                "text": "null"
+              },
+              "default": "null"
+            }
+          ],
+          "events": [
+            {
+              "name": "notif-show",
+              "type": {
+                "text": "CustomEvent"
+              }
+            },
+            {
+              "name": "notif-hide",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "message"
+            },
+            {
+              "name": "type"
+            },
+            {
+              "name": "duration"
+            },
+            {
+              "name": "visible"
+            }
+          ],
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "tagName": "notif-element",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "notif-element",
+          "declaration": {
+            "name": "NotifElement",
+            "module": "src/notif-element.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/quiz-dashboard-lite.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "QuizDashboardLite",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "_getStorageItem",
+              "parameters": [
+                {
+                  "name": "key"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_setStorageItem",
+              "parameters": [
+                {
+                  "name": "key"
+                },
+                {
+                  "name": "val"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_handleConnectSheet",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_handleDisconnect"
+            },
+            {
+              "kind": "method",
+              "name": "_onQuizSaved",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "_spreadsheetId",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "_spreadsheetId"
+            },
+            {
+              "kind": "field",
+              "name": "_activeTab",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "_activeTab"
+            },
+            {
+              "kind": "field",
+              "name": "_successMsg",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_successMsg"
+            },
+            {
+              "kind": "field",
+              "name": "_errorMsg",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_errorMsg"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "_spreadsheetId",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "_spreadsheetId"
+            },
+            {
+              "name": "_activeTab",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "_activeTab"
+            },
+            {
+              "name": "_successMsg",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_successMsg"
+            },
+            {
+              "name": "_errorMsg",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_errorMsg"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "QuizDashboardLite",
+            "module": "src/quiz-dashboard-lite.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "QuizDashboardLite",
+          "declaration": {
+            "name": "QuizDashboardLite",
+            "module": "src/quiz-dashboard-lite.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/todo-list.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TodoList",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_inHaxEditor",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "_renderEditorScreen"
+            },
+            {
+              "kind": "method",
+              "name": "_renderTask",
+              "parameters": [
+                {
+                  "name": "task"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_handleInputKeydown",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_handleAddClick"
+            },
+            {
+              "kind": "method",
+              "name": "_handleInputChange",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_handleDelete",
+              "parameters": [
+                {
+                  "name": "id"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_handleToggleComplete",
+              "parameters": [
+                {
+                  "name": "id"
+                },
+                {
+                  "name": "checked"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_addTask"
+            },
+            {
+              "kind": "method",
+              "name": "_openEditor"
+            },
+            {
+              "kind": "method",
+              "name": "_addTaskEditor"
+            },
+            {
+              "kind": "method",
+              "name": "_deleteTaskEditor",
+              "parameters": [
+                {
+                  "name": "index"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_toggleCompleteEditor",
+              "parameters": [
+                {
+                  "name": "index"
+                },
+                {
+                  "name": "checked"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_startEditTask",
+              "parameters": [
+                {
+                  "name": "index"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_saveEditTask"
+            },
+            {
+              "kind": "method",
+              "name": "_cancelEditTask"
+            },
+            {
+              "kind": "method",
+              "name": "_saveAll"
+            },
+            {
+              "kind": "method",
+              "name": "_cancelAll"
+            },
+            {
+              "kind": "field",
+              "name": "haxProperties",
+              "static": true,
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "tasks",
+              "privacy": "public",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "attribute": "tasks",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "editable",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "editable",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "editing",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "editing",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "_validationError",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_validationError"
+            },
+            {
+              "kind": "field",
+              "name": "_screen",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"list\"",
+              "attribute": "_screen"
+            },
+            {
+              "kind": "field",
+              "name": "_tempTasks",
+              "privacy": "public",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "attribute": "_tempTasks"
+            },
+            {
+              "kind": "field",
+              "name": "_editingIndex",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "attribute": "_editingIndex"
+            },
+            {
+              "kind": "field",
+              "name": "_tempTaskText",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "_tempTaskText"
+            },
+            {
+              "kind": "field",
+              "name": "_editorOrigin",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"list\"",
+              "attribute": "_editorOrigin"
+            },
+            {
+              "kind": "field",
+              "name": "t",
+              "type": {
+                "text": "object"
+              },
+              "default": "{ addTask: \"Add Task\", inputPlaceholder: \"Enter a new task...\", deleteTask: \"Delete task\", emptyMessage: \"No tasks yet. Add one above!\", taskCompleted: \"Mark as incomplete\", taskIncomplete: \"Mark as complete\", validationErrorMinLength: \"Task must be at least 3 characters\", validationErrorMaxLength: \"Task must be no more than 50 characters\", editTitle: \"Edit Task List\", closeEditor: \"Close Editor\", addTaskBtnEditor: \"Add Task\", editTaskBtn: \"Edit\", saveEditBtn: \"Save\", cancelEditBtn: \"Cancel\", saveAllBtn: \"Save & Exit\", cancelAllBtn: \"Cancel\", emptyTaskError: \"Task cannot be empty\", ariaEditTitle: \"Task list editor panel\", ariaOpenEditor: \"Open task list editor\", ariaCloseEditor: \"Close task list editor\", ariaTaskInputEditor: \"Editor task input\", ariaTasksListEditor: \"Editable task list\", ariaEditTask: \"Edit this task\", ariaDeleteTask: \"Delete this task\", ariaSaveAll: \"Save all task changes\", ariaCancelAll: \"Cancel all task changes\", }"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "tasks",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "fieldName": "tasks"
+            },
+            {
+              "name": "editable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "editable"
+            },
+            {
+              "name": "editing",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "editing"
+            },
+            {
+              "name": "_validationError",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_validationError"
+            },
+            {
+              "name": "_screen",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"list\"",
+              "fieldName": "_screen"
+            },
+            {
+              "name": "_tempTasks",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "fieldName": "_tempTasks"
+            },
+            {
+              "name": "_editingIndex",
+              "type": {
+                "text": "number"
+              },
+              "default": "-1",
+              "fieldName": "_editingIndex"
+            },
+            {
+              "name": "_tempTaskText",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "_tempTaskText"
+            },
+            {
+              "name": "_editorOrigin",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"list\"",
+              "fieldName": "_editorOrigin"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "I18NMixin",
+              "package": "@haxtheweb/i18n-manager/lib/I18NMixin.js"
+            },
+            {
+              "name": "DDDSuper",
+              "package": "@haxtheweb/d-d-d/d-d-d.js"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "TodoList",
+            "module": "src/todo-list.js"
+          }
+        }
+      ]
+    }
+  ]
+}
