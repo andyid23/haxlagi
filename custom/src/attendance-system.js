@@ -156,6 +156,7 @@ export class ActivityLogger extends LitElement {
 
   static get properties() {
     return {
+      ...super.properties,
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       sheetName: { type: String, attribute: "sheet-name" },
       _logs: { type: Array },
@@ -166,6 +167,9 @@ export class ActivityLogger extends LitElement {
 
   constructor() {
     super();
+    // Tambahan: inisialisasi properti yang dapat di-bind dari atribut
+    this.appsScriptUrl = "";
+    this.sheetName = "Pertemuan";
     this._logs = getInitialLogs();
     this._expanded = false;
     this._toastMsg = "";
@@ -242,9 +246,9 @@ export class ActivityLogger extends LitElement {
     };
     
     // 1. Simpan ke LocalStorage (untuk UI real-time)
-    const currentLogs = JSON.parse(localStorage.getItem("a3_attendance_activity_logs") || "[]");
+    const currentLogs = JSON.parse(localStorage.getItem(LOGS_STORAGE_KEY) || "[]");
     currentLogs.unshift(newLog);
-    localStorage.setItem("a3_attendance_activity_logs", JSON.stringify(currentLogs));
+    localStorage.setItem(LOGS_STORAGE_KEY, JSON.stringify(currentLogs));
     this._logs = currentLogs;
 
     // 2. KIRIM KE APPS SCRIPT V3 (Jika URL tersedia)

@@ -135,6 +135,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
       },
       scriptFunctionName: { type: String, attribute: true },
       spreadsheetId: { type: String, attribute: "spreadsheet-id", reflect: true },
+      sheetName: { type: String, attribute: "sheet-name" },
       accessToken: { type: String, attribute: "access-token" },
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       editable: { type: Boolean, attribute: true, reflect: true },

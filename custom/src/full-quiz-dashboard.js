@@ -670,6 +670,59 @@ class FullQuizDashboard extends HTMLElement {
     @keyframes si { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
     @media(max-width:600px){ .qa,.hmg{grid-template-columns:1fr} .ir{flex-direction:column} .g2{grid-template-columns:1fr} .gg{grid-template-columns:repeat(3,1fr)} .sg{grid-template-columns:1fr 1fr} }
   `;
-}
+ 
+  static get haxProperties() {
+    return {
+      canScale: true,
+      canPosition: true,
+      canEditSource: false,
+      gizmo: {
+        title: "Full Quiz Dashboard",
+        description: "Dashboard pembelajaran lengkap: Kuis + Kehadiran + Heatmap + Gradebook dengan integrasi Google Sheets",
+        icon: "icons:dashboard",
+        color: "purple",
+        tags: ["Education", "Interactive", "Assessment", "Analytics"]
+      },
+      settings: {
+        configure: [
+          {
+            property: "appsScriptUrl",
+            title: "Apps Script URL",
+            description: "URL Google Apps Script Web App untuk sinkronisasi data",
+            inputMethod: "textfield",
+            required: true
+          },
+          {
+            property: "sheetName",
+            title: "Nama Pertemuan/Sheet",
+            description: "Nama sheet pertemuan (contoh: 'Pertemuan 2')",
+            inputMethod: "textfield",
+            default: "Pertemuan"
+          }
+        ],
+        advanced: [
+          {
+            property: "spreadsheetId",
+            title: "Spreadsheet ID (opsional)",
+            inputMethod: "textfield"
+          }
+        ]
+      }
+    };
+  }
 
+  // Getter/setter untuk properti yang di-observe
+  get appsScriptUrl() { return this._url; }
+  set appsScriptUrl(val) {
+    this._url = val;
+    if (this.isConnected) this._render();
+  }
+
+  get sheetName() { return this._sheet; }
+  set sheetName(val) {
+    this._sheet = val;
+    this._save(FullQuizDashboard.SHEET_NAME_KEY, val);
+    if (this.isConnected) this._render();
+  }
+}
 customElements.define('full-quiz-dashboard', FullQuizDashboard);
