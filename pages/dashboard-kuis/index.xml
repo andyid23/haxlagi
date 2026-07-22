@@ -1,4 +1,27 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+<id>item-doc-dashboard</id>
+<indent>0</indent>
+<location>pages/dashboard-kuis/index.xml</location>
+<slug>dashboard-kuis</slug>
+<order>1</order>
+<parent>item-doc-elements</parent>
+<title>Dashboard Kuis Lite</title>
+<description>Demo dan dokumentasi dashboard kuis ringan</description>
+<metadata>
+<created>1784667020</created>
+<updated>1784727924</updated>
+<published>true</published>
+<locked>false</locked>
+<status></status>
+<hideInMenu>false</hideInMenu>
+<readtime>1</readtime>
+<videos>
+</videos>
+<images>
+</images>
+</metadata>
+<content><![CDATA[
 <h1 id="h1--1428173934">📊 Quiz Dashboard Lite</h1>
 <p>Elemen <code>&lt;quiz-dashboard-lite&gt;</code> adalah dashboard kuis ringan dengan tiga tab navigasi yang menggabungkan kuis interaktif, pelacakan kehadiran, dan panduan. Tanpa Firebase &#8212; cocok untuk deployment sederhana.</p>
 <h2 id="h2-1591783538">🧪 Demo Langsung</h2>
@@ -63,3 +86,5 @@
   <li><code>&lt;transparent-gradebook&gt;</code> &#8212; Buku nilai transparan</li>
 
 </ul>
+]]></content>
+</item>

@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-07-22T11:35:51.000Z</updated>
+  <updated>2026-07-22T13:42:39.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -287,64 +287,76 @@ bottom-text="...probably"
   <entry>
     <title>Dashboard Kuis Lite</title>
     <id>item-doc-dashboard</id>
-    <updated>2026-07-22T06:04:15.000Z</updated>
+    <updated>2026-07-22T13:45:24.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi dashboard kuis ringan</summary>
     <link href="https://localhost:3000/sites/haxnow/dashboard-kuis"/>
     
     <content type="html">
-      <![CDATA[ <h1>📊 Quiz Dashboard Lite</h1>
-
-<p>Elemen <code>&lt;quiz-dashboard-lite&gt;</code> adalah dashboard kuis ringan dengan tiga tab navigasi yang menggabungkan kuis interaktif, pelacakan kehadiran, dan panduan. Tanpa Firebase — cocok untuk deployment sederhana.</p>
-
-<h2>🧪 Demo Langsung</h2>
+      <![CDATA[ 
+<h1 id="h1--1428173934">📊 Quiz Dashboard Lite</h1>
+<p>Elemen <code>&lt;quiz-dashboard-lite&gt;</code> adalah dashboard kuis ringan dengan tiga tab navigasi yang menggabungkan kuis interaktif, pelacakan kehadiran, dan panduan. Tanpa Firebase &#8212; cocok untuk deployment sederhana.</p>
+<h2 id="h2-1591783538">🧪 Demo Langsung</h2>
 <p>Coba dashboard kuis di bawah ini:</p>
-
-<quiz-dashboard-lite></quiz-dashboard-lite>
-
-<h2>📋 Atribut</h2>
+<quiz-dashboard-lite sheet-name="Pertemuan" _spreadsheet-id="1zLG9pkPw69x944TJvpjNwjvQXmlUucUyJmAlWvKrZR8" _active-tab="0"></quiz-dashboard-lite>
+<h2 id="h2--979403131">📋 Atribut</h2>
 <p>Dashboard ini tidak memerlukan atribut khusus. Semua konfigurasi (seperti Google Sheets) dilakukan melalui UI-nya langsung.</p>
-
-<h2>🖥️ Cara Penggunaan</h2>
+<h2 id="h2-725032406">🖥️ Cara Penggunaan</h2>
 <pre><code>&lt;quiz-dashboard-lite&gt;&lt;/quiz-dashboard-lite&gt;</code></pre>
-
-<h2>🗂️ Tab Navigasi</h2>
+<h2 id="h2--282386281">🗂️ Tab Navigasi</h2>
 <table>
   <thead>
     <tr><th>Tab</th><th>Deskripsi</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>📝 Ambil Kuis</td><td>Menampilkan komponen <code>explode-quiz</code> untuk mengerjakan kuis</td></tr>
-    <tr><td>📅 Kehadiran &amp; Aktivitas</td><td>Menampilkan <code>attendance-tracker</code>, <code>engagement-score</code>, dan <code>transparent-gradebook</code></td></tr>
-    <tr><td>📖 Panduan</td><td>Panduan singkat penggunaan kuis dan Google Sheets</td></tr>
-  </tbody>
-</table>
 
-<h2>🛠️ Fitur</h2>
+  </thead>
+
+  <tbody>
+    <tr><td>📝 Ambil Kuis</td><td>Menampilkan komponen <code>explode-quiz</code> untuk mengerjakan kuis</td>
+</tr>
+
+    <tr><td>📅 Kehadiran &amp; Aktivitas</td><td>Menampilkan <code>attendance-tracker</code>, <code>engagement-score</code>, dan <code>transparent-gradebook</code></td>
+</tr>
+
+    <tr><td>📖 Panduan</td><td>Panduan singkat penggunaan kuis dan Google Sheets</td></tr>
+
+  </tbody>
+
+</table>
+<h2 id="h2--19471014">🛠️ Fitur</h2>
 <ul>
   <li><strong>Tanpa Firebase:</strong> Tidak memerlukan autentikasi Google</li>
-  <li><strong>Google Sheets Opsional:</strong> Kuis tetap berfungsi tanpa spreadsheet</li>
-  <li><strong>Three-tab Layout:</strong> Kuis, Kehadiran, Panduan</li>
-  <li><strong>Notifikasi Real-time:</strong> Pesan sukses/gagal saat menghubungkan sheet dan menyimpan hasil</li>
-  <li><strong>Responsif:</strong> Desain adaptif untuk berbagai ukuran layar</li>
-</ul>
 
-<h2>⚙️ Menghubungkan Google Sheets</h2>
+  <li><strong>Google Sheets Opsional:</strong> Kuis tetap berfungsi tanpa spreadsheet</li>
+
+  <li><strong>Three-tab Layout:</strong> Kuis, Kehadiran, Panduan</li>
+
+  <li><strong>Notifikasi Real-time:</strong> Pesan sukses/gagal saat menghubungkan sheet dan menyimpan hasil</li>
+
+  <li><strong>Responsif:</strong> Desain adaptif untuk berbagai ukuran layar</li>
+
+</ul>
+<h2 id="h2--691550049">&#9881;️ Menghubungkan Google Sheets</h2>
 <ol>
   <li>Buka tab <strong>📝 Ambil Kuis</strong></li>
+
   <li>Masukkan ID atau URL Google Spreadsheet di bagian atas</li>
   <li>Klik <strong>Hubungkan</strong></li>
+
   <li>Hasil kuis akan otomatis tersimpan</li>
 </ol>
-
-<h2>📦 Komponen yang Digunakan</h2>
+<h2 id="h2--320984019">📦 Komponen yang Digunakan</h2>
 <p>Dashboard ini secara internal menggunakan komponen-komponen berikut:</p>
 <ul>
-  <li><code>&lt;explode-quiz&gt;</code> — Komponen kuis interaktif</li>
-  <li><code>&lt;activity-logger&gt;</code> — Pencatat aktivitas otomatis</li>
-  <li><code>&lt;attendance-tracker&gt;</code> — Pelacak kehadiran pekanan</li>
-  <li><code>&lt;engagement-score&gt;</code> — Heatmap konsistensi belajar</li>
-  <li><code>&lt;transparent-gradebook&gt;</code> — Buku nilai transparan</li>
+  <li><code>&lt;explode-quiz&gt;</code> &#8212; Komponen kuis interaktif</li>
+
+  <li><code>&lt;activity-logger&gt;</code> &#8212; Pencatat aktivitas otomatis</li>
+
+  <li><code>&lt;attendance-tracker&gt;</code> &#8212; Pelacak kehadiran pekanan</li>
+
+  <li><code>&lt;engagement-score&gt;</code> &#8212; Heatmap konsistensi belajar</li>
+
+  <li><code>&lt;transparent-gradebook&gt;</code> &#8212; Buku nilai transparan</li>
+
 </ul>
  ]]>
     </content>

@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jul 2026 11:35:51 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 13:42:39 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -33,7 +33,7 @@
     <item>
       <title>Dashboard Kuis Lite</title>
       <link>https://localhost:3000/sites/haxnow/dashboard-kuis</link>
-      <description>📊 Quiz Dashboard Lite Elemen &amp;lt;quiz-dashboard-lite&amp;gt; adalah dashboard kuis ringan dengan tiga tab navigasi yang menggabungkan kuis interaktif, pelacakan kehadiran, dan panduan. Tanpa Firebase — cocok untuk deployment sederhana. 🧪 Demo Langsung Coba dashboard kuis di bawah ini: 📋 Atribut Dashboard ini tidak memerlukan atribut khusus. Semua konfigurasi (seperti Google Sheets) dilakukan melalui UI-nya langsung. 🖥️ Cara Penggunaan &amp;lt;quiz-dashboard-lite&amp;gt;&amp;lt;/quiz-dashboard-lite&amp;gt; 🗂...</description>
+      <description>📊 Quiz Dashboard Lite Elemen &amp;lt;quiz-dashboard-lite&amp;gt; adalah dashboard kuis ringan dengan tiga tab navigasi yang menggabungkan kuis interaktif, pelacakan kehadiran, dan panduan. Tanpa Firebase &amp;#8212; cocok untuk deployment sederhana. 🧪 Demo Langsung Coba dashboard kuis di bawah ini: 📋 Atribut Dashboard ini tidak memerlukan atribut khusus. Semua konfigurasi (seperti Google Sheets) dilakukan melalui UI-nya langsung. 🖥️ Cara Penggunaan &amp;lt;quiz-dashboard-lite&amp;gt;&amp;lt;/quiz-dashboard-lite&amp;...</description>
       <guid>https://localhost:3000/sites/haxnow/dashboard-kuis</guid>
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>
