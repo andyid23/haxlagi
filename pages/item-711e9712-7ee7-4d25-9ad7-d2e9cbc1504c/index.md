@@ -1,7 +1,5 @@
 Welcome to your new HAX site! Click edit on the top bar to get started
 
-https://script.google.com/macros/s/AKfycbxLJimWghZbVMEtUqOTs07qxxg3PN4Ud0EgucENK6\_NBVh8Yb\_zC1gtTumegAIvDY4cIA/exec
-
 What can I do?
 --------------
 

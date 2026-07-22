@@ -6,13 +6,13 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jul 2026 13:45:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 14:29:33 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Welcome to haxnow</title>
       <link>https://localhost:3000/sites/haxnow/welcome</link>
-      <description>Welcome to your new HAX site! Click edit on the top bar to get started https://script.google.com/macros/s/AKfycbxLJimWghZbVMEtUqOTs07qxxg3PN4Ud0EgucENK6_NBVh8Yb_zC1gtTumegAIvDY4cIA/exec What can I do? We&apos;ve got a ton of blocks that are easy to use and get a lot done with little effort, so much in fact we made a little video exploring some of them! Here&apos;s a list of just a few things to get started, or if your a pro, delete this content and have fun! Edit this content by hitting &quot;Edit page&quot; abo...</description>
+      <description>Welcome to your new HAX site! Click edit on the top bar to get started What can I do? We&apos;ve got a ton of blocks that are easy to use and get a lot done with little effort, so much in fact we made a little video exploring some of them! Here&apos;s a list of just a few things to get started, or if your a pro, delete this content and have fun! Edit this content by hitting &quot;Edit page&quot; above Hit enter in a paragraph of text to add another one Click &quot;Merlin&quot; to see a list of all the things you can do Tr...</description>
       <guid>https://localhost:3000/sites/haxnow/welcome</guid>
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>

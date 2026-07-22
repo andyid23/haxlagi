@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1784730573
+      "updated": 1784730697
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -34,10 +34,10 @@
       "order": 0,
       "parent": null,
       "title": "Welcome to haxnow",
-      "description": "Welcome to your new HAX site! Click edit on the top bar to get started\n\n\n\n\n\n\n\nhttps://script.google.com/macros/s/AKfycbxLJimWghZbVMEtUqOTs07qxxg3PN4Ud0EgucENK6_NBVh8Yb_zC1gtTumegAIvDY4cIA/exec\n\n\nWhat",
+      "description": "Welcome to your new HAX site! Click edit on the top bar to get started\n\n\n\n\n\n\n\n\n\n\nWhat",
       "metadata": {
         "created": 1784667020,
-        "updated": 1784730572,
+        "updated": 1784730697,
         "published": true,
         "locked": false,
         "status": "",
