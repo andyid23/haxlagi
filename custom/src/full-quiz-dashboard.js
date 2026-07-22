@@ -136,20 +136,35 @@ class FullQuizDashboard extends HTMLElement {
     this._render();
   }
 
-  _send(data) {
-    if (!this._url) return;
-    if (!data.sheet && this._sheet) data.sheet = this._sheet;
-    const body = JSON.stringify(data);
-    fetch(this._url, { method:'POST', headers:{'Content-Type':'application/json'}, body })
-      .then(r => r.json())
-      .then(res => { if (res && res.status === 'success') this._show('✅ Data tersimpan ke Sheets'); })
-      .catch(() => {
-        const params = new URLSearchParams();
-        Object.entries(data).forEach(([k,v]) => { if (v !== undefined && v !== null) params.append(k, String(v)); });
-        const url = this._url + (this._url.includes('?') ? '&' : '?') + params.toString();
-        fetch(url).catch(() => {});
-      });
-  }
+_send(data) {
+  if (!this._url) return;
+  if (!data.sheet && this._sheet) data.sheet = this._sheet;
+
+  // 1. Buat URL dengan parameter (untuk fallback)
+  const params = new URLSearchParams();
+  Object.entries(data).forEach(([k, v]) => {
+    if (v !== undefined && v !== null) params.append(k, String(v));
+  });
+  const urlWithParams = this._url + (this._url.includes('?') ? '&' : '?') + params.toString();
+
+  // 2. Coba POST dengan Content-Type text/plain (TIDAK trigger preflight!)
+  // Apps Script akan tetap bisa baca e.parameter dari body
+  fetch(this._url, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'text/plain;charset=utf-8'  // ← KUNCI: bukan application/json!
+    },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    this._show('✅ Data tersimpan ke Sheets');
+  })
+  .catch(() => {
+    // 3. Fallback: GET request (hanya untuk debugging, tidak menyimpan)
+    fetch(urlWithParams, { method: 'GET', mode: 'no-cors' }).catch(() => {});
+  });
+}
 
   _onScroll() {
     const now = Date.now();

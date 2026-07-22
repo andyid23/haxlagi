@@ -1,7 +1,7 @@
 id: item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec
 indent: 0
 location: pages/item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec/index.yaml
-slug: new-page
+slug: new-dashboard
 order: 8
 parent: item-doc-elements
 title: dashboard quiz
@@ -11,7 +11,7 @@ description: |+
 
 metadata:
   created: 1784673090
-  updated: 1784731568
+  updated: 1784761246
   images: []
   videos: []
   published: true

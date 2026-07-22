@@ -3,7 +3,7 @@
 <id>item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec</id>
 <indent>0</indent>
 <location>pages/item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec/index.xml</location>
-<slug>new-page</slug>
+<slug>new-dashboard</slug>
 <order>8</order>
 <parent>item-doc-elements</parent>
 <title>dashboard quiz</title>
@@ -13,7 +13,7 @@
 </description>
 <metadata>
 <created>1784673090</created>
-<updated>1784731568</updated>
+<updated>1784761246</updated>
 <images>
 </images>
 <videos>

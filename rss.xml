@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jul 2026 14:35:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 14:46:09 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -123,9 +123,9 @@
     </item>
     <item>
       <title>dashboard quiz</title>
-      <link>https://localhost:3000/sites/haxnow/new-page</link>
+      <link>https://localhost:3000/sites/haxnow/new-dashboard</link>
       <description>fulldashboard</description>
-      <guid>https://localhost:3000/sites/haxnow/new-page</guid>
+      <guid>https://localhost:3000/sites/haxnow/new-dashboard</guid>
       <pubDate>Tue, 21 Jul 2026 22:31:30 GMT</pubDate>
     </item>
     <item>
