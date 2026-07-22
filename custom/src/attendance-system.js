@@ -156,6 +156,8 @@ export class ActivityLogger extends LitElement {
 
   static get properties() {
     return {
+      appsScriptUrl: { type: String, attribute: "apps-script-url" },
+      sheetName: { type: String, attribute: "sheet-name" },
       _logs: { type: Array },
       _expanded: { type: Boolean },
       _toastMsg: { type: String }
@@ -167,7 +169,7 @@ export class ActivityLogger extends LitElement {
     this._logs = getInitialLogs();
     this._expanded = false;
     this._toastMsg = "";
-    
+
     this._handleScroll = this._handleScroll.bind(this);
     this._handleClick = this._handleClick.bind(this);
     this._handleQuizSaved = this._handleQuizSaved.bind(this);
@@ -216,7 +218,7 @@ export class ActivityLogger extends LitElement {
       } else if (!target.href.includes("javascript:") && !target.href.startsWith("#")) {
         this.logActivity("reading", `Membuka tautan eksternal/internal: ${target.innerText.trim() || target.href}`);
       }
-    } 
+    }
     // Detect material buttons or card clicks
     else if (target.tagName === "MD-OUTLINED-BUTTON" || target.tagName === "MD-FILLED-BUTTON" || target.classList?.contains("card")) {
       const text = target.innerText || target.textContent || "";
@@ -238,20 +240,39 @@ export class ActivityLogger extends LitElement {
       type,
       description
     };
-
-    const currentLogs = JSON.parse(localStorage.getItem(LOGS_STORAGE_KEY) || "[]");
+    
+    // 1. Simpan ke LocalStorage (untuk UI real-time)
+    const currentLogs = JSON.parse(localStorage.getItem("a3_attendance_activity_logs") || "[]");
     currentLogs.unshift(newLog);
-    localStorage.setItem(LOGS_STORAGE_KEY, JSON.stringify(currentLogs));
+    localStorage.setItem("a3_attendance_activity_logs", JSON.stringify(currentLogs));
     this._logs = currentLogs;
 
-    // Trigger global notification event
+    // 2. KIRIM KE APPS SCRIPT V3 (Jika URL tersedia)
+    if (this.appsScriptUrl) {
+      const payload = {
+        type: "attendance",
+        timestamp: newLog.timestamp,
+        name: "Student", // Bisa diganti dengan nama siswa jika ada sistem login
+        activityType: type,
+        description: description,
+        sheet: this.sheetName || "Pertemuan"
+      };
+
+      fetch(this.appsScriptUrl, {
+        method: 'POST',
+        mode: 'no-cors', // Penting untuk Apps Script
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(err => console.warn("[activity-logger] Gagal kirim ke Sheets:", err));
+    }
+
+    // 3. Trigger global notification event
     window.dispatchEvent(new CustomEvent("a3-activity-logged", {
       detail: newLog,
       bubbles: true,
       composed: true
     }));
-
-    // Show neat toast message
+    
     this._showToast(`Aktivitas tercatat: ${description.length > 35 ? description.substring(0, 35) + '...' : description}`);
   }
 
@@ -849,7 +870,7 @@ export class AttendanceTracker extends LitElement {
 
   render() {
     const stats = this._getWeeklyStats();
-    
+
     // Gauge calculations
     const radius = 65;
     const circumference = 2 * Math.PI * radius;
@@ -989,18 +1010,18 @@ export class EngagementScore extends LitElement {
   _getActivityMap() {
     const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
     const now = new Date();
-    
+
     // Group logs by day offset for the past 28 days (4 weeks)
     const map = [];
-    
+
     for (let offset = 27; offset >= 0; offset--) {
       const d = new Date();
       d.setDate(now.getDate() - offset);
-      d.setHours(0,0,0,0);
-      
+      d.setHours(0, 0, 0, 0);
+
       const dayLogs = this._logs.filter(log => {
         const logDate = new Date(log.timestamp);
-        logDate.setHours(0,0,0,0);
+        logDate.setHours(0, 0, 0, 0);
         return logDate.getTime() === d.getTime();
       });
 
@@ -1017,8 +1038,8 @@ export class EngagementScore extends LitElement {
 
   _getStreak() {
     const now = new Date();
-    now.setHours(0,0,0,0);
-    
+    now.setHours(0, 0, 0, 0);
+
     let currentStreak = 0;
     let index = 0;
     let checkDate = new Date(now);
@@ -1026,7 +1047,7 @@ export class EngagementScore extends LitElement {
     while (index < 30) {
       const dayLogs = this._logs.filter(log => {
         const logDate = new Date(log.timestamp);
-        logDate.setHours(0,0,0,0);
+        logDate.setHours(0, 0, 0, 0);
         return logDate.getTime() === checkDate.getTime();
       });
 
@@ -1226,7 +1247,7 @@ export class EngagementScore extends LitElement {
     const activityMap = this._getActivityMap();
     const streak = this._getStreak();
     const totalInteractions = this._logs.length;
-    
+
     // Calculate consistency index (percentage of days active in past 4 weeks)
     const activeDays = activityMap.filter(day => day.count > 0).length;
     const consistencyIndex = Math.round((activeDays / 28) * 100);
@@ -1271,22 +1292,22 @@ export class EngagementScore extends LitElement {
           </div>
           <div class="heatmap-grid">
             ${activityMap.map(cell => {
-              // Level categories based on activity counts
-              let lvl = "lvl-0";
-              if (cell.count > 0 && cell.count <= 2) lvl = "lvl-1";
-              else if (cell.count > 2 && cell.count <= 4) lvl = "lvl-2";
-              else if (cell.count > 4 && cell.count <= 7) lvl = "lvl-3";
-              else if (cell.count > 7) lvl = "lvl-4";
+      // Level categories based on activity counts
+      let lvl = "lvl-0";
+      if (cell.count > 0 && cell.count <= 2) lvl = "lvl-1";
+      else if (cell.count > 2 && cell.count <= 4) lvl = "lvl-2";
+      else if (cell.count > 4 && cell.count <= 7) lvl = "lvl-3";
+      else if (cell.count > 7) lvl = "lvl-4";
 
-              const isSelected = this._selectedCell && this._selectedCell.date.getTime() === cell.date.getTime();
+      const isSelected = this._selectedCell && this._selectedCell.date.getTime() === cell.date.getTime();
 
-              return html`
+      return html`
                 <div class="cell ${lvl} ${isSelected ? 'selected' : ''}" 
                      @click="${() => this._selectCell(cell)}">
                   ${cell.count > 0 ? cell.count : ""}
                 </div>
               `;
-            })}
+    })}
           </div>
 
           <div class="legend">
@@ -1304,7 +1325,7 @@ export class EngagementScore extends LitElement {
         ${this._selectedCell ? html`
           <div class="detail-card">
             <div class="detail-header">
-              <span>📅 Detail Aktivitas: ${this._selectedCell.dayName}, ${this._selectedCell.date.toLocaleDateString("id-ID", {day: 'numeric', month: 'long', year: 'numeric'})}</span>
+              <span>📅 Detail Aktivitas: ${this._selectedCell.dayName}, ${this._selectedCell.date.toLocaleDateString("id-ID", { day: 'numeric', month: 'long', year: 'numeric' })}</span>
               <span style="color: #666;">${this._selectedCell.count} Aktivitas</span>
             </div>
             <div class="detail-logs">
@@ -1312,7 +1333,7 @@ export class EngagementScore extends LitElement {
                 <div style="color: #888; text-align: center; padding: 10px;">Tidak ada rekam aktivitas tercatat pada hari ini.</div>
               ` : this._selectedCell.logs.map(log => html`
                 <div class="detail-item">
-                  <span style="color: #888; font-size: 10px; font-weight: bold; margin-right: 6px;">[${new Date(log.timestamp).toLocaleTimeString("id-ID", {hour: '2-digit', minute:'2-digit'})}]</span>
+                  <span style="color: #888; font-size: 10px; font-weight: bold; margin-right: 6px;">[${new Date(log.timestamp).toLocaleTimeString("id-ID", { hour: '2-digit', minute: '2-digit' })}]</span>
                   <span>${log.description}</span>
                 </div>
               `)}
@@ -1454,7 +1475,7 @@ export class TransparentGradebook extends LitElement {
       const updated = { ...this._gradesConfig, [key]: val };
       localStorage.setItem(GRADES_STORAGE_KEY, JSON.stringify(updated));
       this._gradesConfig = updated;
-      
+
       // sync with custom event
       window.dispatchEvent(new CustomEvent("a3-force-reload"));
     }

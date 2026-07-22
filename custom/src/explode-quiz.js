@@ -597,47 +597,38 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
 
   _submitToSheets(name, score) {
     const percentage = Math.round((score / this.questions.length) * 100);
-    
-    // Priority 1: Use Apps Script URL directly (no backend needed!)
+
+    // Priority 1: Use Apps Script URL directly
     if (this.appsScriptUrl) {
       console.log("[explode-quiz] Mengirim ke Apps Script URL...", name, percentage);
-      
       const payload = {
         timestamp: new Date().toISOString(),
         name: name,
         score: percentage,
-        totalQuestions: this.questions.length
+        totalQuestions: this.questions.length,
+        sheet: this.sheetName || "Pertemuan" // <--- TAMBAHAN PENTING INI
       };
-      
+
       fetch(this.appsScriptUrl, {
         method: 'POST',
-        mode: 'no-cors',  // Apps Script requires this for cross-origin
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       })
-      .then(() => {
-        // With no-cors mode, we can't read response, but request was sent
-        console.log("[explode-quiz] Data berhasil dikirim ke Apps Script");
-        this.dispatchEvent(new CustomEvent("quiz-saved", {
-          detail: { name, score: percentage, data: payload },
-          bubbles: true,
-          composed: true
-        }));
-      })
-      .catch(err => {
-        console.error("[explode-quiz] Error mengirim ke Apps Script:", err);
-        // Still dispatch event for activity tracking
-        this.dispatchEvent(new CustomEvent("quiz-saved", {
-          detail: { name, score: percentage },
-          bubbles: true,
-          composed: true
-        }));
-      });
+        .then(() => {
+          console.log("[explode-quiz] Data berhasil dikirim ke Apps Script");
+          this.dispatchEvent(new CustomEvent("quiz-saved", {
+            detail: { name, score: percentage, data: payload },
+            bubbles: true,
+            composed: true
+          }));
+        })
+        .catch(err => {
+          console.error("[explode-quiz] Error mengirim ke Apps Script:", err);
+        });
       return;
     }
-    
+
     // Priority 2: Use backend API with spreadsheetId
     if (this.spreadsheetId) {
       console.log("[explode-quiz] Mengirim ke Sheets API via backend...", name, score);
@@ -653,21 +644,21 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
           accessToken: this.accessToken || ""
         })
       })
-      .then(res => {
-        if (!res.ok) throw new Error("Gagal menyimpan hasil kuis");
-        return res.json();
-      })
-      .then(data => {
-        console.log("[explode-quiz] Data berhasil disimpan ke Google Sheets:", data);
-        this.dispatchEvent(new CustomEvent("quiz-saved", {
-          detail: { name, score: percentage, data },
-          bubbles: true,
-          composed: true
-        }));
-      })
-      .catch(err => {
-        console.error("[explode-quiz] Error menyimpan ke Google Sheets:", err);
-      });
+        .then(res => {
+          if (!res.ok) throw new Error("Gagal menyimpan hasil kuis");
+          return res.json();
+        })
+        .then(data => {
+          console.log("[explode-quiz] Data berhasil disimpan ke Google Sheets:", data);
+          this.dispatchEvent(new CustomEvent("quiz-saved", {
+            detail: { name, score: percentage, data },
+            bubbles: true,
+            composed: true
+          }));
+        })
+        .catch(err => {
+          console.error("[explode-quiz] Error menyimpan ke Google Sheets:", err);
+        });
       return;
     }
 
@@ -688,7 +679,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
         .withFailureHandler((err) =>
           console.error("[explode-quiz] Gagal mengirim ke Sheets:", err),
         )
-        [this.scriptFunctionName](payload);
+      [this.scriptFunctionName](payload);
       return;
     }
 

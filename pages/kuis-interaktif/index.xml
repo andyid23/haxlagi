@@ -1,4 +1,27 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+<id>item-doc-kuis</id>
+<indent>0</indent>
+<location>pages/kuis-interaktif/index.xml</location>
+<slug>kuis-interaktif</slug>
+<order>0</order>
+<parent>item-doc-elements</parent>
+<title>Explode Quiz - Kuis Interaktif</title>
+<description>Demo dan dokumentasi elemen kuis interaktif</description>
+<metadata>
+<created>1784667020</created>
+<updated>1784727759</updated>
+<published>true</published>
+<locked>false</locked>
+<status></status>
+<hideInMenu>false</hideInMenu>
+<readtime>1</readtime>
+<videos>
+</videos>
+<images>
+</images>
+</metadata>
+<content><![CDATA[
 <h1 id="h1--1446091668">🎯 Explode Quiz &#8212; Kuis Interaktif</h1>
 <p>Elemen <code>&lt;explode-quiz&gt;</code> adalah komponen kuis interaktif pilihan ganda
   yang dilengkapi efek konfeti, editor soal bawaan, dan integrasi Google Sheets untuk
@@ -115,3 +138,5 @@
       <li>Menghapus soal (minimal 3 soal)</li>
       <li>Menyimpan perubahan</li>
     </ol>
+]]></content>
+</item>

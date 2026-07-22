@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-07-22T10:02:11.000Z</updated>
+  <updated>2026-07-22T11:35:51.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -158,75 +158,129 @@ bottom-text="...probably"
   <entry>
     <title>Explode Quiz - Kuis Interaktif</title>
     <id>item-doc-kuis</id>
-    <updated>2026-07-22T06:04:15.000Z</updated>
+    <updated>2026-07-22T13:42:39.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi elemen kuis interaktif</summary>
     <link href="https://localhost:3000/sites/haxnow/kuis-interaktif"/>
     
     <content type="html">
-      <![CDATA[ <h1>🎯 Explode Quiz — Kuis Interaktif</h1>
-
-<p>Elemen <code>&lt;explode-quiz&gt;</code> adalah komponen kuis interaktif pilihan ganda yang dilengkapi efek konfeti, editor soal bawaan, dan integrasi Google Sheets untuk menyimpan hasil kuis secara real-time.</p>
-
-<h2>🧪 Demo Langsung</h2>
+      <![CDATA[ 
+<h1 id="h1--1446091668">🎯 Explode Quiz &#8212; Kuis Interaktif</h1>
+<p>Elemen <code>&lt;explode-quiz&gt;</code> adalah komponen kuis interaktif pilihan ganda
+  yang dilengkapi efek konfeti, editor soal bawaan, dan integrasi Google Sheets untuk
+  menyimpan hasil kuis secara real-time.</p>
+<h2 id="h2-1591783538">🧪 Demo Langsung</h2>
 <p>Coba kuis interaktif di bawah ini:</p>
-
-<explode-quiz editable="true"></explode-quiz>
-
-<h2>📋 Atribut yang Didukung</h2>
-
+<explode-quiz questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3}]" spreadsheet-id="" script-function-name="submitQuizResult" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result"></explode-quiz>
+<h2 id="h2-1518686653">📋 Atribut yang Didukung</h2>
 <table>
   <thead>
-    <tr><th>Atribut</th><th>Tipe</th><th>Deskripsi</th><th>Default</th></tr>
+    <tr>
+      <th>Atribut</th>
+      <th>Tipe</th>
+      <th>Deskripsi</th>
+      <th>Default</th>
+    </tr>
+
   </thead>
+
   <tbody>
-    <tr><td><code>spreadsheet-id</code></td><td>String</td><td>ID Google Spreadsheet untuk menyimpan hasil</td><td>—</td></tr>
-    <tr><td><code>apps-script-url</code></td><td>String</td><td>URL Google Apps Script endpoint</td><td>—</td></tr>
-    <tr><td><code>editable</code></td><td>Boolean</td><td>Tampilkan tombol edit soal</td><td>false</td></tr>
-    <tr><td><code>questions</code></td><td>JSON Array</td><td>Daftar soal kustom (JSON string)</td><td>3 soal default</td></tr>
+    <tr>
+      <td><code>spreadsheet-id</code>
+
+      </td>
+
+      <td>String</td>
+      <td>ID Google Spreadsheet untuk menyimpan hasil</td>
+      <td>—</td>
+    </tr>
+
+    <tr>
+      <td><code>apps-script-url</code>
+
+      </td>
+
+      <td>String</td>
+      <td>URL Google Apps Script endpoint</td>
+      <td>—</td>
+    </tr>
+
+    <tr>
+      <td><code>editable</code>
+
+      </td>
+
+      <td>Boolean</td>
+      <td>Tampilkan tombol edit soal</td>
+      <td>false</td>
+    </tr>
+
+    <tr>
+      <td><code>questions</code>
+
+      </td>
+
+      <td>JSON Array</td>
+      <td>Daftar soal kustom (JSON string)</td>
+      <td>3 soal default</td>
+    </tr>
+
   </tbody>
+
 </table>
-
-<h2>🖥️ Cara Penggunaan</h2>
-
-<h3>Tag Dasar</h3>
+<h2 id="h2-725032406">🖥️ Cara Penggunaan</h2>
+<h3 id="h3--2047907327">Tag Dasar</h3>
 <pre><code>&lt;explode-quiz&gt;&lt;/explode-quiz&gt;</code></pre>
 <p>Menggunakan 3 soal default tentang pengetahuan umum.</p>
-
-<h3>Dengan Google Sheets</h3>
+<h3 id="h3--190931422">Dengan Google Sheets</h3>
 <pre><code>&lt;explode-quiz spreadsheet-id="YOUR_SHEET_ID" editable="true"&gt;&lt;/explode-quiz&gt;</code></pre>
-
-<h3>Dengan Google Apps Script URL</h3>
+<h3 id="h3-940637082">Dengan Google Apps Script URL</h3>
 <pre><code>&lt;explode-quiz apps-script-url="https://script.google.com/macros/s/.../exec"&gt;&lt;/explode-quiz&gt;</code></pre>
-
-<h2>🛠️ Fitur</h2>
+<h2 id="h2--19471014">🛠️ Fitur</h2>
 <ul>
-  <li><strong>3 Layar:</strong> Input Nama → Soal Kuis → Hasil</li>
-  <li><strong>Efek Konfeti:</strong> Animasi saat jawaban benar dan skor ≥ 80%</li>
-  <li><strong>Editor Soal:</strong> Tambah, edit, hapus soal (dengan mode editable)</li>
-  <li><strong>Sinkronisasi Google Sheets:</strong> Hasil otomatis tersimpan</li>
-  <li><strong>Aksesibilitas:</strong> aria-label lengkap, keyboard navigation</li>
-  <li><strong>Responsif:</strong> Layout adaptif untuk mobile</li>
-</ul>
+      <li><strong>3 Layar:</strong> Input Nama &#8594; Soal Kuis &#8594; Hasil</li>
 
-<h2>📊 Format Data di Google Sheets</h2>
+      <li><strong>Efek Konfeti:</strong> Animasi saat jawaban benar dan skor &#8805; 80%</li>
+
+      <li><strong>Editor Soal:</strong> Tambah, edit, hapus soal (dengan mode editable)</li>
+
+      <li><strong>Sinkronisasi Google Sheets:</strong> Hasil otomatis tersimpan</li>
+
+      <li><strong>Aksesibilitas:</strong> aria-label lengkap, keyboard navigation</li>
+
+      <li><strong>Responsif:</strong> Layout adaptif untuk mobile</li>
+
+    </ul>
+<h2 id="h2-1426947008">📊 Format Data di Google Sheets</h2>
 <table>
-  <thead>
-    <tr><th>Kolom A</th><th>Kolom B</th><th>Kolom C</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Timestamp</td><td>Nama Siswa</td><td>Skor (%)</td></tr>
-  </tbody>
-</table>
+      <thead>
+        <tr>
+          <th>Kolom A</th>
+          <th>Kolom B</th>
+          <th>Kolom C</th>
+        </tr>
 
-<h2>🎨 Kustomisasi Soal</h2>
-<p>Klik tombol <strong>"Edit Soal Kuis"</strong> di layar hasil (jika <code>editable="true"</code>) untuk membuka panel editor. Anda dapat:</p>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Timestamp</td>
+          <td>Nama Siswa</td>
+          <td>Skor (%)</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+<h2 id="h2-762896087">🎨 Kustomisasi Soal</h2>
+<p>Klik tombol <strong>"Edit Soal Kuis"</strong> di layar hasil (jika <code>editable="true"</code>)
+      untuk membuka panel editor. Anda dapat:</p>
 <ol>
-  <li>Menambah soal baru dengan 4 pilihan jawaban</li>
-  <li>Mengedit soal yang sudah ada</li>
-  <li>Menghapus soal (minimal 3 soal)</li>
-  <li>Menyimpan perubahan</li>
-</ol>
+      <li>Menambah soal baru dengan 4 pilihan jawaban</li>
+      <li>Mengedit soal yang sudah ada</li>
+      <li>Menghapus soal (minimal 3 soal)</li>
+      <li>Menyimpan perubahan</li>
+    </ol>
  ]]>
     </content>
   </entry>
