@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1784730913
+      "updated": 1784730954
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -37,7 +37,7 @@
       "description": "Welcome to your new HAX site! Click edit on the top bar to get started\n\n\n\n\n\n\n\n\n\n\nWhat",
       "metadata": {
         "created": 1784667020,
-        "updated": 1784730913,
+        "updated": 1784730953,
         "published": true,
         "locked": false,
         "status": "",
