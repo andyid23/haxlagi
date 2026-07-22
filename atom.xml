@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-07-22T14:35:13.000Z</updated>
+  <updated>2026-07-22T14:35:54.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -2689,7 +2689,7 @@ https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
   <entry>
     <title>dashboard quiz</title>
     <id>item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec</id>
-    <updated>2026-07-22T06:04:17.000Z</updated>
+    <updated>2026-07-22T14:46:08.000Z</updated>
     <published>2026-07-21T22:31:30.000Z</published>
     <summary>fulldashboard
 
@@ -2701,7 +2701,7 @@ https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
       <![CDATA[ 
 <p>fulldashboard</p>
 <p></p>
-<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbxmclLDeyniBWEPuTIwFxKXLYGPK7i7egTt2oJ7RBHRJNOEjSgfj47GmVg7LWf2R0QLpg/exec"></full-quiz-dashboard>
+<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbxLJimWghZbVMEtUqOTs07qxxg3PN4Ud0EgucENK6_NBVh8Yb_zC1gtTumegAIvDY4cIA/exec"></full-quiz-dashboard>
  ]]>
     </content>
   </entry>

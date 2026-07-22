@@ -3,19 +3,20 @@
   "indent": 0,
   "location": "pages/item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec/index.json",
   "slug": "new-page",
-  "order": 7,
+  "order": 8,
   "parent": "item-doc-elements",
   "title": "dashboard quiz",
   "description": "fulldashboard\n\n\n",
   "metadata": {
     "created": 1784673090,
-    "updated": 1784673172,
+    "updated": 1784731568,
     "images": [],
     "videos": [],
     "published": true,
     "hideInMenu": false,
     "locked": false,
-    "readtime": 1
+    "readtime": 1,
+    "status": ""
   },
-  "content": "\n<p>fulldashboard</p>\n<p></p>\n<full-quiz-dashboard apps-script-url=\"https://script.google.com/macros/s/AKfycbxmclLDeyniBWEPuTIwFxKXLYGPK7i7egTt2oJ7RBHRJNOEjSgfj47GmVg7LWf2R0QLpg/exec\"></full-quiz-dashboard>\n"
+  "content": "\n<p>fulldashboard</p>\n<p></p>\n<full-quiz-dashboard apps-script-url=\"https://script.google.com/macros/s/AKfycbxLJimWghZbVMEtUqOTs07qxxg3PN4Ud0EgucENK6_NBVh8Yb_zC1gtTumegAIvDY4cIA/exec\"></full-quiz-dashboard>\n"
 }
