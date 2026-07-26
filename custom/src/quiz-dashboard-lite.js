@@ -1,8 +1,9 @@
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { LitElement, html, css } from "lit";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
-import "./attendance-system.js";
-import "./explode-quiz.js";
+import "./lib/attendance-system.js";
+import "./lib/explode-quiz.js";
+import "./lib/quiz-user-auth.js";
 
 const STORAGE_KEY = "quiz_lite_sheet_id";
 
@@ -14,29 +15,25 @@ class QuizDashboardLite extends I18NMixin(DDDSuper(LitElement)) {
   static get properties() {
     return {
       ...super.properties,
-      // PROPS BARU — bisa di-set via HTML attribute
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       sheetName: { type: String, attribute: "sheet-name" },
-      
-      // Internal state
       _spreadsheetId: { state: true },
       _activeTab: { state: true },
       _successMsg: { state: true },
-      _errorMsg: { state: true }
+      _errorMsg: { state: true },
+      _user: { state: true }
     };
   }
 
   constructor() {
     super();
-    // Default values
     this.appsScriptUrl = "";
     this.sheetName = "Pertemuan";
-    this._spreadsheetId = this._getStorageItem(STORAGE_KEY) || "";
+    this._user = null;
+    this._spreadsheetId = "";
     this._activeTab = 0;
     this._successMsg = "";
     this._errorMsg = "";
-
-    // i18n translations
     this.t = {
       ...this.t,
       title: "Kuis Interaktif & Kehadiran",
@@ -44,11 +41,207 @@ class QuizDashboardLite extends I18NMixin(DDDSuper(LitElement)) {
       tabQuiz: "📝 Ambil Kuis",
       tabAttendance: "📅 Kehadiran & Aktivitas",
       tabGuide: "📖 Panduan",
-      connectSheets: "Hubungkan dengan Google Sheets",
-      connected: "✅ Terhubung ke Google Spreadsheet",
-      disconnect: "Putuskan",
-      openSheets: "Buka Google Sheets"
+      welcome: "Selamat datang",
+      dataRecorded: "Data kuis & aktivitas akan tercatat atas nama Anda"
     };
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    window.addEventListener("quiz-user-login", this._onUserLogin.bind(this));
+    window.addEventListener("quiz-user-logout", this._onUserLogout.bind(this));
+  }
+
+  disconnectedCallback() {
+    window.removeEventListener("quiz-user-login", this._onUserLogin.bind(this));
+    window.removeEventListener("quiz-user-logout", this._onUserLogout.bind(this));
+    super.disconnectedCallback();
+  }
+
+  _onUserLogin(e) {
+    this._user = e.detail;
+    this._successMsg = `${this.t.welcome}, ${this._user.nama}! ${this.t.dataRecorded}.`;
+    setTimeout(() => { this._successMsg = ""; }, 4000);
+  }
+
+  _onUserLogout() {
+    this._user = null;
+    this._successMsg = "Anda telah keluar.";
+    setTimeout(() => { this._successMsg = ""; }, 3000);
+  }
+
+  _onQuizSaved(e) {
+    window.dispatchEvent(new CustomEvent("quiz-saved", {
+      detail: e.detail, bubbles: true, composed: true
+    }));
+    this._successMsg = `Skor ${e.detail.name} sebesar ${e.detail.score}% berhasil disimpan!`;
+    setTimeout(() => { this._successMsg = ""; }, 4000);
+  }
+
+  static get styles() {
+    return [
+      super.styles,
+      css`
+        :host {
+          display: block;
+          font-family: var(--ddd-font-primary);
+          color: var(--ddd-theme-default-text);
+          background-color: var(--ddd-theme-polaris-surface);
+          border-radius: var(--ddd-radius-lg);
+          padding: var(--ddd-spacing-6);
+          box-shadow: var(--ddd-shadow-2);
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .header {
+          display: flex; justify-content: space-between; align-items: center;
+          border-bottom: 1px solid var(--ddd-theme-polaris-border);
+          padding-bottom: var(--ddd-spacing-4); margin-bottom: var(--ddd-spacing-6);
+          flex-wrap: wrap; gap: var(--ddd-spacing-4);
+        }
+        .title-section h1 {
+          font-size: var(--ddd-font-size-xl); font-weight: var(--ddd-font-weight-bold);
+          margin: 0 0 var(--ddd-spacing-1) 0; color: var(--ddd-theme-primary);
+        }
+        .title-section p {
+          font-size: var(--ddd-font-size-m); margin: 0; color: var(--ddd-theme-secondary);
+        }
+        .badge {
+          font-size: var(--ddd-font-size-xs);
+          background-color: var(--ddd-theme-success-light);
+          color: var(--ddd-theme-success-text);
+          padding: var(--ddd-spacing-1) var(--ddd-spacing-3);
+          border-radius: 99px; font-weight: var(--ddd-font-weight-bold);
+        }
+        .tab-container {
+          display: flex; gap: var(--ddd-spacing-1); margin-bottom: var(--ddd-spacing-6);
+          border-bottom: 2px solid var(--ddd-theme-polaris-border); overflow-x: auto;
+        }
+        .tab-btn {
+          padding: var(--ddd-spacing-3) var(--ddd-spacing-5);
+          font-size: var(--ddd-font-size-m); font-weight: var(--ddd-font-weight-medium);
+          font-family: var(--ddd-font-primary); background: transparent;
+          color: var(--ddd-theme-secondary); border: none;
+          border-bottom: 2px solid transparent; margin-bottom: -2px;
+          cursor: pointer; transition: all 0.2s; white-space: nowrap;
+        }
+        .tab-btn:hover { color: var(--ddd-theme-primary); background: rgba(103,80,164,0.05); }
+        .tab-btn.active {
+          color: var(--ddd-theme-primary);
+          border-bottom-color: var(--ddd-theme-primary);
+          font-weight: var(--ddd-font-weight-bold);
+        }
+        .main-content {
+          background-color: var(--ddd-theme-default-surface);
+          border-radius: var(--ddd-radius-lg);
+          padding: var(--ddd-spacing-6);
+          border: 1px solid var(--ddd-theme-polaris-border);
+          min-height: 400px;
+        }
+        .msg {
+          border-radius: var(--ddd-radius-md);
+          padding: var(--ddd-spacing-3) var(--ddd-spacing-4);
+          margin-bottom: var(--ddd-spacing-4);
+          font-size: var(--ddd-font-size-m);
+        }
+        .msg-success {
+          background-color: var(--ddd-theme-success-light);
+          color: var(--ddd-theme-on-success);
+          border: 1px solid var(--ddd-theme-success);
+        }
+        .tracker-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: var(--ddd-spacing-6);
+        }
+        .guide-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: var(--ddd-spacing-5); margin-top: var(--ddd-spacing-5);
+        }
+        .guide-card {
+          background: var(--ddd-theme-polaris-surface-hover);
+          padding: var(--ddd-spacing-5);
+          border-radius: var(--ddd-radius-lg);
+          border: 1px solid var(--ddd-theme-polaris-border);
+        }
+        .guide-card h3 {
+          color: var(--ddd-theme-primary); margin: 0 0 var(--ddd-spacing-3) 0;
+          font-size: var(--ddd-font-size-l); display: flex; align-items: center; gap: var(--ddd-spacing-2);
+        }
+        .guide-card p {
+          font-size: var(--ddd-font-size-m); line-height: 1.6;
+          color: var(--ddd-theme-secondary); margin: 0;
+        }
+      `
+    ];
+  }
+
+  render() {
+    return html`
+      <div class="header">
+        <div class="title-section">
+          <h1>${this.t.title}</h1>
+          <p>${this.t.subtitle}</p>
+        </div>
+        <span class="badge">HAXcms Ready</span>
+      </div>
+
+      ${this._successMsg ? html`<div class="msg msg-success">${this._successMsg}</div>` : ""}
+
+      <!-- Auth Component -->
+      <quiz-user-auth .appsScriptUrl="${this.appsScriptUrl}"></quiz-user-auth>
+
+      <!-- Tabs -->
+      <div class="tab-container">
+        <button class="tab-btn ${this._activeTab === 0 ? 'active' : ''}" @click="${() => this._activeTab = 0}">${this.t.tabQuiz}</button>
+        <button class="tab-btn ${this._activeTab === 1 ? 'active' : ''}" @click="${() => this._activeTab = 1}">${this.t.tabAttendance}</button>
+        <button class="tab-btn ${this._activeTab === 2 ? 'active' : ''}" @click="${() => this._activeTab = 2}">${this.t.tabGuide}</button>
+      </div>
+
+      <div class="main-content">
+        ${this._activeTab === 0 ? html`
+          <explode-quiz
+            .appsScriptUrl="${this.appsScriptUrl}"
+            .sheetName="${this.sheetName}"
+            .studentId="${this._user?.studentId || ''}"
+            .studentName="${this._user?.nama || ''}"
+            .editable="${true}"
+            @quiz-saved="${this._onQuizSaved}">
+          </explode-quiz>
+        ` : this._activeTab === 1 ? html`
+          <activity-logger
+            .appsScriptUrl="${this.appsScriptUrl}"
+            .sheetName="${this.sheetName}"
+            .studentId="${this._user?.studentId || ''}"
+            .studentName="${this._user?.nama || ''}">
+          </activity-logger>
+          <div class="tracker-grid" style="margin-top: var(--ddd-spacing-6);">
+            <attendance-tracker></attendance-tracker>
+            <engagement-score></engagement-score>
+          </div>
+          <div style="margin-top: var(--ddd-spacing-6);">
+            <transparent-gradebook></transparent-gradebook>
+          </div>
+        ` : html`
+          <h2 style="color: var(--ddd-theme-primary);">${this.t.tabGuide}</h2>
+          <div class="guide-grid">
+            <div class="guide-card">
+              <h3>🚀 Memulai Kuis</h3>
+              <p>Login terlebih dahulu, lalu kerjakan kuis. Skor tersimpan otomatis ke Google Sheets atas nama Anda.</p>
+            </div>
+            <div class="guide-card">
+              <h3>📅 Kehadiran</h3>
+              <p>Dihitung otomatis dari aktivitas: scroll, download, kuis, diskusi. Semua tercatat atas nama login Anda.</p>
+            </div>
+            <div class="guide-card">
+              <h3>🔗 Integrasi</h3>
+              <p>Data tersinkron ke Google Sheets via Apps Script. Gunakan atribut <code>apps-script-url</code> dan <code>sheet-name</code>.</p>
+            </div>
+          </div>
+        `}
+      </div>
+    `;
   }
 
   static get haxProperties() {
@@ -58,7 +251,7 @@ class QuizDashboardLite extends I18NMixin(DDDSuper(LitElement)) {
       canEditSource: false,
       gizmo: {
         title: "Quiz Dashboard Lite",
-        description: "Dashboard kuis modular dengan attendance tracking dan integrasi Google Sheets",
+        description: "Dashboard kuis modular dengan attendance tracking, login siswa, dan integrasi Google Sheets",
         icon: "icons:quiz",
         color: "purple",
         tags: ["Education", "Assessment", "Interactive"]
@@ -80,133 +273,6 @@ class QuizDashboardLite extends I18NMixin(DDDSuper(LitElement)) {
         ]
       }
     };
-  }
-
-  // ... (method _getStorageItem, _setStorageItem, _handleConnectSheet, dll tetap sama)
-
-  _onQuizSaved(e) {
-    // PERBAIKAN: Forward event ke activity-logger via global event
-    window.dispatchEvent(new CustomEvent("quiz-saved", {
-      detail: e.detail,
-      bubbles: true,
-      composed: true
-    }));
-    
-    this._successMsg = `Skor ${e.detail.name} sebesar ${e.detail.score}% berhasil disimpan!`;
-    setTimeout(() => { this._successMsg = ""; }, 4000);
-  }
-
-  static get styles() {
-    return [
-      super.styles,
-      css`
-        :host {
-          display: block;
-          font-family: var(--ddd-font-primary);
-          color: var(--ddd-theme-default-text);
-          background-color: var(--ddd-theme-polaris-surface);
-          border-radius: var(--ddd-radius-lg);
-          padding: var(--ddd-spacing-6);
-          box-shadow: var(--ddd-shadow-2);
-          max-width: 1200px;
-          margin: 0 auto;
-        }
-        /* Ganti semua hardcoded color dengan DDD tokens */
-        .header h1 { color: var(--ddd-theme-primary); }
-        .badge { 
-          background-color: var(--ddd-theme-success-light); 
-          color: var(--ddd-theme-success-text); 
-        }
-        .btn-primary { background: var(--ddd-theme-polaris-primary); }
-        .tab-btn.active { 
-          color: var(--ddd-theme-primary); 
-          border-bottom-color: var(--ddd-theme-primary); 
-        }
-        /* ... sisanya pakai token */
-      `
-    ];
-  }
-
-  render() {
-    return html`
-      <div class="header">
-        <div class="title-section">
-          <h1>${this.t.title}</h1>
-          <p>${this.t.subtitle}</p>
-        </div>
-        <span class="badge">HAXcms Ready</span>
-      </div>
-
-      ${this._errorMsg ? html`<div class="msg msg-error">${this._errorMsg}</div>` : ""}
-      ${this._successMsg ? html`<div class="msg msg-success">${this._successMsg}</div>` : ""}
-
-      <!-- Setup card (sama seperti sebelumnya) -->
-      ${!this._spreadsheetId ? html`
-        <div class="setup-card">
-          <h2>${this.t.connectSheets}</h2>
-          <form @submit="${this._handleConnectSheet}" class="setup-row">
-            <input id="sheet-input" class="input-field" placeholder="ID atau URL Spreadsheet" />
-            <button type="submit" class="btn btn-primary">Hubungkan</button>
-          </form>
-        </div>
-      ` : html`
-        <div class="setup-card connected-card">
-          <h2>${this.t.connected}</h2>
-          <a class="google-sheet-link" href="https://docs.google.com/spreadsheets/d/${this._spreadsheetId}" target="_blank">
-            ${this.t.openSheets}
-          </a>
-          <button class="btn btn-outline" @click="${this._handleDisconnect}">${this.t.disconnect}</button>
-        </div>
-      `}
-
-      <!-- Tabs -->
-      <div class="tab-container">
-        <button class="tab-btn ${this._activeTab === 0 ? 'active' : ''}" @click="${() => this._activeTab = 0}">${this.t.tabQuiz}</button>
-        <button class="tab-btn ${this._activeTab === 1 ? 'active' : ''}" @click="${() => this._activeTab = 1}">${this.t.tabAttendance}</button>
-        <button class="tab-btn ${this._activeTab === 2 ? 'active' : ''}" @click="${() => this._activeTab = 2}">${this.t.tabGuide}</button>
-      </div>
-
-      <div class="main-content">
-        ${this._activeTab === 0 ? html`
-          <!-- PERBAIKAN: Pass appsScriptUrl & sheetName ke explode-quiz -->
-          <explode-quiz 
-            .spreadsheetId="${this._spreadsheetId}"
-            .appsScriptUrl="${this.appsScriptUrl}"
-            .sheetName="${this.sheetName}"
-            .editable="${true}" 
-            @quiz-saved="${this._onQuizSaved}">
-          </explode-quiz>
-        ` : this._activeTab === 1 ? html`
-          <!-- PERBAIKAN: Tambah activity-logger & pass props -->
-          <activity-logger 
-            .appsScriptUrl="${this.appsScriptUrl}"
-            .sheetName="${this.sheetName}">
-          </activity-logger>
-          <div class="tracker-grid">
-            <attendance-tracker></attendance-tracker>
-            <engagement-score></engagement-score>
-          </div>
-          <transparent-gradebook></transparent-gradebook>
-        ` : html`
-          <!-- Guide content -->
-          <h2>${this.t.tabGuide}</h2>
-          <div class="guide-grid">
-            <div class="guide-card">
-              <h3>🚀 Memulai Kuis</h3>
-              <p>Masukkan nama, jawab pertanyaan, skor tersimpan otomatis.</p>
-            </div>
-            <div class="guide-card">
-              <h3>📅 Kehadiran</h3>
-              <p>Dihitung otomatis dari aktivitas: scroll, download, kuis, diskusi.</p>
-            </div>
-            <div class="guide-card">
-              <h3>🔗 Integrasi</h3>
-              <p>Data tersinkron ke Google Sheets via Apps Script URL.</p>
-            </div>
-          </div>
-        `}
-      </div>
-    `;
   }
 }
 

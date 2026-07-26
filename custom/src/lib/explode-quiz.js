@@ -84,6 +84,9 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
   static get properties() {
     return {
       ...super.properties,
+      studentId: { type: String, attribute: "student-id" },
+      studentName: { type: String, attribute: "student-name" },
+      sheetName: { type: String, attribute: "sheet-name" },  // ← TAMBAHKAN INI
       questions: {
         type: Array,
         attribute: "questions",
@@ -135,7 +138,6 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
       },
       scriptFunctionName: { type: String, attribute: true },
       spreadsheetId: { type: String, attribute: "spreadsheet-id", reflect: true },
-      sheetName: { type: String, attribute: "sheet-name" },
       accessToken: { type: String, attribute: "access-token" },
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       editable: { type: Boolean, attribute: true, reflect: true },
@@ -169,6 +171,8 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     let fn = confetti;
     if (fn && typeof fn !== "function" && typeof fn.default === "function") {
       fn = fn.default;
+      this.sheetName = "Pertemuan";  // ← TAMBAHKAN INI
+
     }
     this._confettiFn = fn;
     this.questions = DEFAULT_QUESTIONS;
@@ -598,6 +602,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
 
   _submitToSheets(name, score) {
     const percentage = Math.round((score / this.questions.length) * 100);
+    const actualName = this.studentName || name || "Student";
 
     // Priority 1: Use Apps Script URL directly
     if (this.appsScriptUrl) {
@@ -669,8 +674,11 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     ) {
       const payload = {
         timestamp: new Date().toISOString(),
-        name,
-        score,
+        name: actualName,  // ← GUNAKAN actualName
+        studentId: this.studentId || "",  // ← TAMBAHKAN
+        score: percentage,
+        totalQuestions: this.questions.length,
+        sheet: this.sheetName || "Pertemuan"
       };
 
       globalThis.google.script.run

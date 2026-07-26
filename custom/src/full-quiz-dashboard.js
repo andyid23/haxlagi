@@ -143,7 +143,9 @@ _send(data) {
   // 1. Buat URL dengan parameter (untuk fallback)
   const params = new URLSearchParams();
   Object.entries(data).forEach(([k, v]) => {
-    if (v !== undefined && v !== null) params.append(k, String(v));
+    if (v !== undefined && v !== null) {
+      params.append(k, String(v));
+    }
   });
   const urlWithParams = this._url + (this._url.includes('?') ? '&' : '?') + params.toString();
 

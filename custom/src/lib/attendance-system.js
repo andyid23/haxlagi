@@ -159,6 +159,8 @@ export class ActivityLogger extends LitElement {
       ...super.properties,
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       sheetName: { type: String, attribute: "sheet-name" },
+    studentId: { type: String, attribute: "student-id" },
+    studentName: { type: String, attribute: "student-name" },
       _logs: { type: Array },
       _expanded: { type: Boolean },
       _toastMsg: { type: String }
@@ -252,15 +254,16 @@ export class ActivityLogger extends LitElement {
     this._logs = currentLogs;
 
     // 2. KIRIM KE APPS SCRIPT V3 (Jika URL tersedia)
-    if (this.appsScriptUrl) {
-      const payload = {
-        type: "attendance",
-        timestamp: newLog.timestamp,
-        name: "Student", // Bisa diganti dengan nama siswa jika ada sistem login
-        activityType: type,
-        description: description,
-        sheet: this.sheetName || "Pertemuan"
-      };
+  if (this.appsScriptUrl) {
+    const payload = {
+      type: "attendance",
+      timestamp: newLog.timestamp,
+      name: this.studentName || "Student",
+      studentId: this.studentId || "",
+      activityType: type,
+      description: description,
+      sheet: this.sheetName || "Pertemuan"
+    };
 
       fetch(this.appsScriptUrl, {
         method: 'POST',
