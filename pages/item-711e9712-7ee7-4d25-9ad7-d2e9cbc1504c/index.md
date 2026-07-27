@@ -29,3 +29,8 @@ We hope you enjoy working with HAX as much as the team has enjoyed building it! 
 *   [Read our HAX Teaching excellence resources](https://haxtheweb.org/)
 *   [Join the HAX community](https://bit.ly/hax-discord)
 *   [Post an issue in our issue queue](https://github.com/elmsln/issues/issues/new?assignees=&labels=POP&template=issue-report.md&title=User%20report%20from%20HAX%20welcome%20page)
+
+4 Dashboard Dosen (Nilai + Rapor)
+---------------------------------
+
+Mode dosen: generate rapor, input UTS/UAS manual, atur 6 komponen bobot (Kehadiran:UH:UTS:UAS:Sikap:Skill). Auto-calc sikap dari tugas+forum, skill dari quiz+baca.
