@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "npm run serve",
-    "ghpages:build": "rm index.html && mv ghpages.html index.html && rm assets/babel* && rm build && rm wc-registry.json",
+    "ghpages:build": "node -e \"const fs=require('fs'),p=require('path');try{fs.unlinkSync('index.html')}catch(e){};fs.renameSync('ghpages.html','index.html');try{fs.readdirSync('assets').filter(f=>f.startsWith('babel')).forEach(f=>fs.rmSync(p.join('assets',f),{force:true}))}catch(e){};['build','wc-registry.json'].forEach(f=>{try{fs.rmSync(f,{recursive:true,force:true})}catch(e){}})\"",
     "serve": "npx @haxtheweb/haxcms-nodejs",
     "dev": "NODE_ENV=development npm run serve"
   }
