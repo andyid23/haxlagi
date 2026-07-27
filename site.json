@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785148042
+      "updated": 1785148155
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -328,13 +328,17 @@
       "slug": "new-page-3",
       "order": 4,
       "parent": "item-materi-siswa",
-      "title": "New Page",
-      "description": "",
+      "title": "Forum Oke",
+      "description": "\n🔗 Integrasi Aktivitas + Tugas + Forum + Kuis\n\n    Full Integration Demo: Semua komponen terhubung ke Google Sheets via code.gs.\n    &#8226; quiz-user-auth &#8212; login/registrasi siswa\n    &#8226;",
       "metadata": {
         "created": 1785148123,
-        "updated": 1785148123,
+        "updated": 1785148155,
         "images": [],
-        "videos": []
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1
       }
     },
     {
