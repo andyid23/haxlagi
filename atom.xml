@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-07-22T23:00:47.000Z</updated>
+  <updated>2026-07-26T19:39:17.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -338,7 +338,7 @@ What</summary>
   <entry>
     <title>Dashboard Kuis Lite</title>
     <id>item-doc-dashboard</id>
-    <updated>2026-07-26T19:39:17.000Z</updated>
+    <updated>2026-07-27T10:16:59.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi dashboard kuis ringan</summary>
     <link href="https://localhost:3000/sites/haxnow/dashboard-kuis"/>
@@ -351,7 +351,7 @@ What</summary>
   Tanpa Firebase &#8212; cocok untuk deployment sederhana.</p>
 <h2 id="h2-1591783538">🧪 Demo Langsung</h2>
 <p>Coba dashboard kuis di bawah ini:</p>
-<quiz-dashboard-lite2 sheet-name="Pertemuan" _active-tab="0" quiz-tab-hidden view-mode="student"></quiz-dashboard-lite2>
+<quiz-dashboard-lite2 quiz-tab-hidden view-mode="student" apps-script-url="https://script.google.com/macros/s/AKfycbw6iaBn4NYNwmN9z-Bks4P302cXlxiGiz4Uxr7gUyoR5y62JLEOagV3S5uhV_J7e8-V/exec" sheet-name="Pertemuan 1" _active-tab="0"></quiz-dashboard-lite2>
 <h2 id="h2--979403131">📋 Atribut</h2>
 <p>Dashboard ini tidak memerlukan atribut khusus. Semua konfigurasi (seperti Google
   Sheets) dilakukan melalui UI-nya langsung.</p>
@@ -377,6 +377,7 @@ What</summary>
       <tr>
         <td>📅 Kehadiran &amp; Aktivitas</td>
         <td>Menampilkan <code>attendance-tracker</code>, <code>engagement-score</code>, dan <code>transparent-gradebook</code>
+
         </td>
 
       </tr>
@@ -406,10 +407,12 @@ What</summary>
 <h2 id="h2--691550049">&#9881;️ Menghubungkan Google Sheets</h2>
 <ol>
     <li>Buka tab <strong>📝 Ambil Kuis</strong>
+
     </li>
 
     <li>Masukkan ID atau URL Google Spreadsheet di bagian atas</li>
     <li>Klik <strong>Hubungkan</strong>
+
     </li>
 
     <li>Hasil kuis akan otomatis tersimpan</li>

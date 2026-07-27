@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785094757
+      "updated": 1785147419
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -96,7 +96,7 @@
       "description": "Demo dan dokumentasi dashboard kuis ringan",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785094757,
+        "updated": 1785147419,
         "published": true,
         "locked": false,
         "status": "",
