@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+<id>item-15b34dd6-982c-420f-8e67-787215b06657</id>
+<indent>0</indent>
+<location>pages/item-15b34dd6-982c-420f-8e67-787215b06657/index.xml</location>
+<slug>new-page-3</slug>
+<order>4</order>
+<parent>item-materi-siswa</parent>
+<title>New Page</title>
+<description></description>
+<metadata>
+<created>1785148123</created>
+<updated>1785148123</updated>
+<images>
+</images>
+<videos>
+</videos>
+</metadata>
+<content><![CDATA[<p></p>]]></content>
+</item>
