@@ -6,13 +6,13 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jul 2026 11:46:38 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 11:56:25 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Welcome to haxnow</title>
       <link>https://localhost:3000/sites/haxnow/welcome</link>
-      <description>Welcome to your new HAX site! Click edit on the top bar to get started What can I do? 2 Tugas Mandiri &amp;#38; Forum Diskusi Tugas tersimpan ke Tugas Log sheet. Forum CRUD via Forum Log sheet (nested replies, like, sort). 3 Kuis Formatif Edit this content by hitting &quot;Edit page&quot; above Hit enter in a paragraph of text to add another one Click &quot;Merlin&quot; to see a list of all the things you can do Try to add a video, or edit this one Insert a video This looks fun, let&apos;s go! You, while using HAX ...pro...</description>
+      <description>Welcome to your new HAX site! Click edit on the top bar to get started 1 Login / Registrasi What can I do? 2 Tugas Mandiri &amp;#38; Forum Diskusi Tugas tersimpan ke Tugas Log sheet. Forum CRUD via Forum Log sheet (nested replies, like, sort). 3 Kuis Formatif Edit this content by hitting &quot;Edit page&quot; above Hit enter in a paragraph of text to add another one Click &quot;Merlin&quot; to see a list of all the things you can do Try to add a video, or edit this one Insert a video This looks fun, let&apos;s go! You, w...</description>
       <guid>https://localhost:3000/sites/haxnow/welcome</guid>
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>

@@ -1,5 +1,8 @@
 Welcome to your new HAX site! Click edit on the top bar to get started
 
+1 Login / Registrasi
+--------------------
+
 What can I do?
 --------------
 
