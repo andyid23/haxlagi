@@ -9,13 +9,28 @@
   "description": "Diskusi\nhehehehe\n\n&#60;h1&#62;🔗 Integrasi Aktivitas + Tugas + Forum + Kuis&#60;/h1&#62;\n  &#60;div class=",
   "metadata": {
     "created": 1785147646,
-    "updated": 1785148042,
+    "updated": 1785159171,
     "images": [],
     "videos": [],
-    "published": false,
+    "published": true,
     "hideInMenu": false,
     "locked": false,
-    "readtime": 2
+    "readtime": 1,
+    "status": "",
+    "theme": {
+      "element": "haxcms-json-theme",
+      "path": "@haxtheweb/haxcms-elements/lib/haxcms-json-theme.js",
+      "name": "Haxcms Json Theme",
+      "thumbnail": "@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-haxcms-json-theme-thumb.jpg",
+      "description": "Start with a blank site using the Haxcms Json Theme",
+      "category": [
+        "Website"
+      ],
+      "hidden": true,
+      "priority": 0,
+      "terrible": false,
+      "key": "haxcms-json-theme"
+    }
   },
   "content": "\n"
 }

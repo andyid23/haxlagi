@@ -14,15 +14,30 @@ hehehehe
   &amp;#60;div class=</description>
 <metadata>
 <created>1785147646</created>
-<updated>1785148042</updated>
+<updated>1785159171</updated>
 <images>
 </images>
 <videos>
 </videos>
-<published>false</published>
+<published>true</published>
 <hideInMenu>false</hideInMenu>
 <locked>false</locked>
-<readtime>2</readtime>
+<readtime>1</readtime>
+<status></status>
+<theme>
+<element>haxcms-json-theme</element>
+<path>@haxtheweb/haxcms-elements/lib/haxcms-json-theme.js</path>
+<name>Haxcms Json Theme</name>
+<thumbnail>@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-haxcms-json-theme-thumb.jpg</thumbnail>
+<description>Start with a blank site using the Haxcms Json Theme</description>
+<category>
+<item>Website</item>
+</category>
+<hidden>true</hidden>
+<priority>0</priority>
+<terrible>false</terrible>
+<key>haxcms-json-theme</key>
+</theme>
 </metadata>
 <content><![CDATA[
 ]]></content>
