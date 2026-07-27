@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4"
-    },
+  },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.10.4",
     "@rollup/plugin-babel": "6.0.4",
@@ -22,5 +22,8 @@
     "@web/rollup-plugin-import-meta-assets": "2.3.0",
     "rollup": "4.44.2",
     "rollup-plugin-esbuild": "6.2.1"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
   }
 }
