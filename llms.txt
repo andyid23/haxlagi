@@ -30,6 +30,7 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [📖 Tutorial: Fetch Data dari Sheet](https://localhost:3000/sites/haxnow/pages/tutorial-dashboard-siswa/index.md): Panduan membaca data dari Google Sheets via Apps Script API
 - [baru1](https://localhost:3000/sites/haxnow/pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.md): 📚 Pertemuan 1: Pengenalan HAXcms Materi pembelajaran hari ini...
 - [baru2](https://localhost:3000/sites/haxnow/pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.md): 📚 Pertemuan 2: Lit Element Dasar Materi pembelajaran hari ini...
+- [New Page](https://localhost:3000/sites/haxnow/pages/item-095e94fc-dc62-4f5c-9037-eb5f5095ba1c/index.md)
 
 ## Optional
 - [Search index](https://localhost:3000/sites/haxnow/lunrSearchIndex.json): Lunr corpus for quick full-text retrieval.
