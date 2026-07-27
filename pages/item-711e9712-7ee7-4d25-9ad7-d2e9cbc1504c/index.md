@@ -24,6 +24,9 @@ This looks fun, let's go!
 Get involved with HAX
 ---------------------
 
+3 Kuis Formatif
+---------------
+
 We hope you enjoy working with HAX as much as the team has enjoyed building it! If you want to join our community, hit "Merlin" and look for the Discord link among other ways to get involved!
 
 *   [Read our HAX Teaching excellence resources](https://haxtheweb.org/)
