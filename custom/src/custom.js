@@ -7,5 +7,8 @@ import "./todo-list.js";
 // import "./full-quiz-dashboard.js";
 // import "./explode-quiz-dashboard.js";
 import "./quiz-dashboard-lite2/quiz-dashboard-lite2.js";
+import "./quiz-dashboard-lite2/lib/quiz-user-auth.js";
+import "./quiz-dashboard-lite2/lib/assignment-forum.js";
+import "./quiz-dashboard-lite2/lib/explode-quiz.js";
 
 // import '@smartedu/quiz-dashboard-lite2/quiz-dashboard-lite2.js'

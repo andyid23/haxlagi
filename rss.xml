@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jul 2026 10:27:22 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 10:29:15 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -148,13 +148,6 @@
       <description></description>
       <guid>https://localhost:3000/sites/haxnow/new-page</guid>
       <pubDate>Mon, 27 Jul 2026 10:20:46 GMT</pubDate>
-    </item>
-    <item>
-      <title>Forum Oke</title>
-      <link>https://localhost:3000/sites/haxnow/new-page-3</link>
-      <description>🔗 Integrasi Aktivitas + Tugas + Forum + Kuis Full Integration Demo: Semua komponen terhubung ke Google Sheets via code.gs . &amp;#8226; quiz-user-auth &amp;#8212; login/registrasi siswa &amp;#8226; activity-logger &amp;#8212; tracking baca materi, diskusi, tugas &amp;#8226; assignment-forum &amp;#8212; tugas mandiri + forum diskusi (Disqus-style, nested replies) &amp;#8226; explode-quiz &amp;#8212; kuis formatif &amp;#8226; transparent-gradebook &amp;#8212; nilai + mode dosen (6 komponen bobot) 1 Login / Registrasi 2 Tugas Mandiri...</description>
-      <guid>https://localhost:3000/sites/haxnow/new-page-3</guid>
-      <pubDate>Mon, 27 Jul 2026 10:28:43 GMT</pubDate>
     </item>
   </channel>
 </rss>
