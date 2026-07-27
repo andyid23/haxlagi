@@ -5,13 +5,18 @@
   "slug": "new-page",
   "order": 3,
   "parent": "item-materi-siswa",
-  "title": "New Page",
-  "description": "",
+  "title": "Forum diskusi",
+  "description": "Diskusi\nhehehehe\n\n\n    1 Login / Registrasi\n\n    \n\n  \n\n\n   2 Tugas Mandiri &#38; Forum Diskusi\n\n\n  Tugas tersimpan ke Tugas Log sheet. Forum CRUD via Forum Log sheet\n    (nested replies, like, sort).",
   "metadata": {
     "created": 1785147646,
-    "updated": 1785147646,
+    "updated": 1785147754,
     "images": [],
-    "videos": []
+    "videos": [],
+    "published": true,
+    "pageType": "discuss",
+    "hideInMenu": false,
+    "locked": false,
+    "readtime": 1
   },
-  "content": "<p></p>"
+  "content": "\n<h2 data-style-guide=\"headline\" data-design-treatment=\"vert\" data-primary=\"8\" data-padding=\"xs\" data-border-radius=\"xs\">Diskusi</h2>\n<p>hehehehe</p>\n<p></p>\n<div class=\"step\">\n    <h2><span class=\"step-num\">1</span> Login / Registrasi</h2>\n\n    <quiz-user-auth id=\"auth\" apps-script-url=\"https://script.google.com/macros/s/AKfycbw6iaBn4NYNwmN9z-Bks4P302cXlxiGiz4Uxr7gUyoR5y62JLEOagV3S5uhV_J7e8-V/exec\" _screen=\"logged-in\" _nama=\"Andy Yulianto\" _email=\"wildanhabib051@gmail.com\" _nis=\"234\" _absen=\"2\" _kelas=\"XI-1\" _student-id=\"STD-65108053\"></quiz-user-auth>\n\n  </div>\n<p></p>\n<div class=\"step\">\n   <h2><span class=\"step-num\">2</span> Tugas Mandiri &#38; Forum Diskusi</h2>\n\n\n  <p style=\"font-size:13px;color:#666;\">Tugas tersimpan ke <code>Tugas Log</code> sheet. Forum CRUD via <code>Forum Log</code> sheet\n    (nested replies, like, sort).</p>\n\n  <assignment-forum hide-delete=\"\" id=\"af1\" assignment-title=\"Refleksi Energi Terbarukan\" assignment-instruction=\"Tuliskan refleksi: kontribusi apa yang bisa Anda lakukan untuk mendukung energi terbarukan di lingkungan rumah? Sertakan link Google Drive/Doc jika ada file pendukung.\" forum-topik=\"Diskusi: Potensi Energi Terbarukan\" apps-script-url=\"https://script.google.com/macros/s/AKfycbw6iaBn4NYNwmN9z-Bks4P302cXlxiGiz4Uxr7gUyoR5y62JLEOagV3S5uhV_J7e8-V/exec\" forum-api-url=\"https://script.google.com/macros/s/AKfycby1Ltq-eg599WR2W4FPY6r_GDNs_N5gB29Pvdf3NisKvWlymh3xl6ajk0kU-IkxyAT_Nw/exec\" sheet-name=\"Pertemuan 1\" view-mode=\"lecturer\"></assignment-forum>\n\n</div>\n"
 }

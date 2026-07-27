@@ -25,6 +25,7 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [📖 Belajar HTML Dasar](https://localhost:3000/sites/haxnow/pages/tutor-html/index.md): Tutorial HTML lengkap dari nol untuk pemula
 - [📅 Tutorial: Kursus Multi-Hari](https://localhost:3000/sites/haxnow/pages/tutorial-kursus/index.md): Panduan menambah kuis dan materi untuk setiap pertemuan
 - [📊 Tutorial: 1 Sheet = 1 Pertemuan](https://localhost:3000/sites/haxnow/pages/tutorial-sheet-per-pertemuan/index.md): Setup Google Sheets auto-create sheet tab per pertemuan
+- [Forum diskusi](https://localhost:3000/sites/haxnow/pages/item-07f619ec-0cd5-4853-b79c-1b12f94df811/index.md): Diskusi hehehehe 1 Login / Registrasi 2 Tugas Mandiri &#38; Forum Diskusi Tugas tersimpan ke Tugas Log sheet. Forum CRUD via Forum Log sheet (nested replies, like, sort).
 - [📊 Dashboard Siswa - Lihat Nilai](https://localhost:3000/sites/haxnow/pages/dashboard-siswa/index.md): Halaman dashboard siswa yang membaca data dari Google Sheets
 - [📖 Tutorial: Fetch Data dari Sheet](https://localhost:3000/sites/haxnow/pages/tutorial-dashboard-siswa/index.md): Panduan membaca data dari Google Sheets via Apps Script API
 - [baru1](https://localhost:3000/sites/haxnow/pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.md): 📚 Pertemuan 1: Pengenalan HAXcms Materi pembelajaran hari ini...

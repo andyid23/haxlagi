@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785147419
+      "updated": 1785147754
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -308,13 +308,18 @@
       "slug": "new-page",
       "order": 3,
       "parent": "item-materi-siswa",
-      "title": "New Page",
-      "description": "",
+      "title": "Forum diskusi",
+      "description": "Diskusi\nhehehehe\n\n\n    1 Login / Registrasi\n\n    \n\n  \n\n\n   2 Tugas Mandiri &#38; Forum Diskusi\n\n\n  Tugas tersimpan ke Tugas Log sheet. Forum CRUD via Forum Log sheet\n    (nested replies, like, sort).",
       "metadata": {
         "created": 1785147646,
-        "updated": 1785147646,
+        "updated": 1785147754,
         "images": [],
-        "videos": []
+        "videos": [],
+        "published": true,
+        "pageType": "discuss",
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1
       }
     },
     {
