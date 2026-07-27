@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-07-27T10:16:59.000Z</updated>
+  <updated>2026-07-27T10:22:34.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -2775,48 +2775,17 @@ Materi pembelajaran hari ini...
   <entry>
     <title>Forum diskusi</title>
     <id>item-07f619ec-0cd5-4853-b79c-1b12f94df811</id>
-    <updated>2026-07-27T10:22:34.000Z</updated>
+    <updated>2026-07-27T10:27:22.000Z</updated>
     <published>2026-07-27T10:20:46.000Z</published>
     <summary>Diskusi
 hehehehe
 
-
-    1 Login / Registrasi
-
-    
-
-  
-
-
-   2 Tugas Mandiri &amp;#38; Forum Diskusi
-
-
-  Tugas tersimpan ke Tugas Log sheet. Forum CRUD via Forum Log sheet
-    (nested replies, like, sort).</summary>
+&amp;#60;h1&amp;#62;🔗 Integrasi Aktivitas + Tugas + Forum + Kuis&amp;#60;/h1&amp;#62;
+  &amp;#60;div class=</summary>
     <link href="https://localhost:3000/sites/haxnow/new-page"/>
     
     <content type="html">
       <![CDATA[ 
-<h2 data-style-guide="headline" data-design-treatment="vert" data-primary="8" data-padding="xs" data-border-radius="xs">Diskusi</h2>
-<p>hehehehe</p>
-<p></p>
-<div class="step">
-    <h2><span class="step-num">1</span> Login / Registrasi</h2>
-
-    <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbw6iaBn4NYNwmN9z-Bks4P302cXlxiGiz4Uxr7gUyoR5y62JLEOagV3S5uhV_J7e8-V/exec" _screen="logged-in" _nama="Andy Yulianto" _email="wildanhabib051@gmail.com" _nis="234" _absen="2" _kelas="XI-1" _student-id="STD-65108053"></quiz-user-auth>
-
-  </div>
-<p></p>
-<div class="step">
-   <h2><span class="step-num">2</span> Tugas Mandiri &#38; Forum Diskusi</h2>
-
-
-  <p style="font-size:13px;color:#666;">Tugas tersimpan ke <code>Tugas Log</code> sheet. Forum CRUD via <code>Forum Log</code> sheet
-    (nested replies, like, sort).</p>
-
-  <assignment-forum hide-delete="" id="af1" assignment-title="Refleksi Energi Terbarukan" assignment-instruction="Tuliskan refleksi: kontribusi apa yang bisa Anda lakukan untuk mendukung energi terbarukan di lingkungan rumah? Sertakan link Google Drive/Doc jika ada file pendukung." forum-topik="Diskusi: Potensi Energi Terbarukan" apps-script-url="https://script.google.com/macros/s/AKfycbw6iaBn4NYNwmN9z-Bks4P302cXlxiGiz4Uxr7gUyoR5y62JLEOagV3S5uhV_J7e8-V/exec" forum-api-url="https://script.google.com/macros/s/AKfycby1Ltq-eg599WR2W4FPY6r_GDNs_N5gB29Pvdf3NisKvWlymh3xl6ajk0kU-IkxyAT_Nw/exec" sheet-name="Pertemuan 1" view-mode="lecturer"></assignment-forum>
-
-</div>
  ]]>
     </content>
   </entry>
