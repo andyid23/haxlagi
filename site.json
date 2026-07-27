@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785159171
+      "updated": 1785159278
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -423,7 +423,7 @@
       "description": "\n📚 Pertemuan 2: Lit Element Dasar\nMateri pembelajaran hari ini...\n\n\n",
       "metadata": {
         "created": 1784688264,
-        "updated": 1785158167,
+        "updated": 1785159278,
         "images": [],
         "videos": [],
         "published": true,
