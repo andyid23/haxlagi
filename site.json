@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785157700
+      "updated": 1785158167
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -37,7 +37,7 @@
       "description": "Welcome to your new HAX site! Click edit on the top bar to get started\n\n\n\n\n\n\n\n\n\n\nWhat",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785157700,
+        "updated": 1785158163,
         "published": true,
         "locked": false,
         "status": "",
@@ -45,6 +45,48 @@
         "readtime": 1,
         "videos": [],
         "images": []
+      }
+    },
+    {
+      "id": "item-df69b4a8-b470-4c1e-be89-8833ce3452da",
+      "indent": 1,
+      "location": "pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.html",
+      "slug": "new-page-1",
+      "order": 1,
+      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
+      "title": "baru1",
+      "description": "\n📚 Pertemuan 1: Pengenalan HAXcms\nMateri pembelajaran hari ini...\n\n\n\n",
+      "metadata": {
+        "created": 1784687716,
+        "updated": 1785158164,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-095e94fc-dc62-4f5c-9037-eb5f5095ba1c",
+      "indent": 1,
+      "location": "pages/item-095e94fc-dc62-4f5c-9037-eb5f5095ba1c/index.html",
+      "slug": "new-page-3",
+      "order": 0,
+      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
+      "title": "New Page",
+      "description": "\n\n",
+      "metadata": {
+        "created": 1785156460,
+        "updated": 1785158163,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1,
+        "status": ""
       }
     },
     {
@@ -58,7 +100,7 @@
       "description": "Dokumentasi semua elemen interaktif yang tersedia di HAXcms",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152606,
+        "updated": 1785158164,
         "published": true,
         "locked": false,
         "status": ""
@@ -75,7 +117,7 @@
       "description": "Demo dan dokumentasi elemen kuis interaktif",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152607,
+        "updated": 1785158164,
         "published": true,
         "locked": false,
         "status": "",
@@ -96,7 +138,7 @@
       "description": "Demo dan dokumentasi dashboard kuis ringan",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152607,
+        "updated": 1785158164,
         "published": true,
         "locked": false,
         "status": "",
@@ -117,7 +159,7 @@
       "description": "Demo sistem kehadiran dan pelacakan aktivitas",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152607,
+        "updated": 1785158165,
         "published": true,
         "locked": false,
         "status": ""
@@ -134,7 +176,7 @@
       "description": "Demo dan dokumentasi elemen notifikasi",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152607,
+        "updated": 1785158165,
         "published": true,
         "locked": false,
         "status": ""
@@ -151,7 +193,7 @@
       "description": "Demo dan dokumentasi daftar tugas",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152607,
+        "updated": 1785158165,
         "published": true,
         "locked": false,
         "status": "",
@@ -172,7 +214,7 @@
       "description": "Demo dashboard lengkap dengan Apps Script",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152608,
+        "updated": 1785158165,
         "published": true,
         "locked": false,
         "status": ""
@@ -189,7 +231,7 @@
       "description": "Panduan lengkap sistem kehadiran dan pelacakan aktivitas",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152608,
+        "updated": 1785158165,
         "published": true,
         "locked": false,
         "status": ""
@@ -206,7 +248,7 @@
       "description": "Panduan setup Apps Script untuk integrasi Google Sheets",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152608,
+        "updated": 1785158166,
         "published": true,
         "locked": false,
         "status": ""
@@ -223,7 +265,7 @@
       "description": "fulldashboard\n\n\n",
       "metadata": {
         "created": 1784673090,
-        "updated": 1785152608,
+        "updated": 1785158166,
         "images": [],
         "videos": [],
         "published": true,
@@ -238,13 +280,13 @@
       "indent": 0,
       "location": "pages/materi-siswa/index.html",
       "slug": "materi-siswa",
-      "order": 3,
+      "order": 2,
       "parent": null,
       "title": "📚 Modul 1: HAXcms & Web Component",
       "description": "Contoh halaman materi siswa dengan aktivitas dan kuis",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152609,
+        "updated": 1785158166,
         "published": true,
         "locked": false,
         "status": ""
@@ -261,7 +303,7 @@
       "description": "Tutorial HTML lengkap dari nol untuk pemula",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152609,
+        "updated": 1785158166,
         "published": true,
         "locked": false,
         "status": ""
@@ -278,7 +320,7 @@
       "description": "Panduan menambah kuis dan materi untuk setiap pertemuan",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152609,
+        "updated": 1785158166,
         "published": true,
         "locked": false,
         "status": ""
@@ -295,7 +337,7 @@
       "description": "Setup Google Sheets auto-create sheet tab per pertemuan",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152609,
+        "updated": 1785158167,
         "published": true,
         "locked": false,
         "status": ""
@@ -312,7 +354,7 @@
       "description": "Diskusi\nhehehehe\n\n&#60;h1&#62;🔗 Integrasi Aktivitas + Tugas + Forum + Kuis&#60;/h1&#62;\n  &#60;div class=",
       "metadata": {
         "created": 1785147646,
-        "updated": 1785152610,
+        "updated": 1785158167,
         "images": [],
         "videos": [],
         "published": false,
@@ -327,13 +369,13 @@
       "indent": 0,
       "location": "pages/dashboard-siswa/index.html",
       "slug": "dashboard-siswa",
-      "order": 4,
+      "order": 3,
       "parent": null,
       "title": "📊 Dashboard Siswa - Lihat Nilai",
       "description": "Halaman dashboard siswa yang membaca data dari Google Sheets",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152610,
+        "updated": 1785158167,
         "published": true,
         "locked": false,
         "status": ""
@@ -344,36 +386,15 @@
       "indent": 0,
       "location": "pages/tutorial-dashboard-siswa/index.html",
       "slug": "tutorial-dashboard-siswa",
-      "order": 5,
+      "order": 4,
       "parent": null,
       "title": "📖 Tutorial: Fetch Data dari Sheet",
       "description": "Panduan membaca data dari Google Sheets via Apps Script API",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785152610,
+        "updated": 1785158167,
         "published": true,
         "locked": false,
-        "status": ""
-      }
-    },
-    {
-      "id": "item-df69b4a8-b470-4c1e-be89-8833ce3452da",
-      "indent": 0,
-      "location": "pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.html",
-      "slug": "new-page-1",
-      "order": 2,
-      "parent": null,
-      "title": "baru1",
-      "description": "\n📚 Pertemuan 1: Pengenalan HAXcms\nMateri pembelajaran hari ini...\n\n\n\n",
-      "metadata": {
-        "created": 1784687716,
-        "updated": 1785152609,
-        "images": [],
-        "videos": [],
-        "published": true,
-        "hideInMenu": false,
-        "locked": false,
-        "readtime": 1,
         "status": ""
       }
     },
@@ -382,13 +403,13 @@
       "indent": 0,
       "location": "pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.html",
       "slug": "new-page-2",
-      "order": 6,
+      "order": 5,
       "parent": null,
       "title": "baru2",
       "description": "\n📚 Pertemuan 2: Lit Element Dasar\nMateri pembelajaran hari ini...\n\n\n",
       "metadata": {
         "created": 1784688264,
-        "updated": 1785152611,
+        "updated": 1785158167,
         "images": [],
         "videos": [],
         "published": true,
@@ -396,26 +417,6 @@
         "locked": false,
         "readtime": 1,
         "status": ""
-      }
-    },
-    {
-      "id": "item-095e94fc-dc62-4f5c-9037-eb5f5095ba1c",
-      "indent": 0,
-      "location": "pages/item-095e94fc-dc62-4f5c-9037-eb5f5095ba1c/index.html",
-      "slug": "new-page-3",
-      "order": 2,
-      "parent": null,
-      "title": "New Page",
-      "description": "\n\n",
-      "metadata": {
-        "created": 1785156460,
-        "updated": 1785156873,
-        "images": [],
-        "videos": [],
-        "published": true,
-        "hideInMenu": false,
-        "locked": false,
-        "readtime": 1
       }
     }
   ]
