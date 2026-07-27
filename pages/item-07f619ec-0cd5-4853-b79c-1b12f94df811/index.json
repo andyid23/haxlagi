@@ -1,0 +1,17 @@
+{
+  "id": "item-07f619ec-0cd5-4853-b79c-1b12f94df811",
+  "indent": 0,
+  "location": "pages/item-07f619ec-0cd5-4853-b79c-1b12f94df811/index.json",
+  "slug": "new-page",
+  "order": 3,
+  "parent": "item-materi-siswa",
+  "title": "New Page",
+  "description": "",
+  "metadata": {
+    "created": 1785147646,
+    "updated": 1785147646,
+    "images": [],
+    "videos": []
+  },
+  "content": "<p></p>"
+}
