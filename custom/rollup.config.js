@@ -30,7 +30,7 @@ export default {
     nodeResolve(),
     esbuild({
       minify: true,
-      target: ['es2020'],
+      target: ['esnext'],
     }),
     importMetaAssets()
   ],
