@@ -4,8 +4,7 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import "./lib/attendance-system.js";
 import "./lib/explode-quiz.js";
 import "./lib/quiz-user-auth.js";
-
-const STORAGE_KEY = "quiz_lite_sheet_id";
+import "./lib/assignment-forum.js";
 
 class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
   static get tag() {
@@ -32,7 +31,7 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
     this.appsScriptUrl = "";
     this.sheetName = "Pertemuan";
     this.viewMode = "student";
-    this.quizTabHidden = true; // "student" atau "lecturer"
+    this.quizTabHidden = false;
     this._user = null;
     this._spreadsheetId = "";
     this._activeTab = 0;
@@ -41,11 +40,11 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
     this.t = {
       ...this.t,
       title: "Kuis Interaktif & Kehadiran",
-      subtitle: "Sistem Kuis dengan Pelacakan Aktivitas Otomatis",
+      subtitle: "Sistem Belajar dan Latihan Kuis dengan Aktivitas Otomatis",
       tabQuiz: "📝 Ambil Kuis",
       tabAttendance: "📅 Kehadiran & Aktivitas",
       tabGuide: "📖 Panduan",
-      tabNilai: "📊 Daftar Nilai",
+      tabNilai: "📊 Daftar Skor",
       welcome: "Selamat datang",
       dataRecorded: "Data kuis & aktivitas akan tercatat atas nama Anda"
     };
@@ -53,13 +52,25 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
 
   connectedCallback() {
     super.connectedCallback();
-    window.addEventListener("quiz-user-login", this._onUserLogin.bind(this));
-    window.addEventListener("quiz-user-logout", this._onUserLogout.bind(this));
+    // FIX: Store bound functions to ensure proper removal in disconnectedCallback
+    this._onUserLoginBound = this._onUserLogin.bind(this);
+    this._onUserLogoutBound = this._onUserLogout.bind(this);
+    globalThis.addEventListener("quiz-user-login", this._onUserLoginBound);
+    globalThis.addEventListener("quiz-user-logout", this._onUserLogoutBound);
+
+    // HAXcms autoloader integration
+    if (globalThis.HaxStore && typeof globalThis.HaxStore.requestAvailability === "function") {
+      const store = globalThis.HaxStore.requestAvailability();
+      if (store && !store.elementList[QuizDashboardLite2.tag]) {
+        store.elementList[QuizDashboardLite2.tag] = QuizDashboardLite2.haxProperties;
+      }
+    }
   }
 
   disconnectedCallback() {
-    window.removeEventListener("quiz-user-login", this._onUserLogin.bind(this));
-    window.removeEventListener("quiz-user-logout", this._onUserLogout.bind(this));
+    // FIX: Remove listeners using the exact same bound references to prevent memory leaks
+    globalThis.removeEventListener("quiz-user-login", this._onUserLoginBound);
+    globalThis.removeEventListener("quiz-user-logout", this._onUserLogoutBound);
     super.disconnectedCallback();
   }
 
@@ -76,11 +87,19 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
   }
 
   _onQuizSaved(e) {
-    window.dispatchEvent(new CustomEvent("quiz-saved", {
+    globalThis.dispatchEvent(new CustomEvent("quiz-saved", {
       detail: e.detail, bubbles: true, composed: true
     }));
     this._successMsg = `Skor ${e.detail.name} sebesar ${e.detail.score}% berhasil disimpan!`;
     setTimeout(() => { this._successMsg = ""; }, 4000);
+  }
+
+  _simReading() {
+    globalThis.dispatchEvent(new CustomEvent("reading-saved", {
+      detail: { title: `Materi ${this.sheetName}` },
+      bubbles: true, composed: true
+    }));
+    globalThis.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   }
 
   static get styles() {
@@ -99,38 +118,59 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
           margin: 0 auto;
         }
         .header {
-          display: flex; justify-content: space-between; align-items: center;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           border-bottom: 1px solid var(--ddd-theme-polaris-border);
-          padding-bottom: var(--ddd-spacing-4); margin-bottom: var(--ddd-spacing-6);
-          flex-wrap: wrap; gap: var(--ddd-spacing-4);
+          padding-bottom: var(--ddd-spacing-4);
+          margin-bottom: var(--ddd-spacing-6);
+          flex-wrap: wrap;
+          gap: var(--ddd-spacing-4);
         }
         .title-section h1 {
-          font-size: var(--ddd-font-size-xl); font-weight: var(--ddd-font-weight-bold);
-          margin: 0 0 var(--ddd-spacing-1) 0; color: var(--ddd-theme-primary);
+          font-size: var(--ddd-font-size-xl);
+          font-weight: var(--ddd-font-weight-bold);
+          margin: 0 0 var(--ddd-spacing-1) 0;
+          color: var(--ddd-theme-primary);
         }
         .title-section p {
-          font-size: var(--ddd-font-size-m); margin: 0; color: var(--ddd-theme-secondary);
+          font-size: var(--ddd-font-size-m);
+          margin: 0;
+          color: var(--ddd-theme-secondary);
         }
         .badge {
           font-size: var(--ddd-font-size-xs);
           background-color: var(--ddd-theme-success-light);
           color: var(--ddd-theme-success-text);
           padding: var(--ddd-spacing-1) var(--ddd-spacing-3);
-          border-radius: 99px; font-weight: var(--ddd-font-weight-bold);
+          border-radius: var(--ddd-radius-full);
+          font-weight: var(--ddd-font-weight-bold);
         }
         .tab-container {
-          display: flex; gap: var(--ddd-spacing-1); margin-bottom: var(--ddd-spacing-6);
-          border-bottom: 2px solid var(--ddd-theme-polaris-border); overflow-x: auto;
+          display: flex;
+          gap: var(--ddd-spacing-1);
+          margin-bottom: var(--ddd-spacing-6);
+          border-bottom: 2px solid var(--ddd-theme-polaris-border);
+          overflow-x: auto;
         }
         .tab-btn {
           padding: var(--ddd-spacing-3) var(--ddd-spacing-5);
-          font-size: var(--ddd-font-size-m); font-weight: var(--ddd-font-weight-medium);
-          font-family: var(--ddd-font-primary); background: transparent;
-          color: var(--ddd-theme-secondary); border: none;
-          border-bottom: 2px solid transparent; margin-bottom: -2px;
-          cursor: pointer; transition: all 0.2s; white-space: nowrap;
+          font-size: var(--ddd-font-size-m);
+          font-weight: var(--ddd-font-weight-medium);
+          font-family: var(--ddd-font-primary);
+          background: transparent;
+          color: var(--ddd-theme-secondary);
+          border: none;
+          border-bottom: 2px solid transparent;
+          margin-bottom: -2px;
+          cursor: pointer;
+          transition: all 0.2s;
+          white-space: nowrap;
         }
-        .tab-btn:hover { color: var(--ddd-theme-primary); background: rgba(103,80,164,0.05); }
+        .tab-btn:hover {
+          color: var(--ddd-theme-primary);
+          background: rgba(103,80,164,0.05);
+        }
         .tab-btn.active {
           color: var(--ddd-theme-primary);
           border-bottom-color: var(--ddd-theme-primary);
@@ -162,7 +202,8 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
         .guide-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: var(--ddd-spacing-5); margin-top: var(--ddd-spacing-5);
+          gap: var(--ddd-spacing-5);
+          margin-top: var(--ddd-spacing-5);
         }
         .guide-card {
           background: var(--ddd-theme-polaris-surface-hover);
@@ -171,12 +212,18 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
           border: 1px solid var(--ddd-theme-polaris-border);
         }
         .guide-card h3 {
-          color: var(--ddd-theme-primary); margin: 0 0 var(--ddd-spacing-3) 0;
-          font-size: var(--ddd-font-size-l); display: flex; align-items: center; gap: var(--ddd-spacing-2);
+          color: var(--ddd-theme-primary);
+          margin: 0 0 var(--ddd-spacing-3) 0;
+          font-size: var(--ddd-font-size-l);
+          display: flex;
+          align-items: center;
+          gap: var(--ddd-spacing-2);
         }
         .guide-card p {
-          font-size: var(--ddd-font-size-m); line-height: 1.6;
-          color: var(--ddd-theme-secondary); margin: 0;
+          font-size: var(--ddd-font-size-m);
+          line-height: 1.6;
+          color: var(--ddd-theme-secondary);
+          margin: 0;
         }
       `
     ];
@@ -191,13 +238,10 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
         </div>
         <span class="badge">HAXcms Ready</span>
       </div>
-
       ${this._successMsg ? html`<div class="msg msg-success">${this._successMsg}</div>` : ""}
-
-      <!-- Auth Component -->
+      
       <quiz-user-auth .appsScriptUrl="${this.appsScriptUrl}"></quiz-user-auth>
-
-      <!-- Tabs: Panduan → Ambil Kuis → Aktivitas → Daftar Nilai -->
+      
       <div class="tab-container">
         <button class="tab-btn ${this._activeTab === 0 ? 'active' : ''}" @click="${() => this._activeTab = 0}">${this.t.tabGuide}</button>
         ${!this.quizTabHidden ? html`<button class="tab-btn ${this._activeTab === 1 ? 'active' : ''}" @click="${() => this._activeTab = 1}">${this.t.tabQuiz}</button>` : ""}
@@ -236,12 +280,12 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
           <explode-quiz
             .appsScriptUrl="${this.appsScriptUrl}"
             .sheetName="${this.sheetName}"
-              .studentId="${this._user?.studentId || ''}"
-              .studentName="${this._user?.nama || ''}"
-              .studentNis="${this._user?.nis || ''}"
-              .studentAbsen="${this._user?.absen || ''}"
-              .studentKelas="${this._user?.kelas || ''}"
-              .editable="${true}"
+            .studentId="${this._user?.studentId || ''}"
+            .studentName="${this._user?.nama || ''}"
+            .studentNis="${this._user?.nis || ''}"
+            .studentAbsen="${this._user?.absen || ''}"
+            .studentKelas="${this._user?.kelas || ''}"
+            .editable="${true}"
             @quiz-saved="${this._onQuizSaved}">
           </explode-quiz>
         ` : this._activeTab === 2 ? html`
@@ -278,30 +322,14 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
       },
       settings: {
         configure: [
-          {
-            property: "appsScriptUrl",
-            title: "Apps Script URL",
-            inputMethod: "textfield",
-            description: "URL Google Apps Script Web App"
-          },
-          {
-            property: "sheetName",
-            title: "Nama Pertemuan",
-            inputMethod: "textfield",
-            default: "Pertemuan"
-          },
-          {
-            property: "viewMode",
-            title: "Mode Tampilan",
-            inputMethod: "select",
-            options: {
-              student: "View Mahasiswa",
-              lecturer: "Mode Dosen (Console)"
-            },
-            default: "student",
-            description: "Disable mode tertentu: 'student' = mahasiswa hanya lihat, 'lecturer' = dosen bisa input nilai"
-          }
+          { property: "appsScriptUrl", title: "Apps Script URL", inputMethod: "textfield", description: "URL Google Apps Script Web App" },
+          { property: "sheetName", title: "Nama Pertemuan", inputMethod: "textfield", default: "Pertemuan" },
+          { property: "viewMode", title: "Mode Tampilan", inputMethod: "select", options: { student: "View Mahasiswa", lecturer: "Mode Dosen (Console)" }, default: "student" },
+          { property: "quizTabHidden", title: "Sembunyikan Tab Kuis", inputMethod: "boolean", default: false }
         ]
+      },
+      saveOptions: {
+        unsetAttributes: ["_activeTab", "_successMsg", "_errorMsg", "_user", "_spreadsheetId"]
       }
     };
   }

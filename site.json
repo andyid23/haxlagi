@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785159278
+      "updated": 1785454342
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -129,7 +129,7 @@
     },
     {
       "id": "item-doc-dashboard",
-      "indent": 1,
+      "indent": 0,
       "location": "pages/dashboard-kuis/index.html",
       "slug": "dashboard-kuis",
       "order": 1,
@@ -138,7 +138,7 @@
       "description": "Demo dan dokumentasi dashboard kuis ringan",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785158164,
+        "updated": 1785454341,
         "published": true,
         "locked": false,
         "status": "",
