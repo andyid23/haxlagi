@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785495224
+      "updated": 1785501020
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -108,7 +108,7 @@
     },
     {
       "id": "item-doc-kuis",
-      "indent": 1,
+      "indent": 0,
       "location": "pages/kuis-interaktif/index.html",
       "slug": "kuis-interaktif",
       "order": 0,
@@ -117,7 +117,7 @@
       "description": "Demo dan dokumentasi elemen kuis interaktif",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785158164,
+        "updated": 1785501019,
         "published": true,
         "locked": false,
         "status": "",
