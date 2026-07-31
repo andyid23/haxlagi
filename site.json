@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785486713
+      "updated": 1785495210
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -49,7 +49,7 @@
     },
     {
       "id": "item-df69b4a8-b470-4c1e-be89-8833ce3452da",
-      "indent": 1,
+      "indent": 0,
       "location": "pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.html",
       "slug": "new-page-1",
       "order": 1,
@@ -58,7 +58,7 @@
       "description": "\n📚 Pertemuan 1: Pengenalan HAXcms\nMateri pembelajaran hari ini...\n\n\n\n",
       "metadata": {
         "created": 1784687716,
-        "updated": 1785158164,
+        "updated": 1785495210,
         "images": [],
         "videos": [],
         "published": true,
