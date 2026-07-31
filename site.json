@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785454342
+      "updated": 1785486467
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -184,7 +184,7 @@
     },
     {
       "id": "item-doc-todo",
-      "indent": 1,
+      "indent": 0,
       "location": "pages/todo-list/index.html",
       "slug": "todo-list",
       "order": 4,
@@ -193,7 +193,7 @@
       "description": "Demo dan dokumentasi daftar tugas",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785158165,
+        "updated": 1785486466,
         "published": true,
         "locked": false,
         "status": "",

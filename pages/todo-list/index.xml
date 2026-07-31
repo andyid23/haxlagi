@@ -10,7 +10,7 @@
 <description>Demo dan dokumentasi daftar tugas</description>
 <metadata>
 <created>1784667020</created>
-<updated>1784714531</updated>
+<updated>1785486466</updated>
 <published>true</published>
 <locked>false</locked>
 <status></status>
@@ -28,7 +28,7 @@
   bawaan.</p>
 <h2 id="h2-1591783538">🧪 Demo Langsung</h2>
 <p>Coba todo list interaktif di bawah ini:</p>
-<todo-list editable tasks="[{&quot;id&quot;:&quot;0911b962-0cbb-4712-aa32-a2c917b2fac0&quot;,&quot;text&quot;:&quot;lllkj&quot;,&quot;completed&quot;:false},{&quot;id&quot;:&quot;5d443879-dfd7-4c70-a491-2f6588aa4d12&quot;,&quot;text&quot;:&quot;jlkl&quot;,&quot;completed&quot;:false},{&quot;id&quot;:&quot;69e54711-5c3f-4aa2-bb38-db2cda19b397&quot;,&quot;text&quot;:&quot;kljlk&quot;,&quot;completed&quot;:false}]" _screen="list" _temp-tasks="[]" _editing-index="-1" _editor-origin="list"></todo-list>
+<todo-list editable tasks="[{&quot;id&quot;:&quot;0911b962-0cbb-4712-aa32-a2c917b2fac0&quot;,&quot;text&quot;:&quot;lllkj&quot;,&quot;completed&quot;:false},{&quot;id&quot;:&quot;5d443879-dfd7-4c70-a491-2f6588aa4d12&quot;,&quot;text&quot;:&quot;jlkl&quot;,&quot;completed&quot;:false},{&quot;id&quot;:&quot;69e54711-5c3f-4aa2-bb38-db2cda19b397&quot;,&quot;text&quot;:&quot;kljlk&quot;,&quot;completed&quot;:false},{&quot;id&quot;:&quot;42750e12-cb5f-42cd-b07d-743baf359606&quot;,&quot;text&quot;:&quot;daftar 1&quot;,&quot;completed&quot;:false}]" _screen="list" _temp-tasks="[{&quot;id&quot;:&quot;0911b962-0cbb-4712-aa32-a2c917b2fac0&quot;,&quot;text&quot;:&quot;lllkj&quot;,&quot;completed&quot;:false},{&quot;id&quot;:&quot;5d443879-dfd7-4c70-a491-2f6588aa4d12&quot;,&quot;text&quot;:&quot;jlkl&quot;,&quot;completed&quot;:false},{&quot;id&quot;:&quot;69e54711-5c3f-4aa2-bb38-db2cda19b397&quot;,&quot;text&quot;:&quot;kljlk&quot;,&quot;completed&quot;:false},{&quot;id&quot;:&quot;42750e12-cb5f-42cd-b07d-743baf359606&quot;,&quot;text&quot;:&quot;daftar 1&quot;,&quot;completed&quot;:false}]" _editing-index="-1" _editor-origin="list"></todo-list>
 <h2 id="h2-1518686653">📋 Atribut yang Didukung</h2>
 <editable-table accent-color="grey" column-header><table>
 	<thead class="thead">
@@ -64,21 +64,29 @@ todoList.tasks = [
 <ul>
     <li><strong>Tambah Tugas:</strong> Input teks + tombol Add, atau tekan Enter</li>
 
+
     <li><strong>Checklist:</strong> Tandai tugas selesai/belum</li>
+
 
     <li><strong>Hapus Tugas:</strong> Tombol delete pada setiap item</li>
 
+
     <li><strong>Validasi Input:</strong> Minimal 3 karakter, maksimal 50 karakter</li>
+
 
     <li><strong>Editor Bawaan:</strong> Panel editor untuk mengelola daftar tugas (mode HAX
       editor)</li>
 
+
     <li><strong>Empty State:</strong> Tampilan saat belum ada tugas</li>
+
 
     <li><strong>DDD Design System:</strong> Menggunakan token desain HAX (warna, spacing,
       font)</li>
 
+
     <li><strong>Aksesibilitas:</strong> aria-label lengkap, keyboard navigation</li>
+
 
   </ul>
 <h2 id="h2-721169473">🎨 Tema Polaris</h2>
