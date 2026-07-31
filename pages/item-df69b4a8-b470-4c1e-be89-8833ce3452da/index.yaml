@@ -14,7 +14,7 @@ description: |+
 
 metadata:
   created: 1784687716
-  updated: 1785495210
+  updated: 1785495223
   images: []
   videos: []
   published: true
@@ -29,6 +29,8 @@ content: >
   <h1 id="h1-1954384612">📚 Pertemuan 1: Pengenalan HAXcms</h1>
 
   <p>Materi pembelajaran hari ini...</p>
+
+  <p>tiidak bisa</p>
 
   <full-quiz-dashboard
   apps-script-url="https://script.google.com/macros/s/AKfycbzAJL1vjme8cv5DDgrrEC91kJzaGDMcArxYmMX8U40tZ3PvQLKDh73TOr5QjplEc8ZoDQ/exec"
