@@ -24,17 +24,13 @@
   <script type="importmap">
     {
       "imports": {
-        "@haxtheweb/": "https://cdn.hax.cloud/cdn/build/es6/node_modules/@haxtheweb/",
-        "@lrnwebcomponents/": "https://cdn.hax.cloud/cdn/build/es6/node_modules/@lrnwebcomponents/",
-        "@lit/reactive-element": "https://cdn.hax.cloud/cdn/build/es6/node_modules/@lit/reactive-element/reactive-element.js",
-        "@lit/reactive-element/": "https://cdn.hax.cloud/cdn/build/es6/node_modules/@lit/reactive-element/",
-        "lit": "https://cdn.hax.cloud/cdn/build/es6/node_modules/lit/index.js",
-        "lit/": "https://cdn.hax.cloud/cdn/build/es6/node_modules/lit/",
-        "lit-element": "https://cdn.hax.cloud/cdn/build/es6/node_modules/lit-element/index.js",
-        "lit-element/": "https://cdn.hax.cloud/cdn/build/es6/node_modules/lit-element/",
-        "lit-html": "https://cdn.hax.cloud/cdn/build/es6/node_modules/lit-html/lit-html.js",
-        "lit-html/": "https://cdn.hax.cloud/cdn/build/es6/node_modules/lit-html/",
-        "canvas-confetti": "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.module.mjs"
+        "lit": "https://esm.sh/lit@3.2.1",
+        "canvas-confetti": "https://esm.sh/canvas-confetti@1.9.4"
+      },
+      "scopes": {
+        "./custom/build/": {
+          "@haxtheweb/": "./build/es6/node_modules/@haxtheweb/"
+        }
       }
     }
   </script>

@@ -8,7 +8,7 @@ title: Explode Quiz - Kuis Interaktif
 description: Demo dan dokumentasi elemen kuis interaktif
 metadata:
   created: 1784667020
-  updated: 1785501019
+  updated: 1785501859
   published: true
   locked: false
   status: ''
@@ -26,6 +26,12 @@ content: >
     menyimpan hasil kuis secara real-time.</p>
   <h2 id="h2-1591783538">🧪 Demo Langsung</h2>
 
+  <div class="step">
+      <h2><span class="step-num">1</span> Login / Registrasi</h2>
+
+      <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec" _screen="logged-in" _nama="Andy Yulianto" _email="wildanhabib051@gmail.com" _nis="234" _absen="2" _kelas="XI-1" _student-id="STD-65108053"></quiz-user-auth>
+
+    </div>
   <p>Coba kuis interaktif di bawah ini:</p>
 
   <explode-quiz questions="[{&quot;question&quot;:&quot;Apa ibu kota
@@ -43,7 +49,9 @@ content: >
   _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}"
   _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}"
   _match-answers="{}" _temp-question-points="1" _max-points="0"
-  spreadsheet-id="" script-function-name="submitQuizResult"></explode-quiz>
+  spreadsheet-id="" script-function-name="submitQuizResult" student-name="Andy
+  Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2"
+  student-kelas="XI-1" _student-name="Andy Yulianto"></explode-quiz>
 
   <h2 id="h2-1518686653">📋 Atribut yang Didukung</h2>
 

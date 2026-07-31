@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jul 2026 10:53:44 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 12:30:20 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -26,7 +26,7 @@
     <item>
       <title>Explode Quiz - Kuis Interaktif</title>
       <link>https://localhost:3000/sites/haxnow/kuis-interaktif</link>
-      <description>🎯 Explode Quiz &amp;#8212; Kuis Interaktif Elemen &amp;lt;explode-quiz&amp;gt; adalah komponen kuis interaktif pilihan ganda yang dilengkapi efek konfeti, editor soal bawaan, dan integrasi Google Sheets untuk menyimpan hasil kuis secara real-time. 🧪 Demo Langsung Coba kuis interaktif di bawah ini: 📋 Atribut yang Didukung Atribut Tipe Deskripsi Default spreadsheet-id String ID Google Spreadsheet untuk menyimpan hasil — apps-script-url String URL Google Apps Script endpoint — editable Boolean Tampilkan ...</description>
+      <description>🎯 Explode Quiz &amp;#8212; Kuis Interaktif Elemen &amp;lt;explode-quiz&amp;gt; adalah komponen kuis interaktif pilihan ganda yang dilengkapi efek konfeti, editor soal bawaan, dan integrasi Google Sheets untuk menyimpan hasil kuis secara real-time. 🧪 Demo Langsung 1 Login / Registrasi Coba kuis interaktif di bawah ini: 📋 Atribut yang Didukung Atribut Tipe Deskripsi Default spreadsheet-id String ID Google Spreadsheet untuk menyimpan hasil — apps-script-url String URL Google Apps Script endpoint — editab...</description>
       <guid>https://localhost:3000/sites/haxnow/kuis-interaktif</guid>
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>

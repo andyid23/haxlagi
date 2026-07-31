@@ -6,6 +6,9 @@ Elemen `<explode-quiz>` adalah komponen kuis interaktif pilihan ganda yang dilen
 🧪 Demo Langsung
 ----------------
 
+1 Login / Registrasi
+--------------------
+
 Coba kuis interaktif di bawah ini:
 
 📋 Atribut yang Didukung
