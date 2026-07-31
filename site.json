@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785486521
+      "updated": 1785486713
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -193,7 +193,7 @@
       "description": "Demo dan dokumentasi daftar tugas",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785486521,
+        "updated": 1785486713,
         "published": true,
         "locked": false,
         "status": "",

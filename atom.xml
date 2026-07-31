@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-07-31T08:27:47.000Z</updated>
+  <updated>2026-07-31T08:28:41.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -711,7 +711,7 @@ notif.addEventListener('notif-hide', (e) => {
   <entry>
     <title>Todo List</title>
     <id>item-doc-todo</id>
-    <updated>2026-07-31T08:28:41.000Z</updated>
+    <updated>2026-07-31T08:31:53.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi daftar tugas</summary>
     <link href="https://localhost:3000/sites/haxnow/todo-list"/>
@@ -762,7 +762,9 @@ todoList.tasks = [
 
 
 
+
     <li><strong>Checklist:</strong> Tandai tugas selesai/belum</li>
+
 
 
 
@@ -770,7 +772,9 @@ todoList.tasks = [
 
 
 
+
     <li><strong>Validasi Input:</strong> Minimal 3 karakter, maksimal 50 karakter</li>
+
 
 
 
@@ -779,7 +783,9 @@ todoList.tasks = [
 
 
 
+
     <li><strong>Empty State:</strong> Tampilan saat belum ada tugas</li>
+
 
 
 
@@ -788,7 +794,9 @@ todoList.tasks = [
 
 
 
+
     <li><strong>Aksesibilitas:</strong> aria-label lengkap, keyboard navigation</li>
+
 
 
 
@@ -810,6 +818,9 @@ todoList.tasks = [
 <h2 id="h2--291047800">🧩 Integrasi dengan HAX Editor</h2>
 <p>Saat digunakan di dalam HAXcms editor, komponen ini otomatis menampilkan tombol <strong>"Edit Task List"</strong> yang
     membuka panel editor untuk mengelola daftar tugas secara visual.</p>
+<p></p>
+<p><todo-list tasks="[{&quot;id&quot;:&quot;2b652aa7-2317-4df4-a80c-123c1669bfe4&quot;,&quot;text&quot;:&quot;daftar tugas 1&quot;,&quot;completed&quot;:false}]" _screen="list" _temp-tasks="[]" _editing-index="-1" _editor-origin="list"></todo-list>
+</p>
  ]]>
     </content>
   </entry>
