@@ -1,4 +1,27 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+<id>item-tutorial-alur-aktivitas</id>
+<indent>0</indent>
+<location>pages/tutorial-alur-aktivitas/index.xml</location>
+<slug>tutorial-alur-aktivitas</slug>
+<order>11</order>
+<parent>item-doc-elements</parent>
+<title>📘 Tutorial Alur Aktivitas &amp; Sheet</title>
+<description>Alur lengkap: siswa → aktivitas → sheets, 7 sheet utama, kriteria kehadiran, alur tugas/forum, template Bank Soal, heatmap</description>
+<metadata>
+<created>1785574419</created>
+<updated>1785592663</updated>
+<images>
+</images>
+<videos>
+</videos>
+<published>true</published>
+<hideInMenu>false</hideInMenu>
+<locked>false</locked>
+<readtime>7</readtime>
+<status></status>
+</metadata>
+<content><![CDATA[
 <h1 id="h1--1927160115">📘 Tutorial Lengkap: Alur Aktivitas, 7 Sheet Utama &#38; Kriteria Kehadiran</h1>
 <p>Panduan visual &#38; teknis: dari aktivitas siswa di browser &#8594; ke Google Sheets via Apps Script. Semua fitur sudah ada di elemen; halaman ini hanya mendokumentasikan struktur data &#38; alurnya.</p>
 <div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; border-radius: 16px; padding: 24px; margin: 24px 0;">
@@ -293,3 +316,5 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
   <li><code>custom/src/quiz-dashboard-lite2/lib/code-forum-tugas.gs.md</code> &#8212; Dokumentasi forum &#38; tugas</li>
 
 </ul>
+]]></content>
+</item>

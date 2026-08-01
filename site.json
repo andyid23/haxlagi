@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785590659
+      "updated": 1785592664
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -382,7 +382,7 @@
     },
     {
       "id": "item-tutorial-alur-aktivitas",
-      "indent": 1,
+      "indent": 0,
       "location": "pages/tutorial-alur-aktivitas/index.html",
       "slug": "tutorial-alur-aktivitas",
       "order": 11,
@@ -391,13 +391,13 @@
       "description": "Alur lengkap: siswa → aktivitas → sheets, 7 sheet utama, kriteria kehadiran, alur tugas/forum, template Bank Soal, heatmap",
       "metadata": {
         "created": 1785574419,
-        "updated": 1785590414,
+        "updated": 1785592663,
         "images": [],
         "videos": [],
         "published": true,
         "hideInMenu": false,
         "locked": false,
-        "readtime": 8,
+        "readtime": 7,
         "status": ""
       }
     },
