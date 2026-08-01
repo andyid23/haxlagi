@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785593342
+      "updated": 1785593428
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -406,7 +406,7 @@
       "indent": 0,
       "location": "pages/item-b055951b-7998-440e-9f07-b8976e6d339c/index.html",
       "slug": "elemendokumen/copy-of-tutorial-alur-aktivitas-sheet",
-      "order": 12,
+      "order": 10,
       "parent": "item-doc-elements",
       "title": "Copy of 📘 Tutorial Alur Aktivitas & Sheet",
       "description": "📘 Tutorial Lengkap: Alur Aktivitas, 7 Sheet Utama &#38; Kriteria Kehadiran\nPanduan visual &#38; teknis: dari aktivitas siswa di browser &#8594; ke Google Sheets via Apps Script. Semua fitur sudah ad",
@@ -415,11 +415,27 @@
         "created": 1785590414,
         "images": [],
         "videos": [],
-        "updated": 1785593341,
+        "updated": 1785593428,
         "published": true,
-        "hideInMenu": true,
+        "hideInMenu": false,
         "readtime": 7,
-        "pageType": "listen"
+        "pageType": "listen",
+        "theme": {
+          "element": "clean-one",
+          "path": "@haxtheweb/clean-one/clean-one.js",
+          "name": "Clean One",
+          "thumbnail": "@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-clean-one-thumb.jpg",
+          "description": "Start with a blank site using the Clean One",
+          "category": [
+            "Course"
+          ],
+          "hidden": false,
+          "priority": -2,
+          "terrible": false,
+          "key": "clean-one"
+        },
+        "accentColor": "pink",
+        "icon": "courseicons:listen"
       }
     },
     {
