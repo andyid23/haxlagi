@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+<id>item-b055951b-7998-440e-9f07-b8976e6d339c</id>
+<indent>1</indent>
+<location>pages/item-b055951b-7998-440e-9f07-b8976e6d339c/index.xml</location>
+<slug>elemendokumen/copy-of-tutorial-alur-aktivitas-sheet</slug>
+<order>12</order>
+<parent>item-doc-elements</parent>
+<title>Copy of 📘 Tutorial Alur Aktivitas &amp; Sheet</title>
+<description></description>
+<metadata>
+<locked>false</locked>
+<created>1785590414</created>
+<images>
+</images>
+<videos>
+</videos>
+<updated>1785590414</updated>
+</metadata>
+<content><![CDATA[<h1>📘 Tutorial Lengkap: Alur Aktivitas, 7 Sheet Utama & Kriteria Kehadiran</h1>
+<p>Panduan visual & teknis: dari aktivitas siswa di browser → ke Google Sheets via Apps Script. Semua fitur sudah ada di elemen; halaman ini hanya mendokumentasikan struktur data & alurnya.</p>
+
+<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; border-radius: 16px; padding: 24px; margin: 24px 0;">
+  <h2 style="margin-top: 0; color: white;">🎯 Ringkasan 1 Halaman</h2>
+  <table style="width: 100%; border-collapse: collapse; color: white;">
+    <thead>
+      <tr style="border-bottom: 1px solid rgba(255,255,255,0.3);">
+        <th style="text-align: left; padding: 8px;">Aktivitas Siswa</th>
+        <th style="text-align: left; padding: 8px;">Elemen Frontend</th>
+        <th style="text-align: left; padding: 8px;">Action Apps Script</th>
+        <th style="text-align: left; padding: 8px;">Sheet Target</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 8px;">🔐 Login / Register</td>
+        <td style="padding: 8px;"><code>quiz-user-auth</code></td>
+        <td style="padding: 8px;"><code>register</code> / <code>login</code></td>
+        <td style="padding: 8px;"><code>Users</code></td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;">📖 Baca Materi (scroll)</td>
+        <td style="padding: 8px;"><code>activity-logger</code></td>
+        <td style="padding: 8px;"><code>activity</code> type=reading</td>
+        <td style="padding: 8px;"><code>{Pertemuan} - Aktivitas</code></td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;">⬇️ Download File</td>
+        <td style="padding: 8px;"><code>activity-logger</code></td>
+        <td style="padding: 8px;"><code>activity</code> type=download</td>
+        <td style="padding: 8px;"><code>{Pertemuan} - Aktivitas</code></td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;">🎯 Kuis Selesai</td>
+        <td style="padding: 8px;"><code>explode-quiz</code></td>
+        <td style="padding: 8px;"><code>submit</code> / <code>saveQuiz</code></td>
+        <td style="padding: 8px;"><code>pertemuan-kuis</code> + <code>{Pertemuan}-Kuis</code></td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;">💬 Komentar Forum</td>
+        <td style="padding: 8px;"><code>assignment-forum</code></td>
+        <td style="padding: 8px;"><code>saveForumComment</code> (forumApiUrl)</td>
+        <td style="padding: 8px;"><code>Forum Log</code> + <code>{Pertemuan}-Aktivitas</code></td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;">📝 Kirim Tugas</td>
+        <td style="padding: 8px;"><code>assignment-forum</code></td>
+        <td style="padding: 8px;"><code>saveAssignment</code> (forumApiUrl)</td>
+        <td style="padding: 8px;"><code>Tugas Log</code> + <code>{Pertemuan}-Aktivitas</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🗂️ 7 Sheet Utama — Kolom & Contoh Data (Siap Copas ke Google Sheets)</h2>
+<p>Copy tabel di bawah → Paste ke Google Sheets (Data → Split text to columns → Separator: <code>|</code>).</p>
+
+<h3>1. <code>Users</code> — Daftar Siswa (wajib dibuat manual)</h3>
+<pre><code>Student ID	| NIS	| Nama	| Absen	| Kelas
+STD-001	| 001	| Budi Santoso	| 1	| XI-1
+STD-002	| 002	| Citra Dewi	| 2	| XI-1
+STD-003	| 003	| Dedi Prasetyo	| 3	| XI-1
+</code></pre>
+
+<h3>2. <code>pertemuan-kuis</code> — Agregasi Kuis Semua Pertemuan (auto-create)</h3>
+<pre><code>Timestamp	| Date	| Kode Materi	| Nama	| Skor (%)	| Total Soal	| Status	| Student ID	| NIS	| Absen	| Kelas	| Kategori Kuis
+2026-01-15 08:30	| 2026-01-15	| UH1	| Budi Santoso	| 85	| 10	| LULUS	| STD-001	| 001	| 1	| XI-1	| formatif
+2026-01-22 09:00	| 2026-01-22	| UTS	| Budi Santoso	| 78	| 15	| LULUS	| STD-001	| 001	| 1	| XI-1	| sumatif
+</code></pre>
+
+<h3>3. <code>{Pertemuan} - Kuis</code> — Per Pertemuan (auto-create, nama = <code>sheet-name</code>)</h3>
+<pre><code>Timestamp	| Date	| Kode Materi	| Nama	| Skor (%)	| Total Soal	| Status	| Student ID	| NIS	| Absen	| Kelas	| Kategori Kuis
+2026-01-15 08:30	| 2026-01-15	| UH1	| Budi Santoso	| 85	| 10	| LULUS	| STD-001	| 001	| 1	| XI-1	| formatif
+</code></pre>
+
+<h3>4. <code>{Pertemuan} - Aktivitas</code> — Log Aktivitas Harian (auto-create)</h3>
+<pre><code>Timestamp	| Tanggal	| Hari	| Nama	| Tipe Aktivitas	| Deskripsi	| Count	| Student ID	| NIS	| Absen	| Kelas
+2026-01-15 08:30	| 2026-01-15	| Jumat	| Budi Santoso	| reading	| Membaca materi (scroll 1200px)	| 1	| STD-001	| 001	| 1	| XI-1
+2026-01-15 08:45	| 2026-01-15	| Jumat	| Budi Santoso	| quiz	| Kuis selesai (Skor: 85%)	| 1	| STD-001	| 001	| 1	| XI-1
+2026-01-15 09:10	| 2026-01-15	| Jumat	| Budi Santoso	| assignment	| Tugas dikumpulkan: Refleksi Energi	| 1	| STD-001	| 001	| 1	| XI-1
+2026-01-15 09:20	| 2026-01-15	| Jumat	| Budi Santoso	| download	| Download materi: Modul 1.pdf	| 1	| STD-001	| 001	| 1	| XI-1
+2026-01-15 09:30	| 2026-01-15	| Jumat	| Budi Santoso	| discussion	| Diskusi di: Forum Pertemuan 1	| 1	| STD-001	| 001	| 1	| XI-1
+</code></pre>
+
+<h3>5. <code>Forum Log</code> — Komentar Bertingkat (auto-create via forumApiUrl)</h3>
+<pre><code>Timestamp	| CommentID	| ParentID	| UserName	| StudentID	| Text	| Sheet	| Action	| Likes
+2026-01-15 09:30	| 1705305000000	| main	| Budi Santoso	| STD-001	| Saya setuju dengan materi	| Pertemuan 1	| post	| 2
+2026-01-15 09:35	| 1705305010000	| 1705305000000	| Citra Dewi	| STD-002	| Saya juga	| Pertemuan 1	| reply	| 1
+</code></pre>
+
+<h3>6. <code>Tugas Log</code> — Submission Tugas Mandiri (auto-create via forumApiUrl)</h3>
+<pre><code>Timestamp	| StudentID	| Nama	| Sheet	| Title	| Content	| Link
+2026-01-15 09:40	| STD-001	| Budi Santoso	| Pertemuan 1	| Refleksi Energi Terbarukan	| Energi terbarukan penting karena...	| https://drive.google.com/file/d/abc123/view
+2026-01-15 09:45	| STD-002	| Citra Dewi	| Pertemuan 1	| Refleksi Energi Terbarukan	| Saya menginstal panel surya di rumah	| 
+</code></pre>
+
+<h3>7. <code>Akumulasi Nilai Rapor</code> — Rapor Akhir (auto-create via Generate Laporan)</h3>
+<pre><code>Student ID	| NIS	| Nama	| Absen	| Kelas	| Jumlah Pertemuan	| Rata Aktivitas/Pertemuan	| Kehadiran (skala 100)	| Rata-rata UH	| Skor UTS	| Skor UAS	| Skor Sikap	| Skor Keterampilan	| Nilai Akhir	| Grade
+STD-001	| 001	| Budi Santoso	| 1	| XI-1	| 8	| 7.5	| 85	| 88	| 80	| 82	| 90	| 75	| 83	| A
+STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 88	| A
+</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📋 Kriteria Kehadiran — 6 Item (AttendanceTracker)</h2>
+<p>Setiap hari, <code>attendance-tracker</code> memanggil <code>getActivityHistory</code> + <code>getForumActivityHistory</code> lalu menghitung:</p>
+
+<table>
+  <thead>
+    <tr><th>#</th><th>Ikon</th><th>Kriteria</th><th>Minimum</th><th>Sheet Cek</th><th>Event Trigger</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>📖</td><td>Membaca Materi</td><td>3× scroll >1000px</td><td><code>{Pertemuan} - Aktivitas</code> (type=reading)</td><td><code>activity-logger._handleScroll</code></td></tr>
+    <tr><td>2</td><td>🎯</td><td>Mengerjakan Kuis</td><td>1× selesai</td><td><code>{Pertemuan} - Aktivitas</code> (type=quiz)</td><td><code>quiz-saved</code> event</td></tr>
+    <tr><td>3</td><td>📝</td><td>Mengumpulkan Tugas</td><td>1× submit</td><td><code>{Pertemuan} - Aktivitas</code> (type=assignment)</td><td><code>assignment-saved</code> event</td></tr>
+    <tr><td>4</td><td>⬇️</td><td>Download Materi</td><td>1× klik file</td><td><code>{Pertemuan} - Aktivitas</code> (type=download)</td><td><code>download-saved</code> event</td></tr>
+    <tr><td>5</td><td>💬</td><td>Komentar Forum</td><td>1× post/reply</td><td><code>Forum Log</code> (via <code>forumApiUrl</code>)</td><td><code>discussion-saved</code> event</td></tr>
+    <tr><td>6</td><td>🔥</td><td>Total Aktivitas Hari Ini</td><td>8×</td><td>Semua di atas</td><td>Semua event</td></tr>
+  </tbody>
+</table>
+
+<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>Rumus:</strong> <code>attendancePercentage = (kriteria_tercapai / 6) × 100</code><br>
+  <strong>Status:</strong> <code>LENGKAP</code> (100%) | <code>PROSES</code> (50–99%) | <code>BELUM MULAI</code> (<50%)
+</div>
+
+<p><strong>Troubleshooting "Tercapai 0 dari min. 1":</strong></p>
+<ul>
+  <li>Belum login (studentId kosong)</li>
+  <li>Sheet <code>{Pertemuan} - Aktivitas</code> belum terbentuk (belum ada aktivitas hari itu)</li>
+  <li><code>forumApiUrl</code> tidak diisi → kriteria forum di-skip (total jadi 5)</li>
+  <li>Event tidak terkirim: cek console network → pastikan <code>activity</code> POST 200 OK</li>
+</ul>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔄 Alur Kirim Tugas (Assignment)</h2>
+<ol>
+  <li>Siswa buka halaman dengan <code><assignment-forum></code> → isi textarea jawaban + link Google Drive/Doc (opsional)</li>
+  <li>Klik <strong>"Kirim & Kunci Tugas"</strong> → <code>_submitAssignment()</code> POST ke <code>forumApiUrl</code> action <code>saveAssignment</code></li>
+  <li>Apps Script (<code>code-forum-tugas.gs</code>) → append row ke sheet <strong>"Tugas Log"</strong></li>
+  <li>Dispatch event <code>assignment-saved</code> → <code>activity-logger</code> tangkap → POST <code>activity</code> type=assignment ke <code>appsScriptUrl</code> → sheet <strong><code>{Pertemuan} - Aktivitas</code></strong></li>
+  <li>localStorage <code>hax_assignment_submitted=true</code> → tombol berubah <strong>"Selesai"</strong> + <strong>"Ubah"</strong> (reset)</li>
+</ol>
+
+<div style="background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>Catatan:</strong> <code>forumApiUrl</code> harus deployment terpisah dari <code>appsScriptUrl</code> (code-forum-tugas.gs) untuk hindari quota limit.
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>💬 Alur Komentar Forum</h2>
+<ol>
+  <li>Siswa tulis komentar/balasan di <code><assignment-forum></code></li>
+  <li>Klik <strong>"Post Comment"</strong> / <strong>"Reply"</strong> → POST ke <code>forumApiUrl</code> action <code>saveForumComment</code></li>
+  <li>Apps Script → append row ke sheet <strong>"Forum Log"</strong> (CommentID, ParentID=main/replyID, Action=post/reply, Likes=0)</li>
+  <li>Dispatch <code>discussion-saved</code> → <code>activity-logger</code> catat <code>activity</code> type=discussion → sheet <strong><code>{Pertemuan} - Aktivitas</code></strong></li>
+  <li>AttendanceTracker panggil <code>getForumActivityHistory</code> (via <code>forumApiUrl</code>) → hitung <code>counts.forum</code> untuk kriteria #5</li>
+</ol>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔥 Heatmap GitHub-Style (EngagementScore)</h2>
+<p>Sudah terimplementasi di <code><engagement-score></code>:</p>
+<ul>
+  <li>Grid 42 hari (6 minggu), 7 kolom (Min–Sab), 6 baris mingguan</li>
+  <li>Data: <code>getActivityHistory</code> (42 hari, <code>appsScriptUrl</code>) + <code>getForumActivityHistory</code> (<code>forumApiUrl</code>) → merge <code>count</code> per hari</li>
+  <li>Warna intensitas: 0 = putih, rendah = ungu muda, tinggi = ungu tua (mirip GitHub contributions)</li>
+  <li>Statistik samping: total aktivitas, hari aktif, streak, rata-rata/hari</li>
+</ul>
+<div style="background: #fff3e0; border: 1px solid #ffb74d; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>Gunakan:</strong> <code><engagement-score apps-script-url="..." forum-api-url="..." student-id="STD-001"></engagement-score></code>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🗂️ Template Bank Soal — Siap Copas ke Sheet <code>Bank Soal</code></h2>
+<p>Buat tab bernama persis <strong>Bank Soal</strong> dengan kolom: <code>ID | Kategori | Tipe | Soal | Detail | Gambar | Poin</code></p>
+
+<pre><code>ID	| Kategori	| Tipe	| Soal	| Detail	| Gambar	| Poin
+1	| literasi	| mc	| Apa kepanjangan HTML?	| {"choices":["HyperText Markup Language","High Text Machine Language","Home Tool Markup Language","Hyperlinks Text Markup"],"correctIndex":0}	|	| 1
+2	| numerasi	| pgk	| Tentukan Benar/Salah: Matahari terbit di timur	| {"statements":[{"text":"Matahari terbit di timur","answer":true},{"text":"Bulan lebih besar dari matahari","answer":false}]}	|	| 2
+3	| campur	| matching	| Jodohkan operasi & hasil	| {"leftItems":["1+1","2+2"],"rightItems":["2","4"],"correctPairs":[["1+1","2"],["2+2","4"]]}	|	| 2
+4	| literasi	| shortAnswer	| Sebutkan dasar negara Indonesia	| {"acceptedAnswers":["pancasila","Pancasila"]}	|	| 1
+5	| numerasi	| mc	| Luas persegi panjang 5×8	| {"choices":["13","40","35","30"],"correctIndex":1}	|	| 1
+6	| campur	| pgk	| Benar/Salah: 0.5 + 0.5 = 1	| {"statements":[{"text":"0.5 + 0.5 = 1","answer":true},{"text":"1/2 + 1/2 = 1/4","answer":false}]}	|	| 2
+7	| literasi	| matching	| Jodohkan kata & lawan	| {"leftItems":["Besar","Siang","Panas"],"rightItems":["Kecil","Malam","Dingin"],"correctPairs":[["Besar","Kecil"],["Siang","Malam"],["Panas","Dingin"]]}	|	| 2
+8	| numerasi	| shortAnswer	| Berapa 15 × 12?	| {"acceptedAnswers":["180"]}	|	| 1
+</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>⚙️ Setup Halaman Standar</h2>
+<pre><code><!-- Login Siswa -->
+<quiz-user-auth apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"></quiz-user-auth>
+
+<!-- Dashboard Dosen (Console + Generate Rapor) -->
+<quiz-dashboard-lite2
+  view-mode="lecturer"
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  forum-api-url="https://script.google.com/macros/s/FORUM_DEPLOYMENT_ID/exec"
+  sheet-name="Pertemuan 1">
+</quiz-dashboard-lite2>
+
+<!-- Forum + Tugas (deployment terpisah) -->
+<assignment-forum
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  forum-api-url="https://script.google.com/macros/s/FORUM_DEPLOYMENT_ID/exec"
+  sheet-name="Pertemuan 1"
+  assignment-title="Refleksi Pertemuan 1"
+  forum-topic="Diskusi Pertemuan 1">
+</assignment-forum>
+
+<!-- Attendance Tracker + Heatmap -->
+<attendance-tracker
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  forum-api-url="https://script.google.com/macros/s/FORUM_DEPLOYMENT_ID/exec"
+  student-id="STD-001">
+</attendance-tracker>
+<engagement-score
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  forum-api-url="https://script.google.com/macros/s/FORUM_DEPLOYMENT_ID/exec"
+  student-id="STD-001">
+</engagement-score>
+</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🧰 Troubleshooting Cepat</h2>
+<table>
+  <thead>
+    <tr><th>Gejala</th><th>Penyebab</th><th>Solusi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>"Elemen kuis tidak ditemukan"</td><td>Quiz belum dirender / tab tidak aktif</td><td>Versi baru: kuis selalu dirender (hidden). Pastikan <code>quiz-dashboard-lite2</code> terbaru.</td></tr>
+    <tr><td>Kriteria forum "Tercapai 0"</td><td><code>forumApiUrl</code> kosong / beda deployment</td><td>Isi <code>forum-api-url</code> dengan URL Web App <code>code-forum-tugas.gs</code>.</td></tr>
+    <tr><td>Soal edit hilang setelah Save</td><td>Questions tersimpan di shadow DOM</td><td>Versi baru: soal otomatis persist ke attribute <code>questions</code> dashboard → tersimpan saat Save halaman HAXcms.</td></tr>
+    <tr><td>Warning "Import already in progress"</td><td>Race condition HAXcms saat simpan</td><td>Jinak — data tetap tersimpan. Refresh halaman jika tampilan ketinggalan.</td></tr>
+    <tr><td>Heatmap kosong</td><td><code>student-id</code> tidak match / history 0</td><td>Pastikan siswa sudah login & punya aktivitas; cek <code>getActivityHistory</code> return data.</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📎 File Pendukung di Repo</h2>
+<ul>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/code.gs</code> — Apps Script utama (kuis, aktivitas, rapor, Users)</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/code-forum-tugas.gs</code> — Forum & Tugas (deployment terpisah)</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/code.gs.md</code> — Dokumentasi API actions</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/code-forum-tugas.gs.md</code> — Dokumentasi forum & tugas</li>
+</ul>]]></content>
+</item>
