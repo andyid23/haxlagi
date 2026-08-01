@@ -14,45 +14,7 @@ Coba kuis interaktif di bawah ini:
 📋 Atribut yang Didukung
 ------------------------
 
-Atribut
-
-Tipe
-
-Deskripsi
-
-Default
-
-`spreadsheet-id`
-
-String
-
-ID Google Spreadsheet untuk menyimpan hasil
-
-—
-
-`apps-script-url`
-
-String
-
-URL Google Apps Script endpoint
-
-—
-
-`editable`
-
-Boolean
-
-Tampilkan tombol edit soal
-
-false
-
-`questions`
-
-JSON Array
-
-Daftar soal kustom (JSON string)
-
-3 soal default
+<editable-table accent-color="grey" column-header=""><table><thead class="thead"><tr class="thead-tr tr"><th scope="col" class="th th-or-td">Atribut</th><th scope="col" class="th th-or-td">Tipe</th><th scope="col" class="th th-or-td">Deskripsi</th><th scope="col" class="th th-or-td">Default</th></tr></thead><tbody class="tbody"><tr class="tbody-tr tr"><td class="td th-or-td"><code>spreadsheet-id</code></td><td class="td th-or-td">String</td><td class="td th-or-td">ID Google Spreadsheet untuk menyimpan hasil</td><td class="td th-or-td">—</td></tr><tr class="tbody-tr tr"><td class="td th-or-td"><code>apps-script-url</code></td><td class="td th-or-td">String</td><td class="td th-or-td">URL Google Apps Script endpoint</td><td class="td th-or-td">—</td></tr><tr class="tbody-tr tr"><td class="td th-or-td"><code>editable</code></td><td class="td th-or-td">Boolean</td><td class="td th-or-td">Tampilkan tombol edit soal</td><td class="td th-or-td">false</td></tr><tr class="tbody-tr tr"><td class="td th-or-td"><code>questions</code></td><td class="td th-or-td">JSON Array</td><td class="td th-or-td">Daftar soal kustom (JSON string)</td><td class="td th-or-td">3 soal default</td></tr></tbody></table></editable-table>
 
 🖥️ Cara Penggunaan
 -------------------
