@@ -9,7 +9,7 @@
   "description": "\n\n\n",
   "metadata": {
     "created": 1785566939,
-    "updated": 1785566974,
+    "updated": 1785567319,
     "images": [],
     "videos": [],
     "published": true,
@@ -17,5 +17,5 @@
     "locked": false,
     "readtime": 1
   },
-  "content": "\n<p></p>\n<quiz-dashboard-lite2 apps-script-url=\"https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec\" sheet-name=\"Pertemuan 2\" view-mode=\"student\" _active-tab=\"0\" _success-msg=\"Selamat datang, Andy Yulianto! Data kuis &amp; aktivitas akan tercatat atas nama Anda.\">\n</quiz-dashboard-lite2>\n"
+  "content": "\n<p></p>\n<quiz-dashboard-lite2 apps-script-url=\"https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec\" sheet-name=\"LD1\" view-mode=\"student\" _active-tab=\"1\" _success-msg=\"Selamat datang, Andy Yulianto! Data kuis &amp; aktivitas akan tercatat atas nama Anda.\">\n</quiz-dashboard-lite2>\n<p></p>\n<media-image accent-color=\"grey\" size=\"wide\" offset=\"none\" source=\"https://boringbug.com/wp-content/uploadsa/2017/11/options-and-choices.jpg?w=525\"></media-image>\n<p></p>\n<p></p>\n"
 }
