@@ -19,7 +19,7 @@ Tugas tersimpan ke `Tugas Log` sheet. Forum CRUD via `Forum Log` sheet (nested r
 This looks fun, let's go!
 -------------------------
 
-<meme-maker image-url="https://e0.pxfuel.com/wallpapers/813/10/desktop-wallpaper-brain-galaxy-brain.jpg" top-text="You, while using HAX" bottom-text="...probably"><div>You, while using HAX</div><img src="https://e0.pxfuel.com/wallpapers/813/10/desktop-wallpaper-brain-galaxy-brain.jpg" alt="" preload="lazy" aria-describedby=""><div>...probably</div></meme-maker>
+<meme-maker image-url="/files/brain-galaxy.jpg" top-text="You, while using HAX" bottom-text="...probably"><div>You, while using HAX</div><img src="/files/brain-galaxy.jpg" alt="" preload="lazy" aria-describedby=""><div>...probably</div></meme-maker>
 
 Get involved with HAX
 ---------------------

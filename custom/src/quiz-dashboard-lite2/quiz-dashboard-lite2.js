@@ -5,6 +5,7 @@ import "./lib/attendance-system.js";
 import "./lib/explode-quiz.js";
 import "./lib/quiz-user-auth.js";
 import "./lib/assignment-forum.js";
+import "./lib/lecturer-console.js";
 
 class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
   static get tag() {
@@ -303,13 +304,20 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
           </div>
         ` : html`
           <div style="margin-top: var(--ddd-spacing-6);">
-            <transparent-gradebook
-              .appsScriptUrl="${this.appsScriptUrl}"
-              .studentId="${this._user?.studentId || ''}"
-              .studentName="${this._user?.nama || ''}"
-              .viewMode="${this.viewMode}"
-              .showAfterQuiz="${true}">
-            </transparent-gradebook>
+            ${this.viewMode === "lecturer"
+              ? html`
+                  <lecturer-console
+                    .appsScriptUrl="${this.appsScriptUrl}"></lecturer-console>
+                `
+              : html`
+                  <transparent-gradebook
+                    .appsScriptUrl="${this.appsScriptUrl}"
+                    .studentId="${this._user?.studentId || ''}"
+                    .studentName="${this._user?.nama || ''}"
+                    .viewMode="${this.viewMode}"
+                    .showAfterQuiz="${true}">
+                  </transparent-gradebook>
+                `}
           </div>
         `}
       </div>
@@ -335,7 +343,9 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
           { property: "sheetName", title: "Nama Pertemuan", inputMethod: "textfield", default: "Pertemuan" },
           { property: "viewMode", title: "Mode Tampilan", inputMethod: "select", options: { student: "View Mahasiswa", lecturer: "Mode Dosen (Console)" }, default: "student" },
           { property: "quizTabHidden", title: "Sembunyikan Tab Kuis", inputMethod: "boolean", default: false }
-        ]
+        ],
+        advanced: [],
+        developer: []
       },
       saveOptions: {
         unsetAttributes: ["_activeTab", "_successMsg", "_errorMsg", "_user", "_spreadsheetId"]

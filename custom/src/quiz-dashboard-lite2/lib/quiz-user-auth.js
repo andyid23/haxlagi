@@ -425,7 +425,9 @@ class QuizUserAuth extends I18NMixin(DDDSuper(LitElement)) {
             inputMethod: "textfield",
             required: true
           }
-        ]
+        ],
+        advanced: [],
+        developer: []
       }
     };
   }

@@ -1029,7 +1029,8 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
             default: false
           }
         ],
-        advanced: []
+        advanced: [],
+        developer: []
       },
       saveOptions: {
         unsetAttributes: [

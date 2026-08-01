@@ -64,6 +64,7 @@ function doPost(e) {
     if (data.action === "getScores") return response(getStudentScores(data.studentId || ""));
     if (data.action === "getStudentRoster") return response(getStudentRoster());
     if (data.action === "generateReport") return response(generateReport(data));
+    if (data.action === "setManualScore") return response(setManualScore(data));
 
     if (data.studentId) {
       const user = verifyUser(data.studentId);
@@ -423,14 +424,15 @@ function getStudentScores(studentId) {
     
     for (let i = 1; i < data.length; i++) {
       if (String(data[i][idxSid] || "").trim() !== studentId) continue;
+      const manual = getManualScores_()[studentId] || {};
       return {
         status: "ok",
         data: {
           studentId: data[i][idxSid], nama: data[i][idxNama],
           kehadiran: parseInt(data[i][idxKehadiran]) || 0,
           ulanganHarian: { average: parseInt(data[i][idxUH]) || 0, highest: parseInt(data[i][idxUH]) || 0, count: parseInt(data[i][idxJumlahPertemuan]) || 0, all: [] },
-          uts: { highest: parseInt(data[i][idxUTS]) || 0, all: [] },
-          uas: { highest: parseInt(data[i][idxUAS]) || 0, all: [] },
+          uts: { highest: manual.uts || parseInt(data[i][idxUTS]) || 0, all: [] },
+          uas: { highest: manual.uas || parseInt(data[i][idxUAS]) || 0, all: [] },
           sikap: parseInt(data[i][idxSikap]) || 0,
           keterampilan: parseInt(data[i][idxKeterampilan]) || 0,
           nilaiAkhir: parseFloat(data[i][idxNilaiAkhir]) || 0,
@@ -501,6 +503,9 @@ function getStudentScores(studentId) {
   }
   result.sikap = Math.min(taskCount * 25 + forumCount * 20, 100);
   result.keterampilan = Math.min(quizCount * 30 + readingCount * 10, 100);
+  const manual = getManualScores_()[studentId] || {};
+  if (manual.uts) result.uts = { highest: manual.uts, all: [{ score: manual.uts, pertemuan: "Manual" }] };
+  if (manual.uas) result.uas = { highest: manual.uas, all: [{ score: manual.uas, pertemuan: "Manual" }] };
   return { status: "ok", data: result };
 }
 
@@ -508,6 +513,7 @@ function generateReport(weights) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const allSheets = ss.getSheets();
   const studentStats = {};
+  const manualScores = getManualScores_();
   const wAtt = (weights && parseInt(weights.attendanceWeight)) || 1;
   const wUH = (weights && parseInt(weights.ulanganHarianWeight)) || 3;
   const wUts = (weights && parseInt(weights.utsWeight)) || 2;
@@ -584,8 +590,9 @@ function generateReport(weights) {
     const avgPerPertemuan = pertemuanCount > 0 ? Math.round(totalActivities / pertemuanCount) : 0;
     const kehadiran = Math.min(avgPerPertemuan * 10, 100);
     const uh = s.uhScores.length > 0 ? Math.round(s.uhScores.reduce((a, b) => a + b, 0) / s.uhScores.length) : 0;
-    const uts = s.highestUTS;
-    const uas = s.highestUAS;
+    const manual = manualScores[s.studentId] || {};
+    const uts = manual.uts || s.highestUTS;
+    const uas = manual.uas || s.highestUAS;
     const taskCount = s.taskCount || 0;
     const forumCount = s.forumCount || 0;
     const quizCount = s.quizCount || 0;
@@ -603,6 +610,51 @@ function generateReport(weights) {
   });
   reportSheet.autoResizeColumns(1, headers.length);
   return { status: "ok", message: "Laporan Akumulasi Nilai Rapor berhasil digenerate!", sheetName: "Akumulasi Nilai Rapor", totalSiswa: rowNum - 2, weights: { attendanceWeight: wAtt, ulanganHarianWeight: wUH, utsWeight: wUts, uasWeight: wUas, attitudeWeight: wSk, skillWeight: wKr, totalWeight: tw } };
+}
+
+function getManualScores_() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getSheetByName("Nilai Manual");
+  const result = {};
+  if (!sheet || sheet.getLastRow() <= 1) return result;
+  const data = sheet.getDataRange().getValues();
+  for (let i = 1; i < data.length; i++) {
+    const sid = String(data[i][0] || "").trim();
+    const kategori = String(data[i][1] || "").toLowerCase().trim();
+    const skor = parseInt(data[i][2]) || 0;
+    if (!sid || !kategori) continue;
+    if (!result[sid]) result[sid] = {};
+    result[sid][kategori] = skor;
+  }
+  return result;
+}
+
+function setManualScore(data) {
+  const studentId = String(data.studentId || "").trim();
+  const kategori = String(data.kategori || "").toLowerCase().trim();
+  if (!studentId || !kategori) return { status: "error", message: "studentId dan kategori wajib diisi." };
+  const skor = Math.max(0, Math.min(100, parseInt(data.skor) || 0));
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheetName = "Nilai Manual";
+  let sheet = ss.getSheetByName(sheetName);
+  const headers = ["Student ID", "Kategori", "Skor"];
+  if (!sheet) {
+    sheet = ss.insertSheet(sheetName);
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+    sheet.getRange(1, 1, 1, headers.length).setFontWeight("bold");
+  } else if (sheet.getLastRow() === 0) {
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+    sheet.getRange(1, 1, 1, headers.length).setFontWeight("bold");
+  }
+  const values = sheet.getLastRow() > 1 ? sheet.getDataRange().getValues() : [];
+  for (let i = 1; i < values.length; i++) {
+    if (String(values[i][0] || "").trim() === studentId && String(values[i][1] || "").toLowerCase().trim() === kategori) {
+      sheet.getRange(i + 1, 3).setValue(skor);
+      return { status: "ok", message: "Nilai " + kategori + " " + studentId + " diperbarui.", skor: skor };
+    }
+  }
+  sheet.appendRow([studentId, kategori, skor]);
+  return { status: "ok", message: "Nilai " + kategori + " " + studentId + " tersimpan.", skor: skor };
 }
 
 function response(obj) {

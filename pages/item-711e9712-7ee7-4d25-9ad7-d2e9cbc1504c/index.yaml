@@ -1,4 +1,4 @@
-id: item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c
+﻿id: item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c
 indent: 0
 location: pages/item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c/index.yaml
 slug: welcome
@@ -109,10 +109,10 @@ content: >
   <h2 id="h2--798190757">This looks fun, let's go!</h2>
 
   <meme-maker
-  image-url="https://e0.pxfuel.com/wallpapers/813/10/desktop-wallpaper-brain-galaxy-brain.jpg"
+  image-url="/files/brain-galaxy.jpg"
   top-text="You, while using HAX" bottom-text="...probably">
       <div>You, while using HAX</div>
-        <img src="https://e0.pxfuel.com/wallpapers/813/10/desktop-wallpaper-brain-galaxy-brain.jpg" alt="" preload="lazy" aria-describedby=""/>
+        <img src="/files/brain-galaxy.jpg" alt="" preload="lazy" aria-describedby=""/>
       <div>...probably</div></meme-maker>
   <h2 id="h2--1479273868">Get involved with HAX</h2>
 

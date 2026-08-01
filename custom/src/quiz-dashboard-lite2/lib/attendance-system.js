@@ -22,6 +22,24 @@ function getInitialLogs() {
   return stored ? JSON.parse(stored) : [];
 }
 
+function pushLocalLog(type, description) {
+  const now = new Date();
+  const today = getTodayString();
+  const lastDate = localStorage.getItem(LAST_DATE_KEY);
+  if (lastDate !== today) {
+    localStorage.setItem(LOGS_STORAGE_KEY, "[]");
+    localStorage.setItem(LAST_DATE_KEY, today);
+  }
+  const newLog = { id: "log-" + now.getTime(), timestamp: now.toISOString(), date: today, type, description };
+  const currentLogs = getInitialLogs();
+  const merged = [newLog, ...currentLogs];
+  localStorage.setItem(LOGS_STORAGE_KEY, JSON.stringify(merged));
+  globalThis.dispatchEvent(new CustomEvent("a3-activity-logged", { detail: { log: newLog } }));
+  return merged;
+}
+
+export { LOGS_STORAGE_KEY, LAST_DATE_KEY, getTodayString, getInitialLogs, pushLocalLog };
+
 export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
   static get tag() { return "activity-logger"; }
   static get properties() {
@@ -65,6 +83,9 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
     globalThis.addEventListener("discussion-saved", this._handleDiscussionSaved);
     globalThis.addEventListener("assignment-saved", this._handleAssignmentSaved);
     globalThis.addEventListener("reading-saved", this._handleReadingSaved);
+    globalThis.addEventListener("download-saved", this._handleDownloadSaved);
+    this._downloadClickHandler = (e) => this._handleDownloadClick(e);
+    globalThis.document.addEventListener("click", this._downloadClickHandler, true);
     const today = getTodayString();
     const lastDate = localStorage.getItem(LAST_DATE_KEY);
     if (lastDate !== today) {
@@ -79,6 +100,8 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
     globalThis.removeEventListener("discussion-saved", this._handleDiscussionSaved);
     globalThis.removeEventListener("assignment-saved", this._handleAssignmentSaved);
     globalThis.removeEventListener("reading-saved", this._handleReadingSaved);
+    globalThis.removeEventListener("download-saved", this._handleDownloadSaved);
+    globalThis.document.removeEventListener("click", this._downloadClickHandler, true);
     super.disconnectedCallback();
   }
   _handleScroll() {
@@ -105,22 +128,23 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
     const title = e.detail?.title || "Materi";
     this.logActivity("reading", `Membaca: ${title}`);
   }
+  _handleDownloadSaved(e) {
+    const title = e.detail?.title || "Materi";
+    this.logActivity("download", `Download materi: ${title}`);
+  }
+  _handleDownloadClick(e) {
+    if (!e.target) return;
+    const a = e.target.closest ? e.target.closest('a[download], a[href*="/files/"], a[href*="files/"]') : null;
+    if (!a) return;
+    const title = a.getAttribute("download") || a.getAttribute("aria-label") || a.textContent.trim() || a.getAttribute("href") || "Materi";
+    this.logActivity("download", `Download materi: ${title.substring(0, 60)}`);
+  }
   logActivity(type, description) {
-    const now = new Date();
-    const today = getTodayString();
-    const lastDate = localStorage.getItem(LAST_DATE_KEY);
-    if (lastDate !== today) {
-      this._logs = [];
-      localStorage.setItem(LOGS_STORAGE_KEY, "[]");
-      localStorage.setItem(LAST_DATE_KEY, today);
-    }
-    const newLog = { id: "log-" + now.getTime(), timestamp: now.toISOString(), date: today, type, description };
-    const currentLogs = [newLog, ...this._logs];
-    this._logs = currentLogs;
-    localStorage.setItem(LOGS_STORAGE_KEY, JSON.stringify(currentLogs));
+    pushLocalLog(type, description);
+    this._logs = getInitialLogs();
     if (this.appsScriptUrl && this.studentId) {
       const params = new URLSearchParams({
-        action: "logActivity", timestamp: newLog.timestamp, date: today,
+        action: "logActivity", timestamp: new Date().toISOString(), date: getTodayString(),
         name: this.studentName, studentId: this.studentId,
         nis: this.studentNis || "", absen: this.studentAbsen || "", kelas: this.studentKelas || "",
         activityType: type, description, sheet: this.sheetName
@@ -240,17 +264,19 @@ export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
       quiz: todayLogs.filter(l => l.type === "quiz").length,
       assignment: todayLogs.filter(l => l.type === "assignment").length,
       discussion: todayLogs.filter(l => l.type === "discussion").length,
+      download: todayLogs.filter(l => l.type === "download").length,
       forum: this.forumApiUrl ? this._forumToday : 0,
       total: todayLogs.length
     };
-    // FIX: 5 kriteria ketat — tidak bisa 100% tanpa kuis + tugas + baca materi + komentar forum
+    // FIX: 5-6 kriteria ketat — tidak bisa 100% tanpa kuis + tugas + baca materi + download + komentar forum
     const hasReading = counts.reading >= 3 ? 1 : 0;
     const hasQuiz = counts.quiz >= 1 ? 1 : 0;
     const hasAssignment = counts.assignment >= 1 ? 1 : 0;
+    const hasDownload = counts.download >= 1 ? 1 : 0;
     const hasForum = this.forumApiUrl ? (counts.forum >= 1 ? 1 : 0) : null;
     const hasEnoughActivity = counts.total >= 8 ? 1 : 0;
-    const totalCriteria = hasForum === null ? 4 : 5;
-    const criteriaCount = hasReading + hasQuiz + hasAssignment + (hasForum || 0) + hasEnoughActivity;
+    const totalCriteria = hasForum === null ? 5 : 6;
+    const criteriaCount = hasReading + hasQuiz + hasAssignment + hasDownload + (hasForum || 0) + hasEnoughActivity;
     const attendancePercentage = Math.round((criteriaCount / totalCriteria) * 100);
     return { 
       counts, 
@@ -294,6 +320,10 @@ export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
             <div class="criteria-item">
               <div class="crit-info"><div class="icon">📝</div><div><div class="crit-name">Mengumpulkan Tugas</div><div class="crit-progress">Tercapai: ${stats.counts.assignment} dari min. 1 kali</div></div></div>
               <div class="status-indicator ${stats.counts.assignment >= 1 ? 'check' : 'cross'}">${stats.counts.assignment >= 1 ? "✅" : "⏳"}</div>
+            </div>
+            <div class="criteria-item">
+              <div class="crit-info"><div class="icon">⬇️</div><div><div class="crit-name">Download Materi</div><div class="crit-progress">Tercapai: ${stats.counts.download} dari min. 1 kali (klik link file/unduhan)</div></div></div>
+              <div class="status-indicator ${stats.counts.download >= 1 ? 'check' : 'cross'}">${stats.counts.download >= 1 ? "✅" : "⏳"}</div>
             </div>
             ${this.forumApiUrl ? html`
               <div class="criteria-item">
@@ -397,7 +427,7 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
   static get styles() {
     return [
       super.styles,
-      css`:host { display: block; font-family: var(--ddd-font-primary); color: var(--ddd-theme-default-text); } .engagement-card { background: var(--ddd-theme-default-surface); border-radius: var(--ddd-radius-lg); padding: var(--ddd-spacing-6); border: 1px solid var(--ddd-theme-polaris-border); box-shadow: var(--ddd-shadow-1); } h3 { margin: 0 0 var(--ddd-spacing-3) 0; font-size: var(--ddd-font-size-l); color: var(--ddd-theme-primary); display: flex; align-items: center; gap: var(--ddd-spacing-2); } .consistency-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--ddd-spacing-4); margin-bottom: var(--ddd-spacing-6); } .stat-mini-card { background-color: var(--ddd-theme-polaris-surface); border: 1px solid var(--ddd-theme-polaris-border); border-radius: var(--ddd-radius-md); padding: var(--ddd-spacing-4); display: flex; flex-direction: column; gap: var(--ddd-spacing-1); } .mini-label { font-size: var(--ddd-font-size-xs); color: var(--ddd-theme-secondary); font-weight: var(--ddd-font-weight-medium); } .mini-val { font-size: var(--ddd-font-size-xl); font-weight: var(--ddd-font-weight-bold); color: var(--ddd-theme-primary); } .heatmap-wrap { display: flex; gap: var(--ddd-spacing-2); max-width: 520px; margin: 0 auto; } .heatmap-months { display: grid; grid-auto-flow: column; grid-auto-columns: 15px; gap: var(--ddd-spacing-1); font-size: 10px; color: var(--ddd-theme-secondary); margin-bottom: var(--ddd-spacing-1); } .heatmap-months span { overflow: visible; white-space: nowrap; } .day-labels { display: grid; grid-template-rows: repeat(7, 15px); gap: var(--ddd-spacing-1); font-size: 10px; color: var(--ddd-theme-secondary); text-align: right; padding-right: var(--ddd-spacing-2); } .heatmap-grid { display: grid; grid-template-rows: repeat(7, 15px); grid-auto-flow: column; grid-auto-columns: 15px; gap: var(--ddd-spacing-1); } .cell { width: 15px; height: 15px; background-color: var(--ddd-theme-polaris-surface-hover); border-radius: 3px; cursor: pointer; transition: transform 0.15s; } .cell:hover { transform: scale(1.3); z-index: 10; box-shadow: var(--ddd-shadow-1); } .cell.lvl-1 { background-color: var(--ddd-theme-accent-light); } .cell.lvl-2 { background-color: var(--ddd-theme-accent); } .cell.lvl-3 { background-color: var(--ddd-theme-primary); } .cell.lvl-4 { background-color: var(--ddd-theme-default-text); } .cell.today { outline: 2px solid var(--ddd-theme-accent); outline-offset: 1px; } .cell.today.done { background-color: var(--ddd-theme-accent); } .legend { display: flex; align-items: center; gap: var(--ddd-spacing-2); justify-content: center; margin-top: var(--ddd-spacing-5); font-size: var(--ddd-font-size-xs); color: var(--ddd-theme-secondary); } .legend-cell { width: 12px; height: 12px; border-radius: 3px; } .heatmap-note { text-align: center; font-size: var(--ddd-font-size-xs); color: var(--ddd-theme-secondary); margin-top: var(--ddd-spacing-3); }`
+      css`:host { display: block; font-family: var(--ddd-font-primary); color: var(--ddd-theme-default-text); } .engagement-card { background: var(--ddd-theme-default-surface); border-radius: var(--ddd-radius-lg); padding: var(--ddd-spacing-6); border: 1px solid var(--ddd-theme-polaris-border); box-shadow: var(--ddd-shadow-1); } h3 { margin: 0 0 var(--ddd-spacing-3) 0; font-size: var(--ddd-font-size-l); color: var(--ddd-theme-primary); display: flex; align-items: center; gap: var(--ddd-spacing-2); } .consistency-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--ddd-spacing-3); } .stat-mini-card { background-color: var(--ddd-theme-polaris-surface); border: 1px solid var(--ddd-theme-polaris-border); border-radius: var(--ddd-radius-md); padding: var(--ddd-spacing-4); display: flex; flex-direction: column; gap: var(--ddd-spacing-1); } .mini-label { font-size: var(--ddd-font-size-xs); color: var(--ddd-theme-secondary); font-weight: var(--ddd-font-weight-medium); } .mini-val { font-size: var(--ddd-font-size-xl); font-weight: var(--ddd-font-weight-bold); color: var(--ddd-theme-primary); } .heatmap-layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: var(--ddd-spacing-6); align-items: start; } .heatmap-col { min-width: 0; } .side-col { display: flex; flex-direction: column; gap: var(--ddd-spacing-4); min-width: 0; } .heatmap-wrap { display: flex; gap: 3px; max-width: 640px; margin: 0; } .heatmap-months { display: grid; grid-auto-flow: column; grid-auto-columns: 18px; gap: 3px; font-size: 10px; color: var(--ddd-theme-secondary); margin-bottom: 3px; margin-left: 32px; } .heatmap-months span { overflow: visible; white-space: nowrap; } .day-labels { display: grid; grid-template-rows: repeat(7, 18px); gap: 3px; font-size: 10px; color: var(--ddd-theme-secondary); text-align: right; padding-right: 8px; } .heatmap-grid { display: grid; grid-template-rows: repeat(7, 18px); grid-auto-flow: column; grid-auto-columns: 18px; gap: 3px; } .cell { width: 18px; height: 18px; background-color: var(--ddd-theme-polaris-surface-hover); border-radius: 3px; cursor: pointer; transition: transform 0.15s; } .cell:hover { transform: scale(1.3); z-index: 10; box-shadow: var(--ddd-shadow-1); } .cell.lvl-1 { background-color: var(--ddd-theme-accent-light); } .cell.lvl-2 { background-color: var(--ddd-theme-accent); } .cell.lvl-3 { background-color: var(--ddd-theme-primary); } .cell.lvl-4 { background-color: var(--ddd-theme-default-text); } .cell.today { outline: 2px solid var(--ddd-theme-accent); outline-offset: 1px; } .cell.today.done { background-color: var(--ddd-theme-accent); } .legend { display: flex; align-items: center; gap: var(--ddd-spacing-2); flex-wrap: wrap; font-size: var(--ddd-font-size-xs); color: var(--ddd-theme-secondary); } .legend-cell { width: 12px; height: 12px; border-radius: 3px; } .heatmap-note { font-size: var(--ddd-font-size-xs); color: var(--ddd-theme-secondary); } .side-note-card { background-color: var(--ddd-theme-polaris-surface); border: 1px solid var(--ddd-theme-polaris-border); border-radius: var(--ddd-radius-md); padding: var(--ddd-spacing-4); font-size: var(--ddd-font-size-s); color: var(--ddd-theme-secondary); line-height: 1.6; } @media (max-width: 768px) { .heatmap-layout { grid-template-columns: 1fr; } .heatmap-col { overflow-x: auto; } } @media (max-width: 480px) { .heatmap-grid { grid-template-rows: repeat(7, 12px); grid-auto-columns: 12px; gap: 2px; } .cell { width: 12px; height: 12px; } .day-labels { grid-template-rows: repeat(7, 12px); gap: 2px; } .heatmap-months { grid-auto-columns: 12px; gap: 2px; } }`
     ];
   }
   render() {
@@ -416,37 +446,46 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
     return html`
       <div class="engagement-card">
         <h3>🔥 Heatmap Aktivitas 1 Bulan</h3>
-        <div class="consistency-stats">
-          <div class="stat-mini-card"><span class="mini-label">Total Aktivitas</span><span class="mini-val">${totalInteractions} kali</span></div>
-          <div class="stat-mini-card"><span class="mini-label">Hari Aktif</span><span class="mini-val">${activeDays} / 42</span></div>
-          <div class="stat-mini-card"><span class="mini-label">Indeks Konsistensi</span><span class="mini-val">${consistencyIndex}%</span></div>
-        </div>
-        <div class="heatmap-months">${weekLabels.map(l => html`<span>${l}</span>`)}</div>
-        <div class="heatmap-wrap">
-          <div class="day-labels">${dayLabels.map(d => html`<span>${d}</span>`)}</div>
-          <div class="heatmap-grid">
-            ${cells.map(cell => {
-              let lvl = "";
-              if (cell.count === 1) lvl = "lvl-1";
-              else if (cell.count === 2) lvl = "lvl-2";
-              else if (cell.count >= 3 && cell.count <= 5) lvl = "lvl-3";
-              else if (cell.count > 5) lvl = "lvl-4";
-              const today = cell.isToday ? "today" : "";
-              const done = cell.isToday && cell.count > 0 ? "done" : "";
-              const title = `${cell.dateStr}: ${cell.count} aktivitas${cell.isToday ? " (Hari ini)" : ""}`;
-              return html`<div class="cell ${lvl} ${today} ${done}" title="${title}"></div>`;
-            })}
+        <div class="heatmap-layout">
+          <div class="heatmap-col">
+            <div class="heatmap-months">${weekLabels.map(l => html`<span>${l}</span>`)}</div>
+            <div class="heatmap-wrap">
+              <div class="day-labels">${dayLabels.map(d => html`<span>${d}</span>`)}</div>
+              <div class="heatmap-grid">
+                ${cells.map(cell => {
+                  let lvl = "";
+                  if (cell.count === 1) lvl = "lvl-1";
+                  else if (cell.count === 2) lvl = "lvl-2";
+                  else if (cell.count >= 3 && cell.count <= 5) lvl = "lvl-3";
+                  else if (cell.count > 5) lvl = "lvl-4";
+                  const today = cell.isToday ? "today" : "";
+                  const done = cell.isToday && cell.count > 0 ? "done" : "";
+                  const title = `${cell.dateStr}: ${cell.count} aktivitas${cell.isToday ? " (Hari ini)" : ""}`;
+                  return html`<div class="cell ${lvl} ${today} ${done}" title="${title}"></div>`;
+                })}
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="heatmap-note">${this.forumApiUrl ? "Termasuk komentar forum dari sheet Forum Log" : "Hover sel untuk detail harian"}</div>
-        <div class="legend">
-          <span>Sedikit</span>
-          <div class="legend-cell" style="background: var(--ddd-theme-polaris-surface-hover);"></div>
-          <div class="legend-cell" style="background: var(--ddd-theme-accent-light);"></div>
-          <div class="legend-cell" style="background: var(--ddd-theme-accent);"></div>
-          <div class="legend-cell" style="background: var(--ddd-theme-primary);"></div>
-          <div class="legend-cell" style="background: var(--ddd-theme-default-text);"></div>
-          <span>Banyak</span>
+          <div class="side-col">
+            <div class="consistency-stats">
+              <div class="stat-mini-card"><span class="mini-label">Total Aktivitas</span><span class="mini-val">${totalInteractions} kali</span></div>
+              <div class="stat-mini-card"><span class="mini-label">Hari Aktif</span><span class="mini-val">${activeDays} / 42</span></div>
+              <div class="stat-mini-card"><span class="mini-label">Indeks Konsistensi</span><span class="mini-val">${consistencyIndex}%</span></div>
+            </div>
+            <div class="side-note-card">${this.forumApiUrl
+              ? html`📌 Heatmap menggabungkan aktivitas dari <strong>getActivityHistory</strong> (sheet Aktivitas + pertemuan-kuis) dan <strong>getForumActivityHistory</strong> (sheet Forum Log).`
+              : html`📌 Hover sel untuk detail harian. Sumber: sheet Aktivitas + pertemuan-kuis (via getActivityHistory).`}
+            </div>
+            <div class="legend">
+              <span>Sedikit</span>
+              <div class="legend-cell" style="background: var(--ddd-theme-polaris-surface-hover);"></div>
+              <div class="legend-cell" style="background: var(--ddd-theme-accent-light);"></div>
+              <div class="legend-cell" style="background: var(--ddd-theme-accent);"></div>
+              <div class="legend-cell" style="background: var(--ddd-theme-primary);"></div>
+              <div class="legend-cell" style="background: var(--ddd-theme-default-text);"></div>
+              <span>Banyak</span>
+            </div>
+          </div>
         </div>
       </div>
     `;
