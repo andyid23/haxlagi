@@ -130,6 +130,22 @@
       }
     },
     {
+      "id": "item-5015eab1-d932-4139-a7a0-3216ce339bfa",
+      "indent": 0,
+      "location": "pages/item-5015eab1-d932-4139-a7a0-3216ce339bfa/index.html",
+      "slug": "new-page-6",
+      "order": 2,
+      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
+      "title": "New Page",
+      "description": "",
+      "metadata": {
+        "created": 1785573963,
+        "updated": 1785573963,
+        "images": [],
+        "videos": []
+      }
+    },
+    {
       "id": "item-doc-elements",
       "indent": 0,
       "location": "pages/elemendokumen/index.html",
