@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785590417
+      "updated": 1785590569
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -403,19 +403,22 @@
     },
     {
       "id": "item-b055951b-7998-440e-9f07-b8976e6d339c",
-      "indent": 1,
+      "indent": 0,
       "location": "pages/item-b055951b-7998-440e-9f07-b8976e6d339c/index.html",
       "slug": "elemendokumen/copy-of-tutorial-alur-aktivitas-sheet",
       "order": 12,
       "parent": "item-doc-elements",
       "title": "Copy of 📘 Tutorial Alur Aktivitas & Sheet",
-      "description": "",
+      "description": "📘 Tutorial Lengkap: Alur Aktivitas, 7 Sheet Utama &#38; Kriteria Kehadiran\nPanduan visual &#38; teknis: dari aktivitas siswa di browser &#8594; ke Google Sheets via Apps Script. Semua fitur sudah ad",
       "metadata": {
         "locked": false,
         "created": 1785590414,
         "images": [],
         "videos": [],
-        "updated": 1785590414
+        "updated": 1785590568,
+        "published": true,
+        "hideInMenu": false,
+        "readtime": 7
       }
     },
     {
