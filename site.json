@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785594440
+      "updated": 1785595467
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -435,10 +435,14 @@
       "description": "Contoh halaman materi siswa dengan aktivitas dan kuis",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590414,
+        "updated": 1785595466,
         "published": true,
         "locked": false,
-        "status": ""
+        "status": "",
+        "hideInMenu": false,
+        "readtime": 2,
+        "videos": [],
+        "images": []
       }
     },
     {

@@ -1,0 +1,241 @@
+id: item-materi-siswa
+indent: 0
+location: pages/materi-siswa/index.yaml
+slug: materi-siswa
+order: 2
+parent: null
+title: '📚 Modul 1: HAXcms & Web Component'
+description: Contoh halaman materi siswa dengan aktivitas dan kuis
+metadata:
+  created: 1784667020
+  updated: 1785595466
+  published: true
+  locked: false
+  status: ''
+  hideInMenu: false
+  readtime: 2
+  videos: []
+  images: []
+content: >
+
+  <h1 id="h1--56545659">📚 Modul 1: Pengenalan HAXcms &#38; Web Component</h1>
+
+  <p>Selamat datang di modul pembelajaran interaktif! Halaman ini adalah contoh
+  bagaimana materi pembelajaran dipadukan dengan <strong>pelacakan aktivitas
+  otomatis</strong> dan <strong>kuis evaluasi</strong>. Setiap aktivitas Anda
+  &#8212; scroll membaca, klik link, download file, dan mengerjakan kuis &#8212;
+  tercatat otomatis oleh sistem.</p>
+
+  <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius:
+  12px; padding: 16px; margin: 16px 0; display: flex; align-items: center; gap:
+  12px;">
+    <span>⏰</span>
+    <div>
+      <strong>Activity Logger Aktif!</strong>
+      <p style="margin: 4px 0 0 0; font-size: 13px; color: #166534;">Scroll, klik, dan kerjakan kuis di halaman ini akan dicatat otomatis untuk validasi kehadiran Anda.</p>
+    </div>
+
+  </div>
+
+  <hr style="margin: 24px 0; border-color: #e0e0e0;"/><h2 id="h2--205211746">📖
+  1.1 Apa itu HAXcms?</h2>
+
+  <p>HAXcms adalah <strong>Headless Authoring eXperience Content Management
+  System</strong> &#8212; platform berbasis web component untuk membuat dan
+  mengelola konten web dengan mudah. Bayangkan seperti WordPress tapi lebih
+  ringan, lebih modern, dan sepenuhnya berbasis standar web.</p>
+
+  <h3 id="h3--1114033221">Konsep Dasar</h3>
+
+  <ul>
+    <li><strong>Web Component:</strong> Elemen HTML kustom yang bisa digunakan ulang</li>
+
+    <li><strong>Lit Element:</strong> Library dari Google untuk membuat Web Component dengan performa tinggi</li>
+
+    <li><strong>DDD Design System:</strong> Token desain konsisten untuk warna, spacing, dan tipografi</li>
+
+    <li><strong>JSON Outline Schema:</strong> Format untuk mendefinisikan struktur situs</li>
+
+  </ul>
+
+  <h2 id="h2-1627741604">📖 1.2 Apa itu Web Component?</h2>
+
+  <p>Web Component adalah teknologi browser native yang memungkinkan Anda
+  membuat elemen HTML kustom dengan fungsionalitas sendiri. Komponen terisolasi,
+  bisa digunakan ulang di mana saja.</p>
+
+  <h3 id="h3-1088150271">Contoh Web Component HAX:</h3>
+
+  <grid-plate layout="1-1-1">
+    <div slot="col-1" style="text-align: center; padding: 16px; background: #f3f0fa; border-radius: 12px;">
+      <span>📝</span>
+      <h4>todo-list</h4>
+      <p style="font-size: 13px; color: #666;">Daftar tugas interaktif</p>
+    </div>
+
+    <div slot="col-2" style="text-align: center; padding: 16px; background: #f3f0fa; border-radius: 12px;">
+      <span>🎯</span>
+      <h4>explode-quiz</h4>
+      <p style="font-size: 13px; color: #666;">Kuis interaktif + confetti</p>
+    </div>
+
+    <div slot="col-3" style="text-align: center; padding: 16px; background: #f3f0fa; border-radius: 12px;">
+      <span>🎬</span>
+      <h4>video-player</h4>
+      <p style="font-size: 13px; color: #666;">Pemutar video YouTube</p>
+    </div>
+
+  </grid-plate>
+
+  <h2 id="h2--1077309165">📖 1.3 Struktur Dasar Web Component</h2>
+
+  <p>Sebuah Web Component terdiri dari tiga bagian utama:</p>
+
+  <table>
+    <thead>
+      <tr><th>Bagian</th><th>Deskripsi</th></tr>
+
+    </thead>
+
+    <tbody>
+      <tr><td><strong>class</strong></td>
+  <td>Definisi class JavaScript yang mewarisi HTMLElement</td></tr>
+
+      <tr><td><strong>Shadow DOM</strong></td>
+  <td>DOM terisolasi, style tidak bocor ke halaman luar</td></tr>
+
+      <tr><td><strong>Custom Element</strong></td>
+  <td>Nama tag HTML kustom, contoh: <code>&lt;todo-list&gt;</code></td>
+
+  </tr>
+
+    </tbody>
+
+  </table>
+
+  <h3 id="h3--1746436907">Contoh Kode Sederhana:</h3>
+
+  <pre><code>&lt;!-- HTML --&gt;
+
+  &lt;my-greeting name="Dunia"&gt;&lt;/my-greeting&gt;
+
+
+  &lt;!-- JavaScript --&gt;
+
+  class MyGreeting extends HTMLElement {
+    connectedCallback() {
+      const name = this.getAttribute('name');
+      this.innerHTML = `&lt;h2&gt;Halo, ${name}!&lt;/h2&gt;`;
+    }
+  }
+
+  customElements.define('my-greeting', MyGreeting);</code></pre>
+
+  <h2 id="h2--1163604576">📖 1.4 Kenapa Web Component?</h2>
+
+  <ul>
+    <li>&#9989; <strong>Native:</strong> Tidak butuh library tambahan &#8212; browser sudah support</li>
+
+    <li>&#9989; <strong>Terisolasi:</strong> Style dan logika tidak bentrok dengan halaman lain</li>
+
+    <li>&#9989; <strong>Reusable:</strong> Buat sekali, pakai di mana saja</li>
+
+    <li>&#9989; <strong>Framework-agnostic:</strong> Bekerja dengan React, Vue, Angular, atau plain HTML</li>
+
+    <li>&#9989; <strong>Standar W3C:</strong> Didukung semua browser modern</li>
+
+  </ul>
+
+  <hr style="margin: 24px 0; border-color: #e0e0e0;"/><h2 id="h2-1062552201">📥
+  Download Materi Pendukung</h2>
+
+  <p>Klik link di bawah untuk mengunduh file materi (aktivitas download akan
+  tercatat otomatis):</p>
+
+  <ul>
+    <li><a href="files/panduan-haxcms.pdf" download="">📄 Download PDF: Panduan Lengkap HAXcms</a></li>
+
+    <li><a href="files/contoh-komponen.zip" download="">📦 Download ZIP: Source Code Contoh Web Component</a></li>
+
+  </ul>
+
+  <div style="background: #fff8e1; border: 1px solid #ffe082; border-radius:
+  8px; padding: 12px 16px; margin: 16px 0; font-size: 13px;">
+    <strong>📝 Catatan:</strong> Scroll halaman ini sampai bawah, klik link download, dan kerjakan kuis di bawah &#8212; semua akan tercatat sebagai aktivitas belajar Anda!
+  </div>
+
+  <hr style="margin: 24px 0; border-color: #e0e0e0;"/><h2 id="h2--1847077649">🎯
+  Evaluasi: Kuis Modul 1</h2>
+
+  <p>Setelah membaca materi di atas, silakan kerjakan kuis berikut untuk menguji
+  pemahaman Anda. Skor akan dicatat otomatis!</p>
+
+  <explode-quiz questions="[{&quot;question&quot;:&quot;Apa ibu kota
+  Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa
+  hasil dari 7 ×
+  8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet
+  terdekat dengan Matahari
+  adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;soal&quot;,&quot;choices&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],&quot;correctIndex&quot;:0}]"
+  spreadsheet-id="" script-function-name="submitQuizResult"
+  quiz-category="formatif" sheet-name="Pertemuan" _current-index="0"
+  _selected-index="-1" _temp-questions="[{&quot;question&quot;:&quot;Apa ibu
+  kota
+  Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa
+  hasil dari 7 ×
+  8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet
+  terdekat dengan Matahari
+  adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;soal&quot;,&quot;choices&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],&quot;correctIndex&quot;:0}]"
+  _editing-index="-1" _temp-correct-index="0" _editor-origin="result"
+  _temp-question-type="mc" _temp-correct-answers="[]"
+  _temp-left-items="[&quot;&quot;,&quot;&quot;]"
+  _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}"
+  _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}"
+  _match-answers="{}" _temp-question-points="1" _max-points="0"></explode-quiz>
+
+  <hr style="margin: 24px 0; border-color: #e0e0e0;"/><h2 id="h2-2143424589">📊
+  Cek Kehadiran Anda</h2>
+
+  <p>Di bawah ini adalah ringkasan kehadiran dan aktivitas Anda. Data dihitung
+  otomatis dari interaksi Anda dengan halaman ini.</p>
+
+  <grid-plate layout="1-1">
+    <div slot="col-1">
+      <attendance-tracker _logs="[{&quot;id&quot;:&quot;log-1785595432321&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:43:52.321Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1165px)&quot;},{&quot;id&quot;:&quot;log-1785595427847&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:43:47.847Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 5965px)&quot;},{&quot;id&quot;:&quot;log-1785595276674&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:41:16.674Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 3768px)&quot;},{&quot;id&quot;:&quot;log-1785595261867&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:41:01.867Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download materi: 📦 Download ZIP: Source Code Contoh Web Component&quot;},{&quot;id&quot;:&quot;log-1785595247663&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:40:47.663Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download materi: 📄 Download PDF: Panduan Lengkap HAXcms&quot;},{&quot;id&quot;:&quot;log-1785595238947&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:40:38.947Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785595238946&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:40:38.946Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785595152594&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:39:12.594Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1083px)&quot;}]" _forum-today="0"></attendance-tracker>
+
+    </div>
+
+    <div slot="col-2">
+      <engagement-score _history="[{&quot;date&quot;:&quot;2026-08-01&quot;,&quot;count&quot;:8}]"></engagement-score>
+
+    </div>
+
+  </grid-plate>
+
+  <h2 id="h2-113686388">Selanjutnya</h2>
+
+  <p>Setelah menyelesaikan modul ini, lanjutkan ke:</p>
+
+  <ul>
+    <li><a href="tutorial-kursus">📅 Tutorial: Cara Menambah Kuis di Hari Lain</a></li>
+
+    <li><a href="tutor-html">📖 Belajar Dasar HTML untuk Pemula</a></li>
+
+  </ul>
+
+  <activity-logger sheet-name="Pertemuan"
+  _logs="[{&quot;id&quot;:&quot;log-1785595432321&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:43:52.321Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca
+  materi (scroll
+  1165px)&quot;},{&quot;id&quot;:&quot;log-1785595427847&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:43:47.847Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca
+  materi (scroll
+  5965px)&quot;},{&quot;id&quot;:&quot;log-1785595276674&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:41:16.674Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca
+  materi (scroll
+  3768px)&quot;},{&quot;id&quot;:&quot;log-1785595261867&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:41:01.867Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download
+  materi: 📦 Download ZIP: Source Code Contoh Web
+  Component&quot;},{&quot;id&quot;:&quot;log-1785595247663&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:40:47.663Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download
+  materi: 📄 Download PDF: Panduan Lengkap
+  HAXcms&quot;},{&quot;id&quot;:&quot;log-1785595238947&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:40:38.947Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis
+  selesai (Skor:
+  100%)&quot;},{&quot;id&quot;:&quot;log-1785595238946&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:40:38.946Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis
+  selesai (Skor:
+  100%)&quot;},{&quot;id&quot;:&quot;log-1785595152594&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:39:12.594Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca
+  materi (scroll 1083px)&quot;}]"></activity-logger>

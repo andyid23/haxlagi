@@ -1,4 +1,27 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+<id>item-materi-siswa</id>
+<indent>0</indent>
+<location>pages/materi-siswa/index.xml</location>
+<slug>materi-siswa</slug>
+<order>2</order>
+<parent></parent>
+<title>📚 Modul 1: HAXcms &amp; Web Component</title>
+<description>Contoh halaman materi siswa dengan aktivitas dan kuis</description>
+<metadata>
+<created>1784667020</created>
+<updated>1785595466</updated>
+<published>true</published>
+<locked>false</locked>
+<status></status>
+<hideInMenu>false</hideInMenu>
+<readtime>2</readtime>
+<videos>
+</videos>
+<images>
+</images>
+</metadata>
+<content><![CDATA[
 <h1 id="h1--56545659">📚 Modul 1: Pengenalan HAXcms &#38; Web Component</h1>
 <p>Selamat datang di modul pembelajaran interaktif! Halaman ini adalah contoh bagaimana materi pembelajaran dipadukan dengan <strong>pelacakan aktivitas otomatis</strong> dan <strong>kuis evaluasi</strong>. Setiap aktivitas Anda &#8212; scroll membaca, klik link, download file, dan mengerjakan kuis &#8212; tercatat otomatis oleh sistem.</p>
 <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px; margin: 16px 0; display: flex; align-items: center; gap: 12px;">
@@ -129,3 +152,5 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
 
 </ul>
 <activity-logger sheet-name="Pertemuan" _logs="[{&quot;id&quot;:&quot;log-1785595432321&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:43:52.321Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1165px)&quot;},{&quot;id&quot;:&quot;log-1785595427847&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:43:47.847Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 5965px)&quot;},{&quot;id&quot;:&quot;log-1785595276674&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:41:16.674Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 3768px)&quot;},{&quot;id&quot;:&quot;log-1785595261867&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:41:01.867Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download materi: 📦 Download ZIP: Source Code Contoh Web Component&quot;},{&quot;id&quot;:&quot;log-1785595247663&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:40:47.663Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download materi: 📄 Download PDF: Panduan Lengkap HAXcms&quot;},{&quot;id&quot;:&quot;log-1785595238947&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:40:38.947Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785595238946&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:40:38.946Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785595152594&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:39:12.594Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1083px)&quot;}]"></activity-logger>
+]]></content>
+</item>
