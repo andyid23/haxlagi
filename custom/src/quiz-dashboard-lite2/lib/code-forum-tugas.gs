@@ -18,6 +18,7 @@ function doGet(e) {
   try {
     switch (action) {
       case "getForumComments": return response(getForumComments());
+      case "getForumActivityHistory": return response(getForumActivityHistory(e.parameter));
       case "ping": return response({ status: "ok", message: "Forum service is running", timestamp: new Date().toISOString() });
       default: return response({ status: "error", message: "Unknown GET action: " + action });
     }
@@ -187,6 +188,37 @@ function getForumComments() {
   }
   
   return { status: "ok", comments: comments };
+}
+
+function getForumActivityHistory(params) {
+  const sheet = getForumSheet_();
+  if (sheet.getLastRow() <= 1) return { status: "ok", history: [] };
+  const studentId = (params && params.studentId) || "";
+  const days = parseInt((params && params.days) || 28);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const startDate = new Date(today);
+  startDate.setDate(today.getDate() - days);
+
+  const data = sheet.getDataRange().getValues();
+  const dateMap = {};
+  for (let i = 1; i < data.length; i++) {
+    const row = data[i];
+    const action = String(row[7] || "post").trim();
+    if (action === "like" || action === "edit") continue;
+    if (studentId && String(row[4] || "").trim() !== studentId) continue;
+    const rowDate = row[0];
+    let rowDateObj;
+    if (rowDate instanceof Date) rowDateObj = rowDate;
+    else if (typeof rowDate === "string") rowDateObj = new Date(rowDate);
+    else continue;
+    if (isNaN(rowDateObj.getTime()) || rowDateObj < startDate || rowDateObj > today) continue;
+    const dateStr = Utilities.formatDate(rowDateObj, Session.getScriptTimeZone(), "yyyy-MM-dd");
+    dateMap[dateStr] = (dateMap[dateStr] || 0) + 1;
+  }
+
+  const history = Object.keys(dateMap).map(date => ({ date: date, count: dateMap[date] }));
+  return { status: "ok", history: history };
 }
 
 function deleteForumComment(data) {

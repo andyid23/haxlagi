@@ -15,6 +15,7 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
     return {
       ...super.properties,
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
+      forumApiUrl: { type: String, attribute: "forum-api-url" },
       sheetName: { type: String, attribute: "sheet-name" },
       viewMode: { type: String, attribute: "view-mode" },
       quizTabHidden: { type: Boolean, attribute: "quiz-tab-hidden", reflect: true },
@@ -29,6 +30,7 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
   constructor() {
     super();
     this.appsScriptUrl = "";
+    this.forumApiUrl = "";
     this.sheetName = "Pertemuan";
     this.viewMode = "student";
     this.quizTabHidden = false;
@@ -290,8 +292,14 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
           </explode-quiz>
         ` : this._activeTab === 2 ? html`
           <div class="tracker-grid" style="margin-top: var(--ddd-spacing-6);">
-            <attendance-tracker></attendance-tracker>
-            <engagement-score></engagement-score>
+            <attendance-tracker
+              .appsScriptUrl="${this.appsScriptUrl}"
+              .forumApiUrl="${this.forumApiUrl}"
+              .studentId="${this._user?.studentId || ''}"></attendance-tracker>
+            <engagement-score
+              .appsScriptUrl="${this.appsScriptUrl}"
+              .forumApiUrl="${this.forumApiUrl}"
+              .studentId="${this._user?.studentId || ''}"></engagement-score>
           </div>
         ` : html`
           <div style="margin-top: var(--ddd-spacing-6);">
@@ -323,6 +331,7 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
       settings: {
         configure: [
           { property: "appsScriptUrl", title: "Apps Script URL", inputMethod: "textfield", description: "URL Google Apps Script Web App" },
+          { property: "forumApiUrl", title: "Forum Apps Script URL (Opsional)", inputMethod: "textfield", description: "URL Web App code-forum-tugas.gs — untuk kriteria Mengirim Komentar Forum & heatmap" },
           { property: "sheetName", title: "Nama Pertemuan", inputMethod: "textfield", default: "Pertemuan" },
           { property: "viewMode", title: "Mode Tampilan", inputMethod: "select", options: { student: "View Mahasiswa", lecturer: "Mode Dosen (Console)" }, default: "student" },
           { property: "quizTabHidden", title: "Sembunyikan Tab Kuis", inputMethod: "boolean", default: false }

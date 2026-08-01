@@ -113,43 +113,66 @@ function findStudentRow_(sheet, key, studentIdCol, fallbackCols) {
   return -1;
 }
 
+const QUIZ_SHEET_NAME = "pertemuan-kuis";
+const QUIZ_HEADERS = ["Timestamp", "Date", "Kode Materi", "Nama", "Skor (%)", "Total Soal", "Status", "Student ID", "NIS", "Absen", "Kelas", "Kategori Kuis"];
+
 function saveQuiz(data) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
-  const sheetName = data.sheet + " - Kuis";
+  const sheetName = QUIZ_SHEET_NAME;
   let sheet = ss.getSheetByName(sheetName);
-  const headers = ["Timestamp", "Nama", "Skor (%)", "Total Soal", "Status", "Student ID", "NIS", "Absen", "Kelas", "Kategori Kuis"];
   if (!sheet) {
     sheet = ss.insertSheet(sheetName);
-    setupHeader(sheet, headers);
-  } else if (sheet.getLastColumn() < headers.length) {
-    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+    setupHeader(sheet, QUIZ_HEADERS);
+  } else if (sheet.getLastColumn() < QUIZ_HEADERS.length) {
+    sheet.getRange(1, 1, 1, QUIZ_HEADERS.length).setValues([QUIZ_HEADERS]);
   }
   const score = parseInt(data.score) || 0;
   const totalSoal = parseInt(data.totalQuestions) || 5;
   const status = score >= 70 ? "LULUS" : "TIDAK LULUS";
   const timestamp = getValidTimestamp_(data.timestamp);
   const formattedTime = Utilities.formatDate(timestamp, "Asia/Jakarta", "dd/MM/yyyy HH:mm:ss");
+  const formattedDate = Utilities.formatDate(timestamp, "Asia/Jakarta", "yyyy-MM-dd");
+  const kodeMateri = String(data.tag || data.sheet || "Pertemuan").trim();
   const studentId = String(data.studentId || "").trim();
   const nis = String(data.nis || "").trim();
   const absen = String(data.absen || "").trim();
   const kelas = String(data.kelas || "").trim();
   const quizCategory = String(data.quizCategory || data.category || "formatif").toLowerCase();
-  const quizKey = studentId || [nis, absen, kelas, data.name].join("|");
-  
-  const existingRow = findStudentRow_(sheet, quizKey, 5, [6, 7, 8, 1]);
-  const rowValues = [formattedTime, data.name, score, totalSoal, status, studentId, nis, absen, kelas, quizCategory];
-  let targetRow;
+
+  // UPSERT per siswa + satu kode materi → simpan nilai TERBAIK saja
+  const existingRow = findQuizRow_(sheet, studentId, nis, absen, kelas, data.name, kodeMateri);
   if (existingRow > 0) {
-    targetRow = existingRow;
-    sheet.getRange(targetRow, 1, 1, headers.length).setValues([rowValues]);
-  } else {
-    sheet.appendRow(rowValues);
-    targetRow = sheet.getLastRow();
+    const existingScore = parseInt(sheet.getRange(existingRow, 5).getValue()) || 0;
+    if (score <= existingScore) {
+      return { sheet: sheetName, row: existingRow, type: "quiz", name: data.name, score: score, status: status, category: quizCategory, skipped: true, message: "Skor " + score + "% tidak lebih baik dari nilai terbaik (" + existingScore + "%), baris tidak diubah." };
+    }
+    const rowValues = [formattedTime, formattedDate, kodeMateri, data.name, score, totalSoal, status, studentId, nis, absen, kelas, quizCategory];
+    sheet.getRange(existingRow, 1, 1, QUIZ_HEADERS.length).setValues([rowValues]);
+    sheet.getRange(existingRow, 1, 1, QUIZ_HEADERS.length).setBackground(score >= 70 ? "#d1fae5" : "#fee2e2");
+    sheet.autoResizeColumns(1, QUIZ_HEADERS.length);
+    return { sheet: sheetName, row: existingRow, type: "quiz", name: data.name, score: score, status: status, category: quizCategory, updated: true };
   }
-  const range = sheet.getRange(targetRow, 1, 1, headers.length);
+
+  sheet.appendRow([formattedTime, formattedDate, kodeMateri, data.name, score, totalSoal, status, studentId, nis, absen, kelas, quizCategory]);
+  const targetRow = sheet.getLastRow();
+  const range = sheet.getRange(targetRow, 1, 1, QUIZ_HEADERS.length);
   range.setBackground(score >= 70 ? "#d1fae5" : "#fee2e2");
-  sheet.autoResizeColumns(1, headers.length);
+  sheet.autoResizeColumns(1, QUIZ_HEADERS.length);
   return { sheet: sheetName, row: targetRow, type: "quiz", name: data.name, score: score, status: status, category: quizCategory };
+}
+
+function findQuizRow_(sheet, studentId, nis, absen, kelas, name, kodeMateri) {
+  if (sheet.getLastRow() <= 1) return -1;
+  const key = studentId || [nis, absen, kelas, name].join("|");
+  const values = sheet.getDataRange().getValues();
+  for (let i = 1; i < values.length; i++) {
+    const row = values[i];
+    const rowStudentId = String(row[7] || "").trim();
+    const rowKey = rowStudentId || [row[8], row[9], row[10], row[3]].map(v => String(v || "").trim()).join("|");
+    const rowKodeMateri = String(row[2] || "").trim();
+    if (rowKey === key && rowKodeMateri === kodeMateri) return i + 1;
+  }
+  return -1;
 }
 
 function countActivityForStudent_(sheet, studentId, nis, absen, kelas, name, activityType) {
@@ -230,33 +253,43 @@ function updateSummary() {
   allSheets.forEach(sheet => {
     const name = sheet.getName();
     if (name === "Rangkuman" || sheet.getLastRow() <= 1) return;
-    const isKuis = name.includes(" - Kuis");
+    const isUnified = name === QUIZ_SHEET_NAME;
+    const isKuis = isUnified || name.includes(" - Kuis");
     const isAktivitas = name.includes(" - Aktivitas");
     if (!isKuis && !isAktivitas) return;
+    const idxNama = (isAktivitas || isUnified) ? 3 : 1;
+    const idxSid = (isAktivitas || isUnified) ? 7 : 5;
+    const idxNis = (isAktivitas || isUnified) ? 8 : 6;
+    const idxAbsen = (isAktivitas || isUnified) ? 9 : 7;
+    const idxKelas = (isAktivitas || isUnified) ? 10 : 8;
+    const idxScore = isUnified ? 4 : 2;
+    const idxStatus = isUnified ? 6 : 4;
+    const idxCategory = isUnified ? 11 : 9;
     const pertemuanName = name.replace(" - Kuis", "").replace(" - Aktivitas", "");
     const data = sheet.getDataRange().getValues();
     for (let i = 1; i < data.length; i++) {
       const row = data[i];
-      const studentName = String(row[isAktivitas ? 3 : 1] || "").trim();
-      const studentId = String(row[isAktivitas ? 7 : 5] || "").trim();
+      const pName = isUnified ? String(row[2] || "").trim() || pertemuanName : pertemuanName;
+      const studentName = String(row[idxNama] || "").trim();
+      const studentId = String(row[idxSid] || "").trim();
       if (!studentName) continue;
       const key = studentId || studentName;
       if (!studentStats[key]) {
         studentStats[key] = {
-          studentId: studentId, nis: String(row[isAktivitas ? 8 : 6] || ""), absen: String(row[isAktivitas ? 9 : 7] || ""),
-          kelas: String(row[isAktivitas ? 10 : 8] || ""), nama: studentName, totalKuis: 0, totalScore: 0, highestScore: 0, lowestScore: 100,
+          studentId: studentId, nis: String(row[idxNis] || ""), absen: String(row[idxAbsen] || ""),
+          kelas: String(row[idxKelas] || ""), nama: studentName, totalKuis: 0, totalScore: 0, highestScore: 0, lowestScore: 100,
           reading: 0, quizActivity: 0, discussion: 0, download: 0, assignment: 0, totalActivity: 0, pertemuan: [], lastQuizStatus: "",
           kuisFormatif: 0, kuisSumatif: 0, skorUts: 0, skorUas: 0
         };
       }
       const s = studentStats[key];
       if (isKuis) {
-        const score = parseInt(row[2]) || 0;
-        const category = String(row[9] || "formatif").toLowerCase();
+        const score = parseInt(row[idxScore]) || 0;
+        const category = String(row[idxCategory] || "formatif").toLowerCase();
         s.totalKuis++; s.totalScore += score; s.quizActivity++;
         if (score > s.highestScore) s.highestScore = score;
         if (score < s.lowestScore) s.lowestScore = score;
-        s.lastQuizStatus = row[4] || "";
+        s.lastQuizStatus = row[idxStatus] || "";
         if (category === "formatif") s.kuisFormatif++;
         else if (category === "sumatif" || category === "s") s.kuisSumatif++;
         else if (category === "uts") s.skorUts = Math.max(s.skorUts, score);
@@ -271,7 +304,7 @@ function updateSummary() {
         else if (type === "download") s.download++;
         else if (type === "assignment") s.assignment++;
       }
-      if (!s.pertemuan.includes(pertemuanName)) s.pertemuan.push(pertemuanName);
+      if (!s.pertemuan.includes(pName)) s.pertemuan.push(pName);
     }
   });
   
@@ -408,19 +441,25 @@ function getStudentScores(studentId) {
   }
   
   const allSheets = ss.getSheets();
-  const result = { studentId: studentId, ulanganHarian: { highest: 0, average: 0, sum: 0, count: 0, all: [] }, uts: { highest: 0, all: [] }, uas: { highest: 0, all: [] }, formatif: { count: 0, all: [] }, sikap: 0, keterampilan: 0 };
+  const result = { studentId: studentId, kehadiran: 0, ulanganHarian: { highest: 0, average: 0, sum: 0, count: 0, all: [] }, uts: { highest: 0, all: [] }, uas: { highest: 0, all: [] }, formatif: { count: 0, all: [] }, sikap: 0, keterampilan: 0 };
   let quizCount = 0, readingCount = 0, taskCount = 0, forumCount = 0;
+  let attendanceTotal = 0;
+  const attendancePertemuan = {};
   
   allSheets.forEach(sheet => {
     const name = sheet.getName();
     if (name === "Rangkuman" || name === "Akumulasi Nilai Rapor" || name === "Users") return;
-    if (name.includes(" - Kuis")) {
+    const isUnified = name === QUIZ_SHEET_NAME;
+    if (isUnified || name.includes(" - Kuis")) {
+      const idxScore = isUnified ? 4 : 2;
+      const idxCategory = isUnified ? 11 : 9;
+      const idxSid = isUnified ? 7 : 5;
       const data = sheet.getDataRange().getValues();
       for (let i = 1; i < data.length; i++) {
-        if (String(data[i][5] || "").trim() !== studentId) continue;
-        const score = parseInt(data[i][2]) || 0;
-        const category = String(data[i][9] || "formatif").toLowerCase();
-        const pertemuan = name.replace(" - Kuis", "");
+        if (String(data[i][idxSid] || "").trim() !== studentId) continue;
+        const score = parseInt(data[i][idxScore]) || 0;
+        const category = String(data[i][idxCategory] || "formatif").toLowerCase();
+        const pertemuan = isUnified ? String(data[i][2] || "").trim() : name.replace(" - Kuis", "");
         quizCount++;
         if (category === "ulangan_harian") {
           result.ulanganHarian.all.push({ score, pertemuan });
@@ -443,6 +482,9 @@ function getStudentScores(studentId) {
       for (let i = 1; i < data.length; i++) {
         if (String(data[i][7] || "").trim() !== studentId) continue;
         const type = String(data[i][4] || "").toLowerCase();
+        attendanceTotal++;
+        const pName = name.replace(" - Aktivitas", "");
+        attendancePertemuan[pName] = (attendancePertemuan[pName] || 0) + 1;
         if (type === "reading") readingCount++;
         else if (type === "assignment") taskCount++;
         else if (type === "discussion") forumCount++;
@@ -452,6 +494,10 @@ function getStudentScores(studentId) {
   
   if (result.ulanganHarian.count > 0) {
     result.ulanganHarian.average = Math.round(result.ulanganHarian.sum / result.ulanganHarian.count);
+  }
+  const pCount = Object.keys(attendancePertemuan).length;
+  if (pCount > 0) {
+    result.kehadiran = Math.min(Math.round(attendanceTotal / pCount) * 10, 100);
   }
   result.sikap = Math.min(taskCount * 25 + forumCount * 20, 100);
   result.keterampilan = Math.min(quizCount * 30 + readingCount * 10, 100);
@@ -473,35 +519,44 @@ function generateReport(weights) {
   allSheets.forEach(sheet => {
     const name = sheet.getName();
     if (name === "Rangkuman" || name === "Akumulasi Nilai Rapor" || name === "Users" || sheet.getLastRow() <= 1) return;
-    if (!name.includes(" - Kuis") && !name.includes(" - Aktivitas")) return;
-    const isKuis = name.includes(" - Kuis");
+    const isUnified = name === QUIZ_SHEET_NAME;
+    if (!isUnified && !name.includes(" - Kuis") && !name.includes(" - Aktivitas")) return;
+    const isKuis = isUnified || name.includes(" - Kuis");
     const isAktivitas = name.includes(" - Aktivitas");
+    const idxNama = (isAktivitas || isUnified) ? 3 : 1;
+    const idxSid = (isAktivitas || isUnified) ? 7 : 5;
+    const idxNis = (isAktivitas || isUnified) ? 8 : 6;
+    const idxAbsen = (isAktivitas || isUnified) ? 9 : 7;
+    const idxKelas = (isAktivitas || isUnified) ? 10 : 8;
+    const idxScore = isUnified ? 4 : 2;
+    const idxCategory = isUnified ? 11 : 9;
     const pertemuanName = name.replace(" - Kuis", "").replace(" - Aktivitas", "");
     const data = sheet.getDataRange().getValues();
     for (let i = 1; i < data.length; i++) {
       const row = data[i];
-      const studentName = String(row[isAktivitas ? 3 : 1] || "").trim();
-      const studentId = String(row[isAktivitas ? 7 : 5] || "").trim();
+      const pName = isUnified ? String(row[2] || "").trim() || pertemuanName : pertemuanName;
+      const studentName = String(row[idxNama] || "").trim();
+      const studentId = String(row[idxSid] || "").trim();
       if (!studentName) continue;
       const key = studentId || studentName;
       if (!studentStats[key]) {
         studentStats[key] = {
-          studentId: studentId, nis: String(row[isAktivitas ? 8 : 6] || ""), absen: String(row[isAktivitas ? 9 : 7] || ""), kelas: String(row[isAktivitas ? 10 : 8] || ""),
+          studentId: studentId, nis: String(row[idxNis] || ""), absen: String(row[idxAbsen] || ""), kelas: String(row[idxKelas] || ""),
           nama: studentName, pertemuanActivities: {}, uhScores: [], highestUTS: 0, highestUAS: 0, taskCount: 0, forumCount: 0, quizCount: 0, readingCount: 0
         };
       }
       const s = studentStats[key];
       if (isKuis) {
-        const score = parseInt(row[2]) || 0;
-        const category = String(row[9] || "formatif").toLowerCase();
+        const score = parseInt(row[idxScore]) || 0;
+        const category = String(row[idxCategory] || "formatif").toLowerCase();
         if (category === "ulangan_harian") s.uhScores.push(score);
         else if (category === "uts" && score > s.highestUTS) s.highestUTS = score;
         else if (category === "uas" && score > s.highestUAS) s.highestUAS = score;
         s.quizCount++;
       }
       if (isAktivitas) {
-        if (!s.pertemuanActivities[pertemuanName]) s.pertemuanActivities[pertemuanName] = 0;
-        s.pertemuanActivities[pertemuanName]++;
+        if (!s.pertemuanActivities[pName]) s.pertemuanActivities[pName] = 0;
+        s.pertemuanActivities[pName]++;
         const actType = String(row[4] || "").toLowerCase();
         if (actType === "assignment") s.taskCount++;
         else if (actType === "discussion") s.forumCount++;
@@ -730,34 +785,37 @@ function logActivity(params) {
 function getActivityHistory(params) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sheet = ss.getSheetByName("Aktivitas");
-  if (!sheet) return { success: true, history: [] };
   const studentId = params.studentId;
   const days = parseInt(params.days || 28);
-  const data = sheet.getDataRange().getValues();
-  if (data.length <= 1) return { success: true, history: [] };
-  
-  const headers = data[0];
-  const rows = data.slice(1);
-  const dateIdx = headers.indexOf("Date");
-  const studentIdx = headers.indexOf("StudentID");
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   const startDate = new Date(today);
   startDate.setDate(today.getDate() - days);
   
   const dateMap = {};
-  rows.forEach(row => {
-    if (studentId && String(row[studentIdx]).trim() !== studentId) return;
-    const rowDate = row[dateIdx];
-    let rowDateObj;
-    if (rowDate instanceof Date) rowDateObj = rowDate;
-    else if (typeof rowDate === "string") rowDateObj = new Date(rowDate);
-    else return;
-    
-    if (rowDateObj < startDate || rowDateObj > today) return;
-    const dateStr = Utilities.formatDate(rowDateObj, Session.getScriptTimeZone(), "yyyy-MM-dd");
-    dateMap[dateStr] = (dateMap[dateStr] || 0) + 1;
-  });
+  
+  function collectRows_(target, studentIdx, dateIdx) {
+    if (!target || target.getLastRow() <= 1) return;
+    const data = target.getDataRange().getValues();
+    for (let i = 1; i < data.length; i++) {
+      if (studentId && String(data[i][studentIdx] || "").trim() !== studentId) continue;
+      const rowDate = data[i][dateIdx];
+      let rowDateObj;
+      if (rowDate instanceof Date) rowDateObj = rowDate;
+      else if (typeof rowDate === "string") rowDateObj = new Date(rowDate);
+      else continue;
+      if (isNaN(rowDateObj.getTime()) || rowDateObj < startDate || rowDateObj > today) continue;
+      const dateStr = Utilities.formatDate(rowDateObj, Session.getScriptTimeZone(), "yyyy-MM-dd");
+      dateMap[dateStr] = (dateMap[dateStr] || 0) + 1;
+    }
+  }
+  
+  // Sheet aktivitas global (Date di kolom B, StudentID di kolom C)
+  if (sheet) collectRows_(sheet, 2, 1);
+  
+  // Sheet kuis tunggal "pertemuan-kuis" (Date di kolom B, Student ID di kolom H)
+  const quizSheet = ss.getSheetByName(QUIZ_SHEET_NAME);
+  if (quizSheet) collectRows_(quizSheet, 7, 1);
   
   const history = Object.keys(dateMap).map(date => ({ date: date, count: dateMap[date] }));
   return { success: true, history: history };

@@ -59,6 +59,12 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
             },
           },
           {
+            property: "tag",
+            title: "Kode Materi (tag)",
+            description: "Kode materi bebas, beda tiap kuis (mis. Pertemuan 2, UH-1, UTS). Disimpan di kolom Kode Materi sheet pertemuan-kuis.",
+            inputMethod: "textfield",
+          },
+          {
             property: "shuffleChoices",
             title: "Acak Pilihan Jawaban",
             description: "Mengacak urutan pilihan jawaban setiap kali kuis dimulai",
@@ -172,6 +178,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
       accessToken: { type: String, attribute: "access-token" },
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       sheetName: { type: String, attribute: "sheet-name" },
+      tag: { type: String, attribute: "tag" },
       quizCategory: { type: String, attribute: "quiz-category" },
       shuffleChoices: { type: Boolean, attribute: "shuffle-choices", reflect: true },
       hideAnswers: { type: Boolean, attribute: "hide-answers", reflect: true },
@@ -239,6 +246,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     this.accessToken = ""
     this.appsScriptUrl = ""
     this.sheetName = "Pertemuan"
+    this.tag = ""
     this.quizCategory = "formatif"
     this.shuffleChoices = false
     this.hideAnswers = false
@@ -761,12 +769,13 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
         name: this._studentName,
         score: percentage,
         sheet: this.sheetName || "Pertemuan",
+        tag: this.tag || this.sheetName || "Pertemuan",
         studentId: this.studentId || "",
         nis: this.studentNis || "",
         absen: this.studentAbsen || "",
         kelas: this.studentKelas || "",
         activityType: "quiz",
-        description: `Quiz ${this.quizCategory || "formatif"} selesai`,
+        description: `Quiz ${this.quizCategory || "formatif"}${this.tag ? " (" + this.tag + ")" : ""} selesai`,
       }
       this.dispatchEvent(
         new CustomEvent("quiz-saved", {
@@ -836,6 +845,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
         totalPoints: this._maxPoints,
         timestamp: new Date().toISOString(),
         sheet: this.sheetName || "Pertemuan",
+        tag: this.tag || this.sheetName || "Pertemuan",
         studentId: this.studentId || "",
         nis: this.studentNis || "",
         absen: this.studentAbsen || "",
