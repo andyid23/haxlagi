@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785581856
+      "updated": 1785585114
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -177,7 +177,7 @@
       "description": "Demo dan dokumentasi elemen kuis interaktif",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785570084,
+        "updated": 1785585113,
         "published": true,
         "locked": false,
         "status": "",
