@@ -13,8 +13,10 @@
 
 
 
+
   <li><strong>🗂️ Generate Soal dari Bank Soal</strong> &#8212; membaca sheet <code>Bank Soal</code>
     pada spreadsheet aktif via action Apps Script <code>getBankSoal</code>.</li>
+
 
 
 
@@ -22,7 +24,7 @@
 <p>Soal hasil generate langsung dimuat ke kuis di tab <strong>📝 Ambil Kuis</strong>.</p>
 <h2 id="h2-demo">🧪 Demo Langsung</h2>
 <p>Coba dashboard di bawah ini (mode dosen agar tombol generator muncul):</p>
-<quiz-dashboard-lite2 view-mode="lecturer" apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec" sheet-name="Pertemuan 1" _active-tab="1"></quiz-dashboard-lite2>
+<quiz-dashboard-lite2 view-mode="lecturer" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" sheet-name="Pertemuan 1" _active-tab="1" questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;soal&quot;,&quot;choices&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],&quot;correctIndex&quot;:3}]"></quiz-dashboard-lite2>
 <h2 id="h2-banksoal">🗂️ Struktur Sheet "Bank Soal"</h2>
 <p>Buat tab <code>Bank Soal</code> pada spreadsheet dengan kolom:</p>
 <table>
@@ -31,7 +33,9 @@
 
 
 
+
   </thead>
+
 
 
 
@@ -40,17 +44,22 @@
 
 
 
+
     <tr><td>Kategori</td><td><code>literasi</code>, <code>numerasi</code>, atau <code>campur</code></td>
 
 
+
 </tr>
+
 
 
 
     <tr><td>Tipe</td><td><code>mc</code>, <code>pgk</code>, <code>matching</code>, <code>shortAnswer</code></td>
 
 
+
 </tr>
+
 
 
 
@@ -58,7 +67,9 @@
 
 
 
+
     <tr><td>Detail</td><td>JSON properti soal (lihat contoh di bawah)</td></tr>
+
 
 
 
@@ -66,11 +77,14 @@
 
 
 
+
     <tr><td>Poin</td><td>Bobot poin (default 1)</td></tr>
 
 
 
+
   </tbody>
+
 
 
 

@@ -23,7 +23,7 @@ content: >
   <p></p>
 
   <quiz-dashboard-lite2
-  apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec"
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
   sheet-name="LD1" view-mode="student" _active-tab="1" _success-msg="Selamat
   datang, Andy Yulianto! Data kuis &amp; aktivitas akan tercatat atas nama
   Anda.">

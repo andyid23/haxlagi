@@ -28,7 +28,7 @@
   Tanpa Firebase &#8212; cocok untuk deployment sederhana.</p>
 <h2 id="h2-1591783538">🧪 Demo Langsung</h2>
 <p>Coba dashboard kuis di bawah ini:</p>
-<quiz-dashboard-lite2 quiz-tab-hidden view-mode="student" apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec" sheet-name="Pertemuan 1" _active-tab="0"></quiz-dashboard-lite2>
+<quiz-dashboard-lite2 quiz-tab-hidden view-mode="student" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" sheet-name="Pertemuan 1" _active-tab="0"></quiz-dashboard-lite2>
 <h2 id="h2--979403131">📋 Atribut</h2>
 <p>Dashboard ini tidak memerlukan atribut khusus. Semua konfigurasi (seperti Google
   Sheets) dilakukan melalui UI-nya langsung.</p>

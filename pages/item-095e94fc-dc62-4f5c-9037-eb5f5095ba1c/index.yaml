@@ -46,7 +46,7 @@ content: >
   </p>
 
   <p>  <quiz-dashboard-lite2 quiz-tab-hidden view-mode="student"
-  apps-script-url="https://script.google.com/macros/s/AKfycbw6iaBn4NYNwmN9z-Bks4P302cXlxiGiz4Uxr7gUyoR5y62JLEOagV3S5uhV_J7e8-V/exec"
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
   sheet-name="Pertemuan 1" _active-tab="2"
   _user="{&quot;studentId&quot;:&quot;STD-65108053&quot;,&quot;nama&quot;:&quot;Andy
   Yulianto&quot;,&quot;email&quot;:&quot;wildanhabib051@gmail.com&quot;,&quot;nis&quot;:234,&quot;absen&quot;:2,&quot;kelas&quot;:&quot;XI-1&quot;}">

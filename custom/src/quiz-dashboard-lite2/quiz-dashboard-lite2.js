@@ -21,6 +21,7 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
       sheetName: { type: String, attribute: "sheet-name" },
       viewMode: { type: String, attribute: "view-mode" },
       quizTabHidden: { type: Boolean, attribute: "quiz-tab-hidden", reflect: true },
+      questions: { type: Array },
       _spreadsheetId: { state: true },
       _activeTab: { state: true },
       _successMsg: { state: true },
@@ -36,6 +37,7 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
     this.sheetName = "Pertemuan";
     this.viewMode = "student";
     this.quizTabHidden = false;
+    this.questions = [];
     this._user = null;
     this._spreadsheetId = "";
     this._activeTab = 0;
@@ -98,6 +100,21 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
     setTimeout(() => { this._successMsg = ""; }, 4000);
   }
 
+  _onQuizQuestionsChanged(e) {
+    const qs = e && e.detail && e.detail.questions;
+    if (!Array.isArray(qs)) return;
+    this.questions = qs;
+    try {
+      this.setAttribute("questions", JSON.stringify(qs));
+    } catch (_) {
+      // atribut terlalu besar — biarkan property saja
+    }
+  }
+
+  _onQuestionsGenerated() {
+    this._activeTab = 1;
+  }
+
   _simReading() {
     globalThis.dispatchEvent(new CustomEvent("reading-saved", {
       detail: { title: `Materi ${this.sheetName}` },
@@ -120,6 +137,9 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
           box-shadow: var(--ddd-shadow-2);
           max-width: 1200px;
           margin: 0 auto;
+        }
+        explode-quiz[hidden] {
+          display: none !important;
         }
         .header {
           display: flex;
@@ -263,6 +283,22 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
         .studentKelas="${this._user?.kelas || ''}">
       </activity-logger>
 
+      ${!this.quizTabHidden ? html`<explode-quiz
+        id="quiz"
+        ?hidden="${this._activeTab !== 1}"
+        .appsScriptUrl="${this.appsScriptUrl}"
+        .sheetName="${this.sheetName}"
+        .questions="${this.questions}"
+        .studentId="${this._user?.studentId || ''}"
+        .studentName="${this._user?.nama || ''}"
+        .studentNis="${this._user?.nis || ''}"
+        .studentAbsen="${this._user?.absen || ''}"
+        .studentKelas="${this._user?.kelas || ''}"
+        .editable="${true}"
+        @quiz-saved="${this._onQuizSaved}"
+        @questions-changed="${this._onQuizQuestionsChanged}">
+      </explode-quiz>` : ""}
+
       <div class="main-content">
         ${this._activeTab === 0 ? html`
           <h2 style="color: var(--ddd-theme-primary);">${this.t.tabGuide}</h2>
@@ -280,19 +316,6 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
               <p>Data tersinkron ke Google Sheets via Apps Script. Gunakan atribut <code>apps-script-url</code> dan <code>sheet-name</code>.</p>
             </div>
           </div>
-        ` : this._activeTab === 1 && !this.quizTabHidden ? html`
-          <explode-quiz
-            id="quiz"
-            .appsScriptUrl="${this.appsScriptUrl}"
-            .sheetName="${this.sheetName}"
-            .studentId="${this._user?.studentId || ''}"
-            .studentName="${this._user?.nama || ''}"
-            .studentNis="${this._user?.nis || ''}"
-            .studentAbsen="${this._user?.absen || ''}"
-            .studentKelas="${this._user?.kelas || ''}"
-            .editable="${true}"
-            @quiz-saved="${this._onQuizSaved}">
-          </explode-quiz>
         ` : this._activeTab === 2 ? html`
           <div class="tracker-grid" style="margin-top: var(--ddd-spacing-6);">
             <attendance-tracker
@@ -310,7 +333,8 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
               ? html`
                   <lecturer-console
                     .appsScriptUrl="${this.appsScriptUrl}"
-                    .quizSelector="${"#quiz"}"></lecturer-console>
+                    .quizSelector="${"#quiz"}"
+                    @questions-generated="${this._onQuestionsGenerated}"></lecturer-console>
                 `
               : html`
                   <transparent-gradebook

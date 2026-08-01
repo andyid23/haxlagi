@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <item>
 <id>item-doc-kuis</id>
 <indent>0</indent>
@@ -34,14 +34,14 @@
 
 
 
-  <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"></quiz-user-auth>
+  <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"></quiz-user-auth>
 
 
 
 
 </div>
 <p>Coba kuis interaktif di bawah ini:</p>
-<explode-quiz sheet-name="Pertemuan" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec" shuffle-choices tag="formatif"></explode-quiz>
+<explode-quiz sheet-name="Pertemuan" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" shuffle-choices tag="formatif"></explode-quiz>
 <h2 id="h2-1518686653">📋 Atribut yang Didukung</h2>
 <editable-table accent-color="grey" column-header><table>
 	<thead class="thead">

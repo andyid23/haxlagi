@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785581173
+      "updated": 1785581856
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -346,13 +346,34 @@
       "description": "Kuis AKM dengan generator soal: template lokal atau Bank Soal (sheet Bank Soal)",
       "metadata": {
         "created": 1785574419,
-        "updated": 1785581173,
+        "updated": 1785581855,
         "images": [],
         "videos": [],
         "published": true,
         "hideInMenu": false,
         "locked": false,
         "readtime": 1,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-tutorial-panduan-guru",
+      "indent": 1,
+      "location": "pages/tutorial-panduan-guru/index.html",
+      "slug": "tutorial-panduan-guru",
+      "order": 10,
+      "parent": "item-doc-elements",
+      "title": "📘 Panduan Guru: Soal, Nilai & Rapor",
+      "description": "Panduan lengkap: materi, kuis formatif/UH/UTS/UAS, Bank Soal, sikap & keterampilan, bobot nilai dan generate rapor",
+      "metadata": {
+        "created": 1785574419,
+        "updated": 1785574419,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 5,
         "status": ""
       }
     },
