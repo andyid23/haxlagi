@@ -10,7 +10,7 @@
 <description>Demo dan dokumentasi elemen kuis interaktif</description>
 <metadata>
 <created>1784667020</created>
-<updated>1785546624</updated>
+<updated>1785546794</updated>
 <published>true</published>
 <locked>false</locked>
 <status></status>
@@ -33,13 +33,15 @@
 
 
 
+
   <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec" _screen="logged-in" _nama="Andy Yulianto" _email="wildanhabib051@gmail.com" _nis="234" _absen="2" _kelas="XI-1" _student-id="STD-65108053" _loading=""></quiz-user-auth>
+
 
 
 
 </div>
 <p>Coba kuis interaktif di bawah ini:</p>
-<explode-quiz questions="[{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3}]" s="" sheet-name="Pertemuan" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec" shuffle-choices _current-index="2" _selected-index="2" _temp-questions="[{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3}]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Medan&quot;,&quot;Jakarta&quot;],&quot;correctIndex&quot;:2,&quot;_correctMap&quot;:[0,1,3,2]},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;56&quot;,&quot;54&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1,&quot;_correctMap&quot;:[1,0,2,3]},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;,&quot;Bumi&quot;],&quot;correctIndex&quot;:3,&quot;_correctMap&quot;:[0,2,3,1]}]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="3" spreadsheet-id="" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="dsfdsafdsa" _validation-error="Nama tidak boleh kosong." data-width="0" data-padding="xs" data-margin="center" _feedback-text="Yah, Salah. Jawaban benar: Bumi" _name-input-value="dsfdsafdsa" _advance-timer="15652"></explode-quiz>
+<explode-quiz questions="[{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3}]" s="" sheet-name="Pertemuan" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec" shuffle-choices _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0" spreadsheet-id="" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto" _validation-error="Nama tidak boleh kosong." data-width="0" data-padding="xs" data-margin="center" _feedback-text="Yah, Salah. Jawaban benar: Bumi" _name-input-value="dsfdsafdsa" _advance-timer="15652"></explode-quiz>
 <h2 id="h2-1518686653">📋 Atribut yang Didukung</h2>
 <table>
   <thead>
@@ -52,7 +54,9 @@
 
 
 
+
   </thead>
+
 
 
 
@@ -64,10 +68,12 @@
 
 
 
+
       <td>String</td>
       <td>ID Google Spreadsheet untuk menyimpan hasil</td>
       <td>—</td>
     </tr>
+
 
 
 
@@ -78,10 +84,12 @@
 
 
 
+
       <td>String</td>
       <td>URL Google Apps Script endpoint</td>
       <td>—</td>
     </tr>
+
 
 
 
@@ -92,10 +100,12 @@
 
 
 
+
       <td>Boolean</td>
       <td>Tampilkan tombol edit soal</td>
       <td>false</td>
     </tr>
+
 
 
 
@@ -106,6 +116,7 @@
 
 
 
+
       <td>JSON Array</td>
       <td>Daftar soal kustom (JSON string)</td>
       <td>3 soal default</td>
@@ -113,7 +124,9 @@
 
 
 
+
   </tbody>
+
 
 
 
@@ -132,7 +145,9 @@
 
 
 
+
       <li><strong>Efek Konfeti:</strong> Animasi saat jawaban benar dan skor &#8805; 80%</li>
+
 
 
 
@@ -140,7 +155,9 @@
 
 
 
+
       <li><strong>Sinkronisasi Google Sheets:</strong> Hasil otomatis tersimpan</li>
+
 
 
 
@@ -148,7 +165,9 @@
 
 
 
+
       <li><strong>Responsif:</strong> Layout adaptif untuk mobile</li>
+
 
 
 
@@ -164,7 +183,9 @@
 
 
 
+
       </thead>
+
 
 
 
@@ -177,7 +198,9 @@
 
 
 
+
       </tbody>
+
 
 
 
