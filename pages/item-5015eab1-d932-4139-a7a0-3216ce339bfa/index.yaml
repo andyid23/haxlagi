@@ -2,13 +2,46 @@ id: item-5015eab1-d932-4139-a7a0-3216ce339bfa
 indent: 0
 location: pages/item-5015eab1-d932-4139-a7a0-3216ce339bfa/index.yaml
 slug: new-page-6
-order: 2
+order: 3
 parent: item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c
 title: New Page
-description: ''
+description: |2
+
+
+      1 Login / Registrasi
+
+      
+
+    
+
+      3 Kuis Formatif
+
+      
+      
+
+    
 metadata:
   created: 1785573963
-  updated: 1785573963
+  updated: 1785574418
   images: []
   videos: []
-content: <p></p>
+  published: true
+  hideInMenu: false
+  locked: false
+  readtime: 1
+content: |
+
+  <p></p>
+  <div class="step">
+      <h2><span class="step-num">1</span> Login / Registrasi</h2>
+
+      <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec" _screen="logged-in" _nama="Andy Yulianto" _email="wildanhabib051@gmail.com" _nis="234" _absen="2" _kelas="XI-1" _student-id="STD-65108053"></quiz-user-auth>
+
+    </div>
+  <div class="step">
+      <h2><span class="step-num">3</span> Kuis Formatif</h2>
+
+      <explode-quiz hide-answers hide-confetti id="quiz1" sheet-name="Pertemuan 1" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec" shuffle-choices questions="[object Object],[object Object],[object Object]" spreadsheet-id="" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="dsfdsfd" _current-index="0" _selected-index="-1" _name-input-value="dsfdsfd" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0">
+      </explode-quiz>
+
+    </div>

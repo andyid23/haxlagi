@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2026 07:38:23 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 07:41:24 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -169,6 +169,13 @@
       <description></description>
       <guid>https://localhost:3000/sites/haxnow/new-page-5</guid>
       <pubDate>Sat, 01 Aug 2026 06:48:59 GMT</pubDate>
+    </item>
+    <item>
+      <title>New Page</title>
+      <link>https://localhost:3000/sites/haxnow/new-page-6</link>
+      <description>1 Login / Registrasi 3 Kuis Formatif</description>
+      <guid>https://localhost:3000/sites/haxnow/new-page-6</guid>
+      <pubDate>Sat, 01 Aug 2026 08:46:03 GMT</pubDate>
     </item>
   </channel>
 </rss>

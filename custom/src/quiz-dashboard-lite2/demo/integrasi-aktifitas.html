@@ -47,7 +47,7 @@
     body.dark-mode .hasil-box { background: #1b1e27; color: #d1fae5; }
     body.dark-mode table, body.dark-mode th, body.dark-mode td { border-color: #343b4e; }
   </style>
-  
+
     <style>
     body.dark-mode {
       background-color: #0d0f14;
@@ -88,7 +88,7 @@
   <!-- STEP 1: Login -->
   <div class="step">
     <h2><span class="step-num">1</span> Login / Registrasi</h2>
-    <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"></quiz-user-auth>
+    <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec"></quiz-user-auth>
   </div>
 
   <!-- STEP 2: Tugas + Forum -->
@@ -96,14 +96,14 @@
     <h2><span class="step-num">2</span> Tugas Mandiri & Forum Diskusi</h2>
     <p style="font-size:13px;color:#666;">Tugas tersimpan ke <code>Tugas Log</code> sheet. Forum CRUD via <code>Forum Log</code> sheet (nested replies, like, sort).</p>
     <assignment-forum
-    hide-delete 
+    hide-delete
       id="af1"
       assignment-title="Refleksi Energi Terbarukan"
       assignment-instruction="Tuliskan refleksi: kontribusi apa yang bisa Anda lakukan untuk mendukung energi terbarukan di lingkungan rumah? Sertakan link Google Drive/Doc jika ada file pendukung."
       forum-topik="Diskusi: Potensi Energi Terbarukan"
-      apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
-      forum-api-url="https://script.google.com/macros/s/AKfycbwMRgoKV0PhFoHUvYzGIT0GBIf5GRhBNpbi1LKmuqRPcjVBkjqlhCDObObFusf-U2AV/exec"
-      sheet-name="Pertemuan 1"
+      apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec"
+      forum-api-url="https://script.google.com/macros/s/AKfycbyWqGKSDIm1el5_fzK331QIDWGR-xvpm1dQmaObC_2D0lHbStxAPHIxYFNktbicy6-NwQ/exec"
+      sheet-name="LD-2"
       view-mode="lecturer">
     </assignment-forum>
   </div>
@@ -115,7 +115,7 @@
       id="quiz1"
       sheet-name="Pertemuan 1"
       quiz-category="formatif"
-      apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+      apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec"
       shuffle-choices
       questions='[
         {"type":"mc","question":"Apa kepanjangan HTML?","choices":["HyperText Markup Language","High Text Machine Language","Home Tool Markup Language","Hyperlinks Text Markup"],"correctIndex":0},
@@ -131,8 +131,8 @@
     <p style="font-size:13px;color:#666;">Mode dosen: generate rapor, input UTS/UAS manual, atur 6 komponen bobot (Kehadiran:UH:UTS:UAS:Sikap:Skill). Auto-calc sikap dari tugas+forum, skill dari quiz+baca.</p>
     <quiz-dashboard-lite2
     quiz-tab-hidden
-    view-mode="student" 
-      apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+    view-mode="student"
+      apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec"
       sheet-name="Pertemuan 1"
       view-mode="lecturer">
     </quiz-dashboard-lite2>
@@ -140,7 +140,7 @@
       show-after-quiz
       ...>
     </transparent-gradebook>
-    
+
   <!-- </div> -->
 
   <!-- ALUR DATA -->
