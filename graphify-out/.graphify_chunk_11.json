@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "assets_icon_48x48",
+      "label": "48x48 App Icon (haxnow PWA)",
+      "file_type": "image",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-48x48.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "assets_icon_set",
+      "label": "haxnow PWA Multi-Size Icon Set (48-512px)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-48x48.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "assets_icon_corruption",
+      "label": "Corrupted PNG Binary (UTF-8 Replacement-Character Mangling)",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-48x48.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "assets_icon_48x48",
+      "target": "assets_icon_set",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-48x48.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "assets_icon_48x48",
+      "target": "assets_icon_corruption",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-48x48.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "assets_icon_set",
+      "target": "assets_icon_corruption",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-48x48.png",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "assets_corrupted_pwa_icon_set",
+      "label": "Corrupted PWA Icon Set",
+      "nodes": ["assets_icon_48x48", "assets_icon_set", "assets_icon_corruption"],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-48x48.png"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

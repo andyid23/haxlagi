@@ -33,6 +33,7 @@ function doGet(e) {
       case "getScores": return response(getStudentScores(studentId));
       case "getStudentRoster": return response(getStudentRoster());
       case "generateReport": return response(generateReport(e.parameter));
+      case "getBankSoal": return response(getBankSoal(e.parameter));
       case "list":
       default: return response(getSheetList());
     }
@@ -64,6 +65,7 @@ function doPost(e) {
     if (data.action === "getScores") return response(getStudentScores(data.studentId || ""));
     if (data.action === "getStudentRoster") return response(getStudentRoster());
     if (data.action === "generateReport") return response(generateReport(data));
+    if (data.action === "getBankSoal") return response(getBankSoal(data));
 
     if (data.studentId) {
       const user = verifyUser(data.studentId);
@@ -307,6 +309,51 @@ function getSheetList() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const list = ss.getSheets().map(s => s.getName()).filter(n => n !== "Rangkuman");
   return { status: "ok", pertemuan: list };
+}
+
+/**
+ * Bank Soal AKM. Sheet "Bank Soal" kolom:
+ * ID | Kategori (campur/literasi/numerasi) | Tipe (mc/pgk/matching/shortAnswer) | Soal | Detail (JSON) | Gambar | Poin
+ */
+function getBankSoal(params) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getSheetByName("Bank Soal");
+  if (!sheet || sheet.getLastRow() <= 1) {
+    return { status: "error", message: "Sheet 'Bank Soal' belum ada atau kosong. Buat kolom: ID | Kategori | Tipe | Soal | Detail | Gambar | Poin." };
+  }
+  const rows = sheet.getDataRange().getValues();
+  const headers = rows[0].map(h => String(h).trim());
+  const kategori = String((params && params.kategori) || "").trim().toLowerCase();
+  const questions = [];
+  for (let i = 1; i < rows.length; i++) {
+    const row = {};
+    headers.forEach((h, idx) => { row[h] = rows[i][idx]; });
+    const rowKategori = String(row.Kategori || row.kategori || "").trim().toLowerCase();
+    if (kategori && kategori !== "campur" && rowKategori !== kategori) continue;
+    if (!row.Tipe && !row.tipe) continue;
+    const q = {
+      type: String(row.Tipe || row.tipe || "mc").trim(),
+      question: String(row.Soal || row.question || "").trim(),
+      points: parseInt(row.Poin || row.points) || 1,
+    };
+    if (row.Gambar || row.image) q.image = String(row.Gambar || row.image);
+    const raw = row.Detail || row.detail;
+    if (raw) {
+      let detail = null;
+      if (typeof raw === "object") detail = raw;
+      else {
+        try { detail = JSON.parse(String(raw)); } catch (e) { detail = null; }
+      }
+      if (detail && typeof detail === "object") {
+        Object.assign(q, detail);
+      } else if (!raw) {
+        continue;
+      }
+    }
+    if (!q.question) continue;
+    questions.push(q);
+  }
+  return { status: "ok", total: questions.length, questions };
 }
 
 function getLeaderboard() {

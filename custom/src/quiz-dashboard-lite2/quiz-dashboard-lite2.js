@@ -6,6 +6,7 @@ import "./lib/explode-quiz.js";
 import "./lib/quiz-user-auth.js";
 import "./lib/assignment-forum.js";
 import "./lib/lecturer-console.js";
+import "./lib/question-generator.js";
 
 class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
   static get tag() {
@@ -281,6 +282,7 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
           </div>
         ` : this._activeTab === 1 && !this.quizTabHidden ? html`
           <explode-quiz
+            id="quiz"
             .appsScriptUrl="${this.appsScriptUrl}"
             .sheetName="${this.sheetName}"
             .studentId="${this._user?.studentId || ''}"
@@ -307,7 +309,8 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
             ${this.viewMode === "lecturer"
               ? html`
                   <lecturer-console
-                    .appsScriptUrl="${this.appsScriptUrl}"></lecturer-console>
+                    .appsScriptUrl="${this.appsScriptUrl}"
+                    .quizSelector="${"#quiz"}"></lecturer-console>
                 `
               : html`
                   <transparent-gradebook

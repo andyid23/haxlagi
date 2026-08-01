@@ -1,0 +1,60 @@
+
+<h1 id="h1-kuis-akm-campuran">🎯 Kuis AKM Campuran (Literasi + Numerasi)</h1>
+<p>Halaman kuis Asesmen Kompetensi Minimum dengan tipe soal campuran:
+  pilihan ganda (PG), pilihan ganda kompleks (PGK), menjodohkan (matching), dan
+  isian singkat (short answer). Soal bisa dibuat otomatis dari <strong>template lokal</strong>
+  atau dari <strong>Bank Soal</strong> di Google Sheets.</p>
+<h2 id="h2-generator">&#10024; Generator Soal</h2>
+<p>Masuk sebagai dosen lalu buka tab <strong>🛠️ Console Dosen</strong>. Dua tombol
+  baru tersedia:</p>
+<ul>
+  <li><strong>✨ Generate Soal Template Lokal</strong> &#8212; soal acak dari bank template
+    bawaan elemen (tanpa perlu koneksi server).</li>
+
+  <li><strong>🗂️ Generate Soal dari Bank Soal</strong> &#8212; membaca sheet <code>Bank Soal</code>
+    pada spreadsheet aktif via action Apps Script <code>getBankSoal</code>.</li>
+
+</ul>
+<p>Soal hasil generate langsung dimuat ke kuis di tab <strong>📝 Ambil Kuis</strong>.</p>
+<h2 id="h2-demo">🧪 Demo Langsung</h2>
+<p>Coba dashboard di bawah ini (mode dosen agar tombol generator muncul):</p>
+<quiz-dashboard-lite2 view-mode="lecturer" apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec" sheet-name="Pertemuan 1" _active-tab="1"></quiz-dashboard-lite2>
+<h2 id="h2-banksoal">🗂️ Struktur Sheet "Bank Soal"</h2>
+<p>Buat tab <code>Bank Soal</code> pada spreadsheet dengan kolom:</p>
+<table>
+  <thead>
+    <tr><th>Kolom</th><th>Isi</th></tr>
+
+  </thead>
+
+  <tbody>
+    <tr><td>ID</td><td>Nomor urut soal (opsional)</td></tr>
+
+    <tr><td>Kategori</td><td><code>literasi</code>, <code>numerasi</code>, atau <code>campur</code></td>
+</tr>
+
+    <tr><td>Tipe</td><td><code>mc</code>, <code>pgk</code>, <code>matching</code>, <code>shortAnswer</code></td>
+</tr>
+
+    <tr><td>Soal</td><td>Teks pertanyaan</td></tr>
+
+    <tr><td>Detail</td><td>JSON properti soal (lihat contoh di bawah)</td></tr>
+
+    <tr><td>Gambar</td><td>URL gambar (opsional)</td></tr>
+
+    <tr><td>Poin</td><td>Bobot poin (default 1)</td></tr>
+
+  </tbody>
+
+</table>
+<h3 id="h3-contoh-detail">Contoh isi kolom Detail</h3>
+<pre><code>{"choices":["Jakarta","Bandung","Surabaya"],"correctIndex":0}
+{"statements":[{"text":"Matahari terbit di timur","answer":true},{"text":"Bulan lebih besar dari matahari","answer":false}]}
+{"leftItems":["1+1","2+2"],"rightItems":["2","4"],"correctPairs":[["1+1","2"],["2+2","4"]]}
+{"acceptedAnswers":["pancasila","Pancasila"]}</code></pre>
+<h2 id="h2-cara">🖥️ Cara Penggunaan</h2>
+<ol>
+  <li>Buka halaman ini dan login sebagai siswa/dosen.</li>
+  <li>Dosen: buka tab Console Dosen, klik salah satu tombol generate.</li>
+  <li>Buka tab 📝 Ambil Kuis, masukkan nama, dan kerjakan soal yang telah digenerate.</li>
+</ol>

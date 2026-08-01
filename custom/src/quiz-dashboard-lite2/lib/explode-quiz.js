@@ -1,4 +1,4 @@
-import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js"
+﻿import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js"
 import { LitElement, html, css } from "lit"
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js"
 import { pushLocalLog } from "./attendance-system.js"
@@ -155,7 +155,12 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
             if (Array.isArray(value)) return value
             if (typeof value === "object") return value
             const text = String(value).trim()
-            if (!text || text === "[object Object]" || text === "undefined" || text === "null") {
+            if (
+              !text ||
+              text.includes("[object Object]") ||
+              text === "undefined" ||
+              text === "null"
+            ) {
               return undefined
             }
             if (!(text.startsWith("[") || text.startsWith("{"))) return undefined
@@ -366,7 +371,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
 
   updated(changedProperties) {
     super.updated(changedProperties)
-    if (this.questions && this.questions.length === 0) {
+    if (!Array.isArray(this.questions) || this.questions.length === 0) {
       this.questions = DEFAULT_QUESTIONS
     }
     if (changedProperties.has("studentName") && this.studentName) {
@@ -528,8 +533,9 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     this._matchAnswers = {}
     this._shortAnswerText = ""
     this._maxPoints = this._getMaxPoints()
+    const quizQuestions = Array.isArray(this.questions) ? this.questions : DEFAULT_QUESTIONS
     if (this.shuffleChoices) {
-      this._shuffledQuestions = this.questions.map((q) => {
+      this._shuffledQuestions = quizQuestions.map((q) => {
         if (!q.choices) return { ...q }
         const pairs = q.choices.map((c, i) => ({ text: c, origIndex: i }))
         const shuffled = this._shuffleArray(pairs)
@@ -549,9 +555,13 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     return html`<h1 class="quiz-title">${this.t.quizTitle}</h1> <p class="quiz-instruction">${this.t.quizInstruction}</p> <div class="input-group"> <input id="name-input" name="student-name" .value="${this._nameInputValue}" @input="${(e) => (this._nameInputValue = e.target.value)}" @keydown="${(e) => { if (e.key === "Enter") this._startQuiz() }}" .placeholder="${this.t.namePlaceholder}" aria-label="${this.t.ariaNameInput}" type="text" /> </div> <button class="start-btn" @click="${this._startQuiz}" aria-label="${this.t.ariaStartButton}" > ${this.t.startButton} </button> ${this._validationError ? html`<p class="validation-error">${this._validationError}</p>`: ""} <button class="edit-questions-btn" @click="${this._openEditorFromName}" aria-label="${this.t.ariaCloseEditor}" ?hidden="${!this._inHaxEditor && !this.editable}" > ${this.t.editTitle} </button>`
   }
 
+  _getActiveQuestions() {
+    const base = Array.isArray(this.questions) ? this.questions : DEFAULT_QUESTIONS
+    return this._shuffledQuestions.length > 0 ? this._shuffledQuestions : base
+  }
+
   _renderQuestionScreen() {
-    const activeQuestions =
-      this._shuffledQuestions.length > 0 ? this._shuffledQuestions : this.questions
+    const activeQuestions = this._getActiveQuestions()
     const q = activeQuestions[this._currentIndex]
     const progressLabel = `${this.t.questionOf} ${this._currentIndex + 1} ${this.t.of} ${activeQuestions.length}`
     const qType = q.type || "mc"
@@ -568,7 +578,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
   }
 
   _renderMC(q, isMulti) {
-    return html`<div class="answer-grid"> ${q.choices.map((choice, index) => { let btnClass = "answer-btn"; const isSelected = isMulti ? this._selectedAnswers.has(index) : index === this._selectedIndex; if (this._answered && !this.hideAnswers) { const correctIndices = q.correctAnswers || (q.correctIndex != null ? [q.correctIndex] : []); const mappedCorrect = q._correctMap || correctIndices; const isCorrectChoice = mappedCorrect.includes(index); if (isCorrectChoice) { btnClass += " answer-btn--correct"; } else if (isSelected) { btnClass += " answer-btn--wrong"; } } else if (isSelected) { btnClass += " answer-btn--selected"; } return html` <button class="${btnClass}" ?disabled="${this._answered}" @click="${() => isMulti ? this._toggleMultiAnswer(index) : this._selectAnswer(index)}" aria-label="${this.t.ariaAnswerButton}: ${this._getChoiceText(choice)}" > ${this._getChoiceImage(choice) ? html`<img src="${this._getChoiceImage(choice)}" alt="" class="choice-image" />` : ""} ${isMulti && isSelected ? "\u2713 " : ""}${this._getChoiceText(choice)} </button>`; })} ${isMulti && !this._answered ? html` <button class="start-btn multi-submit" @click="${() => this._submitMultiAnswers()}" > Kirim Jawaban (${this._selectedAnswers.size} dipilih) </button>`: ""} </div>`
+    return html`<div class="answer-grid"> ${q.choices.map((choice, index) => { let btnClass = "answer-btn"; const isSelected = isMulti ? this._selectedAnswers.has(index) : index === this._selectedIndex; if (this._answered && !this.hideAnswers) { const correctIndices = q.correctAnswers || (q.correctIndex != null ? [q.correctIndex] : []); const correctPositions = q._correctMap ? correctIndices.map((i) => q._correctMap.indexOf(i)) : correctIndices; const isCorrectChoice = correctPositions.includes(index); if (isCorrectChoice) { btnClass += " answer-btn--correct"; } else if (isSelected) { btnClass += " answer-btn--wrong"; } } else if (isSelected) { btnClass += " answer-btn--selected"; } return html` <button class="${btnClass}" ?disabled="${this._answered}" @click="${() => isMulti ? this._toggleMultiAnswer(index) : this._selectAnswer(index)}" aria-label="${this.t.ariaAnswerButton}: ${this._getChoiceText(choice)}" > ${this._getChoiceImage(choice) ? html`<img src="${this._getChoiceImage(choice)}" alt="" class="choice-image" />` : ""} ${isMulti && isSelected ? "\u2713 " : ""}${this._getChoiceText(choice)} </button>`; })} ${isMulti && !this._answered ? html` <button class="start-btn multi-submit" @click="${() => this._submitMultiAnswers()}" > Kirim Jawaban (${this._selectedAnswers.size} dipilih) </button>`: ""} </div>`
   }
 
   _renderPGK(q) {
@@ -591,14 +601,17 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     this._answered = true
     this._selectedIndex = choiceIndex
     const activeQuestions =
-      this._shuffledQuestions.length > 0 ? this._shuffledQuestions : this.questions
+      this._getActiveQuestions()
     const currentQuestion = activeQuestions[this._currentIndex]
     const correctIndices =
       currentQuestion.correctAnswers ||
       (currentQuestion.correctIndex != null
         ? [currentQuestion.correctIndex]
         : [])
-    const isCorrect = correctIndices.includes(choiceIndex)
+    const correctPositions = currentQuestion._correctMap
+      ? correctIndices.map((i) => currentQuestion._correctMap.indexOf(i))
+      : correctIndices
+    const isCorrect = correctPositions.includes(choiceIndex)
     if (isCorrect) {
       this._score += currentQuestion.points || 1
       if (!this.hideAnswers) {
@@ -607,7 +620,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
       }
       if (!this.hideConfetti) this._fireConfetti()
     } else if (!this.hideAnswers) {
-      const correctNames = correctIndices
+      const correctNames = correctPositions
         .map((i) => currentQuestion.choices[i])
         .join(", ")
       this._feedbackText = `${this.t.feedbackWrongPrefix}${correctNames}`
@@ -631,12 +644,15 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     if (this._answered || this._selectedAnswers.size === 0) return
     this._answered = true
     const activeQuestions =
-      this._shuffledQuestions.length > 0 ? this._shuffledQuestions : this.questions
+      this._getActiveQuestions()
     const q = activeQuestions[this._currentIndex]
     const correct = new Set(q.correctAnswers || [])
     const selected = this._selectedAnswers
+    const selectedOrig = q._correctMap
+      ? new Set([...selected].map((i) => q._correctMap[i]))
+      : selected
     const isCorrect =
-      correct.size === selected.size && [...correct].every((c) => selected.has(c))
+      correct.size === selectedOrig.size && [...correct].every((c) => selectedOrig.has(c))
     if (isCorrect) {
       this._score += q.points || 1
       if (!this.hideAnswers) {
@@ -645,7 +661,10 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
       }
       if (!this.hideConfetti) this._fireConfetti()
     } else if (!this.hideAnswers) {
-      const correctNames = [...correct].map((i) => q.choices[i]).join(", ")
+      const correctPositions = q._correctMap
+        ? [...correct].map((i) => q._correctMap.indexOf(i))
+        : [...correct]
+      const correctNames = correctPositions.map((i) => q.choices[i]).join(", ")
       this._feedbackText = `${this.t.feedbackWrongPrefix}${correctNames}`
       this._feedbackPositive = false
     }
@@ -661,7 +680,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
   _submitPGK() {
     if (this._answered) return
     const activeQuestions =
-      this._shuffledQuestions.length > 0 ? this._shuffledQuestions : this.questions
+      this._getActiveQuestions()
     const q = activeQuestions[this._currentIndex]
     const statements = q.statements || []
     if (Object.keys(this._matchAnswers).length < statements.length) return
@@ -695,7 +714,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
   _submitMatching() {
     if (this._answered) return
     const activeQuestions =
-      this._shuffledQuestions.length > 0 ? this._shuffledQuestions : this.questions
+      this._getActiveQuestions()
     const q = activeQuestions[this._currentIndex]
     const left = q.leftItems || []
     const correctPairs = q.correctPairs || {}
@@ -737,7 +756,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     if (!text) return
     this._answered = true
     const activeQuestions =
-      this._shuffledQuestions.length > 0 ? this._shuffledQuestions : this.questions
+      this._getActiveQuestions()
     const q = activeQuestions[this._currentIndex]
     const accepted = (q.acceptedAnswers || []).map((a) => a.toLowerCase())
     const isCorrect = accepted.some((a) => text.includes(a))
@@ -758,7 +777,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
 
   _advanceQuiz() {
     const activeQuestions =
-      this._shuffledQuestions.length > 0 ? this._shuffledQuestions : this.questions
+      this._getActiveQuestions()
     if (this._currentIndex < activeQuestions.length - 1) {
       this._currentIndex += 1
       this._answered = false
@@ -853,7 +872,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
         action: "submit",
         name: name,
         score: percentage,
-        totalQuestions: this.questions.length,
+        totalQuestions: (this.questions || []).length,
         totalPoints: this._maxPoints,
         timestamp: new Date().toISOString(),
         sheet: this.sheetName || "Pertemuan",
@@ -928,7 +947,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     if (this._screen !== "result" && this._screen !== "question") return
     this._editing = true
     this._editingIndex = -1
-    this._tempQuestions = JSON.parse(JSON.stringify(this.questions))
+    this._tempQuestions = JSON.parse(JSON.stringify(this.questions || DEFAULT_QUESTIONS))
     this._screen = "editor"
   }
 
@@ -937,7 +956,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     if (this._editing) return
     this._editing = true
     this._editingIndex = -1
-    this._tempQuestions = JSON.parse(JSON.stringify(this.questions))
+    this._tempQuestions = JSON.parse(JSON.stringify(this.questions || DEFAULT_QUESTIONS))
     this._editorOrigin = "name"
     this._screen = "editor"
   }
@@ -1120,6 +1139,31 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     if (this._editingIndex < 0) return
     this._editingIndex = -1
     this._resetEditorForm()
+  }
+
+  loadQuestions(questions) {
+    if (!Array.isArray(questions)) {
+      questions = Array.isArray(this.questions) ? this.questions : DEFAULT_QUESTIONS
+    }
+    this.questions = questions
+    this._currentIndex = 0
+    this._score = 0
+    this._answered = false
+    this._selectedIndex = -1
+    this._feedbackText = ""
+    this._feedbackPositive = false
+    this._selectedAnswers = new Set()
+    this._matchAnswers = {}
+    this._shortAnswerText = ""
+    this._shuffledQuestions = []
+    this._screen = "name"
+    this.dispatchEvent(
+      new CustomEvent("questions-changed", {
+        bubbles: true,
+        composed: true,
+        detail: { questions: this.questions },
+      }),
+    )
   }
 
   _saveAll() {

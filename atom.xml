@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-08-01T07:41:24.000Z</updated>
+  <updated>2026-08-01T08:53:39.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -303,14 +303,14 @@ What</summary>
 
 
 
-  <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec" _screen="logged-in" _nama="Andy Yulianto" _email="wildanhabib051@gmail.com" _nis="234" _absen="2" _kelas="XI-1" _student-id="STD-65108053" _loading=""></quiz-user-auth>
+  <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"></quiz-user-auth>
 
 
 
 
 </div>
 <p>Coba kuis interaktif di bawah ini:</p>
-<explode-quiz s="" sheet-name="Pertemuan" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec" shuffle-choices _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0" spreadsheet-id="" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="dsfdsfd" _validation-error="Nama tidak boleh kosong." data-width="0" data-padding="xs" data-margin="center" _feedback-text="Yah, Salah. Jawaban benar: Bumi" _name-input-value="dsfdsfd" _advance-timer="15652" tag="formatif" questions="[object Object],[object Object],[object Object]"></explode-quiz>
+<explode-quiz sheet-name="Pertemuan" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec" shuffle-choices tag="formatif"></explode-quiz>
 <h2 id="h2-1518686653">📋 Atribut yang Didukung</h2>
 <editable-table accent-color="grey" column-header><table>
 	<thead class="thead">
@@ -3034,10 +3034,82 @@ hehehehe
 <div class="step">
     <h2><span class="step-num">3</span> Kuis Formatif</h2>
 
-    <explode-quiz hide-answers hide-confetti id="quiz1" sheet-name="Pertemuan 1" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec" shuffle-choices questions="[object Object],[object Object],[object Object]" spreadsheet-id="" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="dsfdsfd" _current-index="0" _selected-index="-1" _name-input-value="dsfdsfd" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0">
+    <explode-quiz hide-answers hide-confetti id="quiz1" sheet-name="Pertemuan 1" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec" shuffle-choices student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1">
     </explode-quiz>
 
   </div>
+ ]]>
+    </content>
+  </entry>
+  <entry>
+    <title>Kuis AKM Campuran</title>
+    <id>item-kuis-akm-campuran</id>
+    <updated>2026-08-01T10:36:27.000Z</updated>
+    <published>2026-08-01T08:53:39.000Z</published>
+    <summary>Kuis AKM dengan generator soal: template lokal atau Bank Soal (sheet Bank Soal)</summary>
+    <link href="https://localhost:3000/sites/haxnow/kuis-akm-campuran"/>
+    
+    <content type="html">
+      <![CDATA[ 
+<h1 id="h1-kuis-akm-campuran">🎯 Kuis AKM Campuran (Literasi + Numerasi)</h1>
+<p>Halaman kuis Asesmen Kompetensi Minimum dengan tipe soal campuran:
+  pilihan ganda (PG), pilihan ganda kompleks (PGK), menjodohkan (matching), dan
+  isian singkat (short answer). Soal bisa dibuat otomatis dari <strong>template lokal</strong>
+  atau dari <strong>Bank Soal</strong> di Google Sheets.</p>
+<h2 id="h2-generator">&#10024; Generator Soal</h2>
+<p>Masuk sebagai dosen lalu buka tab <strong>🛠️ Console Dosen</strong>. Dua tombol
+  baru tersedia:</p>
+<ul>
+  <li><strong>✨ Generate Soal Template Lokal</strong> &#8212; soal acak dari bank template
+    bawaan elemen (tanpa perlu koneksi server).</li>
+
+  <li><strong>🗂️ Generate Soal dari Bank Soal</strong> &#8212; membaca sheet <code>Bank Soal</code>
+    pada spreadsheet aktif via action Apps Script <code>getBankSoal</code>.</li>
+
+</ul>
+<p>Soal hasil generate langsung dimuat ke kuis di tab <strong>📝 Ambil Kuis</strong>.</p>
+<h2 id="h2-demo">🧪 Demo Langsung</h2>
+<p>Coba dashboard di bawah ini (mode dosen agar tombol generator muncul):</p>
+<quiz-dashboard-lite2 view-mode="lecturer" apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec" sheet-name="Pertemuan 1" _active-tab="1"></quiz-dashboard-lite2>
+<h2 id="h2-banksoal">🗂️ Struktur Sheet "Bank Soal"</h2>
+<p>Buat tab <code>Bank Soal</code> pada spreadsheet dengan kolom:</p>
+<table>
+  <thead>
+    <tr><th>Kolom</th><th>Isi</th></tr>
+
+  </thead>
+
+  <tbody>
+    <tr><td>ID</td><td>Nomor urut soal (opsional)</td></tr>
+
+    <tr><td>Kategori</td><td><code>literasi</code>, <code>numerasi</code>, atau <code>campur</code></td>
+</tr>
+
+    <tr><td>Tipe</td><td><code>mc</code>, <code>pgk</code>, <code>matching</code>, <code>shortAnswer</code></td>
+</tr>
+
+    <tr><td>Soal</td><td>Teks pertanyaan</td></tr>
+
+    <tr><td>Detail</td><td>JSON properti soal (lihat contoh di bawah)</td></tr>
+
+    <tr><td>Gambar</td><td>URL gambar (opsional)</td></tr>
+
+    <tr><td>Poin</td><td>Bobot poin (default 1)</td></tr>
+
+  </tbody>
+
+</table>
+<h3 id="h3-contoh-detail">Contoh isi kolom Detail</h3>
+<pre><code>{"choices":["Jakarta","Bandung","Surabaya"],"correctIndex":0}
+{"statements":[{"text":"Matahari terbit di timur","answer":true},{"text":"Bulan lebih besar dari matahari","answer":false}]}
+{"leftItems":["1+1","2+2"],"rightItems":["2","4"],"correctPairs":[["1+1","2"],["2+2","4"]]}
+{"acceptedAnswers":["pancasila","Pancasila"]}</code></pre>
+<h2 id="h2-cara">🖥️ Cara Penggunaan</h2>
+<ol>
+  <li>Buka halaman ini dan login sebagai siswa/dosen.</li>
+  <li>Dosen: buka tab Console Dosen, klik salah satu tombol generate.</li>
+  <li>Buka tab 📝 Ambil Kuis, masukkan nama, dan kerjakan soal yang telah digenerate.</li>
+</ol>
  ]]>
     </content>
   </entry>

@@ -42,6 +42,39 @@ export { LOGS_STORAGE_KEY, LAST_DATE_KEY, getTodayString, getInitialLogs, pushLo
 
 export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
   static get tag() { return "activity-logger"; }
+  static get haxProperties() {
+    return {
+      canScale: false,
+      canPosition: true,
+      canEditSource: false,
+      gizmo: {
+        title: "Activity Logger",
+        description: "Pencatat aktivitas belajar siswa",
+        icon: "icons:list-alt",
+        color: "green",
+        tags: ["Education", "Attendance"]
+      },
+      settings: {
+        configure: [
+          {
+            property: "appsScriptUrl",
+            title: "Apps Script URL",
+            inputMethod: "textfield",
+          },
+          {
+            property: "sheetName",
+            title: "Nama Sheet",
+            inputMethod: "textfield",
+          }
+        ],
+        advanced: [],
+        developer: []
+      },
+      saveOptions: {
+        unsetAttributes: []
+      }
+    };
+  }
   static get properties() {
     return {
       ...super.properties,
@@ -78,6 +111,12 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
   }
   connectedCallback() {
     super.connectedCallback();
+    if (globalThis.HaxStore && typeof globalThis.HaxStore.requestAvailability === "function") {
+      const store = globalThis.HaxStore.requestAvailability();
+      if (store && !store.elementList[ActivityLogger.tag]) {
+        store.elementList[ActivityLogger.tag] = ActivityLogger.haxProperties;
+      }
+    }
     globalThis.addEventListener("scroll", this._handleScroll, { passive: true });
     globalThis.addEventListener("quiz-saved", this._handleQuizSaved);
     globalThis.addEventListener("discussion-saved", this._handleDiscussionSaved);
@@ -207,6 +246,39 @@ globalThis.customElements.define(ActivityLogger.tag, ActivityLogger);
 
 export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
   static get tag() { return "attendance-tracker"; }
+  static get haxProperties() {
+    return {
+      canScale: false,
+      canPosition: true,
+      canEditSource: false,
+      gizmo: {
+        title: "Attendance Tracker",
+        description: "Rekap absensi dan aktivitas harian siswa",
+        icon: "icons:check-circle",
+        color: "green",
+        tags: ["Education", "Attendance"]
+      },
+      settings: {
+        configure: [
+          {
+            property: "appsScriptUrl",
+            title: "Apps Script URL",
+            inputMethod: "textfield",
+          },
+          {
+            property: "forumApiUrl",
+            title: "Forum API URL",
+            inputMethod: "textfield",
+          }
+        ],
+        advanced: [],
+        developer: []
+      },
+      saveOptions: {
+        unsetAttributes: []
+      }
+    };
+  }
   static get properties() {
     return {
       ...super.properties,
@@ -227,6 +299,12 @@ export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
   }
   connectedCallback() {
     super.connectedCallback();
+    if (globalThis.HaxStore && typeof globalThis.HaxStore.requestAvailability === "function") {
+      const store = globalThis.HaxStore.requestAvailability();
+      if (store && !store.elementList[AttendanceTracker.tag]) {
+        store.elementList[AttendanceTracker.tag] = AttendanceTracker.haxProperties;
+      }
+    }
     this._reloadHandler = () => { this._logs = getInitialLogs(); };
     this._forumHandler = () => { this._fetchForumToday(); };
     globalThis.addEventListener("a3-activity-logged", this._reloadHandler);
@@ -345,6 +423,39 @@ globalThis.customElements.define(AttendanceTracker.tag, AttendanceTracker);
 
 export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
   static get tag() { return "engagement-score"; }
+  static get haxProperties() {
+    return {
+      canScale: false,
+      canPosition: true,
+      canEditSource: false,
+      gizmo: {
+        title: "Engagement Score",
+        description: "Skor keterlibatan belajar siswa (heatmap 6 minggu)",
+        icon: "icons:whatshot",
+        color: "orange",
+        tags: ["Education", "Attendance"]
+      },
+      settings: {
+        configure: [
+          {
+            property: "appsScriptUrl",
+            title: "Apps Script URL",
+            inputMethod: "textfield",
+          },
+          {
+            property: "forumApiUrl",
+            title: "Forum API URL",
+            inputMethod: "textfield",
+          }
+        ],
+        advanced: [],
+        developer: []
+      },
+      saveOptions: {
+        unsetAttributes: []
+      }
+    };
+  }
   static get properties() {
     return {
       ...super.properties,
@@ -363,6 +474,12 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
   }
   connectedCallback() {
     super.connectedCallback();
+    if (globalThis.HaxStore && typeof globalThis.HaxStore.requestAvailability === "function") {
+      const store = globalThis.HaxStore.requestAvailability();
+      if (store && !store.elementList[EngagementScore.tag]) {
+        store.elementList[EngagementScore.tag] = EngagementScore.haxProperties;
+      }
+    }
     this._reloadHandler = () => this._fetchHistory();
     globalThis.addEventListener("a3-activity-logged", this._reloadHandler);
     globalThis.addEventListener("discussion-saved", this._reloadHandler);
@@ -495,6 +612,34 @@ globalThis.customElements.define(EngagementScore.tag, EngagementScore);
 
 export class TransparentGradebook extends I18NMixin(DDDSuper(LitElement)) {
   static get tag() { return "transparent-gradebook"; }
+  static get haxProperties() {
+    return {
+      canScale: false,
+      canPosition: true,
+      canEditSource: false,
+      gizmo: {
+        title: "Transparent Gradebook",
+        description: "Buku nilai transparan untuk siswa",
+        icon: "icons:grade",
+        color: "blue",
+        tags: ["Education", "Gradebook"]
+      },
+      settings: {
+        configure: [
+          {
+            property: "appsScriptUrl",
+            title: "Apps Script URL",
+            inputMethod: "textfield",
+          }
+        ],
+        advanced: [],
+        developer: []
+      },
+      saveOptions: {
+        unsetAttributes: []
+      }
+    };
+  }
   static get properties() {
     return {
       ...super.properties,
@@ -513,7 +658,16 @@ export class TransparentGradebook extends I18NMixin(DDDSuper(LitElement)) {
     this.viewMode = "student";
     this._scores = { kehadiran: 0, ulanganHarian: 0, uts: 0, uas: 0, sikap: 0, keterampilan: 0, formatif: { count: 0, all: [] } };
   }
-  connectedCallback() { super.connectedCallback(); this._fetchScores(); }
+  connectedCallback() {
+    super.connectedCallback();
+    if (globalThis.HaxStore && typeof globalThis.HaxStore.requestAvailability === "function") {
+      const store = globalThis.HaxStore.requestAvailability();
+      if (store && !store.elementList[TransparentGradebook.tag]) {
+        store.elementList[TransparentGradebook.tag] = TransparentGradebook.haxProperties;
+      }
+    }
+    this._fetchScores();
+  }
   async _fetchScores() {
     if (!this.appsScriptUrl || !this.studentId) return;
     try {

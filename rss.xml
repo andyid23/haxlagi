@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2026 07:41:24 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 08:53:39 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -176,6 +176,13 @@
       <description>1 Login / Registrasi 3 Kuis Formatif</description>
       <guid>https://localhost:3000/sites/haxnow/new-page-6</guid>
       <pubDate>Sat, 01 Aug 2026 08:46:03 GMT</pubDate>
+    </item>
+    <item>
+      <title>Kuis AKM Campuran</title>
+      <link>https://localhost:3000/sites/haxnow/kuis-akm-campuran</link>
+      <description>🎯 Kuis AKM Campuran (Literasi + Numerasi) Halaman kuis Asesmen Kompetensi Minimum dengan tipe soal campuran: pilihan ganda (PG), pilihan ganda kompleks (PGK), menjodohkan (matching), dan isian singkat (short answer). Soal bisa dibuat otomatis dari template lokal atau dari Bank Soal di Google Sheets. &amp;#10024; Generator Soal Masuk sebagai dosen lalu buka tab 🛠️ Console Dosen . Dua tombol baru tersedia: ✨ Generate Soal Template Lokal &amp;#8212; soal acak dari bank template bawaan elemen (tanpa pe...</description>
+      <guid>https://localhost:3000/sites/haxnow/kuis-akm-campuran</guid>
+      <pubDate>Sat, 01 Aug 2026 08:53:39 GMT</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "assets_icon_96x96_file",
+      "label": "PWA Site Icon 96x96 (icon-96x96.png)",
+      "file_type": "image",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-96x96.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "assets_icon_96x96_fffd_corruption",
+      "label": "UTF-8 Replacement-Character Corruption (U+FFFD)",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-96x96.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "icon-96x96.png is not a valid decodable PNG. Binary analysis: the file (11,431 bytes) carries a 3-byte UTF-8-encoded U+FFFD prefix (EF BF BD) before the PNG signature, and 2,597 U+FFFD triplets (~68.2% of bytes) scattered through the body, including the IHDR CRC and IDAT payload. This pattern is the signature of a lossy UTF-8 text round-trip (decode with errors='replace', then re-encode), i.e. the binary was processed as text by some pipeline/tool and irreversibly destroyed. The surviving IHDR header declares a 96x96 8-bit RGBA image; by naming and location it is the PWA/site icon of this HAXcms site, one of the assets icon-48/72/96/144/192/256/512, favicon.png, favicon.ico. The image could not be rendered or visually inspected; only the corruption and declared geometry are certain. Likely cause: the icon was accidentally edited/committed through a text-based tool; it should be re-exported from source and re-committed."
+    }
+  ],
+  "edges": [
+    {
+      "source": "assets_icon_96x96_fffd_corruption",
+      "target": "assets_icon_96x96_file",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-96x96.png",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

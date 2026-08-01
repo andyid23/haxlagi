@@ -108,6 +108,12 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
 
   connectedCallback() {
     super.connectedCallback()
+    if (globalThis.HaxStore && typeof globalThis.HaxStore.requestAvailability === "function") {
+      const store = globalThis.HaxStore.requestAvailability()
+      if (store && !store.elementList[AssignmentForum.tag]) {
+        store.elementList[AssignmentForum.tag] = AssignmentForum.haxProperties
+      }
+    }
     // FIX: Bind handler untuk proper removal di disconnectedCallback
     this._authHandler = this._onUserLogin.bind(this)
     globalThis.addEventListener("quiz-user-login", this._authHandler)

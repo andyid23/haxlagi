@@ -1,0 +1,732 @@
+{
+  "nodes": [
+    {
+      "id": "pages_item_2e2d093e_b7f4_4499_b60d_09c2c3c4baec_index_page",
+      "label": "Dashboard Quiz (new-dashboard)",
+      "file_type": "document",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec\\index.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_2e2d093e_b7f4_4499_b60d_09c2c3c4baec_index_full_quiz_dashboard",
+      "label": "full-quiz-dashboard (Dashboard Quiz)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_page",
+      "label": "New Page (new-page-6)",
+      "file_type": "document",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_quiz_user_auth",
+      "label": "quiz-user-auth (Login/Registrasi)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_explode_quiz",
+      "label": "explode-quiz (Kuis Formatif)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_page",
+      "label": "New Page (new-page-4)",
+      "file_type": "document",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29\\index.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_quiz_user_auth",
+      "label": "quiz-user-auth (Login/Registrasi)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_assignment_forum",
+      "label": "assignment-forum (Tugas Mandiri & Forum Diskusi)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Tugas tersimpan ke 'Tugas Log' sheet. Forum CRUD via 'Forum Log' sheet (nested replies, like, sort)."
+    },
+    {
+      "id": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_tugas_log_sheet",
+      "label": "Tugas Log Sheet",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29\\index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_forum_log_sheet",
+      "label": "Forum Log Sheet",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29\\index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_page",
+      "label": "Welcome to haxnow (welcome)",
+      "file_type": "document",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_quiz_user_auth",
+      "label": "quiz-user-auth (Login/Registrasi)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_assignment_forum",
+      "label": "assignment-forum (Tugas Mandiri & Forum Diskusi)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Tugas tersimpan ke 'Tugas Log' sheet. Forum CRUD via 'Forum Log' sheet (nested replies, like, sort)."
+    },
+    {
+      "id": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_explode_quiz",
+      "label": "explode-quiz (Kuis Formatif)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_quiz_dashboard_lite2",
+      "label": "quiz-dashboard-lite2 (Dashboard Dosen: Nilai + Rapor)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Mode dosen: generate rapor, input UTS/UAS manual, atur 6 komponen bobot (Kehadiran:UH:UTS:UAS:Sikap:Skill). Auto-calc sikap dari tugas+forum, skill dari quiz+baca."
+    },
+    {
+      "id": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_transparent_gradebook",
+      "label": "transparent-gradebook (Activity Log)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_hax_marketing",
+      "label": "HAX Welcome Marketing Content",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_ac8b2b5e_4fe4_48f4_9860_9833ce13fc3b_index_page",
+      "label": "New Page (new-page-5)",
+      "file_type": "document",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b\\index.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_ac8b2b5e_4fe4_48f4_9860_9833ce13fc3b_index_quiz_dashboard_lite2",
+      "label": "quiz-dashboard-lite2 (LD1 sheet)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_df69b4a8_b470_4c1e_be89_8833ce3452da_index_page",
+      "label": "baru1 (Pertemuan 1: Tugas)",
+      "file_type": "document",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-df69b4a8-b470-4c1e-be89-8833ce3452da\\index.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_df69b4a8_b470_4c1e_be89_8833ce3452da_index_full_quiz_dashboard",
+      "label": "full-quiz-dashboard (Pertemuan 1)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-df69b4a8-b470-4c1e-be89-8833ce3452da\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_f804cc8e_b786_47bf_ba57_03edb9924416_index_page",
+      "label": "baru2 (Pertemuan 2: Lit Element Dasar)",
+      "file_type": "document",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-f804cc8e-b786-47bf-ba57-03edb9924416\\index.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_f804cc8e_b786_47bf_ba57_03edb9924416_index_full_quiz_dashboard",
+      "label": "full-quiz-dashboard (Pertemuan 2)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-f804cc8e-b786-47bf-ba57-03edb9924416\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_submit_quiz_result",
+      "label": "submitQuizResult (Apps Script function)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "pages_item_2e2d093e_b7f4_4499_b60d_09c2c3c4baec_index_page",
+      "target": "pages_item_2e2d093e_b7f4_4499_b60d_09c2c3c4baec_index_full_quiz_dashboard",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_2e2d093e_b7f4_4499_b60d_09c2c3c4baec_index_full_quiz_dashboard",
+      "target": "pages_item_f804cc8e_b786_47bf_ba57_03edb9924416_index_full_quiz_dashboard",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_2e2d093e_b7f4_4499_b60d_09c2c3c4baec_index_full_quiz_dashboard",
+      "target": "pages_item_ac8b2b5e_4fe4_48f4_9860_9833ce13fc3b_index_quiz_dashboard_lite2",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_2e2d093e_b7f4_4499_b60d_09c2c3c4baec_index_full_quiz_dashboard",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_transparent_gradebook",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_page",
+      "target": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_quiz_user_auth",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_page",
+      "target": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_explode_quiz",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_explode_quiz",
+      "target": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_submit_quiz_result",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_quiz_user_auth",
+      "target": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_quiz_user_auth",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_quiz_user_auth",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_quiz_user_auth",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_explode_quiz",
+      "target": "pages_item_ac8b2b5e_4fe4_48f4_9860_9833ce13fc3b_index_quiz_dashboard_lite2",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_explode_quiz",
+      "target": "pages_item_df69b4a8_b470_4c1e_be89_8833ce3452da_index_full_quiz_dashboard",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_explode_quiz",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_explode_quiz",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_quiz_user_auth",
+      "target": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_explode_quiz",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_page",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.yaml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_page",
+      "target": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_quiz_user_auth",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_page",
+      "target": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_assignment_forum",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_assignment_forum",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_assignment_forum",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_assignment_forum",
+      "target": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_tugas_log_sheet",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29\\index.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_assignment_forum",
+      "target": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_forum_log_sheet",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29\\index.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_page",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29\\index.yaml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_assignment_forum",
+      "target": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_tugas_log_sheet",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_assignment_forum",
+      "target": "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_forum_log_sheet",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_page",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_quiz_user_auth",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_page",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_assignment_forum",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_page",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_explode_quiz",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_page",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_quiz_dashboard_lite2",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_page",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_transparent_gradebook",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_page",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_hax_marketing",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_explode_quiz",
+      "target": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_submit_quiz_result",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_quiz_user_auth",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_explode_quiz",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_quiz_user_auth",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_assignment_forum",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_explode_quiz",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_quiz_dashboard_lite2",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_transparent_gradebook",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_quiz_dashboard_lite2",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_quiz_dashboard_lite2",
+      "target": "pages_item_ac8b2b5e_4fe4_48f4_9860_9833ce13fc3b_index_quiz_dashboard_lite2",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_ac8b2b5e_4fe4_48f4_9860_9833ce13fc3b_index_page",
+      "target": "pages_item_ac8b2b5e_4fe4_48f4_9860_9833ce13fc3b_index_quiz_dashboard_lite2",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_ac8b2b5e_4fe4_48f4_9860_9833ce13fc3b_index_page",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b\\index.yaml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_df69b4a8_b470_4c1e_be89_8833ce3452da_index_page",
+      "target": "pages_item_df69b4a8_b470_4c1e_be89_8833ce3452da_index_full_quiz_dashboard",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-df69b4a8-b470-4c1e-be89-8833ce3452da\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_df69b4a8_b470_4c1e_be89_8833ce3452da_index_page",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-df69b4a8-b470-4c1e-be89-8833ce3452da\\index.yaml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_df69b4a8_b470_4c1e_be89_8833ce3452da_index_full_quiz_dashboard",
+      "target": "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_explode_quiz",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-df69b4a8-b470-4c1e-be89-8833ce3452da\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_explode_quiz",
+      "target": "pages_item_df69b4a8_b470_4c1e_be89_8833ce3452da_index_full_quiz_dashboard",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "pages_item_f804cc8e_b786_47bf_ba57_03edb9924416_index_page",
+      "target": "pages_item_f804cc8e_b786_47bf_ba57_03edb9924416_index_full_quiz_dashboard",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-f804cc8e-b786-47bf-ba57-03edb9924416\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "pertemuan_1_worksheet_flow",
+      "label": "Pertemuan 1 Worksheet Data Flow",
+      "nodes": [
+        "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_explode_quiz",
+        "pages_item_5f30b58c_5dbe_4f2c_a526_a882b67dbf29_index_assignment_forum",
+        "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_explode_quiz",
+        "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_assignment_forum",
+        "pages_item_df69b4a8_b470_4c1e_be89_8833ce3452da_index_full_quiz_dashboard"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.yaml"
+    },
+    {
+      "id": "quiz_assessment_pipeline",
+      "label": "Quiz Assessment Pipeline",
+      "nodes": [
+        "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_explode_quiz",
+        "pages_item_2e2d093e_b7f4_4499_b60d_09c2c3c4baec_index_full_quiz_dashboard",
+        "pages_item_ac8b2b5e_4fe4_48f4_9860_9833ce13fc3b_index_quiz_dashboard_lite2",
+        "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_transparent_gradebook",
+        "pages_item_5015eab1_d932_4139_a7a0_3216ce339bfa_index_submit_quiz_result"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-5015eab1-d932-4139-a7a0-3216ce339bfa\\index.html"
+    },
+    {
+      "id": "shared_apps_script_backend",
+      "label": "Shared Apps Script Backend Deployment",
+      "nodes": [
+        "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_quiz_user_auth",
+        "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_assignment_forum",
+        "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_explode_quiz",
+        "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_quiz_dashboard_lite2",
+        "pages_item_711e9712_7ee7_4d25_9ad7_d2e9cbc1504c_index_transparent_gradebook"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\pages\\item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c\\index.html"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

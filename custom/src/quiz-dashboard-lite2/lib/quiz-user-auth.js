@@ -60,6 +60,12 @@ class QuizUserAuth extends I18NMixin(DDDSuper(LitElement)) {
 
   connectedCallback() {
     super.connectedCallback();
+    if (globalThis.HaxStore && typeof globalThis.HaxStore.requestAvailability === "function") {
+      const store = globalThis.HaxStore.requestAvailability();
+      if (store && !store.elementList[QuizUserAuth.tag]) {
+        store.elementList[QuizUserAuth.tag] = QuizUserAuth.haxProperties;
+      }
+    }
     const saved = this._load("quiz_user_session");
     if (saved?.studentId) {
       this._studentId = saved.studentId;
@@ -428,6 +434,20 @@ class QuizUserAuth extends I18NMixin(DDDSuper(LitElement)) {
         ],
         advanced: [],
         developer: []
+      },
+      saveOptions: {
+        unsetAttributes: [
+          "_screen",
+          "_nama",
+          "_email",
+          "_nis",
+          "_absen",
+          "_kelas",
+          "_studentId",
+          "_errorMsg",
+          "_successMsg",
+          "_loading"
+        ]
       }
     };
   }

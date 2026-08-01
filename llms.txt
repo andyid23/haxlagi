@@ -26,6 +26,7 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [Tutorial Attendance System](https://localhost:3000/sites/haxnow/pages/tutorial-attendance/index.md): Panduan lengkap sistem kehadiran dan pelacakan aktivitas
 - [Tutorial Google Apps Script](https://localhost:3000/sites/haxnow/pages/tutorial-apps-script/index.md): Panduan setup Apps Script untuk integrasi Google Sheets
 - [dashboard quiz](https://localhost:3000/sites/haxnow/pages/item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec/index.md): fulldashboard
+- [Kuis AKM Campuran](https://localhost:3000/sites/haxnow/pages/kuis-akm-campuran/index.md): Kuis AKM dengan generator soal: template lokal atau Bank Soal (sheet Bank Soal)
 - [📚 Modul 1: HAXcms & Web Component](https://localhost:3000/sites/haxnow/pages/materi-siswa/index.md): Contoh halaman materi siswa dengan aktivitas dan kuis
 - [📖 Belajar HTML Dasar](https://localhost:3000/sites/haxnow/pages/tutor-html/index.md): Tutorial HTML lengkap dari nol untuk pemula
 - [📅 Tutorial: Kursus Multi-Hari](https://localhost:3000/sites/haxnow/pages/tutorial-kursus/index.md): Panduan menambah kuis dan materi untuk setiap pertemuan

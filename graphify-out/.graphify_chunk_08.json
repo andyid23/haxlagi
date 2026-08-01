@@ -1,0 +1,125 @@
+{
+  "nodes": [
+    {
+      "id": "assets_icon_144x144",
+      "label": "App Icon 144x144 (haxnow PWA)",
+      "file_type": "image",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-144x144.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Icon content could not be visually extracted: the file is not a decodable PNG. Signature byte 0x89 is replaced by the UTF-8 replacement character sequence EF BF BD, and IHDR width/height fields are corrupted, so no pixel content survives."
+    },
+    {
+      "id": "assets_utf8_corruption",
+      "label": "Binary Asset UTF-8 Corruption",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-144x144.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Binary assets were committed after being decoded as UTF-8 text and re-encoded, replacing every invalid byte with U+FFFD (EF BF BD). icon-144x144.png contains 4749 replacement sequences in 21183 bytes; favicon.png, icon-512x512.png and banner.jpg show the same leading EF BF BD mangling, indicating a systematic repo-wide defect rather than a single bad file. Icons will render broken in browsers, PWA installs, and service-worker precache."
+    }
+  ],
+  "edges": [
+    {
+      "source": "assets_icon_144x144",
+      "target": "assets_utf8_corruption",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-144x144.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "assets_icon_512x512",
+      "target": "assets_utf8_corruption",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-144x144.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "assets_favicon",
+      "target": "assets_utf8_corruption",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-144x144.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "assets_banner_jpg",
+      "target": "assets_utf8_corruption",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-144x144.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "assets_icon_48x48",
+      "target": "assets_utf8_corruption",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-144x144.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "assets_icon_144x144",
+      "target": "assets_icon_512x512",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-144x144.png",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "assets_pwa_icon_set",
+      "label": "PWA Icon Set (haxnow manifest)",
+      "nodes": [
+        "assets_icon_48x48",
+        "assets_icon_72x72",
+        "assets_icon_96x96",
+        "assets_icon_144x144",
+        "assets_icon_192x192",
+        "assets_icon_256x256",
+        "assets_icon_512x512"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\manifest.json"
+    },
+    {
+      "id": "assets_corrupted_binary_set",
+      "label": "Corrupted Binary Assets",
+      "nodes": [
+        "assets_icon_144x144",
+        "assets_icon_512x512",
+        "assets_favicon",
+        "assets_banner_jpg"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\assets\\icon-144x144.png"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

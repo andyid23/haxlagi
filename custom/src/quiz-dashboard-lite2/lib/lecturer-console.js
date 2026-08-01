@@ -10,6 +10,8 @@ export class LecturerConsole extends I18NMixin(DDDSuper(LitElement)) {
     return {
       ...super.properties,
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
+      quizSelector: { type: String, attribute: "quiz-selector" },
+      kategori: { type: String, attribute: "kategori" },
       roster: { type: Array },
       loading: { type: Boolean },
       generating: { type: Boolean },
@@ -20,9 +22,39 @@ export class LecturerConsole extends I18NMixin(DDDSuper(LitElement)) {
       manualUas: { type: Object },
     };
   }
+  static get haxProperties() {
+    return {
+      canScale: false,
+      canPosition: true,
+      canEditSource: false,
+      gizmo: {
+        title: "Lecturer Console",
+        description: "Konsol penilaian untuk guru (rapor A3)",
+        icon: "icons:assignment-turned-in",
+        color: "blue",
+        tags: ["Education", "Assessment"]
+      },
+      settings: {
+        configure: [
+          {
+            property: "appsScriptUrl",
+            title: "Apps Script URL",
+            inputMethod: "textfield",
+          }
+        ],
+        advanced: [],
+        developer: []
+      },
+      saveOptions: {
+        unsetAttributes: []
+      }
+    };
+  }
   constructor() {
     super();
     this.appsScriptUrl = "";
+    this.quizSelector = "#quiz";
+    this.kategori = "campur";
     this.roster = [];
     this.loading = false;
     this.generating = false;
@@ -49,6 +81,12 @@ export class LecturerConsole extends I18NMixin(DDDSuper(LitElement)) {
   }
   connectedCallback() {
     super.connectedCallback();
+    if (globalThis.HaxStore && typeof globalThis.HaxStore.requestAvailability === "function") {
+      const store = globalThis.HaxStore.requestAvailability();
+      if (store && !store.elementList[LecturerConsole.tag]) {
+        store.elementList[LecturerConsole.tag] = LecturerConsole.haxProperties;
+      }
+    }
     this.loadRoster();
   }
   _setMessage(message, type = "info") {
@@ -110,6 +148,36 @@ export class LecturerConsole extends I18NMixin(DDDSuper(LitElement)) {
       await this.loadRoster();
     }
     this.generating = false;
+  }
+  _getGenerator() {
+    if (!this._gen) {
+      this._gen = document.createElement("question-generator");
+      this.shadowRoot.appendChild(this._gen);
+    }
+    this._gen.appsScriptUrl = this.appsScriptUrl;
+    this._gen.quizSelector = this.quizSelector;
+    this._gen.kategori = this.kategori;
+    return this._gen;
+  }
+  async generateFromTemplate() {
+    const gen = this._getGenerator();
+    const questions = await gen.generateFromTemplate();
+    if (questions && questions.length) {
+      this._setMessage(`Soal template lokal dimuat: ${questions.length} soal (${this.kategori}).`, "ok");
+    } else {
+      this._setMessage(gen.message || "Gagal memuat soal template.", "error");
+    }
+    return questions;
+  }
+  async generateFromBankSoal() {
+    const gen = this._getGenerator();
+    const questions = await gen.generateFromBankSoal();
+    if (questions && questions.length) {
+      this._setMessage(`Soal dari Bank Soal dimuat: ${questions.length} soal (${this.kategori}).`, "ok");
+    } else {
+      this._setMessage(gen.message || "Gagal memuat soal dari Bank Soal.", "error");
+    }
+    return questions;
   }
   async saveManualScore(studentId, kategori) {
     const val = kategori === "uts" ? this.manualUts[studentId] : this.manualUas[studentId];
@@ -304,6 +372,8 @@ export class LecturerConsole extends I18NMixin(DDDSuper(LitElement)) {
           <div class="actions">
             <button @click="${this.loadRoster}" ?disabled="${this.loading}">${this.loading ? "Memuat..." : "↻ Muat Ulang Roster"}</button>
             <button class="primary" @click="${this.generateReport}" ?disabled="${this.generating}">${this.generating ? "Menghitung..." : "📊 Generate Laporan Rapor"}</button>
+            <button @click="${this.generateFromTemplate}" ?disabled="${this.loading}">✨ Generate Soal Template Lokal</button>
+            <button @click="${this.generateFromBankSoal}" ?disabled="${this.loading}">🗂️ Generate Soal dari Bank Soal</button>
           </div>
         </div>
         ${this.message ? html`<div class="message ${this.messageType}">${this.message}</div>` : ""}
