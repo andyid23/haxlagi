@@ -10,7 +10,7 @@
 <description>Kuis AKM dengan generator soal: template lokal atau Bank Soal (sheet Bank Soal)</description>
 <metadata>
 <created>1785574419</created>
-<updated>1785580784</updated>
+<updated>1785581173</updated>
 <images>
 </images>
 <videos>
@@ -35,8 +35,10 @@
     bawaan elemen (tanpa perlu koneksi server).</li>
 
 
+
   <li><strong>🗂️ Generate Soal dari Bank Soal</strong> &#8212; membaca sheet <code>Bank Soal</code>
     pada spreadsheet aktif via action Apps Script <code>getBankSoal</code>.</li>
+
 
 
 </ul>
@@ -51,36 +53,48 @@
     <tr><th>Kolom</th><th>Isi</th></tr>
 
 
+
   </thead>
+
 
 
   <tbody>
     <tr><td>ID</td><td>Nomor urut soal (opsional)</td></tr>
 
 
+
     <tr><td>Kategori</td><td><code>literasi</code>, <code>numerasi</code>, atau <code>campur</code></td>
 
+
 </tr>
+
 
 
     <tr><td>Tipe</td><td><code>mc</code>, <code>pgk</code>, <code>matching</code>, <code>shortAnswer</code></td>
 
+
 </tr>
+
 
 
     <tr><td>Soal</td><td>Teks pertanyaan</td></tr>
 
 
+
     <tr><td>Detail</td><td>JSON properti soal (lihat contoh di bawah)</td></tr>
+
 
 
     <tr><td>Gambar</td><td>URL gambar (opsional)</td></tr>
 
 
+
     <tr><td>Poin</td><td>Bobot poin (default 1)</td></tr>
 
 
+
   </tbody>
+
 
 
 </table>
