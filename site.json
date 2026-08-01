@@ -110,6 +110,22 @@
       }
     },
     {
+      "id": "item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b",
+      "indent": 0,
+      "location": "pages/item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b/index.html",
+      "slug": "new-page-5",
+      "order": 3,
+      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
+      "title": "New Page",
+      "description": "",
+      "metadata": {
+        "created": 1785566939,
+        "updated": 1785566939,
+        "images": [],
+        "videos": []
+      }
+    },
+    {
       "id": "item-doc-elements",
       "indent": 0,
       "location": "pages/elemendokumen/index.html",

@@ -9,6 +9,9 @@ import "./todo-list.js";
 import "./quiz-dashboard-lite2/quiz-dashboard-lite2.js";
 import "./quiz-dashboard-lite2/lib/quiz-user-auth.js";
 import "./quiz-dashboard-lite2/lib/assignment-forum.js";
+import "./quiz-dashboard-lite2/lib/attendance-system.js";
 import "./quiz-dashboard-lite2/lib/explode-quiz.js";
+import "./quiz-dashboard-lite2/lib/lecturer-console.js";
+import "./quiz-dashboard-lite2/lib/ddd-dark-mode.js";
 
 // import '@smartedu/quiz-dashboard-lite2/quiz-dashboard-lite2.js'
