@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-08-01T07:15:32.000Z</updated>
+  <updated>2026-08-01T07:38:23.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -284,7 +284,7 @@ What</summary>
   <entry>
     <title>Explode Quiz - Kuis Interaktif</title>
     <id>item-doc-kuis</id>
-    <updated>2026-08-01T07:38:23.000Z</updated>
+    <updated>2026-08-01T07:41:24.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi elemen kuis interaktif</summary>
     <link href="https://localhost:3000/sites/haxnow/kuis-interaktif"/>
@@ -302,13 +302,15 @@ What</summary>
 
 
 
+
   <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec" _screen="logged-in" _nama="Andy Yulianto" _email="wildanhabib051@gmail.com" _nis="234" _absen="2" _kelas="XI-1" _student-id="STD-65108053" _loading=""></quiz-user-auth>
+
 
 
 
 </div>
 <p>Coba kuis interaktif di bawah ini:</p>
-<explode-quiz s="" sheet-name="Pertemuan" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec" shuffle-choices _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0" spreadsheet-id="" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="dsfdsfd" _validation-error="Nama tidak boleh kosong." data-width="0" data-padding="xs" data-margin="center" _feedback-text="Yah, Salah. Jawaban benar: Bumi" _name-input-value="dsfdsfd" _advance-timer="15652" tag="formatif"></explode-quiz>
+<explode-quiz s="" sheet-name="Pertemuan" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec" shuffle-choices _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0" spreadsheet-id="" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="dsfdsfd" _validation-error="Nama tidak boleh kosong." data-width="0" data-padding="xs" data-margin="center" _feedback-text="Yah, Salah. Jawaban benar: Bumi" _name-input-value="dsfdsfd" _advance-timer="15652" tag="formatif" questions="[object Object],[object Object],[object Object]"></explode-quiz>
 <h2 id="h2-1518686653">📋 Atribut yang Didukung</h2>
 <editable-table accent-color="grey" column-header><table>
 	<thead class="thead">
@@ -343,7 +345,9 @@ What</summary>
 
 
 
+
       <li><strong>Efek Konfeti:</strong> Animasi saat jawaban benar dan skor &#8805; 80%</li>
+
 
 
 
@@ -351,7 +355,9 @@ What</summary>
 
 
 
+
       <li><strong>Sinkronisasi Google Sheets:</strong> Hasil otomatis tersimpan</li>
+
 
 
 
@@ -359,7 +365,9 @@ What</summary>
 
 
 
+
       <li><strong>Responsif:</strong> Layout adaptif untuk mobile</li>
+
 
 
 
@@ -375,7 +383,9 @@ What</summary>
 
 
 
+
       </thead>
+
 
 
 
@@ -388,7 +398,9 @@ What</summary>
 
 
 
+
       </tbody>
+
 
 
 
