@@ -4,7 +4,7 @@
 <indent>0</indent>
 <location>pages/item-b055951b-7998-440e-9f07-b8976e6d339c/index.xml</location>
 <slug>elemendokumen/copy-of-tutorial-alur-aktivitas-sheet</slug>
-<order>10</order>
+<order>11</order>
 <parent>item-doc-elements</parent>
 <title>Copy of 📘 Tutorial Alur Aktivitas &amp; Sheet</title>
 <description>📘 Tutorial Lengkap: Alur Aktivitas, 7 Sheet Utama &amp;#38; Kriteria Kehadiran
@@ -16,33 +16,19 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 </images>
 <videos>
 </videos>
-<updated>1785593428</updated>
+<updated>1785594440</updated>
 <published>true</published>
 <hideInMenu>false</hideInMenu>
 <readtime>7</readtime>
 <pageType>listen</pageType>
-<theme>
-<element>clean-one</element>
-<path>@haxtheweb/clean-one/clean-one.js</path>
-<name>Clean One</name>
-<thumbnail>@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-clean-one-thumb.jpg</thumbnail>
-<description>Start with a blank site using the Clean One</description>
-<category>
-<item>Course</item>
-</category>
-<hidden>false</hidden>
-<priority>-2</priority>
-<terrible>false</terrible>
-<key>clean-one</key>
-</theme>
 <accentColor>pink</accentColor>
 <icon>courseicons:listen</icon>
 </metadata>
 <content><![CDATA[
 <h1 id="h1--1927160115">📘 Tutorial Lengkap: Alur Aktivitas, 7 Sheet Utama &#38; Kriteria Kehadiran</h1>
-<p>Panduan visual &#38; teknis: dari aktivitas siswa di browser &#8594; ke Google Sheets via Apps Script. Semua fitur sudah ada di elemen; halaman ini hanya mendokumentasikan struktur data &#38; alurnya.</p>
+<p data-style-guide="data-style-guide">Panduan visual &#38; teknis: dari aktivitas siswa di browser &#8594; ke Google Sheets via Apps Script. Semua fitur sudah ada di elemen; halaman ini hanya mendokumentasikan struktur data &#38; alurnya.</p>
 <div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; border-radius: 16px; padding: 24px; margin: 24px 0;">
-  <h2 style="margin-top: 0; color: white;">🎯 Ringkasan 1 Halaman</h2>
+  <h2 style="margin-top: 0; color: white;" data-style-guide="data-style-guide" data-primary="21">🎯 Ringkasan 1 Halaman</h2>
   <table style="width: 100%; border-collapse: collapse; color: white;">
     <thead>
       <tr style="border-bottom: 1px solid rgba(255,255,255,0.3);">
@@ -55,7 +41,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
     </thead>
+
 
 
 
@@ -68,7 +56,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
         <td style="padding: 8px;"><code>register</code> / <code>login</code></td>
+
 
 
 
@@ -78,7 +68,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
       </tr>
+
 
 
 
@@ -90,7 +82,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
         <td style="padding: 8px;"><code>activity</code> type=reading</td>
+
 
 
 
@@ -100,7 +94,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
       </tr>
+
 
 
 
@@ -112,7 +108,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
         <td style="padding: 8px;"><code>activity</code> type=download</td>
+
 
 
 
@@ -122,7 +120,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
       </tr>
+
 
 
 
@@ -134,7 +134,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
         <td style="padding: 8px;"><code>submit</code> / <code>saveQuiz</code></td>
+
 
 
 
@@ -144,7 +146,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
       </tr>
+
 
 
 
@@ -156,7 +160,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
         <td style="padding: 8px;"><code>saveForumComment</code> (forumApiUrl)</td>
+
 
 
 
@@ -166,7 +172,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
       </tr>
+
 
 
 
@@ -178,7 +186,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
         <td style="padding: 8px;"><code>saveAssignment</code> (forumApiUrl)</td>
+
 
 
 
@@ -188,7 +198,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
       </tr>
+
 
 
 
@@ -198,7 +210,9 @@ Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke 
 
 
 
+
   </table>
+
 
 
 
@@ -277,12 +291,15 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
   <li><code>forumApiUrl</code> tidak diisi &#8594; kriteria forum di-skip (total jadi 5)</li>
 
 
 
 
+
   <li>Event tidak terkirim: cek console network &#8594; pastikan <code>activity</code> POST 200 OK</li>
+
 
 
 
@@ -294,11 +311,14 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
 </code>
 
 
 
+
  &#8594; isi textarea jawaban + link Google Drive/Doc (opsional)</li>
+
 
 
 
@@ -308,7 +328,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
   <li>Apps Script (<code>code-forum-tugas.gs</code>) &#8594; append row ke sheet <strong>"Tugas Log"</strong></li>
+
 
 
 
@@ -317,12 +339,15 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
 </li>
 
 
 
 
+
   <li>localStorage <code>hax_assignment_submitted=true</code> &#8594; tombol berubah <strong>"Selesai"</strong> + <strong>"Ubah"</strong> (reset)</li>
+
 
 
 
@@ -337,7 +362,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
 </grid-plate>
+
 
 
 
@@ -345,7 +372,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
 </li>
+
 
 
 
@@ -355,7 +384,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
   <li>Apps Script &#8594; append row ke sheet <strong>"Forum Log"</strong> (CommentID, ParentID=main/replyID, Action=post/reply, Likes=0)</li>
+
 
 
 
@@ -364,12 +395,15 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
 </li>
 
 
 
 
+
   <li>AttendanceTracker panggil <code>getForumActivityHistory</code> (via <code>forumApiUrl</code>) &#8594; hitung <code>counts.forum</code> untuk kriteria #5</li>
+
 
 
 
@@ -380,7 +414,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
 </code>
+
 
 
 
@@ -388,6 +424,7 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 <ul>
   <li>Grid 42 hari (6 minggu), 7 kolom (Min–Sab), 6 baris mingguan</li>
   <li>Data: <code>getActivityHistory</code> (42 hari, <code>appsScriptUrl</code>) + <code>getForumActivityHistory</code> (<code>forumApiUrl</code>) &#8594; merge <code>count</code> per hari</li>
+
 
 
 
@@ -400,7 +437,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
 </code>
+
 
 
 
@@ -419,14 +458,15 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 8	| numerasi	| shortAnswer	| Berapa 15 × 12?	| {"acceptedAnswers":["180"]}	|	| 1
 </code></pre>
 <hr style="margin: 24px 0; border-color: #e0e0e0;"/><h2 id="h2-837334726">&#9881;️ Setup Halaman Standar</h2>
-<pre><code><!--     Login Siswa     -->
+<pre><code><!--      Login Siswa      -->
 <quiz-user-auth apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" _student-id="STD-65108053"></quiz-user-auth>
 
 
 
 
 
-<!--     Dashboard Dosen (Console + Generate Rapor)     -->
+
+<!--      Dashboard Dosen (Console + Generate Rapor)      -->
 <quiz-dashboard-lite2 view-mode="lecturer" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" forum-api-url="https://script.google.com/macros/s/FORUM_DEPLOYMENT_ID/exec" sheet-name="Pertemuan 1" questions="[]" _active-tab="0">
 </quiz-dashboard-lite2>
 
@@ -434,7 +474,8 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
-<!--     Forum + Tugas (deployment terpisah)     -->
+
+<!--      Forum + Tugas (deployment terpisah)      -->
 <assignment-forum apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" forum-api-url="https://script.google.com/macros/s/FORUM_DEPLOYMENT_ID/exec" sheet-name="Pertemuan 1" assignment-title="Refleksi Pertemuan 1" forum-topic="Diskusi Pertemuan 1" student-id="STD-65108053" student-name="Andy Yulianto" student-nis="234" student-absen="2" student-kelas="XI-1" assignment-instruction="Tuliskan refleksi atau jawaban tugas Anda." view-mode="student" _sort-mode="best" _assignment-text="jkl;j;lkj;k;lkj" _assignment-submitted>
 </assignment-forum>
 
@@ -442,9 +483,11 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
-<!--     Attendance Tracker + Heatmap     -->
+
+<!--      Attendance Tracker + Heatmap      -->
 <attendance-tracker apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" forum-api-url="https://script.google.com/macros/s/FORUM_DEPLOYMENT_ID/exec" student-id="STD-001" _logs="[{&quot;id&quot;:&quot;log-1785593361458&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:09:21.458Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1139px)&quot;},{&quot;id&quot;:&quot;log-1785593350727&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:09:10.727Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1068px)&quot;},{&quot;id&quot;:&quot;log-1785593350712&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:09:10.712Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1068px)&quot;},{&quot;id&quot;:&quot;log-1785593282239&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:08:02.239Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1087px)&quot;},{&quot;id&quot;:&quot;log-1785593228481&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:07:08.481Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 13619px)&quot;},{&quot;id&quot;:&quot;log-1785593140672&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:05:40.672Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 15899px)&quot;},{&quot;id&quot;:&quot;log-1785592982441&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:03:02.441Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1127px)&quot;},{&quot;id&quot;:&quot;log-1785592959270&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:02:39.270Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 14743px)&quot;},{&quot;id&quot;:&quot;log-1785592959249&quot;,&quot;timestamp&quot;:&quot;2026-08-01T14:02:39.249Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 14743px)&quot;},{&quot;id&quot;:&quot;log-1785592683108&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:58:03.108Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785592683098&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:58:03.098Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785592668311&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:57:48.311Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 3223px)&quot;},{&quot;id&quot;:&quot;log-1785592667692&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:57:47.692Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 3211px)&quot;},{&quot;id&quot;:&quot;log-1785592667047&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:57:47.047Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 3211px)&quot;},{&quot;id&quot;:&quot;log-1785592666423&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:57:46.423Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 3211px)&quot;},{&quot;id&quot;:&quot;log-1785592659597&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:57:39.597Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 5909px)&quot;},{&quot;id&quot;:&quot;log-1785592625391&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:57:05.391Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1262px)&quot;},{&quot;id&quot;:&quot;log-1785592620106&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:57:00.106Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785592620090&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:57:00.090Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785592586137&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:56:26.137Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785592586122&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:56:26.122Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785592579103&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:56:19.103Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785592579086&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:56:19.086Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785592574475&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:56:14.475Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785592574466&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:56:14.466Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785592520165&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:55:20.165Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1026px)&quot;},{&quot;id&quot;:&quot;log-1785592520149&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:55:20.149Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1026px)&quot;},{&quot;id&quot;:&quot;log-1785592459987&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:54:19.987Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1064px)&quot;},{&quot;id&quot;:&quot;log-1785592459957&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:54:19.957Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1064px)&quot;},{&quot;id&quot;:&quot;log-1785592450480&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:54:10.480Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 14319px)&quot;},{&quot;id&quot;:&quot;log-1785591822212&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:43:42.212Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 6076px)&quot;},{&quot;id&quot;:&quot;log-1785591819889&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:43:39.889Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1063px)&quot;},{&quot;id&quot;:&quot;log-1785591798687&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:43:18.687Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 12152px)&quot;},{&quot;id&quot;:&quot;log-1785591076497&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:31:16.497Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785591071636&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:31:11.636Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785591066659&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:31:06.659Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;discussion&quot;,&quot;description&quot;:&quot;Diskusi di: Forum Diskusi&quot;},{&quot;id&quot;:&quot;log-1785590994832&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:29:54.832Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1126px)&quot;},{&quot;id&quot;:&quot;log-1785590974869&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:29:34.869Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 15199px)&quot;},{&quot;id&quot;:&quot;log-1785590974846&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:29:34.846Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 15199px)&quot;},{&quot;id&quot;:&quot;log-1785590804084&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:26:44.084Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 11053px)&quot;},{&quot;id&quot;:&quot;log-1785590804058&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:26:44.058Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 11053px)&quot;},{&quot;id&quot;:&quot;log-1785590706753&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:25:06.753Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;assignment&quot;,&quot;description&quot;:&quot;Tugas dikumpulkan: Tugas Mandiri&quot;},{&quot;id&quot;:&quot;log-1785590706743&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:25:06.743Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;assignment&quot;,&quot;description&quot;:&quot;Tugas dikumpulkan: Tugas Mandiri&quot;},{&quot;id&quot;:&quot;log-1785590666440&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:24:26.440Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 4649px)&quot;},{&quot;id&quot;:&quot;log-1785590665163&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:24:25.163Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 4647px)&quot;},{&quot;id&quot;:&quot;log-1785590664209&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:24:24.209Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 4647px)&quot;},{&quot;id&quot;:&quot;log-1785590663511&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:24:23.511Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 4647px)&quot;},{&quot;id&quot;:&quot;log-1785590661753&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:24:21.753Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 4647px)&quot;},{&quot;id&quot;:&quot;log-1785590592805&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:23:12.805Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1082px)&quot;},{&quot;id&quot;:&quot;log-1785590574947&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:22:54.947Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1325px)&quot;},{&quot;id&quot;:&quot;log-1785590574932&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:22:54.932Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1325px)&quot;},{&quot;id&quot;:&quot;log-1785590570882&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:22:50.882Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 8268px)&quot;},{&quot;id&quot;:&quot;log-1785590513896&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:21:53.896Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 8799px)&quot;},{&quot;id&quot;:&quot;log-1785590479882&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:21:19.882Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 7850px)&quot;},{&quot;id&quot;:&quot;log-1785590433267&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:20:33.267Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1142px)&quot;},{&quot;id&quot;:&quot;log-1785590433250&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:20:33.250Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1142px)&quot;},{&quot;id&quot;:&quot;log-1785590309417&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:18:29.417Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 13368px)&quot;},{&quot;id&quot;:&quot;log-1785590309405&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:18:29.405Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 13368px)&quot;},{&quot;id&quot;:&quot;log-1785590186128&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:16:26.128Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1217px)&quot;},{&quot;id&quot;:&quot;log-1785590186115&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:16:26.115Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1217px)&quot;},{&quot;id&quot;:&quot;log-1785590113712&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:15:13.712Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1052px)&quot;},{&quot;id&quot;:&quot;log-1785590044378&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:14:04.378Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 10061px)&quot;},{&quot;id&quot;:&quot;log-1785590044363&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:14:04.363Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 10061px)&quot;},{&quot;id&quot;:&quot;log-1785589924023&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:12:04.023Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 10661px)&quot;},{&quot;id&quot;:&quot;log-1785589924000&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:12:04.000Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 10661px)&quot;},{&quot;id&quot;:&quot;log-1785589770039&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:09:30.039Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 5336px)&quot;},{&quot;id&quot;:&quot;log-1785589770026&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:09:30.026Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 5336px)&quot;},{&quot;id&quot;:&quot;log-1785589648271&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:07:28.271Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 3236px)&quot;},{&quot;id&quot;:&quot;log-1785589648256&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:07:28.256Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 3236px)&quot;},{&quot;id&quot;:&quot;log-1785589413569&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:03:33.569Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 3531px)&quot;},{&quot;id&quot;:&quot;log-1785589413556&quot;,&quot;timestamp&quot;:&quot;2026-08-01T13:03:33.556Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 3531px)&quot;},{&quot;id&quot;:&quot;log-1785588542297&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:49:02.297Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1736px)&quot;},{&quot;id&quot;:&quot;log-1785588542281&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:49:02.281Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1736px)&quot;},{&quot;id&quot;:&quot;log-1785588300166&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:45:00.166Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1736px)&quot;},{&quot;id&quot;:&quot;log-1785588300150&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:45:00.150Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1736px)&quot;},{&quot;id&quot;:&quot;log-1785588158601&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:42:38.601Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 3965px)&quot;},{&quot;id&quot;:&quot;log-1785588158573&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:42:38.573Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 3965px)&quot;},{&quot;id&quot;:&quot;log-1785587183788&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:26:23.788Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1701px)&quot;},{&quot;id&quot;:&quot;log-1785587183769&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:26:23.769Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1701px)&quot;},{&quot;id&quot;:&quot;log-1785587035333&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:23:55.333Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1622px)&quot;},{&quot;id&quot;:&quot;log-1785587035318&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:23:55.318Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1622px)&quot;},{&quot;id&quot;:&quot;log-1785585970762&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:06:10.762Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785585970747&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:06:10.747Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785585906539&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:05:06.539Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1603px)&quot;},{&quot;id&quot;:&quot;log-1785585906522&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:05:06.522Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1603px)&quot;},{&quot;id&quot;:&quot;log-1785585724883&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:02:04.883Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1039px)&quot;},{&quot;id&quot;:&quot;log-1785585724863&quot;,&quot;timestamp&quot;:&quot;2026-08-01T12:02:04.863Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1039px)&quot;},{&quot;id&quot;:&quot;log-1785585535195&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:58:55.195Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1203px)&quot;},{&quot;id&quot;:&quot;log-1785585425036&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:57:05.036Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 75%)&quot;},{&quot;id&quot;:&quot;log-1785585425034&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:57:05.034Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 75%)&quot;},{&quot;id&quot;:&quot;log-1785585425033&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:57:05.033Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 75%)&quot;},{&quot;id&quot;:&quot;log-1785585413783&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:56:53.783Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1104px)&quot;},{&quot;id&quot;:&quot;log-1785584443568&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:40:43.568Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1798px)&quot;},{&quot;id&quot;:&quot;log-1785584443563&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:40:43.563Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1798px)&quot;},{&quot;id&quot;:&quot;log-1785584375647&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:39:35.647Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1008px)&quot;},{&quot;id&quot;:&quot;log-1785584375633&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:39:35.633Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1008px)&quot;},{&quot;id&quot;:&quot;log-1785584343894&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:39:03.894Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1007px)&quot;},{&quot;id&quot;:&quot;log-1785584317987&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:38:37.987Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 2592px)&quot;},{&quot;id&quot;:&quot;log-1785584317982&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:38:37.982Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 2592px)&quot;},{&quot;id&quot;:&quot;log-1785584184168&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:36:24.168Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785584184162&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:36:24.162Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785583411270&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:23:31.270Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1016px)&quot;},{&quot;id&quot;:&quot;log-1785583411259&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:23:31.259Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1016px)&quot;},{&quot;id&quot;:&quot;log-1785583244612&quot;,&quot;timestamp&quot;:&quot;2026-08-01T11:20:44.612Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1088px)&quot;},{&quot;id&quot;:&quot;log-1785581897362&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:58:17.362Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785581897361&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:58:17.361Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785581897360&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:58:17.360Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785581897359&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:58:17.359Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785581897358&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:58:17.358Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785581883156&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:58:03.156Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 75%)&quot;},{&quot;id&quot;:&quot;log-1785581883154&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:58:03.154Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 75%)&quot;},{&quot;id&quot;:&quot;log-1785581883152&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:58:03.152Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 75%)&quot;},{&quot;id&quot;:&quot;log-1785581883150&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:58:03.150Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 75%)&quot;},{&quot;id&quot;:&quot;log-1785581883149&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:58:03.149Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 75%)&quot;},{&quot;id&quot;:&quot;log-1785581858827&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:57:38.827Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1015px)&quot;},{&quot;id&quot;:&quot;log-1785581858825&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:57:38.825Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1015px)&quot;},{&quot;id&quot;:&quot;log-1785581808319&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:56:48.319Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785581747673&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:55:47.673Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1027px)&quot;},{&quot;id&quot;:&quot;log-1785581747667&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:55:47.667Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1027px)&quot;},{&quot;id&quot;:&quot;log-1785581667320&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:54:27.320Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785581667318&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:54:27.318Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785581655337&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:54:15.337Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1997px)&quot;},{&quot;id&quot;:&quot;log-1785581655334&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:54:15.334Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1997px)&quot;},{&quot;id&quot;:&quot;log-1785581182436&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:46:22.436Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1032px)&quot;},{&quot;id&quot;:&quot;log-1785581182426&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:46:22.426Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1032px)&quot;},{&quot;id&quot;:&quot;log-1785581135201&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:45:35.201Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 2597px)&quot;},{&quot;id&quot;:&quot;log-1785581135199&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:45:35.199Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 2597px)&quot;},{&quot;id&quot;:&quot;log-1785580834754&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:40:34.754Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785580792041&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:39:52.041Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785580792038&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:39:52.038Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785580752339&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:39:12.339Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785580714056&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:38:34.056Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1803px)&quot;},{&quot;id&quot;:&quot;log-1785580714053&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:38:34.053Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1803px)&quot;},{&quot;id&quot;:&quot;log-1785580592461&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:36:32.461Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1129px)&quot;},{&quot;id&quot;:&quot;log-1785580592457&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:36:32.457Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1129px)&quot;},{&quot;id&quot;:&quot;log-1785580517136&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:35:17.136Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1050px)&quot;},{&quot;id&quot;:&quot;log-1785580476972&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:34:36.972Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 2127px)&quot;},{&quot;id&quot;:&quot;log-1785580476969&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:34:36.969Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 2127px)&quot;},{&quot;id&quot;:&quot;log-1785580279056&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:31:19.056Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1134px)&quot;},{&quot;id&quot;:&quot;log-1785580279053&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:31:19.053Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1134px)&quot;},{&quot;id&quot;:&quot;log-1785579998030&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:26:38.030Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1024px)&quot;},{&quot;id&quot;:&quot;log-1785579998024&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:26:38.024Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1024px)&quot;},{&quot;id&quot;:&quot;log-1785578736727&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:05:36.727Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1057px)&quot;},{&quot;id&quot;:&quot;log-1785578736720&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:05:36.720Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1057px)&quot;},{&quot;id&quot;:&quot;log-1785578725104&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:05:25.104Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 67%)&quot;},{&quot;id&quot;:&quot;log-1785578427113&quot;,&quot;timestamp&quot;:&quot;2026-08-01T10:00:27.113Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1068px)&quot;},{&quot;id&quot;:&quot;log-1785578333174&quot;,&quot;timestamp&quot;:&quot;2026-08-01T09:58:53.174Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1088px)&quot;},{&quot;id&quot;:&quot;log-1785578240603&quot;,&quot;timestamp&quot;:&quot;2026-08-01T09:57:20.603Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785578216638&quot;,&quot;timestamp&quot;:&quot;2026-08-01T09:56:56.638Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1030px)&quot;},{&quot;id&quot;:&quot;log-1785578136245&quot;,&quot;timestamp&quot;:&quot;2026-08-01T09:55:36.245Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1085px)&quot;},{&quot;id&quot;:&quot;log-1785578136233&quot;,&quot;timestamp&quot;:&quot;2026-08-01T09:55:36.233Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1085px)&quot;},{&quot;id&quot;:&quot;log-1785574549912&quot;,&quot;timestamp&quot;:&quot;2026-08-01T08:55:49.912Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1331px)&quot;},{&quot;id&quot;:&quot;log-1785574543151&quot;,&quot;timestamp&quot;:&quot;2026-08-01T08:55:43.151Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1042px)&quot;},{&quot;id&quot;:&quot;log-1785574543136&quot;,&quot;timestamp&quot;:&quot;2026-08-01T08:55:43.136Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1042px)&quot;},{&quot;id&quot;:&quot;log-1785568264370&quot;,&quot;timestamp&quot;:&quot;2026-08-01T07:11:04.370Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 33%)&quot;},{&quot;id&quot;:&quot;log-1785567613097&quot;,&quot;timestamp&quot;:&quot;2026-08-01T07:00:13.097Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1020px)&quot;},{&quot;id&quot;:&quot;log-1785567505651&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:58:25.651Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1091px)&quot;},{&quot;id&quot;:&quot;log-1785567469058&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:57:49.058Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1095px)&quot;},{&quot;id&quot;:&quot;log-1785567437839&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:57:17.839Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1001px)&quot;},{&quot;id&quot;:&quot;log-1785567437836&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:57:17.836Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1001px)&quot;},{&quot;id&quot;:&quot;log-1785567383792&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:56:23.792Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1110px)&quot;},{&quot;id&quot;:&quot;log-1785567383789&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:56:23.789Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1110px)&quot;},{&quot;id&quot;:&quot;log-1785567360595&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:56:00.595Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 67%)&quot;},{&quot;id&quot;:&quot;log-1785567360593&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:56:00.593Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 67%)&quot;},{&quot;id&quot;:&quot;log-1785567360591&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:56:00.591Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 67%)&quot;},{&quot;id&quot;:&quot;log-1785567360589&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:56:00.589Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 67%)&quot;},{&quot;id&quot;:&quot;log-1785567360589&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:56:00.589Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 67%)&quot;},{&quot;id&quot;:&quot;log-1785567301461&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:55:01.461Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1009px)&quot;},{&quot;id&quot;:&quot;log-1785567301457&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:55:01.457Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1009px)&quot;},{&quot;id&quot;:&quot;log-1785567163398&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:52:43.398Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1027px)&quot;},{&quot;id&quot;:&quot;log-1785567115676&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:51:55.676Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1099px)&quot;},{&quot;id&quot;:&quot;log-1785567017835&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:50:17.835Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1083px)&quot;},{&quot;id&quot;:&quot;log-1785567006653&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:50:06.653Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785567006652&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:50:06.652Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785567006649&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:50:06.649Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785567006648&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:50:06.648Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785567006647&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:50:06.647Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;quiz&quot;,&quot;description&quot;:&quot;Kuis selesai (Skor: 100%)&quot;},{&quot;id&quot;:&quot;log-1785566993570&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:49:53.570Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1005px)&quot;},{&quot;id&quot;:&quot;log-1785566993564&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:49:53.564Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1005px)&quot;},{&quot;id&quot;:&quot;log-1785566782762&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:46:22.762Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1030px)&quot;},{&quot;id&quot;:&quot;log-1785566782755&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:46:22.755Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1030px)&quot;},{&quot;id&quot;:&quot;log-1785566773124&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:46:13.124Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1056px)&quot;},{&quot;id&quot;:&quot;log-1785566773117&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:46:13.117Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1056px)&quot;},{&quot;id&quot;:&quot;log-1785566429617&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:40:29.617Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785565185878&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:19:45.878Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785565185863&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:19:45.863Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785565163422&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:19:23.422Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1027px)&quot;},{&quot;id&quot;:&quot;log-1785565163415&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:19:23.415Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1027px)&quot;},{&quot;id&quot;:&quot;log-1785565036898&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:17:16.898Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785565036889&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:17:16.889Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785564953264&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:15:53.264Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785564953251&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:15:53.251Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1003px)&quot;},{&quot;id&quot;:&quot;log-1785564888179&quot;,&quot;timestamp&quot;:&quot;2026-08-01T06:14:48.179Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1016px)&quot;},{&quot;id&quot;:&quot;log-1785562797410&quot;,&quot;timestamp&quot;:&quot;2026-08-01T05:39:57.410Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1001px)&quot;},{&quot;id&quot;:&quot;log-1785562771791&quot;,&quot;timestamp&quot;:&quot;2026-08-01T05:39:31.791Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1751px)&quot;},{&quot;id&quot;:&quot;log-1785546955644&quot;,&quot;timestamp&quot;:&quot;2026-08-01T01:15:55.644Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1076px)&quot;},{&quot;id&quot;:&quot;log-1785546824254&quot;,&quot;timestamp&quot;:&quot;2026-08-01T01:13:44.254Z&quot;,&quot;date&quot;:&quot;2026-08-01&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1148px)&quot;}]" _forum-today="0">
 </attendance-tracker>
+
 
 
 
@@ -455,7 +498,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
 </code>
+
 
 
 
@@ -468,7 +513,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
   </thead>
+
 
 
 
@@ -478,7 +525,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
 </tr>
+
 
 
 
@@ -487,11 +536,14 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
 <td>Isi <code>forum-api-url</code> dengan URL Web App <code>code-forum-tugas.gs</code>.</td>
 
 
 
+
 </tr>
+
 
 
 
@@ -500,7 +552,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
 </tr>
+
 
 
 
@@ -510,11 +564,14 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
     <tr><td>Heatmap kosong</td><td><code>student-id</code> tidak match / history 0</td>
 
 
 
+
 <td>Pastikan siswa sudah login &#38; punya aktivitas; cek <code>getActivityHistory</code> return data.</td>
+
 
 
 
@@ -523,7 +580,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
   </tbody>
+
 
 
 
@@ -536,7 +595,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
   <li><code>custom/src/quiz-dashboard-lite2/lib/code-forum-tugas.gs</code> &#8212; Forum &#38; Tugas (deployment terpisah)</li>
+
 
 
 
@@ -546,7 +607,9 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 
 
+
   <li><code>custom/src/quiz-dashboard-lite2/lib/code-forum-tugas.gs.md</code> &#8212; Dokumentasi forum &#38; tugas</li>
+
 
 
 
