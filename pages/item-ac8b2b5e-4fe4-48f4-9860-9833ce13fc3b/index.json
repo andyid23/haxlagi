@@ -6,12 +6,16 @@
   "order": 3,
   "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
   "title": "New Page",
-  "description": "",
+  "description": "\n\n\n",
   "metadata": {
     "created": 1785566939,
-    "updated": 1785566939,
+    "updated": 1785566974,
     "images": [],
-    "videos": []
+    "videos": [],
+    "published": true,
+    "hideInMenu": false,
+    "locked": false,
+    "readtime": 1
   },
-  "content": "<p></p>"
+  "content": "\n<p></p>\n<quiz-dashboard-lite2 apps-script-url=\"https://script.google.com/macros/s/AKfycby3-aTxHA7GIFZd9r8EJsPk7MLsDb-Yij4zT_2x8iMJc5EIqDrypw4yU-xTFo6A8WZL/exec\" sheet-name=\"Pertemuan 2\" view-mode=\"student\" _active-tab=\"0\" _success-msg=\"Selamat datang, Andy Yulianto! Data kuis &amp; aktivitas akan tercatat atas nama Anda.\">\n</quiz-dashboard-lite2>\n"
 }
