@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785551844
+      "updated": 1785551879
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -97,12 +97,16 @@
       "order": 2,
       "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
       "title": "New Page",
-      "description": "",
+      "description": "Tugas\n\n\n\n\n    1 Login / Registrasi\n\n    \n\n  \n\n    2 Tugas Mandiri &#38; Forum Diskusi\n\n    Tugas tersimpan ke Tugas Log sheet. Forum CRUD via Forum Log sheet (nested replies, like, sort).\n\n    \n    \n",
       "metadata": {
         "created": 1785551828,
-        "updated": 1785551828,
+        "updated": 1785551879,
         "images": [],
-        "videos": []
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1
       }
     },
     {

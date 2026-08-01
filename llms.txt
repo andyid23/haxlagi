@@ -13,7 +13,7 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [Welcome to haxnow](https://localhost:3000/sites/haxnow/pages/item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c/index.md): Welcome to your new HAX site! Click edit on the top bar to get started What
 - [baru1](https://localhost:3000/sites/haxnow/pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.md): 📚 Pertemuan 1: Pengenalan HAXcms Materi pembelajaran hari ini...
 - [New Page](https://localhost:3000/sites/haxnow/pages/item-095e94fc-dc62-4f5c-9037-eb5f5095ba1c/index.md)
-- [New Page](https://localhost:3000/sites/haxnow/pages/item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29/index.md)
+- [New Page](https://localhost:3000/sites/haxnow/pages/item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29/index.md): Tugas 1 Login / Registrasi 2 Tugas Mandiri &#38; Forum Diskusi Tugas tersimpan ke Tugas Log sheet. Forum CRUD via Forum Log sheet (nested replies, like, sort).
 - [Dokumentasi Elemen](https://localhost:3000/sites/haxnow/pages/elemendokumen/index.md): Dokumentasi semua elemen interaktif yang tersedia di HAXcms
 - [Explode Quiz - Kuis Interaktif](https://localhost:3000/sites/haxnow/pages/kuis-interaktif/index.md): Demo dan dokumentasi elemen kuis interaktif
 - [Dashboard Kuis Lite](https://localhost:3000/sites/haxnow/pages/dashboard-kuis/index.md): Demo dan dokumentasi dashboard kuis ringan
