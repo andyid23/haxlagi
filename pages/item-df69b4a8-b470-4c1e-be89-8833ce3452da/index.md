@@ -1,5 +1,5 @@
-📚 Pertemuan 1: Pengenalan HAXcms
-=================================
+📚 Pertemuan 1: Tugas
+=====================
 
 Materi pembelajaran hari ini...
 

@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-08-01T01:10:24.000Z</updated>
+  <updated>2026-08-01T01:13:14.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -96,9 +96,9 @@ What</summary>
 
 </grid-plate>
 <h2 id="h2--798190757">This looks fun, let's go!</h2>
-<meme-maker image-url="https://e0.pxfuel.com/wallpapers/813/10/desktop-wallpaper-brain-galaxy-brain.jpg" top-text="You, while using HAX" bottom-text="...probably">
+<meme-maker image-url="/files/brain-galaxy.jpg" top-text="You, while using HAX" bottom-text="...probably">
     <div>You, while using HAX</div>
-      <img src="https://e0.pxfuel.com/wallpapers/813/10/desktop-wallpaper-brain-galaxy-brain.jpg" alt="" preload="lazy" aria-describedby=""/>
+      <img src="/files/brain-galaxy.jpg" alt="" preload="lazy" aria-describedby=""/>
     <div>...probably</div></meme-maker>
 <h2 id="h2--1479273868">Get involved with HAX</h2>
 <p>
@@ -2908,7 +2908,7 @@ https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
   <entry>
     <title>baru1</title>
     <id>item-df69b4a8-b470-4c1e-be89-8833ce3452da</id>
-    <updated>2026-07-31T10:53:43.000Z</updated>
+    <updated>2026-08-01T02:37:24.000Z</updated>
     <published>2026-07-22T02:35:16.000Z</published>
     <summary>
 📚 Pertemuan 1: Pengenalan HAXcms
@@ -2922,7 +2922,7 @@ Materi pembelajaran hari ini...
     <content type="html">
       <![CDATA[ 
 <p></p>
-<h1 id="h1-1954384612">📚 Pertemuan 1: Pengenalan HAXcms</h1>
+<h1 id="h1-1954384612">📚 Pertemuan 1: Tugas</h1>
 <p>Materi pembelajaran hari ini...</p>
 <p>tiidak bisa</p>
 <full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbzAJL1vjme8cv5DDgrrEC91kJzaGDMcArxYmMX8U40tZ3PvQLKDh73TOr5QjplEc8ZoDQ/exec" sheet-name="Pertemuan 1"></full-quiz-dashboard>
@@ -2995,6 +2995,18 @@ hehehehe
 <p></p>
 <p></p>
  ]]>
+    </content>
+  </entry>
+  <entry>
+    <title>New Page</title>
+    <id>item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29</id>
+    <updated>2026-08-01T02:37:08.000Z</updated>
+    <published>2026-08-01T02:37:08.000Z</published>
+    <summary></summary>
+    <link href="https://localhost:3000/sites/haxnow/new-page-4"/>
+    
+    <content type="html">
+      <![CDATA[ <p></p> ]]>
     </content>
   </entry>
 </feed>

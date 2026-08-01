@@ -9,7 +9,7 @@
   "description": "\n📚 Pertemuan 1: Pengenalan HAXcms\nMateri pembelajaran hari ini...\n\n\n\n",
   "metadata": {
     "created": 1784687716,
-    "updated": 1785495223,
+    "updated": 1785551844,
     "images": [],
     "videos": [],
     "published": true,
@@ -18,5 +18,5 @@
     "readtime": 1,
     "status": ""
   },
-  "content": "\n<p></p>\n<h1 id=\"h1-1954384612\">📚 Pertemuan 1: Pengenalan HAXcms</h1>\n<p>Materi pembelajaran hari ini...</p>\n<p>tiidak bisa</p>\n<full-quiz-dashboard apps-script-url=\"https://script.google.com/macros/s/AKfycbzAJL1vjme8cv5DDgrrEC91kJzaGDMcArxYmMX8U40tZ3PvQLKDh73TOr5QjplEc8ZoDQ/exec\" sheet-name=\"Pertemuan 1\"></full-quiz-dashboard>\n"
+  "content": "\n<p></p>\n<h1 id=\"h1-1954384612\">📚 Pertemuan 1: Tugas</h1>\n<p>Materi pembelajaran hari ini...</p>\n<p>tiidak bisa</p>\n<full-quiz-dashboard apps-script-url=\"https://script.google.com/macros/s/AKfycbzAJL1vjme8cv5DDgrrEC91kJzaGDMcArxYmMX8U40tZ3PvQLKDh73TOr5QjplEc8ZoDQ/exec\" sheet-name=\"Pertemuan 1\"></full-quiz-dashboard>\n"
 }
