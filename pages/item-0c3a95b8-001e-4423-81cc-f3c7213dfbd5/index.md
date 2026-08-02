@@ -88,3 +88,18 @@
 *   **Konsekuensi Sosial dan Pembentukan "Artefak": Menyebarkan ide di forum menghasilkan "artefak" atau karya nyata (seperti postingan atau komentar) yang menjadi sarana berbagi pengetahuan dan menciptakan keterkaitan antar-pengguna di seluruh dunia. Konsekuensi positifnya adalah peningkatan kolaborasi dan komunikasi, di mana individu belajar menghargai perspektif yang berbeda dan membangun pengetahuan bersama.**
     
 *   **Sikap Menghargai dan Toleransi: Aktivitas di forum melatih tanggung jawab individu untuk menghargai pendapat orang lain. Pengguna didorong untuk mendengarkan secara aktif dan menggunakan keterampilan komunikasi untuk mencapai persetujuan bersama dalam lingkungan yang plural.**
+    
+
+**Kebiasaan**
+
+* * *
+
+🎯 Kuis Evaluasi: Dasar HTML
+----------------------------
+
+Kerjakan kuis di bawah untuk menguji pemahaman Anda tentang HTML!
+
+* * *
+
+📊 Cek Aktivitas Belajar Anda
+-----------------------------
