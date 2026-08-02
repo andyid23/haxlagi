@@ -1,10 +1,12 @@
-import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { LitElement, html, css } from "lit";
+import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import "./lib/attendance-system.js";
 import "./lib/explode-quiz.js";
 import "./lib/quiz-user-auth.js";
 import "./lib/assignment-forum.js";
+import "./lib/assignment-component.js";
+import "./lib/forum-component.js";
 import "./lib/lecturer-console.js";
 import "./lib/question-generator.js";
 

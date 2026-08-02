@@ -79,6 +79,7 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
     return {
       ...super.properties,
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
+      forumApiUrl: { type: String, attribute: "forum-api-url" },
       sheetName: { type: String, attribute: "sheet-name" },
       studentId: { type: String, attribute: "student-id" },
       studentName: { type: String, attribute: "student-name" },
@@ -93,6 +94,7 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
   constructor() {
     super();
     this.appsScriptUrl = "";
+    this.forumApiUrl = "";
     this.sheetName = "Pertemuan";
     this.studentId = "";
     this.studentName = "";
@@ -108,6 +110,11 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
     this._handleDiscussionSaved = this._handleDiscussionSaved.bind(this);
     this._handleAssignmentSaved = this._handleAssignmentSaved.bind(this);
     this._handleReadingSaved = this._handleReadingSaved.bind(this);
+    this._handleSessionChanged = this._handleSessionChanged.bind(this);
+  }
+  // kdMateri derived from sheetName
+  get kdMateri() {
+    return this.sheetName || "Pertemuan"
   }
   connectedCallback() {
     super.connectedCallback();
@@ -123,6 +130,7 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
     globalThis.addEventListener("assignment-saved", this._handleAssignmentSaved);
     globalThis.addEventListener("reading-saved", this._handleReadingSaved);
     globalThis.addEventListener("download-saved", this._handleDownloadSaved);
+    globalThis.addEventListener("quiz-user-session-changed", this._handleSessionChanged);
     this._downloadClickHandler = (e) => this._handleDownloadClick(e);
     globalThis.document.addEventListener("click", this._downloadClickHandler, true);
     const today = getTodayString();
@@ -132,6 +140,28 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
       localStorage.setItem(LOGS_STORAGE_KEY, "[]");
       localStorage.setItem(LAST_DATE_KEY, today);
     }
+    // Load session if available
+    this._handleSessionChanged({ detail: this._loadSession() });
+  }
+  _loadSession() {
+    try {
+      const data = JSON.parse(localStorage.getItem("quiz_user_session"));
+      if (data?.expiresAt && Date.now() > data.expiresAt) {
+        localStorage.removeItem("quiz_user_session");
+        return null;
+      }
+      return data;
+    } catch { return null; }
+  }
+  _handleSessionChanged(e) {
+    const session = e?.detail || this._loadSession();
+    if (session?.studentId) {
+      this.studentId = session.studentId;
+      this.studentName = session.nama;
+      this.studentNis = session.nis || "";
+      this.studentAbsen = session.absen || "";
+      this.studentKelas = session.kelas || "";
+    }
   }
   disconnectedCallback() {
     globalThis.removeEventListener("scroll", this._handleScroll);
@@ -140,6 +170,7 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
     globalThis.removeEventListener("assignment-saved", this._handleAssignmentSaved);
     globalThis.removeEventListener("reading-saved", this._handleReadingSaved);
     globalThis.removeEventListener("download-saved", this._handleDownloadSaved);
+    globalThis.removeEventListener("quiz-user-session-changed", this._handleSessionChanged);
     globalThis.document.removeEventListener("click", this._downloadClickHandler, true);
     super.disconnectedCallback();
   }
@@ -157,10 +188,12 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
   }
   _handleDiscussionSaved(e) {
     const thread = e.detail?.thread || e.detail?.title || "Forum";
+    const kdMateri = e.detail?.kdMateri || this.kdMateri;
     this.logActivity("discussion", `Diskusi di: ${thread}`);
   }
   _handleAssignmentSaved(e) {
     const title = e.detail?.title || "Tugas";
+    const kdMateri = e.detail?.kdMateri || this.kdMateri;
     this.logActivity("assignment", `Tugas dikumpulkan: ${title}`);
   }
   _handleReadingSaved(e) {
@@ -186,7 +219,7 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
         action: "logActivity", timestamp: new Date().toISOString(), date: getTodayString(),
         name: this.studentName, studentId: this.studentId,
         nis: this.studentNis || "", absen: this.studentAbsen || "", kelas: this.studentKelas || "",
-        activityType: type, description, sheet: this.sheetName
+        activityType: type, description, sheet: this.sheetName, kdMateri: this.kdMateri
       });
       fetch(`${this.appsScriptUrl}?${params.toString()}`, { redirect: "follow" }).catch(() => {});
     }
@@ -269,6 +302,11 @@ export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
             property: "forumApiUrl",
             title: "Forum API URL",
             inputMethod: "textfield",
+          },
+          {
+            property: "sheetName",
+            title: "Nama Sheet (KD Materi)",
+            inputMethod: "textfield",
           }
         ],
         advanced: [],
@@ -284,6 +322,7 @@ export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
       ...super.properties,
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       forumApiUrl: { type: String, attribute: "forum-api-url" },
+      sheetName: { type: String, attribute: "sheet-name" },
       studentId: { type: String, attribute: "student-id" },
       _logs: { state: true },
       _forumToday: { state: true }
@@ -294,8 +333,13 @@ export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
     this._logs = getInitialLogs();
     this.appsScriptUrl = "";
     this.forumApiUrl = "";
+    this.sheetName = "Pertemuan";
     this.studentId = "";
     this._forumToday = 0;
+  }
+  // kdMateri derived from sheetName
+  get kdMateri() {
+    return this.sheetName || "Pertemuan"
   }
   connectedCallback() {
     super.connectedCallback();
@@ -324,7 +368,7 @@ export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
       return;
     }
     try {
-      const params = new URLSearchParams({ action: "getForumActivityHistory", studentId: this.studentId, days: 1 });
+      const params = new URLSearchParams({ action: "getForumActivityHistory", studentId: this.studentId, days: 1, kdMateri: this.kdMateri });
       const res = await fetch(`${this.forumApiUrl}?${params.toString()}`);
       const data = await res.json();
       const history = data.history || [];
@@ -446,6 +490,11 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
             property: "forumApiUrl",
             title: "Forum API URL",
             inputMethod: "textfield",
+          },
+          {
+            property: "sheetName",
+            title: "Nama Sheet (KD Materi)",
+            inputMethod: "textfield",
           }
         ],
         advanced: [],
@@ -461,6 +510,7 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
       ...super.properties,
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       forumApiUrl: { type: String, attribute: "forum-api-url" },
+      sheetName: { type: String, attribute: "sheet-name" },
       studentId: { type: String, attribute: "student-id" },
       _history: { state: true }
     };
@@ -469,8 +519,13 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
     super();
     this.appsScriptUrl = "";
     this.forumApiUrl = "";
+    this.sheetName = "Pertemuan";
     this.studentId = "";
     this._history = [];
+  }
+  // kdMateri derived from sheetName
+  get kdMateri() {
+    return this.sheetName || "Pertemuan"
   }
   connectedCallback() {
     super.connectedCallback();
@@ -496,14 +551,14 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
       return;
     }
     try {
-      const params = new URLSearchParams({ action: "getActivityHistory", studentId: this.studentId, days: 42 });
+      const params = new URLSearchParams({ action: "getActivityHistory", studentId: this.studentId, days: 42, kdMateri: this.kdMateri });
       const res = await fetch(`${this.appsScriptUrl}?${params.toString()}`);
       const data = await res.json();
       const map = {};
       (data.history || []).forEach(h => { map[h.date] = (map[h.date] || 0) + (h.count || 0); });
       if (this.forumApiUrl) {
         try {
-          const fParams = new URLSearchParams({ action: "getForumActivityHistory", studentId: this.studentId, days: 42 });
+          const fParams = new URLSearchParams({ action: "getForumActivityHistory", studentId: this.studentId, days: 42, kdMateri: this.kdMateri });
           const fRes = await fetch(`${this.forumApiUrl}?${fParams.toString()}`);
           const fData = await fRes.json();
           (fData.history || []).forEach(h => { map[h.date] = (map[h.date] || 0) + (h.count || 0); });

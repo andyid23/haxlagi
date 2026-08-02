@@ -381,27 +381,6 @@
       }
     },
     {
-      "id": "item-tutorial-alur-aktivitas",
-      "indent": 0,
-      "location": "pages/tutorial-alur-aktivitas/index.html",
-      "slug": "tutorial-alur-aktivitas",
-      "order": 11,
-      "parent": "item-doc-elements",
-      "title": "📘 Tutorial Alur Aktivitas & Sheet",
-      "description": "Alur lengkap: siswa → aktivitas → sheets, 7 sheet utama, kriteria kehadiran, alur tugas/forum, template Bank Soal, heatmap",
-      "metadata": {
-        "created": 1785574419,
-        "updated": 1785592663,
-        "images": [],
-        "videos": [],
-        "published": true,
-        "hideInMenu": false,
-        "locked": false,
-        "readtime": 7,
-        "status": ""
-      }
-    },
-    {
       "id": "item-b055951b-7998-440e-9f07-b8976e6d339c",
       "indent": 0,
       "location": "pages/item-b055951b-7998-440e-9f07-b8976e6d339c/index.html",
@@ -583,6 +562,90 @@
         "hideInMenu": false,
         "locked": false,
         "readtime": 1,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-tutorial-perubahan-kode",
+      "indent": 0,
+      "location": "pages/tutorial-perubahan-kode/index.html",
+      "slug": "tutorial-perubahan-kode",
+      "order": 6,
+      "parent": null,
+      "title": "📘 Tutorial Perubahan Kode v2",
+      "description": "Single login, kd-materi, split assignment/forum, deploy ulang Apps Script, testing checklist",
+      "metadata": {
+        "created": 1785590417,
+        "updated": 1785590417,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 15,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-tutorial-generate-soal",
+      "indent": 0,
+      "location": "pages/tutorial-generate-soal/index.html",
+      "slug": "tutorial-generate-soal",
+      "order": 7,
+      "parent": null,
+      "title": "📘 Tutorial Generate Soal dari Bank Soal",
+      "description": "Setup Bank Soal, fix 'Elemen kuis tidak ditemukan', deploy getBankSoal, troubleshooting",
+      "metadata": {
+        "created": 1785590417,
+        "updated": 1785590417,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 10,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-tutorial-alur-aktivitas",
+      "indent": 0,
+      "location": "pages/tutorial-alur-aktivitas/index.html",
+      "slug": "tutorial-alur-aktivitas",
+      "order": 8,
+      "parent": null,
+      "title": "📘 Tutorial Alur Aktivitas & Sheet",
+      "description": "Alur lengkap: siswa → aktivitas → sheets, 7 sheet utama, kriteria kehadiran, alur tugas/forum, template Bank Soal, heatmap",
+      "metadata": {
+        "created": 1785590417,
+        "updated": 1785590417,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 8,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-contoh-lengkap",
+      "indent": 0,
+      "location": "pages/contoh-lengkap/index.html",
+      "slug": "contoh-lengkap",
+      "order": 9,
+      "parent": null,
+      "title": "📘 Contoh Lengkap: UH + Forum + Tugas + Kuis + Rapor",
+      "description": "Demo lengkap: single login, kd-materi, split assignment/forum, activity tracking, generate soal, heatmap, rapor",
+      "metadata": {
+        "created": 1785590417,
+        "updated": 1785590417,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 12,
         "status": ""
       }
     }

@@ -202,6 +202,8 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
       studentKelas: { type: String, attribute: "student-kelas" },
       editable: { type: Boolean, attribute: true, reflect: true },
       editing: { type: Boolean, attribute: true, reflect: true },
+      // kdMateri derived from sheetName (fallback tag)
+      kdMateri: { type: String, attribute: "kd-materi", reflect: true },
       _screen: { state: true },
       _studentName: { state: true },
       _currentIndex: { state: true },
@@ -290,6 +292,9 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     this._tempCorrectIndex = "0"
     this._editorOrigin = "result"
     this._shuffledQuestions = []
+
+    // kdMateri derived from sheetName (fallback tag)
+    this.kdMateri = this.sheetName || this.tag || "Pertemuan"
     this._selectedAnswers = new Set()
     this._matchAnswers = {}
     this._shortAnswerText = ""
@@ -309,6 +314,8 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     this._tempChoiceImage3 = ""
     this._advanceTimer = null
     this._megaConfettiFrameId = null
+
+    // UI label defaults
     this.t = {
       quizTitle: "Kuis Interaktif",
       quizInstruction: "Masukkan nama Anda untuk memulai kuis.",
@@ -367,6 +374,14 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
       ariaSaveAll: "Simpan semua perubahan dan keluar",
       ariaCancelAll: "Batal semua perubahan dan keluar",
     }
+  }
+
+  // kdMateri derived from sheetName (fallback tag)
+  get kdMateri() {
+    return this.sheetName || this.tag || "Pertemuan"
+  }
+  set kdMateri(val) {
+    this.sheetName = val
   }
 
   updated(changedProperties) {

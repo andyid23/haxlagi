@@ -120,16 +120,21 @@ export class QuestionGenerator extends I18NMixin(DDDSuper(LitElement)) {
   static get tag() {
     return "question-generator";
   }
-  static get properties() {
+static get properties() {
     return {
       ...super.properties,
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
-      kategori: { type: String },
+      kategori: { type: String, attribute: "kategori" },
       quizSelector: { type: String, attribute: "quiz-selector" },
       loading: { type: Boolean },
       message: { type: String },
       messageType: { type: String, attribute: "message-type" },
     };
+  }
+  // kdMateri derived from quiz element's sheetName
+  get kdMateri() {
+    const quiz = this._getQuizElement();
+    return quiz?.sheetName || quiz?.kdMateri || "Pertemuan";
   }
   static get haxProperties() {
     return {
@@ -238,12 +243,19 @@ export class QuestionGenerator extends I18NMixin(DDDSuper(LitElement)) {
     }
   }
   _getQuizElement() {
+    // 1. Traverse up shadow DOM host chain (existing logic)
     let scope = this.getRootNode();
     while (scope) {
       const found = scope.querySelector ? scope.querySelector(this.quizSelector) : null;
       if (found) return found;
       scope = scope.host ? scope.host.getRootNode() : null;
     }
+    // 2. Fallback: search in document (light DOM)
+    const docQuiz = document.querySelector(this.quizSelector);
+    if (docQuiz) return docQuiz;
+    // 3. Fallback: find any explode-quiz in document (shadow DOM piercing)
+    const allQuizzes = document.querySelectorAll('explode-quiz');
+    if (allQuizzes.length > 0) return allQuizzes[0];
     return null;
   }
   applyToQuiz(questions) {

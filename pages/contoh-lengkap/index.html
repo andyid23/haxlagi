@@ -1,0 +1,227 @@
+<h1>📘 Contoh Lengkap: UH + Forum + Tugas + Kuis + Rapor + Generate Soal</h1>
+<p>Satu halaman demo semua fitur v2: <strong>Single Login</strong>, <strong>KD-Materi</strong>, <strong>Split Assignment/Forum</strong>, <strong>Activity Tracking</strong>, <strong>Generate Soal dari Bank Soal</strong>, <strong>Heatmap</strong>, <strong>Generate Rapor</strong>.</p>
+
+<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; border-radius: 16px; padding: 24px; margin: 24px 0;">
+  <h2 style="margin-top: 0; color: white;">⚡ Quick Start</h2>
+  <ol style="margin: 0; line-height: 2;">
+    <li>Login (akun demo: NIS 001 / email demo@demo.com)</li>
+    <li>Baca materi → scroll → download → aktivitas Tercatat</li>
+    <li>Kirim komentar di Forum → cek Attendance Tracker</li>
+    <li>Kirim Tugas → cek Attendance Tracker</li>
+    <li>Dosen: buka tab Console → Generate Soal dari Bank Soal</li>
+    <li>Siswa: kerjakan Kuis → skor tersimpan</li>
+    <li>Dosen: Generate Laporan Rapor → cek Nilai Akhir & Grade</li>
+    <li>Cek Heatmap (Engagement Score) → GitHub-style 6 minggu</li>
+  </ol>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔐 Login (Single Login - Auto Login 24h)</h2>
+<quiz-user-auth 
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  auto-login>
+</quiz-user-auth>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📊 Dashboard Dosen (Mode Lecturer)</h2>
+<p>Dashboard lengkap dengan: Kuis, Kehadiran, Console Dosen (Generate Soal + Generate Rapor).</p>
+<quiz-dashboard-lite2
+  view-mode="lecturer"
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+  sheet-name="UH1">
+</quiz-dashboard-lite2>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>💬 Forum Diskusi (Komponen Baru: forum-component)</h2>
+<p>Kirim komentar & balasan. Terintegrasi dengan kdMateri=UH1 → tersimpan ke Forum Log + Aktivitas.</p>
+<forum-component
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+  sheet-name="UH1"
+  forum-topic="Diskusi UH1: Web Component Dasar"
+  student-id="STD-001"
+  student-name="Budi Santoso"
+  student-nis="001"
+  student-absen="1"
+  student-kelas="XI-1">
+</forum-component>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📝 Tugas Mandiri (Komponen Baru: assignment-component)</h2>
+<p>Kirim tugas + link Google Drive. Terintegrasi kdMateri=UH1 → tersimpan ke Tugas Log + Aktivitas.</p>
+<assignment-component
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+  sheet-name="UH1"
+  assignment-title="Tugas UH1: Refleksi Web Component"
+  assignment-instruction="Tuliskan refleksi: apa yang sudah dipahami tentang Web Component? Sertakan link Google Drive/Doc jika ada file pendukung."
+  student-id="STD-001"
+  student-name="Budi Santoso"
+  student-nis="001"
+  student-absen="1"
+  student-kelas="XI-1">
+</assignment-component>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🎯 Kuis Interaktif (explode-quiz dengan Generate Soal)</h2>
+<p>Kuis dengan soal yang di-generate dari Bank Soal. KD-Materi=UH1.</p>
+<explode-quiz
+  id="quiz"
+  sheet-name="UH1"
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  quiz-category="ulangan_harian"
+  shuffle-choices
+  editable="true">
+</explode-quiz>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📈 Attendance Tracker (KD-Materi Filter)</h2>
+<p>Tracking kehadiran per KD-Materi (UH1). 6 Kriteria: Reading 3×, Quiz 1×, Assignment 1×, Download 1×, Forum 1×, Total 8×.</p>
+<attendance-tracker
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+  sheet-name="UH1"
+  student-id="STD-001">
+</attendance-tracker>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔥 Heatmap GitHub-Style (Engagement Score)</h2>
+<p>42 hari (6 minggu) aktivitas per KD-Materi=UH1. Warna intensitas seperti GitHub Contributions.</p>
+<engagement-score
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+  sheet-name="UH1"
+  student-id="STD-001">
+</engagement-score>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔧 Cara Pakai Generate Soal dari Bank Soal</h2>
+<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 16px; margin: 16px 0;">
+  <h3 style="margin-top: 0;">📋 Langkah Generate Soal (Mode Dosen)</h3>
+  <ol>
+    <li>Pastikan sudah login sebagai dosen (akses halaman ini)</li>
+    <li>Buka tab <strong>🛠️ Console Dosen</strong> di dashboard di atas</li>
+    <li>Klik tombol <strong>🗂️ Generate Soal dari Bank Soal</strong></li>
+    <li>Tunggu notifikasi: <code>Soal dari Bank Soal dimuat: X soal (campur).</code></li>
+    <li>Otomatis pindah ke tab <strong>📝 Ambil Kuis</strong></li>
+    <li>Soal siap dikerjakan oleh siswa</li>
+  </ol>
+  <p><strong>Catatan:</strong> Butuh sheet <strong>Bank Soal</strong> di spreadsheet dengan kolom: ID | Kategori | Tipe | Soal | Detail | Gambar | Poin</p>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📊 Generate Laporan Rapor (Dosen)</h2>
+<div style="background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 8px; padding: 16px; margin: 16px 0;">
+  <h3 style="margin-top: 0;">📋 Langkah Generate Rapor</h3>
+  <ol>
+    <li>Buka tab <strong>🛠️ Console Dosen</strong></li>
+    <li>Atur bobot 6 komponen (Kehadiran, UH, UTS, UAS, Sikap, Keterampilan)</li>
+    <li>Input nilai manual UTS/UAS per siswa di kolom tabel</li>
+    <li>Klik <strong>📊 Generate Laporan Rapor</strong></li>
+    <li>Hasil: Sheet <code>Akumulasi Nilai Rapor</code> terisi (Nilai Akhir + Grade)</li>
+    <li>Siswa lihat nilai di tab <strong>📊 Daftar Skor</strong> (mode siswa)</li>
+  </ol>
+  <p><strong>Rumus:</strong> <code>(Kehadiran×bKeh + UH×bUH + UTS×bUTS + UAS×bUAS + Sikap×bSikap + Keterampilan×bKer) / total bobot</code></p>
+  <p><strong>Sikap & Keterampilan Auto-calc:</strong> Sikap = tugas×25 + forum×20 (max 100), Keterampilan = kuis×30 + baca×10 (max 100)</p>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🏷️ KD-Materi = UH1 (Dari sheet-name)</h2>
+<p>Semua elemen di atas pakai <code>sheet-name="UH1"</code> → otomatis <code>kdMateri="UH1"</code>:</p>
+<ul>
+  <li>Forum Log → filter kdMateri=UH1</li>
+  <li>Tugas Log → filter kdMateri=UH1</li>
+  <li>Aktivitas Log → filter kdMateri=UH1</li>
+  <li>Attendance Tracker → hitung hanya aktivitas UH1</li>
+  <li>Heatmap → hanya aktivitas UH1</li>
+  <li>Kuis → simpan kdMateri=UH1</li>
+  <li>Bank Soal → filter kategori by kdMateri</li>
+</ul>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🧪 Testing Checklist</h2>
+<table>
+  <thead>
+    <tr><th>Fitur</th><th>Test</th><th>Expected</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Single Login</td><td>Login → refresh halaman</td><td>Tetap login (auto-login)</td></tr>
+    <tr><td>Forum</td><td>Kirim komentar</td><td>Tersimpan ke Forum Log kdMateri=UH1 + Aktivitas</td></tr>
+    <tr><td>Tugas</td><td>Kirim tugas + link</td><td>Tersimpan ke Tugas Log kdMateri=UH1 + Aktivitas</td></tr>
+    <tr><td>Kuis</td><td>Generate soal → kerjakan</td><td>Soal dari Bank Soal → skor tersimpan kdMateri=UH1</td></tr>
+    <tr><td>Attendance</td><td>Lakukan 6 kriteria</td><td>Status LENGKAP (100%)</td></tr>
+    <tr><td>Heatmap</td><td>Lakukan aktivasi 6 minggu</td><td>Grid GitHub-style terisi</td></tr>
+    <tr><td>Rapor</td><td>Generate rapor</td><td>Sheet Akumulasi Nilai Rapor terisi + Grade</td></tr>
+    <tr><td>Generate Soal</td><td>Klik Generate dari Bank Soal</td><td>Soal muncul di tab Kuis</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📋 Kode Sumber Halaman Ini</h2>
+<pre><code><quiz-user-auth auto-login apps-script-url="..."></quiz-user-auth>
+
+<quiz-dashboard-lite2
+  view-mode="lecturer"
+  apps-script-url="https://script.google.com/macros/s/.../exec"
+  forum-api-url="https://script.google.com/macros/s/FORUM_ID/exec"
+  sheet-name="UH1">
+</quiz-dashboard-lite2>
+
+<forum-component
+  apps-script-url="..."
+  forum-api-url="..."
+  sheet-name="UH1"
+  forum-topic="Diskusi UH1">
+</forum-component>
+
+<assignment-component
+  apps-script-url="..."
+  forum-api-url="..."
+  sheet-name="UH1"
+  assignment-title="Tugas UH1">
+</assignment-component>
+
+<explode-quiz
+  id="quiz"
+  sheet-name="UH1"
+  apps-script-url="..."
+  quiz-category="ulangan_harian"
+  shuffle-choices
+  editable="true">
+</explode-quiz>
+
+<attendance-tracker
+  apps-script-url="..."
+  forum-api-url="..."
+  sheet-name="UH1"
+  student-id="STD-001">
+</attendance-tracker>
+
+<engagement-score
+  apps-script-url="..."
+  forum-api-url="..."
+  sheet-name="UH1"
+  student-id="STD-001">
+</engagement-score></code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📚 Referensi Tutorial Terkait</h2>
+<ul>
+  <li><a href="tutorial-perubahan-kode">📘 Tutorial Perubahan Kode v2</a> — Arsitektur, single login, kd-materi, split komponen</li>
+  <li><a href="tutorial-generate-soal">📘 Tutorial Generate Soal</a> — Setup Bank Soal, fix "Elemen kuis tidak ditemukan"</li>
+  <li><a href="tutorial-alur-aktivitas">📘 Tutorial Alur Aktivitas & Sheet</a> — 7 sheet utama, kriteria kehadiran, alur tugas/forum</li>
+</ul>

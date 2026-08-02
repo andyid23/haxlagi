@@ -211,7 +211,7 @@ function saveAttendance(data) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sheetName = data.sheet + " - Aktivitas";
   let sheet = ss.getSheetByName(sheetName);
-  const headers = ["Timestamp", "Tanggal", "Hari", "Nama", "Tipe Aktivitas", "Deskripsi", "Count", "Student ID", "NIS", "Absen", "Kelas"];
+  const headers = ["Timestamp", "Tanggal", "Hari", "Nama", "Tipe Aktivitas", "Deskripsi", "Count", "Student ID", "NIS", "Absen", "Kelas", "kdMateri"];
   if (!sheet) {
     sheet = ss.insertSheet(sheetName);
     setupHeader(sheet, headers);
@@ -235,8 +235,8 @@ function saveAttendance(data) {
     return { sheet: sheetName, row: sheet.getLastRow(), type: activityType, skipped: true, message: "Aktivitas sudah mencapai batas 50 kali per pertemuan." };
   }
   
-  sheet.appendRow([formattedTime, formattedDate, dayName, data.name, activityType, data.description || "Aktivitas", 1, studentId, nis, absen, kelas]);
-  sheet.autoResizeColumns(1, 11);
+  sheet.appendRow([formattedTime, formattedDate, dayName, data.name, activityType, data.description || "Aktivitas", 1, studentId, nis, absen, kelas, data.kdMateri || ""]);
+  sheet.autoResizeColumns(1, 12);
   return { sheet: sheetName, row: sheet.getLastRow(), type: data.activityType };
 }
 
@@ -871,13 +871,16 @@ function logActivity(params) {
   let sheet = ss.getSheetByName("Aktivitas");
   if (!sheet) {
     sheet = ss.insertSheet("Aktivitas");
-    sheet.appendRow(["Timestamp", "Date", "StudentID", "Nama", "NIS", "Absen", "Kelas", "Tipe", "Deskripsi", "Sheet"]);
+    sheet.appendRow(["Timestamp", "Date", "StudentID", "Nama", "NIS", "Absen", "Kelas", "Tipe", "Deskripsi", "Sheet", "kdMateri"]);
     sheet.getRange("B2:B").setNumberFormat("yyyy-mm-dd");
     sheet.setFrozenRows(1);
+  } else if (sheet.getLastColumn() < 11) {
+    // Migrasi: tambah kolom kdMateri jika belum ada
+    sheet.getRange(1, 11, 1, 1).setValue("kdMateri");
   }
   const timestamp = params.timestamp || new Date().toISOString();
   const date = params.date || Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd");
-  sheet.appendRow([timestamp, date, params.studentId || "", params.name || "", params.nis || "", params.absen || "", params.kelas || "", params.activityType || "", params.description || "", params.sheet || ""]);
+  sheet.appendRow([timestamp, date, params.studentId || "", params.name || "", params.nis || "", params.absen || "", params.kelas || "", params.activityType || "", params.description || "", params.sheet || "", params.kdMateri || ""]);
   return { success: true, message: "Activity logged", date: date };
 }
 
@@ -885,6 +888,7 @@ function getActivityHistory(params) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sheet = ss.getSheetByName("Aktivitas");
   const studentId = params.studentId;
+  const kdMateri = params.kdMateri || "";
   const days = parseInt(params.days || 28);
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -893,11 +897,12 @@ function getActivityHistory(params) {
   
   const dateMap = {};
   
-  function collectRows_(target, studentIdx, dateIdx) {
+  function collectRows_(target, studentIdx, dateIdx, kdMateriIdx) {
     if (!target || target.getLastRow() <= 1) return;
     const data = target.getDataRange().getValues();
     for (let i = 1; i < data.length; i++) {
       if (studentId && String(data[i][studentIdx] || "").trim() !== studentId) continue;
+      if (kdMateri && kdMateriIdx >= 0 && String(data[i][kdMateriIdx] || "").trim() !== kdMateri) continue;
       const rowDate = data[i][dateIdx];
       let rowDateObj;
       if (rowDate instanceof Date) rowDateObj = rowDate;
@@ -909,12 +914,12 @@ function getActivityHistory(params) {
     }
   }
   
-  // Sheet aktivitas global (Date di kolom B, StudentID di kolom C)
-  if (sheet) collectRows_(sheet, 2, 1);
+  // Sheet aktivitas global (Date di kolom B, StudentID di kolom C, kdMateri di kolom K)
+  if (sheet) collectRows_(sheet, 2, 1, 10);
   
   // Sheet kuis tunggal "pertemuan-kuis" (Date di kolom B, Student ID di kolom H)
   const quizSheet = ss.getSheetByName(QUIZ_SHEET_NAME);
-  if (quizSheet) collectRows_(quizSheet, 7, 1);
+  if (quizSheet) collectRows_(quizSheet, 7, 1, -1);
   
   const history = Object.keys(dateMap).map(date => ({ date: date, count: dateMap[date] }));
   return { success: true, history: history };

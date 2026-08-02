@@ -66,7 +66,7 @@ function response(obj) {
 function getForumSheet_() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   let sheet = ss.getSheetByName("Forum Log");
-  const headers = ["Timestamp", "CommentID", "ParentID", "UserName", "StudentID", "Text", "Sheet", "Action", "Likes"];
+  const headers = ["Timestamp", "CommentID", "ParentID", "UserName", "StudentID", "Text", "Sheet", "Action", "Likes", "kdMateri"];
   
   if (!sheet) {
     sheet = ss.insertSheet("Forum Log");
@@ -75,7 +75,7 @@ function getForumSheet_() {
     return sheet;
   }
   
-  // FIX: Migrasi header jika sheet lama hanya punya 8 kolom (belum ada "Likes")
+  // FIX: Migrasi header jika sheet lama hanya punya 8/9 kolom (belum ada "Likes" atau "kdMateri")
   const currentColCount = sheet.getLastColumn();
   if (currentColCount < headers.length) {
     // Tambahkan kolom yang kurang
@@ -136,7 +136,7 @@ function saveForumComment(data) {
   sheet.appendRow([
     new Date(), commentId, parentId,
     data.user || "Anonymous", data.studentId || "",
-    data.text || "", data.sheet || "", "post", 0
+    data.text || "", data.sheet || "", "post", 0, data.kdMateri || ""
   ]);
   
   return {
@@ -150,15 +150,17 @@ function saveForumComment(data) {
   };
 }
 
-function getForumComments() {
+function getForumComments(params) {
   const sheet = getForumSheet_();
   if (sheet.getLastRow() <= 1) return { status: "ok", comments: [] };
+  const kdMateri = (params && params.kdMateri) || "";
   
   const data = sheet.getDataRange().getValues();
   const comments = [];
   for (let i = 1; i < data.length; i++) {
     const act = String(data[i][7] || "post").trim();
     if (act === "like") continue;
+    if (kdMateri && String(data[i][9] || "").trim() !== kdMateri) continue;
     comments.push({
       id: parseInt(data[i][1]) || 0,
       parentId: data[i][2] === "main" ? null : (parseInt(data[i][2]) || null),
@@ -194,6 +196,7 @@ function getForumActivityHistory(params) {
   const sheet = getForumSheet_();
   if (sheet.getLastRow() <= 1) return { status: "ok", history: [] };
   const studentId = (params && params.studentId) || "";
+  const kdMateri = (params && params.kdMateri) || "";
   const days = parseInt((params && params.days) || 28);
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -207,6 +210,7 @@ function getForumActivityHistory(params) {
     const action = String(row[7] || "post").trim();
     if (action === "like" || action === "edit") continue;
     if (studentId && String(row[4] || "").trim() !== studentId) continue;
+    if (kdMateri && String(row[9] || "").trim() !== kdMateri) continue;
     const rowDate = row[0];
     let rowDateObj;
     if (rowDate instanceof Date) rowDateObj = rowDate;
@@ -246,7 +250,7 @@ function deleteForumComment(data) {
 function getTugasSheet_() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   let sheet = ss.getSheetByName("Tugas Log");
-  const headers = ["Timestamp", "StudentID", "Nama", "Sheet", "Title", "Content", "Link"];
+  const headers = ["Timestamp", "StudentID", "Nama", "Sheet", "Title", "Content", "Link", "kdMateri"];
   
   if (!sheet) {
     sheet = ss.insertSheet("Tugas Log");
@@ -285,6 +289,7 @@ function saveAssignment(data) {
           String(allData[i][4]) === String(data.title || "")) {
         sheet.getRange(i + 1, 6).setValue(data.content || "");
         sheet.getRange(i + 1, 7).setValue(data.link || "");
+        sheet.getRange(i + 1, 8).setValue(data.kdMateri || "");
         sheet.getRange(i + 1, 1).setValue(new Date());
         return { status: "ok", message: "Tugas diperbarui" };
       }
@@ -293,7 +298,7 @@ function saveAssignment(data) {
   
   sheet.appendRow([
     new Date(), data.studentId || "", data.name || "",
-    data.sheet || "", data.title || "", data.content || "", data.link || ""
+    data.sheet || "", data.title || "", data.content || "", data.link || "", data.kdMateri || ""
   ]);
   return { status: "ok", message: "Tugas tersimpan" };
 }

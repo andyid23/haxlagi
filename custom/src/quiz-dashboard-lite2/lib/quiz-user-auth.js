@@ -8,10 +8,11 @@ class QuizUserAuth extends I18NMixin(DDDSuper(LitElement)) {
     return "quiz-user-auth";
   }
 
-  static get properties() {
+static get properties() {
     return {
       ...super.properties,
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
+      autoLogin: { type: Boolean, attribute: "auto-login" },
       _screen: { state: true },
       _nama: { state: true },
       _email: { state: true },
@@ -27,7 +28,8 @@ class QuizUserAuth extends I18NMixin(DDDSuper(LitElement)) {
 
   constructor() {
     super();
-    this.appsScriptUrl = ""; 
+    this.appsScriptUrl = "";
+    this.autoLogin = true;
     this._screen = "check";
     this._nama = "";
     this._email = "";
@@ -74,18 +76,32 @@ class QuizUserAuth extends I18NMixin(DDDSuper(LitElement)) {
       this._nis = saved.nis || "";
       this._absen = saved.absen || "";
       this._kelas = saved.kelas || "";
+      this._screen = "logged-in";
       // Defer verifySession to avoid Lit double-update warning
       queueMicrotask(() => this._verifySession());
+      if (this.autoLogin) {
+        this._dispatchSessionChanged();
+      }
     } else {
       this._screen = "login";
     }
   }
 
   _load(key) {
-    try { return JSON.parse(localStorage.getItem(key)); } catch { return null; }
+    try {
+      const data = JSON.parse(localStorage.getItem(key));
+      if (data?.expiresAt && Date.now() > data.expiresAt) {
+        this._clear(key);
+        return null;
+      }
+      return data;
+    } catch { return null; }
   }
   _save(key, val) {
-    try { localStorage.setItem(key, JSON.stringify(val)); } catch {}
+    try {
+      const data = { ...val, expiresAt: Date.now() + 24 * 60 * 60 * 1000 }; // 24h
+      localStorage.setItem(key, JSON.stringify(data));
+    } catch {}
   }
   _clear(key) {
     try { localStorage.removeItem(key); } catch {}
@@ -118,12 +134,14 @@ class QuizUserAuth extends I18NMixin(DDDSuper(LitElement)) {
       } else {
         this._clear("quiz_user_session");
         this._screen = "login";
+        this._dispatchSessionChanged();
       }
     } catch {
       // this._screen = "logged-in";
       // this._dispatchLogin();
       // Jika gagal verifikasi, izinkan login manual
       this._screen = "login";
+      this._dispatchSessionChanged();
     }
     this._loading = false;
   }
@@ -232,6 +250,7 @@ class QuizUserAuth extends I18NMixin(DDDSuper(LitElement)) {
     this._kelas = "";
     this._screen = "login";
     window.dispatchEvent(new CustomEvent("quiz-user-logout", { bubbles: true, composed: true }));
+    this._dispatchSessionChanged();
   }
 
   _dispatchLogin() {
@@ -244,6 +263,15 @@ class QuizUserAuth extends I18NMixin(DDDSuper(LitElement)) {
         absen: this._absen,
         kelas: this._kelas
       },
+      bubbles: true, composed: true
+    }));
+    this._dispatchSessionChanged();
+  }
+
+  _dispatchSessionChanged() {
+    const session = this._load("quiz_user_session");
+    window.dispatchEvent(new CustomEvent("quiz-user-session-changed", {
+      detail: session,
       bubbles: true, composed: true
     }));
   }

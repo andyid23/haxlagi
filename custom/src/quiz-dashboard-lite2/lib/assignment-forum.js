@@ -31,6 +31,7 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
       forumTopic: { type: String, attribute: "forum-topic" },
       viewMode: { type: String, attribute: "view-mode" },
       hideDelete: { type: Boolean, attribute: "hide-delete", reflect: true },
+      hideTugas: { type: Boolean, attribute: "hide-tugas", reflect: true },
       // === Internal state ===
       _comments: { state: true },
       _activeReplyId: { state: true },
@@ -60,6 +61,7 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
     this.forumTopic = "Forum Diskusi"
     this.viewMode = "student"
     this.hideDelete = false
+    this.hideTugas = false
     // Internal state
     this._comments = []
     this._activeReplyId = null
@@ -104,6 +106,11 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
       activityForum: "Aktivitas forum tercatat",
       activityAssignment: "Tugas dikumpulkan"
     }
+  }
+
+  // kdMateri derived from sheetName
+  get kdMateri() {
+    return this.sheetName || "Pertemuan"
   }
 
   connectedCallback() {
@@ -200,7 +207,8 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
       user: this.studentName || "Siswa",
       studentId: this.studentId || "",
       text,
-      sheet: this.sheetName
+      sheet: this.sheetName,
+      kdMateri: this.kdMateri
     }
     try {
       const res = await fetch(url, {
@@ -235,7 +243,8 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
       user: this.studentName || "Siswa",
       studentId: this.studentId || "",
       text,
-      sheet: this.sheetName
+      sheet: this.sheetName,
+      kdMateri: this.kdMateri
     }
     try {
       const res = await fetch(url, {
@@ -361,7 +370,8 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
             sheet: this.sheetName,
             title: this.assignmentTitle,
             content: text,
-            link: this._assignmentLink
+            link: this._assignmentLink,
+            kdMateri: this.kdMateri
           })
         })
       } catch (err) {
@@ -394,12 +404,13 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
       detail: {
         title: this.assignmentTitle,
         thread: this.forumTopic,
-        studentId: this.studentId
+        studentId: this.studentId,
+        kdMateri: this.kdMateri
       },
       bubbles: true,
       composed: true
     }))
-    // FIX: Kirim ke Apps Script dengan payload LENGKAP (termasuk nis, absen, kelas)
+    // FIX: Kirim ke Apps Script dengan payload LENGKAP (termasuk nis, absen, kelas, kdMateri)
     const url = this.appsScriptUrl
     if (url && this.studentId) {
       const params = new URLSearchParams({
@@ -412,6 +423,7 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
         absen: this.studentAbsen || "",
         kelas: this.studentKelas || "",
         sheet: this.sheetName,
+        kdMateri: this.kdMateri,
         timestamp: new Date().toISOString()
       })
       fetch(`${url}?${params.toString()}`, { redirect: "follow" }).catch(() => {})
@@ -791,6 +803,7 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
         <div>💬 ${this.t.forumTitle}: ${sorted.length}</div>
       </div>
 
+      ${!this.hideTugas ? html`
       <section class="card" aria-labelledby="assignment-heading">
         <h3 id="assignment-heading">📝 ${this.assignmentTitle}</h3>
         <div class="meta">Formatif | ${this.t.assignmentTitle}</div>
@@ -835,6 +848,7 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
           ${this._assignmentSubmitted ? `✅ ${this.t.submitted}` : `⚠️ ${this.t.pending}`}
         </div>
       </section>
+      ` : ""}
 
       <section class="card" aria-labelledby="forum-heading">
         <h3 id="forum-heading">💬 ${this.forumTopic}</h3>

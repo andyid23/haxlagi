@@ -1,0 +1,217 @@
+<h1>📘 Tutorial Generate Soal dari Bank Soal (Fix "Elemen kuis tidak ditemukan")</h1>
+<p>Panduan lengkap setup Bank Soal, deploy <code>getBankSoal</code>, konfigurasi <code>question-generator</code>, dan troubleshooting error "Elemen kuis tidak ditemukan".</p>
+
+<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; border-radius: 16px; padding: 24px; margin: 24px 0;">
+  <h2 style="margin-top: 0; color: white;">🎯 Alur Kerja Generate Soal</h2>
+  <ol style="margin: 0; line-height: 2;">
+    <li>Dosen buka halaman dengan <code>lecturer-console</code> (mode dosen)</li>
+    <li>Klik <strong>🗂️ Generate Soal dari Bank Soal</strong></li>
+    <li><code>question-generator</code> POST <code>getBankSoal</code> ke Apps Script</li>
+    <li>Apps Script baca sheet <code>Bank Soal</code> → return soal JSON</li>
+    <li><code>question-generator</code> map soal → kirim ke <code>explode-quiz</code> via <code>loadQuestions()</code></li>
+    <li>Soal muncul di tab 📝 Ambil Kuis → siswa bisa kerjakan</li>
+  </ol>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🗂️ 1. Setup Sheet "Bank Soal"</h2>
+<p>Buat tab baru di spreadsheet bernama persis <strong>Bank Soal</strong> dengan kolom:</p>
+
+<table>
+  <thead>
+    <tr><th>Kolom</th><th>Wajib</th><th>Contoh</th><th>Keterangan</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>ID</td><td>Ya</td><td>1</td><td>Nomor urut</td></tr>
+    <tr><td>Kategori</td><td>Ya</td><td>literasi / numerasi / campur</td><td>Filter soal</td></tr>
+    <tr><td>Tipe</td><td>Ya</td><td>mc / pgk / matching / shortAnswer</td><td>Jenis soal</td></tr>
+    <tr><td>Soal</td><td>Ya</td><td>Apa ibu kota Indonesia?</td><td>Teks pertanyaan</td></tr>
+    <tr><td>Detail</td><td>Ya</td><td>{"choices":["A","B","C"],"correctIndex":0}</td><td>JSON properti soal</td></tr>
+    <tr><td>Gambar</td><td>Tidak</td><td>https://example.com/img.png</td><td>URL gambar (opsional)</td></tr>
+    <tr><td>Poin</td><td>Tidak</td><td>1</td><td>Bobot (default 1)</td></tr>
+  </tbody>
+</table>
+
+<h3>Contoh Isi Detail per Tipe</h3>
+<pre><code>// MC (Pilihan Ganda)
+{"choices":["Jakarta","Bandung","Surabaya"],"correctIndex":0}
+
+// PGK (Pilihan Ganda Kompleks - Benar/Salah)
+{"statements":[{"text":"Matahari terbit di timur","answer":true},{"text":"Bulan lebih besar dari matahari","answer":false}]}
+
+// Matching (Menjodohkan)
+{"leftItems":["1+1","2+2"],"rightItems":["2","4"],"correctPairs":[["1+1","2"],["2+2","4"]]}
+
+// Short Answer (Isian Singkat)
+{"acceptedAnswers":["pancasila","Pancasila"]}</code></pre>
+
+<h3>Contoh Data Lengkap (Siap Copas ke Google Sheets)</h3>
+<pre><code>ID	Kategori	Tipe	Soal	Detail	Gambar	Poin
+1	literasi	mc	Apa kepanjangan HTML?	{"choices":["HyperText Markup Language","High Text Machine Language","Home Tool Markup Language","Hyperlinks Text Markup"],"correctIndex":0}		1
+2	numerasi	pgk	Tentukan Benar/Salah: Matahari terbit di timur	{"statements":[{"text":"Matahari terbit di timur","answer":true},{"text":"Bulan lebih besar dari matahari","answer":false}]}		2
+3	campur	matching	Jodohkan operasi & hasil	{"leftItems":["1+1","2+2"],"rightItems":["2","4"],"correctPairs":[["1+1","2"],["2+2","4"]]}		2
+4	literasi	shortAnswer	Sebutkan dasar negara Indonesia	{"acceptedAnswers":["pancasila","Pancasila"]}		1
+5	numerasi	mc	Luas persegi panjang 5×8	{"choices":["13","40","35","30"],"correctIndex":1}		1
+6	campur	pgk	Benar/Salah: 0.5 + 0.5 = 1	{"statements":[{"text":"0.5 + 0.5 = 1","answer":true},{"text":"1/2 + 1/2 = 1/4","answer":false}]}		2
+7	literasi	matching	Jodohkan kata & lawan	{"leftItems":["Besar","Siang","Panas"],"rightItems":["Kecil","Malam","Dingin"],"correctPairs":[["Besar","Kecil"],["Siang","Malam"],["Panas","Dingin"]]}		2
+8	numerasi	shortAnswer	Berapa 15 × 12?	{"acceptedAnswers":["180"]}		1</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 2. Deploy <code>getBankSoal</code> ke Apps Script</h2>
+<p><strong>Prasyarat:</strong> <code>code.gs</code> sudah punya action <code>getBankSoal</code> (sudah ada di repo).</p>
+
+<ol>
+  <li>Buka spreadsheet → Extensions → Apps Script (project utama <code>code.gs</code>)</li>
+  <li>Pastikan kode <code>getBankSoal</code> ada di dalam <code>doGet</code> & <code>doPost</code> switch:</li>
+</ol>
+<pre><code>case "getBankSoal": return response(getBankSoal(e.parameter));</code></pre>
+<ol start="3">
+  <li>Save (Ctrl+S)</li>
+  <li>Deploy → Manage deployments → Edit (ikon pensil) → New version → Deploy</li>
+  <li>Copy URL Web App baru</li>
+</ol>
+
+<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>✅ Verifikasi Deploy:</strong> Buka URL <code>https://script.google.com/macros/s/URL/exec?action=getBankSoal&kategori=campur</code> di browser → harus return JSON <code>{"status":"ok","total":8,"questions":[...]}</code>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>⚙️ 3. Konfigurasi <code>question-generator</code> di Halaman</h2>
+<p>Taruh di halaman yang punya <code>lecturer-console</code> (mode dosen):</p>
+
+<pre><code><question-generator
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  kategori="campur"
+  quiz-selector="#quiz">
+</question-generator></code></pre>
+
+<p><strong>Atribut Penting:</strong></p>
+<table>
+  <thead>
+    <tr><th>Atribut</th><th>Default</th><th>Penjelasan</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>apps-script-url</code></td><td>-</td><td>URL Web App <code>code.gs</code> (action getBankSoal)</td></tr>
+    <tr><td><code>kategori</code></td><td>campur</td><td>literasi / numerasi / campur (filter Bank Soal)</td></tr>
+    <tr><td><code>quiz-selector</code></td><td>#quiz</td><td>CSS selector explode-quiz target (default #quiz)</td></tr>
+  </tbody>
+</table>
+
+<h3>Integrasi dengan <code>lecturer-console</code> (Otomatis)</h3>
+<p>Di <code>quiz-dashboard-lite2</code> mode dosen, <code>lecturer-console</code> sudah punya 2 tombol generate:</p>
+<pre><code><quiz-dashboard-lite2
+  view-mode="lecturer"
+  apps-script-url="https://script.google.com/macros/s/.../exec"
+  sheet-name="UH1">
+</quiz-dashboard-lite2></code></pre>
+<p>Tombol di Console Dosen:</p>
+<ul>
+  <li><strong>✨ Generate Soal Template Lokal</strong> — pakai bank soal bawaan elemen (tanpa server)</li>
+  <li><strong>🗂️ Generate Soal dari Bank Soal</strong> — POST <code>getBankSoal</code> ke Apps Script</li>
+</ul>
+<p>Setelah generate → otomatis pindah ke tab 📝 Ambil Kuis → soal siap dikerjakan.</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔧 4. Fix "Elemen kuis tidak ditemukan"</h2>
+
+<h3>Penyebab</h3>
+<p><code>question-generator._getQuizElement()</code> cari <code>quiz-selector</code> (default <code>#quiz</code>) tapi <code>explode-quiz</code> berada di dalam <strong>shadow DOM</strong> <code>quiz-dashboard-lite2</code> → <code>querySelector</code> tidak nemu.</p>
+
+<h3>Fix yang Sudah Diimplementasi</h3>
+<p>Di <code>question-generator.js</code>, method <code>_getQuizElement()</code> sekarang:</p>
+<ol>
+  <li>Traverse shadow DOM host chain (existing logic)</li>
+  <li>Fallback: cari di <code>document</code> (light DOM)</li>
+  <li>Fallback: cari <code>explode-quiz</code> pertama di document</li>
+</ol>
+<pre><code>_getQuizElement() {
+  // 1. Traverse shadow DOM ancestors
+  let scope = this.getRootNode();
+  while (scope) {
+    const found = scope.querySelector ? scope.querySelector(this.quizSelector) : null;
+    if (found) return found;
+    scope = scope.host ? scope.host.getRootNode() : null;
+  }
+  // 2. Fallback: document (light DOM)
+  const docQuiz = document.querySelector(this.quizSelector);
+  if (docQuiz) return docQuiz;
+  // 3. Fallback: explode-quiz pertama
+  const allQuizzes = document.querySelectorAll('explode-quiz');
+  if (allQuizzes.length > 0) return allQuizzes[0];
+  return null;
+}</code></pre>
+
+<h3>Pastikan di Halaman:</h3>
+<ul>
+  <li><code>explode-quiz</code> punya <code>id="quiz"</code> (default di <code>quiz-dashboard-lite2</code>)</li>
+  <li><code>question-generator</code> pakai <code>quiz-selector="#quiz"</code> (default)</li>
+  <li>Bundle JS sudah di-rebuild (<code>npm run build</code> di folder <code>custom</code>)</li>
+</ul>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🧪 5. Testing Generate Soal</h2>
+
+<h3>Test Manual via Browser Console</h3>
+<pre><code>// 1. Buka halaman dengan lecturer-console (mode dosen)
+// 2. Buka DevTools Console
+// 3. Jalankan:
+const gen = document.querySelector('question-generator');
+gen.appsScriptUrl = "https://script.google.com/macros/s/.../exec";
+gen.kategori = "campur";
+gen.quizSelector = "#quiz";
+gen.generateFromBankSoal().then(q => console.log("Soal:", q));
+
+// Atau klik tombol "🗂️ Generate Soal dari Bank Soal" di UI Console Dosen</code></pre>
+
+<h3>Verifikasi Hasil</h3>
+<ol>
+  <li>Console log: <code>Soal dari Bank Soal dimuat: X soal (campur).</code></li>
+  <li>Tab 📝 Ambil Kuis → soal muncul (cek <code>explode-quiz</code> sudah load soal)</li>
+  <li>Sheet <code>Bank Soal</code> ter-filter by kategori</li>
+</ol>
+
+<h3>Troubleshooting</h3>
+<table>
+  <thead>
+    <tr><th>Error</th><th>Solusi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>"Elemen kuis tidak ditemukan"</td><td>Pastikan explode-quiz id="quiz" ada; rebuild bundle; cek quiz-selector="#quiz"</td></tr>
+    <tr><td>"Apps Script URL belum diisi"</td><td>Isi apps-script-url di question-generator</td></tr>
+    <tr><td>"Sheet 'Bank Soal' belum ada"</td><td>Buat tab "Bank Soal" dengan kolom lengkap</td></tr>
+    <tr><td>"Action getBankSoal not found"</td><td>Re-deploy code.gs (pastikan action getBankSoal di doGet/doPost)</td></tr>
+    <tr><td>Soal kosong (total: 0)</td><td>Cek kolom Kategori di Bank Soal match dengan parameter kategori</td></tr>
+    <tr><td>Soal tidak muncul di kuis</td><td>Cek explode-quiz loadQuestions() dipanggil; cek _screen = "name"</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📋 6. Contoh Halaman Lengkap Generate Soal</h2>
+<pre><code><!-- Halaman Generate Soal Demo -->
+<quiz-user-auth auto-login apps-script-url="..."></quiz-user-auth>
+
+<quiz-dashboard-lite2
+  view-mode="lecturer"
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  sheet-name="UH1">
+</quiz-dashboard-lite2>
+
+<!-- question-generator sudah internal di lecturer-console -->
+<!-- Tombol generate ada di tab 🛠️ Console Dosen --></code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📚 Referensi</h2>
+<ul>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/question-generator.js</code> — Generator soal (fix _getQuizElement)</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/lecturer-console.js</code> — Tombol generate & event questions-generated</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/quiz-dashboard-lite2.js</code> — listener questions-generated → auto tab kuis</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/code.gs</code> — action getBankSoal (baca sheet Bank Soal)</li>
+  <li><code>pages/contoh-lengkap/</code> — Demo lengkap generate soal</li>
+</ul>
