@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-08-02T23:07:33.000Z</updated>
+  <updated>2026-08-02T23:11:24.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -12,7 +12,7 @@
   <entry>
     <title>Welcome to haxnow</title>
     <id>item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c</id>
-    <updated>2026-08-02T23:09:26.000Z</updated>
+    <updated>2026-08-02T23:11:10.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Welcome to your new HAX site! Click edit on the top bar to get started
 
@@ -207,7 +207,7 @@ What</summary>
   <entry>
     <title>Dokumentasi Elemen</title>
     <id>item-doc-elements</id>
-    <updated>2026-08-02T23:02:32.000Z</updated>
+    <updated>2026-08-02T23:11:13.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Dokumentasi semua elemen interaktif yang tersedia di HAXcms</summary>
     <link href="https://localhost:3000/sites/haxnow/elemendokumen"/>
@@ -308,7 +308,7 @@ What</summary>
   <entry>
     <title>Explode Quiz - Kuis Interaktif</title>
     <id>item-doc-kuis</id>
-    <updated>2026-08-02T23:02:32.000Z</updated>
+    <updated>2026-08-02T23:11:13.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi elemen kuis interaktif</summary>
     <link href="https://localhost:3000/sites/haxnow/kuis-interaktif"/>
@@ -408,7 +408,7 @@ What</summary>
   <entry>
     <title>Dashboard Kuis Lite</title>
     <id>item-doc-dashboard</id>
-    <updated>2026-08-02T23:02:32.000Z</updated>
+    <updated>2026-08-02T23:11:14.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi dashboard kuis ringan</summary>
     <link href="https://localhost:3000/sites/haxnow/dashboard-kuis"/>
@@ -507,7 +507,7 @@ What</summary>
   <entry>
     <title>Sistem Kehadiran</title>
     <id>item-doc-kehadiran</id>
-    <updated>2026-08-02T23:02:33.000Z</updated>
+    <updated>2026-08-02T23:11:14.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo sistem kehadiran dan pelacakan aktivitas</summary>
     <link href="https://localhost:3000/sites/haxnow/kehadiran"/>
@@ -610,7 +610,7 @@ What</summary>
   <entry>
     <title>Notif Element</title>
     <id>item-doc-notifikasi</id>
-    <updated>2026-08-02T23:02:33.000Z</updated>
+    <updated>2026-08-02T23:11:15.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi elemen notifikasi</summary>
     <link href="https://localhost:3000/sites/haxnow/notifikasi"/>
@@ -706,7 +706,7 @@ notif.addEventListener('notif-hide', (e) => {
   <entry>
     <title>Todo List</title>
     <id>item-doc-todo</id>
-    <updated>2026-08-02T23:02:34.000Z</updated>
+    <updated>2026-08-02T23:11:15.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi daftar tugas</summary>
     <link href="https://localhost:3000/sites/haxnow/todo-list"/>
@@ -822,7 +822,7 @@ todoList.tasks = [
   <entry>
     <title>Full Quiz Dashboard</title>
     <id>item-doc-full-dashboard</id>
-    <updated>2026-08-02T23:02:34.000Z</updated>
+    <updated>2026-08-02T23:11:16.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dashboard lengkap dengan Apps Script</summary>
     <link href="https://localhost:3000/sites/haxnow/full-dashboard"/>
@@ -898,7 +898,7 @@ todoList.tasks = [
   <entry>
     <title>Tutorial Attendance System</title>
     <id>item-doc-tutorial-attendance</id>
-    <updated>2026-08-02T23:02:34.000Z</updated>
+    <updated>2026-08-02T23:11:16.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan lengkap sistem kehadiran dan pelacakan aktivitas</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-attendance"/>
@@ -1041,7 +1041,7 @@ location.reload();</code></pre>
   <entry>
     <title>Tutorial Google Apps Script</title>
     <id>item-doc-tutorial-apps-script</id>
-    <updated>2026-08-02T23:02:35.000Z</updated>
+    <updated>2026-08-02T23:11:17.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan setup Apps Script untuk integrasi Google Sheets</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-apps-script"/>
@@ -1166,7 +1166,7 @@ location.reload();</code></pre>
   <entry>
     <title>📚 Modul 1: HAXcms &amp; Web Component</title>
     <id>item-materi-siswa</id>
-    <updated>2026-08-02T23:02:37.000Z</updated>
+    <updated>2026-08-02T23:11:19.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Contoh halaman materi siswa dengan aktivitas dan kuis</summary>
     <link href="https://localhost:3000/sites/haxnow/materi-siswa"/>
@@ -1362,7 +1362,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>📖 Belajar HTML Dasar</title>
     <id>item-tutor-html</id>
-    <updated>2026-08-02T23:02:37.000Z</updated>
+    <updated>2026-08-02T23:11:20.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Tutorial HTML lengkap dari nol untuk pemula</summary>
     <link href="https://localhost:3000/sites/haxnow/tutor-html"/>
@@ -1747,7 +1747,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>📅 Tutorial: Kursus Multi-Hari</title>
     <id>item-tutorial-kursus</id>
-    <updated>2026-08-02T23:02:37.000Z</updated>
+    <updated>2026-08-02T23:11:20.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan menambah kuis dan materi untuk setiap pertemuan</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-kursus"/>
@@ -1967,7 +1967,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>📊 Tutorial: 1 Sheet = 1 Pertemuan</title>
     <id>item-tutorial-sheet</id>
-    <updated>2026-08-02T23:02:38.000Z</updated>
+    <updated>2026-08-02T23:11:20.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Setup Google Sheets auto-create sheet tab per pertemuan</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-sheet-per-pertemuan"/>
@@ -2255,7 +2255,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>📊 Dashboard Siswa - Lihat Nilai</title>
     <id>item-dashboard-siswa</id>
-    <updated>2026-08-02T23:02:38.000Z</updated>
+    <updated>2026-08-02T23:11:21.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Halaman dashboard siswa yang membaca data dari Google Sheets</summary>
     <link href="https://localhost:3000/sites/haxnow/dashboard-siswa"/>
@@ -2657,7 +2657,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>📖 Tutorial: Fetch Data dari Sheet</title>
     <id>item-tutorial-dashboard-siswa</id>
-    <updated>2026-08-02T23:02:39.000Z</updated>
+    <updated>2026-08-02T23:11:22.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan membaca data dari Google Sheets via Apps Script API</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa"/>
@@ -2857,7 +2857,7 @@ https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
   <entry>
     <title>dashboard quiz</title>
     <id>item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec</id>
-    <updated>2026-08-02T23:02:35.000Z</updated>
+    <updated>2026-08-02T23:11:17.000Z</updated>
     <published>2026-07-21T22:31:30.000Z</published>
     <summary>fulldashboard
 
@@ -2876,7 +2876,7 @@ https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
   <entry>
     <title>baru1</title>
     <id>item-df69b4a8-b470-4c1e-be89-8833ce3452da</id>
-    <updated>2026-08-02T23:02:30.000Z</updated>
+    <updated>2026-08-02T23:11:11.000Z</updated>
     <published>2026-07-22T02:35:16.000Z</published>
     <summary>
 📚 Pertemuan 1: Pengenalan HAXcms
@@ -2900,7 +2900,7 @@ Materi pembelajaran hari ini...
   <entry>
     <title>baru2</title>
     <id>item-f804cc8e-b786-47bf-ba57-03edb9924416</id>
-    <updated>2026-08-02T23:02:39.000Z</updated>
+    <updated>2026-08-02T23:11:22.000Z</updated>
     <published>2026-07-22T02:44:24.000Z</published>
     <summary>
 📚 Pertemuan 2: Lit Element Dasar
@@ -2922,7 +2922,7 @@ Materi pembelajaran hari ini...
   <entry>
     <title>Forum diskusi</title>
     <id>item-07f619ec-0cd5-4853-b79c-1b12f94df811</id>
-    <updated>2026-08-02T23:02:38.000Z</updated>
+    <updated>2026-08-02T23:11:21.000Z</updated>
     <published>2026-07-27T10:20:46.000Z</published>
     <summary>Diskusi
 hehehehe
@@ -2939,7 +2939,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-095e94fc-dc62-4f5c-9037-eb5f5095ba1c</id>
-    <updated>2026-08-02T23:02:30.000Z</updated>
+    <updated>2026-08-02T23:11:10.000Z</updated>
     <published>2026-07-27T12:47:40.000Z</published>
     <summary>
 
@@ -2968,7 +2968,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29</id>
-    <updated>2026-08-02T23:02:30.000Z</updated>
+    <updated>2026-08-02T23:11:11.000Z</updated>
     <published>2026-08-01T02:37:08.000Z</published>
     <summary>Tugas
 
@@ -3017,7 +3017,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b</id>
-    <updated>2026-08-02T23:02:31.000Z</updated>
+    <updated>2026-08-02T23:11:12.000Z</updated>
     <published>2026-08-01T06:48:59.000Z</published>
     <summary>
 
@@ -3040,7 +3040,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-5015eab1-d932-4139-a7a0-3216ce339bfa</id>
-    <updated>2026-08-02T23:02:31.000Z</updated>
+    <updated>2026-08-02T23:11:12.000Z</updated>
     <published>2026-08-01T08:46:03.000Z</published>
     <summary>
 
@@ -3081,7 +3081,7 @@ hehehehe
   <entry>
     <title>Kuis AKM Campuran</title>
     <id>item-kuis-akm-campuran</id>
-    <updated>2026-08-02T23:02:35.000Z</updated>
+    <updated>2026-08-02T23:11:18.000Z</updated>
     <published>2026-08-01T08:53:39.000Z</published>
     <summary>Kuis AKM dengan generator soal: template lokal atau Bank Soal (sheet Bank Soal)</summary>
     <link href="https://localhost:3000/sites/haxnow/kuis-akm-campuran"/>
