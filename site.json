@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785711761
+      "updated": 1785711950
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -661,22 +661,22 @@
       "description": "belajar kritis",
       "metadata": {
         "created": 1785710068,
-        "updated": 1785711749,
+        "updated": 1785711950,
         "images": [],
         "videos": [],
         "theme": {
-          "element": "journey-theme",
-          "path": "@haxtheweb/journey-theme/journey-theme.js",
-          "name": "Journey",
-          "thumbnail": "@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-journey-theme-thumb.jpg",
-          "description": "Start with a blank site using the Journey",
+          "element": "polaris-flex-theme",
+          "path": "@haxtheweb/polaris-theme/lib/polaris-flex-theme.js",
+          "name": "Polaris Flex",
+          "thumbnail": "@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-polaris-flex-theme-thumb.jpg",
+          "description": "Start with a blank site using the Polaris Flex",
           "category": [
             "Website"
           ],
           "hidden": false,
           "priority": -1,
           "terrible": false,
-          "key": "journey-theme"
+          "key": "polaris-flex-theme"
         },
         "published": true,
         "pageType": "activity",

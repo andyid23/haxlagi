@@ -4,30 +4,30 @@
 <indent>0</indent>
 <location>pages/item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5/index.xml</location>
 <slug>aturan-belajar-siswa</slug>
-<order>4</order>
+<order>0</order>
 <parent></parent>
 <title>PANDUAN BELAJAR MANDIRI: MENJADI PEMBELAJAR SEUMUR HIDUP</title>
 <description>belajar kritis</description>
 <metadata>
 <created>1785710068</created>
-<updated>1785711663</updated>
+<updated>1785711950</updated>
 <images>
 </images>
 <videos>
 </videos>
 <theme>
-<element>journey-theme</element>
-<path>@haxtheweb/journey-theme/journey-theme.js</path>
-<name>Journey</name>
-<thumbnail>@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-journey-theme-thumb.jpg</thumbnail>
-<description>Start with a blank site using the Journey</description>
+<element>polaris-flex-theme</element>
+<path>@haxtheweb/polaris-theme/lib/polaris-flex-theme.js</path>
+<name>Polaris Flex</name>
+<thumbnail>@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-polaris-flex-theme-thumb.jpg</thumbnail>
+<description>Start with a blank site using the Polaris Flex</description>
 <category>
 <item>Website</item>
 </category>
 <hidden>false</hidden>
 <priority>-1</priority>
 <terrible>false</terrible>
-<key>journey-theme</key>
+<key>polaris-flex-theme</key>
 </theme>
 <published>true</published>
 <pageType>activity</pageType>
@@ -35,6 +35,7 @@
 <icon>av:equalizer</icon>
 <locked>false</locked>
 <readtime>5</readtime>
+<status></status>
 </metadata>
 <content><![CDATA[
 <p><b></b></p>
@@ -46,7 +47,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -54,7 +57,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -62,7 +67,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -73,7 +80,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -81,7 +90,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -89,7 +100,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -100,7 +113,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -108,7 +123,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -116,7 +133,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -127,7 +146,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -135,7 +156,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -143,7 +166,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -151,7 +176,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -175,7 +202,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -183,7 +212,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -191,7 +222,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -199,7 +232,9 @@
 
 
 
+
 </li>
+
 
 
 
@@ -207,36 +242,18 @@
 
 
 
+
 </li>
+
 
 
 
 <li aria-level="1"><p><b>Sikap Menghargai dan Toleransi: Aktivitas di forum melatih tanggung jawab individu untuk menghargai pendapat orang lain. Pengguna didorong untuk mendengarkan secara aktif dan menggunakan keterampilan komunikasi untuk mencapai persetujuan bersama dalam lingkungan yang plural.</b></p>
+<p><b></b></p>
+
 </li>
-<li aria-level="1"><code-editor theme-colors="vs" theme="vs" resource="#3c7e02a7-9aa8-0207-544d-a3679be7e273" prefix="oer:http://oerschema.org/ schema:http://schema.org/ dc:http://purl.org/dc/terms/ foaf:http://xmlns.com/foaf/0.1/ cc:http://creativecommons.org/ns# bib:http://bib.schema.org " lib-path="http://localhost:3000/build/es6/node_modules/@haxtheweb/code-editor/code-editor.js/../../../monaco-editor/min/vs" code-pen-data="{&quot;title&quot;:&quot;&quot;,&quot;html&quot;:null,&quot;head&quot;:&quot;&lt;script&gt;globalThis.WCGlobalCDNPath=\&quot;https://cdn.webcomponents.psu.edu/cdn/\&quot;;&lt;/script&gt;&lt;script&gt;&lt;/script&gt;&quot;}" language="html" font-size="12" word-wrap tab-size="2" ready><p>     
-      <hr style="margin: 24px 0; border-color: #e0e0e0;">
-      <h2 id="h2-1059395271">🎯 Kuis Evaluasi: Dasar HTML</h2>
 
-      <p>Kerjakan kuis di bawah untuk menguji pemahaman Anda tentang HTML!</p>
-      <explode-quiz questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3}]" spreadsheet-id="" script-function-name="submitQuizResult" sheet-name="Pertemuan" quiz-category="formatif" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0" kd-materi="Pertemuan" tag="belajar"></explode-quiz>
 
-        <hr style="margin: 24px 0; border-color: #e0e0e0;">
-        <h2 id="h2-270409885">📊 Cek Aktivitas Belajar Anda</h2>
-
-        <grid-plate layout="1">
-          <div slot="col-1">
-            <attendance-tracker _logs="[{&quot;id&quot;:&quot;log-1785711633833&quot;,&quot;timestamp&quot;:&quot;2026-08-02T23:00:33.833Z&quot;,&quot;date&quot;:&quot;2026-08-03&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 2045px)&quot;},{&quot;id&quot;:&quot;log-1785711633827&quot;,&quot;timestamp&quot;:&quot;2026-08-02T23:00:33.827Z&quot;,&quot;date&quot;:&quot;2026-08-03&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 2045px)&quot;},{&quot;id&quot;:&quot;log-1785711370463&quot;,&quot;timestamp&quot;:&quot;2026-08-02T22:56:10.463Z&quot;,&quot;date&quot;:&quot;2026-08-03&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1036px)&quot;},{&quot;id&quot;:&quot;log-1785711370455&quot;,&quot;timestamp&quot;:&quot;2026-08-02T22:56:10.455Z&quot;,&quot;date&quot;:&quot;2026-08-03&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1036px)&quot;},{&quot;id&quot;:&quot;log-1785711281645&quot;,&quot;timestamp&quot;:&quot;2026-08-02T22:54:41.645Z&quot;,&quot;date&quot;:&quot;2026-08-03&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 8723px)&quot;},{&quot;id&quot;:&quot;log-1785711281637&quot;,&quot;timestamp&quot;:&quot;2026-08-02T22:54:41.637Z&quot;,&quot;date&quot;:&quot;2026-08-03&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 8723px)&quot;},{&quot;id&quot;:&quot;log-1785711267005&quot;,&quot;timestamp&quot;:&quot;2026-08-02T22:54:27.005Z&quot;,&quot;date&quot;:&quot;2026-08-03&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1328px)&quot;},{&quot;id&quot;:&quot;log-1785709982116&quot;,&quot;timestamp&quot;:&quot;2026-08-02T22:33:02.116Z&quot;,&quot;date&quot;:&quot;2026-08-03&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1004px)&quot;}]" _forum-today="0" sheet-name="Pertemuan"></attendance-tracker>
-
-          </div>
-
-          <div slot="col-2">
-            <engagement-score _history="[{&quot;date&quot;:&quot;2026-08-03&quot;,&quot;count&quot;:6}]" sheet-name="Pertemuan"></engagement-score>
-
-          </div>
-</grid-plate>
-</p>
-</code-editor>
-</li>
 
 
 
