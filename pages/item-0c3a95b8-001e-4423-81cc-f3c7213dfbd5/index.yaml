@@ -2,28 +2,28 @@ id: item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5
 indent: 0
 location: pages/item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5/index.yaml
 slug: aturan-belajar-siswa
-order: 2
+order: 3
 parent: null
 title: 'PANDUAN BELAJAR MANDIRI: MENJADI PEMBELAJAR SEUMUR HIDUP'
 description: belajar kritis
 metadata:
   created: 1785710068
-  updated: 1785711018
+  updated: 1785711067
   images: []
   videos: []
   theme:
-    element: haxcms-blank-theme
-    path: '@haxtheweb/haxcms-elements/lib/haxcms-blank-theme.js'
-    name: Haxcms Blank Theme
+    element: journey-theme
+    path: '@haxtheweb/journey-theme/journey-theme.js'
+    name: Journey
     thumbnail: >-
-      @haxtheweb/haxcms-elements/lib/theme-screenshots/theme-haxcms-blank-theme-thumb.jpg
-    description: Start with a blank site using the Haxcms Blank Theme
+      @haxtheweb/haxcms-elements/lib/theme-screenshots/theme-journey-theme-thumb.jpg
+    description: Start with a blank site using the Journey
     category:
       - Website
-    hidden: true
-    priority: 0
+    hidden: false
+    priority: -1
     terrible: false
-    key: haxcms-blank-theme
+    key: journey-theme
   published: true
   pageType: activity
   hideInMenu: false
@@ -34,22 +34,27 @@ content: >
 
   <p><b></b></p>
 
-  <h1><b>PANDUAN BELAJAR MANDIRI: MENJADI PEMBELAJAR SEUMUR HIDUP</b></h1>
+  <h1 id="h1-649730706"><b>PANDUAN BELAJAR MANDIRI: MENJADI PEMBELAJAR SEUMUR
+  HIDUP</b></h1>
 
-  <h3><b>1. Persiapan &amp; Lingkungan (Budaya Kerja 5R)</b></h3>
+  <h3 id="h3-2050312591"><b>1. Persiapan &amp; Lingkungan (Budaya Kerja
+  5R)</b></h3>
 
   <p><b>Sebelum memulai, pastikan tempat belajar mendukung konsentrasi dengan
   prinsip 5R (Ringkas, Rapi, Resik, Rawat, Rajin). Komitmen terhadap disiplin
   dan ketepatan waktu adalah kunci utama keberhasilan belajar.</b></p>
 
-  <h3><b>2. Rutinitas Literasi Harian (15 Menit Ajaib)</b></h3>
+  <h3 id="h3-833513170"><b>2. Rutinitas Literasi Harian (15 Menit
+  Ajaib)</b></h3>
 
   <ul><li aria-level="1"><p><b>Membaca Harian: Biasakan membaca buku
   non-pelajaran selama 15 menit setiap hari sebelum memulai aktivitas belajar
   untuk menumbuhkan minat baca.</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Buku Harian Digital/Saku: Catat pengalaman,
@@ -58,7 +63,9 @@ content: >
   ekspresif.</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Eksplorasi Kosakata: Jika menemukan kata sulit,
@@ -66,12 +73,15 @@ content: >
   kamus saku pribadi.</b></p>
 
 
+
   </li>
+
 
 
   </ul>
 
-  <h3><b>3. Strategi Berpikir Kritis: Metode "Think-Talk-Write" (TTW)</b></h3>
+  <h3 id="h3--748734673"><b>3. Strategi Berpikir Kritis: Metode
+  "Think-Talk-Write" (TTW)</b></h3>
 
   <p><b>Jangan hanya menerima informasi secara pasif. Gunakan tahapan ini untuk
   memperdalam pemahaman:</b></p>
@@ -80,7 +90,9 @@ content: >
   awal atau ide di dalam pikiran.</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Talk (Berbicara): Diskusikan apa yang dipelajari
@@ -88,7 +100,9 @@ content: >
   perspektif berbeda.</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Write (Menulis): Tuangkan hasil pemikiran dan diskusi
@@ -96,12 +110,14 @@ content: >
   bertahan lebih lama.</b></p>
 
 
+
   </li>
+
 
 
   </ul>
 
-  <h3><b>4. Mengasah Logika &amp; Pemecahan Masalah</b></h3>
+  <h3 id="h3-1793778572"><b>4. Mengasah Logika &amp; Pemecahan Masalah</b></h3>
 
   <p><b>Gunakan pendekatan Berpikir Komputasional dan Langkah Polya untuk
   masalah yang rumit:</b></p>
@@ -111,7 +127,9 @@ content: >
   abstraksi.</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Langkah Solusi: (1) Pahami masalahnya, (2) buat
@@ -119,7 +137,9 @@ content: >
   untuk meminimalisir kesalahan.</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Berbasis Masalah: Hubungkan materi belajar dengan
@@ -127,12 +147,14 @@ content: >
   Learning).</b></p>
 
 
+
   </li>
+
 
 
   </ul>
 
-  <h3><b>5. Penutup &amp; Refleksi Mandiri</b></h3>
+  <h3 id="h3--1545821735"><b>5. Penutup &amp; Refleksi Mandiri</b></h3>
 
   <p><b>Di akhir setiap sesi belajar, lakukan refleksi dengan menjawab empat
   poin berikut:</b></p>
@@ -140,27 +162,35 @@ content: >
   <ol><li aria-level="1"><p><b>Apa yang sudah saya pahami hari ini?</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Apa yang sekarang mampu saya lakukan?</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Langkah apa yang saya ambil untuk mengatasi kendala
   belajar tadi?</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Sikap positif apa yang saya dapatkan dari aktivitas
   ini?</b></p>
 
 
+
   </li>
+
 
 
   </ol>
@@ -172,7 +202,8 @@ content: >
   pembelajar, terdapat beberapa poin kunci yang dapat disarikan dari
   sumber-sumber yang tersedia:</b></p>
 
-  <h3><b>1. Peningkatan Kemampuan melalui Menjawab Soal</b></h3>
+  <h3 id="h3-1437851967"><b>1. Peningkatan Kemampuan melalui Menjawab
+  Soal</b></h3>
 
   <p><b>Penyelesaian berbagai variasi soal asesmen, baik berupa pilihan ganda,
   esai, maupun soal berbasis kasus, sangat efektif untuk mengasah pemahaman
@@ -182,7 +213,8 @@ content: >
   merupakan cara utama untuk membentuk kemampuan siswa dalam menguasai materi
   pelajaran.</b></p>
 
-  <h3><b>2. Aktif di Forum dan Menyebarkan Ide secara Bertanggung Jawab</b></h3>
+  <h3 id="h3--392156585"><b>2. Aktif di Forum dan Menyebarkan Ide secara
+  Bertanggung Jawab</b></h3>
 
   <p><b>Partisipasi aktif dalam forum diskusi dan jejaring sosial memungkinkan
   pembelajar untuk terhubung dengan para ahli serta teman sebaya dari seluruh
@@ -194,7 +226,8 @@ content: >
   menciptakan "artefak" atau karya nyata (seperti postingan blog atau video)
   sebagai sarana berbagi pengetahuan.</b></p>
 
-  <h3><b>3. Merujuk pada Tokoh dan Peneliti Kredibel</b></h3>
+  <h3 id="h3--1522715088"><b>3. Merujuk pada Tokoh dan Peneliti
+  Kredibel</b></h3>
 
   <p><b>Pemanfaatan informasi dari peneliti yang memiliki rekam jejak jelas
   sangat penting untuk menjaga kualitas keilmuan. Sebagai contoh, sumber
@@ -204,7 +237,7 @@ content: >
   tokoh besar seperti Piaget untuk konstruktivisme dan Bloom untuk taksonomi
   tujuan pendidikan.</b></p>
 
-  <h3><b>4. Landasan Pendapat dan Sumber Pustaka</b></h3>
+  <h3 id="h3--821007417"><b>4. Landasan Pendapat dan Sumber Pustaka</b></h3>
 
   <p><b>Setiap klaim atau pendapat harus didukung oleh justifikasi efisiensi,
   yaitu penyediaan bukti, dasar, dan penalaran yang tepat untuk meyakinkan orang
@@ -214,7 +247,7 @@ content: >
   penelitian, atau peraturan pemerintah) memastikan bahwa pengetahuan yang
   dibangun memiliki dasar yang dapat dipertanggungjawabkan.</b></p>
 
-  <h3><b>5. Berani Mempertahankan Ide</b></h3>
+  <h3 id="h3-1704939182"><b>5. Berani Mempertahankan Ide</b></h3>
 
   <p><b>Lingkungan belajar yang positif, seperti dalam strategi Joyful Learning,
   mendorong peserta didik untuk berani mencoba, bertanya, mengemukakan pendapat,
@@ -241,7 +274,9 @@ content: >
   permusuhan, kebencian, atau penghinaan di ruang digital.</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Pemahaman akan Dampak dan Konsekuensi: Setiap
@@ -252,7 +287,9 @@ content: >
   secara daring.</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Justifikasi dan Akurasi Ide: Saat menyodorkan sebuah
@@ -263,7 +300,9 @@ content: >
   dalam menerima masukan atau ide dari pihak lain.</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Menghindari Informasi yang Menyesatkan: Di forum
@@ -274,7 +313,9 @@ content: >
   nyata, bukan sekadar pengulangan informasi tanpa dasar yang jelas.</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Konsekuensi Sosial dan Pembentukan "Artefak":
@@ -286,7 +327,9 @@ content: >
   bersama.</b></p>
 
 
+
   </li>
+
 
 
   <li aria-level="1"><p><b>Sikap Menghargai dan Toleransi: Aktivitas di forum
@@ -296,7 +339,9 @@ content: >
   plural.</b></p>
 
 
+
   </li>
+
 
 
   </ul>

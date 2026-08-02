@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785711019
+      "updated": 1785711067
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -654,28 +654,28 @@
       "indent": 0,
       "location": "pages/item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5/index.html",
       "slug": "aturan-belajar-siswa",
-      "order": 2,
+      "order": 3,
       "parent": null,
       "title": "PANDUAN BELAJAR MANDIRI: MENJADI PEMBELAJAR SEUMUR HIDUP",
       "description": "belajar kritis",
       "metadata": {
         "created": 1785710068,
-        "updated": 1785711018,
+        "updated": 1785711067,
         "images": [],
         "videos": [],
         "theme": {
-          "element": "haxcms-blank-theme",
-          "path": "@haxtheweb/haxcms-elements/lib/haxcms-blank-theme.js",
-          "name": "Haxcms Blank Theme",
-          "thumbnail": "@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-haxcms-blank-theme-thumb.jpg",
-          "description": "Start with a blank site using the Haxcms Blank Theme",
+          "element": "journey-theme",
+          "path": "@haxtheweb/journey-theme/journey-theme.js",
+          "name": "Journey",
+          "thumbnail": "@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-journey-theme-thumb.jpg",
+          "description": "Start with a blank site using the Journey",
           "category": [
             "Website"
           ],
-          "hidden": true,
-          "priority": 0,
+          "hidden": false,
+          "priority": -1,
           "terrible": false,
-          "key": "haxcms-blank-theme"
+          "key": "journey-theme"
         },
         "published": true,
         "pageType": "activity",
