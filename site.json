@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785711663
+      "updated": 1785711761
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -31,13 +31,13 @@
       "indent": 0,
       "location": "pages/item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c/index.html",
       "slug": "welcome",
-      "order": 0,
+      "order": 1,
       "parent": null,
       "title": "Welcome to haxnow",
       "description": "Welcome to your new HAX site! Click edit on the top bar to get started\n\n\n\n\n\n\n\n\n\n\nWhat",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590407,
+        "updated": 1785711749,
         "published": true,
         "locked": false,
         "status": "",
@@ -58,7 +58,7 @@
       "description": "\n📚 Pertemuan 1: Pengenalan HAXcms\nMateri pembelajaran hari ini...\n\n\n\n",
       "metadata": {
         "created": 1784687716,
-        "updated": 1785590408,
+        "updated": 1785711750,
         "images": [],
         "videos": [],
         "published": true,
@@ -79,7 +79,7 @@
       "description": "\n\n",
       "metadata": {
         "created": 1785156460,
-        "updated": 1785590408,
+        "updated": 1785711750,
         "images": [],
         "videos": [],
         "published": true,
@@ -100,7 +100,7 @@
       "description": "Tugas\n\n\n\n\n    1 Login / Registrasi\n\n    \n\n  \n\n    2 Tugas Mandiri &#38; Forum Diskusi\n\n    Tugas tersimpan ke Tugas Log sheet. Forum CRUD via Forum Log sheet (nested replies, like, sort).\n\n    \n    \n",
       "metadata": {
         "created": 1785551828,
-        "updated": 1785590408,
+        "updated": 1785711750,
         "images": [],
         "videos": [],
         "published": true,
@@ -121,7 +121,7 @@
       "description": "\n\n\n",
       "metadata": {
         "created": 1785566939,
-        "updated": 1785590409,
+        "updated": 1785711751,
         "images": [],
         "videos": [],
         "published": true,
@@ -142,7 +142,7 @@
       "description": "\n\n    1 Login / Registrasi\n\n    \n\n  \n\n    3 Kuis Formatif\n\n    \n    \n\n  \n",
       "metadata": {
         "created": 1785573963,
-        "updated": 1785590409,
+        "updated": 1785711751,
         "images": [],
         "videos": [],
         "published": true,
@@ -157,13 +157,13 @@
       "indent": 0,
       "location": "pages/elemendokumen/index.html",
       "slug": "elemendokumen",
-      "order": 1,
+      "order": 2,
       "parent": null,
       "title": "Dokumentasi Elemen",
       "description": "Dokumentasi semua elemen interaktif yang tersedia di HAXcms",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590410,
+        "updated": 1785711752,
         "published": true,
         "locked": false,
         "status": ""
@@ -180,7 +180,7 @@
       "description": "Demo dan dokumentasi elemen kuis interaktif",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590410,
+        "updated": 1785711752,
         "published": true,
         "locked": false,
         "status": "",
@@ -201,7 +201,7 @@
       "description": "Demo dan dokumentasi dashboard kuis ringan",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590410,
+        "updated": 1785711752,
         "published": true,
         "locked": false,
         "status": "",
@@ -222,7 +222,7 @@
       "description": "Demo sistem kehadiran dan pelacakan aktivitas",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590411,
+        "updated": 1785711753,
         "published": true,
         "locked": false,
         "status": ""
@@ -239,7 +239,7 @@
       "description": "Demo dan dokumentasi elemen notifikasi",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590411,
+        "updated": 1785711753,
         "published": true,
         "locked": false,
         "status": ""
@@ -256,7 +256,7 @@
       "description": "Demo dan dokumentasi daftar tugas",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590412,
+        "updated": 1785711754,
         "published": true,
         "locked": false,
         "status": "",
@@ -277,7 +277,7 @@
       "description": "Demo dashboard lengkap dengan Apps Script",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590412,
+        "updated": 1785711754,
         "published": true,
         "locked": false,
         "status": ""
@@ -294,7 +294,7 @@
       "description": "Panduan lengkap sistem kehadiran dan pelacakan aktivitas",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590412,
+        "updated": 1785711754,
         "published": true,
         "locked": false,
         "status": ""
@@ -311,7 +311,7 @@
       "description": "Panduan setup Apps Script untuk integrasi Google Sheets",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590412,
+        "updated": 1785711755,
         "published": true,
         "locked": false,
         "status": ""
@@ -328,7 +328,7 @@
       "description": "fulldashboard\n\n\n",
       "metadata": {
         "created": 1784673090,
-        "updated": 1785590413,
+        "updated": 1785711755,
         "images": [],
         "videos": [],
         "published": true,
@@ -349,7 +349,7 @@
       "description": "Kuis AKM dengan generator soal: template lokal atau Bank Soal (sheet Bank Soal)",
       "metadata": {
         "created": 1785574419,
-        "updated": 1785590413,
+        "updated": 1785711755,
         "images": [],
         "videos": [],
         "published": true,
@@ -370,7 +370,7 @@
       "description": "Panduan lengkap: materi, kuis formatif/UH/UTS/UAS, Bank Soal, sikap & keterampilan, bobot nilai dan generate rapor",
       "metadata": {
         "created": 1785574419,
-        "updated": 1785590414,
+        "updated": 1785711756,
         "images": [],
         "videos": [],
         "published": true,
@@ -382,7 +382,7 @@
     },
     {
       "id": "item-b055951b-7998-440e-9f07-b8976e6d339c",
-      "indent": 0,
+      "indent": 1,
       "location": "pages/item-b055951b-7998-440e-9f07-b8976e6d339c/index.html",
       "slug": "elemendokumen/copy-of-tutorial-alur-aktivitas-sheet",
       "order": 11,
@@ -394,13 +394,14 @@
         "created": 1785590414,
         "images": [],
         "videos": [],
-        "updated": 1785594440,
+        "updated": 1785711756,
         "published": true,
         "hideInMenu": false,
         "readtime": 7,
         "pageType": "listen",
         "accentColor": "pink",
-        "icon": "courseicons:listen"
+        "icon": "courseicons:listen",
+        "status": ""
       }
     },
     {
@@ -408,13 +409,13 @@
       "indent": 0,
       "location": "pages/materi-siswa/index.html",
       "slug": "materi-siswa",
-      "order": 2,
+      "order": 3,
       "parent": null,
       "title": "📚 Modul 1: HAXcms & Web Component",
       "description": "Contoh halaman materi siswa dengan aktivitas dan kuis",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785595466,
+        "updated": 1785711757,
         "published": true,
         "locked": false,
         "status": "",
@@ -435,7 +436,7 @@
       "description": "Tutorial HTML lengkap dari nol untuk pemula",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590415,
+        "updated": 1785711757,
         "published": true,
         "locked": false,
         "status": ""
@@ -452,7 +453,7 @@
       "description": "Panduan menambah kuis dan materi untuk setiap pertemuan",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590415,
+        "updated": 1785711757,
         "published": true,
         "locked": false,
         "status": ""
@@ -469,7 +470,7 @@
       "description": "Setup Google Sheets auto-create sheet tab per pertemuan",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590416,
+        "updated": 1785711758,
         "published": true,
         "locked": false,
         "status": ""
@@ -486,7 +487,7 @@
       "description": "Diskusi\nhehehehe\n\n&#60;h1&#62;🔗 Integrasi Aktivitas + Tugas + Forum + Kuis&#60;/h1&#62;\n  &#60;div class=",
       "metadata": {
         "created": 1785147646,
-        "updated": 1785590416,
+        "updated": 1785711758,
         "images": [],
         "videos": [],
         "published": true,
@@ -515,13 +516,13 @@
       "indent": 0,
       "location": "pages/dashboard-siswa/index.html",
       "slug": "dashboard-siswa",
-      "order": 3,
+      "order": 4,
       "parent": null,
       "title": "📊 Dashboard Siswa - Lihat Nilai",
       "description": "Halaman dashboard siswa yang membaca data dari Google Sheets",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590416,
+        "updated": 1785711758,
         "published": true,
         "locked": false,
         "status": ""
@@ -532,13 +533,13 @@
       "indent": 0,
       "location": "pages/tutorial-dashboard-siswa/index.html",
       "slug": "tutorial-dashboard-siswa",
-      "order": 4,
+      "order": 5,
       "parent": null,
       "title": "📖 Tutorial: Fetch Data dari Sheet",
       "description": "Panduan membaca data dari Google Sheets via Apps Script API",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785590417,
+        "updated": 1785711759,
         "published": true,
         "locked": false,
         "status": ""
@@ -549,13 +550,13 @@
       "indent": 0,
       "location": "pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.html",
       "slug": "new-page-2",
-      "order": 5,
+      "order": 6,
       "parent": null,
       "title": "baru2",
       "description": "\n📚 Pertemuan 2: Lit Element Dasar\nMateri pembelajaran hari ini...\n\n\n",
       "metadata": {
         "created": 1784688264,
-        "updated": 1785590417,
+        "updated": 1785711759,
         "images": [],
         "videos": [],
         "published": true,
@@ -570,13 +571,13 @@
       "indent": 0,
       "location": "pages/tutorial-perubahan-kode/index.html",
       "slug": "tutorial-perubahan-kode",
-      "order": 6,
+      "order": 7,
       "parent": null,
       "title": "📘 Tutorial Perubahan Kode v2",
       "description": "Single login, kd-materi, split assignment/forum, deploy ulang Apps Script, testing checklist",
       "metadata": {
         "created": 1785590417,
-        "updated": 1785590417,
+        "updated": 1785711759,
         "images": [],
         "videos": [],
         "published": true,
@@ -591,13 +592,13 @@
       "indent": 0,
       "location": "pages/tutorial-generate-soal/index.html",
       "slug": "tutorial-generate-soal",
-      "order": 7,
+      "order": 8,
       "parent": null,
       "title": "📘 Tutorial Generate Soal dari Bank Soal",
       "description": "Setup Bank Soal, fix 'Elemen kuis tidak ditemukan', deploy getBankSoal, troubleshooting",
       "metadata": {
         "created": 1785590417,
-        "updated": 1785590417,
+        "updated": 1785711760,
         "images": [],
         "videos": [],
         "published": true,
@@ -612,13 +613,13 @@
       "indent": 0,
       "location": "pages/tutorial-alur-aktivitas/index.html",
       "slug": "tutorial-alur-aktivitas",
-      "order": 8,
+      "order": 9,
       "parent": null,
       "title": "📘 Tutorial Alur Aktivitas & Sheet",
       "description": "Alur lengkap: siswa → aktivitas → sheets, 7 sheet utama, kriteria kehadiran, alur tugas/forum, template Bank Soal, heatmap",
       "metadata": {
         "created": 1785590417,
-        "updated": 1785590417,
+        "updated": 1785711760,
         "images": [],
         "videos": [],
         "published": true,
@@ -633,13 +634,13 @@
       "indent": 0,
       "location": "pages/contoh-lengkap/index.html",
       "slug": "contoh-lengkap",
-      "order": 9,
+      "order": 10,
       "parent": null,
       "title": "📘 Contoh Lengkap: UH + Forum + Tugas + Kuis + Rapor",
       "description": "Demo lengkap: single login, kd-materi, split assignment/forum, activity tracking, generate soal, heatmap, rapor",
       "metadata": {
         "created": 1785590417,
-        "updated": 1785590417,
+        "updated": 1785711760,
         "images": [],
         "videos": [],
         "published": true,
@@ -654,13 +655,13 @@
       "indent": 0,
       "location": "pages/item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5/index.html",
       "slug": "aturan-belajar-siswa",
-      "order": 4,
+      "order": 0,
       "parent": null,
       "title": "PANDUAN BELAJAR MANDIRI: MENJADI PEMBELAJAR SEUMUR HIDUP",
       "description": "belajar kritis",
       "metadata": {
         "created": 1785710068,
-        "updated": 1785711663,
+        "updated": 1785711749,
         "images": [],
         "videos": [],
         "theme": {
@@ -682,7 +683,8 @@
         "hideInMenu": false,
         "icon": "av:equalizer",
         "locked": false,
-        "readtime": 5
+        "readtime": 5,
+        "status": ""
       }
     }
   ]
