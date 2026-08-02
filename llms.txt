@@ -28,7 +28,6 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [dashboard quiz](https://localhost:3000/sites/haxnow/pages/item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec/index.md): fulldashboard
 - [Kuis AKM Campuran](https://localhost:3000/sites/haxnow/pages/kuis-akm-campuran/index.md): Kuis AKM dengan generator soal: template lokal atau Bank Soal (sheet Bank Soal)
 - [📘 Panduan Guru: Soal, Nilai & Rapor](https://localhost:3000/sites/haxnow/pages/tutorial-panduan-guru/index.md): Panduan lengkap: materi, kuis formatif/UH/UTS/UAS, Bank Soal, sikap & keterampilan, bobot nilai dan generate rapor
-- [📘 Tutorial Alur Aktivitas & Sheet](https://localhost:3000/sites/haxnow/pages/tutorial-alur-aktivitas/index.md): Alur lengkap: siswa → aktivitas → sheets, 7 sheet utama, kriteria kehadiran, alur tugas/forum, template Bank Soal, heatmap
 - [Copy of 📘 Tutorial Alur Aktivitas & Sheet](https://localhost:3000/sites/haxnow/pages/item-b055951b-7998-440e-9f07-b8976e6d339c/index.md): 📘 Tutorial Lengkap: Alur Aktivitas, 7 Sheet Utama &#38; Kriteria Kehadiran Panduan visual &#38; teknis: dari aktivitas siswa di browser &#8594; ke Google Sheets via Apps Script. Semua fitur sudah ad
 - [📚 Modul 1: HAXcms & Web Component](https://localhost:3000/sites/haxnow/pages/materi-siswa/index.md): Contoh halaman materi siswa dengan aktivitas dan kuis
 - [📖 Belajar HTML Dasar](https://localhost:3000/sites/haxnow/pages/tutor-html/index.md): Tutorial HTML lengkap dari nol untuk pemula
@@ -38,6 +37,11 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [📊 Dashboard Siswa - Lihat Nilai](https://localhost:3000/sites/haxnow/pages/dashboard-siswa/index.md): Halaman dashboard siswa yang membaca data dari Google Sheets
 - [📖 Tutorial: Fetch Data dari Sheet](https://localhost:3000/sites/haxnow/pages/tutorial-dashboard-siswa/index.md): Panduan membaca data dari Google Sheets via Apps Script API
 - [baru2](https://localhost:3000/sites/haxnow/pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.md): 📚 Pertemuan 2: Lit Element Dasar Materi pembelajaran hari ini...
+- [📘 Tutorial Perubahan Kode v2](https://localhost:3000/sites/haxnow/pages/tutorial-perubahan-kode/index.md): Single login, kd-materi, split assignment/forum, deploy ulang Apps Script, testing checklist
+- [📘 Tutorial Generate Soal dari Bank Soal](https://localhost:3000/sites/haxnow/pages/tutorial-generate-soal/index.md): Setup Bank Soal, fix 'Elemen kuis tidak ditemukan', deploy getBankSoal, troubleshooting
+- [📘 Tutorial Alur Aktivitas & Sheet](https://localhost:3000/sites/haxnow/pages/tutorial-alur-aktivitas/index.md): Alur lengkap: siswa → aktivitas → sheets, 7 sheet utama, kriteria kehadiran, alur tugas/forum, template Bank Soal, heatmap
+- [📘 Contoh Lengkap: UH + Forum + Tugas + Kuis + Rapor](https://localhost:3000/sites/haxnow/pages/contoh-lengkap/index.md): Demo lengkap: single login, kd-materi, split assignment/forum, activity tracking, generate soal, heatmap, rapor
+- [PANDUAN BELAJAR MANDIRI: MENJADI PEMBELAJAR SEUMUR HIDUP](https://localhost:3000/sites/haxnow/pages/item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5/index.md): belajar kritis
 
 ## Optional
 - [Search index](https://localhost:3000/sites/haxnow/lunrSearchIndex.json): Lunr corpus for quick full-text retrieval.

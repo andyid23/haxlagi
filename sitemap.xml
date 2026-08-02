@@ -157,15 +157,39 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://localhost:3000/sites/haxnow/tutorial-alur-aktivitas</loc>
-    <lastmod>2026-08-01T13:57:43.000Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://localhost:3000/sites/haxnow/elemendokumen/copy-of-tutorial-alur-aktivitas-sheet</loc>
     <lastmod>2026-08-01T14:27:20.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://localhost:3000/sites/haxnow/tutorial-perubahan-kode</loc>
+    <lastmod>2026-08-01T13:20:17.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://localhost:3000/sites/haxnow/tutorial-generate-soal</loc>
+    <lastmod>2026-08-01T13:20:17.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://localhost:3000/sites/haxnow/tutorial-alur-aktivitas</loc>
+    <lastmod>2026-08-01T13:20:17.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://localhost:3000/sites/haxnow/contoh-lengkap</loc>
+    <lastmod>2026-08-01T13:20:17.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://localhost:3000/sites/haxnow/aturan-belajar-siswa</loc>
+    <lastmod>2026-08-02T22:50:18.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
 </urlset>

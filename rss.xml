@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2026 14:27:20 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 14:44:27 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -82,7 +82,7 @@
     <item>
       <title>📚 Modul 1: HAXcms &amp; Web Component</title>
       <link>https://localhost:3000/sites/haxnow/materi-siswa</link>
-      <description>📚 Modul 1: Pengenalan HAXcms &amp;#38; Web Component Selamat datang di modul pembelajaran interaktif! Halaman ini adalah contoh bagaimana materi pembelajaran dipadukan dengan pelacakan aktivitas otomatis dan kuis evaluasi . Setiap aktivitas Anda &amp;#8212; scroll membaca, klik link, download file, dan mengerjakan kuis &amp;#8212; tercatat otomatis oleh sistem. ⏰ Activity Logger Aktif! Scroll, klik, dan kerjakan kuis di halaman ini akan dicatat otomatis untuk validasi kehadiran Anda. 📖 1.1 Apa itu HAXc...</description>
+      <description>📚 Modul 1: Pengenalan HAXcms &amp; Web Component (v2: KD-Materi &amp; Split Forum/Tugas) Selamat datang di modul pembelajaran interaktif v2! Halaman ini mendemonstrasikan fitur-fitur baru: Single Login — login sekali, akses semua halaman (auto-login 24h) KD-Materi dari sheet-name — otomatis filter aktivitas per pertemuan Split Assignment/Forum — komponen terpisah assignment-component &amp; forum-component Activity Logger — tracking otomatis (scroll, download, kuis, forum, tugas) ⏰ Activity Logger Aktif!...</description>
       <guid>https://localhost:3000/sites/haxnow/materi-siswa</guid>
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>
