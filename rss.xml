@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2026 06:22:11 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 09:57:06 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -87,6 +87,13 @@
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>
     <item>
+      <title>📊 Dashboard Siswa - Lihat Nilai</title>
+      <link>https://localhost:3000/sites/haxnow/dashboard-siswa</link>
+      <description>📊 Dashboard Siswa — Lihat Nilai &amp;amp; Aktivitas dari Google Sheets Halaman ini mengambil data langsung dari Google Sheets via Apps Script API. Masukkan URL Apps Script dan nama Anda, lalu klik Tampilkan untuk melihat semua data kuis, aktivitas, dan leaderboard Anda secara real-time. 🔌 Hubungkan ke Google Sheets Masukkan URL Apps Script Web App dan nama Anda untuk melihat data. URL Apps Script Nama Anda 🔍 Tampilkan Data Mengambil data dari Google Sheets... 🏆 Leaderboard 📝 Kuis Saya 📅 Akt...</description>
+      <guid>https://localhost:3000/sites/haxnow/dashboard-siswa</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
       <title>📚 Modul 1: HAXcms &amp; Web Component</title>
       <link>https://localhost:3000/sites/haxnow/materi-siswa</link>
       <description>📚 Modul 1: Pengenalan HAXcms &amp; Web Component (v2: KD-Materi &amp; Split Forum/Tugas) Selamat datang di modul pembelajaran interaktif v2! Halaman ini mendemonstrasikan fitur-fitur baru: Single Login — login sekali, akses semua halaman (auto-login 24h) KD-Materi dari sheet-name — otomatis filter aktivitas per pertemuan Split Assignment/Forum — komponen terpisah assignment-component &amp; forum-component Activity Logger — tracking otomatis (scroll, download, kuis, forum, tugas) ⏰ Activity Logger Aktif!...</description>
@@ -112,13 +119,6 @@
       <link>https://localhost:3000/sites/haxnow/tutorial-sheet-per-pertemuan</link>
       <description>📊 Tutorial: 1 Google Sheet = 1 Course — 1 Sheet Tab = 1 Pertemuan Cara setup agar satu Google Spreadsheet menampung seluruh data course, dan setiap sheet tab otomatis jadi satu pertemuan. Data dari semua halaman HAXcms masuk ke spreadsheet yang sama, terorganisir rapi per pertemuan. 🎯 Konsep 1 Spreadsheet 1 Sheet Tab 1 Atribut HTML = 1 Course/Mata Kuliah = 1 Pertemuan/Hari sheet-name=&quot;Pertemuan 1&quot; 🚀 Langkah 1: Buat 1 Google Spreadsheet untuk 1 Course Buka sheets.google.com Klik &quot;Blank&quot; — b...</description>
       <guid>https://localhost:3000/sites/haxnow/tutorial-sheet-per-pertemuan</guid>
-      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
-    </item>
-    <item>
-      <title>📊 Dashboard Siswa - Lihat Nilai</title>
-      <link>https://localhost:3000/sites/haxnow/dashboard-siswa</link>
-      <description>📊 Dashboard Siswa — Lihat Nilai &amp;amp; Aktivitas dari Google Sheets Halaman ini mengambil data langsung dari Google Sheets via Apps Script API. Masukkan URL Apps Script dan nama Anda, lalu klik Tampilkan untuk melihat semua data kuis, aktivitas, dan leaderboard Anda secara real-time. 🔌 Hubungkan ke Google Sheets Masukkan URL Apps Script Web App dan nama Anda untuk melihat data. URL Apps Script Nama Anda 🔍 Tampilkan Data Mengambil data dari Google Sheets... 🏆 Leaderboard 📝 Kuis Saya 📅 Akt...</description>
-      <guid>https://localhost:3000/sites/haxnow/dashboard-siswa</guid>
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>
     <item>

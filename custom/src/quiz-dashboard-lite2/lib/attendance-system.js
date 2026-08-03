@@ -31,19 +31,32 @@ function pushLocalLog(type, description) {
     localStorage.setItem(LAST_DATE_KEY, today);
   }
   const currentLogs = getInitialLogs();
-  // FIX: dedupe — abaikan log yang sama (type + deskripsi + timestamp) dalam 5 entri terakhir
   const dupes = currentLogs.slice(0, 5).filter(l =>
     l.type === type && l.description === description && l.timestamp === now.toISOString()
   );
   if (dupes.length > 0) return currentLogs;
-  const newLog = { id: "log-" + now.getTime(), timestamp: now.toISOString(), date: today, type, description };
+  const newLog = { id: "log-" + now.getTime(), timestamp: now.toISOString(), date: today, type, description, synced: false };
   const merged = [newLog, ...currentLogs];
   localStorage.setItem(LOGS_STORAGE_KEY, JSON.stringify(merged));
   globalThis.dispatchEvent(new CustomEvent("a3-activity-logged", { detail: { log: newLog } }));
   return merged;
 }
 
-export { LOGS_STORAGE_KEY, LAST_DATE_KEY, getTodayString, getInitialLogs, pushLocalLog };
+function markLogSynced(logId) {
+  try {
+    const logs = JSON.parse(localStorage.getItem(LOGS_STORAGE_KEY) || "[]");
+    const updated = logs.map(l => l.id === logId ? { ...l, synced: true } : l);
+    localStorage.setItem(LOGS_STORAGE_KEY, JSON.stringify(updated));
+  } catch (_) {}
+}
+
+function getUnsyncedLogs() {
+  try {
+    return JSON.parse(localStorage.getItem(LOGS_STORAGE_KEY) || "[]").filter(l => !l.synced);
+  } catch (_) { return [] }
+}
+
+export { LOGS_STORAGE_KEY, LAST_DATE_KEY, getTodayString, getInitialLogs, pushLocalLog, markLogSynced, getUnsyncedLogs };
 
 export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
   static get tag() { return "activity-logger"; }
@@ -220,15 +233,34 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
     pushLocalLog(type, description);
     this._logs = getInitialLogs();
     if (this.appsScriptUrl && this.studentId) {
+      const logEntry = this._logs[0];
       const params = new URLSearchParams({
         action: "logActivity", timestamp: new Date().toISOString(), date: getTodayString(),
         name: this.studentName, studentId: this.studentId,
         nis: this.studentNis || "", absen: this.studentAbsen || "", kelas: this.studentKelas || "",
-        activityType: type, description, sheet: this.sheetName, kdMateri: this.kdMateri
+        activityType: type, description, kdMateri: this.kdMateri
       });
-      fetch(`${this.appsScriptUrl}?${params.toString()}`, { redirect: "follow" }).catch(() => {});
+      fetch(`${this.appsScriptUrl}?${params.toString()}`, { redirect: "follow" })
+        .then(() => { if (logEntry) markLogSynced(logEntry.id); })
+        .catch(() => {});
     }
     this._showToast(`✓ ${description.substring(0, 40)}`);
+  }
+
+  _flushPendingLogs() {
+    if (!this.studentId || !this.appsScriptUrl) return;
+    const unsynced = getUnsyncedLogs();
+    for (const log of unsynced) {
+      const params = new URLSearchParams({
+        action: "logActivity", timestamp: log.timestamp, date: log.date,
+        name: this.studentName, studentId: this.studentId,
+        nis: this.studentNis || "", absen: this.studentAbsen || "", kelas: this.studentKelas || "",
+        activityType: log.type, description: log.description, kdMateri: this.kdMateri
+      });
+      fetch(`${this.appsScriptUrl}?${params.toString()}`, { redirect: "follow" })
+        .then(() => { markLogSynced(log.id); })
+        .catch(() => {});
+    }
   }
   _showToast(msg) {
     this._toastMsg = msg;

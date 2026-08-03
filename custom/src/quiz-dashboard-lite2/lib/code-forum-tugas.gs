@@ -75,22 +75,6 @@ function getForumSheet_() {
     return sheet;
   }
   
-  // FIX: Migrasi header jika sheet lama hanya punya 8/9 kolom (belum ada "Likes" atau "kdMateri")
-  const currentColCount = sheet.getLastColumn();
-  if (currentColCount < headers.length) {
-    // Tambahkan kolom yang kurang
-    const existingHeaders = sheet.getRange(1, 1, 1, currentColCount).getValues()[0];
-    const missingCols = headers.filter(h => !existingHeaders.includes(h));
-    if (missingCols.length > 0) {
-      sheet.getRange(1, currentColCount + 1, 1, missingCols.length).setValues([missingCols]);
-      // Isi default 0 untuk kolom Likes yang baru
-      if (sheet.getLastRow() > 1) {
-        const likesColIdx = headers.indexOf("Likes") + 1;
-        sheet.getRange(2, likesColIdx, sheet.getLastRow() - 1, 1).setValue(0);
-      }
-    }
-  }
-  
   return sheet;
 }
 
@@ -136,7 +120,7 @@ function saveForumComment(data) {
   sheet.appendRow([
     new Date(), commentId, parentId,
     data.user || "Anonymous", data.studentId || "",
-    data.text || "", data.sheet || "", "post", 0, data.kdMateri || ""
+    data.text || "", "", "post", 0, data.kdMateri || ""
   ]);
   
   return {
@@ -261,33 +245,21 @@ function getTugasSheet_() {
     return sheet;
   }
   
-  // FIX: Migrasi header jika kolom kurang
-  const currentColCount = sheet.getLastColumn();
-  if (currentColCount < headers.length) {
-    const existingHeaders = sheet.getRange(1, 1, 1, currentColCount).getValues()[0];
-    const missingCols = headers.filter(h => !existingHeaders.includes(h));
-    if (missingCols.length > 0) {
-      sheet.getRange(1, currentColCount + 1, 1, missingCols.length).setValues([missingCols]);
-    }
-  }
-  
   return sheet;
 }
 
 function saveAssignment(data) {
   const sheet = getTugasSheet_();
   
-  // FIX: Validasi input
   if (!data.studentId) return { status: "error", message: "StudentID is required" };
   if (!data.title) return { status: "error", message: "Title is required" };
   if (!data.content && !data.link) return { status: "error", message: "Content or Link is required" };
   
-  // Upsert: update if student+sheet+title already exists
+  // Upsert: update if student+title already exists
   if (sheet.getLastRow() > 1) {
     const allData = sheet.getDataRange().getValues();
     for (let i = 1; i < allData.length; i++) {
       if (String(allData[i][1]) === String(data.studentId || "") &&
-          String(allData[i][3]) === String(data.sheet || "") &&
           String(allData[i][4]) === String(data.title || "")) {
         sheet.getRange(i + 1, 6).setValue(data.content || "");
         sheet.getRange(i + 1, 7).setValue(data.link || "");
@@ -300,7 +272,7 @@ function saveAssignment(data) {
   
   sheet.appendRow([
     new Date(), data.studentId || "", data.name || "",
-    data.sheet || "", data.title || "", data.content || "", data.link || "", data.kdMateri || ""
+    "", data.title || "", data.content || "", data.link || "", data.kdMateri || ""
   ]);
   return { status: "ok", message: "Tugas tersimpan" };
 }

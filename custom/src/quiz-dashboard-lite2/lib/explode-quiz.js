@@ -60,9 +60,21 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
             },
           },
           {
+            property: "sheetName",
+            title: "Nama Sheet",
+            description: "Identitas sheet (default: Pertemuan)",
+            inputMethod: "textfield",
+          },
+          {
+            property: "kdMateri",
+            title: "Kode Materi",
+            description: "Kode materi unik untuk kuis ini. Prioritas: kd-materi > tag > sheet-name. Disimpan di kolom Kode Materi sheet pertemuan-kuis.",
+            inputMethod: "textfield",
+          },
+          {
             property: "tag",
-            title: "Kode Materi (tag)",
-            description: "Kode materi bebas, beda tiap kuis (mis. Pertemuan 2, UH-1, UTS). Disimpan di kolom Kode Materi sheet pertemuan-kuis.",
+            title: "Tag (Legacy)",
+            description: "Tag fallback jika kd-materi kosong",
             inputMethod: "textfield",
           },
           {
@@ -201,7 +213,6 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
       studentKelas: { type: String, attribute: "student-kelas" },
       editable: { type: Boolean, attribute: true, reflect: true },
       editing: { type: Boolean, attribute: true, reflect: true },
-      // kdMateri derived from sheetName (fallback tag)
       kdMateri: { type: String, attribute: "kd-materi", reflect: true },
       _screen: { state: true },
       _studentName: { state: true },
@@ -292,8 +303,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     this._editorOrigin = "result"
     this._shuffledQuestions = []
 
-    // kdMateri derived from sheetName (fallback tag)
-    this.kdMateri = this.sheetName || this.tag || "Pertemuan"
+    this._kdMateri = ""
     this._selectedAnswers = new Set()
     this._matchAnswers = {}
     this._shortAnswerText = ""
@@ -375,12 +385,11 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     }
   }
 
-  // kdMateri derived from sheetName (fallback tag)
   get kdMateri() {
-    return this.sheetName || this.tag || "Pertemuan"
+    return this._kdMateri || this.tag || this.sheetName || "Pertemuan"
   }
   set kdMateri(val) {
-    this.sheetName = val
+    this._kdMateri = val
   }
 
   updated(changedProperties) {
@@ -404,6 +413,7 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
       if (e.detail.nis) this.studentNis = e.detail.nis
       if (e.detail.absen) this.studentAbsen = e.detail.absen
       if (e.detail.kelas) this.studentKelas = e.detail.kelas
+      this._flushPendingSubmissions()
     }
     globalThis.addEventListener("quiz-user-login", this._authHandler)
     if (
@@ -814,13 +824,13 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
         name: this._studentName,
         score: percentage,
         sheet: this.sheetName || "Pertemuan",
-        tag: this.tag || this.sheetName || "Pertemuan",
+        tag: this.kdMateri || this.tag || "",
         studentId: this.studentId || "",
         nis: this.studentNis || "",
         absen: this.studentAbsen || "",
         kelas: this.studentKelas || "",
         activityType: "quiz",
-        description: `Quiz ${this.quizCategory || "formatif"}${this.tag ? " (" + this.tag + ")" : ""} selesai`,
+        description: `Quiz ${this.quizCategory || "formatif"}${this.kdMateri ? " (" + this.kdMateri + ")" : ""} selesai`,
       }
       this.dispatchEvent(
         new CustomEvent("quiz-saved", {
@@ -851,7 +861,8 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     } else if (percentage >= 50) {
       message = this.t.messageMedium
     }
-    return html`<h2 class="result-heading">${this.t.resultHeading}</h2> <div class="result-name">${this.t.resultName}: ${this._studentName}</div> <div class="result-score"> ${this.t.resultScore}: ${this._score} / ${this._maxPoints} poin </div> <div class="result-percentage"> ${this.t.resultPercentage}: ${percentage}% </div> <p class="result-message">${message}</p> <button class="restart-btn" @click="${this._restartQuiz}" aria-label="${this.t.ariaRestartButton}" > ${this.t.restartButton} </button> <button class="edit-questions-btn" @click="${this._openEditor}" aria-label="${this.t.ariaCloseEditor}" ?hidden="${!this._inHaxEditor && !this.editable}" > ${this.t.editTitle} </button>`
+    const pendingMsg = !this.studentId ? html`<p class="pending-submit-msg" style="color:#f59e0b;margin-top:8px;">Data tersimpan lokal. Login untuk mengirim jawaban ke sheet.</p>` : ""
+    return html`<h2 class="result-heading">${this.t.resultHeading}</h2> <div class="result-name">${this.t.resultName}: ${this._studentName}</div> <div class="result-score"> ${this.t.resultScore}: ${this._score} / ${this._maxPoints} poin </div> <div class="result-percentage"> ${this.t.resultPercentage}: ${percentage}% </div> <p class="result-message">${message}</p> ${pendingMsg} <button class="restart-btn" @click="${this._restartQuiz}" aria-label="${this.t.ariaRestartButton}" > ${this.t.restartButton} </button> <button class="edit-questions-btn" @click="${this._openEditor}" aria-label="${this.t.ariaCloseEditor}" ?hidden="${!this._inHaxEditor && !this.editable}" > ${this.t.editTitle} </button>`
   }
 
   _restartQuiz() {
@@ -879,10 +890,78 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     this._maxPoints = this._getMaxPoints()
   }
 
+  static get PENDING_KEY() {
+    return "quiz_pending_submissions"
+  }
+
+  static get PENDING_TTL_MS() {
+    return 24 * 60 * 60 * 1000
+  }
+
+  _getPendingSubmissions() {
+    try {
+      const raw = localStorage.getItem(ExplodeQuiz.PENDING_KEY)
+      return raw ? JSON.parse(raw) : []
+    } catch (_) {
+      return []
+    }
+  }
+
+  _savePendingSubmissions(list) {
+    try {
+      localStorage.setItem(ExplodeQuiz.PENDING_KEY, JSON.stringify(list))
+    } catch (_) {}
+  }
+
+  _saveDraft(data) {
+    const pending = this._getPendingSubmissions()
+    pending.push({
+      id: `draft-${Date.now()}`,
+      timestamp: new Date().toISOString(),
+      synced: false,
+      data,
+    })
+    this._savePendingSubmissions(pending)
+  }
+
+  _flushPendingSubmissions() {
+    if (!this.studentId || !this.appsScriptUrl) return
+    const pending = this._getPendingSubmissions()
+    const unsynced = pending.filter((d) => !d.synced)
+    if (unsynced.length === 0) return
+    const now = Date.now()
+    const fresh = []
+    for (const entry of pending) {
+      if (entry.synced) continue
+      const age = now - new Date(entry.timestamp).getTime()
+      if (age > ExplodeQuiz.PENDING_TTL_MS) continue
+      const params = new URLSearchParams({
+        ...entry.data,
+        studentId: this.studentId,
+        nis: this.studentNis || "",
+        absen: this.studentAbsen || "",
+        kelas: this.studentKelas || "",
+      })
+      const url = `${this.appsScriptUrl}?${params.toString()}`
+      fetch(url, { redirect: "follow" })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("[explode-quiz] Pending flushed:", data)
+        })
+        .catch((err) => {
+          console.error("[explode-quiz] Flush gagal:", err)
+          fresh.push(entry)
+        })
+    }
+    const remaining = pending.filter((d) => d.synced || (!d.synced && now - new Date(d.timestamp).getTime() <= ExplodeQuiz.PENDING_TTL_MS && !unsynced.includes(d)))
+    const kept = [...fresh, ...remaining.filter((d) => !unsynced.includes(d))]
+    this._savePendingSubmissions(kept)
+  }
+
   _submitToSheets(name, score) {
     const percentage = Math.round((score / this._maxPoints) * 100)
     if (this.appsScriptUrl) {
-      const params = new URLSearchParams({
+      const data = {
         action: "submit",
         name: name,
         score: percentage,
@@ -890,14 +969,20 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
         totalPoints: this._maxPoints,
         timestamp: new Date().toISOString(),
         sheet: this.sheetName || "Pertemuan",
-        tag: this.tag || this.sheetName || "Pertemuan",
+        tag: this.kdMateri || this.tag || "",
         studentId: this.studentId || "",
         nis: this.studentNis || "",
         absen: this.studentAbsen || "",
         kelas: this.studentKelas || "",
         quizCategory: this.quizCategory || "formatif",
         type: "quiz",
-      })
+      }
+      if (!this.studentId) {
+        this._saveDraft(data)
+        console.log("[explode-quiz] Belum login, tersimpan ke localStorage")
+        return
+      }
+      const params = new URLSearchParams(data)
       const url = `${this.appsScriptUrl}?${params.toString()}`
       fetch(url, { redirect: "follow" })
         .then((res) => res.json())

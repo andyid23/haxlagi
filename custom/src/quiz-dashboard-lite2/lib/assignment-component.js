@@ -147,6 +147,7 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
       this.studentNis = session.nis || ""
       this.studentAbsen = session.absen || ""
       this.studentKelas = session.kelas || ""
+      this._flushPending()
     }
   }
 
@@ -184,6 +185,64 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
     }
   }
 
+  static get PENDING_KEY() {
+    return "assignment_pending_submissions"
+  }
+
+  static get PENDING_TTL_MS() {
+    return 24 * 60 * 60 * 1000
+  }
+
+  _getPending() {
+    try {
+      const raw = localStorage.getItem(AssignmentComponent.PENDING_KEY)
+      return raw ? JSON.parse(raw) : []
+    } catch (_) { return [] }
+  }
+
+  _savePending(list) {
+    try { localStorage.setItem(AssignmentComponent.PENDING_KEY, JSON.stringify(list)) } catch (_) {}
+  }
+
+  _saveDraft(data) {
+    const pending = this._getPending()
+    pending.push({
+      id: `draft-${Date.now()}`,
+      timestamp: new Date().toISOString(),
+      synced: false,
+      data
+    })
+    this._savePending(pending)
+  }
+
+  _flushPending() {
+    if (!this.studentId) return
+    const url = this.forumApiUrl || this.appsScriptUrl
+    if (!url) return
+    const pending = this._getPending()
+    const now = Date.now()
+    const kept = []
+    for (const entry of pending) {
+      if (entry.synced) continue
+      if (now - new Date(entry.timestamp).getTime() > AssignmentComponent.PENDING_TTL_MS) continue
+      fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+          ...entry.data,
+          studentId: this.studentId,
+          name: this.studentName,
+          kdMateri: this.kdMateri
+        })
+      }).then(() => {
+        console.log("[assignment-component] Pending flushed")
+      }).catch(() => {
+        kept.push(entry)
+      })
+    }
+    this._savePending(kept)
+  }
+
   async _submitAssignment() {
     if (this._submitting) return
     const text = this._assignmentText.trim()
@@ -196,22 +255,31 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
       return
     }
     this._submitting = true
+    const payload = {
+      action: "saveAssignment",
+      studentId: this.studentId,
+      name: this.studentName,
+      sheet: this.sheetName,
+      title: this.assignmentTitle,
+      content: text,
+      link: this._assignmentLink,
+      kdMateri: this.kdMateri
+    }
+    if (!this.studentId) {
+      this._saveDraft(payload)
+      this._submitting = false
+      this._assignmentSubmitted = true
+      this._saveToStorage()
+      this._showToast("Tersimpan lokal. Login untuk mengirim tugas.")
+      return
+    }
     const url = this.forumApiUrl || this.appsScriptUrl
     if (url) {
       try {
         await fetch(url, {
           method: "POST",
           headers: { "Content-Type": "text/plain" },
-          body: JSON.stringify({
-            action: "saveAssignment",
-            studentId: this.studentId,
-            name: this.studentName,
-            sheet: this.sheetName,
-            title: this.assignmentTitle,
-            content: text,
-            link: this._assignmentLink,
-            kdMateri: this.kdMateri
-          })
+          body: JSON.stringify(payload)
         })
       } catch (err) {
         console.error("[assignment-component] Save assignment failed:", err)

@@ -207,38 +207,6 @@ function countAllActivitiesForStudent_(sheet, studentId, nis, absen, kelas, name
   return count;
 }
 
-function saveAttendance(data) {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
-  const sheetName = data.sheet + " - Aktivitas";
-  let sheet = ss.getSheetByName(sheetName);
-  const headers = ["Timestamp", "Tanggal", "Hari", "Nama", "Tipe Aktivitas", "Deskripsi", "Count", "Student ID", "NIS", "Absen", "Kelas", "kdMateri"];
-  if (!sheet) {
-    sheet = ss.insertSheet(sheetName);
-    setupHeader(sheet, headers);
-  } else if (sheet.getLastColumn() < headers.length) {
-    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
-  }
-  const timestamp = getValidTimestamp_(data.timestamp);
-  const formattedTime = Utilities.formatDate(timestamp, "Asia/Jakarta", "dd/MM/yyyy HH:mm:ss");
-  const formattedDate = Utilities.formatDate(timestamp, "Asia/Jakarta", "dd/MM/yyyy");
-  const dayName = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"][timestamp.getDay()];
-  const activityType = data.activityType || "activity";
-  const studentId = String(data.studentId || "").trim();
-  const nis = String(data.nis || "").trim();
-  const absen = String(data.absen || "").trim();
-  const kelas = String(data.kelas || "").trim();
-  
-  if (activityType === "reading" && countActivityForStudent_(sheet, studentId, nis, absen, kelas, data.name, "reading") >= 15) {
-    return { sheet: sheetName, row: sheet.getLastRow(), type: activityType, skipped: true, message: "Reading sudah mencapai batas 15 kali." };
-  }
-  if (countAllActivitiesForStudent_(sheet, studentId, nis, absen, kelas, data.name) >= 50) {
-    return { sheet: sheetName, row: sheet.getLastRow(), type: activityType, skipped: true, message: "Aktivitas sudah mencapai batas 50 kali per pertemuan." };
-  }
-  
-  sheet.appendRow([formattedTime, formattedDate, dayName, data.name, activityType, data.description || "Aktivitas", 1, studentId, nis, absen, kelas, data.kdMateri || ""]);
-  sheet.autoResizeColumns(1, 12);
-  return { sheet: sheetName, row: sheet.getLastRow(), type: data.activityType };
-}
 
 function setupHeader(sheet, headers) {
   const range = sheet.getRange(1, 1, 1, headers.length);
@@ -251,65 +219,40 @@ function setupHeader(sheet, headers) {
 
 function updateSummary() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
-  const allSheets = ss.getSheets();
   const studentStats = {};
-  allSheets.forEach(sheet => {
-    const name = sheet.getName();
-    if (name === "Rangkuman" || sheet.getLastRow() <= 1) return;
-    const isUnified = name === QUIZ_SHEET_NAME;
-    const isKuis = isUnified || name.includes(" - Kuis");
-    const isAktivitas = name.includes(" - Aktivitas");
-    if (!isKuis && !isAktivitas) return;
-    const idxNama = (isAktivitas || isUnified) ? 3 : 1;
-    const idxSid = (isAktivitas || isUnified) ? 7 : 5;
-    const idxNis = (isAktivitas || isUnified) ? 8 : 6;
-    const idxAbsen = (isAktivitas || isUnified) ? 9 : 7;
-    const idxKelas = (isAktivitas || isUnified) ? 10 : 8;
-    const idxScore = isUnified ? 4 : 2;
-    const idxStatus = isUnified ? 6 : 4;
-    const idxCategory = isUnified ? 11 : 9;
-    const pertemuanName = name.replace(" - Kuis", "").replace(" - Aktivitas", "");
-    const data = sheet.getDataRange().getValues();
+
+  const quizSheet = ss.getSheetByName(QUIZ_SHEET_NAME);
+  if (quizSheet && quizSheet.getLastRow() > 1) {
+    const data = quizSheet.getDataRange().getValues();
     for (let i = 1; i < data.length; i++) {
       const row = data[i];
-      const pName = isUnified ? String(row[2] || "").trim() || pertemuanName : pertemuanName;
-      const studentName = String(row[idxNama] || "").trim();
-      const studentId = String(row[idxSid] || "").trim();
+      const studentName = String(row[3] || "").trim();
+      const studentId = String(row[7] || "").trim();
       if (!studentName) continue;
       const key = studentId || studentName;
       if (!studentStats[key]) {
         studentStats[key] = {
-          studentId: studentId, nis: String(row[idxNis] || ""), absen: String(row[idxAbsen] || ""),
-          kelas: String(row[idxKelas] || ""), nama: studentName, totalKuis: 0, totalScore: 0, highestScore: 0, lowestScore: 100,
+          studentId, nis: String(row[8] || ""), absen: String(row[9] || ""),
+          kelas: String(row[10] || ""), nama: studentName, totalKuis: 0, totalScore: 0, highestScore: 0, lowestScore: 100,
           reading: 0, quizActivity: 0, discussion: 0, download: 0, assignment: 0, totalActivity: 0, pertemuan: [], lastQuizStatus: "",
           kuisFormatif: 0, kuisSumatif: 0, skorUts: 0, skorUas: 0
         };
       }
       const s = studentStats[key];
-      if (isKuis) {
-        const score = parseInt(row[idxScore]) || 0;
-        const category = String(row[idxCategory] || "formatif").toLowerCase();
-        s.totalKuis++; s.totalScore += score; s.quizActivity++;
-        if (score > s.highestScore) s.highestScore = score;
-        if (score < s.lowestScore) s.lowestScore = score;
-        s.lastQuizStatus = row[idxStatus] || "";
-        if (category === "formatif") s.kuisFormatif++;
-        else if (category === "sumatif" || category === "s") s.kuisSumatif++;
-        else if (category === "uts") s.skorUts = Math.max(s.skorUts, score);
-        else if (category === "uas") s.skorUas = Math.max(s.skorUas, score);
-      }
-      if (isAktivitas) {
-        const type = row[4] || "activity";
-        s.totalActivity++;
-        if (type === "reading") s.reading = Math.min(s.reading + 1, 15);
-        else if (type === "quiz") s.quizActivity++;
-        else if (type === "discussion") s.discussion++;
-        else if (type === "download") s.download++;
-        else if (type === "assignment") s.assignment++;
-      }
-      if (!s.pertemuan.includes(pName)) s.pertemuan.push(pName);
+      const score = parseInt(row[4]) || 0;
+      const category = String(row[11] || "formatif").toLowerCase();
+      const kodeMateri = String(row[2] || "").trim();
+      s.totalKuis++; s.totalScore += score; s.quizActivity++;
+      if (score > s.highestScore) s.highestScore = score;
+      if (score < s.lowestScore) s.lowestScore = score;
+      s.lastQuizStatus = row[6] || "";
+      if (category === "formatif") s.kuisFormatif++;
+      else if (category === "sumatif" || category === "s") s.kuisSumatif++;
+      else if (category === "uts") s.skorUts = Math.max(s.skorUts, score);
+      else if (category === "uas") s.skorUas = Math.max(s.skorUas, score);
+      if (kodeMateri && !s.pertemuan.includes(kodeMateri)) s.pertemuan.push(kodeMateri);
     }
-  });
+  }
   
   let summarySheet = ss.getSheetByName("Rangkuman");
   if (!summarySheet) { summarySheet = ss.insertSheet("Rangkuman"); }
@@ -871,16 +814,15 @@ function logActivity(params) {
   let sheet = ss.getSheetByName("Aktivitas");
   if (!sheet) {
     sheet = ss.insertSheet("Aktivitas");
-    sheet.appendRow(["Timestamp", "Date", "StudentID", "Nama", "NIS", "Absen", "Kelas", "Tipe", "Deskripsi", "Sheet", "kdMateri"]);
+    sheet.appendRow(["Timestamp", "Date", "StudentID", "Nama", "NIS", "Absen", "Kelas", "Tipe", "Deskripsi", "kdMateri"]);
     sheet.getRange("B2:B").setNumberFormat("yyyy-mm-dd");
     sheet.setFrozenRows(1);
-  } else if (sheet.getLastColumn() < 11) {
-    // Migrasi: tambah kolom kdMateri jika belum ada
-    sheet.getRange(1, 11, 1, 1).setValue("kdMateri");
+  } else if (sheet.getLastColumn() < 10) {
+    sheet.getRange(1, 10, 1, 1).setValue("kdMateri");
   }
   const timestamp = params.timestamp || new Date().toISOString();
   const date = params.date || Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd");
-  sheet.appendRow([timestamp, date, params.studentId || "", params.name || "", params.nis || "", params.absen || "", params.kelas || "", params.activityType || "", params.description || "", params.sheet || "", params.kdMateri || ""]);
+  sheet.appendRow([timestamp, date, params.studentId || "", params.name || "", params.nis || "", params.absen || "", params.kelas || "", params.activityType || "", params.description || "", params.kdMateri || ""]);
   return { success: true, message: "Activity logged", date: date };
 }
 

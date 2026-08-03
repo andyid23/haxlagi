@@ -142,6 +142,64 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
     if (e.detail.nis) this.studentNis = e.detail.nis
     if (e.detail.absen) this.studentAbsen = e.detail.absen
     if (e.detail.kelas) this.studentKelas = e.detail.kelas
+    this._flushPending()
+  }
+
+  static get PENDING_KEY() {
+    return "forum_pending_submissions"
+  }
+
+  static get PENDING_TTL_MS() {
+    return 24 * 60 * 60 * 1000
+  }
+
+  _getPending() {
+    try {
+      const raw = localStorage.getItem(AssignmentForum.PENDING_KEY)
+      return raw ? JSON.parse(raw) : []
+    } catch (_) { return [] }
+  }
+
+  _savePending(list) {
+    try { localStorage.setItem(AssignmentForum.PENDING_KEY, JSON.stringify(list)) } catch (_) {}
+  }
+
+  _saveDraft(data) {
+    const pending = this._getPending()
+    pending.push({
+      id: `draft-${Date.now()}`,
+      timestamp: new Date().toISOString(),
+      synced: false,
+      data
+    })
+    this._savePending(pending)
+  }
+
+  _flushPending() {
+    if (!this.studentId) return
+    const url = this.forumApiUrl || this.appsScriptUrl
+    if (!url) return
+    const pending = this._getPending()
+    const now = Date.now()
+    const kept = []
+    for (const entry of pending) {
+      if (entry.synced) continue
+      if (now - new Date(entry.timestamp).getTime() > AssignmentForum.PENDING_TTL_MS) continue
+      fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+          ...entry.data,
+          studentId: this.studentId,
+          user: this.studentName || "Siswa"
+        })
+      }).then(() => {
+        console.log("[assignment-forum] Pending flushed")
+      }).catch(() => {
+        kept.push(entry)
+      })
+    }
+    this._savePending(kept)
   }
 
   // === FORUM CRUD ===
@@ -199,7 +257,6 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
     const text = el.value.trim()
     if (!text) return
     this._submitting = true
-    const url = this.forumApiUrl || this.appsScriptUrl
     const payload = {
       action: "saveForumComment",
       id: Date.now(),
@@ -210,6 +267,14 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
       sheet: this.sheetName,
       kdMateri: this.kdMateri
     }
+    if (!this.studentId) {
+      this._saveDraft(payload)
+      el.value = ""
+      this._submitting = false
+      this._showToast("Tersimpan lokal. Login untuk mengirim komentar.")
+      return
+    }
+    const url = this.forumApiUrl || this.appsScriptUrl
     try {
       const res = await fetch(url, {
         method: "POST",
@@ -235,7 +300,6 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
     const text = el.value.trim()
     if (!text) return
     this._submitting = true
-    const url = this.forumApiUrl || this.appsScriptUrl
     const payload = {
       action: "saveForumComment",
       id: Date.now(),
@@ -246,6 +310,14 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
       sheet: this.sheetName,
       kdMateri: this.kdMateri
     }
+    if (!this.studentId) {
+      this._saveDraft(payload)
+      el.value = ""
+      this._submitting = false
+      this._showToast("Tersimpan lokal. Login untuk mengirim balasan.")
+      return
+    }
+    const url = this.forumApiUrl || this.appsScriptUrl
     try {
       const res = await fetch(url, {
         method: "POST",
@@ -357,22 +429,33 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
       return
     }
     this._submitting = true
+    const payload = {
+      action: "saveAssignment",
+      studentId: this.studentId,
+      name: this.studentName,
+      sheet: this.sheetName,
+      title: this.assignmentTitle,
+      content: text,
+      link: this._assignmentLink,
+      kdMateri: this.kdMateri
+    }
+    if (!this.studentId) {
+      this._saveDraft(payload)
+      localStorage.setItem("hax_assignment_submitted", "true")
+      localStorage.setItem("hax_assignment_text", text)
+      localStorage.setItem("hax_assignment_link", this._assignmentLink)
+      this._assignmentSubmitted = true
+      this._submitting = false
+      this._showToast("Tersimpan lokal. Login untuk mengirim tugas.")
+      return
+    }
     const url = this.forumApiUrl || this.appsScriptUrl
     if (url) {
       try {
         await fetch(url, {
           method: "POST",
           headers: { "Content-Type": "text/plain" },
-          body: JSON.stringify({
-            action: "saveAssignment",
-            studentId: this.studentId,
-            name: this.studentName,
-            sheet: this.sheetName,
-            title: this.assignmentTitle,
-            content: text,
-            link: this._assignmentLink,
-            kdMateri: this.kdMateri
-          })
+          body: JSON.stringify(payload)
         })
       } catch (err) {
         console.error("[assignment-forum] Save assignment failed:", err)

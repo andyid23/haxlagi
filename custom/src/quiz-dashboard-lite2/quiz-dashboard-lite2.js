@@ -21,6 +21,7 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       forumApiUrl: { type: String, attribute: "forum-api-url" },
       sheetName: { type: String, attribute: "sheet-name" },
+      kdMateri: { type: String, attribute: "kd-materi", reflect: true },
       viewMode: { type: String, attribute: "view-mode" },
       quizTabHidden: { type: Boolean, attribute: "quiz-tab-hidden", reflect: true },
       questions: { type: Array },
@@ -37,6 +38,7 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
     this.appsScriptUrl = "";
     this.forumApiUrl = "";
     this.sheetName = "Pertemuan";
+    this.kdMateri = "";
     this.viewMode = "student";
     this.quizTabHidden = false;
     this.questions = [];
@@ -290,6 +292,7 @@ class QuizDashboardLite2 extends I18NMixin(DDDSuper(LitElement)) {
         ?hidden="${this._activeTab !== 1}"
         .appsScriptUrl="${this.appsScriptUrl}"
         .sheetName="${this.sheetName}"
+        .kdMateri="${this.kdMateri || ''}"
         .questions="${this.questions}"
         .studentId="${this._user?.studentId || ''}"
         .studentName="${this._user?.nama || ''}"

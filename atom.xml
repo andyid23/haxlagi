@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-08-03T06:22:11.000Z</updated>
+  <updated>2026-08-03T09:57:06.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -12,7 +12,7 @@
   <entry>
     <title>Welcome to haxnow</title>
     <id>item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c</id>
-    <updated>2026-08-03T06:21:59.000Z</updated>
+    <updated>2026-08-03T09:56:51.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Welcome to your new HAX site! Click edit on the top bar to get started
 
@@ -29,7 +29,7 @@ What</summary>
     <link href="https://localhost:3000/sites/haxnow/welcome"/>
     
     <content type="html">
-      <![CDATA[ 
+      <![CDATA[ ﻿
 <p>Welcome to your new HAX site! Click edit on the top bar to get started</p>
 <p>
   <!--     STEP 1: Login     -->
@@ -66,7 +66,7 @@ What</summary>
 
 
 
-  <assignment-forum hide-delete id="af1" assignment-title="Refleksi Energi Terbarukan" assignment-instruction="Tuliskan refleksi: kontribusi apa yang bisa Anda lakukan untuk mendukung energi terbarukan di lingkungan rumah? Sertakan link Google Drive/Doc jika ada file pendukung." forum-topik="Diskusi: Potensi Energi Terbarukan" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" forum-api-url="https://script.google.com/macros/s/AKfycby1Ltq-eg599WR2W4FPY6r_GDNs_N5gB29Pvdf3NisKvWlymh3xl6ajk0kU-IkxyAT_Nw/exec" sheet-name="Pertemuan 1" view-mode="lecturer" forum-topic="Forum Diskusi" _assignment-submitted student-id="STD-65108053" student-name="Andy Yulianto" student-nis="234" student-absen="2" student-kelas="XI-1" _sort-mode="best" _assignment-text="gggfd"></assignment-forum>
+  <assignment-forum hide-delete id="af1" assignment-title="Refleksi Energi Terbarukan" assignment-instruction="Tuliskan refleksi: kontribusi apa yang bisa Anda lakukan untuk mendukung energi terbarukan di lingkungan rumah? Sertakan link Google Drive/Doc jika ada file pendukung." forum-topik="Diskusi: Potensi Energi Terbarukan" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" forum-api-url="https://script.google.com/macros/s/AKfycby1Ltq-eg599WR2W4FPY6r_GDNs_N5gB29Pvdf3NisKvWlymh3xl6ajk0kU-IkxyAT_Nw/exec" kd-materi="Pertemuan-1" view-mode="lecturer" forum-topic="Forum Diskusi" _assignment-submitted student-id="STD-65108053" student-name="Andy Yulianto" student-nis="234" student-absen="2" student-kelas="XI-1" _sort-mode="best" _assignment-text="gggfd"></assignment-forum>
 
 
 
@@ -79,7 +79,7 @@ What</summary>
 
 
 
-  <explode-quiz hide-answers hide-confetti id="quiz1" sheet-name="Pertemuan 1" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" shuffle-choices questions="[{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa kepanjangan HTML?&quot;,&quot;choices&quot;:[&quot;HyperText Markup Language&quot;,&quot;High Text Machine Language&quot;,&quot;Home Tool Markup Language&quot;,&quot;Hyperlinks Text Markup&quot;],&quot;correctIndex&quot;:0},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Bahasa pemrograman browser?&quot;,&quot;choices&quot;:[&quot;Python&quot;,&quot;JavaScript&quot;,&quot;Java&quot;,&quot;C++&quot;],&quot;correctIndex&quot;:1},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Shadow DOM berfungsi untuk?&quot;,&quot;choices&quot;:[&quot;Database&quot;,&quot;Encapsulated DOM&quot;,&quot;Server&quot;,&quot;CSS&quot;],&quot;correctIndex&quot;:1}]" spreadsheet-id="" kd-materi="Pertemuan 1" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0"></explode-quiz>
+  <explode-quiz hide-answers hide-confetti id="quiz1" kd-materi="Pertemuan-1" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" shuffle-choices questions="[{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa kepanjangan HTML?&quot;,&quot;choices&quot;:[&quot;HyperText Markup Language&quot;,&quot;High Text Machine Language&quot;,&quot;Home Tool Markup Language&quot;,&quot;Hyperlinks Text Markup&quot;],&quot;correctIndex&quot;:0},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Bahasa pemrograman browser?&quot;,&quot;choices&quot;:[&quot;Python&quot;,&quot;JavaScript&quot;,&quot;Java&quot;,&quot;C++&quot;],&quot;correctIndex&quot;:1},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Shadow DOM berfungsi untuk?&quot;,&quot;choices&quot;:[&quot;Database&quot;,&quot;Encapsulated DOM&quot;,&quot;Server&quot;,&quot;CSS&quot;],&quot;correctIndex&quot;:1}]" spreadsheet-id="" kd-materi="Pertemuan 1" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0"></explode-quiz>
 
 
 
@@ -148,7 +148,7 @@ What</summary>
     <h2><span class="step-num">3</span> Kuis Formatif</h2>
 
 
-    <explode-quiz hide-answers hide-confetti id="quiz1" sheet-name="Pertemuan 1" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" shuffle-choices questions="[{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa kepanjangan HTML?&quot;,&quot;choices&quot;:[&quot;HyperText Markup Language&quot;,&quot;High Text Machine Language&quot;,&quot;Home Tool Markup Language&quot;,&quot;Hyperlinks Text Markup&quot;],&quot;correctIndex&quot;:0},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Bahasa pemrograman browser?&quot;,&quot;choices&quot;:[&quot;Python&quot;,&quot;JavaScript&quot;,&quot;Java&quot;,&quot;C++&quot;],&quot;correctIndex&quot;:1},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Shadow DOM berfungsi untuk?&quot;,&quot;choices&quot;:[&quot;Database&quot;,&quot;Encapsulated DOM&quot;,&quot;Server&quot;,&quot;CSS&quot;],&quot;correctIndex&quot;:1}]" spreadsheet-id="" kd-materi="Pertemuan 1" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0">
+    <explode-quiz hide-answers hide-confetti id="quiz1" kd-materi="Pertemuan-1" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" shuffle-choices questions="[{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa kepanjangan HTML?&quot;,&quot;choices&quot;:[&quot;HyperText Markup Language&quot;,&quot;High Text Machine Language&quot;,&quot;Home Tool Markup Language&quot;,&quot;Hyperlinks Text Markup&quot;],&quot;correctIndex&quot;:0},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Bahasa pemrograman browser?&quot;,&quot;choices&quot;:[&quot;Python&quot;,&quot;JavaScript&quot;,&quot;Java&quot;,&quot;C++&quot;],&quot;correctIndex&quot;:1},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Shadow DOM berfungsi untuk?&quot;,&quot;choices&quot;:[&quot;Database&quot;,&quot;Encapsulated DOM&quot;,&quot;Server&quot;,&quot;CSS&quot;],&quot;correctIndex&quot;:1}]" spreadsheet-id="" kd-materi="Pertemuan 1" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0">
     </explode-quiz>
 
 
@@ -187,7 +187,7 @@ What</summary>
 
 
     <p style="font-size:13px;color:#666;">Mode dosen: generate rapor, input UTS/UAS manual, atur 6 komponen bobot (Kehadiran:UH:UTS:UAS:Sikap:Skill). Auto-calc sikap dari tugas+forum, skill dari quiz+baca.</p>
-    <quiz-dashboard-lite2 quiz-tab-hidden view-mode="student" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" sheet-name="Pertemuan 1" questions="[]" _active-tab="0">
+    <quiz-dashboard-lite2 quiz-tab-hidden view-mode="student" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" kd-materi="Pertemuan-1" questions="[]" _active-tab="0">
     </quiz-dashboard-lite2>
 
 
@@ -201,13 +201,14 @@ What</summary>
 
     
   </div>
+
  ]]>
     </content>
   </entry>
   <entry>
     <title>Dokumentasi Elemen</title>
     <id>item-doc-elements</id>
-    <updated>2026-08-03T06:22:03.000Z</updated>
+    <updated>2026-08-03T09:56:55.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Dokumentasi semua elemen interaktif yang tersedia di HAXcms</summary>
     <link href="https://localhost:3000/sites/haxnow/elemendokumen"/>
@@ -308,13 +309,13 @@ What</summary>
   <entry>
     <title>Explode Quiz - Kuis Interaktif</title>
     <id>item-doc-kuis</id>
-    <updated>2026-08-03T06:22:04.000Z</updated>
+    <updated>2026-08-03T09:56:55.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi elemen kuis interaktif</summary>
     <link href="https://localhost:3000/sites/haxnow/kuis-interaktif"/>
     
     <content type="html">
-      <![CDATA[ 
+      <![CDATA[ ﻿
 <h1 id="h1--1446091668">🎯 Explode Quiz &#8212; Kuis Interaktif</h1>
 <p>Elemen <code>&lt;explode-quiz&gt;</code> adalah komponen kuis interaktif pilihan ganda
   yang dilengkapi efek konfeti, editor soal bawaan, dan integrasi Google Sheets untuk
@@ -328,7 +329,7 @@ What</summary>
 
 </div>
 <p>Coba kuis interaktif di bawah ini:</p>
-<explode-quiz sheet-name="Pertemuan" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" shuffle-choices tag="formatif" spreadsheet-id="" script-function-name="submitQuizResult" questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;soal&quot;,&quot;choices&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],&quot;correctIndex&quot;:3}]" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="dsfdsfd" _current-index="0" _selected-index="-1" _name-input-value="dsfdsfd" _temp-questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;soal&quot;,&quot;choices&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],&quot;correctIndex&quot;:3}]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Bandung&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2,&quot;_correctMap&quot;:[1,2,0,3]},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;60&quot;,&quot;56&quot;,&quot;54&quot;,&quot;58&quot;],&quot;correctIndex&quot;:1,&quot;_correctMap&quot;:[3,1,0,2]},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Merkurius&quot;,&quot;Mars&quot;],&quot;correctIndex&quot;:3,&quot;_correctMap&quot;:[0,1,3,2]}]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="3" _advance-timer="6756"></explode-quiz>
+<explode-quiz kd-materi="Pertemuan" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" shuffle-choices spreadsheet-id="" script-function-name="submitQuizResult" questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;soal&quot;,&quot;choices&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],&quot;correctIndex&quot;:3}]" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="dsfdsfd" _current-index="0" _selected-index="-1" _name-input-value="dsfdsfd" _temp-questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;soal&quot;,&quot;choices&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],&quot;correctIndex&quot;:3}]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Bandung&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2,&quot;_correctMap&quot;:[1,2,0,3]},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;60&quot;,&quot;56&quot;,&quot;54&quot;,&quot;58&quot;],&quot;correctIndex&quot;:1,&quot;_correctMap&quot;:[3,1,0,2]},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Merkurius&quot;,&quot;Mars&quot;],&quot;correctIndex&quot;:3,&quot;_correctMap&quot;:[0,1,3,2]}]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="3" _advance-timer="6756"></explode-quiz>
 <h2 id="h2-1518686653">📋 Atribut yang Didukung</h2>
 <editable-table accent-color="grey" column-header><table>
 	<thead class="thead">
@@ -402,13 +403,14 @@ What</summary>
       <li>Menghapus soal (minimal 3 soal)</li>
       <li>Menyimpan perubahan</li>
     </ol>
+
  ]]>
     </content>
   </entry>
   <entry>
     <title>Dashboard Kuis Lite</title>
     <id>item-doc-dashboard</id>
-    <updated>2026-08-03T06:22:04.000Z</updated>
+    <updated>2026-08-03T09:56:55.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi dashboard kuis ringan</summary>
     <link href="https://localhost:3000/sites/haxnow/dashboard-kuis"/>
@@ -507,7 +509,7 @@ What</summary>
   <entry>
     <title>Sistem Kehadiran</title>
     <id>item-doc-kehadiran</id>
-    <updated>2026-08-03T06:22:04.000Z</updated>
+    <updated>2026-08-03T09:56:56.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo sistem kehadiran dan pelacakan aktivitas</summary>
     <link href="https://localhost:3000/sites/haxnow/kehadiran"/>
@@ -610,7 +612,7 @@ What</summary>
   <entry>
     <title>Notif Element</title>
     <id>item-doc-notifikasi</id>
-    <updated>2026-08-03T06:22:05.000Z</updated>
+    <updated>2026-08-03T09:56:56.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi elemen notifikasi</summary>
     <link href="https://localhost:3000/sites/haxnow/notifikasi"/>
@@ -706,7 +708,7 @@ notif.addEventListener('notif-hide', (e) => {
   <entry>
     <title>Todo List</title>
     <id>item-doc-todo</id>
-    <updated>2026-08-03T06:22:05.000Z</updated>
+    <updated>2026-08-03T09:56:57.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi daftar tugas</summary>
     <link href="https://localhost:3000/sites/haxnow/todo-list"/>
@@ -822,7 +824,7 @@ todoList.tasks = [
   <entry>
     <title>Full Quiz Dashboard</title>
     <id>item-doc-full-dashboard</id>
-    <updated>2026-08-03T06:22:05.000Z</updated>
+    <updated>2026-08-03T09:56:57.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dashboard lengkap dengan Apps Script</summary>
     <link href="https://localhost:3000/sites/haxnow/full-dashboard"/>
@@ -898,7 +900,7 @@ todoList.tasks = [
   <entry>
     <title>Tutorial Attendance System</title>
     <id>item-doc-tutorial-attendance</id>
-    <updated>2026-08-03T06:22:06.000Z</updated>
+    <updated>2026-08-03T09:56:58.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan lengkap sistem kehadiran dan pelacakan aktivitas</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-attendance"/>
@@ -1041,7 +1043,7 @@ location.reload();</code></pre>
   <entry>
     <title>Tutorial Google Apps Script</title>
     <id>item-doc-tutorial-apps-script</id>
-    <updated>2026-08-03T06:22:06.000Z</updated>
+    <updated>2026-08-03T09:56:58.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan setup Apps Script untuk integrasi Google Sheets</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-apps-script"/>
@@ -1166,7 +1168,7 @@ location.reload();</code></pre>
   <entry>
     <title>📖 Tutorial: Fetch Data dari Sheet</title>
     <id>item-tutorial-dashboard-siswa</id>
-    <updated>2026-08-03T06:22:08.000Z</updated>
+    <updated>2026-08-03T09:57:01.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan membaca data dari Google Sheets via Apps Script API</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa"/>
@@ -1364,1098 +1366,9 @@ https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
     </content>
   </entry>
   <entry>
-    <title>📚 Modul 1: HAXcms &amp; Web Component</title>
-    <id>item-materi-siswa</id>
-    <updated>2026-08-03T06:22:10.000Z</updated>
-    <published>2026-07-21T20:50:20.000Z</published>
-    <summary>Contoh halaman materi siswa dengan aktivitas dan kuis</summary>
-    <link href="https://localhost:3000/sites/haxnow/materi-siswa"/>
-    
-    <content type="html">
-      <![CDATA[ <h1 id="h1--56545659">📚 Modul 1: Pengenalan HAXcms & Web Component (v2: KD-Materi & Split Forum/Tugas)</h1>
-<p>Selamat datang di modul pembelajaran interaktif v2! Halaman ini mendemonstrasikan fitur-fitur baru:</p>
-<ul>
-  <li><strong>Single Login</strong> — login sekali, akses semua halaman (auto-login 24h)</li>
-  <li><strong>KD-Materi dari sheet-name</strong> — otomatis filter aktivitas per pertemuan</li>
-  <li><strong>Split Assignment/Forum</strong> — komponen terpisah <code>assignment-component</code> & <code>forum-component</code></li>
-  <li><strong>Activity Logger</strong> — tracking otomatis (scroll, download, kuis, forum, tugas)</li>
-</ul>
-
-<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px; margin: 16px 0; display: flex; align-items: center; gap: 12px;">
-  <span>⏰</span>
-  <div>
-    <strong>Activity Logger Aktif!</strong>
-    <p style="margin: 4px 0 0 0; font-size: 13px; color: #166534;">Scroll, klik, download, forum, tugas, kuis — semua tercatat otomatis dengan KD-Materi=Pertemuan1</p>
-  </div>
-</div>
-<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
-
-<!-- Single Login -->
-<quiz-user-auth 
-  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
-  auto-login>
-</quiz-user-auth>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
-
-<h2 id="h2--205211746">📖 1.1 Apa itu HAXcms?</h2>
-<p>HAXcms adalah <strong>Headless Authoring eXperience Content Management System</strong> — platform berbasis web component untuk membuat dan mengelola konten web dengan mudah. Bayangkan seperti WordPress tapi lebih ringan, lebih modern, dan sepenuhnya berbasis standar web.</p>
-<h3 id="h3--1114033221">Konsep Dasar</h3>
-<ul>
-  <li><strong>Web Component:</strong> Elemen HTML kustom yang bisa digunakan ulang</li>
-  <li><strong>Lit Element:</strong> Library dari Google untuk membuat Web Component dengan performa tinggi</li>
-  <li><strong>DDD Design System:</strong> Token desain konsisten untuk warna, spacing, dan tipografi</li>
-  <li><strong>JSON Outline Schema:</strong> Format untuk mendefinisikan struktur situs</li>
-</ul>
-<h2 id="h2-1627741604">📖 1.2 Apa itu Web Component?</h2>
-<p>Web Component adalah teknologi browser native yang memungkinkan Anda membuat elemen HTML kustom dengan fungsionalitas sendiri. Komponen terisolasi, bisa digunakan ulang di mana saja.</p>
-<h3 id="h3-1088150271">Contoh Web Component HAX:</h3>
-<grid-plate layout="1-1-1">
-  <div slot="col-1" style="text-align: center; padding: 16px; background: #f3f0fa; border-radius: 12px;">
-    <span>📝</span>
-    <h4>todo-list</h4>
-    <p style="font-size: 13px; color: #666;">Daftar tugas interaktif</p>
-  </div>
-  <div slot="col-2" style="text-align: center; padding: 16px; background: #f3f0fa; border-radius: 12px;">
-    <span>🎯</span>
-    <h4>explode-quiz</h4>
-    <p style="font-size: 13px; color: #666;">Kuis interaktif + confetti</p>
-  </div>
-  <div slot="col-3" style="text-align: center; padding: 16px; background: #f3f0fa; border-radius: 12px;">
-    <span>🎬</span>
-    <h4>video-player</h4>
-    <p style="font-size: 13px; color: #666;">Pemutar video YouTube</p>
-  </div>
-</grid-plate>
-<h2 id="h2--1077309165">📖 1.3 Struktur Dasar Web Component</h2>
-<p>Sebuah Web Component terdiri dari tiga bagian utama:</p>
-<table>
-  <thead>
-    <tr><th>Bagian</th><th>Deskripsi</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><strong>class</strong></td><td>Definisi class JavaScript yang mewarisi HTMLElement</td></tr>
-    <tr><td><strong>Shadow DOM</strong></td><td>DOM terisolasi, style tidak bocor ke halaman luar</td></tr>
-    <tr><td><strong>Custom Element</strong></td><td>Nama tag HTML kustom, contoh: <code><todo-list></code></td></tr>
-  </tbody>
-</table>
-<h3 id="h3--1746436907">Contoh Kode Sederhana:</h3>
-<pre><code><!-- HTML -->
-<my-greeting name="Dunia"></my-greeting>
-
-<!-- JavaScript -->
-class MyGreeting extends HTMLElement {
-  connectedCallback() {
-    const name = this.getAttribute('name');
-    this.innerHTML = `<h2>Halo, ${name}!</h2>`;
-  }
-}
-customElements.define('my-greeting', MyGreeting);</code></pre>
-<h2 id="h2--1163604576">📖 1.4 Kenapa Web Component?</h2>
-<ul>
-  <li>✅ <strong>Native:</strong> Tidak butuh library tambahan — browser sudah support</li>
-  <li>✅ <strong>Terisolasi:</strong> Style dan logika tidak bentrok dengan halaman lain</li>
-  <li>✅ <strong>Reusable:</strong> Buat sekali, pakai di mana saja</li>
-  <li>✅ <strong>Framework-agnostic:</strong> Bekerja dengan React, Vue, Angular, atau plain HTML</li>
-  <li>✅ <strong>Standar W3C:</strong> Didukung semua browser modern</li>
-</ul>
-<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
-
-<h2 id="h2-1062552201">📥 Download Materi Pendukung</h2>
-<p>Klik link di bawah untuk mengunduh file materi (aktivitas download akan tercatat otomatis dengan KD-Materi=Pertemuan1):</p>
-<ul>
-  <li><a href="files/panduan-haxcms.pdf" download="">📄 Download PDF: Panduan Lengkap HAXcms</a></li>
-  <li><a href="files/contoh-komponen.zip" download="">📦 Download ZIP: Source Code Contoh Web Component</a></li>
-</ul>
-<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 12px 16px; margin: 16px 0; font-size: 13px;">
-  <strong>📝 Catatan:</strong> Scroll halaman ini sampai bawah, klik link download, kirim komentar forum, kirim tugas, dan kerjakan kuis di bawah — semua akan tercatat sebagai aktivitas belajar Anda dengan KD-Materi=Pertemuan1!
-</div>
-<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
-
-<h2 id="h2--1847077649">🎯 Evaluasi: Kuis Modul 1</h2>
-<p>Setelah membaca materi di atas, silakan kerjakan kuis berikut untuk menguji pemahaman Anda. Skor akan dicatat otomatis dengan KD-Materi=Pertemuan1!</p>
-<explode-quiz 
-  sheet-name="Pertemuan1" 
-  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" 
-  quiz-category="formatif" 
-  shuffle-choices 
-  editable="true"
-  questions="[{"question":"Apa ibu kota Indonesia?","choices":["Bandung","Surabaya","Jakarta","Medan"],"correctIndex":2},{"question":"Berapa hasil dari 7 × 8?","choices":["54","56","58","60"],"correctIndex":1},{"question":"Planet terdekat dengan Matahari adalah?","choices":["Venus","Bumi","Mars","Merkurius"],"correctIndex":3},{"type":"mc","question":"soal","choices":["1","2","3","4"],"correctIndex":0}]">
-</explode-quiz>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
-
-<h2>💬 Forum Diskusi (forum-component v2)</h2>
-<p>Kirim komentar & balasan. KD-Materi=Pertemuan1 → tersimpan ke Forum Log + Aktivitas.</p>
-<forum-component
-  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
-  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
-  sheet-name="Pertemuan1"
-  forum-topic="Diskusi Modul 1: Web Component Dasar"
-  student-id="STD-001"
-  student-name="Budi Santoso"
-  student-nis="001"
-  student-absen="1"
-  student-kelas="XI-1">
-</forum-component>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
-
-<h2>📝 Tugas Mandiri (assignment-component v2)</h2>
-<p>Kirim tugas + link Google Drive. KD-Materi=Pertemuan1 → tersimpan ke Tugas Log + Aktivitas.</p>
-<assignment-component
-  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
-  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
-  sheet-name="Pertemuan1"
-  assignment-title="Tugas Modul 1: Refleksi Web Component"
-  assignment-instruction="Tuliskan refleksi: apa yang sudah dipahami tentang Web Component? Sertakan link Google Drive/Doc jika ada file pendukung."
-  student-id="STD-001"
-  student-name="Budi Santoso"
-  student-nis="001"
-  student-absen="1"
-  student-kelas="XI-1">
-</assignment-component>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
-
-<h2 id="h2-2143424589">📊 Cek Kehadiran Anda (Attendance Tracker v2)</h2>
-<p>Di bawah ini adalah ringkasan kehadiran dan aktivitas Anda untuk KD-Materi=Pertemuan1. 6 Kriteria: Reading 3×, Quiz 1×, Assignment 1×, Download 1×, Forum 1×, Total 8×.</p>
-<grid-plate layout="1-1">
-  <div slot="col-1">
-    <attendance-tracker 
-      apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
-      forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
-      sheet-name="Pertemuan1"
-      student-id="STD-001">
-    </attendance-tracker>
-  </div>
-  <div slot="col-2">
-    <engagement-score 
-      apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
-      forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
-      sheet-name="Pertemuan1"
-      student-id="STD-001">
-    </engagement-score>
-  </div>
-</grid-plate>
-
-<h2 id="h2-113686388">Selanjutnya</h2>
-<p>Setelah menyelesaikan modul ini, lanjutkan ke:</p>
-<ul>
-  <li><a href="tutorial-kursus">📅 Tutorial: Cara Menambah Kuis di Hari Lain</a></li>
-  <li><a href="tutor-html">📖 Belajar Dasar HTML untuk Pemula</a></li>
-</ul>
-
-<!-- Activity Logger untuk tracking otomatis (KD-Materi=Pertemuan1) -->
-<activity-logger 
-  sheet-name="Pertemuan1" 
-  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
-  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
-  student-id="STD-001"
-  student-name="Budi Santoso"
-  student-nis="001"
-  student-absen="1"
-  student-kelas="XI-1">
-</activity-logger> ]]>
-    </content>
-  </entry>
-  <entry>
-    <title>📖 Belajar HTML Dasar</title>
-    <id>item-tutor-html</id>
-    <updated>2026-08-03T06:22:10.000Z</updated>
-    <published>2026-07-21T20:50:20.000Z</published>
-    <summary>Tutorial HTML lengkap dari nol untuk pemula</summary>
-    <link href="https://localhost:3000/sites/haxnow/tutor-html"/>
-    
-    <content type="html">
-      <![CDATA[ <h1>📖 Belajar Dasar HTML untuk Pemula 🇮🇩</h1>
-
-<p>Tutorial lengkap HTML dari nol — tanpa perlu install apa pun. Cukup browser dan teks editor (Notepad pun bisa!). HTML adalah <strong>bahasa markup</strong> untuk membuat struktur halaman web. Ibarat rumah: HTML adalah kerangka bangunannya.</p>
-
-<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px; margin: 20px 0;">
-  <strong>⏰ Activity Logger Aktif!</strong>
-  <p style="margin: 4px 0 0 0; font-size: 13px;">Scroll membaca tutorial ini akan dicatat otomatis. Di akhir ada kuis evaluasi!</p>
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🔤 Bab 1: Tag HTML Dasar</h2>
-
-<p>HTML ditulis dengan <strong>tag</strong> — diapit tanda kurung siku <code>&lt; &gt;</code>. Setiap tag punya fungsi spesifik.</p>
-
-<h3>Tag Paling Sering Dipakai</h3>
-
-<table>
-  <thead>
-    <tr><th>Tag</th><th>Fungsi</th><th>Contoh</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><code>&lt;h1&gt; - &lt;h6&gt;</code></td><td>Heading / judul (1 = terbesar)</td><td><code>&lt;h1&gt;Judul&lt;/h1&gt;</code></td></tr>
-    <tr><td><code>&lt;p&gt;</code></td><td>Paragraf teks</td><td><code>&lt;p&gt;Ini paragraf&lt;/p&gt;</code></td></tr>
-    <tr><td><code>&lt;a&gt;</code></td><td>Link / tautan</td><td><code>&lt;a href="url"&gt;Klik&lt;/a&gt;</code></td></tr>
-    <tr><td><code>&lt;img&gt;</code></td><td>Gambar</td><td><code>&lt;img src="foto.jpg"&gt;</code></td></tr>
-    <tr><td><code>&lt;ul&gt; / &lt;ol&gt;</code></td><td>Daftar (list)</td><td><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code></td></tr>
-    <tr><td><code>&lt;table&gt;</code></td><td>Tabel data</td><td><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Sel&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></td></tr>
-    <tr><td><code>&lt;div&gt;</code></td><td>Kontainer / pembagian area</td><td><code>&lt;div&gt;...&lt;/div&gt;</code></td></tr>
-    <tr><td><code>&lt;span&gt;</code></td><td>Teks dalam satu baris</td><td><code>&lt;span&gt;teks&lt;/span&gt;</code></td></tr>
-    <tr><td><code>&lt;br&gt;</code></td><td>Baris baru (line break)</td><td><code>Baris 1&lt;br&gt;Baris 2</code></td></tr>
-    <tr><td><code>&lt;hr&gt;</code></td><td>Garis horizontal pemisah</td><td><code>&lt;hr&gt;</code></td></tr>
-  </tbody>
-</table>
-
-<h3>Struktur Dasar Halaman HTML</h3>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Judul Halaman&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Halo Dunia!&lt;/h1&gt;
-  &lt;p&gt;Ini halaman web pertama saya.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <strong>💡 Ingat:</strong> Sebagian besar tag HTML punya <strong>tag pembuka</strong> <code>&lt;p&gt;</code> dan <strong>tag penutup</strong> <code>&lt;/p&gt;</code>. Beberapa tag seperti <code>&lt;br&gt;</code> dan <code>&lt;img&gt;</code> tidak butuh penutup (self-closing).
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🎨 Bab 2: Atribut HTML</h2>
-
-<p><strong>Atribut</strong> adalah informasi tambahan di dalam tag. Ditulis dengan format <code>nama="nilai"</code>.</p>
-
-<h3>Atribut Wajib Tahu</h3>
-
-<table>
-  <thead><tr><th>Atribut</th><th>Digunakan di</th><th>Fungsi</th></tr></thead>
-  <tbody>
-    <tr><td><code>href</code></td><td><code>&lt;a&gt;</code></td><td>URL tujuan link</td></tr>
-    <tr><td><code>src</code></td><td><code>&lt;img&gt;</code></td><td>Path file gambar</td></tr>
-    <tr><td><code>alt</code></td><td><code>&lt;img&gt;</code></td><td>Teks alternatif jika gambar gagal</td></tr>
-    <tr><td><code>class</code></td><td>semua</td><td>Nama kelas untuk CSS styling</td></tr>
-    <tr><td><code>id</code></td><td>semua</td><td>ID unik untuk elemen</td></tr>
-    <tr><td><code>style</code></td><td>semua</td><td>CSS inline langsung</td></tr>
-    <tr><td><code>target</code></td><td><code>&lt;a&gt;</code></td><td><code>_blank</code> = buka di tab baru</td></tr>
-  </tbody>
-</table>
-
-<h3>Contoh Penggunaan:</h3>
-<pre><code>&lt;!-- Link ke Google, buka di tab baru --&gt;
-&lt;a href="https://google.com" target="_blank"&gt;Ke Google&lt;/a&gt;
-
-&lt;!-- Gambar dengan teks alternatif --&gt;
-&lt;img src="foto.jpg" alt="Foto pemandangan"&gt;
-
-&lt;!-- Paragraf dengan class untuk CSS --&gt;
-&lt;p class="highlight"&gt;Teks yang diberi gaya khusus&lt;/p&gt;</code></pre>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>📋 Bab 3: Membuat Daftar (List)</h2>
-
-<p>Ada dua jenis daftar di HTML:</p>
-
-<grid-plate layout="1-1" responsive-size="xs" breakpoint-sm="600">
-  <div slot="col-1" style="background: #fcfbfe; border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px;">
-    <h3 style="margin-top: 0;">Unordered List (ul)</h3>
-    <p>Daftar tanpa nomor, pakai bullet:</p>
-    <pre><code>&lt;ul&gt;
-  &lt;li&gt;Apel&lt;/li&gt;
-  &lt;li&gt;Jeruk&lt;/li&gt;
-  &lt;li&gt;Mangga&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-    <p>Hasil:</p>
-    <ul><li>Apel</li><li>Jeruk</li><li>Mangga</li></ul>
-  </div>
-  <div slot="col-2" style="background: #fcfbfe; border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px;">
-    <h3 style="margin-top: 0;">Ordered List (ol)</h3>
-    <p>Daftar bernomor:</p>
-    <pre><code>&lt;ol&gt;
-  &lt;li&gt;Langkah 1&lt;/li&gt;
-  &lt;li&gt;Langkah 2&lt;/li&gt;
-  &lt;li&gt;Langkah 3&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
-    <p>Hasil:</p>
-    <ol><li>Langkah 1</li><li>Langkah 2</li><li>Langkah 3</li></ol>
-  </div>
-</grid-plate>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>📊 Bab 4: Membuat Tabel</h2>
-
-<p>Tabel digunakan untuk menampilkan data terstruktur:</p>
-
-<pre><code>&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Nama&lt;/th&gt;
-      &lt;th&gt;Nilai&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Andi&lt;/td&gt;
-      &lt;td&gt;85&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Budi&lt;/td&gt;
-      &lt;td&gt;90&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</code></pre>
-
-<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <strong>📝 Penjelasan:</strong><br>
-  <code>&lt;thead&gt;</code> = header tabel (judul kolom)<br>
-  <code>&lt;tbody&gt;</code> = body tabel (isi data)<br>
-  <code>&lt;tr&gt;</code> = table row (baris)<br>
-  <code>&lt;th&gt;</code> = table header cell (sel judul, tebal)<br>
-  <code>&lt;td&gt;</code> = table data cell (sel data biasa)
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🎯 Bab 5: Membuat Formulir (Form)</h2>
-
-<p>Form digunakan untuk mengumpulkan input dari pengguna:</p>
-
-<pre><code>&lt;form&gt;
-  &lt;label&gt;Nama:&lt;/label&gt;
-  &lt;input type="text" placeholder="Masukkan nama"&gt;
-
-  &lt;label&gt;Email:&lt;/label&gt;
-  &lt;input type="email" placeholder="email@contoh.com"&gt;
-
-  &lt;label&gt;Password:&lt;/label&gt;
-  &lt;input type="password"&gt;
-
-  &lt;label&gt;Jenis Kelamin:&lt;/label&gt;
-  &lt;input type="radio" name="jk"&gt; Laki-laki
-  &lt;input type="radio" name="jk"&gt; Perempuan
-
-  &lt;label&gt;Hobi:&lt;/label&gt;
-  &lt;input type="checkbox"&gt; Membaca
-  &lt;input type="checkbox"&gt; Olahraga
-
-  &lt;label&gt;Pesan:&lt;/label&gt;
-  &lt;textarea rows="4"&gt;&lt;/textarea&gt;
-
-  &lt;button type="submit"&gt;Kirim&lt;/button&gt;
-&lt;/form&gt;</code></pre>
-
-<h3>Tipe Input Penting:</h3>
-<table>
-  <thead><tr><th>Tipe</th><th>Fungsi</th></tr></thead>
-  <tbody>
-    <tr><td><code>text</code></td><td>Teks satu baris</td></tr>
-    <tr><td><code>email</code></td><td>Input email (validasi otomatis)</td></tr>
-    <tr><td><code>password</code></td><td>Input tersembunyi (••••)</td></tr>
-    <tr><td><code>number</code></td><td>Input angka saja</td></tr>
-    <tr><td><code>radio</code></td><td>Pilih satu dari beberapa opsi</td></tr>
-    <tr><td><code>checkbox</code></td><td>Centang banyak opsi</td></tr>
-    <tr><td><code>date</code></td><td>Pemilih tanggal</td></tr>
-    <tr><td><code>file</code></td><td>Upload file</td></tr>
-    <tr><td><code>button</code></td><td>Tombol</td></tr>
-    <tr><td><code>submit</code></td><td>Tombol kirim form</td></tr>
-  </tbody>
-</table>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🖼️ Bab 6: Gambar, Link, dan Multimedia</h2>
-
-<h3>Gambar</h3>
-<pre><code>&lt;img src="url-gambar.jpg" alt="Deskripsi" width="300" height="200"&gt;</code></pre>
-
-<h3>Link</h3>
-<pre><code>&lt;!-- Link biasa --&gt;
-&lt;a href="https://contoh.com"&gt;Klik di sini&lt;/a&gt;
-
-&lt;!-- Link buka di tab baru --&gt;
-&lt;a href="https://contoh.com" target="_blank"&gt;Buka Tab Baru&lt;/a&gt;
-
-&lt;!-- Link download file --&gt;
-&lt;a href="file.pdf" download&gt;Download PDF&lt;/a&gt;
-
-&lt;!-- Link ke anchor di halaman yang sama --&gt;
-&lt;a href="#bab3"&gt;Lompat ke Bab 3&lt;/a&gt;</code></pre>
-
-<h3>Video (YouTube)</h3>
-<pre><code>&lt;video-player source="https://www.youtube.com/watch?v=xxxx"&gt;&lt;/video-player&gt;</code></pre>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🏗️ Bab 7: Div dan Layout Dasar</h2>
-
-<p><code>&lt;div&gt;</code> adalah elemen kontainer paling penting di HTML. Digunakan untuk mengelompokkan elemen lain.</p>
-
-<pre><code>&lt;div style="background: #f0f0f0; padding: 20px; border-radius: 8px;"&gt;
-  &lt;h3&gt;Judul Section&lt;/h3&gt;
-  &lt;p&gt;Konten di dalam div ini...&lt;/p&gt;
-  &lt;button&gt;Tombol&lt;/button&gt;
-&lt;/div&gt;</code></pre>
-
-<h3>Grid Sederhana dengan grid-plate (HAX Component)</h3>
-<pre><code>&lt;grid-plate layout="1-1"&gt;
-  &lt;div slot="col-1"&gt;Kolom Kiri&lt;/div&gt;
-  &lt;div slot="col-2"&gt;Kolom Kanan&lt;/div&gt;
-&lt;/grid-plate&gt;</code></pre>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🎨 Bab 8: Dasar CSS (Inline Style)</h2>
-
-<p>CSS mengatur tampilan visual. Cara termudah: gunakan atribut <code>style</code> langsung di tag.</p>
-
-<h3>Properti CSS Penting:</h3>
-<table>
-  <thead><tr><th>Properti</th><th>Fungsi</th><th>Contoh Nilai</th></tr></thead>
-  <tbody>
-    <tr><td><code>color</code></td><td>Warna teks</td><td><code>red</code>, <code>#333</code>, <code>rgb(0,0,255)</code></td></tr>
-    <tr><td><code>background</code></td><td>Latar belakang</td><td><code>#f0f0f0</code>, <code>linear-gradient(...)</code></td></tr>
-    <tr><td><code>font-size</code></td><td>Ukuran teks</td><td><code>16px</code>, <code>1.2em</code>, <code>large</code></td></tr>
-    <tr><td><code>font-weight</code></td><td>Ketebalan teks</td><td><code>bold</code>, <code>normal</code>, <code>600</code></td></tr>
-    <tr><td><code>margin</code></td><td>Jarak luar</td><td><code>10px</code>, <code>0 auto</code></td></tr>
-    <tr><td><code>padding</code></td><td>Jarak dalam</td><td><code>16px</code>, <code>8px 16px</code></td></tr>
-    <tr><td><code>border</code></td><td>Garis tepi</td><td><code>1px solid #ccc</code></td></tr>
-    <tr><td><code>border-radius</code></td><td>Sudut melengkung</td><td><code>8px</code>, <code>50%</code></td></tr>
-    <tr><td><code>text-align</code></td><td>Rata teks</td><td><code>center</code>, <code>left</code>, <code>right</code></td></tr>
-    <tr><td><code>display</code></td><td>Mode tampilan</td><td><code>flex</code>, <code>grid</code>, <code>block</code></td></tr>
-    <tr><td><code>width / height</code></td><td>Lebar / tinggi</td><td><code>100%</code>, <code>300px</code>, <code>auto</code></td></tr>
-  </tbody>
-</table>
-
-<h3>Contoh Gabungan:</h3>
-<pre><code>&lt;div style="
-  background: linear-gradient(135deg, #6750a4, #9c7cf4);
-  color: white;
-  padding: 24px;
-  border-radius: 12px;
-  text-align: center;
-  font-size: 18px;
-  margin: 16px 0;
-"&gt;
-  &lt;h2&gt;Kotak Gradien Ungu&lt;/h2&gt;
-  &lt;p&gt;Ini contoh styling dengan inline CSS&lt;/p&gt;
-&lt;/div&gt;</code></pre>
-
-<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; padding: 24px; border-radius: 12px; text-align: center; font-size: 18px; margin: 16px 0;">
-  <h2 style="margin-top: 0; color: white;">Kotak Gradien Ungu</h2>
-  <p style="color: rgba(255,255,255,0.9);">Ini contoh styling dengan inline CSS ✨</p>
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>📝 Bab 9: Komentar HTML</h2>
-
-<p>Komentar tidak ditampilkan di browser — untuk catatan developer:</p>
-
-<pre><code>&lt;!-- Ini komentar, tidak akan muncul di halaman --&gt;
-
-&lt;!-- 
-  Komentar multi-baris:
-  Digunakan untuk dokumentasi kode
-  atau menonaktifkan sementara
---&gt;</code></pre>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>✅ Cheat Sheet Lengkap</h2>
-
-<div style="background: #1e1e1e; color: #d4d4d4; padding: 20px; border-radius: 12px; font-family: monospace; font-size: 13px; overflow-x: auto;">
-<pre style="color: #d4d4d4; margin: 0;">
-<span style="color: #6a9955;">&lt;!-- ===== CHEAT SHEET HTML ===== --&gt;</span>
-
-<span style="color: #6a9955;">&lt;!-- Heading --&gt;</span>
-<span style="color: #808080;">&lt;h1&gt;</span>Judul Besar<span style="color: #808080;">&lt;/h1&gt;</span>
-<span style="color: #808080;">&lt;h2&gt;</span>Sub Judul<span style="color: #808080;">&lt;/h2&gt;</span>
-
-<span style="color: #6a9955;">&lt;!-- Teks --&gt;</span>
-<span style="color: #808080;">&lt;p&gt;</span>Paragraf<span style="color: #808080;">&lt;/p&gt;</span>
-<span style="color: #808080;">&lt;strong&gt;</span>Tebal<span style="color: #808080;">&lt;/strong&gt;</span>
-<span style="color: #808080;">&lt;em&gt;</span>Miring<span style="color: #808080;">&lt;/em&gt;</span>
-<span style="color: #808080;">&lt;u&gt;</span>Garis bawah<span style="color: #808080;">&lt;/u&gt;</span>
-<span style="color: #808080;">&lt;br&gt;</span> <span style="color: #6a9955;">&lt;!-- baris baru --&gt;</span>
-<span style="color: #808080;">&lt;hr&gt;</span> <span style="color: #6a9955;">&lt;!-- garis pemisah --&gt;</span>
-
-<span style="color: #6a9955;">&lt;!-- Link &amp; Gambar --&gt;</span>
-<span style="color: #808080;">&lt;a</span> <span style="color: #9cdcfe;">href=</span><span style="color: #ce9178;">"url"</span> <span style="color: #9cdcfe;">target=</span><span style="color: #ce9178;">"_blank"</span><span style="color: #808080;">&gt;</span>Link<span style="color: #808080;">&lt;/a&gt;</span>
-<span style="color: #808080;">&lt;img</span> <span style="color: #9cdcfe;">src=</span><span style="color: #ce9178;">"foto.jpg"</span> <span style="color: #9cdcfe;">alt=</span><span style="color: #ce9178;">"Deskripsi"</span><span style="color: #808080;">&gt;</span>
-
-<span style="color: #6a9955;">&lt;!-- List --&gt;</span>
-<span style="color: #808080;">&lt;ul&gt;&lt;li&gt;</span>Bullet<span style="color: #808080;">&lt;/li&gt;&lt;/ul&gt;</span>
-<span style="color: #808080;">&lt;ol&gt;&lt;li&gt;</span>Nomor<span style="color: #808080;">&lt;/li&gt;&lt;/ol&gt;</span>
-
-<span style="color: #6a9955;">&lt;!-- Tabel --&gt;</span>
-<span style="color: #808080;">&lt;table&gt;</span>
-  <span style="color: #808080;">&lt;tr&gt;</span> <span style="color: #6a9955;">&lt;!-- baris --&gt;</span>
-    <span style="color: #808080;">&lt;th&gt;</span>Header<span style="color: #808080;">&lt;/th&gt;</span>
-    <span style="color: #808080;">&lt;td&gt;</span>Data<span style="color: #808080;">&lt;/td&gt;</span>
-  <span style="color: #808080;">&lt;/tr&gt;</span>
-<span style="color: #808080;">&lt;/table&gt;</span>
-
-<span style="color: #6a9955;">&lt;!-- Form --&gt;</span>
-<span style="color: #808080;">&lt;input</span> <span style="color: #9cdcfe;">type=</span><span style="color: #ce9178;">"text"</span> <span style="color: #9cdcfe;">placeholder=</span><span style="color: #ce9178;">"Nama"</span><span style="color: #808080;">&gt;</span>
-<span style="color: #808080;">&lt;textarea&gt;&lt;/textarea&gt;</span>
-<span style="color: #808080;">&lt;button&gt;</span>Kirim<span style="color: #808080;">&lt;/button&gt;</span>
-
-<span style="color: #6a9955;">&lt;!-- Div (kontainer) --&gt;</span>
-<span style="color: #808080;">&lt;div</span> <span style="color: #9cdcfe;">style=</span><span style="color: #ce9178;">"padding:16px; background:#f0f0f0"</span><span style="color: #808080;">&gt;</span>
-  Konten di sini
-<span style="color: #808080;">&lt;/div&gt;</span>
-
-<span style="color: #6a9955;">&lt;!-- Komentar --&gt;</span>
-<span style="color: #6a9955;">&lt;!-- tidak ditampilkan --&gt;</span>
-</pre>
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🎯 Kuis Evaluasi: Dasar HTML</h2>
-
-<p>Kerjakan kuis di bawah untuk menguji pemahaman Anda tentang HTML!</p>
-
-<explode-quiz editable="false"></explode-quiz>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>📊 Cek Aktivitas Belajar Anda</h2>
-
-<grid-plate layout="1-1" responsive-size="xs" breakpoint-sm="800">
-  <div slot="col-1">
-    <attendance-tracker></attendance-tracker>
-  </div>
-  <div slot="col-2">
-    <engagement-score></engagement-score>
-  </div>
-</grid-plate>
-
-<h2>🔗 Lanjutkan Belajar</h2>
-<ul>
-  <li><a href="tutorial-kursus">📅 Tutorial: Cara Menambah Kuis di Hari Lain</a></li>
-  <li><a href="materi-siswa">📚 Contoh Materi Modul 1: HAXcms &amp; Web Component</a></li>
-  <li><a href="https://www.w3schools.com/html/" target="_blank">🌐 W3Schools HTML Tutorial (English)</a></li>
-</ul>
-
-<!-- Activity Logger -->
-<activity-logger></activity-logger>
- ]]>
-    </content>
-  </entry>
-  <entry>
-    <title>📅 Tutorial: Kursus Multi-Hari</title>
-    <id>item-tutorial-kursus</id>
-    <updated>2026-08-03T06:22:11.000Z</updated>
-    <published>2026-07-21T20:50:20.000Z</published>
-    <summary>Panduan menambah kuis dan materi untuk setiap pertemuan</summary>
-    <link href="https://localhost:3000/sites/haxnow/tutorial-kursus"/>
-    
-    <content type="html">
-      <![CDATA[ <h1>📅 Tutorial: Cara Menambah Kuis di Hari Lain untuk Kursus</h1>
-
-<p>Panduan ini menjelaskan bagaimana menyusun kursus multi-hari/multi-sesi di HAXcms, di mana setiap halaman materi memiliki <strong>kuis harian</strong> dan <strong>pelacakan aktivitas</strong> sendiri. Cocok untuk dosen/guru yang ingin membuat course terstruktur per pertemuan.</p>
-
-<h2>🎯 Konsep Dasar</h2>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0;">
-  <div style="background: #f3f0fa; border-radius: 12px; padding: 20px; text-align: center;">
-    <span style="font-size: 36px;">📄</span>
-    <h3 style="color: #6750a4; margin: 8px 0;">1 Halaman</h3>
-    <p style="font-size: 13px; color: #666; margin: 0;">= 1 Pertemuan/Hari</p>
-  </div>
-  <div style="background: #e8f5e9; border-radius: 12px; padding: 20px; text-align: center;">
-    <span style="font-size: 36px;">📚</span>
-    <h3 style="color: #2e7d32; margin: 8px 0;">Materi + Kuis</h3>
-    <p style="font-size: 13px; color: #666; margin: 0;">Gabungan konten &amp; evaluasi</p>
-  </div>
-  <div style="background: #e3f2fd; border-radius: 12px; padding: 20px; text-align: center;">
-    <span style="font-size: 36px;">📊</span>
-    <h3 style="color: #1565c0; margin: 8px 0;">Tracker</h3>
-    <p style="font-size: 13px; color: #666; margin: 0;">Aktivitas otomatis tercatat</p>
-  </div>
-  <div style="background: #fce4ec; border-radius: 12px; padding: 20px; text-align: center;">
-    <span style="font-size: 36px;">📤</span>
-    <h3 style="color: #c62828; margin: 8px 0;">Google Sheets</h3>
-    <p style="font-size: 13px; color: #666; margin: 0;">Semua hasil ke satu sheet</p>
-  </div>
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🚀 Metode 1: Halaman Manual per Pertemuan (Direkomendasikan)</h2>
-
-<p>Buat satu halaman baru untuk setiap pertemuan. Setiap halaman punya materi sendiri, kuis sendiri, dan activity logger sendiri.</p>
-
-<h3>Langkah 1: Buat Halaman Baru via HAXcms Editor</h3>
-
-<ol>
-  <li>Buka HAXcms editor</li>
-  <li>Klik <strong>Pages → Add Page</strong> di sidebar</li>
-  <li>Beri judul sesuai pertemuan, contoh: <strong>"Pertemuan 2: Lit Element Dasar"</strong></li>
-  <li>Tentukan slug URL: <code>pertemuan-2</code></li>
-</ol>
-
-<h3>Langkah 2: Isi Konten Materi</h3>
-
-<p>Tulis materi pembelajaran seperti biasa. Gunakan heading, paragraf, gambar, tabel, dll.</p>
-
-<h3>Langkah 3: Tambahkan Kuis di Akhir Halaman</h3>
-
-<p>Ada dua cara menambah kuis:</p>
-
-<h4>Cara A — Via Element Tray (Mudah)</h4>
-<ol>
-  <li>Klik <strong>Tambah Elemen (+)</strong> di panel kiri</li>
-  <li>Cari <strong>"Explode Quiz"</strong></li>
-  <li>Klik atau seret ke posisi yang diinginkan di halaman</li>
-</ol>
-
-<h4>Cara B — Via Source Mode (Kontrol Penuh)</h4>
-<ol>
-  <li>Klik tombol <strong>Source</strong> di editor</li>
-  <li>Paste tag berikut di posisi yang diinginkan:</li>
-</ol>
-
-<pre><code>&lt;explode-quiz editable="false"&gt;&lt;/explode-quiz&gt;</code></pre>
-
-<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <strong>💡 Tips:</strong> <code>editable="false"</code> menyembunyikan tombol edit soal untuk siswa. Dosen tetap bisa edit soal saat membuka halaman di HAX Editor.
-</div>
-
-<h3>Langkah 4: Tambahkan Activity Logger</h3>
-
-<p>Di bagian paling bawah halaman (setelah semua konten), paste:</p>
-
-<pre><code>&lt;activity-logger&gt;&lt;/activity-logger&gt;</code></pre>
-
-<p>Ini akan mengaktifkan pelacakan scroll, klik link, download, dan kuis di halaman tersebut.</p>
-
-<h3>Langkah 5 (Opsional): Tambahkan Attendance Tracker</h3>
-
-<pre><code>&lt;attendance-tracker&gt;&lt;/attendance-tracker&gt;
-&lt;engagement-score&gt;&lt;/engagement-score&gt;</code></pre>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🚀 Metode 2: Dashboard Full Quiz (Satu Tag untuk Semua)</h2>
-
-<p>Gunakan <code>&lt;full-quiz-dashboard&gt;</code> untuk halaman yang langsung menyediakan kuis, attendance, heatmap, dan gradebook dalam satu komponen.</p>
-
-<pre><code>&lt;full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/YOUR_ID/exec"&gt;&lt;/full-quiz-dashboard&gt;</code></pre>
-
-<p>Dengan atribut <code>apps-script-url</code>, semua hasil otomatis tersimpan ke Google Sheets.</p>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>📋 Template Halaman Pertemuan</h2>
-
-<p>Copy-paste template ini untuk setiap halaman pertemuan baru (via Source Mode):</p>
-
-<pre><code>&lt;h1&gt;📚 Pertemuan [N]: [Judul Materi]&lt;/h1&gt;
-
-&lt;div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px; margin: 16px 0;"&gt;
-  &lt;strong&gt;⏰ Activity Logger Aktif!&lt;/strong&gt;
-  &lt;p style="margin: 4px 0 0 0; font-size: 13px;"&gt;Aktivitas Anda di halaman ini dicatat otomatis.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;📖 Materi&lt;/h2&gt;
-&lt;!-- Isi materi di sini --&gt;
-&lt;p&gt;...konten pembelajaran...&lt;/p&gt;
-
-&lt;h2&gt;📥 Download&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="files/materi-[N].pdf" download&gt;📄 PDF Materi&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;🎯 Kuis&lt;/h2&gt;
-&lt;explode-quiz editable="false"&gt;&lt;/explode-quiz&gt;
-
-&lt;h2&gt;📊 Kehadiran&lt;/h2&gt;
-&lt;attendance-tracker&gt;&lt;/attendance-tracker&gt;
-&lt;engagement-score&gt;&lt;/engagement-score&gt;
-
-&lt;activity-logger&gt;&lt;/activity-logger&gt;</code></pre>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🗂️ Struktur Folder yang Disarankan</h2>
-
-<pre><code>pages/
-├── pertemuan-1/
-│   └── index.html    (Materi + Kuis Hari 1)
-├── pertemuan-2/
-│   └── index.html    (Materi + Kuis Hari 2)
-├── pertemuan-3/
-│   └── index.html    (Materi + Kuis Hari 3)
-├── pertemuan-4/
-│   └── index.html    (Materi + Kuis Hari 4)
-└── ujian-akhir/
-    └── index.html    (Ujian Akhir - semua materi)
-</code></pre>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>📊 Integrasi Google Sheets — Satu Sheet untuk Semua Hari</h2>
-
-<p>Semua halaman pertemuan bisa menggunakan <strong>satu Google Sheet yang sama</strong>. Setup:</p>
-
-<ol>
-  <li><strong>Buat satu Google Sheet</strong> untuk seluruh course</li>
-  <li><strong>Deploy Apps Script</strong> dari <code>Code.gs</code> satu kali</li>
-  <li><strong>Gunakan URL yang sama</strong> di semua halaman pertemuan</li>
-</ol>
-
-<p>Dengan <code>&lt;full-quiz-dashboard&gt;</code>:</p>
-<pre><code>&lt;full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/SAME_ID/exec"&gt;&lt;/full-quiz-dashboard&gt;</code></pre>
-
-<p>Sheet akan otomatis punya data dari semua pertemuan. Kolom "Tipe Aktivitas" membedakan sumber data (reading, quiz, discussion, dll).</p>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>📝 Mengedit Soal Kuis di HAXcms</h2>
-
-<p>Saat dosen membuka halaman di HAXcms editor:</p>
-
-<ol>
-  <li>Komponen kuis akan menampilkan tombol <strong>"Edit Soal Kuis"</strong></li>
-  <li>Klik untuk membuka panel editor soal</li>
-  <li>Tambah/edit/hapus soal sesuai kebutuhan</li>
-  <li>Klik <strong>Simpan &amp; Keluar</strong></li>
-</ol>
-
-<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <strong>📝 Catatan:</strong> Soal kuis tersimpan di localStorage browser. Untuk deployment ke production, soal sebaiknya di-hardcode di atribut <code>questions</code> atau dikelola via Google Sheets.
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🔧 Checklist Dosen: Persiapan Sebelum Kuliah</h2>
-
-<table>
-  <thead>
-    <tr><th>#</th><th>Tugas</th><th>Status</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>Buat halaman pertemuan baru di HAXcms</td><td>⬜</td></tr>
-    <tr><td>2</td><td>Tulis materi pembelajaran</td><td>⬜</td></tr>
-    <tr><td>3</td><td>Tambah komponen <code>&lt;explode-quiz&gt;</code></td><td>⬜</td></tr>
-    <tr><td>4</td><td>Edit soal kuis (via HAX Editor)</td><td>⬜</td></tr>
-    <tr><td>5</td><td>Tambah <code>&lt;activity-logger&gt;</code> di akhir halaman</td><td>⬜</td></tr>
-    <tr><td>6</td><td>Tambah link download materi (PDF/ZIP)</td><td>⬜</td></tr>
-    <tr><td>7</td><td>Update site.json — tambahkan halaman ke navigasi</td><td>⬜</td></tr>
-    <tr><td>8</td><td>Test halaman sebagai siswa (buka di tab biasa, bukan editor)</td><td>⬜</td></tr>
-    <tr><td>9</td><td>Verifikasi data masuk ke Google Sheets</td><td>⬜</td></tr>
-  </tbody>
-</table>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🔗 Halaman Terkait</h2>
-<ul>
-  <li><a href="materi-siswa">📚 Contoh Halaman Materi Siswa (Modul 1)</a></li>
-  <li><a href="tutorial-apps-script">📖 Tutorial Setup Google Apps Script</a></li>
-  <li><a href="full-dashboard">🎯 Demo Full Quiz Dashboard</a></li>
-  <li><a href="dashboard-siswa">📊 Dashboard Siswa — Lihat Nilai dari Sheet</a></li>
-  <li><a href="tutorial-dashboard-siswa">📖 Tutorial: Fetch Data dari Sheet</a></li>
-  <li><a href="tutor-html">📖 Belajar Dasar HTML</a></li>
-</ul>
- ]]>
-    </content>
-  </entry>
-  <entry>
-    <title>📊 Tutorial: 1 Sheet = 1 Pertemuan</title>
-    <id>item-tutorial-sheet</id>
-    <updated>2026-08-03T06:22:11.000Z</updated>
-    <published>2026-07-21T20:50:20.000Z</published>
-    <summary>Setup Google Sheets auto-create sheet tab per pertemuan</summary>
-    <link href="https://localhost:3000/sites/haxnow/tutorial-sheet-per-pertemuan"/>
-    
-    <content type="html">
-      <![CDATA[ <h1>📊 Tutorial: 1 Google Sheet = 1 Course — 1 Sheet Tab = 1 Pertemuan</h1>
-
-<p>Cara setup agar <strong>satu Google Spreadsheet</strong> menampung seluruh data course, dan setiap <strong>sheet tab</strong> otomatis jadi satu pertemuan. Data dari semua halaman HAXcms masuk ke spreadsheet yang sama, terorganisir rapi per pertemuan.</p>
-
-<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; border-radius: 16px; padding: 24px; margin: 24px 0;">
-  <h2 style="margin-top: 0; color: white;">🎯 Konsep</h2>
-  <table style="width: 100%; border-collapse: collapse; color: white;">
-    <thead>
-      <tr style="border-bottom: 1px solid rgba(255,255,255,0.3);">
-        <th style="text-align: left; padding: 8px;">1 Spreadsheet</th>
-        <th style="text-align: left; padding: 8px;">1 Sheet Tab</th>
-        <th style="text-align: left; padding: 8px;">1 Atribut HTML</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding: 8px;">= 1 Course/Mata Kuliah</td>
-        <td style="padding: 8px;">= 1 Pertemuan/Hari</td>
-        <td style="padding: 8px;"><code style="background: rgba(255,255,255,0.2); padding: 2px 6px; border-radius: 4px;">sheet-name="Pertemuan 1"</code></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🚀 Langkah 1: Buat 1 Google Spreadsheet untuk 1 Course</h2>
-<ol>
-  <li>Buka <a href="https://sheets.google.com" target="_blank">sheets.google.com</a></li>
-  <li>Klik <strong>"Blank"</strong> — buat spreadsheet baru</li>
-  <li>Beri nama: <strong>"Course: HAXcms &amp; Web Component"</strong> (atau nama course Anda)</li>
-  <li>Jangan buat sheet tab dulu — Apps Script akan auto-create!</li>
-</ol>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🚀 Langkah 2: Copy-Paste Code.gs ke Apps Script</h2>
-<ol>
-  <li>Di spreadsheet, klik <strong>Extensions → Apps Script</strong></li>
-  <li>Hapus kode default yang ada</li>
-  <li>Copy-paste seluruh kode dari <code>Code.gs</code> (tersedia di <code>custom/src/Code.gs</code>)</li>
-  <li>Klik <strong>Save</strong> (ikon disket) — beri nama project: "QuizHandler"</li>
-</ol>
-
-<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <strong>📝 Apa yang dilakukan Code.gs v2?</strong><br>
-  • <code>doPost()</code> — Menerima data kuis (nama, skor, sheet) via POST JSON<br>
-  • <code>saveToSheet()</code> — Auto-create sheet tab jika belum ada, lalu append data<br>
-  • <code>updateSummary()</code> — Baca seluruh sheet tab dan buat agregasi di sheet "Rangkuman"<br>
-  • Setiap sheet tab punya header: Timestamp | Nama | Skor | Total Soal | Status
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🚀 Langkah 3: Deploy sebagai Web App</h2>
-<ol>
-  <li>Klik <strong>Deploy → New deployment</strong></li>
-  <li>Klik ikon gear ⚙️ — pilih <strong>Web app</strong></li>
-  <li>Isi konfigurasi:
-    <ul>
-      <li><strong>Description:</strong> "Quiz API"</li>
-      <li><strong>Execute as:</strong> Me</li>
-      <li><strong>Who has access:</strong> Anyone</li>
-    </ul>
-  </li>
-  <li>Klik <strong>Deploy</strong></li>
-  <li>Klik <strong>Authorize access</strong> — pilih akun Google Anda</li>
-  <li>Jika muncul peringatan "Google hasn't verified this app":
-    <ul>
-      <li>Klik <strong>Advanced</strong></li>
-      <li>Klik <strong>Go to QuizHandler (unsafe)</strong></li>
-      <li>Klik <strong>Allow</strong></li>
-    </ul>
-  </li>
-  <li><strong>COPY URL Web App!</strong> Format: <code>https://script.google.com/macros/s/AKfycbx.../exec</code></li>
-</ol>
-
-<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <strong>⚠️ Penting:</strong> URL ini akan dipakai di SEMUA halaman pertemuan. Simpan baik-baik!
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🚀 Langkah 4: Setup di Halaman HAXcms</h2>
-
-<p>Di setiap halaman pertemuan, tambahkan dashboard dengan atribut <code>sheet-name</code> yang berbeda:</p>
-
-<h3>Halaman Pertemuan 1</h3>
-<pre><code>&lt;h1&gt;📚 Pertemuan 1: Pengenalan HAXcms&lt;/h1&gt;
-
-&lt;p&gt;Materi pembelajaran hari ini...&lt;/p&gt;
-
-&lt;full-quiz-dashboard 
-  apps-script-url="https://script.google.com/macros/s/YOUR_ID/exec"
-  sheet-name="Pertemuan 1"&gt;
-&lt;/full-quiz-dashboard&gt;</code></pre>
-
-<h3>Halaman Pertemuan 2</h3>
-<pre><code>&lt;h1&gt;📚 Pertemuan 2: Lit Element Dasar&lt;/h1&gt;
-
-&lt;p&gt;Materi pembelajaran hari ini...&lt;/p&gt;
-
-&lt;full-quiz-dashboard 
-  apps-script-url="https://script.google.com/macros/s/SAME_ID/exec"
-  sheet-name="Pertemuan 2"&gt;
-&lt;/full-quiz-dashboard&gt;</code></pre>
-
-<h3>Halaman Pertemuan 3</h3>
-<pre><code>&lt;full-quiz-dashboard 
-  apps-script-url="https://script.google.com/macros/s/SAME_ID/exec"
-  sheet-name="Pertemuan 3"&gt;
-&lt;/full-quiz-dashboard&gt;</code></pre>
-
-<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <strong>✅ Perhatikan:</strong> URL Apps Script SAMA untuk semua halaman. Hanya <code>sheet-name</code> yang berbeda!
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>📊 Hasil Akhir di Google Sheets</h2>
-
-<p>Setelah beberapa siswa mengerjakan kuis dari berbagai pertemuan, spreadsheet Anda akan terlihat seperti ini:</p>
-
-<h3>Sheet Tab: "Pertemuan 1"</h3>
-<table>
-  <thead>
-    <tr><th>Timestamp</th><th>Nama</th><th>Skor (%)</th><th>Total Soal</th><th>Status</th></tr>
-  </thead>
-  <tbody>
-    <tr style="background: #d1fae5;"><td>22/07/2026 10:30</td><td>Andi</td><td>80</td><td>5</td><td>LULUS</td></tr>
-    <tr style="background: #d1fae5;"><td>22/07/2026 10:45</td><td>Budi</td><td>100</td><td>5</td><td>LULUS</td></tr>
-    <tr style="background: #fee2e2;"><td>22/07/2026 11:00</td><td>Cici</td><td>60</td><td>5</td><td>TIDAK LULUS</td></tr>
-  </tbody>
-</table>
-
-<h3>Sheet Tab: "Pertemuan 2"</h3>
-<table>
-  <thead>
-    <tr><th>Timestamp</th><th>Nama</th><th>Skor (%)</th><th>Total Soal</th><th>Status</th></tr>
-  </thead>
-  <tbody>
-    <tr style="background: #d1fae5;"><td>23/07/2026 10:30</td><td>Andi</td><td>90</td><td>5</td><td>LULUS</td></tr>
-    <tr style="background: #fee2e2;"><td>23/07/2026 10:45</td><td>Budi</td><td>40</td><td>5</td><td>TIDAK LULUS</td></tr>
-  </tbody>
-</table>
-
-<h3>Sheet Tab: "Rangkuman" (Auto-generated)</h3>
-<table>
-  <thead>
-    <tr><th>Nama</th><th>Total Kuis</th><th>Rata-rata Skor</th><th>Skor Tertinggi</th><th>Skor Terendah</th><th>Jumlah Pertemuan</th><th>Status Terakhir</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Andi</td><td>2</td><td>85</td><td>90</td><td>80</td><td>2</td><td>LULUS</td></tr>
-    <tr><td>Budi</td><td>2</td><td>70</td><td>100</td><td>40</td><td>2</td><td>TIDAK LULUS</td></tr>
-    <tr><td>Cici</td><td>1</td><td>60</td><td>60</td><td>60</td><td>1</td><td>TIDAK LULUS</td></tr>
-  </tbody>
-</table>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🔄 Alur Data Lengkap</h2>
-
-<div style="display: flex; flex-direction: column; gap: 12px; max-width: 600px; margin: 20px auto; font-size: 14px;">
-
-  <div style="display: flex; align-items: center; gap: 12px;">
-    <div style="background: #f3f0fa; border: 2px solid #6750a4; border-radius: 10px; padding: 12px 16px; min-width: 180px; text-align: center; flex-shrink: 0;">
-      <strong>👤 Siswa</strong><br>
-      <span style="font-size: 12px; color: #666;">Kerjakan kuis di<br>halaman Pertemuan N</span>
-    </div>
-    <span style="font-size: 24px; color: #6750a4;">→</span>
-    <div style="background: #e8f5e9; border: 2px solid #4caf50; border-radius: 10px; padding: 12px 16px; min-width: 180px; text-align: center; flex-shrink: 0;">
-      <strong>🌐 Browser</strong><br>
-      <span style="font-size: 12px; color: #666;">Kirim POST JSON:<br><code>{"name":"Andi","score":80,"sheet":"Pertemuan 2"}</code></span>
-    </div>
-    <span style="font-size: 24px; color: #6750a4;">→</span>
-    <div style="background: #fff3e0; border: 2px solid #ff9800; border-radius: 10px; padding: 12px 16px; min-width: 180px; text-align: center; flex-shrink: 0;">
-      <strong>⚡ Apps Script</strong><br>
-      <span style="font-size: 12px; color: #666;">Terima JSON →<br>Auto-create sheet tab<br>"Pertemuan 2" → Simpan</span>
-    </div>
-    <span style="font-size: 24px; color: #6750a4;">→</span>
-    <div style="background: #e3f2fd; border: 2px solid #2196f3; border-radius: 10px; padding: 12px 16px; min-width: 180px; text-align: center; flex-shrink: 0;">
-      <strong>📊 Google Sheets</strong><br>
-      <span style="font-size: 12px; color: #666;">Data muncul di tab<br>"Pertemuan 2"<br>+ Update "Rangkuman"</span>
-    </div>
-  </div>
-
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>📝 Parameter Data yang Dikirim</h2>
-
-<p>Saat kuis selesai, dashboard mengirim data berikut ke Apps Script:</p>
-
-<table>
-  <thead>
-    <tr><th>Parameter</th><th>Tipe</th><th>Keterangan</th><th>Contoh</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><code>name</code></td><td>String</td><td>Nama siswa (wajib)</td><td>"Andi Pratama"</td></tr>
-    <tr><td><code>score</code></td><td>Number</td><td>Skor 0-100 (wajib)</td><td>80</td></tr>
-    <tr><td><code>sheet</code></td><td>String</td><td>Nama sheet tab tujuan (wajib)</td><td>"Pertemuan 1"</td></tr>
-    <tr><td><code>timestamp</code></td><td>ISO String</td><td>Waktu pengerjaan</td><td>"2026-07-22T10:30:00Z"</td></tr>
-    <tr><td><code>totalQuestions</code></td><td>Number</td><td>Jumlah soal (default 5)</td><td>5</td></tr>
-  </tbody>
-</table>
-
-<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <strong>📝 Parameter <code>sheet</code>:</strong> Diambil otomatis dari atribut HTML <code>sheet-name="Pertemuan 1"</code>. Anda tidak perlu mengirim manual — dashboard yang handle!
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>📋 Checklist Setup Lengkap</h2>
-
-<table>
-  <thead>
-    <tr><th>#</th><th>Langkah</th><th>Status</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>Buat 1 Google Spreadsheet untuk seluruh course</td><td>⬜</td></tr>
-    <tr><td>2</td><td>Buka Extensions → Apps Script</td><td>⬜</td></tr>
-    <tr><td>3</td><td>Copy-paste Code.gs ke editor</td><td>⬜</td></tr>
-    <tr><td>4</td><td>Save project + Deploy as Web App</td><td>⬜</td></tr>
-    <tr><td>5</td><td>Copy URL Web App</td><td>⬜</td></tr>
-    <tr><td>6</td><td>Di HAXcms: buat halaman Pertemuan 1</td><td>⬜</td></tr>
-    <tr><td>7</td><td>Tambah <code>&lt;full-quiz-dashboard apps-script-url="URL" sheet-name="Pertemuan 1"&gt;</code></td><td>⬜</td></tr>
-    <tr><td>8</td><td>Ulangi langkah 6-7 untuk Pertemuan 2, 3, dst</td><td>⬜</td></tr>
-    <tr><td>9</td><td>Test: kerjakan kuis → cek sheet tab muncul</td><td>⬜</td></tr>
-    <tr><td>10</td><td>Cek sheet "Rangkuman" untuk agregasi</td><td>⬜</td></tr>
-  </tbody>
-</table>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🔧 Troubleshooting</h2>
-
-<h3>❌ Data tidak muncul di sheet</h3>
-<ul>
-  <li>Cek Console browser (F12) — lihat apakah ada error CORS</li>
-  <li>Apps Script harus di-deploy sebagai <strong>Web app</strong>, bukan API Executable</li>
-  <li>"Who has access" harus <strong>Anyone</strong></li>
-  <li>Setelah deploy ulang (edit kode), Anda dapat URL BARU — update di semua halaman!</li>
-</ul>
-
-<h3>❌ Sheet tab tidak auto-create</h3>
-<ul>
-  <li>Pastikan atribut <code>sheet-name</code> tertulis benar (case-sensitive)</li>
-  <li>Cek di Apps Script editor → Executions → lihat error log</li>
-  <li>Jalankan fungsi <code>test()</code> manual dari editor untuk debug</li>
-</ul>
-
-<h3>❌ Error: "Google hasn't verified this app"</h3>
-<ul>
-  <li>Ini normal untuk script pribadi</li>
-  <li>Klik Advanced → Go to QuizHandler (unsafe) → Allow</li>
-  <li>Hanya muncul saat pertama kali authorize</li>
-</ul>
-
-<h3>❌ Ingin update kode Apps Script?</h3>
-<ul>
-  <li>Edit kode di editor Apps Script</li>
-  <li>Klik Deploy → New deployment — ini akan generate <strong>URL BARU</strong></li>
-  <li>Update URL di semua halaman HAXcms</li>
-  <li>Alternatif: Deploy → Manage deployments → Edit (icon pensil) → Version: New → Deploy</li>
-</ul>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🔗 Halaman Terkait</h2>
-<ul>
-  <li><a href="full-dashboard">🎯 Demo Full Quiz Dashboard</a></li>
-  <li><a href="tutorial-kursus">📅 Tutorial: Kursus Multi-Hari</a></li>
-  <li><a href="materi-siswa">📚 Contoh Halaman Materi Siswa</a></li>
-  <li><a href="tutor-html">📖 Belajar HTML Dasar</a></li>
-</ul>
- ]]>
-    </content>
-  </entry>
-  <entry>
     <title>📊 Dashboard Siswa - Lihat Nilai</title>
     <id>item-dashboard-siswa</id>
-    <updated>2026-08-03T06:22:10.000Z</updated>
+    <updated>2026-08-03T09:57:03.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Halaman dashboard siswa yang membaca data dari Google Sheets</summary>
     <link href="https://localhost:3000/sites/haxnow/dashboard-siswa"/>
@@ -2855,9 +1768,1099 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
     </content>
   </entry>
   <entry>
+    <title>📚 Modul 1: HAXcms &amp; Web Component</title>
+    <id>item-materi-siswa</id>
+    <updated>2026-08-03T09:57:04.000Z</updated>
+    <published>2026-07-21T20:50:20.000Z</published>
+    <summary>Contoh halaman materi siswa dengan aktivitas dan kuis</summary>
+    <link href="https://localhost:3000/sites/haxnow/materi-siswa"/>
+    
+    <content type="html">
+      <![CDATA[ ﻿<h1 id="h1--56545659">📚 Modul 1: Pengenalan HAXcms & Web Component (v2: KD-Materi & Split Forum/Tugas)</h1>
+<p>Selamat datang di modul pembelajaran interaktif v2! Halaman ini mendemonstrasikan fitur-fitur baru:</p>
+<ul>
+  <li><strong>Single Login</strong> — login sekali, akses semua halaman (auto-login 24h)</li>
+  <li><strong>KD-Materi dari sheet-name</strong> — otomatis filter aktivitas per pertemuan</li>
+  <li><strong>Split Assignment/Forum</strong> — komponen terpisah <code>assignment-component</code> & <code>forum-component</code></li>
+  <li><strong>Activity Logger</strong> — tracking otomatis (scroll, download, kuis, forum, tugas)</li>
+</ul>
+
+<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px; margin: 16px 0; display: flex; align-items: center; gap: 12px;">
+  <span>⏰</span>
+  <div>
+    <strong>Activity Logger Aktif!</strong>
+    <p style="margin: 4px 0 0 0; font-size: 13px; color: #166534;">Scroll, klik, download, forum, tugas, kuis — semua tercatat otomatis dengan KD-Materi=Pertemuan1</p>
+  </div>
+</div>
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<!-- Single Login -->
+<quiz-user-auth 
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  auto-login>
+</quiz-user-auth>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2--205211746">📖 1.1 Apa itu HAXcms?</h2>
+<p>HAXcms adalah <strong>Headless Authoring eXperience Content Management System</strong> — platform berbasis web component untuk membuat dan mengelola konten web dengan mudah. Bayangkan seperti WordPress tapi lebih ringan, lebih modern, dan sepenuhnya berbasis standar web.</p>
+<h3 id="h3--1114033221">Konsep Dasar</h3>
+<ul>
+  <li><strong>Web Component:</strong> Elemen HTML kustom yang bisa digunakan ulang</li>
+  <li><strong>Lit Element:</strong> Library dari Google untuk membuat Web Component dengan performa tinggi</li>
+  <li><strong>DDD Design System:</strong> Token desain konsisten untuk warna, spacing, dan tipografi</li>
+  <li><strong>JSON Outline Schema:</strong> Format untuk mendefinisikan struktur situs</li>
+</ul>
+<h2 id="h2-1627741604">📖 1.2 Apa itu Web Component?</h2>
+<p>Web Component adalah teknologi browser native yang memungkinkan Anda membuat elemen HTML kustom dengan fungsionalitas sendiri. Komponen terisolasi, bisa digunakan ulang di mana saja.</p>
+<h3 id="h3-1088150271">Contoh Web Component HAX:</h3>
+<grid-plate layout="1-1-1">
+  <div slot="col-1" style="text-align: center; padding: 16px; background: #f3f0fa; border-radius: 12px;">
+    <span>📝</span>
+    <h4>todo-list</h4>
+    <p style="font-size: 13px; color: #666;">Daftar tugas interaktif</p>
+  </div>
+  <div slot="col-2" style="text-align: center; padding: 16px; background: #f3f0fa; border-radius: 12px;">
+    <span>🎯</span>
+    <h4>explode-quiz</h4>
+    <p style="font-size: 13px; color: #666;">Kuis interaktif + confetti</p>
+  </div>
+  <div slot="col-3" style="text-align: center; padding: 16px; background: #f3f0fa; border-radius: 12px;">
+    <span>🎬</span>
+    <h4>video-player</h4>
+    <p style="font-size: 13px; color: #666;">Pemutar video YouTube</p>
+  </div>
+</grid-plate>
+<h2 id="h2--1077309165">📖 1.3 Struktur Dasar Web Component</h2>
+<p>Sebuah Web Component terdiri dari tiga bagian utama:</p>
+<table>
+  <thead>
+    <tr><th>Bagian</th><th>Deskripsi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>class</strong></td><td>Definisi class JavaScript yang mewarisi HTMLElement</td></tr>
+    <tr><td><strong>Shadow DOM</strong></td><td>DOM terisolasi, style tidak bocor ke halaman luar</td></tr>
+    <tr><td><strong>Custom Element</strong></td><td>Nama tag HTML kustom, contoh: <code><todo-list></code></td></tr>
+  </tbody>
+</table>
+<h3 id="h3--1746436907">Contoh Kode Sederhana:</h3>
+<pre><code><!-- HTML -->
+<my-greeting name="Dunia"></my-greeting>
+
+<!-- JavaScript -->
+class MyGreeting extends HTMLElement {
+  connectedCallback() {
+    const name = this.getAttribute('name');
+    this.innerHTML = `<h2>Halo, ${name}!</h2>`;
+  }
+}
+customElements.define('my-greeting', MyGreeting);</code></pre>
+<h2 id="h2--1163604576">📖 1.4 Kenapa Web Component?</h2>
+<ul>
+  <li>✅ <strong>Native:</strong> Tidak butuh library tambahan — browser sudah support</li>
+  <li>✅ <strong>Terisolasi:</strong> Style dan logika tidak bentrok dengan halaman lain</li>
+  <li>✅ <strong>Reusable:</strong> Buat sekali, pakai di mana saja</li>
+  <li>✅ <strong>Framework-agnostic:</strong> Bekerja dengan React, Vue, Angular, atau plain HTML</li>
+  <li>✅ <strong>Standar W3C:</strong> Didukung semua browser modern</li>
+</ul>
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2-1062552201">📥 Download Materi Pendukung</h2>
+<p>Klik link di bawah untuk mengunduh file materi (aktivitas download akan tercatat otomatis dengan KD-Materi=Pertemuan1):</p>
+<ul>
+  <li><a href="files/panduan-haxcms.pdf" download="">📄 Download PDF: Panduan Lengkap HAXcms</a></li>
+  <li><a href="files/contoh-komponen.zip" download="">📦 Download ZIP: Source Code Contoh Web Component</a></li>
+</ul>
+<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 12px 16px; margin: 16px 0; font-size: 13px;">
+  <strong>📝 Catatan:</strong> Scroll halaman ini sampai bawah, klik link download, kirim komentar forum, kirim tugas, dan kerjakan kuis di bawah — semua akan tercatat sebagai aktivitas belajar Anda dengan KD-Materi=Pertemuan1!
+</div>
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2--1847077649">🎯 Evaluasi: Kuis Modul 1</h2>
+<p>Setelah membaca materi di atas, silakan kerjakan kuis berikut untuk menguji pemahaman Anda. Skor akan dicatat otomatis dengan KD-Materi=Pertemuan1!</p>
+<explode-quiz 
+  kd-materi="Pertemuan-1" 
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" 
+  quiz-category="formatif" 
+  shuffle-choices 
+  editable="true"
+  questions="[{"question":"Apa ibu kota Indonesia?","choices":["Bandung","Surabaya","Jakarta","Medan"],"correctIndex":2},{"question":"Berapa hasil dari 7 × 8?","choices":["54","56","58","60"],"correctIndex":1},{"question":"Planet terdekat dengan Matahari adalah?","choices":["Venus","Bumi","Mars","Merkurius"],"correctIndex":3},{"type":"mc","question":"soal","choices":["1","2","3","4"],"correctIndex":0}]">
+</explode-quiz>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2>💬 Forum Diskusi (forum-component v2)</h2>
+<p>Kirim komentar & balasan. KD-Materi=Pertemuan1 → tersimpan ke Forum Log + Aktivitas.</p>
+<forum-component
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+  kd-materi="Pertemuan-1"
+  forum-topic="Diskusi Modul 1: Web Component Dasar"
+  student-id="STD-001"
+  student-name="Budi Santoso"
+  student-nis="001"
+  student-absen="1"
+  student-kelas="XI-1">
+</forum-component>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2>📝 Tugas Mandiri (assignment-component v2)</h2>
+<p>Kirim tugas + link Google Drive. KD-Materi=Pertemuan1 → tersimpan ke Tugas Log + Aktivitas.</p>
+<assignment-component
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+  kd-materi="Pertemuan-1"
+  assignment-title="Tugas Modul 1: Refleksi Web Component"
+  assignment-instruction="Tuliskan refleksi: apa yang sudah dipahami tentang Web Component? Sertakan link Google Drive/Doc jika ada file pendukung."
+  student-id="STD-001"
+  student-name="Budi Santoso"
+  student-nis="001"
+  student-absen="1"
+  student-kelas="XI-1">
+</assignment-component>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2-2143424589">📊 Cek Kehadiran Anda (Attendance Tracker v2)</h2>
+<p>Di bawah ini adalah ringkasan kehadiran dan aktivitas Anda untuk KD-Materi=Pertemuan1. 6 Kriteria: Reading 3×, Quiz 1×, Assignment 1×, Download 1×, Forum 1×, Total 8×.</p>
+<grid-plate layout="1-1">
+  <div slot="col-1">
+    <attendance-tracker 
+      apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+      forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+      kd-materi="Pertemuan-1"
+      student-id="STD-001">
+    </attendance-tracker>
+  </div>
+  <div slot="col-2">
+    <engagement-score 
+      apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+      forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+      kd-materi="Pertemuan-1"
+      student-id="STD-001">
+    </engagement-score>
+  </div>
+</grid-plate>
+
+<h2 id="h2-113686388">Selanjutnya</h2>
+<p>Setelah menyelesaikan modul ini, lanjutkan ke:</p>
+<ul>
+  <li><a href="tutorial-kursus">📅 Tutorial: Cara Menambah Kuis di Hari Lain</a></li>
+  <li><a href="tutor-html">📖 Belajar Dasar HTML untuk Pemula</a></li>
+</ul>
+
+<!-- Activity Logger untuk tracking otomatis (KD-Materi=Pertemuan1) -->
+<activity-logger 
+  kd-materi="Pertemuan-1" 
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+  student-id="STD-001"
+  student-name="Budi Santoso"
+  student-nis="001"
+  student-absen="1"
+  student-kelas="XI-1">
+</activity-logger>
+ ]]>
+    </content>
+  </entry>
+  <entry>
+    <title>📖 Belajar HTML Dasar</title>
+    <id>item-tutor-html</id>
+    <updated>2026-08-03T09:57:04.000Z</updated>
+    <published>2026-07-21T20:50:20.000Z</published>
+    <summary>Tutorial HTML lengkap dari nol untuk pemula</summary>
+    <link href="https://localhost:3000/sites/haxnow/tutor-html"/>
+    
+    <content type="html">
+      <![CDATA[ <h1>📖 Belajar Dasar HTML untuk Pemula 🇮🇩</h1>
+
+<p>Tutorial lengkap HTML dari nol — tanpa perlu install apa pun. Cukup browser dan teks editor (Notepad pun bisa!). HTML adalah <strong>bahasa markup</strong> untuk membuat struktur halaman web. Ibarat rumah: HTML adalah kerangka bangunannya.</p>
+
+<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px; margin: 20px 0;">
+  <strong>⏰ Activity Logger Aktif!</strong>
+  <p style="margin: 4px 0 0 0; font-size: 13px;">Scroll membaca tutorial ini akan dicatat otomatis. Di akhir ada kuis evaluasi!</p>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔤 Bab 1: Tag HTML Dasar</h2>
+
+<p>HTML ditulis dengan <strong>tag</strong> — diapit tanda kurung siku <code>&lt; &gt;</code>. Setiap tag punya fungsi spesifik.</p>
+
+<h3>Tag Paling Sering Dipakai</h3>
+
+<table>
+  <thead>
+    <tr><th>Tag</th><th>Fungsi</th><th>Contoh</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>&lt;h1&gt; - &lt;h6&gt;</code></td><td>Heading / judul (1 = terbesar)</td><td><code>&lt;h1&gt;Judul&lt;/h1&gt;</code></td></tr>
+    <tr><td><code>&lt;p&gt;</code></td><td>Paragraf teks</td><td><code>&lt;p&gt;Ini paragraf&lt;/p&gt;</code></td></tr>
+    <tr><td><code>&lt;a&gt;</code></td><td>Link / tautan</td><td><code>&lt;a href="url"&gt;Klik&lt;/a&gt;</code></td></tr>
+    <tr><td><code>&lt;img&gt;</code></td><td>Gambar</td><td><code>&lt;img src="foto.jpg"&gt;</code></td></tr>
+    <tr><td><code>&lt;ul&gt; / &lt;ol&gt;</code></td><td>Daftar (list)</td><td><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code></td></tr>
+    <tr><td><code>&lt;table&gt;</code></td><td>Tabel data</td><td><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Sel&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></td></tr>
+    <tr><td><code>&lt;div&gt;</code></td><td>Kontainer / pembagian area</td><td><code>&lt;div&gt;...&lt;/div&gt;</code></td></tr>
+    <tr><td><code>&lt;span&gt;</code></td><td>Teks dalam satu baris</td><td><code>&lt;span&gt;teks&lt;/span&gt;</code></td></tr>
+    <tr><td><code>&lt;br&gt;</code></td><td>Baris baru (line break)</td><td><code>Baris 1&lt;br&gt;Baris 2</code></td></tr>
+    <tr><td><code>&lt;hr&gt;</code></td><td>Garis horizontal pemisah</td><td><code>&lt;hr&gt;</code></td></tr>
+  </tbody>
+</table>
+
+<h3>Struktur Dasar Halaman HTML</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Judul Halaman&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Halo Dunia!&lt;/h1&gt;
+  &lt;p&gt;Ini halaman web pertama saya.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>💡 Ingat:</strong> Sebagian besar tag HTML punya <strong>tag pembuka</strong> <code>&lt;p&gt;</code> dan <strong>tag penutup</strong> <code>&lt;/p&gt;</code>. Beberapa tag seperti <code>&lt;br&gt;</code> dan <code>&lt;img&gt;</code> tidak butuh penutup (self-closing).
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🎨 Bab 2: Atribut HTML</h2>
+
+<p><strong>Atribut</strong> adalah informasi tambahan di dalam tag. Ditulis dengan format <code>nama="nilai"</code>.</p>
+
+<h3>Atribut Wajib Tahu</h3>
+
+<table>
+  <thead><tr><th>Atribut</th><th>Digunakan di</th><th>Fungsi</th></tr></thead>
+  <tbody>
+    <tr><td><code>href</code></td><td><code>&lt;a&gt;</code></td><td>URL tujuan link</td></tr>
+    <tr><td><code>src</code></td><td><code>&lt;img&gt;</code></td><td>Path file gambar</td></tr>
+    <tr><td><code>alt</code></td><td><code>&lt;img&gt;</code></td><td>Teks alternatif jika gambar gagal</td></tr>
+    <tr><td><code>class</code></td><td>semua</td><td>Nama kelas untuk CSS styling</td></tr>
+    <tr><td><code>id</code></td><td>semua</td><td>ID unik untuk elemen</td></tr>
+    <tr><td><code>style</code></td><td>semua</td><td>CSS inline langsung</td></tr>
+    <tr><td><code>target</code></td><td><code>&lt;a&gt;</code></td><td><code>_blank</code> = buka di tab baru</td></tr>
+  </tbody>
+</table>
+
+<h3>Contoh Penggunaan:</h3>
+<pre><code>&lt;!-- Link ke Google, buka di tab baru --&gt;
+&lt;a href="https://google.com" target="_blank"&gt;Ke Google&lt;/a&gt;
+
+&lt;!-- Gambar dengan teks alternatif --&gt;
+&lt;img src="foto.jpg" alt="Foto pemandangan"&gt;
+
+&lt;!-- Paragraf dengan class untuk CSS --&gt;
+&lt;p class="highlight"&gt;Teks yang diberi gaya khusus&lt;/p&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📋 Bab 3: Membuat Daftar (List)</h2>
+
+<p>Ada dua jenis daftar di HTML:</p>
+
+<grid-plate layout="1-1" responsive-size="xs" breakpoint-sm="600">
+  <div slot="col-1" style="background: #fcfbfe; border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px;">
+    <h3 style="margin-top: 0;">Unordered List (ul)</h3>
+    <p>Daftar tanpa nomor, pakai bullet:</p>
+    <pre><code>&lt;ul&gt;
+  &lt;li&gt;Apel&lt;/li&gt;
+  &lt;li&gt;Jeruk&lt;/li&gt;
+  &lt;li&gt;Mangga&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    <p>Hasil:</p>
+    <ul><li>Apel</li><li>Jeruk</li><li>Mangga</li></ul>
+  </div>
+  <div slot="col-2" style="background: #fcfbfe; border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px;">
+    <h3 style="margin-top: 0;">Ordered List (ol)</h3>
+    <p>Daftar bernomor:</p>
+    <pre><code>&lt;ol&gt;
+  &lt;li&gt;Langkah 1&lt;/li&gt;
+  &lt;li&gt;Langkah 2&lt;/li&gt;
+  &lt;li&gt;Langkah 3&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    <p>Hasil:</p>
+    <ol><li>Langkah 1</li><li>Langkah 2</li><li>Langkah 3</li></ol>
+  </div>
+</grid-plate>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📊 Bab 4: Membuat Tabel</h2>
+
+<p>Tabel digunakan untuk menampilkan data terstruktur:</p>
+
+<pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nama&lt;/th&gt;
+      &lt;th&gt;Nilai&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Andi&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Budi&lt;/td&gt;
+      &lt;td&gt;90&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>📝 Penjelasan:</strong><br>
+  <code>&lt;thead&gt;</code> = header tabel (judul kolom)<br>
+  <code>&lt;tbody&gt;</code> = body tabel (isi data)<br>
+  <code>&lt;tr&gt;</code> = table row (baris)<br>
+  <code>&lt;th&gt;</code> = table header cell (sel judul, tebal)<br>
+  <code>&lt;td&gt;</code> = table data cell (sel data biasa)
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🎯 Bab 5: Membuat Formulir (Form)</h2>
+
+<p>Form digunakan untuk mengumpulkan input dari pengguna:</p>
+
+<pre><code>&lt;form&gt;
+  &lt;label&gt;Nama:&lt;/label&gt;
+  &lt;input type="text" placeholder="Masukkan nama"&gt;
+
+  &lt;label&gt;Email:&lt;/label&gt;
+  &lt;input type="email" placeholder="email@contoh.com"&gt;
+
+  &lt;label&gt;Password:&lt;/label&gt;
+  &lt;input type="password"&gt;
+
+  &lt;label&gt;Jenis Kelamin:&lt;/label&gt;
+  &lt;input type="radio" name="jk"&gt; Laki-laki
+  &lt;input type="radio" name="jk"&gt; Perempuan
+
+  &lt;label&gt;Hobi:&lt;/label&gt;
+  &lt;input type="checkbox"&gt; Membaca
+  &lt;input type="checkbox"&gt; Olahraga
+
+  &lt;label&gt;Pesan:&lt;/label&gt;
+  &lt;textarea rows="4"&gt;&lt;/textarea&gt;
+
+  &lt;button type="submit"&gt;Kirim&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+<h3>Tipe Input Penting:</h3>
+<table>
+  <thead><tr><th>Tipe</th><th>Fungsi</th></tr></thead>
+  <tbody>
+    <tr><td><code>text</code></td><td>Teks satu baris</td></tr>
+    <tr><td><code>email</code></td><td>Input email (validasi otomatis)</td></tr>
+    <tr><td><code>password</code></td><td>Input tersembunyi (••••)</td></tr>
+    <tr><td><code>number</code></td><td>Input angka saja</td></tr>
+    <tr><td><code>radio</code></td><td>Pilih satu dari beberapa opsi</td></tr>
+    <tr><td><code>checkbox</code></td><td>Centang banyak opsi</td></tr>
+    <tr><td><code>date</code></td><td>Pemilih tanggal</td></tr>
+    <tr><td><code>file</code></td><td>Upload file</td></tr>
+    <tr><td><code>button</code></td><td>Tombol</td></tr>
+    <tr><td><code>submit</code></td><td>Tombol kirim form</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🖼️ Bab 6: Gambar, Link, dan Multimedia</h2>
+
+<h3>Gambar</h3>
+<pre><code>&lt;img src="url-gambar.jpg" alt="Deskripsi" width="300" height="200"&gt;</code></pre>
+
+<h3>Link</h3>
+<pre><code>&lt;!-- Link biasa --&gt;
+&lt;a href="https://contoh.com"&gt;Klik di sini&lt;/a&gt;
+
+&lt;!-- Link buka di tab baru --&gt;
+&lt;a href="https://contoh.com" target="_blank"&gt;Buka Tab Baru&lt;/a&gt;
+
+&lt;!-- Link download file --&gt;
+&lt;a href="file.pdf" download&gt;Download PDF&lt;/a&gt;
+
+&lt;!-- Link ke anchor di halaman yang sama --&gt;
+&lt;a href="#bab3"&gt;Lompat ke Bab 3&lt;/a&gt;</code></pre>
+
+<h3>Video (YouTube)</h3>
+<pre><code>&lt;video-player source="https://www.youtube.com/watch?v=xxxx"&gt;&lt;/video-player&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🏗️ Bab 7: Div dan Layout Dasar</h2>
+
+<p><code>&lt;div&gt;</code> adalah elemen kontainer paling penting di HTML. Digunakan untuk mengelompokkan elemen lain.</p>
+
+<pre><code>&lt;div style="background: #f0f0f0; padding: 20px; border-radius: 8px;"&gt;
+  &lt;h3&gt;Judul Section&lt;/h3&gt;
+  &lt;p&gt;Konten di dalam div ini...&lt;/p&gt;
+  &lt;button&gt;Tombol&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+<h3>Grid Sederhana dengan grid-plate (HAX Component)</h3>
+<pre><code>&lt;grid-plate layout="1-1"&gt;
+  &lt;div slot="col-1"&gt;Kolom Kiri&lt;/div&gt;
+  &lt;div slot="col-2"&gt;Kolom Kanan&lt;/div&gt;
+&lt;/grid-plate&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🎨 Bab 8: Dasar CSS (Inline Style)</h2>
+
+<p>CSS mengatur tampilan visual. Cara termudah: gunakan atribut <code>style</code> langsung di tag.</p>
+
+<h3>Properti CSS Penting:</h3>
+<table>
+  <thead><tr><th>Properti</th><th>Fungsi</th><th>Contoh Nilai</th></tr></thead>
+  <tbody>
+    <tr><td><code>color</code></td><td>Warna teks</td><td><code>red</code>, <code>#333</code>, <code>rgb(0,0,255)</code></td></tr>
+    <tr><td><code>background</code></td><td>Latar belakang</td><td><code>#f0f0f0</code>, <code>linear-gradient(...)</code></td></tr>
+    <tr><td><code>font-size</code></td><td>Ukuran teks</td><td><code>16px</code>, <code>1.2em</code>, <code>large</code></td></tr>
+    <tr><td><code>font-weight</code></td><td>Ketebalan teks</td><td><code>bold</code>, <code>normal</code>, <code>600</code></td></tr>
+    <tr><td><code>margin</code></td><td>Jarak luar</td><td><code>10px</code>, <code>0 auto</code></td></tr>
+    <tr><td><code>padding</code></td><td>Jarak dalam</td><td><code>16px</code>, <code>8px 16px</code></td></tr>
+    <tr><td><code>border</code></td><td>Garis tepi</td><td><code>1px solid #ccc</code></td></tr>
+    <tr><td><code>border-radius</code></td><td>Sudut melengkung</td><td><code>8px</code>, <code>50%</code></td></tr>
+    <tr><td><code>text-align</code></td><td>Rata teks</td><td><code>center</code>, <code>left</code>, <code>right</code></td></tr>
+    <tr><td><code>display</code></td><td>Mode tampilan</td><td><code>flex</code>, <code>grid</code>, <code>block</code></td></tr>
+    <tr><td><code>width / height</code></td><td>Lebar / tinggi</td><td><code>100%</code>, <code>300px</code>, <code>auto</code></td></tr>
+  </tbody>
+</table>
+
+<h3>Contoh Gabungan:</h3>
+<pre><code>&lt;div style="
+  background: linear-gradient(135deg, #6750a4, #9c7cf4);
+  color: white;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 18px;
+  margin: 16px 0;
+"&gt;
+  &lt;h2&gt;Kotak Gradien Ungu&lt;/h2&gt;
+  &lt;p&gt;Ini contoh styling dengan inline CSS&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; padding: 24px; border-radius: 12px; text-align: center; font-size: 18px; margin: 16px 0;">
+  <h2 style="margin-top: 0; color: white;">Kotak Gradien Ungu</h2>
+  <p style="color: rgba(255,255,255,0.9);">Ini contoh styling dengan inline CSS ✨</p>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📝 Bab 9: Komentar HTML</h2>
+
+<p>Komentar tidak ditampilkan di browser — untuk catatan developer:</p>
+
+<pre><code>&lt;!-- Ini komentar, tidak akan muncul di halaman --&gt;
+
+&lt;!-- 
+  Komentar multi-baris:
+  Digunakan untuk dokumentasi kode
+  atau menonaktifkan sementara
+--&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>✅ Cheat Sheet Lengkap</h2>
+
+<div style="background: #1e1e1e; color: #d4d4d4; padding: 20px; border-radius: 12px; font-family: monospace; font-size: 13px; overflow-x: auto;">
+<pre style="color: #d4d4d4; margin: 0;">
+<span style="color: #6a9955;">&lt;!-- ===== CHEAT SHEET HTML ===== --&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Heading --&gt;</span>
+<span style="color: #808080;">&lt;h1&gt;</span>Judul Besar<span style="color: #808080;">&lt;/h1&gt;</span>
+<span style="color: #808080;">&lt;h2&gt;</span>Sub Judul<span style="color: #808080;">&lt;/h2&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Teks --&gt;</span>
+<span style="color: #808080;">&lt;p&gt;</span>Paragraf<span style="color: #808080;">&lt;/p&gt;</span>
+<span style="color: #808080;">&lt;strong&gt;</span>Tebal<span style="color: #808080;">&lt;/strong&gt;</span>
+<span style="color: #808080;">&lt;em&gt;</span>Miring<span style="color: #808080;">&lt;/em&gt;</span>
+<span style="color: #808080;">&lt;u&gt;</span>Garis bawah<span style="color: #808080;">&lt;/u&gt;</span>
+<span style="color: #808080;">&lt;br&gt;</span> <span style="color: #6a9955;">&lt;!-- baris baru --&gt;</span>
+<span style="color: #808080;">&lt;hr&gt;</span> <span style="color: #6a9955;">&lt;!-- garis pemisah --&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Link &amp; Gambar --&gt;</span>
+<span style="color: #808080;">&lt;a</span> <span style="color: #9cdcfe;">href=</span><span style="color: #ce9178;">"url"</span> <span style="color: #9cdcfe;">target=</span><span style="color: #ce9178;">"_blank"</span><span style="color: #808080;">&gt;</span>Link<span style="color: #808080;">&lt;/a&gt;</span>
+<span style="color: #808080;">&lt;img</span> <span style="color: #9cdcfe;">src=</span><span style="color: #ce9178;">"foto.jpg"</span> <span style="color: #9cdcfe;">alt=</span><span style="color: #ce9178;">"Deskripsi"</span><span style="color: #808080;">&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- List --&gt;</span>
+<span style="color: #808080;">&lt;ul&gt;&lt;li&gt;</span>Bullet<span style="color: #808080;">&lt;/li&gt;&lt;/ul&gt;</span>
+<span style="color: #808080;">&lt;ol&gt;&lt;li&gt;</span>Nomor<span style="color: #808080;">&lt;/li&gt;&lt;/ol&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Tabel --&gt;</span>
+<span style="color: #808080;">&lt;table&gt;</span>
+  <span style="color: #808080;">&lt;tr&gt;</span> <span style="color: #6a9955;">&lt;!-- baris --&gt;</span>
+    <span style="color: #808080;">&lt;th&gt;</span>Header<span style="color: #808080;">&lt;/th&gt;</span>
+    <span style="color: #808080;">&lt;td&gt;</span>Data<span style="color: #808080;">&lt;/td&gt;</span>
+  <span style="color: #808080;">&lt;/tr&gt;</span>
+<span style="color: #808080;">&lt;/table&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Form --&gt;</span>
+<span style="color: #808080;">&lt;input</span> <span style="color: #9cdcfe;">type=</span><span style="color: #ce9178;">"text"</span> <span style="color: #9cdcfe;">placeholder=</span><span style="color: #ce9178;">"Nama"</span><span style="color: #808080;">&gt;</span>
+<span style="color: #808080;">&lt;textarea&gt;&lt;/textarea&gt;</span>
+<span style="color: #808080;">&lt;button&gt;</span>Kirim<span style="color: #808080;">&lt;/button&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Div (kontainer) --&gt;</span>
+<span style="color: #808080;">&lt;div</span> <span style="color: #9cdcfe;">style=</span><span style="color: #ce9178;">"padding:16px; background:#f0f0f0"</span><span style="color: #808080;">&gt;</span>
+  Konten di sini
+<span style="color: #808080;">&lt;/div&gt;</span>
+
+<span style="color: #6a9955;">&lt;!-- Komentar --&gt;</span>
+<span style="color: #6a9955;">&lt;!-- tidak ditampilkan --&gt;</span>
+</pre>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🎯 Kuis Evaluasi: Dasar HTML</h2>
+
+<p>Kerjakan kuis di bawah untuk menguji pemahaman Anda tentang HTML!</p>
+
+<explode-quiz editable="false"></explode-quiz>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📊 Cek Aktivitas Belajar Anda</h2>
+
+<grid-plate layout="1-1" responsive-size="xs" breakpoint-sm="800">
+  <div slot="col-1">
+    <attendance-tracker></attendance-tracker>
+  </div>
+  <div slot="col-2">
+    <engagement-score></engagement-score>
+  </div>
+</grid-plate>
+
+<h2>🔗 Lanjutkan Belajar</h2>
+<ul>
+  <li><a href="tutorial-kursus">📅 Tutorial: Cara Menambah Kuis di Hari Lain</a></li>
+  <li><a href="materi-siswa">📚 Contoh Materi Modul 1: HAXcms &amp; Web Component</a></li>
+  <li><a href="https://www.w3schools.com/html/" target="_blank">🌐 W3Schools HTML Tutorial (English)</a></li>
+</ul>
+
+<!-- Activity Logger -->
+<activity-logger></activity-logger>
+ ]]>
+    </content>
+  </entry>
+  <entry>
+    <title>📅 Tutorial: Kursus Multi-Hari</title>
+    <id>item-tutorial-kursus</id>
+    <updated>2026-08-03T09:57:05.000Z</updated>
+    <published>2026-07-21T20:50:20.000Z</published>
+    <summary>Panduan menambah kuis dan materi untuk setiap pertemuan</summary>
+    <link href="https://localhost:3000/sites/haxnow/tutorial-kursus"/>
+    
+    <content type="html">
+      <![CDATA[ <h1>📅 Tutorial: Cara Menambah Kuis di Hari Lain untuk Kursus</h1>
+
+<p>Panduan ini menjelaskan bagaimana menyusun kursus multi-hari/multi-sesi di HAXcms, di mana setiap halaman materi memiliki <strong>kuis harian</strong> dan <strong>pelacakan aktivitas</strong> sendiri. Cocok untuk dosen/guru yang ingin membuat course terstruktur per pertemuan.</p>
+
+<h2>🎯 Konsep Dasar</h2>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 20px 0;">
+  <div style="background: #f3f0fa; border-radius: 12px; padding: 20px; text-align: center;">
+    <span style="font-size: 36px;">📄</span>
+    <h3 style="color: #6750a4; margin: 8px 0;">1 Halaman</h3>
+    <p style="font-size: 13px; color: #666; margin: 0;">= 1 Pertemuan/Hari</p>
+  </div>
+  <div style="background: #e8f5e9; border-radius: 12px; padding: 20px; text-align: center;">
+    <span style="font-size: 36px;">📚</span>
+    <h3 style="color: #2e7d32; margin: 8px 0;">Materi + Kuis</h3>
+    <p style="font-size: 13px; color: #666; margin: 0;">Gabungan konten &amp; evaluasi</p>
+  </div>
+  <div style="background: #e3f2fd; border-radius: 12px; padding: 20px; text-align: center;">
+    <span style="font-size: 36px;">📊</span>
+    <h3 style="color: #1565c0; margin: 8px 0;">Tracker</h3>
+    <p style="font-size: 13px; color: #666; margin: 0;">Aktivitas otomatis tercatat</p>
+  </div>
+  <div style="background: #fce4ec; border-radius: 12px; padding: 20px; text-align: center;">
+    <span style="font-size: 36px;">📤</span>
+    <h3 style="color: #c62828; margin: 8px 0;">Google Sheets</h3>
+    <p style="font-size: 13px; color: #666; margin: 0;">Semua hasil ke satu sheet</p>
+  </div>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Metode 1: Halaman Manual per Pertemuan (Direkomendasikan)</h2>
+
+<p>Buat satu halaman baru untuk setiap pertemuan. Setiap halaman punya materi sendiri, kuis sendiri, dan activity logger sendiri.</p>
+
+<h3>Langkah 1: Buat Halaman Baru via HAXcms Editor</h3>
+
+<ol>
+  <li>Buka HAXcms editor</li>
+  <li>Klik <strong>Pages → Add Page</strong> di sidebar</li>
+  <li>Beri judul sesuai pertemuan, contoh: <strong>"Pertemuan 2: Lit Element Dasar"</strong></li>
+  <li>Tentukan slug URL: <code>pertemuan-2</code></li>
+</ol>
+
+<h3>Langkah 2: Isi Konten Materi</h3>
+
+<p>Tulis materi pembelajaran seperti biasa. Gunakan heading, paragraf, gambar, tabel, dll.</p>
+
+<h3>Langkah 3: Tambahkan Kuis di Akhir Halaman</h3>
+
+<p>Ada dua cara menambah kuis:</p>
+
+<h4>Cara A — Via Element Tray (Mudah)</h4>
+<ol>
+  <li>Klik <strong>Tambah Elemen (+)</strong> di panel kiri</li>
+  <li>Cari <strong>"Explode Quiz"</strong></li>
+  <li>Klik atau seret ke posisi yang diinginkan di halaman</li>
+</ol>
+
+<h4>Cara B — Via Source Mode (Kontrol Penuh)</h4>
+<ol>
+  <li>Klik tombol <strong>Source</strong> di editor</li>
+  <li>Paste tag berikut di posisi yang diinginkan:</li>
+</ol>
+
+<pre><code>&lt;explode-quiz editable="false"&gt;&lt;/explode-quiz&gt;</code></pre>
+
+<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>💡 Tips:</strong> <code>editable="false"</code> menyembunyikan tombol edit soal untuk siswa. Dosen tetap bisa edit soal saat membuka halaman di HAX Editor.
+</div>
+
+<h3>Langkah 4: Tambahkan Activity Logger</h3>
+
+<p>Di bagian paling bawah halaman (setelah semua konten), paste:</p>
+
+<pre><code>&lt;activity-logger&gt;&lt;/activity-logger&gt;</code></pre>
+
+<p>Ini akan mengaktifkan pelacakan scroll, klik link, download, dan kuis di halaman tersebut.</p>
+
+<h3>Langkah 5 (Opsional): Tambahkan Attendance Tracker</h3>
+
+<pre><code>&lt;attendance-tracker&gt;&lt;/attendance-tracker&gt;
+&lt;engagement-score&gt;&lt;/engagement-score&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Metode 2: Dashboard Full Quiz (Satu Tag untuk Semua)</h2>
+
+<p>Gunakan <code>&lt;full-quiz-dashboard&gt;</code> untuk halaman yang langsung menyediakan kuis, attendance, heatmap, dan gradebook dalam satu komponen.</p>
+
+<pre><code>&lt;full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/YOUR_ID/exec"&gt;&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<p>Dengan atribut <code>apps-script-url</code>, semua hasil otomatis tersimpan ke Google Sheets.</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📋 Template Halaman Pertemuan</h2>
+
+<p>Copy-paste template ini untuk setiap halaman pertemuan baru (via Source Mode):</p>
+
+<pre><code>&lt;h1&gt;📚 Pertemuan [N]: [Judul Materi]&lt;/h1&gt;
+
+&lt;div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px; margin: 16px 0;"&gt;
+  &lt;strong&gt;⏰ Activity Logger Aktif!&lt;/strong&gt;
+  &lt;p style="margin: 4px 0 0 0; font-size: 13px;"&gt;Aktivitas Anda di halaman ini dicatat otomatis.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;📖 Materi&lt;/h2&gt;
+&lt;!-- Isi materi di sini --&gt;
+&lt;p&gt;...konten pembelajaran...&lt;/p&gt;
+
+&lt;h2&gt;📥 Download&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="files/materi-[N].pdf" download&gt;📄 PDF Materi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;🎯 Kuis&lt;/h2&gt;
+&lt;explode-quiz editable="false"&gt;&lt;/explode-quiz&gt;
+
+&lt;h2&gt;📊 Kehadiran&lt;/h2&gt;
+&lt;attendance-tracker&gt;&lt;/attendance-tracker&gt;
+&lt;engagement-score&gt;&lt;/engagement-score&gt;
+
+&lt;activity-logger&gt;&lt;/activity-logger&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🗂️ Struktur Folder yang Disarankan</h2>
+
+<pre><code>pages/
+├── pertemuan-1/
+│   └── index.html    (Materi + Kuis Hari 1)
+├── pertemuan-2/
+│   └── index.html    (Materi + Kuis Hari 2)
+├── pertemuan-3/
+│   └── index.html    (Materi + Kuis Hari 3)
+├── pertemuan-4/
+│   └── index.html    (Materi + Kuis Hari 4)
+└── ujian-akhir/
+    └── index.html    (Ujian Akhir - semua materi)
+</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📊 Integrasi Google Sheets — Satu Sheet untuk Semua Hari</h2>
+
+<p>Semua halaman pertemuan bisa menggunakan <strong>satu Google Sheet yang sama</strong>. Setup:</p>
+
+<ol>
+  <li><strong>Buat satu Google Sheet</strong> untuk seluruh course</li>
+  <li><strong>Deploy Apps Script</strong> dari <code>Code.gs</code> satu kali</li>
+  <li><strong>Gunakan URL yang sama</strong> di semua halaman pertemuan</li>
+</ol>
+
+<p>Dengan <code>&lt;full-quiz-dashboard&gt;</code>:</p>
+<pre><code>&lt;full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/SAME_ID/exec"&gt;&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<p>Sheet akan otomatis punya data dari semua pertemuan. Kolom "Tipe Aktivitas" membedakan sumber data (reading, quiz, discussion, dll).</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📝 Mengedit Soal Kuis di HAXcms</h2>
+
+<p>Saat dosen membuka halaman di HAXcms editor:</p>
+
+<ol>
+  <li>Komponen kuis akan menampilkan tombol <strong>"Edit Soal Kuis"</strong></li>
+  <li>Klik untuk membuka panel editor soal</li>
+  <li>Tambah/edit/hapus soal sesuai kebutuhan</li>
+  <li>Klik <strong>Simpan &amp; Keluar</strong></li>
+</ol>
+
+<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>📝 Catatan:</strong> Soal kuis tersimpan di localStorage browser. Untuk deployment ke production, soal sebaiknya di-hardcode di atribut <code>questions</code> atau dikelola via Google Sheets.
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔧 Checklist Dosen: Persiapan Sebelum Kuliah</h2>
+
+<table>
+  <thead>
+    <tr><th>#</th><th>Tugas</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>Buat halaman pertemuan baru di HAXcms</td><td>⬜</td></tr>
+    <tr><td>2</td><td>Tulis materi pembelajaran</td><td>⬜</td></tr>
+    <tr><td>3</td><td>Tambah komponen <code>&lt;explode-quiz&gt;</code></td><td>⬜</td></tr>
+    <tr><td>4</td><td>Edit soal kuis (via HAX Editor)</td><td>⬜</td></tr>
+    <tr><td>5</td><td>Tambah <code>&lt;activity-logger&gt;</code> di akhir halaman</td><td>⬜</td></tr>
+    <tr><td>6</td><td>Tambah link download materi (PDF/ZIP)</td><td>⬜</td></tr>
+    <tr><td>7</td><td>Update site.json — tambahkan halaman ke navigasi</td><td>⬜</td></tr>
+    <tr><td>8</td><td>Test halaman sebagai siswa (buka di tab biasa, bukan editor)</td><td>⬜</td></tr>
+    <tr><td>9</td><td>Verifikasi data masuk ke Google Sheets</td><td>⬜</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔗 Halaman Terkait</h2>
+<ul>
+  <li><a href="materi-siswa">📚 Contoh Halaman Materi Siswa (Modul 1)</a></li>
+  <li><a href="tutorial-apps-script">📖 Tutorial Setup Google Apps Script</a></li>
+  <li><a href="full-dashboard">🎯 Demo Full Quiz Dashboard</a></li>
+  <li><a href="dashboard-siswa">📊 Dashboard Siswa — Lihat Nilai dari Sheet</a></li>
+  <li><a href="tutorial-dashboard-siswa">📖 Tutorial: Fetch Data dari Sheet</a></li>
+  <li><a href="tutor-html">📖 Belajar Dasar HTML</a></li>
+</ul>
+ ]]>
+    </content>
+  </entry>
+  <entry>
+    <title>📊 Tutorial: 1 Sheet = 1 Pertemuan</title>
+    <id>item-tutorial-sheet</id>
+    <updated>2026-08-03T09:57:05.000Z</updated>
+    <published>2026-07-21T20:50:20.000Z</published>
+    <summary>Setup Google Sheets auto-create sheet tab per pertemuan</summary>
+    <link href="https://localhost:3000/sites/haxnow/tutorial-sheet-per-pertemuan"/>
+    
+    <content type="html">
+      <![CDATA[ <h1>📊 Tutorial: 1 Google Sheet = 1 Course — 1 Sheet Tab = 1 Pertemuan</h1>
+
+<p>Cara setup agar <strong>satu Google Spreadsheet</strong> menampung seluruh data course, dan setiap <strong>sheet tab</strong> otomatis jadi satu pertemuan. Data dari semua halaman HAXcms masuk ke spreadsheet yang sama, terorganisir rapi per pertemuan.</p>
+
+<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; border-radius: 16px; padding: 24px; margin: 24px 0;">
+  <h2 style="margin-top: 0; color: white;">🎯 Konsep</h2>
+  <table style="width: 100%; border-collapse: collapse; color: white;">
+    <thead>
+      <tr style="border-bottom: 1px solid rgba(255,255,255,0.3);">
+        <th style="text-align: left; padding: 8px;">1 Spreadsheet</th>
+        <th style="text-align: left; padding: 8px;">1 Sheet Tab</th>
+        <th style="text-align: left; padding: 8px;">1 Atribut HTML</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 8px;">= 1 Course/Mata Kuliah</td>
+        <td style="padding: 8px;">= 1 Pertemuan/Hari</td>
+        <td style="padding: 8px;"><code style="background: rgba(255,255,255,0.2); padding: 2px 6px; border-radius: 4px;">sheet-name="Pertemuan 1"</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Langkah 1: Buat 1 Google Spreadsheet untuk 1 Course</h2>
+<ol>
+  <li>Buka <a href="https://sheets.google.com" target="_blank">sheets.google.com</a></li>
+  <li>Klik <strong>"Blank"</strong> — buat spreadsheet baru</li>
+  <li>Beri nama: <strong>"Course: HAXcms &amp; Web Component"</strong> (atau nama course Anda)</li>
+  <li>Jangan buat sheet tab dulu — Apps Script akan auto-create!</li>
+</ol>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Langkah 2: Copy-Paste Code.gs ke Apps Script</h2>
+<ol>
+  <li>Di spreadsheet, klik <strong>Extensions → Apps Script</strong></li>
+  <li>Hapus kode default yang ada</li>
+  <li>Copy-paste seluruh kode dari <code>Code.gs</code> (tersedia di <code>custom/src/Code.gs</code>)</li>
+  <li>Klik <strong>Save</strong> (ikon disket) — beri nama project: "QuizHandler"</li>
+</ol>
+
+<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>📝 Apa yang dilakukan Code.gs v2?</strong><br>
+  • <code>doPost()</code> — Menerima data kuis (nama, skor, sheet) via POST JSON<br>
+  • <code>saveToSheet()</code> — Auto-create sheet tab jika belum ada, lalu append data<br>
+  • <code>updateSummary()</code> — Baca seluruh sheet tab dan buat agregasi di sheet "Rangkuman"<br>
+  • Setiap sheet tab punya header: Timestamp | Nama | Skor | Total Soal | Status
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Langkah 3: Deploy sebagai Web App</h2>
+<ol>
+  <li>Klik <strong>Deploy → New deployment</strong></li>
+  <li>Klik ikon gear ⚙️ — pilih <strong>Web app</strong></li>
+  <li>Isi konfigurasi:
+    <ul>
+      <li><strong>Description:</strong> "Quiz API"</li>
+      <li><strong>Execute as:</strong> Me</li>
+      <li><strong>Who has access:</strong> Anyone</li>
+    </ul>
+  </li>
+  <li>Klik <strong>Deploy</strong></li>
+  <li>Klik <strong>Authorize access</strong> — pilih akun Google Anda</li>
+  <li>Jika muncul peringatan "Google hasn't verified this app":
+    <ul>
+      <li>Klik <strong>Advanced</strong></li>
+      <li>Klik <strong>Go to QuizHandler (unsafe)</strong></li>
+      <li>Klik <strong>Allow</strong></li>
+    </ul>
+  </li>
+  <li><strong>COPY URL Web App!</strong> Format: <code>https://script.google.com/macros/s/AKfycbx.../exec</code></li>
+</ol>
+
+<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>⚠️ Penting:</strong> URL ini akan dipakai di SEMUA halaman pertemuan. Simpan baik-baik!
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Langkah 4: Setup di Halaman HAXcms</h2>
+
+<p>Di setiap halaman pertemuan, tambahkan dashboard dengan atribut <code>sheet-name</code> yang berbeda:</p>
+
+<h3>Halaman Pertemuan 1</h3>
+<pre><code>&lt;h1&gt;📚 Pertemuan 1: Pengenalan HAXcms&lt;/h1&gt;
+
+&lt;p&gt;Materi pembelajaran hari ini...&lt;/p&gt;
+
+&lt;full-quiz-dashboard 
+  apps-script-url="https://script.google.com/macros/s/YOUR_ID/exec"
+  sheet-name="Pertemuan 1"&gt;
+&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<h3>Halaman Pertemuan 2</h3>
+<pre><code>&lt;h1&gt;📚 Pertemuan 2: Lit Element Dasar&lt;/h1&gt;
+
+&lt;p&gt;Materi pembelajaran hari ini...&lt;/p&gt;
+
+&lt;full-quiz-dashboard 
+  apps-script-url="https://script.google.com/macros/s/SAME_ID/exec"
+  sheet-name="Pertemuan 2"&gt;
+&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<h3>Halaman Pertemuan 3</h3>
+<pre><code>&lt;full-quiz-dashboard 
+  apps-script-url="https://script.google.com/macros/s/SAME_ID/exec"
+  sheet-name="Pertemuan 3"&gt;
+&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>✅ Perhatikan:</strong> URL Apps Script SAMA untuk semua halaman. Hanya <code>sheet-name</code> yang berbeda!
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📊 Hasil Akhir di Google Sheets</h2>
+
+<p>Setelah beberapa siswa mengerjakan kuis dari berbagai pertemuan, spreadsheet Anda akan terlihat seperti ini:</p>
+
+<h3>Sheet Tab: "Pertemuan 1"</h3>
+<table>
+  <thead>
+    <tr><th>Timestamp</th><th>Nama</th><th>Skor (%)</th><th>Total Soal</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr style="background: #d1fae5;"><td>22/07/2026 10:30</td><td>Andi</td><td>80</td><td>5</td><td>LULUS</td></tr>
+    <tr style="background: #d1fae5;"><td>22/07/2026 10:45</td><td>Budi</td><td>100</td><td>5</td><td>LULUS</td></tr>
+    <tr style="background: #fee2e2;"><td>22/07/2026 11:00</td><td>Cici</td><td>60</td><td>5</td><td>TIDAK LULUS</td></tr>
+  </tbody>
+</table>
+
+<h3>Sheet Tab: "Pertemuan 2"</h3>
+<table>
+  <thead>
+    <tr><th>Timestamp</th><th>Nama</th><th>Skor (%)</th><th>Total Soal</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr style="background: #d1fae5;"><td>23/07/2026 10:30</td><td>Andi</td><td>90</td><td>5</td><td>LULUS</td></tr>
+    <tr style="background: #fee2e2;"><td>23/07/2026 10:45</td><td>Budi</td><td>40</td><td>5</td><td>TIDAK LULUS</td></tr>
+  </tbody>
+</table>
+
+<h3>Sheet Tab: "Rangkuman" (Auto-generated)</h3>
+<table>
+  <thead>
+    <tr><th>Nama</th><th>Total Kuis</th><th>Rata-rata Skor</th><th>Skor Tertinggi</th><th>Skor Terendah</th><th>Jumlah Pertemuan</th><th>Status Terakhir</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Andi</td><td>2</td><td>85</td><td>90</td><td>80</td><td>2</td><td>LULUS</td></tr>
+    <tr><td>Budi</td><td>2</td><td>70</td><td>100</td><td>40</td><td>2</td><td>TIDAK LULUS</td></tr>
+    <tr><td>Cici</td><td>1</td><td>60</td><td>60</td><td>60</td><td>1</td><td>TIDAK LULUS</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔄 Alur Data Lengkap</h2>
+
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 600px; margin: 20px auto; font-size: 14px;">
+
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="background: #f3f0fa; border: 2px solid #6750a4; border-radius: 10px; padding: 12px 16px; min-width: 180px; text-align: center; flex-shrink: 0;">
+      <strong>👤 Siswa</strong><br>
+      <span style="font-size: 12px; color: #666;">Kerjakan kuis di<br>halaman Pertemuan N</span>
+    </div>
+    <span style="font-size: 24px; color: #6750a4;">→</span>
+    <div style="background: #e8f5e9; border: 2px solid #4caf50; border-radius: 10px; padding: 12px 16px; min-width: 180px; text-align: center; flex-shrink: 0;">
+      <strong>🌐 Browser</strong><br>
+      <span style="font-size: 12px; color: #666;">Kirim POST JSON:<br><code>{"name":"Andi","score":80,"sheet":"Pertemuan 2"}</code></span>
+    </div>
+    <span style="font-size: 24px; color: #6750a4;">→</span>
+    <div style="background: #fff3e0; border: 2px solid #ff9800; border-radius: 10px; padding: 12px 16px; min-width: 180px; text-align: center; flex-shrink: 0;">
+      <strong>⚡ Apps Script</strong><br>
+      <span style="font-size: 12px; color: #666;">Terima JSON →<br>Auto-create sheet tab<br>"Pertemuan 2" → Simpan</span>
+    </div>
+    <span style="font-size: 24px; color: #6750a4;">→</span>
+    <div style="background: #e3f2fd; border: 2px solid #2196f3; border-radius: 10px; padding: 12px 16px; min-width: 180px; text-align: center; flex-shrink: 0;">
+      <strong>📊 Google Sheets</strong><br>
+      <span style="font-size: 12px; color: #666;">Data muncul di tab<br>"Pertemuan 2"<br>+ Update "Rangkuman"</span>
+    </div>
+  </div>
+
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📝 Parameter Data yang Dikirim</h2>
+
+<p>Saat kuis selesai, dashboard mengirim data berikut ke Apps Script:</p>
+
+<table>
+  <thead>
+    <tr><th>Parameter</th><th>Tipe</th><th>Keterangan</th><th>Contoh</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>name</code></td><td>String</td><td>Nama siswa (wajib)</td><td>"Andi Pratama"</td></tr>
+    <tr><td><code>score</code></td><td>Number</td><td>Skor 0-100 (wajib)</td><td>80</td></tr>
+    <tr><td><code>sheet</code></td><td>String</td><td>Nama sheet tab tujuan (wajib)</td><td>"Pertemuan 1"</td></tr>
+    <tr><td><code>timestamp</code></td><td>ISO String</td><td>Waktu pengerjaan</td><td>"2026-07-22T10:30:00Z"</td></tr>
+    <tr><td><code>totalQuestions</code></td><td>Number</td><td>Jumlah soal (default 5)</td><td>5</td></tr>
+  </tbody>
+</table>
+
+<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>📝 Parameter <code>sheet</code>:</strong> Diambil otomatis dari atribut HTML <code>sheet-name="Pertemuan 1"</code>. Anda tidak perlu mengirim manual — dashboard yang handle!
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📋 Checklist Setup Lengkap</h2>
+
+<table>
+  <thead>
+    <tr><th>#</th><th>Langkah</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>Buat 1 Google Spreadsheet untuk seluruh course</td><td>⬜</td></tr>
+    <tr><td>2</td><td>Buka Extensions → Apps Script</td><td>⬜</td></tr>
+    <tr><td>3</td><td>Copy-paste Code.gs ke editor</td><td>⬜</td></tr>
+    <tr><td>4</td><td>Save project + Deploy as Web App</td><td>⬜</td></tr>
+    <tr><td>5</td><td>Copy URL Web App</td><td>⬜</td></tr>
+    <tr><td>6</td><td>Di HAXcms: buat halaman Pertemuan 1</td><td>⬜</td></tr>
+    <tr><td>7</td><td>Tambah <code>&lt;full-quiz-dashboard apps-script-url="URL" sheet-name="Pertemuan 1"&gt;</code></td><td>⬜</td></tr>
+    <tr><td>8</td><td>Ulangi langkah 6-7 untuk Pertemuan 2, 3, dst</td><td>⬜</td></tr>
+    <tr><td>9</td><td>Test: kerjakan kuis → cek sheet tab muncul</td><td>⬜</td></tr>
+    <tr><td>10</td><td>Cek sheet "Rangkuman" untuk agregasi</td><td>⬜</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔧 Troubleshooting</h2>
+
+<h3>❌ Data tidak muncul di sheet</h3>
+<ul>
+  <li>Cek Console browser (F12) — lihat apakah ada error CORS</li>
+  <li>Apps Script harus di-deploy sebagai <strong>Web app</strong>, bukan API Executable</li>
+  <li>"Who has access" harus <strong>Anyone</strong></li>
+  <li>Setelah deploy ulang (edit kode), Anda dapat URL BARU — update di semua halaman!</li>
+</ul>
+
+<h3>❌ Sheet tab tidak auto-create</h3>
+<ul>
+  <li>Pastikan atribut <code>sheet-name</code> tertulis benar (case-sensitive)</li>
+  <li>Cek di Apps Script editor → Executions → lihat error log</li>
+  <li>Jalankan fungsi <code>test()</code> manual dari editor untuk debug</li>
+</ul>
+
+<h3>❌ Error: "Google hasn't verified this app"</h3>
+<ul>
+  <li>Ini normal untuk script pribadi</li>
+  <li>Klik Advanced → Go to QuizHandler (unsafe) → Allow</li>
+  <li>Hanya muncul saat pertama kali authorize</li>
+</ul>
+
+<h3>❌ Ingin update kode Apps Script?</h3>
+<ul>
+  <li>Edit kode di editor Apps Script</li>
+  <li>Klik Deploy → New deployment — ini akan generate <strong>URL BARU</strong></li>
+  <li>Update URL di semua halaman HAXcms</li>
+  <li>Alternatif: Deploy → Manage deployments → Edit (icon pensil) → Version: New → Deploy</li>
+</ul>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔗 Halaman Terkait</h2>
+<ul>
+  <li><a href="full-dashboard">🎯 Demo Full Quiz Dashboard</a></li>
+  <li><a href="tutorial-kursus">📅 Tutorial: Kursus Multi-Hari</a></li>
+  <li><a href="materi-siswa">📚 Contoh Halaman Materi Siswa</a></li>
+  <li><a href="tutor-html">📖 Belajar HTML Dasar</a></li>
+</ul>
+ ]]>
+    </content>
+  </entry>
+  <entry>
     <title>dashboard quiz</title>
     <id>item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec</id>
-    <updated>2026-08-03T06:22:06.000Z</updated>
+    <updated>2026-08-03T09:56:59.000Z</updated>
     <published>2026-07-21T22:31:30.000Z</published>
     <summary>fulldashboard
 
@@ -2876,7 +2879,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>baru1</title>
     <id>item-df69b4a8-b470-4c1e-be89-8833ce3452da</id>
-    <updated>2026-08-03T06:22:01.000Z</updated>
+    <updated>2026-08-03T09:56:53.000Z</updated>
     <published>2026-07-22T02:35:16.000Z</published>
     <summary>
 📚 Pertemuan 1: Pengenalan HAXcms
@@ -2900,7 +2903,7 @@ Materi pembelajaran hari ini...
   <entry>
     <title>baru2</title>
     <id>item-f804cc8e-b786-47bf-ba57-03edb9924416</id>
-    <updated>2026-08-03T06:22:08.000Z</updated>
+    <updated>2026-08-03T09:57:01.000Z</updated>
     <published>2026-07-22T02:44:24.000Z</published>
     <summary>
 📚 Pertemuan 2: Lit Element Dasar
@@ -2922,7 +2925,7 @@ Materi pembelajaran hari ini...
   <entry>
     <title>Forum diskusi</title>
     <id>item-07f619ec-0cd5-4853-b79c-1b12f94df811</id>
-    <updated>2026-08-03T06:22:11.000Z</updated>
+    <updated>2026-08-03T09:57:05.000Z</updated>
     <published>2026-07-27T10:20:46.000Z</published>
     <summary>Diskusi
 hehehehe
@@ -2939,7 +2942,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-095e94fc-dc62-4f5c-9037-eb5f5095ba1c</id>
-    <updated>2026-08-03T06:22:01.000Z</updated>
+    <updated>2026-08-03T09:56:52.000Z</updated>
     <published>2026-07-27T12:47:40.000Z</published>
     <summary>
 
@@ -2947,11 +2950,11 @@ hehehehe
     <link href="https://localhost:3000/sites/haxnow/new-page-3"/>
     
     <content type="html">
-      <![CDATA[ 
-<p><explode-quiz questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa ibu kota Jawa Timur?&quot;,&quot;image&quot;:&quot;sfdsfds&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;fdsafdsafdsa c scdasdsavc dsafdsafdsfxv Nandur&quot;,&quot;image&quot;:&quot;fdsafds&quot;,&quot;choices&quot;:[&quot;zxxzxZ&quot;,&quot;fdsfdsafd&quot;,&quot;dsfdsa&quot;,&quot;xzxZx&quot;],&quot;correctIndex&quot;:1}]" spreadsheet-id="" script-function-name="submitQuizResult" quiz-category="formatif" sheet-name="Pertemuan" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto"></explode-quiz>
+      <![CDATA[ ﻿
+<p><explode-quiz questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa ibu kota Jawa Timur?&quot;,&quot;image&quot;:&quot;sfdsfds&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;fdsafdsafdsa c scdasdsavc dsafdsafdsfxv Nandur&quot;,&quot;image&quot;:&quot;fdsafds&quot;,&quot;choices&quot;:[&quot;zxxzxZ&quot;,&quot;fdsfdsafd&quot;,&quot;dsfdsa&quot;,&quot;xzxZx&quot;],&quot;correctIndex&quot;:1}]" spreadsheet-id="" script-function-name="submitQuizResult" quiz-category="formatif" kd-materi="Pertemuan" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto"></explode-quiz>
 
 </p>
-<p>  <quiz-dashboard-lite2 quiz-tab-hidden view-mode="student" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" sheet-name="Pertemuan 1" _active-tab="2" _user="{&quot;studentId&quot;:&quot;STD-65108053&quot;,&quot;nama&quot;:&quot;Andy Yulianto&quot;,&quot;email&quot;:&quot;wildanhabib051@gmail.com&quot;,&quot;nis&quot;:234,&quot;absen&quot;:2,&quot;kelas&quot;:&quot;XI-1&quot;}">
+<p>  <quiz-dashboard-lite2 quiz-tab-hidden view-mode="student" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" kd-materi="Pertemuan-1" _active-tab="2" _user="{&quot;studentId&quot;:&quot;STD-65108053&quot;,&quot;nama&quot;:&quot;Andy Yulianto&quot;,&quot;email&quot;:&quot;wildanhabib051@gmail.com&quot;,&quot;nis&quot;:234,&quot;absen&quot;:2,&quot;kelas&quot;:&quot;XI-1&quot;}">
     </quiz-dashboard-lite2>
 </p>
 <p></p>
@@ -2962,13 +2965,14 @@ hehehehe
 <p></p>
 <p></p>
 <p></p>
+
  ]]>
     </content>
   </entry>
   <entry>
     <title>New Page</title>
     <id>item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29</id>
-    <updated>2026-08-03T06:22:02.000Z</updated>
+    <updated>2026-08-03T09:56:53.000Z</updated>
     <published>2026-08-01T02:37:08.000Z</published>
     <summary>Tugas
 
@@ -3017,7 +3021,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b</id>
-    <updated>2026-08-03T06:22:03.000Z</updated>
+    <updated>2026-08-03T09:56:54.000Z</updated>
     <published>2026-08-01T06:48:59.000Z</published>
     <summary>
 
@@ -3040,7 +3044,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-5015eab1-d932-4139-a7a0-3216ce339bfa</id>
-    <updated>2026-08-03T06:22:03.000Z</updated>
+    <updated>2026-08-03T09:56:54.000Z</updated>
     <published>2026-08-01T08:46:03.000Z</published>
     <summary>
 
@@ -3081,7 +3085,7 @@ hehehehe
   <entry>
     <title>Kuis AKM Campuran</title>
     <id>item-kuis-akm-campuran</id>
-    <updated>2026-08-03T06:22:07.000Z</updated>
+    <updated>2026-08-03T09:56:59.000Z</updated>
     <published>2026-08-01T08:53:39.000Z</published>
     <summary>Kuis AKM dengan generator soal: template lokal atau Bank Soal (sheet Bank Soal)</summary>
     <link href="https://localhost:3000/sites/haxnow/kuis-akm-campuran"/>
