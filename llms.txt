@@ -41,8 +41,8 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [📊 Tutorial: 1 Sheet = 1 Pertemuan](https://localhost:3000/sites/haxnow/pages/tutorial-sheet-per-pertemuan/index.md): Setup Google Sheets auto-create sheet tab per pertemuan
 - [Forum diskusi](https://localhost:3000/sites/haxnow/pages/item-07f619ec-0cd5-4853-b79c-1b12f94df811/index.md): Diskusi hehehehe &#60;h1&#62;🔗 Integrasi Aktivitas + Tugas + Forum + Kuis&#60;/h1&#62; &#60;div class=
 - [📊 Dashboard Siswa - Lihat Nilai](https://localhost:3000/sites/haxnow/pages/dashboard-siswa/index.md): Halaman dashboard siswa yang membaca data dari Google Sheets
-- [PANDUAN BELAJAR MANDIRI: MENJADI PEMBELAJAR SEUMUR HIDUP](https://localhost:3000/sites/haxnow/pages/item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5/index.md): belajar kritis
 - [📘 Tutorial: Halaman Aktivitas Harian & Google Sheets](https://localhost:3000/sites/haxnow/pages/tutorial-aktivitas-harian/index.md): Cara kerja halaman aktivitas harian: baca, download, forum, tugas, kuis → Google Sheets
+- [PANDUAN BELAJAR MANDIRI: MENJADI PEMBELAJAR SEUMUR HIDUP](https://localhost:3000/sites/haxnow/pages/item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5/index.md): belajar kritis
 
 ## Optional
 - [Search index](https://localhost:3000/sites/haxnow/lunrSearchIndex.json): Lunr corpus for quick full-text retrieval.
