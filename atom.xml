@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-08-03T03:23:56.000Z</updated>
+  <updated>2026-08-03T03:49:39.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -12,7 +12,7 @@
   <entry>
     <title>Welcome to haxnow</title>
     <id>item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c</id>
-    <updated>2026-08-02T23:11:10.000Z</updated>
+    <updated>2026-08-03T03:49:21.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Welcome to your new HAX site! Click edit on the top bar to get started
 
@@ -207,7 +207,7 @@ What</summary>
   <entry>
     <title>Dokumentasi Elemen</title>
     <id>item-doc-elements</id>
-    <updated>2026-08-02T23:11:13.000Z</updated>
+    <updated>2026-08-03T03:49:26.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Dokumentasi semua elemen interaktif yang tersedia di HAXcms</summary>
     <link href="https://localhost:3000/sites/haxnow/elemendokumen"/>
@@ -308,7 +308,7 @@ What</summary>
   <entry>
     <title>Explode Quiz - Kuis Interaktif</title>
     <id>item-doc-kuis</id>
-    <updated>2026-08-02T23:11:13.000Z</updated>
+    <updated>2026-08-03T03:49:26.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi elemen kuis interaktif</summary>
     <link href="https://localhost:3000/sites/haxnow/kuis-interaktif"/>
@@ -408,7 +408,7 @@ What</summary>
   <entry>
     <title>Dashboard Kuis Lite</title>
     <id>item-doc-dashboard</id>
-    <updated>2026-08-02T23:11:14.000Z</updated>
+    <updated>2026-08-03T03:49:27.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi dashboard kuis ringan</summary>
     <link href="https://localhost:3000/sites/haxnow/dashboard-kuis"/>
@@ -507,7 +507,7 @@ What</summary>
   <entry>
     <title>Sistem Kehadiran</title>
     <id>item-doc-kehadiran</id>
-    <updated>2026-08-02T23:11:14.000Z</updated>
+    <updated>2026-08-03T03:49:27.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo sistem kehadiran dan pelacakan aktivitas</summary>
     <link href="https://localhost:3000/sites/haxnow/kehadiran"/>
@@ -610,7 +610,7 @@ What</summary>
   <entry>
     <title>Notif Element</title>
     <id>item-doc-notifikasi</id>
-    <updated>2026-08-02T23:11:15.000Z</updated>
+    <updated>2026-08-03T03:49:28.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi elemen notifikasi</summary>
     <link href="https://localhost:3000/sites/haxnow/notifikasi"/>
@@ -706,7 +706,7 @@ notif.addEventListener('notif-hide', (e) => {
   <entry>
     <title>Todo List</title>
     <id>item-doc-todo</id>
-    <updated>2026-08-02T23:11:15.000Z</updated>
+    <updated>2026-08-03T03:49:28.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi daftar tugas</summary>
     <link href="https://localhost:3000/sites/haxnow/todo-list"/>
@@ -822,7 +822,7 @@ todoList.tasks = [
   <entry>
     <title>Full Quiz Dashboard</title>
     <id>item-doc-full-dashboard</id>
-    <updated>2026-08-02T23:11:16.000Z</updated>
+    <updated>2026-08-03T03:49:29.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dashboard lengkap dengan Apps Script</summary>
     <link href="https://localhost:3000/sites/haxnow/full-dashboard"/>
@@ -898,7 +898,7 @@ todoList.tasks = [
   <entry>
     <title>Tutorial Attendance System</title>
     <id>item-doc-tutorial-attendance</id>
-    <updated>2026-08-02T23:11:16.000Z</updated>
+    <updated>2026-08-03T03:49:30.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan lengkap sistem kehadiran dan pelacakan aktivitas</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-attendance"/>
@@ -1041,7 +1041,7 @@ location.reload();</code></pre>
   <entry>
     <title>Tutorial Google Apps Script</title>
     <id>item-doc-tutorial-apps-script</id>
-    <updated>2026-08-02T23:11:17.000Z</updated>
+    <updated>2026-08-03T03:49:30.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan setup Apps Script untuk integrasi Google Sheets</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-apps-script"/>
@@ -1164,9 +1164,209 @@ location.reload();</code></pre>
     </content>
   </entry>
   <entry>
+    <title>📖 Tutorial: Fetch Data dari Sheet</title>
+    <id>item-tutorial-dashboard-siswa</id>
+    <updated>2026-08-03T03:49:33.000Z</updated>
+    <published>2026-07-21T20:50:20.000Z</published>
+    <summary>Panduan membaca data dari Google Sheets via Apps Script API</summary>
+    <link href="https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa"/>
+    
+    <content type="html">
+      <![CDATA[ <h1>📖 Tutorial: Cara Fetch (Baca) Data dari Google Sheets via Apps Script</h1>
+
+<p>Panduan ini menjelaskan cara <strong>membaca/mengambil data</strong> dari Google Sheets menggunakan Apps Script API, bukan hanya menyimpan. Cocok untuk membuat dashboard siswa, leaderboard, atau halaman monitoring nilai.</p>
+
+<h2>🎯 Perbedaan POST vs GET</h2>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0;">
+  <div style="background: #f3f0fa; border: 2px solid #6750a4; border-radius: 12px; padding: 20px;">
+    <h3 style="color: #6750a4; margin-top: 0;">📤 POST (Simpan Data)</h3>
+    <p style="font-size: 13px; color: #49454f;"><code>doPost(e)</code> — Digunakan dashboard kuis untuk menyimpan hasil ke sheet.</p>
+    <pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 8px; font-size: 12px;">fetch(URL, {
+  method: 'POST',
+  body: JSON.stringify({
+    name: "Andi",
+    score: 80,
+    sheet: "Pertemuan 1"
+  })
+})</pre>
+  </div>
+  <div style="background: #e8f5e9; border: 2px solid #4caf50; border-radius: 12px; padding: 20px;">
+    <h3 style="color: #2e7d32; margin-top: 0;">📥 GET (Baca Data)</h3>
+    <p style="font-size: 13px; color: #49454f;"><code>doGet(e)</code> — Digunakan dashboard siswa untuk membaca data dari sheet.</p>
+    <pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 8px; font-size: 12px;">fetch(URL + '?action=summary&name=Andi')
+  .then(r => r.json())
+  .then(data => {
+    // data berisi nilai Andi
+    console.log(data);
+  })</pre>
+  </div>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📡 Endpoint API GET (Code.gs v3)</h2>
+
+<p>Apps Script <code>doGet(e)</code> menerima parameter <code>?action=</code> untuk menentukan data apa yang diminta:</p>
+
+<h3>1. Leaderboard — Semua Siswa</h3>
+<pre><code>GET https://script.google.com/macros/s/.../exec?action=leaderboard</code></pre>
+
+<p><strong>Response JSON:</strong></p>
+<pre><code>{
+  "status": "ok",
+  "leaderboard": [
+    {
+      "Nama": "Andi",
+      "Total Kuis": 3,
+      "Rata-rata Skor": 85,
+      "Skor Tertinggi": 100,
+      "Skor Terendah": 70,
+      "Total Aktivitas": 15,
+      "Reading": 8,
+      "Quiz Activity": 3,
+      "Discussion": 2,
+      "Download": 2,
+      "Jumlah Pertemuan": 3,
+      "Status Kuis Terakhir": "LULUS"
+    }
+  ]
+}</code></pre>
+
+<h3>2. Summary — Data Satu Siswa</h3>
+<pre><code>GET https://script.google.com/macros/s/.../exec?action=summary&name=Andi</code></pre>
+
+<p><strong>Response jika ditemukan:</strong></p>
+<pre><code>{
+  "status": "ok",
+  "data": {
+    "Nama": "Andi",
+    "Total Kuis": 3,
+    "Rata-rata Skor": 85,
+    ...
+  }
+}</code></pre>
+
+<p><strong>Response jika belum ada di Rangkuman:</strong></p>
+<pre><code>{
+  "status": "not_found",
+  "message": "Siswa \"Andi\" belum ada di rangkuman.",
+  "data": {
+    "kuis": [{"pertemuan":"Pertemuan 1","score":80,"status":"LULUS","timestamp":"..."}],
+    "aktivitas": [{"pertemuan":"Pertemuan 1","type":"reading","desc":"Membaca modul","timestamp":"..."}],
+    "totalKuis": 1,
+    "totalAktivitas": 3,
+    "rataSkor": 80,
+    "skorTertinggi": 80
+  }
+}</code></pre>
+
+<h3>3. Pertemuan — Semua Siswa di Satu Pertemuan</h3>
+<pre><code>GET https://script.google.com/macros/s/.../exec?action=pertemuan&sheet=Pertemuan 1</code></pre>
+
+<p><strong>Response:</strong> Array semua siswa yang sudah mengerjakan kuis di pertemuan tersebut.</p>
+
+<h3>4. Aktivitas — Log Aktivitas Siswa</h3>
+<pre><code>GET https://script.google.com/macros/s/.../exec?action=aktivitas&sheet=Pertemuan 1&name=Andi</code></pre>
+
+<p><strong>Response:</strong> Array log aktivitas (reading, quiz, discussion, download) untuk siswa di pertemuan tertentu.</p>
+
+<h3>5. List — Daftar Semua Pertemuan</h3>
+<pre><code>GET https://script.google.com/macros/s/.../exec?action=list</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>💻 Contoh Kode JavaScript</h2>
+
+<h3>Fetch data satu siswa + leaderboard</h3>
+<pre><code>const BASE_URL = 'https://script.google.com/macros/s/YOUR_ID/exec';
+
+async function loadStudentData(nama) {
+  try {
+    // Ambil leaderboard dan summary sekaligus
+    const [lbRes, sumRes] = await Promise.all([
+      fetch(BASE_URL + '?action=leaderboard'),
+      fetch(BASE_URL + '?action=summary&name=' + encodeURIComponent(nama))
+    ]);
+
+    const leaderboard = await lbRes.json();
+    const summary = await sumRes.json();
+
+    // Tampilkan di halaman
+    console.log('Leaderboard:', leaderboard);
+    console.log('Data Saya:', summary);
+
+  } catch (err) {
+    console.error('Gagal fetch data:', err);
+  }
+}
+
+// Panggil dengan nama siswa
+loadStudentData('Andi');
+</code></pre>
+
+<h3>Fetch data per pertemuan</h3>
+<pre><code>async function loadPertemuan(pertemuanName) {
+  const [quizRes, actRes] = await Promise.all([
+    fetch(BASE_URL + '?action=pertemuan&sheet=' + encodeURIComponent(pertemuanName)),
+    fetch(BASE_URL + '?action=aktivitas&sheet=' + encodeURIComponent(pertemuanName))
+  ]);
+
+  const quizData = await quizRes.json();
+  const actData = await actRes.json();
+
+  console.log('Hasil Kuis:', quizData.siswa);
+  console.log('Log Aktivitas:', actData.aktivitas);
+}
+
+loadPertemuan('Pertemuan 1');
+</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔧 Setup di HAXcms</h2>
+
+<h3>Cara 1: Halaman HTML + JavaScript (Seperti Dashboard Siswa)</h3>
+<p>Buat halaman baru di HAXcms, isi dengan HTML + JavaScript seperti contoh dashboard siswa. Simpan URL Apps Script di localStorage.</p>
+
+<h3>Cara 2: Embed via iframe</h3>
+<pre><code>&lt;iframe src="dashboard-siswa" width="100%" height="800" style="border: none;"&gt;&lt;/iframe&gt;</code></pre>
+
+<h3>Cara 3: Kirim URL sebagai parameter</h3>
+<pre><code>&lt;!-- Tambahkan di URL halaman --&gt;
+https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>⚠️ Syarat &amp; Ketentuan</h2>
+
+<table>
+  <thead><tr><th>Syarat</th><th>Keterangan</th></tr></thead>
+  <tbody>
+    <tr><td>Deploy sebagai Web App</td><td>Harus Web app (bukan API Executable), akses "Anyone"</td></tr>
+    <tr><td>CORS</td><td>Apps Script support CORS untuk GET request. Tidak perlu mode no-cors.</td></tr>
+    <tr><td>Rate Limit</td><td>Gratis: 20,000 request/hari. Cukup untuk kelas.</td></tr>
+    <tr><td>Data Real-time</td><td>Data dibaca langsung dari spreadsheet saat request.</td></tr>
+    <tr><td>Nama Case-Sensitive</td><td>Nama "Andi" dan "andi" dianggap berbeda. Pastikan konsisten.</td></tr>
+    <tr><td>Minimal Chrome/Firefox</td><td>Fetch API dan async/await didukung semua browser modern.</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔗 Halaman Terkait</h2>
+<ul>
+  <li><a href="dashboard-siswa">📊 Live Demo: Dashboard Siswa</a></li>
+  <li><a href="tutorial-sheet-per-pertemuan">📊 Tutorial: 1 Sheet = 1 Pertemuan</a></li>
+  <li><a href="full-dashboard">🎯 Demo Full Quiz Dashboard</a></li>
+</ul>
+ ]]>
+    </content>
+  </entry>
+  <entry>
     <title>📚 Modul 1: HAXcms &amp; Web Component</title>
     <id>item-materi-siswa</id>
-    <updated>2026-08-02T23:11:19.000Z</updated>
+    <updated>2026-08-03T03:49:36.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Contoh halaman materi siswa dengan aktivitas dan kuis</summary>
     <link href="https://localhost:3000/sites/haxnow/materi-siswa"/>
@@ -1362,7 +1562,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>📖 Belajar HTML Dasar</title>
     <id>item-tutor-html</id>
-    <updated>2026-08-02T23:11:20.000Z</updated>
+    <updated>2026-08-03T03:49:37.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Tutorial HTML lengkap dari nol untuk pemula</summary>
     <link href="https://localhost:3000/sites/haxnow/tutor-html"/>
@@ -1747,7 +1947,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>📅 Tutorial: Kursus Multi-Hari</title>
     <id>item-tutorial-kursus</id>
-    <updated>2026-08-02T23:11:20.000Z</updated>
+    <updated>2026-08-03T03:49:37.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan menambah kuis dan materi untuk setiap pertemuan</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-kursus"/>
@@ -1967,7 +2167,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>📊 Tutorial: 1 Sheet = 1 Pertemuan</title>
     <id>item-tutorial-sheet</id>
-    <updated>2026-08-02T23:11:20.000Z</updated>
+    <updated>2026-08-03T03:49:38.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Setup Google Sheets auto-create sheet tab per pertemuan</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-sheet-per-pertemuan"/>
@@ -2255,7 +2455,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>📊 Dashboard Siswa - Lihat Nilai</title>
     <id>item-dashboard-siswa</id>
-    <updated>2026-08-02T23:11:21.000Z</updated>
+    <updated>2026-08-03T03:49:36.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Halaman dashboard siswa yang membaca data dari Google Sheets</summary>
     <link href="https://localhost:3000/sites/haxnow/dashboard-siswa"/>
@@ -2655,209 +2855,9 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
     </content>
   </entry>
   <entry>
-    <title>📖 Tutorial: Fetch Data dari Sheet</title>
-    <id>item-tutorial-dashboard-siswa</id>
-    <updated>2026-08-02T23:11:22.000Z</updated>
-    <published>2026-07-21T20:50:20.000Z</published>
-    <summary>Panduan membaca data dari Google Sheets via Apps Script API</summary>
-    <link href="https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa"/>
-    
-    <content type="html">
-      <![CDATA[ <h1>📖 Tutorial: Cara Fetch (Baca) Data dari Google Sheets via Apps Script</h1>
-
-<p>Panduan ini menjelaskan cara <strong>membaca/mengambil data</strong> dari Google Sheets menggunakan Apps Script API, bukan hanya menyimpan. Cocok untuk membuat dashboard siswa, leaderboard, atau halaman monitoring nilai.</p>
-
-<h2>🎯 Perbedaan POST vs GET</h2>
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0;">
-  <div style="background: #f3f0fa; border: 2px solid #6750a4; border-radius: 12px; padding: 20px;">
-    <h3 style="color: #6750a4; margin-top: 0;">📤 POST (Simpan Data)</h3>
-    <p style="font-size: 13px; color: #49454f;"><code>doPost(e)</code> — Digunakan dashboard kuis untuk menyimpan hasil ke sheet.</p>
-    <pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 8px; font-size: 12px;">fetch(URL, {
-  method: 'POST',
-  body: JSON.stringify({
-    name: "Andi",
-    score: 80,
-    sheet: "Pertemuan 1"
-  })
-})</pre>
-  </div>
-  <div style="background: #e8f5e9; border: 2px solid #4caf50; border-radius: 12px; padding: 20px;">
-    <h3 style="color: #2e7d32; margin-top: 0;">📥 GET (Baca Data)</h3>
-    <p style="font-size: 13px; color: #49454f;"><code>doGet(e)</code> — Digunakan dashboard siswa untuk membaca data dari sheet.</p>
-    <pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 8px; font-size: 12px;">fetch(URL + '?action=summary&name=Andi')
-  .then(r => r.json())
-  .then(data => {
-    // data berisi nilai Andi
-    console.log(data);
-  })</pre>
-  </div>
-</div>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>📡 Endpoint API GET (Code.gs v3)</h2>
-
-<p>Apps Script <code>doGet(e)</code> menerima parameter <code>?action=</code> untuk menentukan data apa yang diminta:</p>
-
-<h3>1. Leaderboard — Semua Siswa</h3>
-<pre><code>GET https://script.google.com/macros/s/.../exec?action=leaderboard</code></pre>
-
-<p><strong>Response JSON:</strong></p>
-<pre><code>{
-  "status": "ok",
-  "leaderboard": [
-    {
-      "Nama": "Andi",
-      "Total Kuis": 3,
-      "Rata-rata Skor": 85,
-      "Skor Tertinggi": 100,
-      "Skor Terendah": 70,
-      "Total Aktivitas": 15,
-      "Reading": 8,
-      "Quiz Activity": 3,
-      "Discussion": 2,
-      "Download": 2,
-      "Jumlah Pertemuan": 3,
-      "Status Kuis Terakhir": "LULUS"
-    }
-  ]
-}</code></pre>
-
-<h3>2. Summary — Data Satu Siswa</h3>
-<pre><code>GET https://script.google.com/macros/s/.../exec?action=summary&name=Andi</code></pre>
-
-<p><strong>Response jika ditemukan:</strong></p>
-<pre><code>{
-  "status": "ok",
-  "data": {
-    "Nama": "Andi",
-    "Total Kuis": 3,
-    "Rata-rata Skor": 85,
-    ...
-  }
-}</code></pre>
-
-<p><strong>Response jika belum ada di Rangkuman:</strong></p>
-<pre><code>{
-  "status": "not_found",
-  "message": "Siswa \"Andi\" belum ada di rangkuman.",
-  "data": {
-    "kuis": [{"pertemuan":"Pertemuan 1","score":80,"status":"LULUS","timestamp":"..."}],
-    "aktivitas": [{"pertemuan":"Pertemuan 1","type":"reading","desc":"Membaca modul","timestamp":"..."}],
-    "totalKuis": 1,
-    "totalAktivitas": 3,
-    "rataSkor": 80,
-    "skorTertinggi": 80
-  }
-}</code></pre>
-
-<h3>3. Pertemuan — Semua Siswa di Satu Pertemuan</h3>
-<pre><code>GET https://script.google.com/macros/s/.../exec?action=pertemuan&sheet=Pertemuan 1</code></pre>
-
-<p><strong>Response:</strong> Array semua siswa yang sudah mengerjakan kuis di pertemuan tersebut.</p>
-
-<h3>4. Aktivitas — Log Aktivitas Siswa</h3>
-<pre><code>GET https://script.google.com/macros/s/.../exec?action=aktivitas&sheet=Pertemuan 1&name=Andi</code></pre>
-
-<p><strong>Response:</strong> Array log aktivitas (reading, quiz, discussion, download) untuk siswa di pertemuan tertentu.</p>
-
-<h3>5. List — Daftar Semua Pertemuan</h3>
-<pre><code>GET https://script.google.com/macros/s/.../exec?action=list</code></pre>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>💻 Contoh Kode JavaScript</h2>
-
-<h3>Fetch data satu siswa + leaderboard</h3>
-<pre><code>const BASE_URL = 'https://script.google.com/macros/s/YOUR_ID/exec';
-
-async function loadStudentData(nama) {
-  try {
-    // Ambil leaderboard dan summary sekaligus
-    const [lbRes, sumRes] = await Promise.all([
-      fetch(BASE_URL + '?action=leaderboard'),
-      fetch(BASE_URL + '?action=summary&name=' + encodeURIComponent(nama))
-    ]);
-
-    const leaderboard = await lbRes.json();
-    const summary = await sumRes.json();
-
-    // Tampilkan di halaman
-    console.log('Leaderboard:', leaderboard);
-    console.log('Data Saya:', summary);
-
-  } catch (err) {
-    console.error('Gagal fetch data:', err);
-  }
-}
-
-// Panggil dengan nama siswa
-loadStudentData('Andi');
-</code></pre>
-
-<h3>Fetch data per pertemuan</h3>
-<pre><code>async function loadPertemuan(pertemuanName) {
-  const [quizRes, actRes] = await Promise.all([
-    fetch(BASE_URL + '?action=pertemuan&sheet=' + encodeURIComponent(pertemuanName)),
-    fetch(BASE_URL + '?action=aktivitas&sheet=' + encodeURIComponent(pertemuanName))
-  ]);
-
-  const quizData = await quizRes.json();
-  const actData = await actRes.json();
-
-  console.log('Hasil Kuis:', quizData.siswa);
-  console.log('Log Aktivitas:', actData.aktivitas);
-}
-
-loadPertemuan('Pertemuan 1');
-</code></pre>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🔧 Setup di HAXcms</h2>
-
-<h3>Cara 1: Halaman HTML + JavaScript (Seperti Dashboard Siswa)</h3>
-<p>Buat halaman baru di HAXcms, isi dengan HTML + JavaScript seperti contoh dashboard siswa. Simpan URL Apps Script di localStorage.</p>
-
-<h3>Cara 2: Embed via iframe</h3>
-<pre><code>&lt;iframe src="dashboard-siswa" width="100%" height="800" style="border: none;"&gt;&lt;/iframe&gt;</code></pre>
-
-<h3>Cara 3: Kirim URL sebagai parameter</h3>
-<pre><code>&lt;!-- Tambahkan di URL halaman --&gt;
-https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>⚠️ Syarat &amp; Ketentuan</h2>
-
-<table>
-  <thead><tr><th>Syarat</th><th>Keterangan</th></tr></thead>
-  <tbody>
-    <tr><td>Deploy sebagai Web App</td><td>Harus Web app (bukan API Executable), akses "Anyone"</td></tr>
-    <tr><td>CORS</td><td>Apps Script support CORS untuk GET request. Tidak perlu mode no-cors.</td></tr>
-    <tr><td>Rate Limit</td><td>Gratis: 20,000 request/hari. Cukup untuk kelas.</td></tr>
-    <tr><td>Data Real-time</td><td>Data dibaca langsung dari spreadsheet saat request.</td></tr>
-    <tr><td>Nama Case-Sensitive</td><td>Nama "Andi" dan "andi" dianggap berbeda. Pastikan konsisten.</td></tr>
-    <tr><td>Minimal Chrome/Firefox</td><td>Fetch API dan async/await didukung semua browser modern.</td></tr>
-  </tbody>
-</table>
-
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>🔗 Halaman Terkait</h2>
-<ul>
-  <li><a href="dashboard-siswa">📊 Live Demo: Dashboard Siswa</a></li>
-  <li><a href="tutorial-sheet-per-pertemuan">📊 Tutorial: 1 Sheet = 1 Pertemuan</a></li>
-  <li><a href="full-dashboard">🎯 Demo Full Quiz Dashboard</a></li>
-</ul>
- ]]>
-    </content>
-  </entry>
-  <entry>
     <title>dashboard quiz</title>
     <id>item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec</id>
-    <updated>2026-08-02T23:11:17.000Z</updated>
+    <updated>2026-08-03T03:49:31.000Z</updated>
     <published>2026-07-21T22:31:30.000Z</published>
     <summary>fulldashboard
 
@@ -2876,7 +2876,7 @@ https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
   <entry>
     <title>baru1</title>
     <id>item-df69b4a8-b470-4c1e-be89-8833ce3452da</id>
-    <updated>2026-08-02T23:11:11.000Z</updated>
+    <updated>2026-08-03T03:49:23.000Z</updated>
     <published>2026-07-22T02:35:16.000Z</published>
     <summary>
 📚 Pertemuan 1: Pengenalan HAXcms
@@ -2900,7 +2900,7 @@ Materi pembelajaran hari ini...
   <entry>
     <title>baru2</title>
     <id>item-f804cc8e-b786-47bf-ba57-03edb9924416</id>
-    <updated>2026-08-02T23:11:22.000Z</updated>
+    <updated>2026-08-03T03:49:33.000Z</updated>
     <published>2026-07-22T02:44:24.000Z</published>
     <summary>
 📚 Pertemuan 2: Lit Element Dasar
@@ -2922,7 +2922,7 @@ Materi pembelajaran hari ini...
   <entry>
     <title>Forum diskusi</title>
     <id>item-07f619ec-0cd5-4853-b79c-1b12f94df811</id>
-    <updated>2026-08-02T23:11:21.000Z</updated>
+    <updated>2026-08-03T03:49:38.000Z</updated>
     <published>2026-07-27T10:20:46.000Z</published>
     <summary>Diskusi
 hehehehe
@@ -2939,7 +2939,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-095e94fc-dc62-4f5c-9037-eb5f5095ba1c</id>
-    <updated>2026-08-02T23:11:10.000Z</updated>
+    <updated>2026-08-03T03:49:22.000Z</updated>
     <published>2026-07-27T12:47:40.000Z</published>
     <summary>
 
@@ -2968,7 +2968,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29</id>
-    <updated>2026-08-02T23:11:11.000Z</updated>
+    <updated>2026-08-03T03:49:24.000Z</updated>
     <published>2026-08-01T02:37:08.000Z</published>
     <summary>Tugas
 
@@ -3017,7 +3017,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b</id>
-    <updated>2026-08-02T23:11:12.000Z</updated>
+    <updated>2026-08-03T03:49:24.000Z</updated>
     <published>2026-08-01T06:48:59.000Z</published>
     <summary>
 
@@ -3040,7 +3040,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-5015eab1-d932-4139-a7a0-3216ce339bfa</id>
-    <updated>2026-08-02T23:11:12.000Z</updated>
+    <updated>2026-08-03T03:49:25.000Z</updated>
     <published>2026-08-01T08:46:03.000Z</published>
     <summary>
 
@@ -3081,7 +3081,7 @@ hehehehe
   <entry>
     <title>Kuis AKM Campuran</title>
     <id>item-kuis-akm-campuran</id>
-    <updated>2026-08-02T23:11:18.000Z</updated>
+    <updated>2026-08-03T03:49:31.000Z</updated>
     <published>2026-08-01T08:53:39.000Z</published>
     <summary>Kuis AKM dengan generator soal: template lokal atau Bank Soal (sheet Bank Soal)</summary>
     <link href="https://localhost:3000/sites/haxnow/kuis-akm-campuran"/>

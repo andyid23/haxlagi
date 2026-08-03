@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2026 03:23:56 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 03:49:39 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -80,6 +80,13 @@
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>
     <item>
+      <title>📖 Tutorial: Fetch Data dari Sheet</title>
+      <link>https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa</link>
+      <description>📖 Tutorial: Cara Fetch (Baca) Data dari Google Sheets via Apps Script Panduan ini menjelaskan cara membaca/mengambil data dari Google Sheets menggunakan Apps Script API, bukan hanya menyimpan. Cocok untuk membuat dashboard siswa, leaderboard, atau halaman monitoring nilai. 🎯 Perbedaan POST vs GET 📤 POST (Simpan Data) doPost(e) — Digunakan dashboard kuis untuk menyimpan hasil ke sheet. fetch(URL, { method: &apos;POST&apos;, body: JSON.stringify({ name: &quot;Andi&quot;, score: 80, sheet: &quot;Pertemuan 1&quot; }) }) 📥...</description>
+      <guid>https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
       <title>📚 Modul 1: HAXcms &amp; Web Component</title>
       <link>https://localhost:3000/sites/haxnow/materi-siswa</link>
       <description>📚 Modul 1: Pengenalan HAXcms &amp; Web Component (v2: KD-Materi &amp; Split Forum/Tugas) Selamat datang di modul pembelajaran interaktif v2! Halaman ini mendemonstrasikan fitur-fitur baru: Single Login — login sekali, akses semua halaman (auto-login 24h) KD-Materi dari sheet-name — otomatis filter aktivitas per pertemuan Split Assignment/Forum — komponen terpisah assignment-component &amp; forum-component Activity Logger — tracking otomatis (scroll, download, kuis, forum, tugas) ⏰ Activity Logger Aktif!...</description>
@@ -112,13 +119,6 @@
       <link>https://localhost:3000/sites/haxnow/dashboard-siswa</link>
       <description>📊 Dashboard Siswa — Lihat Nilai &amp;amp; Aktivitas dari Google Sheets Halaman ini mengambil data langsung dari Google Sheets via Apps Script API. Masukkan URL Apps Script dan nama Anda, lalu klik Tampilkan untuk melihat semua data kuis, aktivitas, dan leaderboard Anda secara real-time. 🔌 Hubungkan ke Google Sheets Masukkan URL Apps Script Web App dan nama Anda untuk melihat data. URL Apps Script Nama Anda 🔍 Tampilkan Data Mengambil data dari Google Sheets... 🏆 Leaderboard 📝 Kuis Saya 📅 Akt...</description>
       <guid>https://localhost:3000/sites/haxnow/dashboard-siswa</guid>
-      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
-    </item>
-    <item>
-      <title>📖 Tutorial: Fetch Data dari Sheet</title>
-      <link>https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa</link>
-      <description>📖 Tutorial: Cara Fetch (Baca) Data dari Google Sheets via Apps Script Panduan ini menjelaskan cara membaca/mengambil data dari Google Sheets menggunakan Apps Script API, bukan hanya menyimpan. Cocok untuk membuat dashboard siswa, leaderboard, atau halaman monitoring nilai. 🎯 Perbedaan POST vs GET 📤 POST (Simpan Data) doPost(e) — Digunakan dashboard kuis untuk menyimpan hasil ke sheet. fetch(URL, { method: &apos;POST&apos;, body: JSON.stringify({ name: &quot;Andi&quot;, score: 80, sheet: &quot;Pertemuan 1&quot; }) }) 📥...</description>
-      <guid>https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa</guid>
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>
     <item>
