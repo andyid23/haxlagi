@@ -136,7 +136,6 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
           "_advanceTimer",
           "_megaConfettiFrameId",
           "editing",
-          "editable",
         ],
       },
     }
