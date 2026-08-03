@@ -737,6 +737,22 @@
         "readtime": 6,
         "status": ""
       }
+    },
+    {
+      "id": "item-1a372864-f4f9-486c-9541-1f7912fe6b44",
+      "indent": 0,
+      "location": "pages/item-1a372864-f4f9-486c-9541-1f7912fe6b44/index.html",
+      "slug": "new-page-7",
+      "order": 1,
+      "parent": null,
+      "title": "New Page",
+      "description": "",
+      "metadata": {
+        "created": 1785799317,
+        "updated": 1785799317,
+        "images": [],
+        "videos": []
+      }
     }
   ]
 }
