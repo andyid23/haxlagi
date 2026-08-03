@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785751026
+      "updated": 1785799823
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -743,15 +743,19 @@
       "indent": 0,
       "location": "pages/item-1a372864-f4f9-486c-9541-1f7912fe6b44/index.html",
       "slug": "new-page-7",
-      "order": 1,
+      "order": 2,
       "parent": null,
       "title": "New Page",
-      "description": "",
+      "description": "tugas\n\n\n\n\n\n",
       "metadata": {
         "created": 1785799317,
-        "updated": 1785799317,
+        "updated": 1785799822,
         "images": [],
-        "videos": []
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 1
       }
     }
   ]

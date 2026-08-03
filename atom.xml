@@ -41,7 +41,7 @@ What</summary>
 
 
 
-  <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" auto-login _student-id="STD-65108053"></quiz-user-auth>
+  <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" auto-login _student-id="STD-65108053"></quiz-user-auth>
 
 
 
@@ -66,7 +66,7 @@ What</summary>
 
 
 
-  <assignment-forum hide-delete id="af1" assignment-title="Refleksi Energi Terbarukan" assignment-instruction="Tuliskan refleksi: kontribusi apa yang bisa Anda lakukan untuk mendukung energi terbarukan di lingkungan rumah? Sertakan link Google Drive/Doc jika ada file pendukung." forum-topik="Diskusi: Potensi Energi Terbarukan" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" forum-api-url="https://script.google.com/macros/s/AKfycby1Ltq-eg599WR2W4FPY6r_GDNs_N5gB29Pvdf3NisKvWlymh3xl6ajk0kU-IkxyAT_Nw/exec" kd-materi="Pertemuan-1" view-mode="lecturer" forum-topic="Forum Diskusi" _assignment-submitted student-id="STD-65108053" student-name="Andy Yulianto" student-nis="234" student-absen="2" student-kelas="XI-1" _sort-mode="best" _assignment-text="gggfd"></assignment-forum>
+  <assignment-forum hide-delete id="af1" assignment-title="Refleksi Energi Terbarukan" assignment-instruction="Tuliskan refleksi: kontribusi apa yang bisa Anda lakukan untuk mendukung energi terbarukan di lingkungan rumah? Sertakan link Google Drive/Doc jika ada file pendukung." forum-topik="Diskusi: Potensi Energi Terbarukan" apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyzebiKMgQrnUSp424ZdxA0HNyqE_3CFS4F_t-WcFVmU7fvbLY18Qe_zgeY5uwrZS8Erg/exec" kd-materi="Pertemuan-1" view-mode="lecturer" forum-topic="Forum Diskusi" _assignment-submitted student-id="STD-65108053" student-name="Andy Yulianto" student-nis="234" student-absen="2" student-kelas="XI-1" _sort-mode="best" _assignment-text="gggfd"></assignment-forum>
 
 
 
@@ -79,7 +79,7 @@ What</summary>
 
 
 
-  <explode-quiz hide-answers hide-confetti id="quiz1" kd-materi="Pertemuan-1" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" shuffle-choices questions="[{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa kepanjangan HTML?&quot;,&quot;choices&quot;:[&quot;HyperText Markup Language&quot;,&quot;High Text Machine Language&quot;,&quot;Home Tool Markup Language&quot;,&quot;Hyperlinks Text Markup&quot;],&quot;correctIndex&quot;:0},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Bahasa pemrograman browser?&quot;,&quot;choices&quot;:[&quot;Python&quot;,&quot;JavaScript&quot;,&quot;Java&quot;,&quot;C++&quot;],&quot;correctIndex&quot;:1},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Shadow DOM berfungsi untuk?&quot;,&quot;choices&quot;:[&quot;Database&quot;,&quot;Encapsulated DOM&quot;,&quot;Server&quot;,&quot;CSS&quot;],&quot;correctIndex&quot;:1}]" spreadsheet-id="" kd-materi="Pertemuan 1" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0"></explode-quiz>
+  <explode-quiz hide-answers hide-confetti id="quiz1" kd-materi="Pertemuan-1" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" shuffle-choices questions="[{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa kepanjangan HTML?&quot;,&quot;choices&quot;:[&quot;HyperText Markup Language&quot;,&quot;High Text Machine Language&quot;,&quot;Home Tool Markup Language&quot;,&quot;Hyperlinks Text Markup&quot;],&quot;correctIndex&quot;:0},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Bahasa pemrograman browser?&quot;,&quot;choices&quot;:[&quot;Python&quot;,&quot;JavaScript&quot;,&quot;Java&quot;,&quot;C++&quot;],&quot;correctIndex&quot;:1},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Shadow DOM berfungsi untuk?&quot;,&quot;choices&quot;:[&quot;Database&quot;,&quot;Encapsulated DOM&quot;,&quot;Server&quot;,&quot;CSS&quot;],&quot;correctIndex&quot;:1}]" spreadsheet-id="" kd-materi="Pertemuan 1" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0"></explode-quiz>
 
 
 
@@ -148,7 +148,7 @@ What</summary>
     <h2><span class="step-num">3</span> Kuis Formatif</h2>
 
 
-    <explode-quiz hide-answers hide-confetti id="quiz1" kd-materi="Pertemuan-1" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" shuffle-choices questions="[{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa kepanjangan HTML?&quot;,&quot;choices&quot;:[&quot;HyperText Markup Language&quot;,&quot;High Text Machine Language&quot;,&quot;Home Tool Markup Language&quot;,&quot;Hyperlinks Text Markup&quot;],&quot;correctIndex&quot;:0},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Bahasa pemrograman browser?&quot;,&quot;choices&quot;:[&quot;Python&quot;,&quot;JavaScript&quot;,&quot;Java&quot;,&quot;C++&quot;],&quot;correctIndex&quot;:1},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Shadow DOM berfungsi untuk?&quot;,&quot;choices&quot;:[&quot;Database&quot;,&quot;Encapsulated DOM&quot;,&quot;Server&quot;,&quot;CSS&quot;],&quot;correctIndex&quot;:1}]" spreadsheet-id="" kd-materi="Pertemuan 1" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0">
+    <explode-quiz hide-answers hide-confetti id="quiz1" kd-materi="Pertemuan-1" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" shuffle-choices questions="[{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa kepanjangan HTML?&quot;,&quot;choices&quot;:[&quot;HyperText Markup Language&quot;,&quot;High Text Machine Language&quot;,&quot;Home Tool Markup Language&quot;,&quot;Hyperlinks Text Markup&quot;],&quot;correctIndex&quot;:0},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Bahasa pemrograman browser?&quot;,&quot;choices&quot;:[&quot;Python&quot;,&quot;JavaScript&quot;,&quot;Java&quot;,&quot;C++&quot;],&quot;correctIndex&quot;:1},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Shadow DOM berfungsi untuk?&quot;,&quot;choices&quot;:[&quot;Database&quot;,&quot;Encapsulated DOM&quot;,&quot;Server&quot;,&quot;CSS&quot;],&quot;correctIndex&quot;:1}]" spreadsheet-id="" kd-materi="Pertemuan 1" script-function-name="submitQuizResult" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0">
     </explode-quiz>
 
 
@@ -187,7 +187,7 @@ What</summary>
 
 
     <p style="font-size:13px;color:#666;">Mode dosen: generate rapor, input UTS/UAS manual, atur 6 komponen bobot (Kehadiran:UH:UTS:UAS:Sikap:Skill). Auto-calc sikap dari tugas+forum, skill dari quiz+baca.</p>
-    <quiz-dashboard-lite2 quiz-tab-hidden view-mode="student" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" kd-materi="Pertemuan-1" questions="[]" _active-tab="0">
+    <quiz-dashboard-lite2 quiz-tab-hidden view-mode="student" apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" kd-materi="Pertemuan-1" questions="[]" _active-tab="0">
     </quiz-dashboard-lite2>
 
 
@@ -325,11 +325,11 @@ What</summary>
    <h2><span class="step-num">1</span> Login / Registrasi</h2>
 
 
-  <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" _student-id="STD-65108053"></quiz-user-auth>
+  <quiz-user-auth id="auth" apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" _student-id="STD-65108053"></quiz-user-auth>
 
 </div>
 <p>Coba kuis interaktif di bawah ini:</p>
-<explode-quiz kd-materi="Pertemuan" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" shuffle-choices spreadsheet-id="" script-function-name="submitQuizResult" questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;soal&quot;,&quot;choices&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],&quot;correctIndex&quot;:3}]" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="dsfdsfd" _current-index="0" _selected-index="-1" _name-input-value="dsfdsfd" _temp-questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;soal&quot;,&quot;choices&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],&quot;correctIndex&quot;:3}]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Bandung&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2,&quot;_correctMap&quot;:[1,2,0,3]},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;60&quot;,&quot;56&quot;,&quot;54&quot;,&quot;58&quot;],&quot;correctIndex&quot;:1,&quot;_correctMap&quot;:[3,1,0,2]},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Merkurius&quot;,&quot;Mars&quot;],&quot;correctIndex&quot;:3,&quot;_correctMap&quot;:[0,1,3,2]}]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="3" _advance-timer="6756"></explode-quiz>
+<explode-quiz kd-materi="Pertemuan" quiz-category="formatif" apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" shuffle-choices spreadsheet-id="" script-function-name="submitQuizResult" questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;soal&quot;,&quot;choices&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],&quot;correctIndex&quot;:3}]" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="dsfdsfd" _current-index="0" _selected-index="-1" _name-input-value="dsfdsfd" _temp-questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;soal&quot;,&quot;choices&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;],&quot;correctIndex&quot;:3}]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Bandung&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2,&quot;_correctMap&quot;:[1,2,0,3]},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;60&quot;,&quot;56&quot;,&quot;54&quot;,&quot;58&quot;],&quot;correctIndex&quot;:1,&quot;_correctMap&quot;:[3,1,0,2]},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Merkurius&quot;,&quot;Mars&quot;],&quot;correctIndex&quot;:3,&quot;_correctMap&quot;:[0,1,3,2]}]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="3" _advance-timer="6756"></explode-quiz>
 <h2 id="h2-1518686653">📋 Atribut yang Didukung</h2>
 <editable-table accent-color="grey" column-header><table>
 	<thead class="thead">
@@ -1796,7 +1796,7 @@ https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
 
 <!-- Single Login -->
 <quiz-user-auth 
-  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
   auto-login>
 </quiz-user-auth>
 
@@ -1880,7 +1880,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
 <p>Setelah membaca materi di atas, silakan kerjakan kuis berikut untuk menguji pemahaman Anda. Skor akan dicatat otomatis dengan KD-Materi=Pertemuan1!</p>
 <explode-quiz 
   kd-materi="Pertemuan-1" 
-  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" 
+  apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" 
   quiz-category="formatif" 
   shuffle-choices 
   editable="true"
@@ -1892,8 +1892,8 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
 <h2>💬 Forum Diskusi (forum-component v2)</h2>
 <p>Kirim komentar & balasan. KD-Materi=Pertemuan1 → tersimpan ke Forum Log + Aktivitas.</p>
 <forum-component
-  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
-  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+  apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
   kd-materi="Pertemuan-1"
   forum-topic="Diskusi Modul 1: Web Component Dasar"
   student-id="STD-001"
@@ -1908,8 +1908,8 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
 <h2>📝 Tugas Mandiri (assignment-component v2)</h2>
 <p>Kirim tugas + link Google Drive. KD-Materi=Pertemuan1 → tersimpan ke Tugas Log + Aktivitas.</p>
 <assignment-component
-  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
-  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+  apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
   kd-materi="Pertemuan-1"
   assignment-title="Tugas Modul 1: Refleksi Web Component"
   assignment-instruction="Tuliskan refleksi: apa yang sudah dipahami tentang Web Component? Sertakan link Google Drive/Doc jika ada file pendukung."
@@ -1927,16 +1927,16 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
 <grid-plate layout="1-1">
   <div slot="col-1">
     <attendance-tracker 
-      apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
-      forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+      apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+      forum-api-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
       kd-materi="Pertemuan-1"
       student-id="STD-001">
     </attendance-tracker>
   </div>
   <div slot="col-2">
     <engagement-score 
-      apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
-      forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+      apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+      forum-api-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
       kd-materi="Pertemuan-1"
       student-id="STD-001">
     </engagement-score>
@@ -1953,8 +1953,8 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
 <!-- Activity Logger untuk tracking otomatis (KD-Materi=Pertemuan1) -->
 <activity-logger 
   kd-materi="Pertemuan-1" 
-  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
-  forum-api-url="https://script.google.com/macros/s/AKfycbzH1CHRwz0RJ7_oblUfzW7b_C90808aIGQ9kSdFimXW0_QiWjUWdlbKdPcxY25P0xyY/exec"
+  apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbyzebiKMgQrnUSp424ZdxA0HNyqE_3CFS4F_t-WcFVmU7fvbLY18Qe_zgeY5uwrZS8Erg/exec"
   student-id="STD-001"
   student-name="Budi Santoso"
   student-nis="001"
@@ -2950,11 +2950,11 @@ hehehehe
     <link href="https://localhost:3000/sites/haxnow/new-page-3"/>
     
     <content type="html">
-      <![CDATA[ ﻿
+      <![CDATA[ ﻿<h2>materi quiz -dashboard</h2>
 <p><explode-quiz questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa ibu kota Jawa Timur?&quot;,&quot;image&quot;:&quot;sfdsfds&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;fdsafdsafdsa c scdasdsavc dsafdsafdsfxv Nandur&quot;,&quot;image&quot;:&quot;fdsafds&quot;,&quot;choices&quot;:[&quot;zxxzxZ&quot;,&quot;fdsfdsafd&quot;,&quot;dsfdsa&quot;,&quot;xzxZx&quot;],&quot;correctIndex&quot;:1}]" spreadsheet-id="" script-function-name="submitQuizResult" quiz-category="formatif" kd-materi="Pertemuan" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto"></explode-quiz>
 
 </p>
-<p>  <quiz-dashboard-lite2 quiz-tab-hidden view-mode="student" apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" kd-materi="Pertemuan-1" _active-tab="2" _user="{&quot;studentId&quot;:&quot;STD-65108053&quot;,&quot;nama&quot;:&quot;Andy Yulianto&quot;,&quot;email&quot;:&quot;wildanhabib051@gmail.com&quot;,&quot;nis&quot;:234,&quot;absen&quot;:2,&quot;kelas&quot;:&quot;XI-1&quot;}">
+<p>  <quiz-dashboard-lite2 quiz-tab-hidden view-mode="student" apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" kd-materi="Pertemuan-1" _active-tab="2" _user="{&quot;studentId&quot;:&quot;STD-65108053&quot;,&quot;nama&quot;:&quot;Andy Yulianto&quot;,&quot;email&quot;:&quot;wildanhabib051@gmail.com&quot;,&quot;nis&quot;:234,&quot;absen&quot;:2,&quot;kelas&quot;:&quot;XI-1&quot;}">
     </quiz-dashboard-lite2>
 </p>
 <p></p>
