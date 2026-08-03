@@ -94,10 +94,10 @@
 
 * * *
 
-🎯 Kuis Evaluasi: Dasar HTML
-----------------------------
+🎯 Kuis AKM: Literasi, Numerasi & Berpikir Kritis
+-------------------------------------------------
 
-Kerjakan kuis di bawah untuk menguji pemahaman Anda tentang HTML! Skor terbaik akan tercatat otomatis ke sheet `pertemuan-kuis` dengan Kode Materi = Pertemuan.
+Kerjakan kuis formatif 10 soal berikut. Skor terbaik tercatot otomatis ke sheet `pertemuan-kuis` (Kode Materi = Pertemuan-1).
 
 * * *
 
@@ -130,4 +130,4 @@ Kumpulkan tugas refleksi Anda. Tersimpan ke sheet `Tugas Log` dan dihitung sebag
 📊 Cek Aktivitas Belajar Anda
 -----------------------------
 
-Ringkasan kehadiran dan keterlibatan Anda hari ini (KD Materi = Pertemuan). Data diambil otomatis dari sheet `Aktivitas` + `Forum Log` sesuai akun login Anda.
+Ringkasan kehadiran dan keterlibatan Anda hari ini (KD Materi = Pertemuan-1). Data diambil otomatis dari sheet `Aktivitas` + `Forum Log` sesuai akun login Anda.
