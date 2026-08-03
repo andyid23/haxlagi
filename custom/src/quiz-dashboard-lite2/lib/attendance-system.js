@@ -30,8 +30,13 @@ function pushLocalLog(type, description) {
     localStorage.setItem(LOGS_STORAGE_KEY, "[]");
     localStorage.setItem(LAST_DATE_KEY, today);
   }
-  const newLog = { id: "log-" + now.getTime(), timestamp: now.toISOString(), date: today, type, description };
   const currentLogs = getInitialLogs();
+  // FIX: dedupe — abaikan log yang sama (type + deskripsi + timestamp) dalam 5 entri terakhir
+  const dupes = currentLogs.slice(0, 5).filter(l =>
+    l.type === type && l.description === description && l.timestamp === now.toISOString()
+  );
+  if (dupes.length > 0) return currentLogs;
+  const newLog = { id: "log-" + now.getTime(), timestamp: now.toISOString(), date: today, type, description };
   const merged = [newLog, ...currentLogs];
   localStorage.setItem(LOGS_STORAGE_KEY, JSON.stringify(merged));
   globalThis.dispatchEvent(new CustomEvent("a3-activity-logged", { detail: { log: newLog } }));
@@ -336,10 +341,32 @@ export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
     this.sheetName = "Pertemuan";
     this.studentId = "";
     this._forumToday = 0;
+    this._handleSessionChanged = this._handleSessionChanged.bind(this);
   }
   // kdMateri derived from sheetName
   get kdMateri() {
     return this.sheetName || "Pertemuan"
+  }
+  _loadSession() {
+    try {
+      const data = JSON.parse(localStorage.getItem("quiz_user_session"));
+      if (data?.expiresAt && Date.now() > data.expiresAt) {
+        localStorage.removeItem("quiz_user_session");
+        return null;
+      }
+      return data;
+    } catch { return null; }
+  }
+  _handleSessionChanged(e) {
+    const session = e?.detail || this._loadSession();
+    if (session?.studentId) {
+      this.studentId = session.studentId;
+      this.studentName = session.nama;
+      this.studentNis = session.nis || "";
+      this.studentAbsen = session.absen || "";
+      this.studentKelas = session.kelas || "";
+      this._fetchForumToday();
+    }
   }
   connectedCallback() {
     super.connectedCallback();
@@ -354,12 +381,15 @@ export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
     globalThis.addEventListener("a3-activity-logged", this._reloadHandler);
     globalThis.addEventListener("storage", this._reloadHandler);
     globalThis.addEventListener("discussion-saved", this._forumHandler);
+    globalThis.addEventListener("quiz-user-session-changed", this._handleSessionChanged);
+    this._handleSessionChanged({ detail: this._loadSession() });
     this._fetchForumToday();
   }
   disconnectedCallback() {
     globalThis.removeEventListener("a3-activity-logged", this._reloadHandler);
     globalThis.removeEventListener("storage", this._reloadHandler);
     globalThis.removeEventListener("discussion-saved", this._forumHandler);
+    globalThis.removeEventListener("quiz-user-session-changed", this._handleSessionChanged);
     super.disconnectedCallback();
   }
   async _fetchForumToday() {
@@ -522,10 +552,32 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
     this.sheetName = "Pertemuan";
     this.studentId = "";
     this._history = [];
+    this._handleSessionChanged = this._handleSessionChanged.bind(this);
   }
   // kdMateri derived from sheetName
   get kdMateri() {
     return this.sheetName || "Pertemuan"
+  }
+  _loadSession() {
+    try {
+      const data = JSON.parse(localStorage.getItem("quiz_user_session"));
+      if (data?.expiresAt && Date.now() > data.expiresAt) {
+        localStorage.removeItem("quiz_user_session");
+        return null;
+      }
+      return data;
+    } catch { return null; }
+  }
+  _handleSessionChanged(e) {
+    const session = e?.detail || this._loadSession();
+    if (session?.studentId) {
+      this.studentId = session.studentId;
+      this.studentName = session.nama;
+      this.studentNis = session.nis || "";
+      this.studentAbsen = session.absen || "";
+      this.studentKelas = session.kelas || "";
+      this._fetchHistory();
+    }
   }
   connectedCallback() {
     super.connectedCallback();
@@ -538,11 +590,14 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
     this._reloadHandler = () => this._fetchHistory();
     globalThis.addEventListener("a3-activity-logged", this._reloadHandler);
     globalThis.addEventListener("discussion-saved", this._reloadHandler);
+    globalThis.addEventListener("quiz-user-session-changed", this._handleSessionChanged);
+    this._handleSessionChanged({ detail: this._loadSession() });
     this._fetchHistory();
   }
   disconnectedCallback() {
     globalThis.removeEventListener("a3-activity-logged", this._reloadHandler);
     globalThis.removeEventListener("discussion-saved", this._reloadHandler);
+    globalThis.removeEventListener("quiz-user-session-changed", this._handleSessionChanged);
     super.disconnectedCallback();
   }
   async _fetchHistory() {

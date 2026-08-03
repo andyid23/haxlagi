@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785712284
+      "updated": 1785727436
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -675,7 +675,7 @@
       "description": "belajar kritis",
       "metadata": {
         "created": 1785710068,
-        "updated": 1785712269,
+        "updated": 1785727435,
         "images": [],
         "videos": [],
         "theme": {
@@ -697,7 +697,44 @@
         "hideInMenu": false,
         "icon": "av:equalizer",
         "locked": false,
-        "readtime": 5,
+        "readtime": 6,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-tutorial-aktivitas-harian",
+      "indent": 0,
+      "location": "pages/tutorial-aktivitas-harian/index.html",
+      "slug": "tutorial-aktivitas-harian",
+      "order": 1,
+      "parent": "item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5",
+      "title": "📘 Tutorial: Halaman Aktivitas Harian & Google Sheets",
+      "description": "Cara kerja halaman aktivitas harian: baca, download, forum, tugas, kuis → Google Sheets",
+      "metadata": {
+        "created": 1785713000,
+        "updated": 1785713000,
+        "images": [],
+        "videos": [],
+        "theme": {
+          "element": "polaris-flex-theme",
+          "path": "@haxtheweb/polaris-theme/lib/polaris-flex-theme.js",
+          "name": "Polaris Flex",
+          "thumbnail": "@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-polaris-flex-theme-thumb.jpg",
+          "description": "Start with a blank site using the Polaris Flex",
+          "category": [
+            "Website"
+          ],
+          "hidden": false,
+          "priority": -1,
+          "terrible": false,
+          "key": "polaris-flex-theme"
+        },
+        "published": true,
+        "pageType": "documentation",
+        "hideInMenu": false,
+        "icon": "av:equalizer",
+        "locked": false,
+        "readtime": 8,
         "status": ""
       }
     }

@@ -97,9 +97,37 @@
 🎯 Kuis Evaluasi: Dasar HTML
 ----------------------------
 
-Kerjakan kuis di bawah untuk menguji pemahaman Anda tentang HTML!
+Kerjakan kuis di bawah untuk menguji pemahaman Anda tentang HTML! Skor terbaik akan tercatat otomatis ke sheet `pertemuan-kuis` dengan Kode Materi = Pertemuan.
+
+* * *
+
+📥 Download Materi Pendukung
+----------------------------
+
+Klik salah satu file di bawah untuk mengunduh (aktivitas download akan tercatat otomatis sebagai tipe `download`):
+
+*   [📄 Download: Logo Java (SVG)](files/java-logo.svg)
+*   [🖼️ Download: Logo JavaScript (PNG)](files/js-logo.png)
+*   [🎨 Download: Logo Tailwind (SVG)](files/tailwind-logo.svg)
+*   [🧠 Download: Brain Galaxy (JPG)](files/brain-galaxy.jpg)
+
+* * *
+
+💬 Forum Diskusi
+----------------
+
+Kirim komentar atau tanggapan materi hari ini. Komentar tersimpan ke sheet `Forum Log` dan dihitung sebagai aktivitas `discussion`.
+
+* * *
+
+📝 Tugas Mandiri
+----------------
+
+Kumpulkan tugas refleksi Anda. Tersimpan ke sheet `Tugas Log` dan dihitung sebagai aktivitas `assignment`.
 
 * * *
 
 📊 Cek Aktivitas Belajar Anda
 -----------------------------
+
+Ringkasan kehadiran dan keterlibatan Anda hari ini (KD Materi = Pertemuan). Data diambil otomatis dari sheet `Aktivitas` + `Forum Log` sesuai akun login Anda.

@@ -894,6 +894,8 @@ function getActivityHistory(params) {
   today.setHours(0, 0, 0, 0);
   const startDate = new Date(today);
   startDate.setDate(today.getDate() - days);
+  const endDate = new Date(today);
+  endDate.setDate(endDate.getDate() + 1);
   
   const dateMap = {};
   
@@ -908,7 +910,7 @@ function getActivityHistory(params) {
       if (rowDate instanceof Date) rowDateObj = rowDate;
       else if (typeof rowDate === "string") rowDateObj = new Date(rowDate);
       else continue;
-      if (isNaN(rowDateObj.getTime()) || rowDateObj < startDate || rowDateObj > today) continue;
+      if (isNaN(rowDateObj.getTime()) || rowDateObj < startDate || rowDateObj >= endDate) continue;
       const dateStr = Utilities.formatDate(rowDateObj, Session.getScriptTimeZone(), "yyyy-MM-dd");
       dateMap[dateStr] = (dateMap[dateStr] || 0) + 1;
     }

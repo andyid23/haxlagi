@@ -188,8 +188,14 @@
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/aturan-belajar-siswa</loc>
-    <lastmod>2026-08-02T23:11:09.000Z</lastmod>
+    <lastmod>2026-08-03T03:23:55.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://localhost:3000/sites/haxnow/tutorial-aktivitas-harian</loc>
+    <lastmod>2026-08-02T23:23:20.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

@@ -42,6 +42,7 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [📘 Tutorial Alur Aktivitas & Sheet](https://localhost:3000/sites/haxnow/pages/tutorial-alur-aktivitas/index.md): Alur lengkap: siswa → aktivitas → sheets, 7 sheet utama, kriteria kehadiran, alur tugas/forum, template Bank Soal, heatmap
 - [📘 Contoh Lengkap: UH + Forum + Tugas + Kuis + Rapor](https://localhost:3000/sites/haxnow/pages/contoh-lengkap/index.md): Demo lengkap: single login, kd-materi, split assignment/forum, activity tracking, generate soal, heatmap, rapor
 - [PANDUAN BELAJAR MANDIRI: MENJADI PEMBELAJAR SEUMUR HIDUP](https://localhost:3000/sites/haxnow/pages/item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5/index.md): belajar kritis
+- [📘 Tutorial: Halaman Aktivitas Harian & Google Sheets](https://localhost:3000/sites/haxnow/pages/tutorial-aktivitas-harian/index.md): Cara kerja halaman aktivitas harian: baca, download, forum, tugas, kuis → Google Sheets
 
 ## Optional
 - [Search index](https://localhost:3000/sites/haxnow/lunrSearchIndex.json): Lunr corpus for quick full-text retrieval.

@@ -1,0 +1,233 @@
+<h1 id="h1-tutorial">📘 Tutorial: Halaman Aktivitas Harian &amp; Penyimpanan ke Google Sheets</h1>
+<p>Tutorial ini menjelaskan cara kerja <strong>satu halaman aktivitas harian</strong> di HAXcms: bagaimana membaca materi, mengunduh file, berdiskusi di forum, mengumpulkan tugas, dan mengerjakan kuis formatif — semuanya <strong>tercatat otomatis ke Google Sheets</strong> melalui dua endpoint Google Apps Script.</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2-1">1️⃣ Alur Aktivitas Harian</h2>
+<ol>
+  <li><strong>Login (sekali, 24 jam)</strong> — siswa login dengan NIS + email lewat <code>quiz-user-auth</code>. Session tersimpan di <code>localStorage</code> (kunci <code>quiz_user_session</code>) dan dipakai semua komponen di halaman ini.</li>
+  <li><strong>Baca materi</strong> — scroll halaman &gt; 1000px otomatis dicatat sebagai aktivitas <code>reading</code> (jeda minimal 2 menit antar catatan).</li>
+  <li><strong>Download materi</strong> — klik link <code>&lt;a href="files/..." download&gt;</code> dicatat sebagai aktivitas <code>download</code>.</li>
+  <li><strong>Diskusi/komentar</strong> — komentar di <code>forum-component</code> tersimpan ke sheet <code>Forum Log</code> + dicatat sebagai aktivitas <code>discussion</code>.</li>
+  <li><strong>Tugas</strong> — pengumpulan di <code>assignment-component</code> tersimpan ke sheet <code>Tugas Log</code> + dicatat sebagai aktivitas <code>assignment</code>.</li>
+  <li><strong>Kuis formatif</strong> — skor tersimpan ke sheet <code>pertemuan-kuis</code> + dicatat sebagai aktivitas <code>quiz</code>.</li>
+  <li><strong>Cek status</strong> — <code>attendance-tracker</code> &amp; <code>engagement-score</code> menampilkan ringkasan harian + heatmap 42 hari sesuai akun yang login.</li>
+</ol>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2-2">2️⃣ Komponen &amp; Atribut Wajib</h2>
+<table>
+  <thead>
+    <tr><th>Komponen</th><th>Fungsi</th><th>Atribut wajib</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>quiz-user-auth</code></td><td>Login/registrasi siswa, simpan session</td><td><code>apps-script-url</code>, <code>auto-login</code></td></tr>
+    <tr><td><code>activity-logger</code></td><td>Menangkap scroll (baca), klik download, event kuis/diskusi/tugas → kirim ke sheet <code>Aktivitas</code></td><td><code>apps-script-url</code>, <code>forum-api-url</code>, <code>sheet-name</code></td></tr>
+    <tr><td><code>explode-quiz</code></td><td>Kuis formatif → simpan skor ke <code>pertemuan-kuis</code></td><td><code>apps-script-url</code>, <code>sheet-name</code>, <code>quiz-category</code></td></tr>
+    <tr><td><code>forum-component</code></td><td>Forum diskusi bertingkat → <code>Forum Log</code></td><td><code>apps-script-url</code>, <code>forum-api-url</code>, <code>sheet-name</code>, <code>forum-topic</code></td></tr>
+    <tr><td><code>assignment-component</code></td><td>Pengumpulan tugas → <code>Tugas Log</code></td><td><code>apps-script-url</code>, <code>forum-api-url</code>, <code>sheet-name</code>, <code>assignment-title</code></td></tr>
+    <tr><td><code>attendance-tracker</code></td><td>Gauge kehadiran harian (6 kriteria)</td><td><code>apps-script-url</code>, <code>forum-api-url</code>, <code>sheet-name</code></td></tr>
+    <tr><td><code>engagement-score</code></td><td>Heatmap konsistensi 42 hari</td><td><code>apps-script-url</code>, <code>forum-api-url</code>, <code>sheet-name</code></td></tr>
+  </tbody>
+</table>
+<p><strong>PENTING:</strong> Semua komponen mengambil identitas siswa <strong>otomatis dari session login</strong> (event <code>quiz-user-session-changed</code>). Jangan mengisi <code>student-id</code> secara hardcode di HTML — kalau diisi, semua pengunjung akan melihat data siswa yang sama.</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2-3">3️⃣ Alur Data → Google Sheets</h2>
+<table>
+  <thead>
+    <tr><th>Aksi Siswa</th><th>Endpoint</th><th>Action</th><th>Sheet Tujuan</th><th>Tipe Aktivitas</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Login/Registrasi</td><td>Apps Script utama</td><td><code>login</code> / <code>register</code></td><td><code>Users</code></td><td>—</td></tr>
+    <tr><td>Scroll baca materi</td><td>Apps Script utama</td><td><code>logActivity</code></td><td><code>Aktivitas</code></td><td><code>reading</code></td></tr>
+    <tr><td>Klik link download</td><td>Apps Script utama</td><td><code>logActivity</code></td><td><code>Aktivitas</code></td><td><code>download</code></td></tr>
+    <tr><td>Post/Reply komentar forum</td><td>Apps Script forum</td><td><code>saveForumComment</code> + <code>logActivity</code></td><td><code>Forum Log</code> + <code>Aktivitas</code></td><td><code>discussion</code></td></tr>
+    <tr><td>Kirim tugas</td><td>Apps Script forum</td><td><code>saveAssignment</code> + <code>logActivity</code></td><td><code>Tugas Log</code> + <code>Aktivitas</code></td><td><code>assignment</code></td></tr>
+    <tr><td>Selesai kuis formatif</td><td>Apps Script utama</td><td><code>submit</code> + <code>logActivity</code></td><td><code>pertemuan-kuis</code> + <code>Aktivitas</code></td><td><code>quiz</code></td></tr>
+    <tr><td>Menampilkan tracker/heatmap</td><td>Kedua endpoint</td><td><code>getActivityHistory</code> + <code>getForumActivityHistory</code></td><td>Baca <code>Aktivitas</code> + <code>pertemuan-kuis</code> + <code>Forum Log</code></td><td>—</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2-4">4️⃣ Kode Lengkap Siap Salin</h2>
+<p>Gunakan dua URL endpoint berikut:</p>
+<ul>
+  <li><strong>Apps Script utama (kuis, aktivitas, login):</strong><br/><code>https://script.google.com/macros/s/AKfycby4OrUHF0S5ECH73nexn1FpcNSZAouC0GZ7LCdCFwUURJ8gNWnnG3bDmYO-s87gayvl/exec</code></li>
+  <li><strong>Apps Script forum &amp; tugas:</strong><br/><code>https://script.google.com/macros/s/AKfycbwXVuigXTJA3C-K7gLK1NuC3Z4GZ3eHEQ8Rqh92iqJU82W6oS1f03X7sIB0yJcnaeYpmA/exec</code></li>
+</ul>
+<pre><code>&lt;!-- 1. Login (letakkan di paling atas halaman) --&gt;
+&lt;quiz-user-auth
+  apps-script-url="https://script.google.com/macros/s/AKfycby4OrUHF0S5ECH73nexn1FpcNSZAouC0GZ7LCdCFwUURJ8gNWnnG3bDmYO-s87gayvl/exec"
+  auto-login&gt;
+&lt;/quiz-user-auth&gt;
+
+&lt;!-- 2. Kuis formatif (skor → sheet pertemuan-kuis) --&gt;
+&lt;explode-quiz
+  sheet-name="Pertemuan"
+  apps-script-url="https://script.google.com/macros/s/AKfycby4OrUHF0S5ECH73nexn1FpcNSZAouC0GZ7LCdCFwUURJ8gNWnnG3bDmYO-s87gayvl/exec"
+  quiz-category="formatif"
+  questions='[{"question":"Soal 1?","choices":["A","B","C","D"],"correctIndex":0}]'&gt;
+&lt;/explode-quiz&gt;
+
+&lt;!-- 3. Download materi (klik link = aktivitas download) --&gt;
+&lt;a href="files/materi.pdf" download&gt;📄 Download Materi PDF&lt;/a&gt;
+
+&lt;!-- 4. Forum diskusi (komentar → Forum Log + Aktivitas) --&gt;
+&lt;forum-component
+  apps-script-url="https://script.google.com/macros/s/AKfycby4OrUHF0S5ECH73nexn1FpcNSZAouC0GZ7LCdCFwUURJ8gNWnnG3bDmYO-s87gayvl/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbwXVuigXTJA3C-K7gLK1NuC3Z4GZ3eHEQ8Rqh92iqJU82W6oS1f03X7sIB0yJcnaeYpmA/exec"
+  sheet-name="Pertemuan"
+  forum-topic="Forum Diskusi Hari Ini"&gt;
+&lt;/forum-component&gt;
+
+&lt;!-- 5. Tugas mandiri (pengumpulan → Tugas Log + Aktivitas) --&gt;
+&lt;assignment-component
+  apps-script-url="https://script.google.com/macros/s/AKfycby4OrUHF0S5ECH73nexn1FpcNSZAouC0GZ7LCdCFwUURJ8gNWnnG3bDmYO-s87gayvl/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbwXVuigXTJA3C-K7gLK1NuC3Z4GZ3eHEQ8Rqh92iqJU82W6oS1f03X7sIB0yJcnaeYpmA/exec"
+  sheet-name="Pertemuan"
+  assignment-title="Tugas Refleksi"
+  assignment-instruction="Tuliskan refleksi Anda di sini."&gt;
+&lt;/assignment-component&gt;
+
+&lt;!-- 6. Status kehadiran + heatmap (data otomatis sesuai akun login) --&gt;
+&lt;grid-plate layout="1-1"&gt;
+  &lt;div slot="col-1"&gt;
+    &lt;attendance-tracker
+      apps-script-url="https://script.google.com/macros/s/AKfycby4OrUHF0S5ECH73nexn1FpcNSZAouC0GZ7LCdCFwUURJ8gNWnnG3bDmYO-s87gayvl/exec"
+      forum-api-url="https://script.google.com/macros/s/AKfycbwXVuigXTJA3C-K7gLK1NuC3Z4GZ3eHEQ8Rqh92iqJU82W6oS1f03X7sIB0yJcnaeYpmA/exec"
+      sheet-name="Pertemuan"&gt;
+    &lt;/attendance-tracker&gt;
+  &lt;/div&gt;
+  &lt;div slot="col-2"&gt;
+    &lt;engagement-score
+      apps-script-url="https://script.google.com/macros/s/AKfycby4OrUHF0S5ECH73nexn1FpcNSZAouC0GZ7LCdCFwUURJ8gNWnnG3bDmYO-s87gayvl/exec"
+      forum-api-url="https://script.google.com/macros/s/AKfycbwXVuigXTJA3C-K7gLK1NuC3Z4GZ3eHEQ8Rqh92iqJU82W6oS1f03X7sIB0yJcnaeYpmA/exec"
+      sheet-name="Pertemuan"&gt;
+    &lt;/engagement-score&gt;
+  &lt;/div&gt;
+&lt;/grid-plate&gt;
+
+&lt;!-- 7. Activity Logger (WAJIB — penangkap semua aktivitas; taruh di paling bawah) --&gt;
+&lt;activity-logger
+  sheet-name="Pertemuan"
+  apps-script-url="https://script.google.com/macros/s/AKfycby4OrUHF0S5ECH73nexn1FpcNSZAouC0GZ7LCdCFwUURJ8gNWnnG3bDmYO-s87gayvl/exec"
+  forum-api-url="https://script.google.com/macros/s/AKfycbwXVuigXTJA3C-K7gLK1NuC3Z4GZ3eHEQ8Rqh92iqJU82W6oS1f03X7sIB0yJcnaeYpmA/exec"&gt;
+&lt;/activity-logger&gt;</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2-5">5️⃣ Deploy Kedua Endpoint Apps Script</h2>
+<p>Kode backend sudah tersedia di repositori: <code>custom/src/quiz-dashboard-lite2/lib/code.gs</code> (utama) dan <code>custom/src/quiz-dashboard-lite2/lib/code-forum-tugas.gs</code> (forum &amp; tugas).</p>
+<ol>
+  <li>Buka <a href="https://script.google.com">script.google.com</a> → buat proyek baru → salin isi <code>code.gs</code> → simpan.</li>
+  <li><strong>Deploy</strong> → <strong>New deployment</strong> → jenis <strong>Web app</strong>:
+    <ul>
+      <li>Execute as: <strong>Me</strong></li>
+      <li>Who has access: <strong>Anyone</strong></li>
+    </ul>
+  </li>
+  <li>Salin URL <code>/exec</code> → itu <strong>Apps Script utama</strong> (kuis/aktivitas/login).</li>
+  <li>Ulangi dengan isi <code>code-forum-tugas.gs</code> → URL kedua = <strong>Apps Script forum &amp; tugas</strong>.</li>
+  <li>Pastikan spreadsheet tujuan sudah dibagikan (viewer) ke email akun yang menjalankan script.</li>
+</ol>
+<p>Action yang didukung backend utama: <code>login</code>, <code>register</code>, <code>verify</code>, <code>submit</code>, <code>logActivity</code>, <code>getActivityHistory</code>, <code>getScores</code>, <code>getBankSoal</code>, dll. Backend forum: <code>saveForumComment</code>, <code>deleteForumComment</code>, <code>saveAssignment</code>, <code>getForumComments</code>, <code>getForumActivityHistory</code>.</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2-6">6️⃣ Cara Cek Data di Google Sheets</h2>
+<table>
+  <thead>
+    <tr><th>Sheet</th><th>Isi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>Aktivitas</code></td><td>Semua log harian: Timestamp, Date, StudentID, Nama, NIS, Absen, Kelas, Tipe (reading/quiz/discussion/assignment/download), Deskripsi, Sheet, kdMateri</td></tr>
+    <tr><td><code>pertemuan-kuis</code></td><td>Skor kuis: Kode Materi, Nama, Skor (%), Status LULUS/TIDAK LULUS, Kategori Kuis (formatif)</td></tr>
+    <tr><td><code>Forum Log</code></td><td>Komentar bertingkat: CommentID, ParentID, UserName, StudentID, Text, Likes, kdMateri</td></tr>
+    <tr><td><code>Tugas Log</code></td><td>Pengumpulan tugas: StudentID, Nama, Title, Content, Link, kdMateri</td></tr>
+    <tr><td><code>Rangkuman</code></td><td>Rekap otomatis per siswa (dihasilkan saat kuis/aktivitas disimpan)</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2-7">7️⃣ Kriteria Status LENGKAP (100%)</h2>
+<p><code>attendance-tracker</code> menghitung 6 kriteria harian:</p>
+<ul>
+  <li>📖 Membaca materi: minimal <strong>3×</strong> (tipe reading)</li>
+  <li>🎯 Mengerjakan kuis: minimal <strong>1×</strong> (tipe quiz)</li>
+  <li>📝 Mengumpulkan tugas: minimal <strong>1×</strong> (tipe assignment)</li>
+  <li>⬇️ Download materi: minimal <strong>1×</strong> (tipe download)</li>
+  <li>💬 Komentar forum: minimal <strong>1×</strong> (dari sheet Forum Log, bukan localStorage)</li>
+  <li>🔥 Total aktivitas harian: minimal <strong>8×</strong></li>
+</ul>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2-8">8️⃣ Troubleshooting</h2>
+<table>
+  <thead>
+    <tr><th>Gejala</th><th>Penyebab &amp; Solusi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Aktivitas tidak tercatat sama sekali</td><td><code>activity-logger</code> tidak ada di halaman, atau tag tidak punya <code>apps-script-url</code>. Cek juga sudah login (session kosong → kirim data dibatalkan).</td></tr>
+    <tr><td>Hasil kuis tidak masuk sheet</td><td>Tag <code>explode-quiz</code> tidak punya <code>apps-script-url</code> (atau masih <code>spreadsheet-id=""</code>) → submit jatuh ke API HAXcms yang tidak ada. Pastikan atribut <code>apps-script-url</code> terisi.</td></tr>
+    <tr><td>Tracker/heatmap 0% padahal sudah beraktivitas</td><td>Cek <code>apps-script-url</code> &amp; <code>forum-api-url</code> di tag tracker; pastikan siswa sudah login (identitas diambil dari session, bukan hardcode).</td></tr>
+    <tr><td>Forum/tugas tersimpan tapi tidak terhitung sebagai kriteria</td><td>Pastikan <code>forum-api-url</code> terisi di <code>attendance-tracker</code> — kriteria komentar dibaca dari sheet <code>Forum Log</code> (action <code>getForumActivityHistory</code>), bukan dari localStorage.</td></tr>
+    <tr><td>Data terlambat muncul</td><td>Refresh halaman; Apps Script bisa memakan waktu 1-2 detik per panggilan. Cek konsol browser (F12) untuk pesan <code>[explode-quiz] Tersimpan</code> / <code>[attendance-tracker] Forum fetch failed</code>.</td></tr>
+    <tr><td>Log ganda / dobel di sheet Aktivitas</td><td>Dedupe otomatis sudah ditambahkan di <code>pushLocalLog</code> (abaikan entri identik dalam 5 log terakhir). Jika masih dobel, pastikan hanya ada satu <code>activity-logger</code> per halaman.</td></tr>
+    <tr><td>Data hari ini tidak muncul di tracker/heatmap padahal sheet sudah terisi</td><td>Backend versi lama mengecualikan aktivitas/komentar hari ini (filter batas tengah malam). Salin ulang <code>code.gs</code> &amp; <code>code-forum-tugas.gs</code> versi terbaru lalu Redeploy (Deploy → Manage deployments → Edit → Version: New version → Deploy).</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2-9">9️⃣ Referensi</h2>
+<ul>
+  <li>Halaman contoh bekerja: <a href="materi-siswa">📚 Modul 1: HAXcms &amp; Web Component</a></li>
+  <li>Kode backend: <code>custom/src/quiz-dashboard-lite2/lib/code.gs</code> &amp; <code>code-forum-tugas.gs</code></li>
+  <li>Komponen: <code>custom/src/quiz-dashboard-lite2/lib/attendance-system.js</code>, <code>forum-component.js</code>, <code>assignment-component.js</code>, <code>explode-quiz.js</code>, <code>quiz-user-auth.js</code></li>
+</ul>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/>
+
+<h2 id="h2-10">🔟 Satu Materi = Satu Forum (Per Pertemuan)</h2>
+<p>Setiap materi/pertemuan bisa punya <strong>forum sendiri</strong> tanpa membuat spreadsheet atau URL Apps Script baru. Caranya: semua komentar tetap masuk ke satu sheet <code>Forum Log</code>, dan kolom <code>kdMateri</code> yang memisahkan forum antar pertemuan.</p>
+<p><code>kdMateri</code> otomatis sama dengan atribut <code>sheet-name</code> pada tag. Backend memfilter di dua titik:</p>
+<ul>
+  <li><code>getForumComments</code> → menampilkan di halaman hanya komentar yang kolom <code>kdMateri</code>-nya sama dengan <code>sheet-name</code> halaman itu.</li>
+  <li><code>getForumActivityHistory</code> → menghitung kriteria "💬 Komentar forum" di tracker hanya untuk kdMateri yang sama.</li>
+</ul>
+<p><strong>PENTING:</strong> filter bersifat <em>exact match</em> (persis sama). <code>Pertemuan-1</code> ≠ <code>Pertemuan 1</code>; spasi, tanda hubung, dan huruf kapital membuat forum terlihat berbeda.</p>
+
+<table>
+  <thead>
+    <tr><th>Halaman</th><th>sheet-name (harus sama di semua tag)</th><th>Forum yang tampil &amp; terhitung</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Materi Pertemuan 1</td><td><code>Pertemuan-1</code></td><td>Hanya komentar kdMateri = <code>Pertemuan-1</code></td></tr>
+    <tr><td>Materi Pertemuan 2</td><td><code>Pertemuan-2</code></td><td>Hanya komentar kdMateri = <code>Pertemuan-2</code></td></tr>
+  </tbody>
+</table>
+
+<h3>Contoh Halaman Pertemuan-1</h3>
+<pre style="background:#f5f5f5; padding:12px; border-radius:6px; overflow-x:auto;"><code>&lt;attendance-tracker apps-script-url="..." forum-api-url="..." sheet-name="Pertemuan-1"&gt;&lt;/attendance-tracker&gt;
+&lt;engagement-score apps-script-url="..." forum-api-url="..." sheet-name="Pertemuan-1"&gt;&lt;/engagement-score&gt;
+&lt;forum-component apps-script-url="..." forum-api-url="..." sheet-name="Pertemuan-1" forum-topic="Diskusi Pertemuan 1"&gt;&lt;/forum-component&gt;
+&lt;assignment-component apps-script-url="..." forum-api-url="..." sheet-name="Pertemuan-1" assignment-title="Tugas Pertemuan 1"&gt;&lt;/assignment-component&gt;
+&lt;activity-logger apps-script-url="..." forum-api-url="..." sheet-name="Pertemuan-1"&gt;&lt;/activity-logger&gt;
+&lt;explode-quiz apps-script-url="..." sheet-name="Pertemuan-1" quiz-category="formatif"&gt;...&lt;/explode-quiz&gt;</code></pre>
+<p>Untuk Halaman Pertemuan-2: ganti semua <code>sheet-name="Pertemuan-1"</code> menjadi <code>sheet-name="Pertemuan-2"</code> (dan <code>forum-topic</code>/<code>assignment-title</code> sesuai materi). Komponen lain tetap identik.</p>
+
+<h3>Data lama yang tidak muncul</h3>
+<p>Komentar lama yang kolom <code>kdMateri</code>-nya <strong>kosong</strong> tidak akan tampil maupun terhitung (contoh: baris 26/07–01/08 dengan <code>Sheet = "Pertemuan 1"</code>). Untuk menampilkannya kembali: isi manual kolom <code>kdMateri</code> pada baris tersebut di spreadsheet — nilainya harus sama persis dengan <code>sheet-name</code> halaman (mis. <code>Pertemuan-1</code>). Baris tanpa StudentID tidak akan terhitung siapa pun.</p>
+
+<h3>Setelah mengubah file backend (.gs)</h3>
+<ol>
+  <li>Salin ulang isi <code>code.gs</code> / <code>code-forum-tugas.gs</code> dari repositori ke proyek Apps Script masing-masing.</li>
+  <li><strong>Deploy</strong> → <strong>Manage deployments</strong> → ikon pensil (Edit) pada deployment Web App → <strong>Version: New version</strong> → <strong>Deploy</strong>.</li>
+  <li>URL <code>/exec</code> tidak berubah, tetapi versi baru langsung aktif untuk panggilan berikutnya.</li>
+</ol>
