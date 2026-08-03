@@ -417,7 +417,7 @@ export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
       assignment: todayLogs.filter(l => l.type === "assignment").length,
       discussion: todayLogs.filter(l => l.type === "discussion").length,
       download: todayLogs.filter(l => l.type === "download").length,
-      forum: this.forumApiUrl ? this._forumToday : 0,
+      forum: todayLogs.filter(l => l.type === "discussion").length,
       total: todayLogs.length
     };
     // FIX: 5-6 kriteria ketat — tidak bisa 100% tanpa kuis + tugas + baca materi + download + komentar forum
