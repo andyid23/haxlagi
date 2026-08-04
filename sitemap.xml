@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa</loc>
-    <lastmod>2026-08-03T09:57:01.000Z</lastmod>
+    <lastmod>2026-08-03T23:33:20.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -200,8 +200,20 @@
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/new-page-7</loc>
-    <lastmod>2026-08-03T23:30:22.000Z</lastmod>
+    <lastmod>2026-08-04T14:32:02.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://localhost:3000/sites/haxnow/ld-2</loc>
+    <lastmod>2026-08-03T23:30:23.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://localhost:3000/sites/haxnow/ld-3</loc>
+    <lastmod>2026-08-03T23:33:20.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785800000
+      "updated": 1785853922
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -702,6 +702,48 @@
       }
     },
     {
+      "id": "item-ld-2-literasi-digital",
+      "indent": 1,
+      "location": "pages/LD-2/index.html",
+      "slug": "ld-2",
+      "order": 8,
+      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
+      "title": "LD-2: Literasi Digital",
+      "description": "Forum diskusi dan tugas Literasi Digital 2 - tanpa login jadi anonim",
+      "metadata": {
+        "created": 1785799823,
+        "updated": 1785799823,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 2,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-ld-3-literasi-digital",
+      "indent": 1,
+      "location": "pages/LD-3/index.html",
+      "slug": "ld-3",
+      "order": 9,
+      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
+      "title": "LD-3: Literasi Digital Lanjutan",
+      "description": "Materi, download, kuis, tugas, forum, kehadiran - KD Materi LD-3",
+      "metadata": {
+        "created": 1785800000,
+        "updated": 1785800000,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 5,
+        "status": ""
+      }
+    },
+    {
       "id": "item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5",
       "indent": 0,
       "location": "pages/item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5/index.html",
@@ -749,55 +791,13 @@
       "description": "tugas\n\n\n\n\n\n",
       "metadata": {
         "created": 1785799317,
-        "updated": 1785799822,
+        "updated": 1785853922,
         "images": [],
         "videos": [],
         "published": true,
         "hideInMenu": false,
         "locked": false,
         "readtime": 1
-      }
-    },
-    {
-      "id": "item-ld-2-literasi-digital",
-      "indent": 1,
-      "location": "pages/LD-2/index.html",
-      "slug": "ld-2",
-      "order": 8,
-      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
-      "title": "LD-2: Literasi Digital",
-      "description": "Forum diskusi dan tugas Literasi Digital 2 - tanpa login jadi anonim",
-      "metadata": {
-        "created": 1785799823,
-        "updated": 1785799823,
-        "images": [],
-        "videos": [],
-        "published": true,
-        "hideInMenu": false,
-        "locked": false,
-        "readtime": 2,
-        "status": ""
-      }
-    },
-    {
-      "id": "item-ld-3-literasi-digital",
-      "indent": 1,
-      "location": "pages/LD-3/index.html",
-      "slug": "ld-3",
-      "order": 9,
-      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
-      "title": "LD-3: Literasi Digital Lanjutan",
-      "description": "Materi, download, kuis, tugas, forum, kehadiran - KD Materi LD-3",
-      "metadata": {
-        "created": 1785800000,
-        "updated": 1785800000,
-        "images": [],
-        "videos": [],
-        "published": true,
-        "hideInMenu": false,
-        "locked": false,
-        "readtime": 5,
-        "status": ""
       }
     }
   ]
