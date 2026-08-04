@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785799823
+      "updated": 1785800000
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -425,11 +425,11 @@
       "slug": "tutorial-dashboard-siswa",
       "order": 12,
       "parent": "item-doc-elements",
-      "title": "📖 Tutorial: Fetch Data dari Sheet",
-      "description": "Panduan membaca data dari Google Sheets via Apps Script API",
+      "title": "📖 Tutorial: Dashboard Siswa & Dosen — Optimasi",
+      "description": "Setup, optimasi, dan panduan dashboard siswa & dosen dengan integrasi Google Sheets",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785751021,
+        "updated": 1785800000,
         "published": true,
         "locked": false,
         "status": ""
@@ -547,8 +547,8 @@
       "slug": "dashboard-siswa",
       "order": 13,
       "parent": "item-doc-elements",
-      "title": "📊 Dashboard Siswa - Lihat Nilai",
-      "description": "Halaman dashboard siswa yang membaca data dari Google Sheets",
+      "title": "📊 Dashboard Siswa — Lihat Nilai & Aktivitas",
+      "description": "Dashboard siswa HAX custom element untuk melihat nilai, leaderboard, dan aktivitas dari Google Sheets",
       "metadata": {
         "created": 1784667020,
         "updated": 1785751023,
@@ -756,6 +756,48 @@
         "hideInMenu": false,
         "locked": false,
         "readtime": 1
+      }
+    },
+    {
+      "id": "item-ld-2-literasi-digital",
+      "indent": 1,
+      "location": "pages/LD-2/index.html",
+      "slug": "ld-2",
+      "order": 8,
+      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
+      "title": "LD-2: Literasi Digital",
+      "description": "Forum diskusi dan tugas Literasi Digital 2 - tanpa login jadi anonim",
+      "metadata": {
+        "created": 1785799823,
+        "updated": 1785799823,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 2,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-ld-3-literasi-digital",
+      "indent": 1,
+      "location": "pages/LD-3/index.html",
+      "slug": "ld-3",
+      "order": 9,
+      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
+      "title": "LD-3: Literasi Digital Lanjutan",
+      "description": "Materi, download, kuis, tugas, forum, kehadiran - KD Materi LD-3",
+      "metadata": {
+        "created": 1785800000,
+        "updated": 1785800000,
+        "images": [],
+        "videos": [],
+        "published": true,
+        "hideInMenu": false,
+        "locked": false,
+        "readtime": 5,
+        "status": ""
       }
     }
   ]

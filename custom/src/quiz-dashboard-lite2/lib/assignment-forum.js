@@ -21,6 +21,7 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       forumApiUrl: { type: String, attribute: "forum-api-url" },
       sheetName: { type: String, attribute: "sheet-name" },
+      kdMateri: { type: String, attribute: "kd-materi" },
       studentId: { type: String, attribute: "student-id" },
       studentName: { type: String, attribute: "student-name" },
       studentNis: { type: String, attribute: "student-nis" },
@@ -51,6 +52,7 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
     this.appsScriptUrl = ""
     this.forumApiUrl = ""
     this.sheetName = "Pertemuan"
+    this.kdMateri = ""
     this.studentId = ""
     this.studentName = ""
     this.studentNis = ""
@@ -108,9 +110,9 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
     }
   }
 
-  // kdMateri derived from sheetName
-  get kdMateri() {
-    return this.sheetName || "Pertemuan"
+  // kdMateri derived from kdMateri property or sheetName
+  get _kdMateriVal() {
+    return this.kdMateri || this.sheetName || "Pertemuan"
   }
 
   connectedCallback() {
@@ -265,7 +267,7 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
       studentId: this.studentId || "",
       text,
       sheet: this.sheetName,
-      kdMateri: this.kdMateri
+      kdMateri: this._kdMateriVal
     }
     if (!this.studentId) {
       this._saveDraft(payload)
@@ -308,7 +310,7 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
       studentId: this.studentId || "",
       text,
       sheet: this.sheetName,
-      kdMateri: this.kdMateri
+      kdMateri: this._kdMateriVal
     }
     if (!this.studentId) {
       this._saveDraft(payload)
@@ -437,7 +439,7 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
       title: this.assignmentTitle,
       content: text,
       link: this._assignmentLink,
-      kdMateri: this.kdMateri
+      kdMateri: this._kdMateriVal
     }
     if (!this.studentId) {
       this._saveDraft(payload)
@@ -488,7 +490,7 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
         title: this.assignmentTitle,
         thread: this.forumTopic,
         studentId: this.studentId,
-        kdMateri: this.kdMateri
+        kdMateri: this._kdMateriVal
       },
       bubbles: true,
       composed: true
@@ -506,7 +508,7 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
         absen: this.studentAbsen || "",
         kelas: this.studentKelas || "",
         sheet: this.sheetName,
-        kdMateri: this.kdMateri,
+        kdMateri: this._kdMateriVal,
         timestamp: new Date().toISOString()
       })
       fetch(`${url}?${params.toString()}`, { redirect: "follow" }).catch(() => {})

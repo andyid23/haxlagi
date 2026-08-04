@@ -287,6 +287,7 @@ static get properties() {
           padding: var(--ddd-spacing-6);
           border: 1px solid var(--ddd-theme-polaris-border);
           max-width: 420px;
+          /* margin: 0 auto — No DDD token; centering pattern for card layout */
           margin: 0 auto;
         }
         h2 { color: var(--ddd-theme-primary); font-size: var(--ddd-font-size-l); margin: 0 0 var(--ddd-spacing-2) 0; text-align: center; }

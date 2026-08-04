@@ -17,7 +17,7 @@ function doGet(e) {
   const action = (e && e.parameter && e.parameter.action) || "";
   try {
     switch (action) {
-      case "getForumComments": return response(getForumComments());
+      case "getForumComments": return response(getForumComments(e.parameter));
       case "getForumActivityHistory": return response(getForumActivityHistory(e.parameter));
       case "ping": return response({ status: "ok", message: "Forum service is running", timestamp: new Date().toISOString() });
       default: return response({ status: "error", message: "Unknown GET action: " + action });
@@ -66,7 +66,7 @@ function response(obj) {
 function getForumSheet_() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   let sheet = ss.getSheetByName("Forum Log");
-  const headers = ["Timestamp", "CommentID", "ParentID", "UserName", "StudentID", "Text", "Sheet", "Action", "Likes", "kdMateri"];
+  const headers = ["Timestamp", "CommentID", "ParentID", "UserName", "StudentID", "Text", "Sheet", "Action", "Likes", "kdMateri", "NIS", "Absen", "Kelas"];
   
   if (!sheet) {
     sheet = ss.insertSheet("Forum Log");
@@ -120,7 +120,8 @@ function saveForumComment(data) {
   sheet.appendRow([
     new Date(), commentId, parentId,
     data.user || "Anonymous", data.studentId || "",
-    data.text || "", "", "post", 0, data.kdMateri || ""
+    data.text || "", "", "post", 0, data.kdMateri || "",
+    data.nis || "", data.absen || "", data.kelas || ""
   ]);
   
   return {
@@ -129,7 +130,8 @@ function saveForumComment(data) {
       id: parseInt(commentId), parentId: data.parentId || null,
       user: data.user || "Anonymous", studentId: data.studentId || "",
       text: data.text || "", time: new Date().toISOString(),
-      likes: 0, isLiked: false
+      likes: 0, isLiked: false,
+      kelas: data.kelas || ""
     }
   };
 }
@@ -144,7 +146,7 @@ function getForumComments(params) {
   for (let i = 1; i < data.length; i++) {
     const act = String(data[i][7] || "post").trim();
     if (act === "like") continue;
-    if (kdMateri && String(data[i][9] || "").trim() !== kdMateri) continue;
+    if (kdMateri && String(data[i][9] || "").trim().toLowerCase() !== kdMateri.toLowerCase()) continue;
     comments.push({
       id: parseInt(data[i][1]) || 0,
       parentId: data[i][2] === "main" ? null : (parseInt(data[i][2]) || null),
@@ -155,7 +157,8 @@ function getForumComments(params) {
       time: data[i][0] ? new Date(data[i][0]).toISOString() : "",
       likes: parseInt(data[i][8]) || 0,
       isLiked: false,
-      pinned: false
+      pinned: false,
+      kelas: String(data[i][12] || "")
     });
   }
   
@@ -236,7 +239,7 @@ function deleteForumComment(data) {
 function getTugasSheet_() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   let sheet = ss.getSheetByName("Tugas Log");
-  const headers = ["Timestamp", "StudentID", "Nama", "Sheet", "Title", "Content", "Link", "kdMateri"];
+  const headers = ["Timestamp", "StudentID", "Nama", "Sheet", "Title", "Content", "Link", "kdMateri", "NIS", "Absen", "Kelas"];
   
   if (!sheet) {
     sheet = ss.insertSheet("Tugas Log");
@@ -272,7 +275,8 @@ function saveAssignment(data) {
   
   sheet.appendRow([
     new Date(), data.studentId || "", data.name || "",
-    "", data.title || "", data.content || "", data.link || "", data.kdMateri || ""
+    "", data.title || "", data.content || "", data.link || "", data.kdMateri || "",
+    data.nis || "", data.absen || "", data.kelas || ""
   ]);
   return { status: "ok", message: "Tugas tersimpan" };
 }

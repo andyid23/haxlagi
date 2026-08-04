@@ -18,6 +18,7 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       forumApiUrl: { type: String, attribute: "forum-api-url" },
       sheetName: { type: String, attribute: "sheet-name" },
+      kdMateri: { type: String, attribute: "kd-materi" },
       studentId: { type: String, attribute: "student-id" },
       studentName: { type: String, attribute: "student-name" },
       studentNis: { type: String, attribute: "student-nis" },
@@ -68,6 +69,7 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
     this.appsScriptUrl = ""
     this.forumApiUrl = ""
     this.sheetName = "Pertemuan"
+    this.kdMateri = ""
     this.studentId = ""
     this.studentName = ""
     this.studentNis = ""
@@ -105,8 +107,8 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
     }
   }
 
-  get kdMateri() {
-    return this.sheetName || "Pertemuan"
+  get _kdMateriVal() {
+    return this.kdMateri || this.sheetName || "Pertemuan"
   }
 
   connectedCallback() {
@@ -156,7 +158,7 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
     if (!url) return
     this._loadingComments = true
     try {
-      const params = new URLSearchParams({ action: "getForumComments", kdMateri: this.kdMateri })
+      const params = new URLSearchParams({ action: "getForumComments", kdMateri: this._kdMateriVal })
       const res = await fetch(`${url}?${params.toString()}`, { redirect: "follow" })
       const data = await res.json()
       if (data.status === "ok" && data.comments) {
@@ -215,7 +217,10 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
       studentId: this.studentId || "",
       text,
       sheet: this.sheetName,
-      kdMateri: this.kdMateri
+      kdMateri: this._kdMateriVal,
+      nis: this.studentNis || "",
+      absen: this.studentAbsen || "",
+      kelas: this.studentKelas || ""
     }
     try {
       const res = await fetch(url, {
@@ -251,7 +256,10 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
       studentId: this.studentId || "",
       text,
       sheet: this.sheetName,
-      kdMateri: this.kdMateri
+      kdMateri: this._kdMateriVal,
+      nis: this.studentNis || "",
+      absen: this.studentAbsen || "",
+      kelas: this.studentKelas || ""
     }
     try {
       const res = await fetch(url, {
@@ -347,7 +355,7 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
       detail: {
         title: this.forumTopic,
         studentId: this.studentId,
-        kdMateri: this.kdMateri
+        kdMateri: this._kdMateriVal
       },
       bubbles: true,
       composed: true
@@ -364,7 +372,7 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
         absen: this.studentAbsen || "",
         kelas: this.studentKelas || "",
         sheet: this.sheetName,
-        kdMateri: this.kdMateri,
+        kdMateri: this._kdMateriVal,
         timestamp: new Date().toISOString()
       })
       fetch(`${url}?${params.toString()}`, { redirect: "follow" }).catch(() => {})
@@ -429,7 +437,7 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
           width: 40px; height: 40px; border-radius: 50%;
           background: var(--ddd-theme-primary); color: var(--ddd-theme-on-primary);
           display: flex; align-items: center; justify-content: center;
-          font-weight: bold; font-size: var(--ddd-font-size-l);
+          font-weight: var(--ddd-font-weight-bold); font-size: var(--ddd-font-size-l);
           flex-shrink: 0;
         }
         .input-wrapper { flex: 1; display: flex; flex-direction: column; gap: var(--ddd-spacing-2); }
@@ -443,7 +451,8 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
         .btn-submit {
           align-self: flex-end; padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
           background: var(--ddd-theme-primary); color: var(--ddd-theme-on-primary);
-          border: none; border-radius: var(--ddd-radius-md); font-weight: bold; cursor: pointer;
+          /* border: none — No DDD token; button reset requires explicit removal of default browser border */
+          border: none; border-radius: var(--ddd-radius-md); font-weight: var(--ddd-font-weight-bold); cursor: pointer;
         }
         .btn-submit:hover:not(:disabled) { background: var(--ddd-theme-accent); }
         .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
@@ -460,13 +469,13 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
           border-radius: var(--ddd-radius-md); padding: var(--ddd-spacing-3);
         }
         .comment-header { display: flex; align-items: center; gap: var(--ddd-spacing-2); margin-bottom: var(--ddd-spacing-1); }
-        .comment-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--ddd-theme-primary); color: var(--ddd-theme-on-primary); display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: var(--ddd-font-size-s); }
+        .comment-avatar { width: 32px; height: 32px; /* border-radius: 50% — No DDD token; DDD only has --ddd-radius-full for pill shapes, not perfect circle for square elements */ border-radius: 50%; background: var(--ddd-theme-primary); color: var(--ddd-theme-on-primary); display: flex; align-items: center; justify-content: center; font-weight: var(--ddd-font-weight-bold); font-size: var(--ddd-font-size-s); }
         .comment-meta { display: flex; flex-direction: column; gap: 2px; }
-        .comment-user { font-weight: bold; font-size: var(--ddd-font-size-s); }
+        .comment-user { font-weight: var(--ddd-font-weight-bold); font-size: var(--ddd-font-size-s); }
         .comment-time { font-size: var(--ddd-font-size-xs); color: var(--ddd-theme-secondary); }
         .comment-text { font-size: var(--ddd-font-size-s); line-height: 1.5; margin-bottom: var(--ddd-spacing-2); }
         .comment-actions { display: flex; gap: var(--ddd-spacing-2); }
-        .action-btn { padding: var(--ddd-spacing-1) var(--ddd-spacing-2); font-size: var(--ddd-font-size-xs); border: none; background: var(--ddd-theme-polaris-surface-hover); border-radius: var(--ddd-radius-sm); cursor: pointer; }
+        .action-btn { padding: var(--ddd-spacing-1) var(--ddd-spacing-2); font-size: var(--ddd-font-size-xs); /* border: none — No DDD token; button reset */ border: none; background: var(--ddd-theme-polaris-surface-hover); border-radius: var(--ddd-radius-sm); cursor: pointer; }
         .action-btn:hover { background: var(--ddd-theme-primary); color: var(--ddd-theme-on-primary); }
         .reply-form { margin-top: var(--ddd-spacing-3); padding-left: var(--ddd-spacing-6); border-left: 2px solid var(--ddd-theme-polaris-border); }
         .reply-input { width: 100%; padding: var(--ddd-spacing-2); border: 1px solid var(--ddd-theme-polaris-border); border-radius: var(--ddd-radius-md); font-family: var(--ddd-font-primary); margin-bottom: var(--ddd-spacing-2); }
@@ -493,7 +502,7 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
     return html`
       <section class="card" aria-labelledby="forum-heading">
         <h3 id="forum-heading">💬 ${this.forumTopic}</h3>
-        <div class="meta">KD Materi: ${this.kdMateri}</div>
+        <div class="meta">KD Materi: ${this._kdMateriVal}</div>
 
         <div class="input-container">
           <div class="avatar" aria-hidden="true">👤</div>
@@ -557,7 +566,7 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
         <div class="comment-header">
           <div class="comment-avatar">${(c.user || "?")[0].toUpperCase()}</div>
           <div class="comment-meta">
-            <span class="comment-user">${c.user}</span>
+            <span class="comment-user">${c.user}${c.kelas ? html` <small>(${c.kelas})</small>` : ""}</span>
             <span class="comment-time">${this._timeAgo(c.time)}</span>
           </div>
         </div>

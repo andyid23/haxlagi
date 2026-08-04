@@ -1,18 +1,14 @@
-<h1>📖 Tutorial: Cara Fetch (Baca) Data dari Google Sheets via Apps Script</h1>
-
-<p>Panduan ini menjelaskan cara <strong>membaca/mengambil data</strong> dari Google Sheets menggunakan Apps Script API, bukan hanya menyimpan. Cocok untuk membuat dashboard siswa, leaderboard, atau halaman monitoring nilai.</p>
-
+<h1>📖 Tutorial: Dashboard Siswa &amp; Dosen — Optimasi &amp; Setup</h1>
+<p>Panduan lengkap setup, optimasi, dan penggunaan <strong>dashboard siswa</strong> dan <strong>dashboard dosen</strong> di HAXcms dengan integrasi Google Sheets.</p>
 <h2>🎯 Perbedaan POST vs GET</h2>
-
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0;">
   <div style="background: #f3f0fa; border: 2px solid #6750a4; border-radius: 12px; padding: 20px;">
     <h3 style="color: #6750a4; margin-top: 0;">📤 POST (Simpan Data)</h3>
-    <p style="font-size: 13px; color: #49454f;"><code>doPost(e)</code> — Digunakan dashboard kuis untuk menyimpan hasil ke sheet.</p>
+    <p style="font-size: 13px; color: #49454f;"><code>doPost(e)</code> — Digunakan komponen kuis untuk menyimpan hasil ke sheet.</p>
     <pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 8px; font-size: 12px;">fetch(URL, {
   method: 'POST',
   body: JSON.stringify({
-    name: "Andi",
-    score: 80,
+    name: "Andi", score: 80,
     sheet: "Pertemuan 1"
   })
 })</pre>
@@ -22,167 +18,177 @@
     <p style="font-size: 13px; color: #49454f;"><code>doGet(e)</code> — Digunakan dashboard siswa untuk membaca data dari sheet.</p>
     <pre style="background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 8px; font-size: 12px;">fetch(URL + '?action=summary&name=Andi')
   .then(r => r.json())
-  .then(data => {
-    // data berisi nilai Andi
-    console.log(data);
-  })</pre>
+  .then(data => console.log(data))</pre>
   </div>
 </div>
-
 <hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>📡 Endpoint API GET (Code.gs v3)</h2>
-
-<p>Apps Script <code>doGet(e)</code> menerima parameter <code>?action=</code> untuk menentukan data apa yang diminta:</p>
-
+<h2>📊 Cara Pakai &lt;student-dashboard&gt;</h2>
+<p>Gunakan custom element <code>&lt;student-dashboard&gt;</code> untuk menampilkan dashboard siswa secara instan:</p>
+<pre><code>&lt;student-dashboard
+  apps-script-url="https://script.google.com/macros/s/YOUR_ID/exec"
+  student-name="Andi"&gt;
+&lt;/student-dashboard&gt;</code></pre>
+<h3>Atribut yang Tersedia</h3>
+<table>
+  <thead><tr><th>Atribut</th><th>Tipe</th><th>Wajib?</th><th>Keterangan</th></tr></thead>
+  <tbody>
+    <tr><td><code>apps-script-url</code></td><td>String</td><td>Ya</td><td>URL Apps Script Web App untuk fetch data</td></tr>
+    <tr><td><code>student-name</code></td><td>String</td><td>Tidak</td><td>Nama default (bisa diubah di form setup)</td></tr>
+  </tbody>
+</table>
+<p>Dashboard otomatis menyimpan URL dan nama di <code>localStorage</code>. Jika sudah pernah diisi, data langsung dimuat saat halaman dibuka.</p>
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+<h2>📡 Endpoint API GET (Code.gs)</h2>
+<p>Apps Script <code>doGet(e)</code> menerima parameter <code>?action=</code>:</p>
 <h3>1. Leaderboard — Semua Siswa</h3>
-<pre><code>GET https://script.google.com/macros/s/.../exec?action=leaderboard</code></pre>
-
-<p><strong>Response JSON:</strong></p>
-<pre><code>{
-  "status": "ok",
-  "leaderboard": [
-    {
-      "Nama": "Andi",
-      "Total Kuis": 3,
-      "Rata-rata Skor": 85,
-      "Skor Tertinggi": 100,
-      "Skor Terendah": 70,
-      "Total Aktivitas": 15,
-      "Reading": 8,
-      "Quiz Activity": 3,
-      "Discussion": 2,
-      "Download": 2,
-      "Jumlah Pertemuan": 3,
-      "Status Kuis Terakhir": "LULUS"
-    }
-  ]
-}</code></pre>
-
+<pre><code>GET ?action=leaderboard</code></pre>
+<p>Response: <code>{ status: "ok", leaderboard: [...] }</code> — array objek siswa dengan total kuis, rata-rata skor, total aktivitas, jumlah pertemuan.</p>
 <h3>2. Summary — Data Satu Siswa</h3>
-<pre><code>GET https://script.google.com/macros/s/.../exec?action=summary&name=Andi</code></pre>
-
-<p><strong>Response jika ditemukan:</strong></p>
-<pre><code>{
-  "status": "ok",
-  "data": {
-    "Nama": "Andi",
-    "Total Kuis": 3,
-    "Rata-rata Skor": 85,
-    ...
-  }
-}</code></pre>
-
-<p><strong>Response jika belum ada di Rangkuman:</strong></p>
-<pre><code>{
-  "status": "not_found",
-  "message": "Siswa \"Andi\" belum ada di rangkuman.",
-  "data": {
-    "kuis": [{"pertemuan":"Pertemuan 1","score":80,"status":"LULUS","timestamp":"..."}],
-    "aktivitas": [{"pertemuan":"Pertemuan 1","type":"reading","desc":"Membaca modul","timestamp":"..."}],
-    "totalKuis": 1,
-    "totalAktivitas": 3,
-    "rataSkor": 80,
-    "skorTertinggi": 80
-  }
-}</code></pre>
-
+<pre><code>GET ?action=summary&name=Andi</code></pre>
+<p>Response: <code>{ status: "ok", data: {...} }</code> atau <code>{ status: "not_found", data: { kuis: [...], aktivitas: [...] } }</code></p>
 <h3>3. Pertemuan — Semua Siswa di Satu Pertemuan</h3>
-<pre><code>GET https://script.google.com/macros/s/.../exec?action=pertemuan&sheet=Pertemuan 1</code></pre>
-
-<p><strong>Response:</strong> Array semua siswa yang sudah mengerjakan kuis di pertemuan tersebut.</p>
-
+<pre><code>GET ?action=pertemuan&sheet=Pertemuan 1</code></pre>
 <h3>4. Aktivitas — Log Aktivitas Siswa</h3>
-<pre><code>GET https://script.google.com/macros/s/.../exec?action=aktivitas&sheet=Pertemuan 1&name=Andi</code></pre>
-
-<p><strong>Response:</strong> Array log aktivitas (reading, quiz, discussion, download) untuk siswa di pertemuan tertentu.</p>
-
+<pre><code>GET ?action=aktivitas&sheet=Pertemuan 1&name=Andi</code></pre>
 <h3>5. List — Daftar Semua Pertemuan</h3>
-<pre><code>GET https://script.google.com/macros/s/.../exec?action=list</code></pre>
-
+<pre><code>GET ?action=list</code></pre>
 <hr style="margin: 24px 0; border-color: #e0e0e0;">
-
-<h2>💻 Contoh Kode JavaScript</h2>
-
-<h3>Fetch data satu siswa + leaderboard</h3>
-<pre><code>const BASE_URL = 'https://script.google.com/macros/s/YOUR_ID/exec';
-
-async function loadStudentData(nama) {
-  try {
-    // Ambil leaderboard dan summary sekaligus
-    const [lbRes, sumRes] = await Promise.all([
-      fetch(BASE_URL + '?action=leaderboard'),
-      fetch(BASE_URL + '?action=summary&name=' + encodeURIComponent(nama))
-    ]);
-
-    const leaderboard = await lbRes.json();
-    const summary = await sumRes.json();
-
-    // Tampilkan di halaman
-    console.log('Leaderboard:', leaderboard);
-    console.log('Data Saya:', summary);
-
-  } catch (err) {
-    console.error('Gagal fetch data:', err);
-  }
+<h2>⚡ Optimasi Dashboard Siswa</h2>
+<h3>1. Parallel Fetch</h3>
+<p>Gunakan <code>Promise.all()</code> untuk fetch leaderboard dan summary sekaligus — mengurangi waktu load hingga 50%:</p>
+<pre><code>const [lbRes, sumRes] = await Promise.all([
+  fetch(BASE + '?action=leaderboard'),
+  fetch(BASE + '?action=summary&name=' + encodeURIComponent(nama))
+]);
+const leaderboard = await lbRes.json();
+const summary = await sumRes.json();</code></pre>
+<h3>2. Lazy Load Pertemuan</h3>
+<p>Jangan fetch semua pertemuan sekaligus. Muat daftar pertemuan saat tab diklik, lalu fetch detail saat tombol pertemuan ditekan:</p>
+<pre><code>// Hanya fetch list saat tab aktif
+if (tab === 'pertemuan' && pertemuanList.length === 0) {
+  const res = await fetch(BASE + '?action=list');
+  const data = await res.json();
+  setPertemuanList(data.pertemuan);
 }
 
-// Panggil dengan nama siswa
-loadStudentData('Andi');
-</code></pre>
-
-<h3>Fetch data per pertemuan</h3>
-<pre><code>async function loadPertemuan(pertemuanName) {
-  const [quizRes, actRes] = await Promise.all([
-    fetch(BASE_URL + '?action=pertemuan&sheet=' + encodeURIComponent(pertemuanName)),
-    fetch(BASE_URL + '?action=aktivitas&sheet=' + encodeURIComponent(pertemuanName))
+// Fetch detail saat tombol diklik
+async function loadDetail(namaPertemuan) {
+  const [q, a] = await Promise.all([
+    fetch(BASE + '?action=pertemuan&sheet=' + encodeURIComponent(namaPertemuan)),
+    fetch(BASE + '?action=aktivitas&sheet=' + encodeURIComponent(namaPertemuan) + '&name=' + encodeURIComponent(nama))
   ]);
-
-  const quizData = await quizRes.json();
-  const actData = await actRes.json();
-
-  console.log('Hasil Kuis:', quizData.siswa);
-  console.log('Log Aktivitas:', actData.aktivitas);
+}</code></pre>
+<h3>3. Cache di localStorage</h3>
+<p>Simpan data di <code>localStorage</code> untuk mengurangi request berulang:</p>
+<pre><code>function cacheGet(key, fallback) {
+  try { return JSON.parse(localStorage.getItem(key)) || fallback; }
+  catch { return fallback; }
+}
+function cacheSet(key, val) {
+  try { localStorage.setItem(key, JSON.stringify(val)); } catch {}
 }
 
-loadPertemuan('Pertemuan 1');
-</code></pre>
-
+// Gunakan
+const cached = cacheGet('lb_data', null);
+if (cached && Date.now() - cached.time < 300000) {
+  // Gunakan cache (5 menit)
+  renderLeaderboard(cached.data);
+} else {
+  // Fetch baru
+  const res = await fetch(BASE + '?action=leaderboard');
+  const data = await res.json();
+  cacheSet('lb_data', { data: data.leaderboard, time: Date.now() });
+}</code></pre>
+<h3>4. Error Handling yang Robust</h3>
+<pre><code>try {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  const data = await res.json();
+} catch (err) {
+  // Tampilkan pesan ramah, bukan error teknis
+  showError('Gagal memuat data. Periksa koneksi internet Anda.');
+  console.error('[dashboard]', err);
+}</code></pre>
 <hr style="margin: 24px 0; border-color: #e0e0e0;">
-
+<h2>👨‍🏫 Dashboard Dosen (Lecturer Console)</h2>
+<p>Gunakan <code>&lt;quiz-dashboard-lite2 view-mode="lecturer"&gt;</code> atau <code>&lt;lecturer-console&gt;</code> untuk mode dosen:</p>
+<pre><code>&lt;quiz-dashboard-lite2
+  apps-script-url="https://script.google.com/macros/s/YOUR_ID/exec"
+  forum-api-url="https://script.google.com/macros/s/YOUR_FORUM_ID/exec"
+  view-mode="lecturer"
+  sheet-name="Pertemuan 1"&gt;
+&lt;/quiz-dashboard-lite2&gt;</code></pre>
+<h3>Fitur Mode Dosen</h3>
+<ul>
+  <li><strong>Lihat semua siswa</strong> — Daftar siswa dengan skor dan status kelulusan</li>
+  <li><strong>Generate soal</strong> — Buat soal kuis baru langsung dari console</li>
+  <li><strong>Input nilai UTS/UAS</strong> — Set nilai akhir untuk komponen gradebook</li>
+  <li><strong>Threshold kehadiran</strong> — Ubah kriteria minimum kehadiran</li>
+  <li><strong>Bobot nilai</strong> — Sesuaikan persentase kehadiran, kuis, UTS, UAS</li>
+</ul>
+<h3>Optimasi Dashboard Dosen</h3>
+<h3>1. Gunakan GET untuk Read, POST untuk Write</h3>
+<p>Dosen membaca data siswa via GET (sama seperti dashboard siswa). Perubahan threshold/bobot via POST ke Apps Script yang sama.</p>
+<h3>2. Real-time dengan Polling</h3>
+<pre><code>// Refresh data setiap 30 detik
+setInterval(async () => {
+  const res = await fetch(BASE + '?action=leaderboard');
+  const data = await res.json();
+  renderLeaderboard(data.leaderboard);
+}, 30000);</code></pre>
+<h3>3. Export ke Spreadsheet</h3>
+<p>Gunakan <code> lecturer-console</code> untuk generate laporan PDF atau export ke Google Sheets baru.</p>
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+<h2>🔗 Properties &amp; Sheet ID di Semua Komponen</h2>
+<p>Penjelasan property <code>apps-script-url</code>, <code>forum-api-url</code>, dan <code>spreadsheet-id</code> di setiap komponen:</p>
+<table>
+  <thead><tr><th>Komponen</th><th>apps-script-url</th><th>forum-api-url</th><th>spreadsheet-id</th><th>Keterangan</th></tr></thead>
+  <tbody>
+    <tr><td><code>quiz-dashboard-lite2</code></td><td>Ya (wajib)</td><td>Opsional</td><td>Tidak ada</td><td>Orchestrator utama, pass ke semua child</td></tr>
+    <tr><td><code>explode-quiz</code></td><td>Ya (wajib)</td><td>Tidak</td><td>Fallback opsional</td><td>Jika apps-script-url kosong, POST via spreadsheet-id</td></tr>
+    <tr><td><code>attendance-tracker</code></td><td>Ya (wajib)</td><td>Opsional</td><td>Tidak</td><td>Forum data untuk kriteria diskusi</td></tr>
+    <tr><td><code>engagement-score</code></td><td>Ya (wajib)</td><td>Opsional</td><td>Tidak</td><td>Forum data gabung ke heatmap</td></tr>
+    <tr><td><code>forum-component</code></td><td>Ya</td><td>Ya (wajib)</td><td>Tidak</td><td>CRUD komentar via forumApiUrl</td></tr>
+    <tr><td><code>assignment-component</code></td><td>Ya</td><td>Opsional</td><td>Tidak</td><td>Submit tugas via appsScriptUrl</td></tr>
+    <tr><td><code>transparent-gradebook</code></td><td>Ya (wajib)</td><td>Tidak</td><td>Tidak</td><td>Fetch nilai siswa via GET</td></tr>
+    <tr><td><code>student-dashboard</code></td><td>Ya (wajib)</td><td>Tidak</td><td>Tidak</td><td>Fetch leaderboard + summary via GET</td></tr>
+    <tr><td><code>activity-logger</code></td><td>Ya (wajib)</td><td>Opsional</td><td>Tidak</td><td>Log aktivitas + forum activity</td></tr>
+    <tr><td><code>quiz-user-auth</code></td><td>Ya (wajib)</td><td>Tidak</td><td>Tidak</td><td>Login/register siswa</td></tr>
+    <tr><td><code>lecturer-console</code></td><td>Ya (wajib)</td><td>Tidak</td><td>Tidak</td><td>CRUD data siswa + generate soal</td></tr>
+  </tbody>
+</table>
+<p><strong>Kesimpulan:</strong> Hanya <code>explode-quiz</code> yang punya <code>spreadsheet-id</code> sebagai fallback. Semua komponen lain cukup <code>apps-script-url</code>. <code>forum-api-url</code> diperlukan jika komponen perlu data forum (attendance-tracker, engagement-score, forum-component).</p>
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
 <h2>🔧 Setup di HAXcms</h2>
+<h3>Cara 1: Custom Element (Recommended)</h3>
+<pre><code>&lt;!-- Dashboard Siswa --&gt;
+&lt;student-dashboard apps-script-url="YOUR_URL"&gt;&lt;/student-dashboard&gt;
 
-<h3>Cara 1: Halaman HTML + JavaScript (Seperti Dashboard Siswa)</h3>
-<p>Buat halaman baru di HAXcms, isi dengan HTML + JavaScript seperti contoh dashboard siswa. Simpan URL Apps Script di localStorage.</p>
-
+&lt;!-- Dashboard Dosen --&gt;
+&lt;quiz-dashboard-lite2 apps-script-url="YOUR_URL" view-mode="lecturer"&gt;&lt;/quiz-dashboard-lite2&gt;</code></pre>
 <h3>Cara 2: Embed via iframe</h3>
 <pre><code>&lt;iframe src="dashboard-siswa" width="100%" height="800" style="border: none;"&gt;&lt;/iframe&gt;</code></pre>
-
-<h3>Cara 3: Kirim URL sebagai parameter</h3>
-<pre><code>&lt;!-- Tambahkan di URL halaman --&gt;
-https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
-
+<h3>Cara 3: Pass URL via Parameter</h3>
+<pre><code>https://sitelo.com/dashboard-siswa?url=SCRIPT_URL&name=Andi</code></pre>
 <hr style="margin: 24px 0; border-color: #e0e0e0;">
-
 <h2>⚠️ Syarat &amp; Ketentuan</h2>
-
 <table>
   <thead><tr><th>Syarat</th><th>Keterangan</th></tr></thead>
   <tbody>
     <tr><td>Deploy sebagai Web App</td><td>Harus Web app (bukan API Executable), akses "Anyone"</td></tr>
-    <tr><td>CORS</td><td>Apps Script support CORS untuk GET request. Tidak perlu mode no-cors.</td></tr>
+    <tr><td>CORS</td><td>Apps Script support CORS untuk GET. Tidak perlu mode no-cors.</td></tr>
     <tr><td>Rate Limit</td><td>Gratis: 20,000 request/hari. Cukup untuk kelas.</td></tr>
     <tr><td>Data Real-time</td><td>Data dibaca langsung dari spreadsheet saat request.</td></tr>
     <tr><td>Nama Case-Sensitive</td><td>Nama "Andi" dan "andi" dianggap berbeda. Pastikan konsisten.</td></tr>
     <tr><td>Minimal Chrome/Firefox</td><td>Fetch API dan async/await didukung semua browser modern.</td></tr>
   </tbody>
 </table>
-
 <hr style="margin: 24px 0; border-color: #e0e0e0;">
-
 <h2>🔗 Halaman Terkait</h2>
 <ul>
   <li><a href="dashboard-siswa">📊 Live Demo: Dashboard Siswa</a></li>
   <li><a href="tutorial-sheet-per-pertemuan">📊 Tutorial: 1 Sheet = 1 Pertemuan</a></li>
   <li><a href="full-dashboard">🎯 Demo Full Quiz Dashboard</a></li>
+  <li><a href="kehadiran">📅 Demo Komponen Kehadiran</a></li>
+  <li><a href="tutorial-apps-script">🔧 Tutorial Apps Script</a></li>
 </ul>

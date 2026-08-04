@@ -19,6 +19,7 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       forumApiUrl: { type: String, attribute: "forum-api-url" },
       sheetName: { type: String, attribute: "sheet-name" },
+      kdMateri: { type: String, attribute: "kd-materi" },
       studentId: { type: String, attribute: "student-id" },
       studentName: { type: String, attribute: "student-name" },
       studentNis: { type: String, attribute: "student-nis" },
@@ -68,6 +69,7 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
     this.appsScriptUrl = ""
     this.forumApiUrl = ""
     this.sheetName = "Pertemuan"
+    this.kdMateri = ""
     this.studentId = ""
     this.studentName = ""
     this.studentNis = ""
@@ -99,9 +101,9 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
     }
   }
 
-  // kdMateri derived from sheetName
-  get kdMateri() {
-    return this.sheetName || "Pertemuan"
+  // kdMateri derived from kdMateri property or sheetName
+  get _kdMateriVal() {
+    return this.kdMateri || this.sheetName || "Pertemuan"
   }
 
   connectedCallback() {
@@ -152,7 +154,7 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
   }
 
   _storageKey() {
-    return `hax_assignment_${this.kdMateri}`
+    return `hax_assignment_${this._kdMateriVal}`
   }
 
   _loadFromStorage() {
@@ -232,7 +234,10 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
           ...entry.data,
           studentId: this.studentId,
           name: this.studentName,
-          kdMateri: this.kdMateri
+          kdMateri: this._kdMateriVal,
+          nis: this.studentNis || "",
+          absen: this.studentAbsen || "",
+          kelas: this.studentKelas || ""
         })
       }).then(() => {
         console.log("[assignment-component] Pending flushed")
@@ -263,7 +268,10 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
       title: this.assignmentTitle,
       content: text,
       link: this._assignmentLink,
-      kdMateri: this.kdMateri
+      kdMateri: this._kdMateriVal,
+      nis: this.studentNis || "",
+      absen: this.studentAbsen || "",
+      kelas: this.studentKelas || ""
     }
     if (!this.studentId) {
       this._saveDraft(payload)
@@ -304,7 +312,7 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
       detail: {
         title: this.assignmentTitle,
         studentId: this.studentId,
-        kdMateri: this.kdMateri
+        kdMateri: this._kdMateriVal
       },
       bubbles: true,
       composed: true
@@ -321,7 +329,7 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
         absen: this.studentAbsen || "",
         kelas: this.studentKelas || "",
         sheet: this.sheetName,
-        kdMateri: this.kdMateri,
+        kdMateri: this._kdMateriVal,
         timestamp: new Date().toISOString()
       })
       fetch(`${url}?${params.toString()}`, { redirect: "follow" }).catch(() => {})
@@ -474,7 +482,7 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
     return html`
       <section class="card" aria-labelledby="assignment-heading">
         <h3 id="assignment-heading">📝 ${this.assignmentTitle}</h3>
-        <div class="meta">Formatif | ${this.t.assignmentTitle} | KD: ${this.kdMateri}</div>
+        <div class="meta">Formatif | ${this.t.assignmentTitle} | KD: ${this._kdMateriVal}</div>
         <p class="instruction">${this.assignmentInstruction}</p>
         <label class="sr-only" for="task-link">${this.t.placeholderLink}</label>
         <input

@@ -16,5 +16,6 @@ import "./quiz-dashboard-lite2/lib/explode-quiz.js";
 import "./quiz-dashboard-lite2/lib/lecturer-console.js";
 import "./quiz-dashboard-lite2/lib/question-generator.js";
 import "./quiz-dashboard-lite2/lib/ddd-dark-mode.js";
+import "./quiz-dashboard-lite2/lib/student-dashboard.js";
 
 // import '@smartedu/quiz-dashboard-lite2/quiz-dashboard-lite2.js'

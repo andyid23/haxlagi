@@ -99,6 +99,7 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       forumApiUrl: { type: String, attribute: "forum-api-url" },
       sheetName: { type: String, attribute: "sheet-name" },
+      kdMateri: { type: String, attribute: "kd-materi" },
       studentId: { type: String, attribute: "student-id" },
       studentName: { type: String, attribute: "student-name" },
       studentNis: { type: String, attribute: "student-nis" },
@@ -114,6 +115,7 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
     this.appsScriptUrl = "";
     this.forumApiUrl = "";
     this.sheetName = "Pertemuan";
+    this.kdMateri = "";
     this.studentId = "";
     this.studentName = "";
     this.studentNis = "";
@@ -130,9 +132,9 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
     this._handleReadingSaved = this._handleReadingSaved.bind(this);
     this._handleSessionChanged = this._handleSessionChanged.bind(this);
   }
-  // kdMateri derived from sheetName
-  get kdMateri() {
-    return this.sheetName || "Pertemuan"
+  // kdMateri derived from kdMateri property or sheetName
+  get _kdMateriVal() {
+    return this.kdMateri || this.sheetName || "Pertemuan"
   }
   connectedCallback() {
     super.connectedCallback();
@@ -206,12 +208,12 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
   }
   _handleDiscussionSaved(e) {
     const thread = e.detail?.thread || e.detail?.title || "Forum";
-    const kdMateri = e.detail?.kdMateri || this.kdMateri;
+    const kdMateri = e.detail?.kdMateri || this._kdMateriVal;
     this.logActivity("discussion", `Diskusi di: ${thread}`);
   }
   _handleAssignmentSaved(e) {
     const title = e.detail?.title || "Tugas";
-    const kdMateri = e.detail?.kdMateri || this.kdMateri;
+    const kdMateri = e.detail?.kdMateri || this._kdMateriVal;
     this.logActivity("assignment", `Tugas dikumpulkan: ${title}`);
   }
   _handleReadingSaved(e) {
@@ -238,7 +240,7 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
         action: "logActivity", timestamp: new Date().toISOString(), date: getTodayString(),
         name: this.studentName, studentId: this.studentId,
         nis: this.studentNis || "", absen: this.studentAbsen || "", kelas: this.studentKelas || "",
-        activityType: type, description, kdMateri: this.kdMateri
+        activityType: type, description, kdMateri: this._kdMateriVal
       });
       fetch(`${this.appsScriptUrl}?${params.toString()}`, { redirect: "follow" })
         .then(() => { if (logEntry) markLogSynced(logEntry.id); })
@@ -255,7 +257,7 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
         action: "logActivity", timestamp: log.timestamp, date: log.date,
         name: this.studentName, studentId: this.studentId,
         nis: this.studentNis || "", absen: this.studentAbsen || "", kelas: this.studentKelas || "",
-        activityType: log.type, description: log.description, kdMateri: this.kdMateri
+        activityType: log.type, description: log.description, kdMateri: this._kdMateriVal
       });
       fetch(`${this.appsScriptUrl}?${params.toString()}`, { redirect: "follow" })
         .then(() => { markLogSynced(log.id); })
@@ -430,7 +432,7 @@ export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
       return;
     }
     try {
-      const params = new URLSearchParams({ action: "getForumActivityHistory", studentId: this.studentId, days: 1, kdMateri: this.kdMateri });
+      const params = new URLSearchParams({ action: "getForumActivityHistory", studentId: this.studentId, days: 1, kdMateri: this._kdMateriVal });
       const res = await fetch(`${this.forumApiUrl}?${params.toString()}`);
       const data = await res.json();
       const history = data.history || [];
@@ -638,14 +640,14 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
       return;
     }
     try {
-      const params = new URLSearchParams({ action: "getActivityHistory", studentId: this.studentId, days: 42, kdMateri: this.kdMateri });
+      const params = new URLSearchParams({ action: "getActivityHistory", studentId: this.studentId, days: 42, kdMateri: this._kdMateriVal });
       const res = await fetch(`${this.appsScriptUrl}?${params.toString()}`);
       const data = await res.json();
       const map = {};
       (data.history || []).forEach(h => { map[h.date] = (map[h.date] || 0) + (h.count || 0); });
       if (this.forumApiUrl) {
         try {
-          const fParams = new URLSearchParams({ action: "getForumActivityHistory", studentId: this.studentId, days: 42, kdMateri: this.kdMateri });
+          const fParams = new URLSearchParams({ action: "getForumActivityHistory", studentId: this.studentId, days: 42, kdMateri: this._kdMateriVal });
           const fRes = await fetch(`${this.forumApiUrl}?${fParams.toString()}`);
           const fData = await fRes.json();
           (fData.history || []).forEach(h => { map[h.date] = (map[h.date] || 0) + (h.count || 0); });
