@@ -14,7 +14,7 @@ description: |+
 
 metadata:
   created: 1785799317
-  updated: 1785853922
+  updated: 1785854027
   images: []
   videos: []
   published: true
@@ -27,7 +27,7 @@ content: >
   apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
   forum-api-url="https://script.google.com/macros/s/AKfycbyzebiKMgQrnUSp424ZdxA0HNyqE_3CFS4F_t-WcFVmU7fvbLY18Qe_zgeY5uwrZS8Erg/exec"
   kd-materi="LD-1" forum-topic="Forum Diskusi: Refleksi Belajar Literasi
-  Digital" view-mode="student" _sort-mode="best" sheet-name="LD-1"
+  Digital" view-mode="student" _sort-mode="best" sheet-name="Pertemuan"
   _comments="[{&quot;id&quot;:1785723602738,&quot;parentId&quot;:null,&quot;user&quot;:&quot;Andy
   Yulianto&quot;,&quot;studentId&quot;:&quot;STD-65108053&quot;,&quot;text&quot;:&quot;ini
   komentar tugas mandiri tanggal 3
@@ -65,5 +65,4 @@ content: >
   hidup? Sertakan link Google Drive/Doc jika ada file pendukung."
   view-mode="student" _sort-mode="best" sheet-name="Pertemuan"
   student-id="STD-65108053" student-name="Andy Yulianto" student-nis="234"
-  student-absen="2" student-kelas="XI-1" _assignment-text="tulisa jawaaban anda
-  tanggal 3 agustus 2026" _assignment-submitted=""></assignment-component>
+  student-absen="2" student-kelas="XI-1"></assignment-component>
