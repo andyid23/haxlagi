@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785882360
+      "updated": 1785882451
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -551,7 +551,7 @@
       "description": "Dashboard siswa HAX custom element untuk melihat nilai, leaderboard, dan aktivitas dari Google Sheets",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785882359,
+        "updated": 1785882451,
         "published": true,
         "locked": false,
         "status": "",

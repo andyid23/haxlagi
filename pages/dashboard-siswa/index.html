@@ -3,7 +3,8 @@
 <p>Halaman ini mengambil data <strong>langsung dari Google Sheets</strong> via Apps Script
   API. Masukkan URL Apps Script dan nama Anda untuk melihat data kuis, aktivitas, dan
   leaderboard secara real-time.</p>
-<student-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" student-name="Andy" _active-tab="leaderboard" _raw-kuis="[]" _raw-aktivitas="[]" _pertemuan-list="[]"></student-dashboard>
+<student-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" student-name="" _active-tab="leaderboard" _raw-kuis="[]" _raw-aktivitas="[]" _pertemuan-list="[]"></student-dashboard>
+<student-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec?action=leaderboard" student-name="" _active-tab="leaderboard" _raw-kuis="[]" _raw-aktivitas="[]" _pertemuan-list="[]"></student-dashboard>
 <hr style="margin: 24px 0; border-color: #e0e0e0;"/><h2 id="h2-1630179471">📊 Cara Kerja</h2>
 <ol>
   <li><strong>Masukkan URL Apps Script</strong> &#8212; sama dengan yang dipakai di dashboard
@@ -31,6 +32,7 @@
     <tr>
       <td>leaderboard</td>
       <td><code>?action=leaderboard</code>
+
       </td>
 
       <td>Semua siswa dari sheet Rangkuman</td>
@@ -39,6 +41,7 @@
     <tr>
       <td>summary</td>
       <td><code>?action=summary&amp;name=Andi</code>
+
       </td>
 
       <td>Data satu siswa</td>
@@ -47,6 +50,7 @@
     <tr>
       <td>pertemuan</td>
       <td><code>?action=pertemuan&amp;sheet=Pertemuan 1</code>
+
       </td>
 
       <td>Semua siswa di pertemuan</td>
@@ -55,6 +59,7 @@
     <tr>
       <td>aktivitas</td>
       <td><code>?action=aktivitas&amp;sheet=Pertemuan 1&amp;name=Andi</code>
+
       </td>
 
       <td>Log aktivitas siswa</td>
@@ -63,6 +68,7 @@
     <tr>
       <td>list</td>
       <td><code>?action=list</code>
+
       </td>
 
       <td>Daftar sheet tab</td>
@@ -74,9 +80,11 @@
 <h2 id="h2-489096968">🔗 Halaman Terkait</h2>
 <ul>
   <li><a href="tutorial-dashboard-siswa">📖 Tutorial: Cara Fetch Data dari Sheet</a>
+
   </li>
 
   <li><a href="tutorial-sheet-per-pertemuan">📊 Tutorial: 1 Sheet = 1 Pertemuan</a>
+
   </li>
 
 </ul>
