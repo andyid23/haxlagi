@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-08-04T14:33:47.000Z</updated>
+  <updated>2026-08-04T14:36:48.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -1374,38 +1374,93 @@ setInterval(async () => {
   <entry>
     <title>📊 Dashboard Siswa — Lihat Nilai &amp; Aktivitas</title>
     <id>item-dashboard-siswa</id>
-    <updated>2026-08-03T09:57:03.000Z</updated>
+    <updated>2026-08-04T22:25:59.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Dashboard siswa HAX custom element untuk melihat nilai, leaderboard, dan aktivitas dari Google Sheets</summary>
     <link href="https://localhost:3000/sites/haxnow/dashboard-siswa"/>
     
     <content type="html">
-      <![CDATA[ <h1>📊 Dashboard Siswa — Lihat Nilai &amp; Aktivitas dari Google Sheets</h1>
-<p>Halaman ini mengambil data <strong>langsung dari Google Sheets</strong> via Apps Script API. Masukkan URL Apps Script dan nama Anda untuk melihat data kuis, aktivitas, dan leaderboard secara real-time.</p>
-<student-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"></student-dashboard>
-<hr style="margin: 24px 0; border-color: #e0e0e0;">
-<h2>📊 Cara Kerja</h2>
+      <![CDATA[ 
+<h1 id="h1--736883102">📊 Dashboard Siswa &#8212; Lihat Nilai &#38; Aktivitas dari Google Sheets</h1>
+<p>Halaman ini mengambil data <strong>langsung dari Google Sheets</strong> via Apps Script
+  API. Masukkan URL Apps Script dan nama Anda untuk melihat data kuis, aktivitas, dan
+  leaderboard secara real-time.</p>
+<student-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" student-name="Andy" _active-tab="leaderboard" _raw-kuis="[]" _raw-aktivitas="[]" _pertemuan-list="[]"></student-dashboard>
+<hr style="margin: 24px 0; border-color: #e0e0e0;"/><h2 id="h2-1630179471">📊 Cara Kerja</h2>
 <ol>
-  <li><strong>Masukkan URL Apps Script</strong> — sama dengan yang dipakai di dashboard kuis</li>
-  <li><strong>Masukkan nama Anda</strong> — data dicocokkan dengan nama di sheet</li>
-  <li><strong>Klik Tampilkan</strong> — fetch data dari Apps Script API GET endpoint</li>
+  <li><strong>Masukkan URL Apps Script</strong> &#8212; sama dengan yang dipakai di dashboard
+    kuis</li>
+
+  <li><strong>Masukkan nama Anda</strong> &#8212; data dicocokkan dengan nama di sheet</li>
+
+  <li><strong>Klik Tampilkan</strong> &#8212; fetch data dari Apps Script API GET endpoint</li>
+
   <li><strong>Jelajahi tab:</strong> Leaderboard, Kuis Saya, Aktivitas Saya, Pertemuan</li>
+
 </ol>
-<h3>Endpoint API yang Digunakan:</h3>
+<h3 id="h3--964951722">Endpoint API yang Digunakan:</h3>
 <table>
-  <thead><tr><th>Action</th><th>URL</th><th>Return</th></tr></thead>
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>URL</th>
+      <th>Return</th>
+    </tr>
+
+  </thead>
+
   <tbody>
-    <tr><td>leaderboard</td><td><code>?action=leaderboard</code></td><td>Semua siswa dari sheet Rangkuman</td></tr>
-    <tr><td>summary</td><td><code>?action=summary&amp;name=Andi</code></td><td>Data satu siswa</td></tr>
-    <tr><td>pertemuan</td><td><code>?action=pertemuan&amp;sheet=Pertemuan 1</code></td><td>Semua siswa di pertemuan</td></tr>
-    <tr><td>aktivitas</td><td><code>?action=aktivitas&amp;sheet=Pertemuan 1&amp;name=Andi</code></td><td>Log aktivitas siswa</td></tr>
-    <tr><td>list</td><td><code>?action=list</code></td><td>Daftar sheet tab</td></tr>
+    <tr>
+      <td>leaderboard</td>
+      <td><code>?action=leaderboard</code>
+      </td>
+
+      <td>Semua siswa dari sheet Rangkuman</td>
+    </tr>
+
+    <tr>
+      <td>summary</td>
+      <td><code>?action=summary&amp;name=Andi</code>
+      </td>
+
+      <td>Data satu siswa</td>
+    </tr>
+
+    <tr>
+      <td>pertemuan</td>
+      <td><code>?action=pertemuan&amp;sheet=Pertemuan 1</code>
+      </td>
+
+      <td>Semua siswa di pertemuan</td>
+    </tr>
+
+    <tr>
+      <td>aktivitas</td>
+      <td><code>?action=aktivitas&amp;sheet=Pertemuan 1&amp;name=Andi</code>
+      </td>
+
+      <td>Log aktivitas siswa</td>
+    </tr>
+
+    <tr>
+      <td>list</td>
+      <td><code>?action=list</code>
+      </td>
+
+      <td>Daftar sheet tab</td>
+    </tr>
+
   </tbody>
+
 </table>
-<h2>🔗 Halaman Terkait</h2>
+<h2 id="h2-489096968">🔗 Halaman Terkait</h2>
 <ul>
-  <li><a href="tutorial-dashboard-siswa">📖 Tutorial: Cara Fetch Data dari Sheet</a></li>
-  <li><a href="tutorial-sheet-per-pertemuan">📊 Tutorial: 1 Sheet = 1 Pertemuan</a></li>
+  <li><a href="tutorial-dashboard-siswa">📖 Tutorial: Cara Fetch Data dari Sheet</a>
+  </li>
+
+  <li><a href="tutorial-sheet-per-pertemuan">📊 Tutorial: 1 Sheet = 1 Pertemuan</a>
+  </li>
+
 </ul>
  ]]>
     </content>

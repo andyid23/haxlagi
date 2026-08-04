@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Aug 2026 14:33:47 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 14:36:48 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -89,7 +89,7 @@
     <item>
       <title>📊 Dashboard Siswa — Lihat Nilai &amp; Aktivitas</title>
       <link>https://localhost:3000/sites/haxnow/dashboard-siswa</link>
-      <description>📊 Dashboard Siswa — Lihat Nilai &amp;amp; Aktivitas dari Google Sheets Halaman ini mengambil data langsung dari Google Sheets via Apps Script API. Masukkan URL Apps Script dan nama Anda untuk melihat data kuis, aktivitas, dan leaderboard secara real-time. 📊 Cara Kerja Masukkan URL Apps Script — sama dengan yang dipakai di dashboard kuis Masukkan nama Anda — data dicocokkan dengan nama di sheet Klik Tampilkan — fetch data dari Apps Script API GET endpoint Jelajahi tab: Leaderboard, Kuis Saya, Ak...</description>
+      <description>📊 Dashboard Siswa &amp;#8212; Lihat Nilai &amp;#38; Aktivitas dari Google Sheets Halaman ini mengambil data langsung dari Google Sheets via Apps Script API. Masukkan URL Apps Script dan nama Anda untuk melihat data kuis, aktivitas, dan leaderboard secara real-time. 📊 Cara Kerja Masukkan URL Apps Script &amp;#8212; sama dengan yang dipakai di dashboard kuis Masukkan nama Anda &amp;#8212; data dicocokkan dengan nama di sheet Klik Tampilkan &amp;#8212; fetch data dari Apps Script API GET endpoint Jelajahi tab: Le...</description>
       <guid>https://localhost:3000/sites/haxnow/dashboard-siswa</guid>
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>

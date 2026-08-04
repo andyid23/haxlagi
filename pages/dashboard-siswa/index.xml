@@ -1,4 +1,27 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+<id>item-dashboard-siswa</id>
+<indent>0</indent>
+<location>pages/dashboard-siswa/index.xml</location>
+<slug>dashboard-siswa</slug>
+<order>13</order>
+<parent>item-doc-elements</parent>
+<title>📊 Dashboard Siswa — Lihat Nilai &amp; Aktivitas</title>
+<description>Dashboard siswa HAX custom element untuk melihat nilai, leaderboard, dan aktivitas dari Google Sheets</description>
+<metadata>
+<created>1784667020</created>
+<updated>1785882359</updated>
+<published>true</published>
+<locked>false</locked>
+<status></status>
+<hideInMenu>false</hideInMenu>
+<readtime>1</readtime>
+<videos>
+</videos>
+<images>
+</images>
+</metadata>
+<content><![CDATA[
 <h1 id="h1--736883102">📊 Dashboard Siswa &#8212; Lihat Nilai &#38; Aktivitas dari Google Sheets</h1>
 <p>Halaman ini mengambil data <strong>langsung dari Google Sheets</strong> via Apps Script
   API. Masukkan URL Apps Script dan nama Anda untuk melihat data kuis, aktivitas, dan
@@ -80,3 +103,5 @@
   </li>
 
 </ul>
+]]></content>
+</item>

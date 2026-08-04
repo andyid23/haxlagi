@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785854208
+      "updated": 1785882360
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -542,7 +542,7 @@
     },
     {
       "id": "item-dashboard-siswa",
-      "indent": 2,
+      "indent": 0,
       "location": "pages/dashboard-siswa/index.html",
       "slug": "dashboard-siswa",
       "order": 13,
@@ -551,10 +551,14 @@
       "description": "Dashboard siswa HAX custom element untuk melihat nilai, leaderboard, dan aktivitas dari Google Sheets",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785751023,
+        "updated": 1785882359,
         "published": true,
         "locked": false,
-        "status": ""
+        "status": "",
+        "hideInMenu": false,
+        "readtime": 1,
+        "videos": [],
+        "images": []
       }
     },
     {
