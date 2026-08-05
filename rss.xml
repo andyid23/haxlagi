@@ -151,13 +151,6 @@
     </item>
     <item>
       <title>New Page</title>
-      <link>https://localhost:3000/sites/haxnow/new-page-4</link>
-      <description>Tugas 1 Login / Registrasi 2 Tugas Mandiri &amp;#38; Forum Diskusi Tugas tersimpan ke Tugas Log sheet. Forum CRUD via Forum Log sheet (nested replies, like, sort).</description>
-      <guid>https://localhost:3000/sites/haxnow/new-page-4</guid>
-      <pubDate>Sat, 01 Aug 2026 02:37:08 GMT</pubDate>
-    </item>
-    <item>
-      <title>New Page</title>
       <link>https://localhost:3000/sites/haxnow/new-page-5</link>
       <description></description>
       <guid>https://localhost:3000/sites/haxnow/new-page-5</guid>
@@ -183,6 +176,13 @@
       <description>📘 Panduan Guru: Soal, Nilai &amp;amp; Rapor Panduan lengkap alur kerja: Materi → Kuis (Formatif/UH/UTS/UAS) → Sikap &amp;amp; Keterampilan → Bobot Nilai → Rapor . Semua data tersimpan di satu Google Spreadsheet lewat Apps Script. 🎯 Alur Kerja Siapkan 1 Spreadsheet + deploy Apps Script ( code.gs ) → dapatkan URL Web App Buat halaman Materi di HAXcms Siswa login &amp;amp; mengerjakan kuis (formatif, ulangan harian, UTS, UAS) Dosen: input nilai manual UTS/UAS + atur bobot 6 komponen Dosen: klik Generate L...</description>
       <guid>https://localhost:3000/sites/haxnow/tutorial-panduan-guru</guid>
       <pubDate>Sat, 01 Aug 2026 08:53:39 GMT</pubDate>
+    </item>
+    <item>
+      <title>Copy of 📘 Tutorial Alur Aktivitas &amp; Sheet</title>
+      <link>https://localhost:3000/sites/haxnow/elemendokumen/copy-of-tutorial-alur-aktivitas-sheet</link>
+      <description>📘 Tutorial Lengkap: Alur Aktivitas, 7 Sheet Utama &amp;#38; Kriteria Kehadiran Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke Google Sheets via Apps Script. Semua fitur sudah ada di elemen; halaman ini hanya mendokumentasikan struktur data &amp;#38; alurnya. 🎯 Ringkasan 1 Halaman Aktivitas Siswa Elemen Frontend Action Apps Script Sheet Target 🔐 Login / Register quiz-user-auth register / login Users 📖 Baca Materi (scroll) activity-logger activity type=reading {Pertemuan} -...</description>
+      <guid>https://localhost:3000/sites/haxnow/elemendokumen/copy-of-tutorial-alur-aktivitas-sheet</guid>
+      <pubDate>Sat, 01 Aug 2026 13:20:14 GMT</pubDate>
     </item>
   </channel>
 </rss>
