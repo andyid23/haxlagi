@@ -14,10 +14,10 @@ description: |+
 
 metadata:
   created: 1785799317
-  updated: 1785890476
+  updated: 1785891244
   images: []
   videos: []
-  published: true
+  published: false
   hideInMenu: false
   locked: false
   readtime: 1
@@ -32,11 +32,13 @@ content: |
 
 
 
+
   </section>
   <section class="card">
     <h2>📝 Tugas Mandiri: LD-3</h2>
     <assignment-component apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-1" assignment-title="Tugas LD-3: Refleksi Literasi Digital" assignment-instruction="Tuliskan refleksi tentang apa yang sudah Anda pahami mengenai literasi digital lanjutan. Sertakan contoh kasus nyata yang pernah Anda alami atau temui." view-mode="student" sheet-name="Pertemuan" student-id="STD-65108053" student-name="Andy Yulianto" student-nis="234" student-absen="2" student-kelas="XI-1">
     </assignment-component>
+
 
 
 
