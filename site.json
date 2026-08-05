@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785891604
+      "updated": 1785897135
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -807,11 +807,11 @@
       "slug": "aturan-belajar-siswa",
       "order": 0,
       "parent": null,
-      "title": "PANDUAN BELAJAR MANDIRI: MENJADI PEMBELAJAR SEUMUR HIDUP",
+      "title": "PANDUAN BELAJAR",
       "description": "belajar kritis",
       "metadata": {
         "created": 1785710068,
-        "updated": 1785891588,
+        "updated": 1785897135,
         "images": [],
         "videos": [],
         "theme": {
@@ -833,7 +833,7 @@
         "hideInMenu": false,
         "icon": "av:equalizer",
         "locked": false,
-        "readtime": 6,
+        "readtime": 5,
         "status": "",
         "files": [
           {
