@@ -7,38 +7,33 @@ Menjadi Jagoan Keamanan Akun & Finansial Digital
 🔐 Login
 --------
 
-<learning-component type="assessment" accent-color="red" subtitle="Keamanan Akun" title="Assessment" icon="lrn:assessment"><p>Tujuan Pembelajaran (XI-LD-04):</p><ol><li>Mampu mengelola kata sandi dengan manajer kata sandi,</li><li>menerapkan autentikasi dua langkah dengan beragam moda, serta</li><li>memahami pemanfaatan platform lokapasar, perbankan digital, dompet digital beserta aspek keamanannya.</li></ol></learning-component>
+<learning-component type="assessment" accent-color="red" subtitle="Keamanan Akun" title="Assessment" icon="lrn:assessment"><p>Tujuan Pembelajaran (XI-LD-03):</p><ol><li>Mampu mengelola kata sandi dengan manajer kata sandi,</li><li>menerapkan autentikasi dua langkah dengan beragam moda, serta</li><li>memahami pemanfaatan platform lokapasar, perbankan digital, dompet digital beserta aspek keamanannya.</li></ol></learning-component>
 
 📖 Materi Pembelajaran
 ----------------------
 
 Pada pertemuan ini, kita akan mempelajari konsep keamanan akun digital
 
-1.  Misi & Mindset Fondasi Keamanan Digital
+#### <fake-hax-list-break>Misi &amp; Mindset Fondasi Keamanan Digital<br></fake-hax-list-break>
 
 Keamanan digital bukan sekadar pilihan aplikasi, melainkan higiene digital dan pola pikir kritis (critical mindset). Prinsip paling mendasar dalam keamanan informasi adalah:
-
-$$\\text{Tingkat Kenyamanan} \\propto \\frac{1}{\\text{Tingkat Keamanan}}$$
 
 Semakin instan dan tanpa kendala (frictionless) sebuah proses login atau transaksi, biasanya semakin besar celah risiko keamanan yang ada.
 
 Langkah Aktivitas Awal:
 
-Inventarisasi Aset Digital: Identifikasi 3 aset digital utama milikmu (misal: Email Utama, WhatsApp, Account Bank/E-Wallet).
+*   Inventarisasi Aset Digital: Identifikasi 3 aset digital utama milikmu (misal: Email Utama, WhatsApp, Account Bank/E-Wallet).
+*   Evaluasi Risiko: Tentukan dampak risiko jika salah satu aset tersebut terkompromi (kerugian finansial, pencurian identitas, penyebaran hoaks/penipuan atas nama pribadi
 
-Evaluasi Risiko: Tentukan dampak risiko jika salah satu aset tersebut terkompromi (kerugian finansial, pencurian identitas, penyebaran hoaks/penipuan atas nama pribadi).
-
-1.  Arsitektur Kata Sandi & Manajer Kata Sandi (Password Manager)
+#### <fake-hax-list-break>Arsitektur Kata Sandi &amp; Manajer Kata Sandi (Password Manager)<br></fake-hax-list-break>
 
 A. Mengapa Kata Sandi Konvensional Gagal?
 
 Kata sandi tunggal seperti kopi123 atau tanggal lahir sangat rentan terhadap serangan Dictionary Attack dan Brute Force. Kekuatan sebuah kata sandi diukur dari Entropi ($E$):
 
-$$E = L \\times \\log\_2(R)$$
+L = Panjang karakter (length)
 
-$L$ = Panjang karakter (length)
-
-$R$ = Jumlah variasi karakter (pool of characters)
+R = Jumlah variasi karakter (pool of characters)
 
 Mengubah kata sandi dari password pendek menjadi passphrase (kalimat acak) meningkatkan $L$ secara signifikan, membuat perhitungan brute force membutuhkan waktu ratusan tahun.
 

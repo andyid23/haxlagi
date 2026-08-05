@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785901221
+      "updated": 1785901764
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -882,7 +882,7 @@
         "created": 1785891589,
         "images": [],
         "videos": [],
-        "updated": 1785901221,
+        "updated": 1785901764,
         "published": true,
         "status": "",
         "files": [
