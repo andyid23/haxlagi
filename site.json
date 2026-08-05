@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785888341
+      "updated": 1785889951
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -792,11 +792,11 @@
       "slug": "new-page-7",
       "order": 1,
       "parent": null,
-      "title": "Literasi 3",
+      "title": "Materi-Coba",
       "description": "tugas\n\n\n\n\n\n",
       "metadata": {
         "created": 1785799317,
-        "updated": 1785888234,
+        "updated": 1785889950,
         "images": [],
         "videos": [],
         "published": true,

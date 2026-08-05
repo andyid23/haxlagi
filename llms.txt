@@ -45,7 +45,7 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [LD-2: Literasi Digital](https://localhost:3000/sites/haxnow/pages/LD-2/index.md): Forum diskusi dan tugas Literasi Digital 2 - tanpa login jadi anonim
 - [LD-3: Literasi Digital Lanjutan](https://localhost:3000/sites/haxnow/pages/LD-3/index.md): Materi, download, kuis, tugas, forum, kehadiran - KD Materi LD-3
 - [PANDUAN BELAJAR MANDIRI: MENJADI PEMBELAJAR SEUMUR HIDUP](https://localhost:3000/sites/haxnow/pages/item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5/index.md): belajar kritis
-- [Literasi 3](https://localhost:3000/sites/haxnow/pages/item-1a372864-f4f9-486c-9541-1f7912fe6b44/index.md): tugas
+- [Materi-Coba](https://localhost:3000/sites/haxnow/pages/item-1a372864-f4f9-486c-9541-1f7912fe6b44/index.md): tugas
 
 ## Optional
 - [Search index](https://localhost:3000/sites/haxnow/lunrSearchIndex.json): Lunr corpus for quick full-text retrieval.

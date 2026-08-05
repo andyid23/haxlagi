@@ -4,9 +4,9 @@
 <indent>0</indent>
 <location>pages/item-1a372864-f4f9-486c-9541-1f7912fe6b44/index.xml</location>
 <slug>new-page-7</slug>
-<order>2</order>
+<order>1</order>
 <parent></parent>
-<title>Literasi 3</title>
+<title>Materi-Coba</title>
 <description>tugas
 
 
@@ -16,7 +16,7 @@
 </description>
 <metadata>
 <created>1785799317</created>
-<updated>1785888162</updated>
+<updated>1785889950</updated>
 <images>
 </images>
 <videos>
@@ -25,12 +25,14 @@
 <hideInMenu>false</hideInMenu>
 <locked>false</locked>
 <readtime>1</readtime>
+<status></status>
 </metadata>
 <content><![CDATA[
 <section class="card">
-  <h2>💬 Forum Diskusi: LD-3</h2>
-  <forum-component apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-1" forum-topic="Forum Diskusi: LD-1 - Literasi Digital Lanjutan" view-mode="student" sheet-name="Pertemuan" _comments="[]" _sort-mode="best" _loading-comments="">
+  <h3>💬 Forum Diskusi: LD-1</h3>
+  <forum-component apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-1" forum-topic="Forum Diskusi: LD-1 - Literasi Digital Lanjutan" view-mode="student" sheet-name="LD-3" _comments="[]" _sort-mode="best" _loading-comments="">
   </forum-component>
+
 
 
 </section>
@@ -38,6 +40,7 @@
   <h2>📝 Tugas Mandiri: LD-3</h2>
   <assignment-component apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-1" assignment-title="Tugas LD-3: Refleksi Literasi Digital" assignment-instruction="Tuliskan refleksi tentang apa yang sudah Anda pahami mengenai literasi digital lanjutan. Sertakan contoh kasus nyata yang pernah Anda alami atau temui." view-mode="student" sheet-name="Pertemuan" student-id="STD-65108053" student-name="Andy Yulianto" student-nis="234" student-absen="2" student-kelas="XI-1">
   </assignment-component>
+
 
 
 </section>
