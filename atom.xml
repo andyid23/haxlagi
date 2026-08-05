@@ -2585,7 +2585,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>PembelajaranOnline</title>
     <id>item-df69b4a8-b470-4c1e-be89-8833ce3452da</id>
-    <updated>2026-08-05T11:09:43.000Z</updated>
+    <updated>2026-08-05T11:16:01.000Z</updated>
     <published>2026-07-22T02:35:16.000Z</published>
     <summary>
 📚 Pertemuan 1: Pengenalan HAXcms
@@ -2602,7 +2602,7 @@ Materi pembelajaran hari ini...
 <h1 id="h1-1954384612">📚 Pertemuan 1: Tugas</h1>
 <p>Materi pembelajaran hari ini...</p>
 <p>tiidak bisa</p>
-<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" sheet-name="Pertemuan 1"></full-quiz-dashboard>
+<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbwXaXy0iKN9t1wIIi1euAqQt_T5TKBX1_K009wsPFFvF0G3un8cSTrT7PqWcXs8vz8eEA/exec" sheet-name="Pertemuan 1"></full-quiz-dashboard>
  ]]>
     </content>
   </entry>

@@ -4,8 +4,8 @@
 <indent>0</indent>
 <location>pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.xml</location>
 <slug>new-page-1</slug>
-<order>2</order>
-<parent>item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c</parent>
+<order>0</order>
+<parent>item-tutorial-aktivitas-harian</parent>
 <title>PembelajaranOnline</title>
 <description>
 📚 Pertemuan 1: Pengenalan HAXcms
@@ -16,7 +16,7 @@ Materi pembelajaran hari ini...
 </description>
 <metadata>
 <created>1784687716</created>
-<updated>1785888341</updated>
+<updated>1785928561</updated>
 <images>
 </images>
 <videos>
@@ -27,12 +27,13 @@ Materi pembelajaran hari ini...
 <readtime>1</readtime>
 <status></status>
 <pageType>content</pageType>
+<icon>lrn:page</icon>
 </metadata>
 <content><![CDATA[
 <p></p>
 <h1 id="h1-1954384612">📚 Pertemuan 1: Tugas</h1>
 <p>Materi pembelajaran hari ini...</p>
 <p>tiidak bisa</p>
-<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" sheet-name="Pertemuan 1"></full-quiz-dashboard>
+<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbwXaXy0iKN9t1wIIi1euAqQt_T5TKBX1_K009wsPFFvF0G3un8cSTrT7PqWcXs8vz8eEA/exec" sheet-name="Pertemuan 1"></full-quiz-dashboard>
 ]]></content>
 </item>
