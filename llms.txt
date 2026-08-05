@@ -35,6 +35,9 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [📘 Tutorial Generate Soal dari Bank Soal](https://localhost:3000/sites/haxnow/pages/tutorial-generate-soal/index.md): Setup Bank Soal, fix 'Elemen kuis tidak ditemukan', deploy getBankSoal, troubleshooting
 - [📘 Tutorial Alur Aktivitas & Sheet](https://localhost:3000/sites/haxnow/pages/tutorial-alur-aktivitas/index.md): Alur lengkap: siswa → aktivitas → sheets, 7 sheet utama, kriteria kehadiran, alur tugas/forum, template Bank Soal, heatmap
 - [📘 Contoh Lengkap: UH + Forum + Tugas + Kuis + Rapor](https://localhost:3000/sites/haxnow/pages/contoh-lengkap/index.md): Demo lengkap: single login, kd-materi, split assignment/forum, activity tracking, generate soal, heatmap, rapor
+- [📘 Contoh: Full Quiz Dashboard + Student Dashboard](https://localhost:3000/sites/haxnow/pages/contoh-full-dashboard/index.md): Demo lengkap full-quiz-dashboard dan student-dashboard, mode siswa & dosen berdampingan, sync kd-materi
+- [📖 Tutorial: Langkah-Langkah Setup Full Dashboard](https://localhost:3000/sites/haxnow/pages/tutorial-full-dashboard/index.md): Panduan lengkap setup full-quiz-dashboard dari nol: spreadsheet, Apps Script, komponen, testing, troubleshooting
+- [💡 Rekomendasi: Aktivitas Pembelajaran dengan Quiz Dashboard](https://localhost:3000/sites/haxnow/pages/rekomendasi-aktivitas/index.md): Best practices strategi kuis, heatmap, leaderboard, monitoring siswa untuk pengajar
 - [📊 Dashboard Siswa — Lihat Nilai & Aktivitas](https://localhost:3000/sites/haxnow/pages/dashboard-siswa/index.md): Dashboard siswa HAX custom element untuk melihat nilai, leaderboard, dan aktivitas dari Google Sheets
 - [📚 Modul 1: HAXcms & Web Component](https://localhost:3000/sites/haxnow/pages/materi-siswa/index.md): Contoh halaman materi siswa dengan aktivitas dan kuis
 - [📖 Belajar HTML Dasar](https://localhost:3000/sites/haxnow/pages/tutor-html/index.md): Tutorial HTML lengkap dari nol untuk pemula
