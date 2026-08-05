@@ -1,0 +1,118 @@
+id: item-74fdcc5b-afe1-4af6-9ed3-ac24f629d915
+indent: 0
+location: pages/item-74fdcc5b-afe1-4af6-9ed3-ac24f629d915/index.yaml
+slug: copy-of-ld-3-literasi-digital-lanjutan
+order: 2
+parent: null
+title: 'Copy of LD-3: Literasi Digital Lanjutan'
+description: ''
+metadata:
+  locked: false
+  created: 1785891589
+  images: []
+  videos: []
+  updated: 1785891589
+content: |
+  <h1>📚 LD-3: Literasi Digital Lanjutan</h1>
+
+  <section class="card">
+    <h2>🔐 Login</h2>
+    <quiz-user-auth
+      apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+      auto-login>
+    </quiz-user-auth>
+  </section>
+
+  <section class="card">
+    <h2>📖 Materi Pembelajaran</h2>
+    <p>Pada pertemuan ini, kita akan mempelajari konsep literasi digital lanjutan, termasuk:</p>
+    <ul>
+      <li><strong>Evaluasi Sumber Informasi:</strong> Cara menilai kredibilitas sumber di internet</li>
+      <li><strong>Ethics Digital:</strong> Etika dalam menggunakan teknologi dan media sosial</li>
+      <li><strong>Keamanan Data:</strong> Perlindungan data pribadi dan privasi online</li>
+      <li><strong>Digital Footprint:</strong> Jejak digital dan dampaknya terhadap kehidupan</li>
+    </ul>
+    <h3>Konsep Dasar</h3>
+    <table>
+      <thead>
+        <tr><th>Konsep</th><th>Deskripsi</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Literasi Informasi</strong></td><td>Kemampuan menemukan, mengevaluasi, dan menggunakan informasi</td></tr>
+        <tr><td><strong>Literasi Media</strong></td><td>Kemampuan memahami dan menganalisis pesan media</td></tr>
+        <tr><td><strong>Literasi Teknologi</strong></td><td>Kemampuan menggunakan teknologi secara efektif dan bertanggung jawab</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>📥 Download Materi</h2>
+    <p>Klik link di bawah untuk mengunduh file materi (aktivitas download akan tercatat otomatis):</p>
+    <ul>
+      <li><a href="files/panduan-literasi-digital.pdf" download>📄 Download PDF: Panduan Literasi Digital</a></li>
+      <li><a href="files/contoh-etika-digital.zip" download>📦 Download ZIP: Contoh Kasus Etika Digital</a></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>🎯 Evaluasi: Kuis LD-3</h2>
+    <p>Setelah membaca materi di atas, silakan kerjakan kuis berikut untuk menguji pemahaman Anda:</p>
+    <explode-quiz
+      kd-materi="LD-3"
+      apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+      quiz-category="formatif"
+      shuffle-choices
+      editable="true"
+      questions="[{"question":"Apa yang dimaksud dengan literasi digital?","choices":["Kemampuan menggunakan komputer","Kemampuan menemukan, mengevaluasi, dan menggunakan informasi digital","Kemampuan membuat website","Kemampuan bermain game online"],"correctIndex":1},{"question":"Manakah yang bukan merupakan bagian dari literasi digital?","choices":["Evaluasi sumber informasi","Keamanan data pribadi","Bermain game online","Etika digital"],"correctIndex":2},{"question":"Apa dampak dari jejak digital (digital footprint)?","choices":["Tidak ada dampak","Dapat mempengaruhi reputasi dan privasi","Hanya berpengaruh di dunia maya","Selalu positif"],"correctIndex":1}]">
+    </explode-quiz>
+  </section>
+
+  <section class="card">
+    <h2>💬 Forum Diskusi: LD-3</h2>
+    <forum-component
+      apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+      forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec"
+      kd-materi="LD-3"
+      forum-topic="Forum Diskusi: LD-3 - Literasi Digital Lanjutan"
+      view-mode="student">
+    </forum-component>
+  </section>
+
+  <section class="card">
+    <h2>📝 Tugas Mandiri: LD-3</h2>
+    <assignment-component
+      apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+      forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec"
+      kd-materi="LD-3"
+      assignment-title="Tugas LD-3: Refleksi Literasi Digital"
+      assignment-instruction="Tuliskan refleksi tentang apa yang sudah Anda pahami mengenai literasi digital lanjutan. Sertakan contoh kasus nyata yang pernah Anda alami atau temui."
+      view-mode="student">
+    </assignment-component>
+  </section>
+
+  <section class="card">
+    <h2>📊 Kehadiran & Aktivitas</h2>
+    <p>Ringkasan kehadiran dan aktivitas Anda untuk KD-Materi LD-3:</p>
+    <grid-plate layout="1-1">
+      <div slot="col-1">
+        <attendance-tracker
+          apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+          forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec"
+          kd-materi="LD-3">
+        </attendance-tracker>
+      </div>
+      <div slot="col-2">
+        <engagement-score
+          apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+          forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec"
+          kd-materi="LD-3">
+        </engagement-score>
+      </div>
+    </grid-plate>
+  </section>
+
+  <activity-logger
+    kd-materi="LD-3"
+    apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+    forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec">
+  </activity-logger>
