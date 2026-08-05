@@ -884,7 +884,17 @@
         "videos": [],
         "updated": 1785897469,
         "published": true,
-        "status": ""
+        "status": "",
+        "files": [
+          {
+            "path": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\files\\image.png",
+            "fullUrl": "/C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi/files/image.png",
+            "url": "files/image.png",
+            "type": "image/png",
+            "name": "image.png",
+            "size": 16985
+          }
+        ]
       }
     }
   ]
