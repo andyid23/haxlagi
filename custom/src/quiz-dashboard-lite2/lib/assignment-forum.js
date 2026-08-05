@@ -1101,6 +1101,12 @@ export class AssignmentForum extends I18NMixin(DDDSuper(LitElement)) {
             default: "Pertemuan"
           },
           {
+            property: "kdMateri",
+            title: "Kode Materi (KD)",
+            description: "Kode materi unik yang sync ke semua komponen",
+            inputMethod: "textfield"
+          },
+          {
             property: "assignmentTitle",
             title: "Judul Tugas",
             inputMethod: "textfield",

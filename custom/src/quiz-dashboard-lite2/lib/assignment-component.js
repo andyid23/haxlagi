@@ -52,7 +52,8 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
         configure: [
           { property: "appsScriptUrl", title: "Apps Script URL (Activity)", inputMethod: "textfield" },
           { property: "forumApiUrl", title: "Forum API URL (Tugas)", inputMethod: "textfield" },
-          { property: "sheetName", title: "Nama Sheet / KD Materi", inputMethod: "textfield", default: "Pertemuan" },
+          { property: "sheetName", title: "Nama Sheet / Pertemuan", inputMethod: "textfield", default: "Pertemuan" },
+          { property: "kdMateri", title: "Kode Materi (KD)", description: "Kode materi unik yang sync ke semua komponen", inputMethod: "textfield" },
           { property: "assignmentTitle", title: "Judul Tugas", inputMethod: "textfield", default: "Tugas Mandiri" },
           { property: "assignmentInstruction", title: "Instruksi Tugas", inputMethod: "textfield", default: "Tuliskan refleksi atau jawaban tugas Anda." },
           { property: "hideDelete", title: "Sembunyikan Hapus", inputMethod: "boolean" }

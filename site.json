@@ -542,6 +542,57 @@
       }
     },
     {
+      "id": "item-contoh-full-dashboard",
+      "indent": 3,
+      "location": "pages/contoh-full-dashboard/index.html",
+      "slug": "contoh-full-dashboard",
+      "order": 0,
+      "parent": "item-tutorial-dashboard-siswa",
+      "title": "📘 Contoh: Full Quiz Dashboard + Student Dashboard",
+      "description": "Demo lengkap full-quiz-dashboard dan student-dashboard, mode siswa & dosen berdampingan, sync kd-materi",
+      "metadata": {
+        "created": 1785890400,
+        "updated": 1785890400,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-tutorial-full-dashboard",
+      "indent": 3,
+      "location": "pages/tutorial-full-dashboard/index.html",
+      "slug": "tutorial-full-dashboard",
+      "order": 0,
+      "parent": "item-tutorial-dashboard-siswa",
+      "title": "📖 Tutorial: Langkah-Langkah Setup Full Dashboard",
+      "description": "Panduan lengkap setup full-quiz-dashboard dari nol: spreadsheet, Apps Script, komponen, testing, troubleshooting",
+      "metadata": {
+        "created": 1785890400,
+        "updated": 1785890400,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
+      "id": "item-rekomendasi-aktivitas",
+      "indent": 3,
+      "location": "pages/rekomendasi-aktivitas/index.html",
+      "slug": "rekomendasi-aktivitas",
+      "order": 0,
+      "parent": "item-tutorial-dashboard-siswa",
+      "title": "💡 Rekomendasi: Aktivitas Pembelajaran dengan Quiz Dashboard",
+      "description": "Best practices strategi kuis, heatmap, leaderboard, monitoring siswa untuk pengajar",
+      "metadata": {
+        "created": 1785890400,
+        "updated": 1785890400,
+        "published": true,
+        "locked": false,
+        "status": ""
+      }
+    },
+    {
       "id": "item-dashboard-siswa",
       "indent": 2,
       "location": "pages/dashboard-siswa/index.html",

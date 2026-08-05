@@ -52,7 +52,8 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
         configure: [
           { property: "appsScriptUrl", title: "Apps Script URL (Activity)", inputMethod: "textfield" },
           { property: "forumApiUrl", title: "Forum API URL", inputMethod: "textfield" },
-          { property: "sheetName", title: "Nama Sheet / KD Materi", inputMethod: "textfield", default: "Pertemuan" },
+          { property: "sheetName", title: "Nama Sheet / Pertemuan", inputMethod: "textfield", default: "Pertemuan" },
+          { property: "kdMateri", title: "Kode Materi (KD)", description: "Kode materi unik yang sync ke semua komponen", inputMethod: "textfield" },
           { property: "forumTopic", title: "Topik Forum", inputMethod: "textfield", default: "Forum Diskusi" },
           { property: "viewMode", title: "Mode Tampilan", inputMethod: "select", options: { student: "Siswa", lecturer: "Dosen" }, default: "student" },
           { property: "hideDelete", title: "Sembunyikan Hapus", inputMethod: "boolean" }

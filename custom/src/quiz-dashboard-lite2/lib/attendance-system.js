@@ -81,7 +81,13 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
           },
           {
             property: "sheetName",
-            title: "Nama Sheet",
+            title: "Nama Sheet / Pertemuan",
+            inputMethod: "textfield",
+          },
+          {
+            property: "kdMateri",
+            title: "Kode Materi (KD)",
+            description: "Kode materi unik yang sync ke semua komponen",
             inputMethod: "textfield",
           }
         ],
@@ -569,7 +575,13 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
           },
           {
             property: "sheetName",
-            title: "Nama Sheet (KD Materi)",
+            title: "Nama Sheet / Pertemuan",
+            inputMethod: "textfield",
+          },
+          {
+            property: "kdMateri",
+            title: "Kode Materi (KD)",
+            description: "Kode materi unik yang sync ke semua komponen",
             inputMethod: "textfield",
           }
         ],
@@ -587,6 +599,7 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
       appsScriptUrl: { type: String, attribute: "apps-script-url" },
       forumApiUrl: { type: String, attribute: "forum-api-url" },
       sheetName: { type: String, attribute: "sheet-name" },
+      kdMateri: { type: String, attribute: "kd-materi" },
       studentId: { type: String, attribute: "student-id" },
       _history: { state: true }
     };
@@ -596,13 +609,13 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
     this.appsScriptUrl = "";
     this.forumApiUrl = "";
     this.sheetName = "Pertemuan";
+    this.kdMateri = "";
     this.studentId = "";
     this._history = [];
     this._handleSessionChanged = this._handleSessionChanged.bind(this);
   }
-  // kdMateri derived from sheetName
-  get kdMateri() {
-    return this.sheetName || "Pertemuan"
+  get kdMateriVal() {
+    return this.kdMateri || this.sheetName || "Pertemuan"
   }
   _loadSession() {
     try {
@@ -658,14 +671,14 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
       return;
     }
     try {
-      const params = new URLSearchParams({ action: "getActivityHistory", studentId: this.studentId, days: 42, kdMateri: this._kdMateriVal });
+      const params = new URLSearchParams({ action: "getActivityHistory", studentId: this.studentId, days: 42, kdMateri: this.kdMateriVal });
       const res = await fetch(`${this.appsScriptUrl}?${params.toString()}`);
       const data = await res.json();
       const map = {};
       (data.history || []).forEach(h => { map[h.date] = (map[h.date] || 0) + (h.count || 0); });
       if (this.forumApiUrl) {
         try {
-          const fParams = new URLSearchParams({ action: "getForumActivityHistory", studentId: this.studentId, days: 42, kdMateri: this._kdMateriVal });
+          const fParams = new URLSearchParams({ action: "getForumActivityHistory", studentId: this.studentId, days: 42, kdMateri: this.kdMateriVal });
           const fRes = await fetch(`${this.forumApiUrl}?${fParams.toString()}`);
           const fData = await fRes.json();
           (fData.history || []).forEach(h => { map[h.date] = (map[h.date] || 0) + (h.count || 0); });

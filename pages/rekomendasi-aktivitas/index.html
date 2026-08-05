@@ -1,0 +1,113 @@
+<h1>💡 Rekomendasi: Aktivitas Pembelajaran dengan Quiz Dashboard</h1>
+<p>Panduan best practices untuk memaksimalkan penggunaan <code>&lt;full-quiz-dashboard&gt;</code> dan <code>&lt;student-dashboard&gt;</code> dalam kegiatan belajar mengajar.</p>
+
+<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; border-radius: 16px; padding: 24px; margin: 24px 0;">
+  <h2 style="margin-top: 0; color: white;">🎯 Prinsip Utama</h2>
+  <ul style="margin: 0; line-height: 2;">
+    <li><strong>Konsisten:</strong> Setiap pertemuan punya kuis + aktivitas yang tercatat</li>
+    <li><strong>Otomatis:</strong> Pelacakan aktivitas jalan di background tanpa perlu input manual</li>
+    <li><strong>Transparan:</strong> Siswa lihat skor & ranking mereka secara real-time</li>
+  </ul>
+</div>
+
+<h2>📅 Strategi per Pertemuan</h2>
+
+<h3>Sebelum Kelas Dimulai</h3>
+<ul>
+  <li>Siapkan <code>kd-materi</code> unik untuk pertemuan (contoh: <code>UH-1</code>, <code>UH-2</code>)</li>
+  <li>Buat <code>sheet-name</code> sesuai jadwal (contoh: <code>Pertemuan 1</code>)</li>
+  <li>Pastikan Apps Script sudah deploy & URL aktif</li>
+</ul>
+
+<h3>Saat Kelas Berlangsung</h3>
+<ol>
+  <li><strong>Buka materi</strong> → <code>&lt;full-quiz-dashboard&gt;</code> otomatis mencatat aktivitas membaca</li>
+  <li><strong>Forum diskusi</strong> → siswa bertanya & menjawab → aktivitas forum tercatat</li>
+  <li><strong>Kuis singkat</strong> → 5 soal → skor langsung masuk Google Sheets</li>
+  <li><strong>Tugas mandiri</strong> → siswa kirim tugas + link Google Drive</li>
+</ol>
+
+<h3>Setelah Kelas</h3>
+<ul>
+  <li>Cek <code>&lt;student-dashboard&gt;</code> → lihat leaderboard & heatmap siswa</li>
+  <li>Export data dari Google Sheets untuk rapor</li>
+  <li>Identifikasi siswa yang perlu bimbingan (skor rendah / aktivitas minim)</li>
+</ul>
+
+<h2>🏆 Pemanfaatan Leaderboard</h2>
+<div style="background: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px; border-radius: 8px; margin: 16px 0;">
+  <strong>✅ Tips Motivasi:</strong>
+  <ul style="margin: 8px 0 0 0;">
+    <li>Tampilkan leaderboard di awal kelas → memotivasi siswa untuk aktif</li>
+    <li>Ranking berdasarkan <strong>rata-rata skor + total aktivitas</strong> → bukan hanya skor kuis</li>
+    <li>Beri penghargaan untuk top 3 di akhir bulan</li>
+  </ul>
+</div>
+
+<h2>🔥 Heatmap Kegiatan</h2>
+<p>Fitur heatmap menampilkan aktivitas siswa selama 6 minggu terakhir (seperti GitHub contribution graph).</p>
+
+<table>
+  <thead><tr><th>Warna</th><th>Makna</th><th>Aksi</th></tr></thead>
+  <tbody>
+    <tr><td>🟢 Hijau gelap</td><td>Aktif (5+ aktivitas/hari)</td><td>Pertahankan</td></tr>
+    <tr><td>🟡 Hijau terang</td><td>Sedang (3-4 aktivitas)</td><td>Berikan apresiasi</td></tr>
+    <tr><td>🟠 Kuning</td><td>Sedikit (1-2 aktivitas)</td><td>Ingatkan untuk aktif</td></tr>
+    <tr><td>⬜ Abu-abu</td><td>Tidak ada aktivitas</td><td>Hubungi / bimbingan</td></tr>
+  </tbody>
+</table>
+
+<h2>📊 Monitoring untuk Pengajar</h2>
+
+<h3>Yang Perlu Dipantau</h3>
+<ul>
+  <li><strong>Skor kuis per pertemuan</strong> → identifikasi materi yang sulit</li>
+  <li><strong>Total aktivitas</strong> → siswa aktif vs pasif</li>
+  <li><strong>Forum diskusi</strong> → tingkat partisipasi & kualitas diskusi</li>
+  <li><strong>Tugas</strong> → ketepatan waktu & kualitas jawaban</li>
+</ul>
+
+<h3>Red Flag (Perlu Perhatian Khusus)</h3>
+<ul>
+  <li>❌ Skor kuis &lt; 40 secara konsisten</li>
+  <li>❌ Tidak ada aktivitas selama 1 minggu</li>
+  <li>❌ Tidak pernah posting di forum</li>
+  <li>❌ Tugas selalu terlambat</li>
+</ul>
+
+<h2>🔧 Setup untuk Multi-Pertemuan</h2>
+<p>Untuk kelas dengan 6 pertemuan:</p>
+<table>
+  <thead><tr><th>Pertemuan</th><th>kd-materi</th><th>sheet-name</th></tr></thead>
+  <tbody>
+    <tr><td>Pertemuan 1</td><td><code>UH-1</code></td><td><code>Pertemuan 1</code></td></tr>
+    <tr><td>Pertemuan 2</td><td><code>UH-2</code></td><td><code>Pertemuan 2</code></td></tr>
+    <tr><td>Pertemuan 3</td><td><code>UH-3</code></td><td><code>Pertemuan 3</code></td></tr>
+    <tr><td>Pertemuan 4</td><td><code>UH-4</code></td><td><code>Pertemuan 4</code></td></tr>
+    <tr><td>Pertemuan 5</td><td><code>UH-5</code></td><td><code>Pertemuan 5</code></td></tr>
+    <tr><td>Pertemuan 6</td><td><code>UH-6</code></td><td><code>Pertemuan 6</code></td></tr>
+  </tbody>
+</table>
+
+<div style="background: #fff3e0; border-left: 4px solid #ff9800; padding: 16px; border-radius: 8px; margin: 16px 0;">
+  <strong>⚠️ Penting:</strong> Setiap pertemuan harus punya <code>kd-materi</code> BERBEDA agar data tidak tumpang tindih.
+</div>
+
+<h2>📈 Best Practices Google Sheets</h2>
+<ul>
+  <li><strong>Jangan edit sheet manual</strong> → biarkan Apps Script yang mengelola</li>
+  <li><strong>Backup berkala</strong> → File → Download → .xlsx</li>
+  <li><strong>Gunakan filter</strong> → Data → Create filter untuk analisis cepat</li>
+  <li><strong>Conditional formatting</strong> → warnai kolom Skor: hijau untuk ≥70, merah untuk &lt;70</li>
+</ul>
+
+<h2>🎓 Contoh Alur Aktivitas Siswa</h2>
+<ol>
+  <li><strong>08:00</strong> — Siswa buka halaman → login otomatis</li>
+  <li><strong>08:01</strong> — Baca materi → scroll &阅读 tercatat</li>
+  <li><strong>08:15</strong> — Download PDF → aktivitas download tercatat</li>
+  <li><strong>08:20</strong> — Posting di forum → aktivitas diskusi tercatat</li>
+  <li><strong>08:30</strong> — Kerjakan kuis → skor terkirim ke Sheets</li>
+  <li><strong>08:45</strong> — Kirim tugas → aktivitas tugas tercatat</li>
+  <li><strong>09:00</strong> — Cek leaderboard → ranking terlihat</li>
+</ol>

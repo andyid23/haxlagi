@@ -1,0 +1,69 @@
+<h1>📘 Contoh: Full Quiz Dashboard + Student Dashboard</h1>
+<p>Halaman demo menunjukkan cara <code>&lt;full-quiz-dashboard&gt;</code> dan <code>&lt;student-dashboard&gt;</code> bekerja bersama. <strong>kd-materi</strong> dan <strong>sheet-name</strong> di-sync otomatis ke semua komponen.</p>
+
+<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; border-radius: 16px; padding: 24px; margin: 24px 0;">
+  <h2 style="margin-top: 0; color: white;">⚡ Cara Kerja Sync</h2>
+  <ol style="margin: 0; line-height: 2;">
+    <li>Set <code>kd-materi="UH-1"</code> dan <code>sheet-name="Pertemuan 1"</code> di parent component</li>
+    <li>Nilai otomatis diwariskan ke <code>&lt;full-quiz-dashboard&gt;</code>, <code>&lt;attendance-logger&gt;</code>, <code>&lt;activity-logger&gt;</code></li>
+    <li>Semua komponen menulis ke sheet yang sama: <code>Pertemuan 1 - Kuis</code> / <code>Pertemuan 1 - Aktivitas</code></li>
+    <li><code>&lt;student-dashboard&gt;</code> membaca dari sheet yang sama untuk leaderboard & summary</li>
+  </ol>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔐 Login</h2>
+<quiz-user-auth
+  apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+  auto-login>
+</quiz-user-auth>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>👩‍🎓 Mode Siswa — Full Quiz Dashboard</h2>
+<p>Kuis interaktif + pelacakan aktivitas otomatis + heatmap kehadiran. Data dikirim ke Google Sheets.</p>
+<full-quiz-dashboard
+  apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+  sheet-name="Pertemuan 1"
+  kd-materi="UH-1">
+</full-quiz-dashboard>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>👨‍🏫 Mode Dosen — Full Quiz Dashboard</h2>
+<p>Dashboard lengkap dosen: lihat semua jawaban siswa, edit soal, generate soal dari bank soal.</p>
+<full-quiz-dashboard
+  apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+  sheet-name="Pertemuan 1"
+  kd-materi="UH-1">
+</full-quiz-dashboard>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📊 Student Dashboard — Leaderboard & Statistik</h2>
+<p>Menampilkan leaderboard, ringkasan skor, dan heatmap aktivitas dari Google Sheets.</p>
+<student-dashboard
+  apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
+  student-name=""
+  _active-tab="leaderboard">
+</student-dashboard>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>⚙️ Atribut yang tersedia</h2>
+<table>
+  <thead><tr><th>Atribut</th><th>Komponen</th><th>Keterangan</th></tr></thead>
+  <tbody>
+    <tr><td><code>kd-materi</code></td><td>Semua komponen</td><td>Kode materi unik (contoh: <code>UH-1</code>). Sync otomatis.</td></tr>
+    <tr><td><code>sheet-name</code></td><td>quiz-dashboard, full-quiz-dashboard</td><td>Nama pertemuan (contoh: <code>Pertemuan 1</code>). Menentukan suffix sheet.</td></tr>
+    <tr><td><code>apps-script-url</code></td><td>Semua komponen</td><td>URL Apps Script Web App yang sama.</td></tr>
+  </tbody>
+</table>
+
+<h2>📋 Catatan Penting</h2>
+<ul>
+  <li><strong>Satukan kd-materi:</strong> Semua komponen dalam satu pertemuan harus pakai <code>kd-materi</code> yang sama.</li>
+  <li><strong>Sheet otomatis:</strong> Apps Script membuat sheet <code>{Pertemuan} - Kuis</code> dan <code>{Pertemuan} - Aktivitas</code> otomatis.</li>
+  <li><strong>Leaderboard:</strong> <code>&lt;student-dashboard&gt;</code> menggabungkan data dari semua sheet pertemuan.</li>
+</ul>

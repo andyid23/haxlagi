@@ -1,0 +1,93 @@
+<h1>📖 Tutorial: Langkah-Langkah Setup Full Quiz Dashboard</h1>
+<p>Panduan lengkap setup <code>&lt;full-quiz-dashboard&gt;</code> + <code>&lt;student-dashboard&gt;</code> dari nol sampai berjalan.</p>
+
+<h2>Langkah 1: Siapkan Google Spreadsheet</h2>
+<ol>
+  <li>Buka <a href="https://sheets.google.com" target="_blank">Google Sheets</a> → buat spreadsheet baru</li>
+  <li>Beri nama: <code>Data Kuis Kelas XI</code> (atau sesuai kebutuhan)</li>
+  <li>Copy <strong>Spreadsheet ID</strong> dari URL: <code>https://docs.google.com/spreadsheets/d/<strong>{SPREADSHEET_ID}</strong>/edit</code></li>
+</ol>
+
+<h2>Langkah 2: Setup Apps Script</h2>
+<ol>
+  <li>Di spreadsheet → <strong>Extensions</strong> → <strong>Apps Script</strong></li>
+  <li>Hapus isi <code>Code.gs</code> yang ada, lalu tempel kode dari <a href="../files/apps-script-backend.gs">files/apps-script-backend.gs</a></li>
+  <li>Klik <strong>Deploy</strong> → <strong>New deployment</strong></li>
+  <li>Pilih type: <strong>Web app</strong></li>
+  <li>Execute as: <strong>Me</strong></li>
+  <li>Who has access: <strong>Anyone</strong></li>
+  <li>Klik <strong>Deploy</strong> → salin <strong>URL /exec</strong></li>
+</ol>
+
+<div style="background: #e8f5e9; border-left: 4px solid #4caf50; padding: 16px; border-radius: 8px; margin: 16px 0;">
+  <strong>✅ Tips:</strong> Setelah deploy pertama, setiap kali mengubah kode di Apps Script, klik <strong>Deploy</strong> → <strong>Edit deployments</strong> → klik ikon ✏️ → pilih <strong>New version</strong> → <strong>Deploy</strong>.
+</div>
+
+<h2>Langkah 3: Buat Struktur Sheet (Opsional)</h2>
+<ol>
+  <li>Di Apps Script, jalankan fungsi <code>setupStruktur()</code> via menu <strong>🎓 Kuis Toolkit</strong> → <strong>1. Buat struktur sheet</strong></li>
+  <li>Atau jalankan manual: Apps Script editor → pilih <code>setupStruktur</code> → klik ▶️ Run</li>
+  <li>Ini akan membuat 6 sheet: <code>Pertemuan 1 - Kuis</code>, <code>Pertemuan 1 - Aktivitas</code>, dst.</li>
+</ol>
+
+<h2>Langkah 4: Pasang di Halaman HAXcms</h2>
+<p>Buka halaman yang ingin diedit, lalu tambahkan komponen berikut:</p>
+
+<h3>4a. Login (wajib)</h3>
+<pre><code>&lt;quiz-user-auth
+  apps-script-url="https://script.google.com/macros/s/YOUR_ID/exec"
+  auto-login&gt;
+&lt;/quiz-user-auth&gt;</code></pre>
+
+<h3>4b. Full Quiz Dashboard (Mode Siswa)</h3>
+<pre><code>&lt;full-quiz-dashboard
+  apps-script-url="https://script.google.com/macros/s/YOUR_ID/exec"
+  sheet-name="Pertemuan 1"
+  kd-materi="UH-1"&gt;
+&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<h3>4c. Student Dashboard (Leaderboard)</h3>
+<pre><code>&lt;student-dashboard
+  apps-script-url="https://script.google.com/macros/s/YOUR_ID/exec"
+  student-name=""
+  _active-tab="leaderboard"&gt;
+&lt;/student-dashboard&gt;</code></pre>
+
+<h2>Langkah 5: Set KD Materi</h2>
+<div style="background: #fff3e0; border-left: 4px solid #ff9800; padding: 16px; border-radius: 8px; margin: 16px 0;">
+  <strong>⚠️ Penting:</strong> Pastikan semua komponen dalam satu pertemuan pakai <code>kd-materi</code> yang SAMA.
+</div>
+
+<p><strong>Cara set di HAX UI:</strong></p>
+<ol>
+  <li>Klik komponen → klik ikon ⚙️ (settings)</li>
+  <li>Isi <strong>Kode Materi (KD)</strong>: <code>UH-1</code> (atau kode unik lain)</li>
+  <li>Isi <strong>Nama Sheet/Pertemuan</strong>: <code>Pertemuan 1</code></li>
+  <li>Simpan</li>
+</ol>
+
+<p><strong>Cara set via HTML attribute:</strong></p>
+<pre><code>&lt;full-quiz-dashboard
+  kd-materi="UH-1"
+  sheet-name="Pertemuan 1"&gt;
+&lt;/full-quiz-dashboard&gt;</code></pre>
+
+<h2>Langkah 6: Testing</h2>
+<ol>
+  <li>Buka halaman yang sudah dipasang komponen</li>
+  <li>Login sebagai siswa (NIS dan nama)</li>
+  <li>Kerjakan kuis → skor akan terkirim ke sheet</li>
+  <li>Buka Google Spreadsheet → cek sheet <code>Pertemuan 1 - Kuis</code></li>
+  <li>Buka <code>&lt;student-dashboard&gt;</code> → cek leaderboard</li>
+</ol>
+
+<h2>Langkah 7: Troubleshooting</h2>
+<table>
+  <thead><tr><th>Masalah</th><th>Solusi</th></tr></thead>
+  <tbody>
+    <tr><td>Data tidak masuk sheet</td><td>Cek URL Apps Script benar. Buka URL langsung di browser → harus return JSON.</td></tr>
+    <tr><td>Leaderboard kosong</td><td>Pastikan <code>&lt;student-dashboard&gt;</code> pakai URL yang sama dengan <code>&lt;full-quiz-dashboard&gt;</code>.</td></tr>
+    <tr><td>kd-materi tidak sync</td><td>Pastikan semua komponen punya <code>kd-materi</code> yang sama. Cek di HAX UI settings.</td></tr>
+    <tr><td>Sheet belum ada</td><td>Jalankan <code>setupStruktur()</code> di Apps Script, atau submit kuis pertama kali (sheet dibuat otomatis).</td></tr>
+  </tbody>
+</table>

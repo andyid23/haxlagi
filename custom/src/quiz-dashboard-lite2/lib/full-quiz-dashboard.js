@@ -24,6 +24,7 @@ class FullQuizDashboard extends HTMLElement {
   static SHEETS_KEY    = 'quiz_sheet_id';
   static SCRIPT_KEY    = 'apps_script_url';
   static SHEET_NAME_KEY = 'quiz_sheet_name';
+  static KD_MATERI_KEY = 'quiz_kd_materi';
   static QUESTIONS_KEY = 'quiz_custom_questions';
 
   static QUESTIONS = [
@@ -37,7 +38,7 @@ class FullQuizDashboard extends HTMLElement {
   static THRESHOLDS = { minWeeklyActivities:5, minReading:2, minQuiz:1, minDiscussion:1 };
   static GRADES     = { uts:85, uas:88, attendanceWeight:30, quizWeight:20, utsWeight:25, uasWeight:25 };
 
-  static get observedAttributes() { return ['apps-script-url','spreadsheet-id','questions','sheet-name']; }
+  static get observedAttributes() { return ['apps-script-url','spreadsheet-id','questions','sheet-name','kd-materi']; }
 
   constructor() {
     super();
@@ -49,6 +50,7 @@ class FullQuizDashboard extends HTMLElement {
     this._sid   = this._load(FullQuizDashboard.SHEETS_KEY, '');
     this._url   = '';
     this._sheet = this._load(FullQuizDashboard.SHEET_NAME_KEY, '') || 'Pertemuan';
+    this._kdMateri = this._load(FullQuizDashboard.KD_MATERI_KEY, '') || '';
     this.questions  = this._load(FullQuizDashboard.QUESTIONS_KEY, null) || FullQuizDashboard.QUESTIONS;
     this.thresholds = { ...FullQuizDashboard.THRESHOLDS, ...this._load(FullQuizDashboard.THRESHOLD_KEY, {}) };
     this.grades     = { ...FullQuizDashboard.GRADES,     ...this._load(FullQuizDashboard.GRADES_KEY, {}) };
@@ -68,6 +70,8 @@ class FullQuizDashboard extends HTMLElement {
   connectedCallback() {
     const attrSheet = this.getAttribute('sheet-name');
     if (attrSheet) { this._sheet = attrSheet; this._save(FullQuizDashboard.SHEET_NAME_KEY, attrSheet); }
+    const attrKd = this.getAttribute('kd-materi');
+    if (attrKd) { this._kdMateri = attrKd; this._save(FullQuizDashboard.KD_MATERI_KEY, attrKd); }
     const attrUrl = this.getAttribute('apps-script-url');
     if (attrUrl) this._url = attrUrl;
 
@@ -88,6 +92,7 @@ class FullQuizDashboard extends HTMLElement {
     if (name === 'apps-script-url') this._url = val;
     if (name === 'spreadsheet-id')  this._sid = val;
     if (name === 'sheet-name')      this._sheet = val;
+    if (name === 'kd-materi')       this._kdMateri = val;
     if (name === 'questions' && val) { try { this.questions = JSON.parse(val); } catch(_){} }
     if (this.isConnected) {
       // FIX: auto pindah ke quiz ketika URL sudah di-set
@@ -715,6 +720,12 @@ _send(data) {
             description: "Nama sheet pertemuan (contoh: 'Pertemuan 2')",
             inputMethod: "textfield",
             default: "Pertemuan"
+          },
+          {
+            property: "kdMateri",
+            title: "Kode Materi (KD)",
+            description: "Kode materi unik yang sync ke semua komponen",
+            inputMethod: "textfield"
           }
         ],
         advanced: [
@@ -739,6 +750,13 @@ _send(data) {
   set sheetName(val) {
     this._sheet = val;
     this._save(FullQuizDashboard.SHEET_NAME_KEY, val);
+    if (this.isConnected) this._render();
+  }
+
+  get kdMateri() { return this._kdMateri; }
+  set kdMateri(val) {
+    this._kdMateri = val;
+    this._save(FullQuizDashboard.KD_MATERI_KEY, val);
     if (this.isConnected) this._render();
   }
 }
