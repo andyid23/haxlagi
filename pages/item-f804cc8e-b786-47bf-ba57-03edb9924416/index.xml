@@ -4,8 +4,8 @@
 <indent>0</indent>
 <location>pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.xml</location>
 <slug>new-page-2</slug>
-<order>5</order>
-<parent></parent>
+<order>0</order>
+<parent>item-tutorial-dashboard-siswa</parent>
 <title>baru2</title>
 <description>
 📚 Pertemuan 2: Lit Element Dasar
@@ -15,7 +15,7 @@ Materi pembelajaran hari ini...
 </description>
 <metadata>
 <created>1784688264</created>
-<updated>1785159278</updated>
+<updated>1785929046</updated>
 <images>
 </images>
 <videos>
@@ -30,6 +30,6 @@ Materi pembelajaran hari ini...
 <p></p>
 <h1 id="h1--419233438">📚 Pertemuan 2: Lit Element Dasar</h1>
 <p>Materi pembelajaran hari ini...</p>
-<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" sheet-name="Pertemuan 2"></full-quiz-dashboard>
+<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" sheet-name="Pertemuan 2" class="blinkfocus" id="h1--419233438"></full-quiz-dashboard>
 ]]></content>
 </item>

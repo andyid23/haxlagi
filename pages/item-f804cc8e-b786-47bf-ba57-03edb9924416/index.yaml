@@ -2,8 +2,8 @@ id: item-f804cc8e-b786-47bf-ba57-03edb9924416
 indent: 0
 location: pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.yaml
 slug: new-page-2
-order: 5
-parent: null
+order: 0
+parent: item-tutorial-dashboard-siswa
 title: baru2
 description: |+
 
@@ -13,7 +13,7 @@ description: |+
 
 metadata:
   created: 1784688264
-  updated: 1785159278
+  updated: 1785929046
   images: []
   videos: []
   published: true
@@ -31,4 +31,5 @@ content: >
 
   <full-quiz-dashboard
   apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
-  sheet-name="Pertemuan 2"></full-quiz-dashboard>
+  sheet-name="Pertemuan 2" class="blinkfocus"
+  id="h1--419233438"></full-quiz-dashboard>

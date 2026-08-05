@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-08-05T11:09:51.000Z</updated>
+  <updated>2026-08-05T11:16:02.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -2609,7 +2609,7 @@ Materi pembelajaran hari ini...
   <entry>
     <title>baru2</title>
     <id>item-f804cc8e-b786-47bf-ba57-03edb9924416</id>
-    <updated>2026-08-05T11:09:48.000Z</updated>
+    <updated>2026-08-05T11:24:06.000Z</updated>
     <published>2026-07-22T02:44:24.000Z</published>
     <summary>
 📚 Pertemuan 2: Lit Element Dasar
@@ -2624,7 +2624,7 @@ Materi pembelajaran hari ini...
 <p></p>
 <h1 id="h1--419233438">📚 Pertemuan 2: Lit Element Dasar</h1>
 <p>Materi pembelajaran hari ini...</p>
-<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" sheet-name="Pertemuan 2"></full-quiz-dashboard>
+<full-quiz-dashboard apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" sheet-name="Pertemuan 2" class="blinkfocus" id="h1--419233438"></full-quiz-dashboard>
  ]]>
     </content>
   </entry>
