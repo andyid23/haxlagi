@@ -85,27 +85,6 @@
       }
     },
     {
-      "id": "item-5015eab1-d932-4139-a7a0-3216ce339bfa",
-      "indent": 1,
-      "location": "pages/item-5015eab1-d932-4139-a7a0-3216ce339bfa/index.html",
-      "slug": "new-page-6",
-      "order": 4,
-      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
-      "title": "New Page",
-      "description": "\n\n    1 Login / Registrasi\n\n    \n\n  \n\n    3 Kuis Formatif\n\n    \n    \n\n  \n",
-      "metadata": {
-        "created": 1785573963,
-        "updated": 1785925997,
-        "images": [],
-        "videos": [],
-        "published": true,
-        "hideInMenu": false,
-        "locked": false,
-        "readtime": 1,
-        "status": ""
-      }
-    },
-    {
       "id": "item-doc-elements",
       "indent": 1,
       "location": "pages/elemendokumen/index.html",

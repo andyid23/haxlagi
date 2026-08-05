@@ -150,13 +150,6 @@
       <pubDate>Mon, 27 Jul 2026 10:20:46 GMT</pubDate>
     </item>
     <item>
-      <title>New Page</title>
-      <link>https://localhost:3000/sites/haxnow/new-page-6</link>
-      <description>1 Login / Registrasi 3 Kuis Formatif</description>
-      <guid>https://localhost:3000/sites/haxnow/new-page-6</guid>
-      <pubDate>Sat, 01 Aug 2026 08:46:03 GMT</pubDate>
-    </item>
-    <item>
       <title>Kuis AKM Campuran</title>
       <link>https://localhost:3000/sites/haxnow/kuis-akm-campuran</link>
       <description>🎯 Kuis AKM Campuran (Literasi + Numerasi) Halaman kuis Asesmen Kompetensi Minimum dengan tipe soal campuran: pilihan ganda (PG), pilihan ganda kompleks (PGK), menjodohkan (matching), dan isian singkat (short answer). Soal bisa dibuat otomatis dari template lokal atau dari Bank Soal di Google Sheets. &amp;#10024; Generator Soal Masuk sebagai dosen lalu buka tab 🛠️ Console Dosen . Dua tombol baru tersedia: ✨ Generate Soal Template Lokal &amp;#8212; soal acak dari bank template bawaan elemen (tanpa pe...</description>
@@ -182,6 +175,13 @@
       <link>https://localhost:3000/sites/haxnow/tutorial-perubahan-kode</link>
       <description>📘 Tutorial Perubahan Kode v2: Single Login, KD-Materi &amp; Split Assignment/Forum Panduan migrasi dari arsitektur lama ke arsitektur baru v2. Semua perubahan backward compatible — halaman lama tetap berfungsi. 🎯 Ringkasan Perubahan Utama Single Login: Login sekali, akses semua halaman (auto-login via quiz-user-auth auto-login ) KD-Materi dari sheet-name: kdMateri = sheetName otomatis, filter aktivitas per pertemuan Split Assignment/Forum: assignment-component + forum-component (lama: assignmen...</description>
       <guid>https://localhost:3000/sites/haxnow/tutorial-perubahan-kode</guid>
+      <pubDate>Sat, 01 Aug 2026 13:20:17 GMT</pubDate>
+    </item>
+    <item>
+      <title>📘 Tutorial Generate Soal dari Bank Soal</title>
+      <link>https://localhost:3000/sites/haxnow/tutorial-generate-soal</link>
+      <description>📘 Tutorial Generate Soal dari Bank Soal (Fix &quot;Elemen kuis tidak ditemukan&quot;) Panduan lengkap setup Bank Soal, deploy getBankSoal , konfigurasi question-generator , dan troubleshooting error &quot;Elemen kuis tidak ditemukan&quot;. 🎯 Alur Kerja Generate Soal Dosen buka halaman dengan lecturer-console (mode dosen) Klik 🗂️ Generate Soal dari Bank Soal question-generator POST getBankSoal ke Apps Script Apps Script baca sheet Bank Soal → return soal JSON question-generator map soal → kirim ke explode-quiz...</description>
+      <guid>https://localhost:3000/sites/haxnow/tutorial-generate-soal</guid>
       <pubDate>Sat, 01 Aug 2026 13:20:17 GMT</pubDate>
     </item>
   </channel>
