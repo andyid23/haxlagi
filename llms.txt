@@ -11,7 +11,7 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 
 ## Pages
 - [Welcome to haxnow](https://localhost:3000/sites/haxnow/pages/item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c/index.md): Welcome to your new HAX site! Click edit on the top bar to get started What
-- [baru1](https://localhost:3000/sites/haxnow/pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.md): 📚 Pertemuan 1: Pengenalan HAXcms Materi pembelajaran hari ini...
+- [PembelajaranOnline](https://localhost:3000/sites/haxnow/pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.md): 📚 Pertemuan 1: Pengenalan HAXcms Materi pembelajaran hari ini...
 - [New Page](https://localhost:3000/sites/haxnow/pages/item-095e94fc-dc62-4f5c-9037-eb5f5095ba1c/index.md)
 - [New Page](https://localhost:3000/sites/haxnow/pages/item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29/index.md): Tugas 1 Login / Registrasi 2 Tugas Mandiri &#38; Forum Diskusi Tugas tersimpan ke Tugas Log sheet. Forum CRUD via Forum Log sheet (nested replies, like, sort).
 - [New Page](https://localhost:3000/sites/haxnow/pages/item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b/index.md)

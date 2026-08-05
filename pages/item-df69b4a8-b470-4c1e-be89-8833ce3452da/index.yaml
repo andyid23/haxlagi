@@ -2,9 +2,9 @@ id: item-df69b4a8-b470-4c1e-be89-8833ce3452da
 indent: 0
 location: pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.yaml
 slug: new-page-1
-order: 1
+order: 2
 parent: item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c
-title: baru1
+title: PembelajaranOnline
 description: |+
 
   📚 Pertemuan 1: Pengenalan HAXcms
@@ -14,7 +14,7 @@ description: |+
 
 metadata:
   created: 1784687716
-  updated: 1785551844
+  updated: 1785888341
   images: []
   videos: []
   published: true
@@ -22,6 +22,7 @@ metadata:
   locked: false
   readtime: 1
   status: ''
+  pageType: content
 content: >
 
   <p></p>

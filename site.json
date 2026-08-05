@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785888246
+      "updated": 1785888341
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -63,23 +63,24 @@
     },
     {
       "id": "item-df69b4a8-b470-4c1e-be89-8833ce3452da",
-      "indent": 1,
+      "indent": 0,
       "location": "pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.html",
       "slug": "new-page-1",
       "order": 2,
       "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
-      "title": "baru1",
+      "title": "PembelajaranOnline",
       "description": "\n📚 Pertemuan 1: Pengenalan HAXcms\nMateri pembelajaran hari ini...\n\n\n\n",
       "metadata": {
         "created": 1784687716,
-        "updated": 1785888236,
+        "updated": 1785888341,
         "images": [],
         "videos": [],
         "published": true,
         "hideInMenu": false,
         "locked": false,
         "readtime": 1,
-        "status": ""
+        "status": "",
+        "pageType": "content"
       }
     },
     {

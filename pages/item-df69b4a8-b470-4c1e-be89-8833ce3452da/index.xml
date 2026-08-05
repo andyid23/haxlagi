@@ -4,9 +4,9 @@
 <indent>0</indent>
 <location>pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.xml</location>
 <slug>new-page-1</slug>
-<order>1</order>
+<order>2</order>
 <parent>item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c</parent>
-<title>baru1</title>
+<title>PembelajaranOnline</title>
 <description>
 📚 Pertemuan 1: Pengenalan HAXcms
 Materi pembelajaran hari ini...
@@ -16,7 +16,7 @@ Materi pembelajaran hari ini...
 </description>
 <metadata>
 <created>1784687716</created>
-<updated>1785551844</updated>
+<updated>1785888341</updated>
 <images>
 </images>
 <videos>
@@ -26,6 +26,7 @@ Materi pembelajaran hari ini...
 <locked>false</locked>
 <readtime>1</readtime>
 <status></status>
+<pageType>content</pageType>
 </metadata>
 <content><![CDATA[
 <p></p>
