@@ -185,12 +185,12 @@ Jika terindikasi akun atau keuangan digital diretas:
 
 \[Langkah 5\] Lapor & Dokumentasi ──> Laporkan ke pihak berwajib / AduanSiber.id dengan bukti screenshot
 
-📥 Download Materi
-------------------
+📥 Download Materi dan Soal
+---------------------------
 
 Klik link di bawah untuk mengunduh file materi (aktivitas download akan tercatat otomatis)
 
-[📄 Download PDF: Panduan Keamanan Akun Digital&amp;amp;amp;amp;nbs](files/panduan-literasi-digital.pdf)
+[📄 Download PDF: Panduan Keamanan Akun Digital](files/panduan-literasi-digital.pdf)
 
 🎯 Evaluasi: Kuis LD-3
 ----------------------
