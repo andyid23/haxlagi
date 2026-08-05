@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2026 11:25:19 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 12:36:52 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -59,13 +59,6 @@
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>
     <item>
-      <title>Full Quiz Dashboard</title>
-      <link>https://localhost:3000/sites/haxnow/full-dashboard</link>
-      <description>🎯 Full Quiz Dashboard — Satu Elemen, Semua Fitur Elemen &amp;lt;full-quiz-dashboard&amp;gt; adalah Web Component vanilla JavaScript (0 dependencies) yang menggabungkan semua fitur dalam satu tag: Kuis + Attendance + Heatmap + Gradebook + Google Sheets. 🧪 Demo Langsung 📋 Atribut yang Didukung Atribut Deskripsi Contoh apps-script-url URL Google Apps Script Web App https://script.google.com/macros/s/.../exec spreadsheet-id ID Google Spreadsheet 1BxiMVs0XRA5nFM... questions JSON array soal kustom [{&quot;q...</description>
-      <guid>https://localhost:3000/sites/haxnow/full-dashboard</guid>
-      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
-    </item>
-    <item>
       <title>Tutorial Attendance System</title>
       <link>https://localhost:3000/sites/haxnow/tutorial-attendance</link>
       <description>📊 Tutorial: Sistem Attendance &amp;amp; Activity Logging Panduan lengkap cara kerja pelacakan aktivitas dan kehadiran otomatis. Kehadiran dihitung berdasarkan aktivitas pembelajaran , bukan tanda tangan manual. 🎯 Konsep Utama Kehadiran = Aktivitas Belajar yang Terdeteksi Otomatis oleh Sistem ⚙️ Cara Kerja Sistem 1. Event Listeners (Deteksi Otomatis) Event Trigger Tipe Aktivitas Throttle scroll User scroll &amp;gt; 300px reading 1x per 60 detik click Klik link/button reading/download Setiap klik val...</description>
@@ -84,6 +77,13 @@
       <link>https://localhost:3000/sites/haxnow/dashboard-siswa</link>
       <description>📊 Dashboard Siswa &amp;#8212; Lihat Nilai &amp;#38; Aktivitas dari Google Sheets Halaman ini mengambil data langsung dari Google Sheets via Apps Script API. Masukkan URL Apps Script dan nama Anda untuk melihat data kuis, aktivitas, dan leaderboard secara real-time. 📊 Cara Kerja Masukkan URL Apps Script &amp;#8212; sama dengan yang dipakai di dashboard kuis Masukkan nama Anda &amp;#8212; data dicocokkan dengan nama di sheet Klik Tampilkan &amp;#8212; fetch data dari Apps Script API GET endpoint Jelajahi tab: Le...</description>
       <guid>https://localhost:3000/sites/haxnow/dashboard-siswa</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>Full Quiz Dashboard</title>
+      <link>https://localhost:3000/sites/haxnow/full-dashboard</link>
+      <description>🎯 Full Quiz Dashboard — Satu Elemen, Semua Fitur Elemen &amp;lt;full-quiz-dashboard&amp;gt; adalah Web Component vanilla JavaScript (0 dependencies) yang menggabungkan semua fitur dalam satu tag: Kuis + Attendance + Heatmap + Gradebook + Google Sheets. 🧪 Demo Langsung 📋 Atribut yang Didukung Atribut Deskripsi Contoh apps-script-url URL Google Apps Script Web App https://script.google.com/macros/s/.../exec spreadsheet-id ID Google Spreadsheet 1BxiMVs0XRA5nFM... questions JSON array soal kustom [{&quot;q...</description>
+      <guid>https://localhost:3000/sites/haxnow/full-dashboard</guid>
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>
     <item>
