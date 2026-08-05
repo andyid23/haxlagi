@@ -25,6 +25,7 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [Kuis AKM Campuran](https://localhost:3000/sites/haxnow/pages/kuis-akm-campuran/index.md): Kuis AKM dengan generator soal: template lokal atau Bank Soal (sheet Bank Soal)
 - [📘 Panduan Guru: Soal, Nilai & Rapor](https://localhost:3000/sites/haxnow/pages/tutorial-panduan-guru/index.md): Panduan lengkap: materi, kuis formatif/UH/UTS/UAS, Bank Soal, sikap & keterampilan, bobot nilai dan generate rapor
 - [Copy of 📘 Tutorial Alur Aktivitas & Sheet](https://localhost:3000/sites/haxnow/pages/item-b055951b-7998-440e-9f07-b8976e6d339c/index.md): 📘 Tutorial Lengkap: Alur Aktivitas, 7 Sheet Utama &#38; Kriteria Kehadiran Panduan visual &#38; teknis: dari aktivitas siswa di browser &#8594; ke Google Sheets via Apps Script. Semua fitur sudah ad
+- [📊 Dashboard Siswa — Lihat Nilai & Aktivitas](https://localhost:3000/sites/haxnow/pages/dashboard-siswa/index.md): Dashboard siswa HAX custom element untuk melihat nilai, leaderboard, dan aktivitas dari Google Sheets
 - [📖 Tutorial: Dashboard Siswa & Dosen — Optimasi](https://localhost:3000/sites/haxnow/pages/tutorial-dashboard-siswa/index.md): Setup, optimasi, dan panduan dashboard siswa & dosen dengan integrasi Google Sheets
 - [baru2](https://localhost:3000/sites/haxnow/pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.md): 📚 Pertemuan 2: Lit Element Dasar Materi pembelajaran hari ini...
 - [📘 Tutorial Perubahan Kode v2](https://localhost:3000/sites/haxnow/pages/tutorial-perubahan-kode/index.md): Single login, kd-materi, split assignment/forum, deploy ulang Apps Script, testing checklist
@@ -34,7 +35,6 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [📘 Contoh: Full Quiz Dashboard + Student Dashboard](https://localhost:3000/sites/haxnow/pages/contoh-full-dashboard/index.md): Demo lengkap full-quiz-dashboard dan student-dashboard, mode siswa & dosen berdampingan, sync kd-materi
 - [📖 Tutorial: Langkah-Langkah Setup Full Dashboard](https://localhost:3000/sites/haxnow/pages/tutorial-full-dashboard/index.md): Panduan lengkap setup full-quiz-dashboard dari nol: spreadsheet, Apps Script, komponen, testing, troubleshooting
 - [💡 Rekomendasi: Aktivitas Pembelajaran dengan Quiz Dashboard](https://localhost:3000/sites/haxnow/pages/rekomendasi-aktivitas/index.md): Best practices strategi kuis, heatmap, leaderboard, monitoring siswa untuk pengajar
-- [📊 Dashboard Siswa — Lihat Nilai & Aktivitas](https://localhost:3000/sites/haxnow/pages/dashboard-siswa/index.md): Dashboard siswa HAX custom element untuk melihat nilai, leaderboard, dan aktivitas dari Google Sheets
 - [📚 Modul 1: HAXcms & Web Component](https://localhost:3000/sites/haxnow/pages/materi-siswa/index.md): Contoh halaman materi siswa dengan aktivitas dan kuis
 - [📖 Belajar HTML Dasar](https://localhost:3000/sites/haxnow/pages/tutor-html/index.md): Tutorial HTML lengkap dari nol untuk pemula
 - [📅 Tutorial: Kursus Multi-Hari](https://localhost:3000/sites/haxnow/pages/tutorial-kursus/index.md): Panduan menambah kuis dan materi untuk setiap pertemuan

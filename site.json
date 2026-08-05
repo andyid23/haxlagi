@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785926008
+      "updated": 1785926283
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -31,13 +31,13 @@
       "indent": 0,
       "location": "pages/item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c/index.html",
       "slug": "welcome",
-      "order": 2,
+      "order": 3,
       "parent": null,
       "title": "Welcome to haxnow",
       "description": "Welcome to your new HAX site! Click edit on the top bar to get started\n\n\n\n\n\n\n\n\n\n\nWhat",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785925995,
+        "updated": 1785926272,
         "published": false,
         "locked": false,
         "status": "",
@@ -72,7 +72,7 @@
       "description": "\n📚 Pertemuan 1: Pengenalan HAXcms\nMateri pembelajaran hari ini...\n\n\n\n",
       "metadata": {
         "created": 1784687716,
-        "updated": 1785925996,
+        "updated": 1785926272,
         "images": [],
         "videos": [],
         "published": true,
@@ -89,13 +89,13 @@
       "indent": 1,
       "location": "pages/elemendokumen/index.html",
       "slug": "elemendokumen",
-      "order": 5,
+      "order": 2,
       "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
       "title": "Dokumentasi Elemen",
       "description": "Dokumentasi semua elemen interaktif yang tersedia di HAXcms",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785925997,
+        "updated": 1785926273,
         "published": true,
         "locked": false,
         "status": ""
@@ -112,7 +112,7 @@
       "description": "Demo dan dokumentasi elemen kuis interaktif",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785925997,
+        "updated": 1785926273,
         "published": true,
         "locked": false,
         "status": "",
@@ -133,7 +133,7 @@
       "description": "Demo dan dokumentasi dashboard kuis ringan",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785925998,
+        "updated": 1785926273,
         "published": true,
         "locked": false,
         "status": "",
@@ -154,7 +154,7 @@
       "description": "Demo sistem kehadiran dan pelacakan aktivitas",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785925998,
+        "updated": 1785926274,
         "published": true,
         "locked": false,
         "status": ""
@@ -171,7 +171,7 @@
       "description": "Demo dan dokumentasi elemen notifikasi",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785925998,
+        "updated": 1785926274,
         "published": true,
         "locked": false,
         "status": ""
@@ -188,7 +188,7 @@
       "description": "Demo dan dokumentasi daftar tugas",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785925999,
+        "updated": 1785926274,
         "published": true,
         "locked": false,
         "status": "",
@@ -209,7 +209,7 @@
       "description": "Demo dashboard lengkap dengan Apps Script",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785925999,
+        "updated": 1785926275,
         "published": true,
         "locked": false,
         "status": ""
@@ -226,7 +226,7 @@
       "description": "Panduan lengkap sistem kehadiran dan pelacakan aktivitas",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785925999,
+        "updated": 1785926275,
         "published": true,
         "locked": false,
         "status": ""
@@ -243,7 +243,7 @@
       "description": "Panduan setup Apps Script untuk integrasi Google Sheets",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785926000,
+        "updated": 1785926275,
         "published": true,
         "locked": false,
         "status": ""
@@ -260,7 +260,7 @@
       "description": "fulldashboard\n\n\n",
       "metadata": {
         "created": 1784673090,
-        "updated": 1785926000,
+        "updated": 1785926276,
         "images": [],
         "videos": [],
         "published": true,
@@ -281,7 +281,7 @@
       "description": "Kuis AKM dengan generator soal: template lokal atau Bank Soal (sheet Bank Soal)",
       "metadata": {
         "created": 1785574419,
-        "updated": 1785926000,
+        "updated": 1785926276,
         "images": [],
         "videos": [],
         "published": true,
@@ -302,7 +302,7 @@
       "description": "Panduan lengkap: materi, kuis formatif/UH/UTS/UAS, Bank Soal, sikap & keterampilan, bobot nilai dan generate rapor",
       "metadata": {
         "created": 1785574419,
-        "updated": 1785926000,
+        "updated": 1785926276,
         "images": [],
         "videos": [],
         "published": true,
@@ -326,7 +326,7 @@
         "created": 1785590414,
         "images": [],
         "videos": [],
-        "updated": 1785926001,
+        "updated": 1785926277,
         "published": true,
         "hideInMenu": false,
         "readtime": 7,
@@ -337,17 +337,38 @@
       }
     },
     {
-      "id": "item-tutorial-dashboard-siswa",
+      "id": "item-dashboard-siswa",
       "indent": 2,
-      "location": "pages/tutorial-dashboard-siswa/index.html",
-      "slug": "tutorial-dashboard-siswa",
+      "location": "pages/dashboard-siswa/index.html",
+      "slug": "dashboard-siswa",
       "order": 12,
       "parent": "item-doc-elements",
+      "title": "📊 Dashboard Siswa — Lihat Nilai & Aktivitas",
+      "description": "Dashboard siswa HAX custom element untuk melihat nilai, leaderboard, dan aktivitas dari Google Sheets",
+      "metadata": {
+        "created": 1784667020,
+        "updated": 1785926277,
+        "published": true,
+        "locked": false,
+        "status": "",
+        "hideInMenu": false,
+        "readtime": 1,
+        "videos": [],
+        "images": []
+      }
+    },
+    {
+      "id": "item-tutorial-dashboard-siswa",
+      "indent": 1,
+      "location": "pages/tutorial-dashboard-siswa/index.html",
+      "slug": "tutorial-dashboard-siswa",
+      "order": 3,
+      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
       "title": "📖 Tutorial: Dashboard Siswa & Dosen — Optimasi",
       "description": "Setup, optimasi, dan panduan dashboard siswa & dosen dengan integrasi Google Sheets",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785926001,
+        "updated": 1785926277,
         "published": true,
         "locked": false,
         "status": ""
@@ -355,7 +376,7 @@
     },
     {
       "id": "item-f804cc8e-b786-47bf-ba57-03edb9924416",
-      "indent": 3,
+      "indent": 2,
       "location": "pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.html",
       "slug": "new-page-2",
       "order": 0,
@@ -364,7 +385,7 @@
       "description": "\n📚 Pertemuan 2: Lit Element Dasar\nMateri pembelajaran hari ini...\n\n\n",
       "metadata": {
         "created": 1784688264,
-        "updated": 1785926001,
+        "updated": 1785926278,
         "images": [],
         "videos": [],
         "published": true,
@@ -376,7 +397,7 @@
     },
     {
       "id": "item-tutorial-perubahan-kode",
-      "indent": 3,
+      "indent": 2,
       "location": "pages/tutorial-perubahan-kode/index.html",
       "slug": "tutorial-perubahan-kode",
       "order": 7,
@@ -385,7 +406,7 @@
       "description": "Single login, kd-materi, split assignment/forum, deploy ulang Apps Script, testing checklist",
       "metadata": {
         "created": 1785590417,
-        "updated": 1785926004,
+        "updated": 1785926280,
         "images": [],
         "videos": [],
         "published": true,
@@ -397,7 +418,7 @@
     },
     {
       "id": "item-tutorial-generate-soal",
-      "indent": 3,
+      "indent": 2,
       "location": "pages/tutorial-generate-soal/index.html",
       "slug": "tutorial-generate-soal",
       "order": 6,
@@ -406,7 +427,7 @@
       "description": "Setup Bank Soal, fix 'Elemen kuis tidak ditemukan', deploy getBankSoal, troubleshooting",
       "metadata": {
         "created": 1785590417,
-        "updated": 1785926003,
+        "updated": 1785926280,
         "images": [],
         "videos": [],
         "published": true,
@@ -418,7 +439,7 @@
     },
     {
       "id": "item-tutorial-alur-aktivitas",
-      "indent": 3,
+      "indent": 2,
       "location": "pages/tutorial-alur-aktivitas/index.html",
       "slug": "tutorial-alur-aktivitas",
       "order": 5,
@@ -427,7 +448,7 @@
       "description": "Alur lengkap: siswa → aktivitas → sheets, 7 sheet utama, kriteria kehadiran, alur tugas/forum, template Bank Soal, heatmap",
       "metadata": {
         "created": 1785590417,
-        "updated": 1785926003,
+        "updated": 1785926279,
         "images": [],
         "videos": [],
         "published": true,
@@ -439,7 +460,7 @@
     },
     {
       "id": "item-contoh-lengkap",
-      "indent": 3,
+      "indent": 2,
       "location": "pages/contoh-lengkap/index.html",
       "slug": "contoh-lengkap",
       "order": 4,
@@ -448,7 +469,7 @@
       "description": "Demo lengkap: single login, kd-materi, split assignment/forum, activity tracking, generate soal, heatmap, rapor",
       "metadata": {
         "created": 1785590417,
-        "updated": 1785926003,
+        "updated": 1785926279,
         "images": [],
         "videos": [],
         "published": true,
@@ -460,7 +481,7 @@
     },
     {
       "id": "item-contoh-full-dashboard",
-      "indent": 3,
+      "indent": 2,
       "location": "pages/contoh-full-dashboard/index.html",
       "slug": "contoh-full-dashboard",
       "order": 1,
@@ -469,7 +490,7 @@
       "description": "Demo lengkap full-quiz-dashboard dan student-dashboard, mode siswa & dosen berdampingan, sync kd-materi",
       "metadata": {
         "created": 1785890400,
-        "updated": 1785926002,
+        "updated": 1785926278,
         "published": true,
         "locked": false,
         "status": ""
@@ -477,7 +498,7 @@
     },
     {
       "id": "item-tutorial-full-dashboard",
-      "indent": 3,
+      "indent": 2,
       "location": "pages/tutorial-full-dashboard/index.html",
       "slug": "tutorial-full-dashboard",
       "order": 2,
@@ -486,7 +507,7 @@
       "description": "Panduan lengkap setup full-quiz-dashboard dari nol: spreadsheet, Apps Script, komponen, testing, troubleshooting",
       "metadata": {
         "created": 1785890400,
-        "updated": 1785926002,
+        "updated": 1785926278,
         "published": true,
         "locked": false,
         "status": ""
@@ -494,7 +515,7 @@
     },
     {
       "id": "item-rekomendasi-aktivitas",
-      "indent": 3,
+      "indent": 2,
       "location": "pages/rekomendasi-aktivitas/index.html",
       "slug": "rekomendasi-aktivitas",
       "order": 3,
@@ -503,31 +524,10 @@
       "description": "Best practices strategi kuis, heatmap, leaderboard, monitoring siswa untuk pengajar",
       "metadata": {
         "created": 1785890400,
-        "updated": 1785926002,
+        "updated": 1785926279,
         "published": true,
         "locked": false,
         "status": ""
-      }
-    },
-    {
-      "id": "item-dashboard-siswa",
-      "indent": 2,
-      "location": "pages/dashboard-siswa/index.html",
-      "slug": "dashboard-siswa",
-      "order": 13,
-      "parent": "item-doc-elements",
-      "title": "📊 Dashboard Siswa — Lihat Nilai & Aktivitas",
-      "description": "Dashboard siswa HAX custom element untuk melihat nilai, leaderboard, dan aktivitas dari Google Sheets",
-      "metadata": {
-        "created": 1784667020,
-        "updated": 1785926004,
-        "published": true,
-        "locked": false,
-        "status": "",
-        "hideInMenu": false,
-        "readtime": 1,
-        "videos": [],
-        "images": []
       }
     },
     {
@@ -535,13 +535,13 @@
       "indent": 1,
       "location": "pages/materi-siswa/index.html",
       "slug": "materi-siswa",
-      "order": 6,
+      "order": 4,
       "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
       "title": "📚 Modul 1: HAXcms & Web Component",
       "description": "Contoh halaman materi siswa dengan aktivitas dan kuis",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785926004,
+        "updated": 1785926281,
         "published": true,
         "locked": false,
         "status": "",
@@ -562,7 +562,7 @@
       "description": "Tutorial HTML lengkap dari nol untuk pemula",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785926005,
+        "updated": 1785926281,
         "published": true,
         "locked": false,
         "status": ""
@@ -579,7 +579,7 @@
       "description": "Panduan menambah kuis dan materi untuk setiap pertemuan",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785926005,
+        "updated": 1785926282,
         "published": true,
         "locked": false,
         "status": ""
@@ -596,7 +596,7 @@
       "description": "Setup Google Sheets auto-create sheet tab per pertemuan",
       "metadata": {
         "created": 1784667020,
-        "updated": 1785926005,
+        "updated": 1785926282,
         "published": true,
         "locked": false,
         "status": ""
@@ -613,7 +613,7 @@
       "description": "Diskusi\nhehehehe\n\n&#60;h1&#62;🔗 Integrasi Aktivitas + Tugas + Forum + Kuis&#60;/h1&#62;\n  &#60;div class=",
       "metadata": {
         "created": 1785147646,
-        "updated": 1785926006,
+        "updated": 1785926283,
         "images": [],
         "videos": [],
         "published": true,
@@ -648,7 +648,7 @@
       "description": "Cara kerja halaman aktivitas harian: baca, download, forum, tugas, kuis → Google Sheets",
       "metadata": {
         "created": 1785713000,
-        "updated": 1785925995,
+        "updated": 1785926272,
         "images": [],
         "videos": [],
         "theme": {
@@ -679,13 +679,13 @@
       "indent": 1,
       "location": "pages/LD-2/index.html",
       "slug": "ld-2",
-      "order": 7,
-      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
+      "order": 0,
+      "parent": "item-1a372864-f4f9-486c-9541-1f7912fe6b44",
       "title": "LD-2: Literasi Digital",
       "description": "Forum diskusi dan tugas Literasi Digital 2 - tanpa login jadi anonim",
       "metadata": {
         "created": 1785799823,
-        "updated": 1785926006,
+        "updated": 1785926271,
         "images": [],
         "videos": [],
         "published": true,
@@ -700,13 +700,13 @@
       "indent": 1,
       "location": "pages/LD-3/index.html",
       "slug": "ld-3",
-      "order": 0,
+      "order": 1,
       "parent": "item-1a372864-f4f9-486c-9541-1f7912fe6b44",
       "title": "LD-3: Literasi Digital Lanjutan",
       "description": "Materi, download, kuis, tugas, forum, kehadiran - KD Materi LD-3",
       "metadata": {
         "created": 1785800000,
-        "updated": 1785925994,
+        "updated": 1785926271,
         "images": [],
         "videos": [],
         "published": true,
@@ -727,7 +727,7 @@
       "description": "belajar kritis",
       "metadata": {
         "created": 1785710068,
-        "updated": 1785925993,
+        "updated": 1785926270,
         "images": [],
         "videos": [],
         "theme": {
@@ -765,11 +765,11 @@
     },
     {
       "id": "item-74fdcc5b-afe1-4af6-9ed3-ac24f629d915",
-      "indent": 1,
+      "indent": 0,
       "location": "pages/item-74fdcc5b-afe1-4af6-9ed3-ac24f629d915/index.html",
       "slug": "akun-digital",
-      "order": 0,
-      "parent": "item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5",
+      "order": 1,
+      "parent": null,
       "title": "Akun Digital dan Pengaturan ",
       "description": "📚 LD-3: Akun Digital dan Pengaturan&#160;\nMenjadi Jagoan Keamanan Akun &#38; Finansial Digital\n\n  🔐 Login\n  \n  \n\n\n\nTujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata san",
       "metadata": {
@@ -777,7 +777,7 @@
         "created": 1785891589,
         "images": [],
         "videos": [],
-        "updated": 1785925994,
+        "updated": 1785926270,
         "published": true,
         "status": "",
         "files": [
@@ -839,13 +839,13 @@
       "indent": 0,
       "location": "pages/item-1a372864-f4f9-486c-9541-1f7912fe6b44/index.html",
       "slug": "new-page-7",
-      "order": 1,
+      "order": 2,
       "parent": null,
       "title": "Materi-Coba",
       "description": "tugas\n\n\n\n\n\n",
       "metadata": {
         "created": 1785799317,
-        "updated": 1785925994,
+        "updated": 1785926270,
         "images": [],
         "videos": [],
         "published": false,

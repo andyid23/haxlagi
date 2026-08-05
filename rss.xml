@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2026 10:33:28 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 10:38:03 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -80,17 +80,17 @@
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>
     <item>
-      <title>📖 Tutorial: Dashboard Siswa &amp; Dosen — Optimasi</title>
-      <link>https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa</link>
-      <description>📖 Tutorial: Dashboard Siswa &amp;amp; Dosen — Optimasi &amp;amp; Setup Panduan lengkap setup, optimasi, dan penggunaan dashboard siswa dan dashboard dosen di HAXcms dengan integrasi Google Sheets. 🎯 Perbedaan POST vs GET 📤 POST (Simpan Data) doPost(e) — Digunakan komponen kuis untuk menyimpan hasil ke sheet. fetch(URL, { method: &apos;POST&apos;, body: JSON.stringify({ name: &quot;Andi&quot;, score: 80, sheet: &quot;Pertemuan 1&quot; }) }) 📥 GET (Baca Data) doGet(e) — Digunakan dashboard siswa untuk membaca data dari sheet. f...</description>
-      <guid>https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa</guid>
-      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
-    </item>
-    <item>
       <title>📊 Dashboard Siswa — Lihat Nilai &amp; Aktivitas</title>
       <link>https://localhost:3000/sites/haxnow/dashboard-siswa</link>
       <description>📊 Dashboard Siswa &amp;#8212; Lihat Nilai &amp;#38; Aktivitas dari Google Sheets Halaman ini mengambil data langsung dari Google Sheets via Apps Script API. Masukkan URL Apps Script dan nama Anda untuk melihat data kuis, aktivitas, dan leaderboard secara real-time. 📊 Cara Kerja Masukkan URL Apps Script &amp;#8212; sama dengan yang dipakai di dashboard kuis Masukkan nama Anda &amp;#8212; data dicocokkan dengan nama di sheet Klik Tampilkan &amp;#8212; fetch data dari Apps Script API GET endpoint Jelajahi tab: Le...</description>
       <guid>https://localhost:3000/sites/haxnow/dashboard-siswa</guid>
+      <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>📖 Tutorial: Dashboard Siswa &amp; Dosen — Optimasi</title>
+      <link>https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa</link>
+      <description>📖 Tutorial: Dashboard Siswa &amp;amp; Dosen — Optimasi &amp;amp; Setup Panduan lengkap setup, optimasi, dan penggunaan dashboard siswa dan dashboard dosen di HAXcms dengan integrasi Google Sheets. 🎯 Perbedaan POST vs GET 📤 POST (Simpan Data) doPost(e) — Digunakan komponen kuis untuk menyimpan hasil ke sheet. fetch(URL, { method: &apos;POST&apos;, body: JSON.stringify({ name: &quot;Andi&quot;, score: 80, sheet: &quot;Pertemuan 1&quot; }) }) 📥 GET (Baca Data) doGet(e) — Digunakan dashboard siswa untuk membaca data dari sheet. f...</description>
+      <guid>https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa</guid>
       <pubDate>Tue, 21 Jul 2026 20:50:20 GMT</pubDate>
     </item>
     <item>
