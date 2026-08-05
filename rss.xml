@@ -151,13 +151,6 @@
     </item>
     <item>
       <title>New Page</title>
-      <link>https://localhost:3000/sites/haxnow/new-page-5</link>
-      <description></description>
-      <guid>https://localhost:3000/sites/haxnow/new-page-5</guid>
-      <pubDate>Sat, 01 Aug 2026 06:48:59 GMT</pubDate>
-    </item>
-    <item>
-      <title>New Page</title>
       <link>https://localhost:3000/sites/haxnow/new-page-6</link>
       <description>1 Login / Registrasi 3 Kuis Formatif</description>
       <guid>https://localhost:3000/sites/haxnow/new-page-6</guid>
@@ -183,6 +176,13 @@
       <description>📘 Tutorial Lengkap: Alur Aktivitas, 7 Sheet Utama &amp;#38; Kriteria Kehadiran Panduan visual &amp;#38; teknis: dari aktivitas siswa di browser &amp;#8594; ke Google Sheets via Apps Script. Semua fitur sudah ada di elemen; halaman ini hanya mendokumentasikan struktur data &amp;#38; alurnya. 🎯 Ringkasan 1 Halaman Aktivitas Siswa Elemen Frontend Action Apps Script Sheet Target 🔐 Login / Register quiz-user-auth register / login Users 📖 Baca Materi (scroll) activity-logger activity type=reading {Pertemuan} -...</description>
       <guid>https://localhost:3000/sites/haxnow/elemendokumen/copy-of-tutorial-alur-aktivitas-sheet</guid>
       <pubDate>Sat, 01 Aug 2026 13:20:14 GMT</pubDate>
+    </item>
+    <item>
+      <title>📘 Tutorial Perubahan Kode v2</title>
+      <link>https://localhost:3000/sites/haxnow/tutorial-perubahan-kode</link>
+      <description>📘 Tutorial Perubahan Kode v2: Single Login, KD-Materi &amp; Split Assignment/Forum Panduan migrasi dari arsitektur lama ke arsitektur baru v2. Semua perubahan backward compatible — halaman lama tetap berfungsi. 🎯 Ringkasan Perubahan Utama Single Login: Login sekali, akses semua halaman (auto-login via quiz-user-auth auto-login ) KD-Materi dari sheet-name: kdMateri = sheetName otomatis, filter aktivitas per pertemuan Split Assignment/Forum: assignment-component + forum-component (lama: assignmen...</description>
+      <guid>https://localhost:3000/sites/haxnow/tutorial-perubahan-kode</guid>
+      <pubDate>Sat, 01 Aug 2026 13:20:17 GMT</pubDate>
     </item>
   </channel>
 </rss>

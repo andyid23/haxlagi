@@ -2647,29 +2647,6 @@ hehehehe
   </entry>
   <entry>
     <title>New Page</title>
-    <id>item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b</id>
-    <updated>2026-08-05T10:33:16.000Z</updated>
-    <published>2026-08-01T06:48:59.000Z</published>
-    <summary>
-
-
-</summary>
-    <link href="https://localhost:3000/sites/haxnow/new-page-5"/>
-    
-    <content type="html">
-      <![CDATA[ 
-<p></p>
-<quiz-dashboard-lite2 apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec" sheet-name="LD1" view-mode="student" _active-tab="1" _success-msg="Selamat datang, Andy Yulianto! Data kuis &amp; aktivitas akan tercatat atas nama Anda.">
-</quiz-dashboard-lite2>
-<p></p>
-<media-image accent-color="grey" size="wide" offset="none" source="https://boringbug.com/wp-content/uploadsa/2017/11/options-and-choices.jpg?w=525"></media-image>
-<p></p>
-<p></p>
- ]]>
-    </content>
-  </entry>
-  <entry>
-    <title>New Page</title>
     <id>item-5015eab1-d932-4139-a7a0-3216ce339bfa</id>
     <updated>2026-08-05T10:33:17.000Z</updated>
     <published>2026-08-01T08:46:03.000Z</published>
@@ -3588,6 +3565,209 @@ STD-002	| 002	| Citra Dewi	| 2	| XI-1	| 8	| 8.0	| 90	| 92	| 85	| 88	| 95	| 80	| 
 
 </ul>
  ]]>
+    </content>
+  </entry>
+  <entry>
+    <title>📘 Tutorial Perubahan Kode v2</title>
+    <id>item-tutorial-perubahan-kode</id>
+    <updated>2026-08-05T10:33:24.000Z</updated>
+    <published>2026-08-01T13:20:17.000Z</published>
+    <summary>Single login, kd-materi, split assignment/forum, deploy ulang Apps Script, testing checklist</summary>
+    <link href="https://localhost:3000/sites/haxnow/tutorial-perubahan-kode"/>
+    
+    <content type="html">
+      <![CDATA[ <h1>📘 Tutorial Perubahan Kode v2: Single Login, KD-Materi & Split Assignment/Forum</h1>
+<p>Panduan migrasi dari arsitektur lama ke arsitektur baru v2. Semua perubahan <strong>backward compatible</strong> — halaman lama tetap berfungsi.</p>
+
+<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; border-radius: 16px; padding: 24px; margin: 24px 0;">
+  <h2 style="margin-top: 0; color: white;">🎯 Ringkasan Perubahan Utama</h2>
+  <ul style="margin: 0; line-height: 2;">
+    <li><strong>Single Login:</strong> Login sekali, akses semua halaman (auto-login via <code>quiz-user-auth auto-login</code>)</li>
+    <li><strong>KD-Materi dari sheet-name:</strong> <code>kdMateri = sheetName</code> otomatis, filter aktivitas per pertemuan</li>
+    <li><strong>Split Assignment/Forum:</strong> <code>assignment-component</code> + <code>forum-component</code> (lama: <code>assignment-forum</code> dengan <code>hide-tugas</code>)</li>
+    <li><strong>Session 24h + Auto-logout:</strong> <code>expiresAt</code> di localStorage, auto-logout 24 jam</li>
+    <li><strong>Generate Soal Fix:</strong> <code>question-generator</code> sekarang nemu <code>explode-quiz</code> di shadow DOM</li>
+  </ul>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🔐 1. Single Login & Auto-Login</h2>
+<h3>Perubahan di <code>quiz-user-auth.js</code></h3>
+<pre><code>// Baru: property autoLogin (default true)
+autoLogin: { type: Boolean, attribute: "auto-login" }
+
+// Baru: session dengan expiresAt 24h
+_save(key, val) {
+  const data = { ...val, expiresAt: Date.now() + 24 * 60 * 60 * 1000 };
+  localStorage.setItem(key, JSON.stringify(data));
+}
+
+// Baru: event session-changed untuk sync semua elemen
+_dispatchSessionChanged() {
+  const session = this._load("quiz_user_session");
+  window.dispatchEvent(new CustomEvent("quiz-user-session-changed", {
+    detail: session, bubbles: true, composed: true
+  }));
+}</code></pre>
+
+<h3>Cara Pakai di Halaman</h3>
+<pre><code><!-- Di setiap halaman, cukup taruh ini di atas -->
+<quiz-user-auth 
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  auto-login></quiz-user-auth></code></pre>
+
+<p><strong>Behavior:</strong></p>
+<ul>
+  <li>Halaman pertama: user login → session tersimpan 24h</li>
+  <li>Halaman berikutnya: <code>auto-login</code> cek session → valid → auto logged-in</li>
+  <li>Session expired (24h) → auto clear → tampil form login</li>
+  <li>Logout di satu halaman → <code>quiz-user-session-changed</code> event → semua halaman auto-logout</li>
+</ul>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🏷️ 2. KD-Materi dari sheet-name</h2>
+<p>Semua elemen sekarang punya getter <code>kdMateri</code> yang otomatis ambil dari <code>sheetName</code>:</p>
+<pre><code>get kdMateri() {
+  return this.sheetName || "Pertemuan"
+}</code></pre>
+
+<p><strong>Elemen yang sudah update:</strong></p>
+<ul>
+  <li><code>activity-logger</code> → kirim kdMateri ke logActivity</li>
+  <li><code>attendance-tracker</code> & <code>engagement-score</code> → filter by kdMateri</li>
+  <li><code>explode-quiz</code> → simpan kdMateri di log kuis</li>
+  <li><code>question-generator</code> → baca kdMateri dari quiz target</li>
+  <li><code>assignment-component</code> & <code>forum-component</code> → kirim kdMateri ke Apps Script</li>
+</ul>
+
+<h3>Cara Pakai</h3>
+<pre><code><!-- Otomatis: kdMateri = "UH1" -->
+<activity-logger sheet-name="UH1" ...>
+<forum-component sheet-name="UH1" ...>
+<assignment-component sheet-name="UH1" ...>
+<explode-quiz sheet-name="UH1" ...></code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📦 3. Split Assignment/Forum (Komponen Baru)</h2>
+
+<h3>Komponen Baru</h3>
+<table>
+  <thead>
+    <tr><th>Komponen Lama</th><th>Komponen Baru</th><th>Tag</th><th>Fungsi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>assignment-forum</code></td><td><code>assignment-component</code></td><td><code>assignment-component</code></td><td>Hanya tugas mandiri</td></tr>
+    <tr><td></td><td><code>forum-component</code></td><td><code>forum-component</code></td><td>Hanya forum diskusi</td></tr>
+    <tr><td><code>assignment-forum</code> (dengan hide-tugas)</td><td><code>assignment-forum</code> (deprecated tapi functional)</td><td><code>assignment-forum</code></td><td>Forum saja, tugas disembunyikan</td></tr>
+  </tbody>
+</table>
+
+<h3>Cara Pakai Komponen Baru</h3>
+<pre><code><!-- Tugas Mandiri -->
+<assignment-component
+  apps-script-url="https://script.google.com/macros/s/.../exec"
+  forum-api-url="https://script.google.com/macros/s/FORUM_ID/exec"
+  sheet-name="UH1"
+  assignment-title="Tugas UH1"
+  assignment-instruction="Tuliskan refleksi..."
+  student-id="STD-001"
+  student-name="Budi Santoso"></assignment-component>
+
+<!-- Forum Diskusi -->
+<forum-component
+  apps-script-url="https://script.google.com/macros/s/.../exec"
+  forum-api-url="https://script.google.com/macros/s/FORUM_ID/exec"
+  sheet-name="UH1"
+  forum-topic="Diskusi UH1"
+  student-id="STD-001"
+  student-name="Budi Santoso"></forum-component></code></pre>
+
+<h3>Backward Compat: <code>assignment-forum hide-tugas</code></h3>
+<pre><code><assignment-forum
+  hide-tugas
+  forum-api-url="https://script.google.com/macros/s/FORUM_ID/exec"
+  sheet-name="UH1"
+  forum-topic="Diskusi Saja"></assignment-forum></code></pre>
+<p>✅ Masih berfungsi normal, hanya UI tugas yang disembunyikan. Event <code>assignment-saved</code> tetap jalan kalau dipanggil manual (lihat tutorial cara panggil manual).</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🛠️ 4. Deploy Ulang Apps Script (Wajib!)</h2>
+<p>Karena ada kolom baru <code>kdMateri</code> di sheet, <strong>wajib re-deploy</strong> kedua Apps Script:</p>
+
+<h3>A. Main Apps Script (<code>code.gs</code>)</h3>
+<ol>
+  <li>Buka spreadsheet → Extensions → Apps Script</li>
+  <li>Copy-paste <code>code.gs</code> terbaru (sudah ada kolom kdMateri di logActivity, getActivityHistory filter by kdMateri)</li>
+  <li>Save → Deploy → Manage deployments → Edit → New version → Deploy</li>
+  <li>Copy URL baru → update <code>apps-script-url</code> di halaman</li>
+</ol>
+
+<h3>B. Forum & Tugas (<code>code-forum-tugas.gs</code>)</h3>
+<ol>
+  <li>Buka spreadsheet yang sama → Extensions → Apps Script (project terpisah)</li>
+  <li>Copy-paste <code>code-forum-tugas.gs</code> terbaru (kolom kdMateri di Forum Log & Tugas Log, filter by kdMateri)</li>
+  <li>Save → Deploy → Manage deployments → Edit → New version → Deploy</li>
+  <li>Copy URL baru → update <code>forum-api-url</code> di halaman</li>
+</ol>
+
+<div style="background: #fff3e0; border: 1px solid #ffb74d; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>⚠️ Penting:</strong> Setelah re-deploy, <strong>clear cache browser</strong> (Ctrl+Shift+R) agar load bundle JS terbaru.
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🧪 5. Testing Checklist</h2>
+<table>
+  <thead>
+    <tr><th>Fitur</th><th>Test Case</th><th>Expected</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Single Login</td><td>Login di halaman A → buka halaman B</td><td>Auto logged-in tanpa isi form</td></tr>
+    <tr><td>Session Expiry</td><td>Tunggu 24h / set expiresAt lama</td><td>Auto logout, form login muncul</td></tr>
+    <tr><td>KD-Materi</td><td>Set sheet-name="UH1" di semua elemen</td><td>kdMateri="UH1" terkirim ke sheets</td></tr>
+    <tr><td>Attendance Filter</td><td>Kirim aktivitas UH1 → cek attendance-tracker</td><td>Hanya hitung aktivitas UH1</td></tr>
+    <tr><td>Forum Filter</td><td>Kirim komentar UH1 → cek attendance-tracker UH2</td><td>UH2 tidak hitung komentar UH1</td></tr>
+    <tr><td>Generate Soal</td><td>Klik "Generate dari Bank Soal" di Console Dosen</td><td>Soal muncul di explode-quiz#quiz</td></tr>
+    <tr><td>Assignment Component</td><td>Submit tugas via assignment-component</td><td>Tersimpan ke Tugas Log + Aktivitas</td></tr>
+    <tr><td>Forum Component</td><td>Kirim komentar via forum-component</td><td>Tersimpan ke Forum Log + Aktivitas</td></tr>
+    <tr><td>hide-tugas</td><td>assignment-forum hide-tugas</td><td>UI tugas hilang, forum jalan</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📞 6. Troubleshooting</h2>
+<table>
+  <thead>
+    <tr><th>Gejala</th><th>Penyebab</th><th>Solusi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>"Elemen kuis tidak ditemukan"</td><td>question-generator tidak nemu explode-quiz</td><td>Pastikan <code>quiz-selector="#quiz"</code> dan explode-quiz ada id="quiz"</td></tr>
+    <tr><td>Generate soal gagal</td><td>getBankSoal action tidak ditemukan</td><td>Re-deploy code.gs (pastikan action getBankSoal ada)</td></tr>
+    <tr><td>kdMateri tidak terkirim</td><td>sheet-name tidak diset</td><td>Set sheet-name di semua elemen</td></tr>
+    <tr><td>Forum tidak filter by kdMateri</td><td>forumApiUrl salah / belum re-deploy</td><td>Re-deploy code-forum-tugas.gs</td></tr>
+    <tr><td>Auto-login tidak jalan</td><td>Session expired / expiresAt salah</td><td>Cek localStorage quiz_user_session expiresAt</td></tr>
+    <tr><td>Attendance 0%</td><td>kdMateri beda antara elemen</td><td>Pastikan sheet-name sama di semua elemen</td></tr>
+  </tbody>
+</table>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📚 Referensi File Terkait</h2>
+<ul>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/quiz-user-auth.js</code> — Single login, session 24h</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/activity-logger.js</code> — kdMateri, forumApiUrl, session listener</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/attendance-system.js</code> — kdMateri filter</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/assignment-component.js</code> — Komponen tugas baru</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/forum-component.js</code> — Komponen forum baru</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/question-generator.js</code> — Fix _getQuizElement</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/code.gs</code> — kdMateri di logActivity & getActivityHistory</li>
+  <li><code>custom/src/quiz-dashboard-lite2/lib/code-forum-tugas.gs</code> — kdMateri di Forum Log & Tugas Log</li>
+</ul> ]]>
     </content>
   </entry>
 </feed>

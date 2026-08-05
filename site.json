@@ -85,27 +85,6 @@
       }
     },
     {
-      "id": "item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b",
-      "indent": 1,
-      "location": "pages/item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b/index.html",
-      "slug": "new-page-5",
-      "order": 3,
-      "parent": "item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c",
-      "title": "New Page",
-      "description": "\n\n\n",
-      "metadata": {
-        "created": 1785566939,
-        "updated": 1785925996,
-        "images": [],
-        "videos": [],
-        "published": true,
-        "hideInMenu": false,
-        "locked": false,
-        "readtime": 1,
-        "status": ""
-      }
-    },
-    {
       "id": "item-5015eab1-d932-4139-a7a0-3216ce339bfa",
       "indent": 1,
       "location": "pages/item-5015eab1-d932-4139-a7a0-3216ce339bfa/index.html",

@@ -12,7 +12,6 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 ## Pages
 - [Welcome to haxnow](https://localhost:3000/sites/haxnow/pages/item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c/index.md): Welcome to your new HAX site! Click edit on the top bar to get started What
 - [PembelajaranOnline](https://localhost:3000/sites/haxnow/pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.md): 📚 Pertemuan 1: Pengenalan HAXcms Materi pembelajaran hari ini...
-- [New Page](https://localhost:3000/sites/haxnow/pages/item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b/index.md)
 - [New Page](https://localhost:3000/sites/haxnow/pages/item-5015eab1-d932-4139-a7a0-3216ce339bfa/index.md): 1 Login / Registrasi 3 Kuis Formatif
 - [Dokumentasi Elemen](https://localhost:3000/sites/haxnow/pages/elemendokumen/index.md): Dokumentasi semua elemen interaktif yang tersedia di HAXcms
 - [Explode Quiz - Kuis Interaktif](https://localhost:3000/sites/haxnow/pages/kuis-interaktif/index.md): Demo dan dokumentasi elemen kuis interaktif
