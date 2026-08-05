@@ -11,7 +11,6 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 
 ## Pages
 - [Welcome to haxnow](https://localhost:3000/sites/haxnow/pages/item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c/index.md): Welcome to your new HAX site! Click edit on the top bar to get started What
-- [PembelajaranOnline](https://localhost:3000/sites/haxnow/pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.md): 📚 Pertemuan 1: Pengenalan HAXcms Materi pembelajaran hari ini...
 - [Dokumentasi Elemen](https://localhost:3000/sites/haxnow/pages/elemendokumen/index.md): Dokumentasi semua elemen interaktif yang tersedia di HAXcms
 - [Explode Quiz - Kuis Interaktif](https://localhost:3000/sites/haxnow/pages/kuis-interaktif/index.md): Demo dan dokumentasi elemen kuis interaktif
 - [Dashboard Kuis Lite](https://localhost:3000/sites/haxnow/pages/dashboard-kuis/index.md): Demo dan dokumentasi dashboard kuis ringan
@@ -41,11 +40,13 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [📊 Tutorial: 1 Sheet = 1 Pertemuan](https://localhost:3000/sites/haxnow/pages/tutorial-sheet-per-pertemuan/index.md): Setup Google Sheets auto-create sheet tab per pertemuan
 - [Forum diskusi](https://localhost:3000/sites/haxnow/pages/item-07f619ec-0cd5-4853-b79c-1b12f94df811/index.md): Diskusi hehehehe &#60;h1&#62;🔗 Integrasi Aktivitas + Tugas + Forum + Kuis&#60;/h1&#62; &#60;div class=
 - [📘 Tutorial: Halaman Aktivitas Harian & Google Sheets](https://localhost:3000/sites/haxnow/pages/tutorial-aktivitas-harian/index.md): Cara kerja halaman aktivitas harian: baca, download, forum, tugas, kuis → Google Sheets
+- [PembelajaranOnline](https://localhost:3000/sites/haxnow/pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.md): 📚 Pertemuan 1: Pengenalan HAXcms Materi pembelajaran hari ini...
 - [LD-2: Literasi Digital](https://localhost:3000/sites/haxnow/pages/LD-2/index.md): Forum diskusi dan tugas Literasi Digital 2 - tanpa login jadi anonim
 - [LD-3: Literasi Digital Lanjutan](https://localhost:3000/sites/haxnow/pages/LD-3/index.md): Materi, download, kuis, tugas, forum, kehadiran - KD Materi LD-3
 - [PANDUAN BELAJAR](https://localhost:3000/sites/haxnow/pages/item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5/index.md): belajar kritis
 - [Akun Digital dan Pengaturan](https://localhost:3000/sites/haxnow/pages/item-74fdcc5b-afe1-4af6-9ed3-ac24f629d915/index.md): 📚 LD-3: Akun Digital dan Pengaturan&#160; Menjadi Jagoan Keamanan Akun &#38; Finansial Digital 🔐 Login Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata san
 - [Materi-Coba](https://localhost:3000/sites/haxnow/pages/item-1a372864-f4f9-486c-9541-1f7912fe6b44/index.md): tugas
+- [Copy of PANDUAN BELAJAR](https://localhost:3000/sites/haxnow/pages/item-c66ffd66-5708-478f-95d3-21ed75d41220/index.md)
 
 ## Optional
 - [Search index](https://localhost:3000/sites/haxnow/lunrSearchIndex.json): Lunr corpus for quick full-text retrieval.
