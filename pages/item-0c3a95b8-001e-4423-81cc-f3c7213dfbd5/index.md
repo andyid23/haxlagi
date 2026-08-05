@@ -40,7 +40,7 @@ Prinsip Utama: Belajar bukan sekadar menghafal fakta, melainkan membangun makna 
 
 ### 1\. Peningkatan Kemampuan melalui Menjawab Soal
 
-Penyelesaian berbagai variasi soal asesmen, baik berupa pilihan ganda, esai, maupun soal berbasis kasus, sangat efektif untuk mengasah pemahaman konsep, penalaran logis, dan kemampuan pemecahan masalah. Aktivitas menjawab soal kuis secara rutin juga dapat memotivasi siswa dan mencegah kebosanan dalam proses belajar. Selain itu, latihan soal yang dilakukan secara intensif merupakan cara utama untuk membentuk kemampuan siswa dalam menguasai materi pelajaran.
+Penyelesaian berbagai variasi soal asesmen, baik berupa pilihan ganda, esai, maupun soal berbasis kasus, sangat efektif untuk mengasah pemahaman konsep, enalaran logis, dan kemampuan pemecahan masalah. Aktivitas menjawab soal kuis secara rutin juga dapat memotivasi siswa dan mencegah kebosanan dalam proses belajar. Selain itu, latihan soal yang dilakukan secara intensif merupakan cara utama untuk membentuk kemampuan siswa dalam menguasai materi pelajaran.
 
 ### 2\. Aktif di Forum dan Menyebarkan Ide secara Bertanggung Jawab
 
