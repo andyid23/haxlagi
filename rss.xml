@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2026 04:53:50 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 05:31:50 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -151,13 +151,6 @@
     </item>
     <item>
       <title>New Page</title>
-      <link>https://localhost:3000/sites/haxnow/new-page-3</link>
-      <description>materi quiz -dashboard</description>
-      <guid>https://localhost:3000/sites/haxnow/new-page-3</guid>
-      <pubDate>Mon, 27 Jul 2026 12:47:40 GMT</pubDate>
-    </item>
-    <item>
-      <title>New Page</title>
       <link>https://localhost:3000/sites/haxnow/new-page-4</link>
       <description>Tugas 1 Login / Registrasi 2 Tugas Mandiri &amp;#38; Forum Diskusi Tugas tersimpan ke Tugas Log sheet. Forum CRUD via Forum Log sheet (nested replies, like, sort).</description>
       <guid>https://localhost:3000/sites/haxnow/new-page-4</guid>
@@ -182,6 +175,13 @@
       <link>https://localhost:3000/sites/haxnow/kuis-akm-campuran</link>
       <description>🎯 Kuis AKM Campuran (Literasi + Numerasi) Halaman kuis Asesmen Kompetensi Minimum dengan tipe soal campuran: pilihan ganda (PG), pilihan ganda kompleks (PGK), menjodohkan (matching), dan isian singkat (short answer). Soal bisa dibuat otomatis dari template lokal atau dari Bank Soal di Google Sheets. &amp;#10024; Generator Soal Masuk sebagai dosen lalu buka tab 🛠️ Console Dosen . Dua tombol baru tersedia: ✨ Generate Soal Template Lokal &amp;#8212; soal acak dari bank template bawaan elemen (tanpa pe...</description>
       <guid>https://localhost:3000/sites/haxnow/kuis-akm-campuran</guid>
+      <pubDate>Sat, 01 Aug 2026 08:53:39 GMT</pubDate>
+    </item>
+    <item>
+      <title>📘 Panduan Guru: Soal, Nilai &amp; Rapor</title>
+      <link>https://localhost:3000/sites/haxnow/tutorial-panduan-guru</link>
+      <description>📘 Panduan Guru: Soal, Nilai &amp;amp; Rapor Panduan lengkap alur kerja: Materi → Kuis (Formatif/UH/UTS/UAS) → Sikap &amp;amp; Keterampilan → Bobot Nilai → Rapor . Semua data tersimpan di satu Google Spreadsheet lewat Apps Script. 🎯 Alur Kerja Siapkan 1 Spreadsheet + deploy Apps Script ( code.gs ) → dapatkan URL Web App Buat halaman Materi di HAXcms Siswa login &amp;amp; mengerjakan kuis (formatif, ulangan harian, UTS, UAS) Dosen: input nilai manual UTS/UAS + atur bobot 6 komponen Dosen: klik Generate L...</description>
+      <guid>https://localhost:3000/sites/haxnow/tutorial-panduan-guru</guid>
       <pubDate>Sat, 01 Aug 2026 08:53:39 GMT</pubDate>
     </item>
   </channel>

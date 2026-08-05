@@ -3,7 +3,7 @@
   <title>haxnow</title>
   <link href="https://localhost:3000/sites/haxnow/" rel="self" />
   <subtitle></subtitle>
-  <updated>2026-08-05T04:53:50.000Z</updated>
+  <updated>2026-08-05T05:31:50.000Z</updated>
   <author>
       <name></name>
   </author>
@@ -12,7 +12,7 @@
   <entry>
     <title>Welcome to haxnow</title>
     <id>item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c</id>
-    <updated>2026-08-05T02:37:50.000Z</updated>
+    <updated>2026-08-05T10:30:56.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Welcome to your new HAX site! Click edit on the top bar to get started
 
@@ -208,7 +208,7 @@ What</summary>
   <entry>
     <title>Dokumentasi Elemen</title>
     <id>item-doc-elements</id>
-    <updated>2026-08-05T02:37:55.000Z</updated>
+    <updated>2026-08-05T10:30:59.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Dokumentasi semua elemen interaktif yang tersedia di HAXcms</summary>
     <link href="https://localhost:3000/sites/haxnow/elemendokumen"/>
@@ -309,7 +309,7 @@ What</summary>
   <entry>
     <title>Explode Quiz - Kuis Interaktif</title>
     <id>item-doc-kuis</id>
-    <updated>2026-08-05T02:37:55.000Z</updated>
+    <updated>2026-08-05T10:31:00.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi elemen kuis interaktif</summary>
     <link href="https://localhost:3000/sites/haxnow/kuis-interaktif"/>
@@ -410,7 +410,7 @@ What</summary>
   <entry>
     <title>Dashboard Kuis Lite</title>
     <id>item-doc-dashboard</id>
-    <updated>2026-08-05T02:37:56.000Z</updated>
+    <updated>2026-08-05T10:31:00.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi dashboard kuis ringan</summary>
     <link href="https://localhost:3000/sites/haxnow/dashboard-kuis"/>
@@ -509,7 +509,7 @@ What</summary>
   <entry>
     <title>Sistem Kehadiran</title>
     <id>item-doc-kehadiran</id>
-    <updated>2026-08-05T02:37:57.000Z</updated>
+    <updated>2026-08-05T10:31:01.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo sistem kehadiran dan pelacakan aktivitas</summary>
     <link href="https://localhost:3000/sites/haxnow/kehadiran"/>
@@ -612,7 +612,7 @@ What</summary>
   <entry>
     <title>Notif Element</title>
     <id>item-doc-notifikasi</id>
-    <updated>2026-08-05T02:37:57.000Z</updated>
+    <updated>2026-08-05T10:31:01.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi elemen notifikasi</summary>
     <link href="https://localhost:3000/sites/haxnow/notifikasi"/>
@@ -708,7 +708,7 @@ notif.addEventListener('notif-hide', (e) => {
   <entry>
     <title>Todo List</title>
     <id>item-doc-todo</id>
-    <updated>2026-08-05T02:37:58.000Z</updated>
+    <updated>2026-08-05T10:31:02.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dan dokumentasi daftar tugas</summary>
     <link href="https://localhost:3000/sites/haxnow/todo-list"/>
@@ -824,7 +824,7 @@ todoList.tasks = [
   <entry>
     <title>Full Quiz Dashboard</title>
     <id>item-doc-full-dashboard</id>
-    <updated>2026-08-05T02:37:59.000Z</updated>
+    <updated>2026-08-05T10:31:02.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Demo dashboard lengkap dengan Apps Script</summary>
     <link href="https://localhost:3000/sites/haxnow/full-dashboard"/>
@@ -900,7 +900,7 @@ todoList.tasks = [
   <entry>
     <title>Tutorial Attendance System</title>
     <id>item-doc-tutorial-attendance</id>
-    <updated>2026-08-05T02:37:59.000Z</updated>
+    <updated>2026-08-05T10:31:03.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan lengkap sistem kehadiran dan pelacakan aktivitas</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-attendance"/>
@@ -1043,7 +1043,7 @@ location.reload();</code></pre>
   <entry>
     <title>Tutorial Google Apps Script</title>
     <id>item-doc-tutorial-apps-script</id>
-    <updated>2026-08-05T02:38:00.000Z</updated>
+    <updated>2026-08-05T10:31:03.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan setup Apps Script untuk integrasi Google Sheets</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-apps-script"/>
@@ -1168,7 +1168,7 @@ location.reload();</code></pre>
   <entry>
     <title>📖 Tutorial: Dashboard Siswa &amp; Dosen — Optimasi</title>
     <id>item-tutorial-dashboard-siswa</id>
-    <updated>2026-08-05T02:38:04.000Z</updated>
+    <updated>2026-08-05T10:31:05.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Setup, optimasi, dan panduan dashboard siswa &amp; dosen dengan integrasi Google Sheets</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa"/>
@@ -1374,7 +1374,7 @@ setInterval(async () => {
   <entry>
     <title>📊 Dashboard Siswa — Lihat Nilai &amp; Aktivitas</title>
     <id>item-dashboard-siswa</id>
-    <updated>2026-08-05T02:38:10.000Z</updated>
+    <updated>2026-08-05T10:31:09.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Dashboard siswa HAX custom element untuk melihat nilai, leaderboard, dan aktivitas dari Google Sheets</summary>
     <link href="https://localhost:3000/sites/haxnow/dashboard-siswa"/>
@@ -1476,7 +1476,7 @@ setInterval(async () => {
   <entry>
     <title>📚 Modul 1: HAXcms &amp; Web Component</title>
     <id>item-materi-siswa</id>
-    <updated>2026-08-05T02:38:11.000Z</updated>
+    <updated>2026-08-05T10:31:09.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Contoh halaman materi siswa dengan aktivitas dan kuis</summary>
     <link href="https://localhost:3000/sites/haxnow/materi-siswa"/>
@@ -1673,7 +1673,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>📖 Belajar HTML Dasar</title>
     <id>item-tutor-html</id>
-    <updated>2026-08-05T02:38:12.000Z</updated>
+    <updated>2026-08-05T10:31:09.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Tutorial HTML lengkap dari nol untuk pemula</summary>
     <link href="https://localhost:3000/sites/haxnow/tutor-html"/>
@@ -2058,7 +2058,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>📅 Tutorial: Kursus Multi-Hari</title>
     <id>item-tutorial-kursus</id>
-    <updated>2026-08-05T02:38:12.000Z</updated>
+    <updated>2026-08-05T10:31:10.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Panduan menambah kuis dan materi untuk setiap pertemuan</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-kursus"/>
@@ -2278,7 +2278,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>📊 Tutorial: 1 Sheet = 1 Pertemuan</title>
     <id>item-tutorial-sheet</id>
-    <updated>2026-08-05T02:38:13.000Z</updated>
+    <updated>2026-08-05T10:31:10.000Z</updated>
     <published>2026-07-21T20:50:20.000Z</published>
     <summary>Setup Google Sheets auto-create sheet tab per pertemuan</summary>
     <link href="https://localhost:3000/sites/haxnow/tutorial-sheet-per-pertemuan"/>
@@ -2566,7 +2566,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>dashboard quiz</title>
     <id>item-2e2d093e-b7f4-4499-b60d-09c2c3c4baec</id>
-    <updated>2026-08-05T02:38:01.000Z</updated>
+    <updated>2026-08-05T10:31:03.000Z</updated>
     <published>2026-07-21T22:31:30.000Z</published>
     <summary>fulldashboard
 
@@ -2585,7 +2585,7 @@ customElements.define('my-greeting', MyGreeting);</code></pre>
   <entry>
     <title>PembelajaranOnline</title>
     <id>item-df69b4a8-b470-4c1e-be89-8833ce3452da</id>
-    <updated>2026-08-05T02:37:52.000Z</updated>
+    <updated>2026-08-05T10:30:58.000Z</updated>
     <published>2026-07-22T02:35:16.000Z</published>
     <summary>
 📚 Pertemuan 1: Pengenalan HAXcms
@@ -2609,7 +2609,7 @@ Materi pembelajaran hari ini...
   <entry>
     <title>baru2</title>
     <id>item-f804cc8e-b786-47bf-ba57-03edb9924416</id>
-    <updated>2026-08-05T02:38:04.000Z</updated>
+    <updated>2026-08-05T10:31:05.000Z</updated>
     <published>2026-07-22T02:44:24.000Z</published>
     <summary>
 📚 Pertemuan 2: Lit Element Dasar
@@ -2631,7 +2631,7 @@ Materi pembelajaran hari ini...
   <entry>
     <title>Forum diskusi</title>
     <id>item-07f619ec-0cd5-4853-b79c-1b12f94df811</id>
-    <updated>2026-08-05T02:38:14.000Z</updated>
+    <updated>2026-08-05T10:31:11.000Z</updated>
     <published>2026-07-27T10:20:46.000Z</published>
     <summary>Diskusi
 hehehehe
@@ -2647,38 +2647,8 @@ hehehehe
   </entry>
   <entry>
     <title>New Page</title>
-    <id>item-095e94fc-dc62-4f5c-9037-eb5f5095ba1c</id>
-    <updated>2026-08-05T02:37:51.000Z</updated>
-    <published>2026-07-27T12:47:40.000Z</published>
-    <summary>
-
-</summary>
-    <link href="https://localhost:3000/sites/haxnow/new-page-3"/>
-    
-    <content type="html">
-      <![CDATA[ ﻿<h2>materi quiz -dashboard</h2>
-<p><explode-quiz questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;Apa ibu kota Jawa Timur?&quot;,&quot;image&quot;:&quot;sfdsfds&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;type&quot;:&quot;mc&quot;,&quot;question&quot;:&quot;fdsafdsafdsa c scdasdsavc dsafdsafdsfxv Nandur&quot;,&quot;image&quot;:&quot;fdsafds&quot;,&quot;choices&quot;:[&quot;zxxzxZ&quot;,&quot;fdsfdsafd&quot;,&quot;dsfdsa&quot;,&quot;xzxZx&quot;],&quot;correctIndex&quot;:1}]" spreadsheet-id="" script-function-name="submitQuizResult" quiz-category="formatif" kd-materi="Pertemuan" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0" student-name="Andy Yulianto" student-id="STD-65108053" student-nis="234" student-absen="2" student-kelas="XI-1" _student-name="Andy Yulianto"></explode-quiz>
-
-</p>
-<p>  <quiz-dashboard-lite2 quiz-tab-hidden view-mode="student" apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" kd-materi="Pertemuan-1" _active-tab="2" _user="{&quot;studentId&quot;:&quot;STD-65108053&quot;,&quot;nama&quot;:&quot;Andy Yulianto&quot;,&quot;email&quot;:&quot;wildanhabib051@gmail.com&quot;,&quot;nis&quot;:234,&quot;absen&quot;:2,&quot;kelas&quot;:&quot;XI-1&quot;}">
-    </quiz-dashboard-lite2>
-</p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-
- ]]>
-    </content>
-  </entry>
-  <entry>
-    <title>New Page</title>
     <id>item-5f30b58c-5dbe-4f2c-a526-a882b67dbf29</id>
-    <updated>2026-08-05T02:37:53.000Z</updated>
+    <updated>2026-08-05T10:30:58.000Z</updated>
     <published>2026-08-01T02:37:08.000Z</published>
     <summary>Tugas
 
@@ -2727,7 +2697,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-ac8b2b5e-4fe4-48f4-9860-9833ce13fc3b</id>
-    <updated>2026-08-05T02:37:53.000Z</updated>
+    <updated>2026-08-05T10:30:59.000Z</updated>
     <published>2026-08-01T06:48:59.000Z</published>
     <summary>
 
@@ -2750,7 +2720,7 @@ hehehehe
   <entry>
     <title>New Page</title>
     <id>item-5015eab1-d932-4139-a7a0-3216ce339bfa</id>
-    <updated>2026-08-05T02:37:54.000Z</updated>
+    <updated>2026-08-05T10:30:59.000Z</updated>
     <published>2026-08-01T08:46:03.000Z</published>
     <summary>
 
@@ -2791,7 +2761,7 @@ hehehehe
   <entry>
     <title>Kuis AKM Campuran</title>
     <id>item-kuis-akm-campuran</id>
-    <updated>2026-08-05T02:38:02.000Z</updated>
+    <updated>2026-08-05T10:31:04.000Z</updated>
     <published>2026-08-01T08:53:39.000Z</published>
     <summary>Kuis AKM dengan generator soal: template lokal atau Bank Soal (sheet Bank Soal)</summary>
     <link href="https://localhost:3000/sites/haxnow/kuis-akm-campuran"/>
@@ -2899,6 +2869,169 @@ hehehehe
   <li>Dosen: buka tab Console Dosen, klik salah satu tombol generate.</li>
   <li>Buka tab 📝 Ambil Kuis, masukkan nama, dan kerjakan soal yang telah digenerate.</li>
 </ol>
+ ]]>
+    </content>
+  </entry>
+  <entry>
+    <title>📘 Panduan Guru: Soal, Nilai &amp; Rapor</title>
+    <id>item-tutorial-panduan-guru</id>
+    <updated>2026-08-05T10:31:04.000Z</updated>
+    <published>2026-08-01T08:53:39.000Z</published>
+    <summary>Panduan lengkap: materi, kuis formatif/UH/UTS/UAS, Bank Soal, sikap &amp; keterampilan, bobot nilai dan generate rapor</summary>
+    <link href="https://localhost:3000/sites/haxnow/tutorial-panduan-guru"/>
+    
+    <content type="html">
+      <![CDATA[ <h1>📘 Panduan Guru: Soal, Nilai &amp; Rapor</h1>
+<p>Panduan lengkap alur kerja: <strong>Materi → Kuis (Formatif/UH/UTS/UAS) → Sikap &amp; Keterampilan → Bobot Nilai → Rapor</strong>. Semua data tersimpan di satu Google Spreadsheet lewat Apps Script.</p>
+
+<div style="background: linear-gradient(135deg, #6750a4, #9c7cf4); color: white; border-radius: 16px; padding: 24px; margin: 24px 0;">
+  <h2 style="margin-top: 0; color: white;">🎯 Alur Kerja</h2>
+  <ol style="margin: 0; line-height: 2;">
+    <li>Siapkan 1 Spreadsheet + deploy Apps Script (<code>code.gs</code>) → dapatkan URL Web App</li>
+    <li>Buat halaman Materi di HAXcms</li>
+    <li>Siswa login &amp; mengerjakan kuis (formatif, ulangan harian, UTS, UAS)</li>
+    <li>Dosen: input nilai manual UTS/UAS + atur bobot 6 komponen</li>
+    <li>Dosen: klik <strong>Generate Laporan Rapor</strong> → nilai akhir &amp; grade otomatis</li>
+    <li>Siswa melihat nilai di tab 📊 Daftar Skor</li>
+  </ol>
+</div>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🚀 Langkah 1: Setup Spreadsheet + Apps Script</h2>
+<ol>
+  <li>Buka <a href="https://sheets.google.com" target="_blank">sheets.google.com</a> → buat spreadsheet baru (nama: <strong>Course: HAXcms &amp; Web Component</strong>).</li>
+  <li>Klik <strong>Extensions → Apps Script</strong>, hapus kode default, lalu copy-paste seluruh isi <code>code.gs</code> (tersedia di <code>custom/src/quiz-dashboard-lite2/lib/code.gs</code>).</li>
+  <li>Klik <strong>Save</strong>, lalu <strong>Deploy → New deployment → Web app</strong> (Execute as: Me; Access: Anyone).</li>
+  <li>Salin <strong>Web app URL</strong> — ini yang dipakai sebagai <code>apps-script-url</code> di semua halaman.</li>
+</ol>
+<div style="background: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <strong>🔗 URL Web App kuis yang aktif di situs ini:</strong><br>
+  <code>https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec</code>
+</div>
+<p>Apps Script otomatis membuat sheet tab per pertemuan: <code>Pertemuan 1 - Kuis</code>, <code>Pertemuan 1 - Aktivitas</code>, <code>Rangkuman</code>, <code>Nilai Manual</code>, <code>Akumulasi Nilai Rapor</code>. Buat tab <code>Users</code> untuk daftar siswa: <code>Student ID | NIS | Nama | Absen | Kelas</code>.</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📚 Langkah 2: Buat Halaman Materi</h2>
+<ol>
+  <li>Di HAXcms, klik <strong>Edit Page</strong> lalu tambah halaman baru (tambah item di menu).</li>
+  <li>Isi materi dengan blok teks, <code>&lt;media-image&gt;</code> (gambar), <code>&lt;video-player&gt;</code> (YouTube), dsb.</li>
+  <li>Aktivitas membaca siswa (scroll) otomatis tercatat sebagai log <code>reading</code> — bahan untuk nilai keterampilan.</li>
+</ol>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📝 Langkah 3: Kuis Formatif, Ulangan Harian, UTS, UAS</h2>
+<h3>3a. Elemen kuis langsung di halaman</h3>
+<pre><code>&lt;explode-quiz
+  apps-script-url="https://script.google.com/macros/s/AKfycbzwwv-XI1EC3puQdS8rsTjOobw8rmNXOqOkklInfFB5xBdQJ83po2lq-gxRtDuiE5LG/exec"
+  sheet-name="Pertemuan 1"
+  quiz-category="formatif"
+  tag="UH1"
+  shuffle-choices
+  editable="true"&gt;&lt;/explode-quiz&gt;</code></pre>
+<table>
+  <thead>
+    <tr><th>Atribut</th><th>Kegunaan</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>sheet-name</code></td><td>Nama pertemuan → data masuk ke tab <code>&lt;nama&gt; - Kuis</code>. Ganti per kegiatan: "Pertemuan 1", "UTS", "UAS".</td></tr>
+    <tr><td><code>quiz-category</code></td><td><code>formatif</code> (latihan) atau <code>sumatif</code> (penilaian). Membedakan kolom skor di Rangkuman.</td></tr>
+    <tr><td><code>tag</code></td><td>Kode materi (UH1, UTS, UAS) untuk memisahkan nilai per jenis.</td></tr>
+    <tr><td><code>questions</code></td><td>JSON array soal — diisi otomatis saat Anda edit soal lewat tombol "✏️ Edit Soal".</td></tr>
+    <tr><td><code>editable</code></td><td><code>true</code> agar tombol edit soal muncul untuk pengunjung.</td></tr>
+  </tbody>
+</table>
+<p><strong>Membuat soal:</strong> buka halaman (mode dosen), klik tab 📝 Ambil Kuis → tombol <strong>✏️ Edit Soal</strong> (atau langsung setelah klik Mulai) → tambah/edit soal per tipe → <strong>Tutup Editor</strong> → <strong>Save halaman</strong> di HAXcms agar tersimpan permanen.</p>
+
+<h3>3b. Skema soal (JSON)</h3>
+<table>
+  <thead>
+    <tr><th>Tipe</th><th>Properti yang wajib</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>mc</code> — Pilihan Ganda</td><td><code>type</code>, <code>question</code>, <code>choices[]</code>, <code>correctIndex</code> (atau <code>correctAnswers[]</code> untuk PG kompleks)</td></tr>
+    <tr><td><code>pgk</code> — PG Kompleks (Benar/Salah)</td><td><code>type</code>, <code>question</code>, <code>statements[{text, answer}]</code></td></tr>
+    <tr><td><code>matching</code> — Menjodohkan</td><td><code>type</code>, <code>question</code>, <code>leftItems[]</code>, <code>rightItems[]</code>, <code>correctPairs[[kiri, kanan]]</code></td></tr>
+    <tr><td><code>shortAnswer</code> — Isian Singkat</td><td><code>type</code>, <code>question</code>, <code>acceptedAnswers[]</code></td></tr>
+  </tbody>
+</table>
+<pre><code>// Contoh lengkap
+[
+  {"type":"mc","question":"Apa kepanjangan HTML?","choices":["HyperText Markup Language","High Text Machine Language","Home Tool Markup Language","Hyperlinks Text Markup"],"correctIndex":0,"points":1},
+  {"type":"pgk","question":"Tentukan Benar/Salah:","statements":[{"text":"Matahari terbit di timur","answer":true},{"text":"Bulan lebih besar dari matahari","answer":false}],"points":2},
+  {"type":"matching","question":"Jodohkan:","leftItems":["1+1","2+2"],"rightItems":["2","4"],"correctPairs":[["1+1","2"],["2+2","4"]],"points":2},
+  {"type":"shortAnswer","question":"Sebutkan dasar negara Indonesia.","acceptedAnswers":["pancasila","Pancasila"],"points":1}
+]</code></pre>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🗂️ Langkah 4: Bank Soal &amp; Template (Generate Otomatis)</h2>
+<p>Buat tab <strong>Bank Soal</strong> di spreadsheet. Kolom: <code>ID | Kategori | Tipe | Soal | Detail (JSON) | Gambar | Poin</code>.</p>
+<table>
+  <thead>
+    <tr><th>Kolom</th><th>Isi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>ID</td><td>Nomor urut (opsional)</td></tr>
+    <tr><td>Kategori</td><td><code>literasi</code>, <code>numerasi</code>, atau <code>campur</code></td></tr>
+    <tr><td>Tipe</td><td><code>mc</code>, <code>pgk</code>, <code>matching</code>, <code>shortAnswer</code></td></tr>
+    <tr><td>Soal</td><td>Teks pertanyaan</td></tr>
+    <tr><td>Detail</td><td>JSON properti (lihat contoh di bawah)</td></tr>
+    <tr><td>Gambar</td><td>URL gambar (opsional)</td></tr>
+    <tr><td>Poin</td><td>Bobot (default 1)</td></tr>
+  </tbody>
+</table>
+<pre><code>// Contoh isi kolom Detail per tipe
+{"choices":["Jakarta","Bandung","Surabaya"],"correctIndex":0}
+{"statements":[{"text":"Ide pokok ada di kalimat utama","answer":true},{"text":"Kata 'mengapa' menanyakan tempat","answer":false}]}
+{"leftItems":["1+1","2+2"],"rightItems":["2","4"],"correctPairs":[["1+1","2"],["2+2","4"]]}
+{"acceptedAnswers":["pancasila","Pancasila"]}</code></pre>
+<p><strong>Cara pakai:</strong> buka halaman <code>/kuis-akm-campuran</code> → tab 🛠️ Console Dosen → klik <strong>✨ Generate Soal Template Lokal</strong> (acak dari bank bawaan elemen) atau <strong>🗂️ Generate Soal dari Bank Soal</strong> (baca tab <code>Bank Soal</code> via action <code>getBankSoal</code>). Soal langsung termuat ke kuis, lalu kerjakan di tab 📝 Ambil Kuis.</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🧭 Langkah 5: Sikap &amp; Keterampilan</h2>
+<p>Kedua nilai dihitung otomatis dari aktivitas siswa (tidak perlu diinput manual):</p>
+<table>
+  <thead>
+    <tr><th>Komponen</th><th>Rumus</th><th>Maks</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Sikap</td><td><code>(jumlah tugas × 25) + (jumlah komentar forum × 20)</code></td><td>100</td></tr>
+    <tr><td>Keterampilan</td><td><code>(jumlah kuis × 30) + (jumlah membaca × 10)</code></td><td>100</td></tr>
+  </tbody>
+</table>
+<p>Yang diinput manual oleh dosen hanyalah <strong>UTS</strong> dan <strong>UAS</strong>: di Console Dosen, isi kolom <em>UTS Manual</em> / <em>UAS Manual</em> per siswa (0–100) → tersimpan ke sheet <code>Nilai Manual</code>.</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>📊 Langkah 6: Bobot Nilai &amp; Generate Rapor</h2>
+<ol>
+  <li>Buka halaman kuis → tab 🛠️ Console Dosen.</li>
+  <li>Atur <strong>6 bobot</strong>: Kehadiran, Ulangan Harian, UTS, UAS, Sikap, Keterampilan (nilai 0–10, mis. 1:3:2:2:0:0). Bobot tersimpan di browser (localStorage) dan dikirim saat generate.</li>
+  <li>Klik <strong>📊 Generate Laporan Rapor</strong>.</li>
+</ol>
+<p><strong>Rumus nilai akhir:</strong> <code>(Kehadiran×bKehadiran + Rata-UH×bUH + UTS×bUTS + UAS×bUAS + Sikap×bSikap + Keterampilan×bKeterampilan) ÷ total bobot</code></p>
+<p>Hasil ditulis ke sheet <strong>Akumulasi Nilai Rapor</strong> dengan kolom: Student ID, NIS, Nama, Absen, Kelas, Jumlah Pertemuan, Rata Aktivitas/Pertemuan, Kehadiran, Rata-rata UH, Skor UTS, Skor UAS, Skor Sikap, Skor Keterampilan, <strong>Nilai Akhir</strong>, <strong>Grade</strong>.</p>
+<p><strong>Siswa melihat nilai:</strong> buka halaman dashboard → tab 📊 Daftar Skor (mode siswa menampilkan gradebook transparan; nilai muncul setelah login).</p>
+
+<hr style="margin: 24px 0; border-color: #e0e0e0;">
+
+<h2>🧰 Troubleshooting</h2>
+<table>
+  <thead>
+    <tr><th>Gejala</th><th>Solusi</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>"Elemen kuis tidak ditemukan (pastikan selector benar)"</td><td>Pastikan halaman memakai <code>&lt;quiz-dashboard-lite2&gt;</code> versi terbaru (kuis kini selalu dirender). Bila pakai elemen terpisah, pastikan ada <code>&lt;explode-quiz id="quiz"&gt;</code>.</td></tr>
+    <tr><td>Soal hasil edit hilang setelah disimpan</td><td>Klik <strong>Tutup Editor</strong> dulu (memicu simpan soal), lalu <strong>Save halaman</strong> di HAXcms. Atribut <code>questions</code> harus tertulis di halaman setelah reload.</td></tr>
+    <tr><td>Warning console "Import already in progress, skipping duplicate call"</td><td>Jinak — race internal HAXcms saat simpan. Data tetap tersimpan; jika konten terlihat lama, refresh halaman.</td></tr>
+    <tr><td>"Apps Script URL belum dikonfigurasi"</td><td>Isi <code>apps-script-url</code> dengan URL Web App di atas.</td></tr>
+    <tr><td>Sheet 'Bank Soal' belum ada</td><td>Buat tab bernama persis <code>Bank Soal</code> dengan kolom ID|Kategori|Tipe|Soal|Detail|Gambar|Poin.</td></tr>
+  </tbody>
+</table>
  ]]>
     </content>
   </entry>
