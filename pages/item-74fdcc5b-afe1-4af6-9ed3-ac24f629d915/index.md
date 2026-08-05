@@ -192,6 +192,8 @@ Klik link di bawah untuk mengunduh file materi (aktivitas download akan tercatat
 
 [📄 Download PDF: Panduan Keamanan Akun Digital](files/panduan-literasi-digital.pdf)
 
+[📄 Download PDF: Keamanan Akun dan Finansial Digital](https://docs.google.com/document/d/e/2PACX-1vQbAIBeOrTzRnFDvYxFjVp5hXgq_-vBQyTMgINdKQ5zSx9C6sDj2nMwGATKvCyT-1N3BHwIcFWMs6UD/pub)
+
 🎯 Evaluasi: Kuis LD-3
 ----------------------
 

@@ -4,7 +4,7 @@
 <indent>0</indent>
 <location>pages/item-74fdcc5b-afe1-4af6-9ed3-ac24f629d915/index.xml</location>
 <slug>akun-digital</slug>
-<order>1</order>
+<order>0</order>
 <parent>item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5</parent>
 <title>Akun Digital dan Pengaturan </title>
 <description>📚 LD-3: Akun Digital dan Pengaturan&amp;#160;
@@ -24,7 +24,7 @@ Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata s
 </images>
 <videos>
 </videos>
-<updated>1785904885</updated>
+<updated>1785905630</updated>
 <published>true</published>
 <status></status>
 <files>
@@ -90,6 +90,7 @@ Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata s
 
 
 
+
 </section>
 <p></p>
 <learning-component type="assessment" accent-color="red" subtitle="Keamanan Akun" title="Assessment" icon="lrn:assessment">
@@ -103,6 +104,7 @@ Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata s
 
 
 
+
 </learning-component>
 <section class="card">
    <h2>📖 Materi Pembelajaran</h2>
@@ -110,6 +112,7 @@ Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata s
   <p>Pada pertemuan ini, kita akan mempelajari konsep keamanan akun digital</p>
 </section>
 <h4 id="h4-1942659512"><fake-hax-list-break>Misi &#38; Mindset Fondasi Keamanan Digital<br></fake-hax-list-break>
+
 
 
 
@@ -131,6 +134,7 @@ Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata s
     (kerugian finansial, pencurian identitas, penyebaran hoaks/penipuan atas nama pribadi</li>
 </ul>
 <h4 id="h4--794303599"><fake-hax-list-break>Arsitektur Kata Sandi &#38; Manajer Kata Sandi (Password Manager)<br></fake-hax-list-break>
+
 
 
 
@@ -263,6 +267,8 @@ Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata s
 
   <p>Klik link di bawah untuk mengunduh file materi (aktivitas download akan tercatat
     otomatis)</p><p><a href="files/panduan-literasi-digital.pdf" download="">📄 Download PDF: Panduan Keamanan Akun Digital</a></p>
+<p><a href="https://docs.google.com/document/d/e/2PACX-1vQbAIBeOrTzRnFDvYxFjVp5hXgq_-vBQyTMgINdKQ5zSx9C6sDj2nMwGATKvCyT-1N3BHwIcFWMs6UD/pub" download="">📄 Download PDF: Keamanan Akun dan Finansial Digital</a></p>
+
 
 
 
@@ -278,11 +284,13 @@ Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata s
 
 
 
+
   </section>
 <section class="card">
      <h2>💬 Forum Diskusi: LD-3</h2>
 
     <forum-component apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-3" forum-topic="Forum Diskusi: LD-3 - Literasi Digital Lanjutan" view-mode="student" sheet-name="Pertemuan" _comments="[{&quot;id&quot;:1785837731159,&quot;parentId&quot;:null,&quot;user&quot;:&quot;Abi Andy&quot;,&quot;studentId&quot;:&quot;STD-651080100&quot;,&quot;text&quot;:&quot;masya Allah&quot;,&quot;sheet&quot;:&quot;&quot;,&quot;time&quot;:&quot;2026-08-04T10:02:11.000Z&quot;,&quot;likes&quot;:0,&quot;isLiked&quot;:false,&quot;pinned&quot;:false,&quot;kelas&quot;:&quot;XI-1&quot;,&quot;replies&quot;:[]}]" _sort-mode="best"></forum-component>
+
 
 
 
@@ -294,6 +302,7 @@ Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata s
 
 
 
+
   </section>
 <section class="card">
      <h2>📊 Kehadiran &amp; Aktivitas</h2>
@@ -301,20 +310,24 @@ Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata s
     <p>Ringkasan kehadiran dan aktivitas Anda untuk KD-Materi LD-3:</p>
     <grid-plate layout="1">
       <div slot="col-1">
-        <attendance-tracker apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-3" sheet-name="Pertemuan" _logs="[{&quot;id&quot;:&quot;log-1785904782928&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:42.928Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download materi: 📄 Download PDF: Panduan Keamanan Akun Digital&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904782925&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:42.925Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download materi: 📄 Download PDF: Panduan Keamanan Akun Digital&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904752886&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:12.886Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1036px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904752882&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:12.882Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1036px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904729142&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:38:49.142Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1063px)&quot;,&quot;synced&quot;:false}]" _forum-today="0"></attendance-tracker>
+        <attendance-tracker apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-3" sheet-name="Pertemuan" _logs="[{&quot;id&quot;:&quot;log-1785905625398&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:53:45.398Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 8777px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785905625395&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:53:45.395Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 8777px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785905435355&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:50:35.355Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1002px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785905430576&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:50:30.576Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 5198px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785905430573&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:50:30.573Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 5198px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785905073209&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:44:33.209Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1014px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785905073205&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:44:33.205Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1014px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904904392&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:41:44.392Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1226px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904904389&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:41:44.389Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1226px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904782928&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:42.928Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download materi: 📄 Download PDF: Panduan Keamanan Akun Digital&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904782925&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:42.925Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download materi: 📄 Download PDF: Panduan Keamanan Akun Digital&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904752886&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:12.886Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1036px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904752882&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:12.882Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1036px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904729142&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:38:49.142Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1063px)&quot;,&quot;synced&quot;:false}]" _forum-today="0"></attendance-tracker>
+
 
 
 
       </div>
+
 
 
 
       <div slot="col-2">
-        <engagement-score apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-3" sheet-name="Pertemuan" _history="[{&quot;date&quot;:&quot;2026-08-05&quot;,&quot;count&quot;:5}]"></engagement-score>
+        <engagement-score apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-3" sheet-name="Pertemuan" _history="[{&quot;date&quot;:&quot;2026-08-05&quot;,&quot;count&quot;:14}]"></engagement-score>
+
 
 
 
       </div>
+
 
 
 
@@ -322,7 +335,8 @@ Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata s
 
 
 
+
   </section>
-<activity-logger kd-materi="LD-3" apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" sheet-name="Pertemuan" _logs="[{&quot;id&quot;:&quot;log-1785904782928&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:42.928Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download materi: 📄 Download PDF: Panduan Keamanan Akun Digital&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904782925&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:42.925Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download materi: 📄 Download PDF: Panduan Keamanan Akun Digital&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904752886&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:12.886Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1036px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904752882&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:12.882Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1036px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904729142&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:38:49.142Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1063px)&quot;,&quot;synced&quot;:false}]"></activity-logger>
+<activity-logger kd-materi="LD-3" apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" sheet-name="Pertemuan" _logs="[{&quot;id&quot;:&quot;log-1785905625398&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:53:45.398Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 8777px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785905625395&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:53:45.395Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 8777px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785905435355&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:50:35.355Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1002px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785905430576&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:50:30.576Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 5198px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785905430573&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:50:30.573Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 5198px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785905073209&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:44:33.209Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1014px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785905073205&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:44:33.205Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1014px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904904392&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:41:44.392Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1226px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904904389&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:41:44.389Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1226px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904782928&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:42.928Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download materi: 📄 Download PDF: Panduan Keamanan Akun Digital&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904782925&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:42.925Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;download&quot;,&quot;description&quot;:&quot;Download materi: 📄 Download PDF: Panduan Keamanan Akun Digital&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904752886&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:12.886Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1036px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904752882&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:39:12.882Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1036px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1785904729142&quot;,&quot;timestamp&quot;:&quot;2026-08-05T04:38:49.142Z&quot;,&quot;date&quot;:&quot;2026-08-05&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1063px)&quot;,&quot;synced&quot;:false}]"></activity-logger>
 ]]></content>
 </item>
