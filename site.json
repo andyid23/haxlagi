@@ -834,7 +834,17 @@
         "icon": "av:equalizer",
         "locked": false,
         "readtime": 6,
-        "status": ""
+        "status": "",
+        "files": [
+          {
+            "path": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\files\\Belajar-Berpikir-dan-belajar-kritis.pdf",
+            "fullUrl": "/C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi/files/Belajar-Berpikir-dan-belajar-kritis.pdf",
+            "url": "files/Belajar-Berpikir-dan-belajar-kritis.pdf",
+            "type": "application/pdf",
+            "name": "Belajar-Berpikir-dan-belajar-kritis.pdf",
+            "size": 140721
+          }
+        ]
       }
     },
     {
