@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785897495
+      "updated": 1785901221
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -870,19 +870,19 @@
     },
     {
       "id": "item-74fdcc5b-afe1-4af6-9ed3-ac24f629d915",
-      "indent": 1,
+      "indent": 0,
       "location": "pages/item-74fdcc5b-afe1-4af6-9ed3-ac24f629d915/index.html",
       "slug": "copy-of-ld-3-literasi-digital-lanjutan",
       "order": 1,
       "parent": "item-1a372864-f4f9-486c-9541-1f7912fe6b44",
-      "title": "Copy of LD-3: Literasi Digital Lanjutan",
-      "description": "",
+      "title": "Akun Digital dan Pengaturan ",
+      "description": "📚 LD-3: Akun Digital dan Pengaturan&#160;\nMenjadi Jagoan Keamanan Akun &#38; Finansial Digital\n\n  🔐 Login\n  \n  \n\n\n\nTujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata san",
       "metadata": {
         "locked": false,
         "created": 1785891589,
         "images": [],
         "videos": [],
-        "updated": 1785897469,
+        "updated": 1785901221,
         "published": true,
         "status": "",
         "files": [
@@ -910,7 +910,9 @@
             "name": "image_2.png",
             "size": 16985
           }
-        ]
+        ],
+        "hideInMenu": false,
+        "readtime": 5
       }
     }
   ]
