@@ -925,6 +925,14 @@
             "type": "application/pdf",
             "name": "Keamanan-Akun-di-Dunia-Digital.pdf",
             "size": 147473
+          },
+          {
+            "path": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\files\\soal-akm-keamanan-digital.pdf",
+            "fullUrl": "/C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi/files/soal-akm-keamanan-digital.pdf",
+            "url": "files/soal-akm-keamanan-digital.pdf",
+            "type": "application/pdf",
+            "name": "soal-akm-keamanan-digital.pdf",
+            "size": 102356
           }
         ],
         "hideInMenu": false,
