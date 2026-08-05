@@ -909,6 +909,14 @@
             "type": "image/png",
             "name": "image_2.png",
             "size": 16985
+          },
+          {
+            "path": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\files\\image_3.png",
+            "fullUrl": "/C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi/files/image_3.png",
+            "url": "files/image_3.png",
+            "type": "image/png",
+            "name": "image_3.png",
+            "size": 4933
           }
         ],
         "hideInMenu": false,
