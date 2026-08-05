@@ -6,7 +6,7 @@
     <description></description>
     <copyright>Copyright (C) 2026 https://localhost:3000/sites/haxnow</copyright>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2026 11:16:02 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 11:24:06 GMT</lastBuildDate>
     <generator>HAXcms NodeJS</generator>
     <atom:link href="https://localhost:3000/sites/haxnow/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -136,7 +136,7 @@
       <pubDate>Wed, 22 Jul 2026 02:35:16 GMT</pubDate>
     </item>
     <item>
-      <title>baru2</title>
+      <title>Full Dashboard</title>
       <link>https://localhost:3000/sites/haxnow/new-page-2</link>
       <description>📚 Pertemuan 2: Lit Element Dasar Materi pembelajaran hari ini...</description>
       <guid>https://localhost:3000/sites/haxnow/new-page-2</guid>

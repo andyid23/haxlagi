@@ -4,7 +4,7 @@ location: pages/item-f804cc8e-b786-47bf-ba57-03edb9924416/index.yaml
 slug: new-page-2
 order: 0
 parent: item-tutorial-dashboard-siswa
-title: baru2
+title: Full Dashboard
 description: |+
 
   📚 Pertemuan 2: Lit Element Dasar
@@ -13,7 +13,7 @@ description: |+
 
 metadata:
   created: 1784688264
-  updated: 1785929046
+  updated: 1785929118
   images: []
   videos: []
   published: true

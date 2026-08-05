@@ -6,7 +6,7 @@
 <slug>new-page-2</slug>
 <order>0</order>
 <parent>item-tutorial-dashboard-siswa</parent>
-<title>baru2</title>
+<title>Full Dashboard</title>
 <description>
 📚 Pertemuan 2: Lit Element Dasar
 Materi pembelajaran hari ini...
@@ -15,7 +15,7 @@ Materi pembelajaran hari ini...
 </description>
 <metadata>
 <created>1784688264</created>
-<updated>1785929046</updated>
+<updated>1785929118</updated>
 <images>
 </images>
 <videos>
