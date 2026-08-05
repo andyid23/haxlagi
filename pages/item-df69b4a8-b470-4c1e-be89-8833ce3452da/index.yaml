@@ -2,8 +2,8 @@ id: item-df69b4a8-b470-4c1e-be89-8833ce3452da
 indent: 0
 location: pages/item-df69b4a8-b470-4c1e-be89-8833ce3452da/index.yaml
 slug: new-page-1
-order: 0
-parent: item-tutorial-aktivitas-harian
+order: 1
+parent: item-711e9712-7ee7-4d25-9ad7-d2e9cbc1504c
 title: PembelajaranOnline
 description: |+
 
@@ -14,7 +14,7 @@ description: |+
 
 metadata:
   created: 1784687716
-  updated: 1785928561
+  updated: 1785971967
   images: []
   videos: []
   published: true
@@ -27,6 +27,14 @@ metadata:
 content: >
 
   <p></p>
+
+  <polaris-cta text="tutor di qwen"
+  link="https://chat.qwen.ai/s/deploy/t_4e0b11e9-13c9-4fba-ae6e-31330217c912"
+  type="primary" outlined></polaris-cta>
+
+  <polaris-cta text="tutor di qwen 2"
+  link="https://chat.qwen.ai/s/deploy/t_eda95c8d-aa55-4760-a47f-eafd710f41f4"
+  type="primary" outlined edit-mode></polaris-cta>
 
   <h1 id="h1-1954384612">📚 Pertemuan 1: Tugas</h1>
 
