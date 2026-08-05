@@ -175,14 +175,22 @@ B. SOP Pertolongan Pertama Jika Akun/Finansial Terkompromi
 
 Jika terindikasi akun atau keuangan digital diretas:
 
-\[Langkah 1\] Isolasi Perangkat ──────> Matikan Wi-Fi & Data Seluler jika ada malware (.APK) │ \[Langkah 2\] Amankan Finansial ────> Hubungi Call Center Bank/E-Wallet untuk blokir rekening/kartu │ \[Langkah 3\] Reset Kredensial ────> Ganti kata sandi Master & Email Utama dari perangkat bersih │ \[Langkah 4\] Revoke Access ────> Putuskan semua sesi aktif (Log out from all devices) & cabut akses OAuth │ \[Langkah 5\] Lapor & Dokumentasi ──> Laporkan ke pihak berwajib / AduanSiber.id dengan bukti screenshot
+\[Langkah 1\] Isolasi Perangkat ──────> Matikan Wi-Fi & Data Seluler jika ada malware (.APK) 
+
+\[Langkah 2\] Amankan Finansial ────> Hubungi Call Center Bank/E-Wallet untuk blokir rekening/kartu
+
+\[Langkah 3\] Reset Kredensial ────> Ganti kata sandi Master & Email Utama dari perangkat bersih
+
+\[Langkah 4\] Revoke Access ────> Putuskan semua sesi aktif (Log out from all devices) & cabut akses OAuth 
+
+\[Langkah 5\] Lapor & Dokumentasi ──> Laporkan ke pihak berwajib / AduanSiber.id dengan bukti screenshot
 
 📥 Download Materi
 ------------------
 
-Klik link di bawah untuk mengunduh file materi (aktivitas download akan tercatat otomatis):
+Klik link di bawah untuk mengunduh file materi (aktivitas download akan tercatat otomatis)
 
-*   [📄 Download PDF: Panduan Literasi Digital](files/panduan-literasi-digital.pdf)
+[📄 Download PDF: Panduan Keamanan Akun Digital&amp;amp;amp;amp;nbs](files/panduan-literasi-digital.pdf)
 
 🎯 Evaluasi: Kuis LD-3
 ----------------------
