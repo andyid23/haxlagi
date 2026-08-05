@@ -150,6 +150,12 @@ export class ForumComponent extends I18NMixin(DDDSuper(LitElement)) {
       this.studentNis = session.nis || ""
       this.studentAbsen = session.absen || ""
       this.studentKelas = session.kelas || ""
+    } else {
+      this.studentId = ""
+      this.studentName = ""
+      this.studentNis = ""
+      this.studentAbsen = ""
+      this.studentKelas = ""
     }
   }
 

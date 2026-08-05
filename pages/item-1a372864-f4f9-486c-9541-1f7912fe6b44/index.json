@@ -5,11 +5,11 @@
   "slug": "new-page-7",
   "order": 2,
   "parent": null,
-  "title": "New Page",
+  "title": "Literasi 3",
   "description": "tugas\n\n\n\n\n\n",
   "metadata": {
     "created": 1785799317,
-    "updated": 1785854208,
+    "updated": 1785888162,
     "images": [],
     "videos": [],
     "published": true,
@@ -17,5 +17,5 @@
     "locked": false,
     "readtime": 1
   },
-  "content": "\n<section class=\"card\">\n  <h2>💬 Forum Diskusi: LD-3</h2>\n  <forum-component apps-script-url=\"https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec\" forum-api-url=\"https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec\" kd-materi=\"LD-1\" forum-topic=\"Forum Diskusi: LD-1 - Literasi Digital Lanjutan\" view-mode=\"student\" sheet-name=\"Pertemuan\" _comments=\"[]\" _sort-mode=\"best\" _loading-comments>\n  </forum-component>\n\n</section>\n<section class=\"card\">\n  <h2>📝 Tugas Mandiri: LD-3</h2>\n  <assignment-component apps-script-url=\"https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec\" forum-api-url=\"https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec\" kd-materi=\"LD-1\" assignment-title=\"Tugas LD-3: Refleksi Literasi Digital\" assignment-instruction=\"Tuliskan refleksi tentang apa yang sudah Anda pahami mengenai literasi digital lanjutan. Sertakan contoh kasus nyata yang pernah Anda alami atau temui.\" view-mode=\"student\" sheet-name=\"Pertemuan\" student-id=\"STD-65108053\" student-name=\"Andy Yulianto\" student-nis=\"234\" student-absen=\"2\" student-kelas=\"XI-1\">\n  </assignment-component>\n\n</section>\n"
+  "content": "\n<section class=\"card\">\n  <h2>💬 Forum Diskusi: LD-3</h2>\n  <forum-component apps-script-url=\"https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec\" forum-api-url=\"https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec\" kd-materi=\"LD-1\" forum-topic=\"Forum Diskusi: LD-1 - Literasi Digital Lanjutan\" view-mode=\"student\" sheet-name=\"Pertemuan\" _comments=\"[]\" _sort-mode=\"best\" _loading-comments=\"\">\n  </forum-component>\n\n\n</section>\n<section class=\"card\">\n  <h2>📝 Tugas Mandiri: LD-3</h2>\n  <assignment-component apps-script-url=\"https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec\" forum-api-url=\"https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec\" kd-materi=\"LD-1\" assignment-title=\"Tugas LD-3: Refleksi Literasi Digital\" assignment-instruction=\"Tuliskan refleksi tentang apa yang sudah Anda pahami mengenai literasi digital lanjutan. Sertakan contoh kasus nyata yang pernah Anda alami atau temui.\" view-mode=\"student\" sheet-name=\"Pertemuan\" student-id=\"STD-65108053\" student-name=\"Andy Yulianto\" student-nis=\"234\" student-absen=\"2\" student-kelas=\"XI-1\">\n  </assignment-component>\n\n\n</section>\n"
 }

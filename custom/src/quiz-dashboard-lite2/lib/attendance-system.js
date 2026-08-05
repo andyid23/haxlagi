@@ -181,6 +181,12 @@ export class ActivityLogger extends I18NMixin(DDDSuper(LitElement)) {
       this.studentNis = session.nis || "";
       this.studentAbsen = session.absen || "";
       this.studentKelas = session.kelas || "";
+    } else {
+      this.studentId = "";
+      this.studentName = "";
+      this.studentNis = "";
+      this.studentAbsen = "";
+      this.studentKelas = "";
     }
   }
   disconnectedCallback() {
@@ -400,6 +406,12 @@ export class AttendanceTracker extends I18NMixin(DDDSuper(LitElement)) {
       this.studentAbsen = session.absen || "";
       this.studentKelas = session.kelas || "";
       this._fetchForumToday();
+    } else {
+      this.studentId = "";
+      this.studentName = "";
+      this.studentNis = "";
+      this.studentAbsen = "";
+      this.studentKelas = "";
     }
   }
   connectedCallback() {
@@ -611,6 +623,12 @@ export class EngagementScore extends I18NMixin(DDDSuper(LitElement)) {
       this.studentAbsen = session.absen || "";
       this.studentKelas = session.kelas || "";
       this._fetchHistory();
+    } else {
+      this.studentId = "";
+      this.studentName = "";
+      this.studentNis = "";
+      this.studentAbsen = "";
+      this.studentKelas = "";
     }
   }
   connectedCallback() {

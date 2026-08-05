@@ -116,10 +116,13 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
     }
     this._loadFromStorage()
     this._listenSession()
+    this._onLogout = this._onLogout.bind(this)
+    globalThis.addEventListener("quiz-user-logout", this._onLogout)
   }
 
   disconnectedCallback() {
     globalThis.removeEventListener("quiz-user-session-changed", this._handleSessionChanged)
+    globalThis.removeEventListener("quiz-user-logout", this._onLogout)
     super.disconnectedCallback()
   }
 
@@ -128,6 +131,15 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
     globalThis.addEventListener("quiz-user-session-changed", this._handleSessionChanged)
     // Load initial session
     this._handleSessionChanged({ detail: this._loadSession() })
+  }
+
+  _onLogout() {
+    this._savePending([])
+    this.studentId = ""
+    this.studentName = ""
+    this.studentNis = ""
+    this.studentAbsen = ""
+    this.studentKelas = ""
   }
 
   _loadSession() {
@@ -150,6 +162,12 @@ export class AssignmentComponent extends I18NMixin(DDDSuper(LitElement)) {
       this.studentAbsen = session.absen || ""
       this.studentKelas = session.kelas || ""
       this._flushPending()
+    } else {
+      this.studentId = ""
+      this.studentName = ""
+      this.studentNis = ""
+      this.studentAbsen = ""
+      this.studentKelas = ""
     }
   }
 

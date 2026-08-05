@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1785882451
+      "updated": 1785888163
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -791,11 +791,11 @@
       "slug": "new-page-7",
       "order": 2,
       "parent": null,
-      "title": "New Page",
+      "title": "Literasi 3",
       "description": "tugas\n\n\n\n\n\n",
       "metadata": {
         "created": 1785799317,
-        "updated": 1785854208,
+        "updated": 1785888162,
         "images": [],
         "videos": [],
         "published": true,

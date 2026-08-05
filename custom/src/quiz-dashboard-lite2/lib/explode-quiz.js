@@ -415,7 +415,25 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
       if (e.detail.kelas) this.studentKelas = e.detail.kelas
       this._flushPendingSubmissions()
     }
+    this._sessionHandler = (e) => {
+      const session = e?.detail
+      if (session?.studentId) {
+        this.studentId = session.studentId
+        this.studentName = session.nama
+        this.studentNis = session.nis || ""
+        this.studentAbsen = session.absen || ""
+        this.studentKelas = session.kelas || ""
+        this._flushPendingSubmissions()
+      } else {
+        this.studentId = ""
+        this.studentName = ""
+        this.studentNis = ""
+        this.studentAbsen = ""
+        this.studentKelas = ""
+      }
+    }
     globalThis.addEventListener("quiz-user-login", this._authHandler)
+    globalThis.addEventListener("quiz-user-session-changed", this._sessionHandler)
     if (
       globalThis.HaxStore &&
       typeof globalThis.HaxStore.requestAvailability === "function"
@@ -432,6 +450,9 @@ class ExplodeQuiz extends I18NMixin(DDDSuper(LitElement)) {
     this._cancelMegaConfetti()
     if (this._authHandler) {
       globalThis.removeEventListener("quiz-user-login", this._authHandler)
+    }
+    if (this._sessionHandler) {
+      globalThis.removeEventListener("quiz-user-session-changed", this._sessionHandler)
     }
     super.disconnectedCallback()
   }

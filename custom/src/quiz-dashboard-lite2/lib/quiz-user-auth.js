@@ -82,6 +82,7 @@ static get properties() {
       if (this.autoLogin) {
         this._dispatchSessionChanged();
       }
+      this._startSessionWatch();
     } else {
       this._screen = "login";
     }
@@ -184,6 +185,7 @@ static get properties() {
         });
         this._screen = "logged-in";
         this._dispatchLogin();
+        this._startSessionWatch();
       } else {
         this._errorMsg = data.message || "Login gagal";
       }
@@ -191,6 +193,16 @@ static get properties() {
       this._errorMsg = "Gagal menghubungi server";
     }
     this._loading = false;
+  }
+
+  _startSessionWatch() {
+    if (this._sessionInterval) clearInterval(this._sessionInterval)
+    this._sessionInterval = setInterval(() => {
+      const saved = this._load("quiz_user_session")
+      if (!saved?.studentId && this._screen === "logged-in") {
+        this._handleLogout()
+      }
+    }, 60000)
   }
 
   async _handleRegister(e) {
@@ -241,6 +253,7 @@ static get properties() {
   }
 
   _handleLogout() {
+    if (this._sessionInterval) { clearInterval(this._sessionInterval); this._sessionInterval = null; }
     this._clear("quiz_user_session");
     this._studentId = "";
     this._nama = "";
