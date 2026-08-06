@@ -888,7 +888,17 @@
         "created": 1786059229,
         "images": [],
         "videos": [],
-        "updated": 1786059229
+        "updated": 1786059229,
+        "files": [
+          {
+            "path": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\files\\Membangun-Nalar-Kritis-&-Validasi.pdf",
+            "fullUrl": "/C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi/files/Membangun-Nalar-Kritis-&-Validasi.pdf",
+            "url": "files/Membangun-Nalar-Kritis-&-Validasi.pdf",
+            "type": "application/pdf",
+            "name": "Membangun-Nalar-Kritis-&-Validasi.pdf",
+            "size": 86268
+          }
+        ]
       }
     }
   ]
