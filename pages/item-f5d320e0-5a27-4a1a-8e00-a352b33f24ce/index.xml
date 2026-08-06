@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <item>
 <id>item-f5d320e0-5a27-4a1a-8e00-a352b33f24ce</id>
-<indent>1</indent>
+<indent>0</indent>
 <location>pages/item-f5d320e0-5a27-4a1a-8e00-a352b33f24ce/index.xml</location>
 <slug>new-page-7/copy-of-ld-3-literasi-digital-lanjutan</slug>
 <order>3</order>
 <parent>item-1a372864-f4f9-486c-9541-1f7912fe6b44</parent>
-<title>Copy of LD-3: Literasi Digital Lanjutan</title>
-<description></description>
+<title>Membangun Nalar Kritis</title>
+<description>📚 Membangun Nalar Kritis &amp;#38; Validasi
+
+
+   🔐 Login
+
+  
+
+
+
+Pendahuluan
+Di era digital saat ini, kita hidup di tengah banjir informasi di mana data sangat
+  mudah diakses namun sering kali sulit un</description>
 <metadata>
 <locked>false</locked>
 <created>1786059229</created>
@@ -15,110 +26,240 @@
 </images>
 <videos>
 </videos>
-<updated>1786059229</updated>
+<updated>1786059975</updated>
+<files>
+<item>
+<path>C:\Users\Dragon\Documents\github\andyid23\haxtheweb-kuis\pen-todo\haxlagi\files\Membangun-Nalar-Kritis-&amp;-Validasi.pdf</path>
+<fullUrl>/C:\Users\Dragon\Documents\github\andyid23\haxtheweb-kuis\pen-todo\haxlagi/files/Membangun-Nalar-Kritis-&amp;-Validasi.pdf</fullUrl>
+<url>files/Membangun-Nalar-Kritis-&amp;-Validasi.pdf</url>
+<type>application/pdf</type>
+<name>Membangun-Nalar-Kritis-&amp;-Validasi.pdf</name>
+<size>86268</size>
+</item>
+</files>
+<theme>
+<element>polaris-flex-theme</element>
+<path>@haxtheweb/polaris-theme/lib/polaris-flex-theme.js</path>
+<name>Polaris Flex</name>
+<thumbnail>@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-polaris-flex-theme-thumb.jpg</thumbnail>
+<description>Start with a blank site using the Polaris Flex</description>
+<category>
+<item>Website</item>
+</category>
+<hidden>false</hidden>
+<priority>-1</priority>
+<terrible>false</terrible>
+<key>polaris-flex-theme</key>
+</theme>
+<published>true</published>
+<hideInMenu>false</hideInMenu>
+<readtime>3</readtime>
 </metadata>
-<content><![CDATA[<h1>📚 LD-3: Literasi Digital Lanjutan</h1>
-
+<content><![CDATA[
+<h1 id="h1-739001227">📚 Membangun Nalar Kritis &#38; Validasi</h1>
+<h2><br></h2>
 <section class="card">
-  <h2>🔐 Login</h2>
-  <quiz-user-auth
-    apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
-    auto-login>
-  </quiz-user-auth>
+   <h2>🔐 Login</h2>
+
+  <quiz-user-auth apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" auto-login></quiz-user-auth>
+
 </section>
+<h2><br></h2>
+<h2>Pendahuluan</h2>
+<p>Di era digital saat ini, kita hidup di tengah banjir informasi di mana data sangat
+  mudah diakses namun sering kali sulit untuk divalidasi. <strong>Data</strong> adalah
+  bahan mentah atau fakta nyata yang dapat dikumpulkan, sementara <strong>informasi</strong> adalah
+  data yang telah diolah sehingga memiliki konteks atau arti. Membangun nalar kritis
+  sangat penting agar kita tidak menjadi sasaran empuk disinformasi yang dapat berdampak
+  buruk pada kehidupan pribadi maupun sosial. Contoh konkretnya adalah ketika seseorang
+  menerima klaim kesehatan di media sosial yang ternyata tidak akurat; tanpa nalar
+  kritis, keputusan medis yang salah bisa diambil dan membahayakan kesehatan.</p>
+<p>&#160;.</p>
+<learning-component subtitle="Unit 1" type=""><p>By the end of this lesson, you should be able to...</p></learning-component>
+<h2>📖 Materi Pembelajaran</h2>
+<h2><br></h2>
+<h3>1. Fenomena Infodemi dan Ekosistem Periksa Fakta</h3>
+<p>Dunia saat ini menghadapi tantangan besar bernama <strong>infodemi</strong>, yaitu
+  ledakan informasi yang berlebih, termasuk informasi palsu (hoaks) yang menyebar sangat
+  cepat. Untuk menghadapi ini, telah terbentuk sebuah <strong>ekosistem periksa fakta</strong> yang
+  melibatkan berbagai komponen untuk memverifikasi kebenaran informasi. Komponen utama
+  dalam ekosistem ini meliputi organisasi periksa fakta resmi (seperti CekFakta.com
+  atau Turnbackhoax.id), jurnalis profesional, teknologi kecerdasan buatan (AI) untuk
+  mendeteksi berita palsu, hingga peran aktif publik dalam menyaring informasi sebelum
+  membagikannya.</p>
+<h3>2. Evaluasi Kredibilitas dengan Metode CRAAP</h3>
+<p>Salah satu cara paling efektif untuk menguji apakah sebuah sumber data layak dipercaya
+  adalah dengan menggunakan metode <strong>CRAAP</strong>. Metode ini merupakan daftar
+  centang evaluasi yang mencakup lima kriteria utama:</p>
+<ul>
+  <li><strong>Currency (Kebaruan):</strong> Memeriksa apakah informasi tersebut masih mutakhir
+    atau sudah kadaluwarsa.</li>
 
+  <li><strong>Relevance (Relevansi):</strong> Menilai tingkat kepentingan informasi tersebut
+    bagi kebutuhan riset atau tugas kita.</li>
+
+  <li><strong>Authority (Otoritas):</strong> Mengidentifikasi penulis, penerbit, atau organisasi
+    di balik informasi tersebut untuk memastikan keahlian mereka di bidangnya.</li>
+
+  <li><strong>Accuracy (Akurasi):</strong> Memastikan kebenaran isi informasi dengan mencari
+    bukti pendukung yang logis.</li>
+
+  <li><strong>Purpose (Tujuan):</strong> Menganalisis motif di balik pembuatan informasi,
+    apakah untuk mendidik secara objektif atau justru memiliki bias tertentu.</li>
+
+</ul>
+<h3>3. Strategi Membaca Lateral dan Verifikasi Silang</h3>
+<p>Teknik <strong>membaca lateral</strong> adalah strategi di mana pembaca tidak hanya
+  terpaku pada satu situs web yang sedang dibaca (membaca vertikal), melainkan "keluar"
+  dari situs tersebut untuk mencari informasi rujukan lain di tab atau sumber berbeda.
+  Tujuannya adalah untuk memverifikasi klaim dengan melihat apa yang dikatakan oleh
+  sumber otoritas lain tentang informasi tersebut. Proses ini berkaitan erat dengan <strong>verifikasi silang</strong>,
+  misalnya membandingkan klaim medis dari kiriman viral di platform X dengan data resmi
+  dari lembaga terpercaya seperti Kementerian Kesehatan atau WHO.</p>
+<h2>Miskonsepsi Umum</h2>
+<ul>
+  <li><strong>Miskonsepsi:</strong> "Informasi yang muncul di urutan pertama pada hasil
+    pencarian Google pasti merupakan informasi yang paling benar dan valid."</li>
+
+  <li><strong>Fakta:</strong> Urutan pencarian ditentukan oleh algoritma mesin pencari
+    yang mempertimbangkan relevansi kata kunci dan popularitas (SEO), bukan kebenaran
+    mutlak. Evaluasi kritis tetap diperlukan terhadap hasil yang muncul.</li>
+
+  <li><strong>Miskonsepsi:</strong> "Jika sebuah artikel menggunakan bahasa yang terlihat
+    ilmiah dan menyertakan banyak angka, maka data di dalamnya pasti valid."</li>
+
+  <li><strong>Fakta:</strong> Banyak informasi palsu atau hoaks yang sengaja menggunakan
+    istilah teknis atau angka-angka yang meyakinkan untuk mengelabui pembaca. Validitas
+    sesungguhnya ditentukan oleh kredibilitas sumber asli dan hasil verifikasi silang
+    dengan data otoritas.</li>
+
+</ul>
+<h2>Ringkasan Materi</h2>
+<ul>
+  <li><strong>Data</strong> adalah fakta mentah, sedangkan <strong>informasi</strong> adalah
+    data yang sudah bermakna.</li>
+
+  <li><strong>Infodemi</strong> merupakan tantangan besar berupa persebaran hoaks massal
+    di era digital.</li>
+
+  <li><strong>Ekosistem periksa fakta</strong> terdiri dari organisasi resmi, jurnalis,
+    AI, dan publik yang bekerja sama memvalidasi informasi.</li>
+
+  <li><strong>Metode CRAAP</strong> (Currency, Relevance, Authority, Accuracy, Purpose)
+    digunakan sebagai alat uji kredibilitas sumber.</li>
+
+  <li><strong>Membaca lateral</strong> adalah teknik verifikasi dengan mencari referensi
+    dari luar situs sumber asli.</li>
+
+</ul>
 <section class="card">
-  <h2>📖 Materi Pembelajaran</h2>
+   
+
   <p>Pada pertemuan ini, kita akan mempelajari konsep literasi digital lanjutan, termasuk:</p>
   <ul>
     <li><strong>Evaluasi Sumber Informasi:</strong> Cara menilai kredibilitas sumber di internet</li>
+
     <li><strong>Ethics Digital:</strong> Etika dalam menggunakan teknologi dan media sosial</li>
+
     <li><strong>Keamanan Data:</strong> Perlindungan data pribadi dan privasi online</li>
+
     <li><strong>Digital Footprint:</strong> Jejak digital dan dampaknya terhadap kehidupan</li>
+
   </ul>
-  <h3>Konsep Dasar</h3>
+
+   <h3>Konsep Dasar</h3>
+
   <table>
     <thead>
-      <tr><th>Konsep</th><th>Deskripsi</th></tr>
+      <tr>
+        <th>Konsep</th>
+        <th>Deskripsi</th>
+      </tr>
+
     </thead>
+
     <tbody>
-      <tr><td><strong>Literasi Informasi</strong></td><td>Kemampuan menemukan, mengevaluasi, dan menggunakan informasi</td></tr>
-      <tr><td><strong>Literasi Media</strong></td><td>Kemampuan memahami dan menganalisis pesan media</td></tr>
-      <tr><td><strong>Literasi Teknologi</strong></td><td>Kemampuan menggunakan teknologi secara efektif dan bertanggung jawab</td></tr>
+      <tr>
+        <td><strong>Literasi Informasi</strong>
+
+        </td>
+
+        <td>Kemampuan menemukan, mengevaluasi, dan menggunakan informasi</td>
+      </tr>
+
+      <tr>
+        <td><strong>Literasi Media</strong>
+
+        </td>
+
+        <td>Kemampuan memahami dan menganalisis pesan media</td>
+      </tr>
+
+      <tr>
+        <td><strong>Literasi Teknologi</strong>
+
+        </td>
+
+        <td>Kemampuan menggunakan teknologi secara efektif dan bertanggung jawab</td>
+      </tr>
+
     </tbody>
+
   </table>
-</section>
 
+</section>
 <section class="card">
-  <h2>📥 Download Materi</h2>
-  <p>Klik link di bawah untuk mengunduh file materi (aktivitas download akan tercatat otomatis):</p>
+   <h2>📥 Download Materi</h2>
+
+  <p>Klik link di bawah untuk mengunduh file materi (aktivitas download akan tercatat
+    otomatis):</p>
   <ul>
-    <li><a href="files/panduan-literasi-digital.pdf" download>📄 Download PDF: Panduan Literasi Digital</a></li>
-    <li><a href="files/contoh-etika-digital.zip" download>📦 Download ZIP: Contoh Kasus Etika Digital</a></li>
+    <li><a href="files/Membangun-Nalar-Kritis-&amp;-Validasi.pdf" download="">📄 Download Materi Nalar Kritis</a></li>
+
+    <li><a href="files/contoh-etika-digital.zip" download="">📦 Download ZIP: Contoh Kasus Etika Digital</a>
+
+    </li>
+
   </ul>
-</section>
 
-<section class="card">
-  <h2>🎯 Evaluasi: Kuis LD-3</h2>
-  <p>Setelah membaca materi di atas, silakan kerjakan kuis berikut untuk menguji pemahaman Anda:</p>
-  <explode-quiz
-    kd-materi="LD-3"
-    apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
-    quiz-category="formatif"
-    shuffle-choices
-    editable="true"
-    questions="[{"question":"Apa yang dimaksud dengan literasi digital?","choices":["Kemampuan menggunakan komputer","Kemampuan menemukan, mengevaluasi, dan menggunakan informasi digital","Kemampuan membuat website","Kemampuan bermain game online"],"correctIndex":1},{"question":"Manakah yang bukan merupakan bagian dari literasi digital?","choices":["Evaluasi sumber informasi","Keamanan data pribadi","Bermain game online","Etika digital"],"correctIndex":2},{"question":"Apa dampak dari jejak digital (digital footprint)?","choices":["Tidak ada dampak","Dapat mempengaruhi reputasi dan privasi","Hanya berpengaruh di dunia maya","Selalu positif"],"correctIndex":1}]">
-  </explode-quiz>
 </section>
-
 <section class="card">
-  <h2>💬 Forum Diskusi: LD-3</h2>
-  <forum-component
-    apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
-    forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec"
-    kd-materi="LD-3"
-    forum-topic="Forum Diskusi: LD-3 - Literasi Digital Lanjutan"
-    view-mode="student">
-  </forum-component>
+   <h2>🎯 Evaluasi: Kuis LD-1</h2>
+
+  <p>Setelah membaca materi di atas, silakan kerjakan kuis berikut untuk menguji pemahaman
+    Anda:</p>
+  <explode-quiz kd-materi="LD-3" apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" quiz-category="formatif" shuffle-choices editable question="" ":"apa="" yang="" dimaksud="" dengan="" literasi="" digital?="" ","choices="" ":["kemampuan="" menggunakan="" komputer="" ","kemampuan="" menemukan,="" mengevaluasi,="" dan="" informasi="" digital="" membuat="" website="" bermain="" game=""  "],"correctindex="" ":1},{"question="" ":"manakah="" bukan="" merupakan="" bagian="" dari="" ":["evaluasi="" sumber="" ","keamanan=""  pribadi="" ","bermain="" ","etika="" ":2},{"question="" dampak="" jejak="" (digital="" footprint)?="" ":["tidak="" ada="" ","dapat="" mempengaruhi="" reputasi="" privasi="" ","hanya="" berpengaruh="" di="" dunia="" maya="" ","selalu="" positif="" ":1}]"="" spreadsheet-id="" questions="[{&quot;question&quot;:&quot;Apa ibu kota Indonesia?&quot;,&quot;choices&quot;:[&quot;Bandung&quot;,&quot;Surabaya&quot;,&quot;Jakarta&quot;,&quot;Medan&quot;],&quot;correctIndex&quot;:2},{&quot;question&quot;:&quot;Berapa hasil dari 7 × 8?&quot;,&quot;choices&quot;:[&quot;54&quot;,&quot;56&quot;,&quot;58&quot;,&quot;60&quot;],&quot;correctIndex&quot;:1},{&quot;question&quot;:&quot;Planet terdekat dengan Matahari adalah?&quot;,&quot;choices&quot;:[&quot;Venus&quot;,&quot;Bumi&quot;,&quot;Mars&quot;,&quot;Merkurius&quot;],&quot;correctIndex&quot;:3}]" script-function-name="submitQuizResult" sheet-name="Pertemuan" _current-index="0" _selected-index="-1" _temp-questions="[]" _editing-index="-1" _temp-correct-index="0" _editor-origin="result" _temp-question-type="mc" _temp-correct-answers="[]" _temp-left-items="[&quot;&quot;,&quot;&quot;]" _temp-right-items="[&quot;&quot;,&quot;&quot;]" _temp-correct-pairs="{}" _temp-accepted-statements="[]" _shuffled-questions="[]" _selected-answers="{}" _match-answers="{}" _temp-question-points="1" _max-points="0"></explode-quiz>
+
 </section>
-
 <section class="card">
-  <h2>📝 Tugas Mandiri: LD-3</h2>
-  <assignment-component
-    apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
-    forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec"
-    kd-materi="LD-3"
-    assignment-title="Tugas LD-3: Refleksi Literasi Digital"
-    assignment-instruction="Tuliskan refleksi tentang apa yang sudah Anda pahami mengenai literasi digital lanjutan. Sertakan contoh kasus nyata yang pernah Anda alami atau temui."
-    view-mode="student">
-  </assignment-component>
+   <h2>💬 Forum Diskusi: LD-1</h2>
+
+  <forum-component apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-1" forum-topic="Forum Diskusi: LD-1 - Literasi Digital Lanjutan" view-mode="student" sheet-name="Pertemuan" _comments="[{&quot;id&quot;:1785891506437,&quot;parentId&quot;:null,&quot;user&quot;:&quot;Siswa&quot;,&quot;studentId&quot;:&quot;&quot;,&quot;text&quot;:&quot;materi ld-1 alhamdulillah&quot;,&quot;sheet&quot;:&quot;&quot;,&quot;time&quot;:&quot;2026-08-05T00:58:27.000Z&quot;,&quot;likes&quot;:0,&quot;isLiked&quot;:false,&quot;pinned&quot;:false,&quot;kelas&quot;:&quot;&quot;,&quot;replies&quot;:[]}]" _sort-mode="best" _loading-comments=""></forum-component>
+
 </section>
-
 <section class="card">
-  <h2>📊 Kehadiran & Aktivitas</h2>
-  <p>Ringkasan kehadiran dan aktivitas Anda untuk KD-Materi LD-3:</p>
+   <h2>📝 Tugas Mandiri: LD-1</h2>
+
+  <assignment-component apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-1" assignment-title="Tugas LD-1: Refleksi Literasi Digital" assignment-instruction="Tuliskan refleksi tentang apa yang sudah Anda pahami mengenai Validasi data. Sertakan contoh kasus nyata yang pernah Anda alami atau temui." view-mode="student" sheet-name="Pertemuan"></assignment-component>
+
+</section>
+<section class="card">
+   <h2>📊 Kehadiran &amp; Aktivitas</h2>
+
+  <p>Ringkasan kehadiran dan aktivitas Anda untuk KD-Materi LD-1:</p>
   <grid-plate layout="1-1">
     <div slot="col-1">
-      <attendance-tracker
-        apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
-        forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec"
-        kd-materi="LD-3">
-      </attendance-tracker>
-    </div>
-    <div slot="col-2">
-      <engagement-score
-        apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
-        forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec"
-        kd-materi="LD-3">
-      </engagement-score>
-    </div>
-  </grid-plate>
-</section>
+      <attendance-tracker apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-1" sheet-name="Pertemuan 1" _logs="[{&quot;id&quot;:&quot;log-1786059868180&quot;,&quot;timestamp&quot;:&quot;2026-08-06T23:44:28.180Z&quot;,&quot;date&quot;:&quot;2026-08-07&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 4051px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1786059745149&quot;,&quot;timestamp&quot;:&quot;2026-08-06T23:42:25.149Z&quot;,&quot;date&quot;:&quot;2026-08-07&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1103px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1786059617649&quot;,&quot;timestamp&quot;:&quot;2026-08-06T23:40:17.649Z&quot;,&quot;date&quot;:&quot;2026-08-07&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1089px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1786059496209&quot;,&quot;timestamp&quot;:&quot;2026-08-06T23:38:16.209Z&quot;,&quot;date&quot;:&quot;2026-08-07&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1012px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1786059206688&quot;,&quot;timestamp&quot;:&quot;2026-08-06T23:33:26.688Z&quot;,&quot;date&quot;:&quot;2026-08-07&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1106px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1786059206682&quot;,&quot;timestamp&quot;:&quot;2026-08-06T23:33:26.682Z&quot;,&quot;date&quot;:&quot;2026-08-07&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1106px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1786059191370&quot;,&quot;timestamp&quot;:&quot;2026-08-06T23:33:11.370Z&quot;,&quot;date&quot;:&quot;2026-08-07&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1075px)&quot;,&quot;synced&quot;:false},{&quot;id&quot;:&quot;log-1786059191360&quot;,&quot;timestamp&quot;:&quot;2026-08-06T23:33:11.360Z&quot;,&quot;date&quot;:&quot;2026-08-07&quot;,&quot;type&quot;:&quot;reading&quot;,&quot;description&quot;:&quot;Membaca materi (scroll 1075px)&quot;,&quot;synced&quot;:false}]" _forum-today="0"></attendance-tracker>
 
-<activity-logger
-  kd-materi="LD-3"
-  apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec"
-  forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec">
-</activity-logger>
+    </div>
+
+    <div slot="col-2">
+      <engagement-score apps-script-url="https://script.google.com/macros/s/AKfycbxrgnsoaSl9Fb9q-1fRMVkGrvm9CC6SQBjN8pcwb4vDXxubAZu455cWCVOST-2UA6NX/exec" forum-api-url="https://script.google.com/macros/s/AKfycbyIsroiPIlKXd7SB4GCRl_CAo7mRvN5B8_QZ7UW4pflFjNwtCe7MMXnxMRzBcaH_D4V-g/exec" kd-materi="LD-1" sheet-name="Pertemuan" _history="[{&quot;date&quot;:&quot;2026-08-07&quot;,&quot;count&quot;:8}]"></engagement-score>
+
+    </div>
+
+  </grid-plate>
+
+</section>
 ]]></content>
 </item>
