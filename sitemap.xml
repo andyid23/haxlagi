@@ -2,223 +2,229 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://localhost:3000/sites/haxnow/welcome</loc>
-    <lastmod>2026-08-05T12:36:41.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:49.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/elemendokumen</loc>
-    <lastmod>2026-08-05T12:36:42.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:50.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/kuis-interaktif</loc>
-    <lastmod>2026-08-05T12:36:43.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:50.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/dashboard-kuis</loc>
-    <lastmod>2026-08-05T12:36:43.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:51.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/kehadiran</loc>
-    <lastmod>2026-08-05T12:36:43.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:51.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/notifikasi</loc>
-    <lastmod>2026-08-05T12:36:44.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:52.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/todo-list</loc>
-    <lastmod>2026-08-05T12:36:44.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:52.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutorial-attendance</loc>
-    <lastmod>2026-08-05T12:36:44.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:52.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutorial-apps-script</loc>
-    <lastmod>2026-08-05T12:36:45.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:53.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/dashboard-siswa</loc>
-    <lastmod>2026-08-05T12:36:46.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:55.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/full-dashboard</loc>
-    <lastmod>2026-08-05T12:36:47.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:56.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutorial-dashboard-siswa</loc>
-    <lastmod>2026-08-05T12:36:49.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:58.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/materi-siswa</loc>
-    <lastmod>2026-08-05T12:36:50.000Z</lastmod>
+    <lastmod>2026-08-06T23:34:00.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutor-html</loc>
-    <lastmod>2026-08-05T12:36:51.000Z</lastmod>
+    <lastmod>2026-08-06T23:34:00.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutorial-kursus</loc>
-    <lastmod>2026-08-05T12:36:51.000Z</lastmod>
+    <lastmod>2026-08-06T23:34:01.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutorial-sheet-per-pertemuan</loc>
-    <lastmod>2026-08-05T12:36:51.000Z</lastmod>
+    <lastmod>2026-08-06T23:34:01.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/new-dashboard</loc>
-    <lastmod>2026-08-05T12:36:45.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:53.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/new-page-1</loc>
-    <lastmod>2026-08-05T23:19:27.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:55.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/new-page-2</loc>
-    <lastmod>2026-08-05T12:36:48.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:57.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/new-page</loc>
-    <lastmod>2026-08-05T12:36:52.000Z</lastmod>
+    <lastmod>2026-08-06T23:34:01.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/kuis-akm-campuran</loc>
-    <lastmod>2026-08-05T12:36:45.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:54.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutorial-panduan-guru</loc>
-    <lastmod>2026-08-05T12:36:46.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:54.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/elemendokumen/copy-of-tutorial-alur-aktivitas-sheet</loc>
-    <lastmod>2026-08-05T12:36:46.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:54.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutorial-perubahan-kode</loc>
-    <lastmod>2026-08-05T12:36:50.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:59.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutorial-generate-soal</loc>
-    <lastmod>2026-08-05T12:36:50.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:59.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutorial-alur-aktivitas</loc>
-    <lastmod>2026-08-05T12:36:49.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:59.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/contoh-lengkap</loc>
-    <lastmod>2026-08-05T12:36:49.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:58.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/aturan-belajar-siswa</loc>
-    <lastmod>2026-08-05T12:36:39.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:46.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutorial-aktivitas-harian</loc>
-    <lastmod>2026-08-05T12:36:42.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:49.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/new-page-7</loc>
-    <lastmod>2026-08-05T12:36:39.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:47.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/ld-2</loc>
-    <lastmod>2026-08-05T12:36:40.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:48.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/ld-3</loc>
-    <lastmod>2026-08-05T12:36:41.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:49.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/contoh-full-dashboard</loc>
-    <lastmod>2026-08-05T12:36:47.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:57.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/tutorial-full-dashboard</loc>
-    <lastmod>2026-08-05T12:36:47.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:56.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/rekomendasi-aktivitas</loc>
-    <lastmod>2026-08-05T12:36:48.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:57.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/akun-digital</loc>
-    <lastmod>2026-08-05T12:36:39.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:47.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://localhost:3000/sites/haxnow/new-page-7/copy-of-panduan-belajar</loc>
-    <lastmod>2026-08-05T12:36:40.000Z</lastmod>
+    <lastmod>2026-08-06T23:33:48.000Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://localhost:3000/sites/haxnow/new-page-7/copy-of-ld-3-literasi-digital-lanjutan</loc>
+    <lastmod>2026-08-06T23:33:49.000Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

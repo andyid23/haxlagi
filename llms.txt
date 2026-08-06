@@ -47,6 +47,7 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [Akun Digital dan Pengaturan](https://localhost:3000/sites/haxnow/pages/item-74fdcc5b-afe1-4af6-9ed3-ac24f629d915/index.md): 📚 LD-3: Akun Digital dan Pengaturan&#160; Menjadi Jagoan Keamanan Akun &#38; Finansial Digital 🔐 Login Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata san
 - [Materi-Coba](https://localhost:3000/sites/haxnow/pages/item-1a372864-f4f9-486c-9541-1f7912fe6b44/index.md): tugas
 - [Copy of PANDUAN BELAJAR](https://localhost:3000/sites/haxnow/pages/item-c66ffd66-5708-478f-95d3-21ed75d41220/index.md)
+- [Copy of LD-3: Literasi Digital Lanjutan](https://localhost:3000/sites/haxnow/pages/item-f5d320e0-5a27-4a1a-8e00-a352b33f24ce/index.md)
 
 ## Optional
 - [Search index](https://localhost:3000/sites/haxnow/lunrSearchIndex.json): Lunr corpus for quick full-text retrieval.
