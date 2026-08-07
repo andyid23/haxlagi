@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1786059976
+      "updated": 1786061693
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -764,6 +764,50 @@
       }
     },
     {
+      "id": "item-f5d320e0-5a27-4a1a-8e00-a352b33f24ce",
+      "indent": 0,
+      "location": "pages/item-f5d320e0-5a27-4a1a-8e00-a352b33f24ce/index.html",
+      "slug": "new-page-7/copy-of-ld-3-literasi-digital-lanjutan",
+      "order": 3,
+      "parent": "item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5",
+      "title": "Membangun Nalar Kritis",
+      "description": "📚 Membangun Nalar Kritis &#38; Validasi\n\n\n   🔐 Login\n\n  \n\n\n\nPendahuluan\nDi era digital saat ini, kita hidup di tengah banjir informasi di mana data sangat\n  mudah diakses namun sering kali sulit un",
+      "metadata": {
+        "locked": false,
+        "created": 1786059229,
+        "images": [],
+        "videos": [],
+        "updated": 1786061693,
+        "files": [
+          {
+            "path": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\files\\Membangun-Nalar-Kritis-&-Validasi.pdf",
+            "fullUrl": "/C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi/files/Membangun-Nalar-Kritis-&-Validasi.pdf",
+            "url": "files/Membangun-Nalar-Kritis-&-Validasi.pdf",
+            "type": "application/pdf",
+            "name": "Membangun-Nalar-Kritis-&-Validasi.pdf",
+            "size": 86268
+          }
+        ],
+        "theme": {
+          "element": "polaris-flex-theme",
+          "path": "@haxtheweb/polaris-theme/lib/polaris-flex-theme.js",
+          "name": "Polaris Flex",
+          "thumbnail": "@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-polaris-flex-theme-thumb.jpg",
+          "description": "Start with a blank site using the Polaris Flex",
+          "category": [
+            "Website"
+          ],
+          "hidden": false,
+          "priority": -1,
+          "terrible": false,
+          "key": "polaris-flex-theme"
+        },
+        "published": true,
+        "hideInMenu": false,
+        "readtime": 4
+      }
+    },
+    {
       "id": "item-74fdcc5b-afe1-4af6-9ed3-ac24f629d915",
       "indent": 0,
       "location": "pages/item-74fdcc5b-afe1-4af6-9ed3-ac24f629d915/index.html",
@@ -872,50 +916,6 @@
         "updated": 1786059228,
         "published": true,
         "status": ""
-      }
-    },
-    {
-      "id": "item-f5d320e0-5a27-4a1a-8e00-a352b33f24ce",
-      "indent": 0,
-      "location": "pages/item-f5d320e0-5a27-4a1a-8e00-a352b33f24ce/index.html",
-      "slug": "new-page-7/copy-of-ld-3-literasi-digital-lanjutan",
-      "order": 3,
-      "parent": "item-1a372864-f4f9-486c-9541-1f7912fe6b44",
-      "title": "Membangun Nalar Kritis",
-      "description": "📚 Membangun Nalar Kritis &#38; Validasi\n\n\n   🔐 Login\n\n  \n\n\n\nPendahuluan\nDi era digital saat ini, kita hidup di tengah banjir informasi di mana data sangat\n  mudah diakses namun sering kali sulit un",
-      "metadata": {
-        "locked": false,
-        "created": 1786059229,
-        "images": [],
-        "videos": [],
-        "updated": 1786059975,
-        "files": [
-          {
-            "path": "C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi\\files\\Membangun-Nalar-Kritis-&-Validasi.pdf",
-            "fullUrl": "/C:\\Users\\Dragon\\Documents\\github\\andyid23\\haxtheweb-kuis\\pen-todo\\haxlagi/files/Membangun-Nalar-Kritis-&-Validasi.pdf",
-            "url": "files/Membangun-Nalar-Kritis-&-Validasi.pdf",
-            "type": "application/pdf",
-            "name": "Membangun-Nalar-Kritis-&-Validasi.pdf",
-            "size": 86268
-          }
-        ],
-        "theme": {
-          "element": "polaris-flex-theme",
-          "path": "@haxtheweb/polaris-theme/lib/polaris-flex-theme.js",
-          "name": "Polaris Flex",
-          "thumbnail": "@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-polaris-flex-theme-thumb.jpg",
-          "description": "Start with a blank site using the Polaris Flex",
-          "category": [
-            "Website"
-          ],
-          "hidden": false,
-          "priority": -1,
-          "terrible": false,
-          "key": "polaris-flex-theme"
-        },
-        "published": true,
-        "hideInMenu": false,
-        "readtime": 3
       }
     }
   ]

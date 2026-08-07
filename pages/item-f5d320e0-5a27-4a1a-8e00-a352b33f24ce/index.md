@@ -19,14 +19,35 @@ Di era digital saat ini, kita hidup di tengah banjir informasi di mana data sang
 
  .
 
-<learning-component subtitle="Unit 1" type=""><p>By the end of this lesson, you should be able to...</p></learning-component>
+<learning-component subtitle="Membangun" type="" icon="av:airplay" accent-color="green" title="Nalar KRITIS"><p>Tujuan Pembelajaran (XI-LD-02):</p><ol><li>mengevaluasi kebenaran konten dengan menggunakan verifikasi teks, gambar, dan video,</li><li>menggunakan cara membaca lateral untuk mengevaluasi informasi digital yang kompleks</li></ol><p></p></learning-component>
 
 📖 Materi Pembelajaran
 ----------------------
 
-  
+Pada pertemuan ini, kita akan mempelajari konsep literasi digital lanjutan, termasuk:
 
----
+*   **Evaluasi Sumber Informasi:** Cara menilai kredibilitas sumber di internet
+*   **Ethics Digital:** Etika dalam menggunakan teknologi dan media sosial
+*   **Keamanan Data:** Perlindungan data pribadi dan privasi online
+*   **Digital Footprint:** Jejak digital dan dampaknya terhadap kehidupan
+
+### Konsep Dasar
+
+Konsep
+
+Deskripsi
+
+**Literasi Informasi**
+
+Kemampuan menemukan, mengevaluasi, dan menggunakan informasi
+
+**Literasi Media**
+
+Kemampuan memahami dan menganalisis pesan media
+
+**Literasi Teknologi**
+
+Kemampuan menggunakan teknologi secara efektif dan bertanggung
 
 ### 1\. Fenomena Infodemi dan Ekosistem Periksa Fakta
 
@@ -62,31 +83,6 @@ Ringkasan Materi
 *   **Ekosistem periksa fakta** terdiri dari organisasi resmi, jurnalis, AI, dan publik yang bekerja sama memvalidasi informasi.
 *   **Metode CRAAP** (Currency, Relevance, Authority, Accuracy, Purpose) digunakan sebagai alat uji kredibilitas sumber.
 *   **Membaca lateral** adalah teknik verifikasi dengan mencari referensi dari luar situs sumber asli.
-
-Pada pertemuan ini, kita akan mempelajari konsep literasi digital lanjutan, termasuk:
-
-*   **Evaluasi Sumber Informasi:** Cara menilai kredibilitas sumber di internet
-*   **Ethics Digital:** Etika dalam menggunakan teknologi dan media sosial
-*   **Keamanan Data:** Perlindungan data pribadi dan privasi online
-*   **Digital Footprint:** Jejak digital dan dampaknya terhadap kehidupan
-
-### Konsep Dasar
-
-Konsep
-
-Deskripsi
-
-**Literasi Informasi**
-
-Kemampuan menemukan, mengevaluasi, dan menggunakan informasi
-
-**Literasi Media**
-
-Kemampuan memahami dan menganalisis pesan media
-
-**Literasi Teknologi**
-
-Kemampuan menggunakan teknologi secara efektif dan bertanggung jawab
 
 📥 Download Materi
 ------------------

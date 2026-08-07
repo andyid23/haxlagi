@@ -44,10 +44,10 @@ Managed files (feeds, search indexes, manifests, and this `llms.txt`) are genera
 - [LD-2: Literasi Digital](https://localhost:3000/sites/haxnow/pages/LD-2/index.md): Forum diskusi dan tugas Literasi Digital 2 - tanpa login jadi anonim
 - [LD-3: Literasi Digital Lanjutan](https://localhost:3000/sites/haxnow/pages/LD-3/index.md): Materi, download, kuis, tugas, forum, kehadiran - KD Materi LD-3
 - [PANDUAN BELAJAR](https://localhost:3000/sites/haxnow/pages/item-0c3a95b8-001e-4423-81cc-f3c7213dfbd5/index.md): belajar kritis
+- [Membangun Nalar Kritis](https://localhost:3000/sites/haxnow/pages/item-f5d320e0-5a27-4a1a-8e00-a352b33f24ce/index.md): 📚 Membangun Nalar Kritis &#38; Validasi 🔐 Login Pendahuluan Di era digital saat ini, kita hidup di tengah banjir informasi di mana data sangat mudah diakses namun sering kali sulit un
 - [Akun Digital dan Pengaturan](https://localhost:3000/sites/haxnow/pages/item-74fdcc5b-afe1-4af6-9ed3-ac24f629d915/index.md): 📚 LD-3: Akun Digital dan Pengaturan&#160; Menjadi Jagoan Keamanan Akun &#38; Finansial Digital 🔐 Login Tujuan Pembelajaran (XI-LD-04): Mampu mengelola kata sandi dengan manajer kata san
 - [Materi-Coba](https://localhost:3000/sites/haxnow/pages/item-1a372864-f4f9-486c-9541-1f7912fe6b44/index.md): tugas
 - [Copy of PANDUAN BELAJAR](https://localhost:3000/sites/haxnow/pages/item-c66ffd66-5708-478f-95d3-21ed75d41220/index.md)
-- [Membangun Nalar Kritis](https://localhost:3000/sites/haxnow/pages/item-f5d320e0-5a27-4a1a-8e00-a352b33f24ce/index.md): 📚 Membangun Nalar Kritis &#38; Validasi 🔐 Login Pendahuluan Di era digital saat ini, kita hidup di tengah banjir informasi di mana data sangat mudah diakses namun sering kali sulit un
 
 ## Optional
 - [Search index](https://localhost:3000/sites/haxnow/lunrSearchIndex.json): Lunr corpus for quick full-text retrieval.
