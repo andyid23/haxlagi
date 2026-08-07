@@ -14,7 +14,7 @@
       "name": "haxnow",
       "domain": null,
       "created": 1784667020,
-      "updated": 1786062556
+      "updated": 1786063864
     },
     "theme": {
       "element": "custom-haxquiz-theme",
@@ -821,7 +821,7 @@
         "created": 1785891589,
         "images": [],
         "videos": [],
-        "updated": 1786059227,
+        "updated": 1786063863,
         "published": true,
         "status": "",
         "files": [
@@ -875,7 +875,21 @@
           }
         ],
         "hideInMenu": false,
-        "readtime": 5
+        "readtime": 5,
+        "theme": {
+          "element": "polaris-flex-theme",
+          "path": "@haxtheweb/polaris-theme/lib/polaris-flex-theme.js",
+          "name": "Polaris Flex",
+          "thumbnail": "@haxtheweb/haxcms-elements/lib/theme-screenshots/theme-polaris-flex-theme-thumb.jpg",
+          "description": "Start with a blank site using the Polaris Flex",
+          "category": [
+            "Website"
+          ],
+          "hidden": false,
+          "priority": -1,
+          "terrible": false,
+          "key": "polaris-flex-theme"
+        }
       }
     },
     {
